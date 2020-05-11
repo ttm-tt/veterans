@@ -1,0 +1,97 @@
+
+# /
+/composer.lock
+
+# /bin/
+/bin/cake.bat
+/bin/cake
+/bin/cake.php
+
+# /config/
+/config/app_local.php
+/config/core.php
+
+# /logs/
+/logs/*.log
+/logs/*.log.*
+
+# /nbproject/
+/nbproject/private
+
+# /plugins/Shop/templates/Pages/
+/plugins/Shop/templates/Pages/players_privacy.ctp
+/plugins/Shop/templates/Pages/shop_agb.ctp
+
+# /src/Locale/
+/src/Locale/custom.pot
+/src/Locale/custom.po
+/src/Locale/custom.mo
+
+# /src/Locale/en/
+/src/Locale/en/custom.po
+/src/Locale/en/custom.mo
+
+# /templates/Pages/
+/templates/Pages/privacy.ctp
+/templates/Pages/impressum.ctp
+
+# /tmp/
+/tmp/DejaVuSans.ufm.php
+/tmp/Times-Bold.afm.php
+/tmp/Times-Roman.afm.php
+/tmp/*.sqlite
+/tmp/stripe
+/tmp/redsys
+/tmp/Helvetica-Bold.afm.php
+/tmp/debug_kit.sqlite-journal
+/tmp/DejaVuSans-Bold.ufm.php
+/tmp/bpayment
+/tmp/Helvetica.afm.php
+/tmp/sogecommerce
+
+# /tmp/cache/models/
+/tmp/cache/models/*
+
+# /tmp/cache/persistent/
+/tmp/cache/persistent/*
+
+# /tmp/cache/routes/
+/tmp/cache/routes/*
+
+# /vendor/
+/vendor/dompdf
+/vendor/maxmind-db
+/vendor/bin
+/vendor/justinrainbow
+/vendor/symfony
+/vendor/aura
+/vendor/psr
+/vendor/sabberworm
+/vendor/twig
+/vendor/stripe
+/vendor/robmorgan
+/vendor/grandt
+/vendor/cakephp
+/vendor/phpzip
+/vendor/jasny
+/vendor/composer
+/vendor/phenx
+/vendor/maxmind
+/vendor/friendsofcake
+/vendor/ebrigham1
+/vendor/jdorn
+/vendor/zendframework
+/vendor/laminas
+/vendor/dereuromark
+/vendor/geoip2
+/vendor/seld
+
+# /webroot/
+/webroot/index.php
+/webroot/.htaccess
+
+# /webroot/img/
+/webroot/img/logo.png
+
+# /webroot/js/
+/webroot/js/.jquery-ui.custom.js.swp
