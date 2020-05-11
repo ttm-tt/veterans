@@ -1,0 +1,268 @@
+<?php
+use Cake\Routing\Router;
+?>
+
+<?php
+	ob_start();
+?>
+
+ol  {
+  list-style-type: decimal;
+}
+
+ol  ol  {
+  list-style-type: lower-alpha;
+}
+
+ol  ol  ol  {
+  list-style-type: lower-roman;
+}  
+
+div > ol > li {
+  margin-bottom: 1em;
+}
+
+div ol h3 {
+  font-size: 110%;
+  font-weight: bold;
+  color: black;
+}  
+
+<?php
+	$css = ob_get_clean();
+	$this->append('css', '<style type="text/css">' . $css . '</style>');
+?>
+
+<?php
+	$name = $tournament['name'];
+	$description = $tournament['description'];
+
+	$org_name = $tournament['organizer']['name'];
+	$org_description = $tournament['organizer']['description'];
+
+	$host_name = $tournament['host']['name'];
+	$host_description = $tournament['host']['description'];
+  
+ 	$contractor = 
+			$tournament['contractor_id'] ? 
+			$tournament['contractor'] : $tournament['host']
+	;
+
+	$email = $contractor['email'];
+	$phone = $contractor['phone'];
+	$fax = $contractor['fax'];
+
+	$acc_start = date('l, jS F Y', strtotime($tournament['accreditation_start']));
+?>
+
+<div>
+<h2>Terms and Conditions for the Registration to the <?php echo $name;?></h2>
+
+<p>
+The <?php echo $description . ' (' . $name . ')';?>
+ is organized by the 
+<?php echo $host_description . ' (' . $host_name . ')';?>
+ in cooperation with the 
+<?php echo $org_description . ' (' . $org_name . ')';?>
+.
+<?php if ($tournament['contractor_id']) { ?>
+<br>
+<?= $host_name ?> entrusted <?= $contractor['description'] . ' (' . $contractor['name'] . ')' ?> 
+with carrying out the <?= $name ?>
+.
+<?php } ?>
+</p>
+<p>
+<?= Router::url('/', true) ?> is the web site for participants for entering the <?= $name ?>.<br>	
+The web site is provided by Christoph Theis.
+</p>
+<p>
+Addresses can be found at 
+<?php echo $this->Html->link('"Contact Us"', array('plugin' => false, 'controller' => 'pages', 'action' => 'impressum'));?>.
+</p>
+<p>
+Below are the terms and conditions governing the use of the online registration for the <?= $name ?>.
+</p>
+<ol>
+	<li>
+		<h3>Subject of this Agreement</h3>
+		These terms and conditions cover
+		<ol>
+			<li>
+				Registration of players and accompanying persons for the <?php echo $name;?>
+			</li>
+			<li>
+				Purchase of additional articles, e.g. gala dinner ticket
+			</li>
+			<li>
+				Selecting a partner for the doubles event
+			</li>
+		</ol>
+	</li>
+	<li>
+		<h3>Contractual partner</h3>
+		Contractual partner is
+		<br>
+		<br>
+		<strong><?php echo $contractor['description'] . ' (' . $contractor['name'] . ')';?></strong><br>
+		<?php echo str_replace("\n", "<br>", $contractor['address']);?>
+		<p></p>
+		Email:  <?php echo $contractor['email'];?><br>
+		Phone:  <?php echo $contractor['phone'];?><br>
+		<?php if (!empty($contractor['fax'])) { ?>
+		Fax:    <?php echo $contractor['fax'];?><br>
+		<?php } ?>
+	</li>
+	<li>
+		<h3>Interpretation</h3>
+		In these terms and conditions
+		<ol>
+			<li>
+				"we" means the <?php echo $contractor['name'];?> (and "us" and "our" are used accordingly)
+			</li>
+			<li>
+				"you" means you as our customer for the services under 1) (and "your" will be used accordingly)
+			</li>
+		</ol>
+	</li>
+	<li>
+		<h3>Delivery policy</h3>
+		<ol>
+			<li>
+				Material goods, e.g. gala dinner tickets, will be delivered during the 
+				accreditation for the <?php echo $name;?> starting <?php echo $acc_start;?>, 
+				in <?php echo $tournament['location'];?>, <?php echo $tournament['nation']['description'];?>.
+			</li>
+			<li>
+				If we decide to offer a result book this will be sent by post mail
+				or electronic mail after the tournament.
+			</li>
+		</ol>
+	</li>
+	<li>
+		<h3>Cost and Payment</h3>
+		<ol>
+			<li>
+				All prices shown include the appropriate VAT. 
+				The price charged by us will be the price in effect when your 
+				order was placed.
+			</li>
+			<li>
+				The invoice will not list the VAT explicitly. If you need an invoice
+				with VAT explicitly shown please contact us.
+			</li>
+			<li>
+				Payment must be made by means of payment approved by us and listed 
+				on the online registration site.
+			</li>
+			<li>
+				Full payment must be received within 14 days after your registration.
+				Instructions are included in the confirmation mail.
+				All fees must be paid by you.
+			</li>
+			<li>
+				The number of the players is limited. 
+				We accept players in the order the payment is made until this 
+				limit is exceeded.
+			</li>
+			<li>
+				We reserve the right to cancel your order if we have not received 
+				full payment within the above mentioned time period.
+			</li>
+		</ol>
+	</li>
+	<li>
+		<h3>Cancellation</h3>
+		<ol>
+			<li>
+				You have the right to cancel your order within 14 days after 
+				the date of the invoice your registration without any cancellation fee.
+			</li>
+			<li>
+				After 14 days the following cancellation fees will apply:
+				<ol>
+					<?php
+						$fees = $shopSettings['order_cancellation_fees'];
+						if (count($fees) === 0) {
+							echo 'There will be no cancellation fees.';
+						} else {
+							echo '<li>';
+
+							echo 'Before ' . $fees[0]['start']->format('jS F Y') . 
+								', there will be no cancellation fee.';
+
+							for ($idx = 0; $idx < count($fees) - 1; $idx++) {
+								echo '<li>';
+								echo 'From ' . $fees[$idx]['start']->format('jS F Y') . 
+										' to ' . $fees[$idx+1]['start']->modify('-1 day')->format('jS F Y') . 
+										' the cancellation fee will be ' . $fees[$idx]['fee'] . '%.';
+								echo '</li>';
+							}
+							
+							echo '<li>';
+							echo 'Starting ' . $fees[$idx]['start']->format('jS F Y') . 
+									', the cancellation fee will be ' . $fees[$idx]['fee'] . '%.';
+							echo '</li>';
+						}
+					?>
+				</ol>
+			</li>
+			<li>
+				If you cancel only a part of the order, the cancellation fee will be
+				based only on the price for that part.
+			</li>
+			<li>
+				To cancel an order or part of an order you have to send us your 
+				given name, family name, invoice number and your bank account 
+				details either by email or by letter or by fax to our address above.
+			</li>
+		</ol>
+	</li>
+	<li>
+		<h3>Your obligations</h3>
+		<ol>
+			<li>
+				You can only register people with their consent.
+			</li>
+			<li>
+				Accuracy of data, especially personal data of players, is your responsibility.
+			</li>
+			<li>
+				By registering players you agree that they will
+				<ol>
+					<li>
+						Play against each player chosen by us.
+					</li>
+					<li>
+						Accept any player as a doubles partner if they play doubles
+						and do not have a confirmed doubles partner.
+					</li>
+				</ol>
+			</li>
+		</ol>
+	</li>
+	<li>
+		<h3>Privacy</h3>
+		We will treat your personal data which you provide us in accordance to our 
+		<?php echo $this->Html->link('Privacy Policy', array('plugin' => false, 'controller' => 'pages', 'action' => 'privacy'));?>.
+	</li>
+	<li>
+		<h3>General terms</h3>
+		<ol>
+			<li>
+				These terms and conditions are provided in English only.
+			</li>
+			<li>
+				The terms and conditions will be governed and applied in accordance
+				with Spanish law.
+			</li>
+			<li>
+				If any provision of these terms and conditions is held invalid 
+				or unenforceable by court the remaining provisions will remain in 
+				full force and effect and the invalid or unenforceable provisions 
+				or portions thereof will be deemed omitted.
+			</li>
+		</ol>
+	</li>
+</ol>
+</div>	

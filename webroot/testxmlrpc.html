@@ -1,0 +1,154 @@
+<html>
+<head>
+	<script type="text/javascript" src="js/xmlrpcclient.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+function submit() {
+	var data = {};
+
+	data.tournament = 'EVC2013';
+	data.user = {
+		username: $('table#user #email').val(),
+		email : $('table#user #email').val()
+	};
+	
+	var people = [];
+	var rows = $('table#people tbody tr');
+	for (var idx = 0; idx < rows.length; idx++) {
+		var tr = rows[idx];
+		var person = {};
+
+		if (tr.cells[0].firstChild.value == "")
+			break;
+
+		for (var c = 0; c < tr.cells.length; c++)
+			person[tr.cells[c].firstChild.id] = tr.cells[c].firstChild.value;
+
+		people[people.length] = person;
+	}
+
+	data.people = people;
+
+	var username = $('table#login #username').val();
+	var password = $('table#login #password').val();
+
+	xmlrpc(
+		window.location.protocol + "//" + username + ":" + password + "@" + window.location.hostname + "/evc2013/RPC2",
+		"onlineentries.addPeople",
+		[data],
+
+		function success(data) {
+			if (data.user) {
+				$('#user input').css('background-color', 'lightgreen');
+			} else {
+				$('#user input').css('background-color', 'red');
+			}
+
+			var tr = $('#people tbody tr');
+			for (var idx = 0; idx < data.people.length; idx++) {
+				if (data.people[idx]) {
+					$('input', tr[idx]).css('background-color', 'lightgreen');
+				} else {
+					$('input', tr[idx]).css('background-color', 'red');
+				}
+			}
+		},
+
+		function error(e) {
+			alert(e);
+		}
+	);
+}
+	</script>
+</head>
+<body>
+	<table id="login">
+		<thead>
+			<tr>
+				<th>Username</th>
+				<th>Password</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><input type="text" id="username" value="tro.net"></td>
+				<td><input type="text" id="password" value="tro.net"></td>
+			</tr>
+		</tbody>
+	</table>
+	<table id="user">
+		<thead>
+			<tr>
+				<th>Email</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><input id="email" type="text" value="theis@gmx.at"></td>
+			</tr> 
+		</tbody>
+	</table>
+	<table id="people">
+		<thead>
+			<tr>
+				<th>Vorname</th>
+				<th>Nachname</th>
+				<th>Geschlecht (M/F)</th>
+				<th>Verband</th>
+				<th>Geburtstag</th>
+				<th>Funktion (PLA,ACC)</th>
+				<th>Single</th>
+				<th>Double</th>
+				<th>ID</th>
+			<tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><input type="text" id="first_name" value="Christoph"></td>
+				<td><input type="text" id="last_name" value="Theis"></td>
+				<td><input type="text" id="sex" value="M"></td>
+				<td><input type="text" id="association" value="GER"></td>
+				<td><input type="text" id="dob" value="1962-06-24"></td>
+				<td><input type="text" id="function" value="PLA"></td>
+				<td><input type="text" id="single" value="MS50"></td>
+				<td><input type="text" id="double" value="MD50"></td>
+				<td><input type="text" id="id" value="10000"></td>
+			</tr>
+			<tr>
+				<td><input type="text" id="first_name"></td>
+				<td><input type="text" id="last_name"></td>
+				<td><input type="text" id="sex"></td>
+				<td><input type="text" id="association"></td>
+				<td><input type="text" id="dob"></td>
+				<td><input type="text" id="function"></td>
+				<td><input type="text" id="single"></td>
+				<td><input type="text" id="double"></td>
+				<td><input type="text" id="id"></td>
+			</tr>
+			<tr>
+				<td><input type="text" id="first_name"></td>
+				<td><input type="text" id="last_name"></td>
+				<td><input type="text" id="sex"></td>
+				<td><input type="text" id="association"></td>
+				<td><input type="text" id="dob"></td>
+				<td><input type="text" id="function"></td>
+				<td><input type="text" id="single"></td>
+				<td><input type="text" id="double"></td>
+				<td><input type="text" id="id"></td>
+			</tr>
+			<tr>
+				<td><input type="text" id="first_name"></td>
+				<td><input type="text" id="last_name"></td>
+				<td><input type="text" id="sex"></td>
+				<td><input type="text" id="association"></td>
+				<td><input type="text" id="dob"></td>
+				<td><input type="text" id="function"></td>
+				<td><input type="text" id="single"></td>
+				<td><input type="text" id="double"></td>
+				<td><input type="text" id="id"></td>
+			</tr>
+		</tbody>
+	</table>
+	<input type="button" onclick="submit();" value="Submit">
+</body>
+</html>

@@ -1,0 +1,39 @@
+<?php
+  $name = $tournament['name'];
+  $description = $tournament['description'];
+
+  $org_name = $tournament['organizer']['name'];
+  $org_description = $tournament['organizer']['description'];
+
+  $host_name = $tournament['host']['name'];
+  $host_description = $tournament['host']['description'];
+?>
+
+<div style="width:50em">
+<h2> Privacy Policy for Player Data</h2>
+The 
+<?php echo $description . ' (' . $name . ')';?>
+ are organized by the 
+<?php echo $host_description . ' (' . $host_name . ')';?>
+ in cooperation with the
+<?php echo $org_description . ' (' . $org_name . ')';?>
+.
+<p></p>
+In this privacy policy
+<br>
+"we means the <?echo $host_name;?> (and "us" and "our" are used accordingly, and
+<br>
+"you" means our customer (and "your" will be used accordingly).
+<p></p>
+During registration of players for the <?echo $name;?> we ask you to enter 
+the email address and the phone number. 
+By accepting this privacy policy you confirm that you have the consent of 
+the person to disclose his/her email address and phone number 
+and that the person agrees to receive emails and SMS from us.
+<p></p>
+We will use the email address solely for the purpose of sending him/her notifications 
+with respect to the <?php echo $name;?>.
+<p></p>
+We will use the phone number solely for the purpose of send him/her SMS with respect
+to his/her matches during the <?php echo $name;?>.
+</div>

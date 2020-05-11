@@ -1,0 +1,37 @@
+.iti {
+	padding: 0;
+	margin-bottom: 0;
+}
+
+.iti div {
+	padding: 0;
+	margin-bottom: 0;
+}
+
+div.iti {
+	width: 50%;
+}
+
+.iti input {
+	width: 100%;
+	padding-right: 1px !important;
+}
+
+div.iti div.iti__flag-container {	
+	height: 2.4375rem; /* same height as an input field */
+}
+
+
+
+.iti__flag {
+  background-image: url("../img/intlTelInput.png");
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .iti__flag {
+      background-image: url("../img/intlTelInput@2x.png"); 
+	} 
+}
+
+
+

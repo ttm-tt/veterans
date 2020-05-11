@@ -1,0 +1,107 @@
+table.ttm-table thead button {
+	cursor: pointer;
+}
+
+div.dropdown-pane {
+	width: auto;
+	min-width: 10rem;
+}
+
+div.dropdown-pane label {
+	width: auto;
+	display: block;
+	clear: left;
+}
+
+div.dropdown-pane input {
+	float: left;
+	margin-right: 10px;
+	margin-top: 8px;
+	margin-bottom: 0px;
+	width: initial;
+}
+
+th button[data-toggle] {
+	padding: 10px;
+}
+
+/* Small and down */
+@media screen and (max-width: 39.9375em) {
+	table.ttm-table, table.ttm-table thead, table.ttm-table tbody, table.ttm-table tfoot,
+	table.ttm-table tr, table.ttm-table th, table.ttm-table td {
+		display: block;
+	}
+	
+	table.ttm-table th.ttm-col-selector, table.ttm-table td.ttm-col-selector {
+		display: none;
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	table.ttm-table thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+    table.ttm-table tr {
+      margin: 0 0 1rem 0;
+    }
+      
+	table.ttm-table td {
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee;
+		position: relative;
+		padding: 6px 6px 6px 50%;
+		text-align: left;
+		width: 100%;
+		min-height: 1.5rem;
+	}
+	
+	/* When table is shown as list hide suppressed columns */
+	table.ttm-table td.invisible {
+		display: none;
+	}
+	
+	table.ttm-table td.conceal {
+		display: none;
+	}
+	
+	table.ttm-table td:not(.ttm-caption):before {
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%;
+		text-align: right;
+		padding-right: 1rem;
+		font-weight: bold;
+		display: table-cell;
+		vertical-align: text-top;
+		content: attr(data-ttm-label);
+	}
+	
+	table.ttm-table td.ttm-caption {
+		padding-left: 5px;
+		width: 100%;
+		background-color: #cad2d1;
+	}
+}
+
+/* X-Small only, not part of foundation */
+@media screen and (max-width: 24.9375em) {		
+	table.ttm-table td {
+		padding: 6px 6px 6px 6px;
+	}
+	
+	table.ttm-table td:not(.ttm-caption):before {
+		position: initial;
+		text-align: left;
+		width: 100%;
+	}	
+}
+
+
+
+

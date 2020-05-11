@@ -1,0 +1,1705 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2020-02-09 12:27+0100\n"
+"PO-Revision-Date: 2020-02-09 12:28+0100\n"
+"Last-Translator: Christoph Theis <theis@gmx.at>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#: /Controller/UsersController.php:56
+msgid "You must fill in your email address"
+msgstr "Vous devez remplir votre adresse email"
+
+#: /Controller/UsersController.php:70
+msgid "Email address not found"
+msgstr "L'adresse email n'est pas définie"
+
+#: /Controller/UsersController.php:103
+msgid "Invalid request to reset the password"
+msgstr "Demande invalide pour réinitialiser votre mot de passe"
+
+#: /Controller/UsersController.php:108
+msgid "Your ticket has expired"
+msgstr "Votre demande a expiré"
+
+#: /Controller/UsersController.php:141
+msgid "The ticket to request a new password could not be created"
+msgstr "Votre demande de nouveau mot de passe ne peut être validée"
+
+#: /Controller/UsersController.php:162 /Controller/UsersController.php:226
+#: /Controller/Component/WelcomeMailComponent.php:117
+msgid "Double Entries"
+msgstr "Inscription en double"
+
+#: /Controller/UsersController.php:176
+msgid "A new password has been requested with your email address."
+msgstr "Un nouveau mot de passe a été demandé avec votre email."
+
+#: /Controller/UsersController.php:178
+msgid ""
+"If you did not initiate this request, please ignore this mail. You password "
+"will remain unchanged."
+msgstr ""
+"Si vous ne réinitialiser pas cette demande, merci de ne pas tenir compte de "
+"ce mail. Votre mot de passe ne changera pas."
+
+#: /Controller/UsersController.php:180
+msgid ""
+"To get a new password click the link below. A new password will then be sent "
+"to your email address."
+msgstr ""
+"Pour recevoir un nouveau mot de passe, cliquez sur le bouton ci-dessous. Un "
+"nouveau mot de passe sera envoyé sur votre boîte mail."
+
+#: /Controller/UsersController.php:188
+msgid "The link above will also log you in one time."
+msgstr "Le lien ci-dessous vous permettra de vous connecter."
+
+#: /Controller/UsersController.php:190
+msgid ""
+"To login another time you have to use the password or request a new link "
+"with \"Forgot Password\"."
+msgstr ""
+"Pour vous connecter par la suite, vous devrez utiliser votre mot de passe ou "
+"en demande un nouveau avec le bouton 'Mot de passe oublié'."
+
+#: /Controller/UsersController.php:194
+msgid "The email confirming your password request could not be sent"
+msgstr "L'email concernant votre demande de mot de passe ne peut être envoyé"
+
+#: /Controller/UsersController.php:196
+msgid ""
+"An email has been sent. Follow the instructions in the mail to receive a new "
+"password"
+msgstr ""
+"Un email vient de vous être envoyé. Suivez les instructions pour définir un "
+"nouveau mot de passe"
+
+#: /Controller/UsersController.php:240
+msgid "Your new password is: "
+msgstr "Votre nouveau mot de passe est: "
+
+#: /Controller/UsersController.php:248
+msgid "The email could not be sent, password remains unchanged"
+msgstr "L'email n'a pas pu être envoyé, le mot de passe reste inchangé"
+
+#: /Controller/UsersController.php:250
+msgid "The new password could not be saved"
+msgstr "Le nouveau mot de passe n'a pu être enregistré"
+
+#: /Controller/UsersController.php:252
+msgid "A new password has been sent to your email address"
+msgstr "Un nouveau mot de passe a été envoyé à votre email"
+
+#: /Controller/UsersController.php:304
+msgid "You are logged in"
+msgstr "Vous êtes connecté"
+
+#: /Controller/UsersController.php:398
+msgid "Good-Bye"
+msgstr "Au revoir"
+
+#: /Controller/UsersController.php:707
+msgid "Your profile has been saved"
+msgstr "Votre profil vient d'être sauvé"
+
+#: /Controller/UsersController.php:710
+msgid "Your profile could not be saved"
+msgstr "Votre profil ne peut être sauvé"
+
+#: /Controller/UsersController.php:804
+msgid "A password has been sent"
+msgstr "Un mot de passe a été envoyé"
+
+#: /Controller/Component/RegistrationUpdateComponent.php:52
+msgid "Unknown user {0}"
+msgstr "Utilisateur inconnu {0}"
+
+#: /Controller/Component/RegistrationUpdateComponent.php:123
+msgid "Cannot change type of registration"
+msgstr "Ne peut modifier le type d'inscription"
+
+#: /Controller/Component/RegistrationUpdateComponent.php:156
+msgid "The new registration could not be created"
+msgstr "Le nouveau mot de passe n'a pu être enregistré"
+
+#: /Template/Element/footer.ctp:7
+msgid "Privacy Policy"
+msgstr "Politique de Confidentialité"
+
+#: /Template/Element/footer.ctp:16
+msgid "Impressum"
+msgstr "Nous Contacter"
+
+#: /Template/Element/footer.ctp:25
+msgid "Terms & Conditions"
+msgstr "Conditions Générales"
+
+#: /Template/Element/header.ctp:35
+msgid "Not logged in"
+msgstr "Pas connecté"
+
+#: /Template/Element/header.ctp:36 /Template/Users/login.ctp:14
+msgid "Login"
+msgstr "Me connecter"
+
+#: /Template/Element/header.ctp:40 /Template/Element/shop_header.ctp:4
+msgid "Register"
+msgstr "Inscription"
+
+#: /Template/Element/header.ctp:43
+msgid "Logged in as "
+msgstr "Connecté comme "
+
+#: /Template/Element/header.ctp:45
+msgid "Logout"
+msgstr "Déconnecter"
+
+#: /Template/Element/savecancel.ctp:38
+msgid "Save"
+msgstr "Sauvegarder"
+
+#: /Template/Element/savecancel.ctp:40 /Template/Element/shop_footer.ctp:18
+#: /Template/Shops/Payment/authorizenet.ctp:177
+#: /Template/Shops/Payment/bpayment.ctp:122
+#: /Template/Shops/Payment/card_pointe.ctp:91
+#: /Template/Shops/Payment/dibs.ctp:110 /Template/Shops/Payment/dummy.ctp:102
+#: /Template/Shops/Payment/ipayment.ctp:153
+#: /Template/Shops/Payment/paypal_express.ctp:87
+#: /Template/Shops/Payment/redsys.ctp:92
+msgid "Cancel"
+msgstr "Annuler"
+
+#: /Template/Element/savecancel.ctp:49
+#: /Template/Registrations/add_participant.ctp:168
+msgid "Save & Cont."
+msgstr "Sauvegarder & Cont."
+
+#: /Template/Layout/default.ctp:118 /Template/Registrations/index.ctp:337
+#: /Template/Registrations/requests.ctp:16 /Template/Element/shop_people.ctp:67
+#: /Template/Element/shop_people.ctp:130 /Template/Shops/buy.ctp:221
+#: /Template/Shops/buy.ctp:287
+msgid "Actions"
+msgstr "Actions"
+
+#: /Template/Pages/participants.ctp:32
+msgid "Participants"
+msgstr "Participants"
+
+#: /Template/Pages/participants.ctp:34
+msgid "Only confirmed double partners are shown"
+msgstr "Seules les paires de doubles confirmées sont affichées"
+
+#: /Template/Pages/participants.ctp:40 /Template/Registrations/index.ctp:291
+#: /Template/Registrations/requests.ctp:6 /Template/Element/shop_address.ctp:17
+msgid "Name"
+msgstr "Nom"
+
+#: /Template/Pages/participants.ctp:41
+#: /Template/Registrations/add_participant.ctp:135
+#: /Template/Registrations/edit_participant.ctp:168
+#: /Template/Registrations/index.ctp:37 /Template/Registrations/index.ctp:299
+#: /Template/Registrations/requests.ctp:7
+#: /Template/Registrations/csv/export_count.ctp:3
+#: /Template/Element/shop_people.ctp:61 /Template/Element/voucher.ctp:40
+#: /Template/Shops/add_person.ctp:183
+msgid "Association"
+msgstr "Fédération"
+
+#: /Template/Pages/participants.ctp:43 /Template/Element/shop_people.ctp:64
+msgid "Singles"
+msgstr "Simples"
+
+#: /Template/Pages/participants.ctp:46 /Template/Element/shop_people.ctp:65
+msgid "Doubles"
+msgstr "Doubles"
+
+#: /Template/Pages/participants.ctp:47
+#: /Template/Registrations/edit_participant.ctp:292
+#: /Template/Registrations/index.ctp:325
+msgid "Double Partner"
+msgstr "Partenaire de Double"
+
+#: /Template/Pages/participants.ctp:50
+#: /Template/Registrations/edit_participant.ctp:315
+#: /Template/Registrations/index.ctp:328
+#: /Template/Registrations/requests.ctp:14 /Template/Element/shop_people.ctp:66
+msgid "Mixed"
+msgstr "Mixte"
+
+#: /Template/Pages/participants.ctp:51
+#: /Template/Registrations/edit_participant.ctp:331
+#: /Template/Registrations/index.ctp:329
+msgid "Mixed Partner"
+msgstr "Partenaire de double mixte"
+
+#: /Template/Pages/participants.ctp:54
+msgid "Teams"
+msgstr "Equipe"
+
+#: /Template/People/index.ctp:6 /Template/Registrations/count.ctp:10
+#: /Template/Registrations/index.ctp:33 /Template/Users/index.ctp:6
+#: /Template/Orders/index.ctp:10
+msgid "Filter"
+msgstr "Filtre"
+
+#: /Template/Registrations/add_participant.ctp:84
+msgid "Add Participant"
+msgstr "Ajouter un participant"
+
+#: /Template/Registrations/add_participant.ctp:88
+msgid "Select Type"
+msgstr "Sélectionner un type"
+
+#: /Template/Registrations/add_participant.ctp:89
+#: /Template/Registrations/edit_participant.ctp:178
+#: /Template/Registrations/edit_participant.ctp:182
+#: /Template/Registrations/edit_participant.ctp:186
+#: /Template/Registrations/index.ctp:57 /Template/Registrations/index.ctp:306
+#: /Template/Element/voucher.ctp:41 /Template/Shops/add_person.ctp:154
+msgid "Type"
+msgstr "Catégorie"
+
+#: /Template/Registrations/add_participant.ctp:95
+#: /Template/Registrations/edit.ctp:115
+#: /Template/Registrations/edit_participant.ctp:158
+#: /Template/Shops/add_person.ctp:163
+msgid "Given Name"
+msgstr "Prénom"
+
+#: /Template/Registrations/add_participant.ctp:100
+#: /Template/Registrations/edit.ctp:120
+#: /Template/Registrations/edit_participant.ctp:163
+#: /Template/Registrations/index.ctp:179 /Template/Shops/add_person.ctp:169
+msgid "Family Name"
+msgstr "Nom de Famille"
+
+#: /Template/Registrations/add_participant.ctp:110
+#: /Template/Registrations/edit.ctp:155
+#: /Template/Registrations/edit_participant.ctp:204
+#: /Template/Shops/add_person.ctp:177
+msgid "Select gender"
+msgstr "Sélectionner un genre"
+
+#: /Template/Registrations/add_participant.ctp:111
+#: /Template/Registrations/edit.ctp:149 /Template/Registrations/edit.ctp:156
+#: /Template/Registrations/edit_participant.ctp:198
+#: /Template/Registrations/edit_participant.ctp:205
+#: /Template/Shops/add_person.ctp:179
+msgid "Man"
+msgstr "Homme"
+
+#: /Template/Registrations/add_participant.ctp:111
+#: /Template/Registrations/edit.ctp:149 /Template/Registrations/edit.ctp:156
+#: /Template/Registrations/edit_participant.ctp:198
+#: /Template/Registrations/edit_participant.ctp:205
+#: /Template/Shops/add_person.ctp:179
+msgid "Woman"
+msgstr "Femme"
+
+#: /Template/Registrations/add_participant.ctp:134
+#: /Template/Shops/add_person.ctp:186
+msgid "Select Association"
+msgstr "Sélectionner une fédération"
+
+#: /Template/Registrations/add_participant.ctp:154
+#: /Template/Registrations/edit_participant.ctp:375
+msgid "Items"
+msgstr "Articles"
+
+#: /Template/Registrations/add_participant.ctp:175
+#: /Template/Registrations/edit_participant.ctp:404
+#: /Template/Registrations/index.ctp:606
+#: /Template/Registrations/requests.ctp:80
+msgid "List Registrations"
+msgstr "Listes des inscriptions"
+
+#: /Template/Registrations/count.ctp:98 /Template/Registrations/count.ctp:100
+#: /Template/Registrations/index.ctp:133 /Template/Registrations/index.ctp:135
+msgid "Requested As"
+msgstr "Demandé"
+
+#: /Template/Registrations/count.ctp:103 /Template/Registrations/count.ctp:105
+#: /Template/Registrations/index.ctp:138 /Template/Registrations/index.ctp:140
+msgid "Multiple"
+msgstr "Multiple"
+
+#: /Template/Registrations/count.ctp:126
+msgid ""
+"Only registered and paid for players are counted but not reserved positions."
+msgstr ""
+"Seuls les joueurs inscrits et payés pour les joueurs sont comptés mais pas "
+"les positions réservées."
+
+#: /Template/Registrations/edit_participant.ctp:24
+#: /Template/Registrations/edit_participant.ctp:43
+#: /Template/Registrations/edit_participant.ctp:300
+#: /Template/Registrations/edit_participant.ctp:339
+#: /Template/Registrations/index.ctp:483 /Template/Registrations/index.ctp:509
+msgid "Partner wanted"
+msgstr "Joueur sans partenaire"
+
+#: /Template/Registrations/edit_participant.ctp:128
+msgid "Edit Registration"
+msgstr "Éditer les inscriptions"
+
+#: /Template/Registrations/edit_participant.ctp:147
+msgid "Person"
+msgstr "Personne"
+
+#: /Template/Registrations/edit_participant.ctp:218
+#: /Template/Shops/add_person.ctp:202
+msgid "Date Born"
+msgstr "Date de Naissance"
+
+#: /Template/Registrations/edit_participant.ctp:252
+#: /Template/Registrations/index.ctp:321
+#: /Template/Registrations/requests.ctp:10
+msgid "Single"
+msgstr "Simple"
+
+#: /Template/Registrations/edit_participant.ctp:257
+msgid "Not Playing Singles"
+msgstr "Ne participant pas aux simples"
+
+#: /Template/Registrations/edit_participant.ctp:275
+#: /Template/Registrations/index.ctp:324
+#: /Template/Registrations/requests.ctp:12
+msgid "Double"
+msgstr "Double"
+
+#: /Template/Registrations/edit_participant.ctp:280
+msgid "Not Playing Doubles"
+msgstr "Ne participant pas aux doubles"
+
+#: /Template/Registrations/edit_participant.ctp:282
+msgid "Double Partner Category"
+msgstr "Catégorie du partenaire de double"
+
+#: /Template/Registrations/edit_participant.ctp:319
+msgid "Not Playing Mixed"
+msgstr "Ne participant pas aux mixtes"
+
+#: /Template/Registrations/edit_participant.ctp:321
+msgid "Mixed Partner Category"
+msgstr "Catégorie du partenaire de double mixte"
+
+#: /Template/Registrations/edit_participant.ctp:348
+msgid "Not Playing Teams"
+msgstr "Ne participant pas aux compétitions par équipes"
+
+#: /Template/Registrations/edit_participant.ctp:354
+#: /Template/Users/forgot_password.ctp:9 /Template/Users/login.ctp:16
+#: /Template/Element/receipt.ctp:133 /Template/Element/shop_address.ctp:25
+#: /Template/Email/html/cancel.ctp:180 /Template/Email/html/order.ctp:294
+#: /Template/Shops/add_person.ctp:219 /Template/Shops/address.ctp:143
+msgid "Email"
+msgstr "Email"
+
+#: /Template/Registrations/edit_participant.ctp:358
+#: /Template/Element/receipt.ctp:139 /Template/Element/shop_address.ctp:27
+#: /Template/Email/html/cancel.ctp:186 /Template/Email/html/order.ctp:300
+#: /Template/Shops/success.ctp:98
+msgid "Phone"
+msgstr "Téléphone"
+
+#: /Template/Registrations/edit_participant.ctp:407
+#: /Template/Registrations/index.ctp:609
+#: /Template/Registrations/requests.ctp:82
+msgid "List Partner Wanted"
+msgstr "Sans partenaire"
+
+#: /Template/Registrations/index.ctp:27
+msgid "Partner Wanted"
+msgstr "Joueur sans partenaire"
+
+#: /Template/Registrations/index.ctp:27
+msgid "Registrations"
+msgstr "Inscriptions"
+
+#: /Template/Registrations/index.ctp:39 /Template/Registrations/index.ctp:41
+#: /Template/Registrations/index.ctp:61 /Template/Registrations/index.ctp:63
+#: /Template/Registrations/index.ctp:80 /Template/Registrations/index.ctp:82
+#: /Template/Registrations/index.ctp:98 /Template/Registrations/index.ctp:100
+#: /Template/Registrations/index.ctp:123 /Template/Registrations/index.ctp:160
+#: /Template/Registrations/index.ctp:162 /Template/Registrations/index.ctp:190
+#: /Template/Registrations/index.ctp:192 /Template/Registrations/index.ctp:218
+msgid "all"
+msgstr "tout"
+
+#: /Template/Registrations/index.ctp:78
+msgid "Competition"
+msgstr "Competition"
+
+#: /Template/Registrations/index.ctp:96
+msgid "Age Category"
+msgstr "Catégorie d'âge"
+
+#: /Template/Registrations/index.ctp:103 /Template/Registrations/index.ctp:105
+msgid "Different"
+msgstr "Différente"
+
+#: /Template/Registrations/index.ctp:108 /Template/Registrations/index.ctp:110
+msgid "Not in all events"
+msgstr "Pas dans tous les tableaux"
+
+#: /Template/Registrations/index.ctp:120
+msgid "Partner"
+msgstr "Partenaire"
+
+#: /Template/Registrations/index.ctp:128 /Template/Registrations/index.ctp:130
+msgid "Wanted"
+msgstr "Sans partenaire"
+
+#: /Template/Registrations/index.ctp:143 /Template/Registrations/index.ctp:145
+msgid "Not Confirmed"
+msgstr "Pas confirmé"
+
+#: /Template/Registrations/index.ctp:148 /Template/Registrations/index.ctp:150
+msgid "Confirmed"
+msgstr "Confirmé"
+
+#: /Template/Registrations/index.ctp:158
+msgid "Status"
+msgstr "Statut"
+
+#: /Template/Registrations/index.ctp:165 /Template/Registrations/index.ctp:167
+msgid "Not cancelled"
+msgstr "Non Annulé"
+
+#: /Template/Registrations/index.ctp:170 /Template/Registrations/index.ctp:172
+msgid "Cancelled"
+msgstr "Annulé"
+
+#: /Template/Registrations/index.ctp:217
+msgid "Username"
+msgstr "Nom d'utilisateur"
+
+#: /Template/Registrations/index.ctp:294 /Template/Element/shop_people.ctp:62
+#: /Template/Element/shop_people.ctp:129 /Template/Orders/view.ctp:165
+#: /Template/Orders/view.ctp:240 /Template/Shops/add_person.ctp:175
+msgid "Sex"
+msgstr "Sexe"
+
+#: /Template/Registrations/index.ctp:304 /Controller/ShopsController.php:165
+msgid "Player"
+msgstr "Joueur"
+
+# Registrastion ID
+#: /Template/Registrations/index.ctp:312 /Template/Registrations/requests.ctp:8
+#: /Template/Element/voucher.ctp:37
+msgid "Reg. ID"
+msgstr "N° Insc."
+
+#: /Template/Registrations/index.ctp:317
+msgid "Start No."
+msgstr "Dossard"
+
+#: /Template/Registrations/index.ctp:333
+msgid "Team"
+msgstr "Equipe"
+
+#: /Template/Registrations/index.ctp:336
+msgid "Updated"
+msgstr "Mise à jour"
+
+#: /Template/Registrations/index.ctp:439
+msgid "Yes"
+msgstr "Oui"
+
+#: /Template/Registrations/index.ctp:439
+msgid "No"
+msgstr "Non"
+
+#: /Template/Registrations/index.ctp:490 /Template/Registrations/index.ctp:516
+msgid "wanted"
+msgstr "proposé"
+
+#: /Template/Registrations/index.ctp:539
+msgid "History"
+msgstr "Historique"
+
+#: /Template/Registrations/index.ctp:541
+msgid "View"
+msgstr "Voir"
+
+#: /Template/Registrations/index.ctp:549 /Template/Registrations/index.ctp:551
+msgid "Edit"
+msgstr "Éditer"
+
+#: /Template/Registrations/index.ctp:557 /Template/Registrations/index.ctp:561
+msgid "Delete"
+msgstr "Supprimer"
+
+#: /Template/Registrations/index.ctp:558 /Template/Registrations/index.ctp:562
+msgid "Are you sure you want to delete %s?"
+msgstr "Êtes-vous sur de vouloir supprimer %s?"
+
+#: /Template/Registrations/index.ctp:585
+msgid "Requests"
+msgstr "Proposer"
+
+#: /Template/Registrations/index.ctp:599 /Template/Registrations/index.ctp:601
+msgid "New Registration"
+msgstr "Nouvelle inscription"
+
+#: /Template/Registrations/index.ctp:630
+msgid "Export"
+msgstr "Exporter"
+
+#: /Template/Registrations/index.ctp:632
+msgid "Export Order"
+msgstr "Exporter les commandes"
+
+#: /Template/Registrations/requests.ctp:2
+msgid "Partner Requests for {0}"
+msgstr "Partenaire proposé pour {0}"
+
+#: /Template/Registrations/requests.ctp:63
+msgid "Accept"
+msgstr "Accepter"
+
+#: /Template/Registrations/requests.ctp:65
+msgid "Reject"
+msgstr "Refuser"
+
+#: /Template/Registrations/requests.ctp:67
+msgid "Are you sure you want to reject the partner request from {0}?"
+msgstr "Êtes-vous sur de vouloir refuser la demande de {0}"
+
+#: /Template/Registrations/csv/export_count.ctp:8
+#: /Template/Element/shop_order.ctp:28 /Template/Element/shop_order.ctp:193
+#: /Template/Shops/buy.ctp:143 /Template/Shops/buy.ctp:286
+#: /Template/Shops/buy.ctp:333
+msgid "Total"
+msgstr "Total"
+
+#: /Template/Users/forgot_password.ctp:6 /Template/Users/forgot_password.ctp:14
+msgid "Request Password"
+msgstr "Demande de mot de passe"
+
+#: /Template/Users/login.ctp:20
+msgid "Forgot Password"
+msgstr "Mot de passe oublié"
+
+#: /Template/Users/login.ctp:24
+msgid "Password"
+msgstr "Mot de passe"
+
+#: /Template/Users/login.ctp:38
+msgid "Remember me"
+msgstr "Se souvenir de moi"
+
+#: /Template/Users/profile.ctp:8
+msgid "Edit Profile"
+msgstr "Éditer le profil"
+
+#: /Template/Users/profile.ctp:14
+msgid "Pref. language"
+msgstr "Préf. langue"
+
+#: /Controller/OrdersController.php:1235
+msgid "[{0}] Cancellation of registration {1} from {2}"
+msgstr "[{0}] Annulation de l'inscription {1} le {2}"
+
+#: /Controller/ShopsController.php:167
+msgid "Accompanying Person"
+msgstr "Accompagnateur"
+
+#: /Controller/ShopsController.php:195 /Controller/ShopsController.php:209
+#: /Controller/ShopsController.php:457 /Controller/ShopsController.php:465
+msgid ""
+"You cannot register players after registration closed for players on {0}"
+msgstr "Vous ne pouvez inscrire des joueurs après la date limite du {0}"
+
+#: /Controller/ShopsController.php:202 /Controller/ShopsController.php:461
+msgid ""
+"You cannot register players before registration opens for players on {0}"
+msgstr "Vous ne pouvez inscrire des joueurs avant la jour d'ouverture du {0}"
+
+#: /Controller/ShopsController.php:219
+msgid "The registration for players has been closed"
+msgstr "L'inscription des joueurs a été clôturée"
+
+#: /Controller/ShopsController.php:228
+msgid ""
+"Players are already sold out and adding more will put your registration on "
+"the waiting list"
+msgstr ""
+"La liste des Joueurs est complète, les joueurs supplémentaires seront mis en "
+"liste d'attente"
+
+#: /Controller/ShopsController.php:237
+msgid "The registration for accompanying persons has been closed"
+msgstr "L'inscription des personnes accompagnants a été clôturée"
+
+#: /Controller/ShopsController.php:246
+msgid ""
+"Accompanying persons are already sold out and adding more will put your "
+"registration on the waiting list"
+msgstr ""
+"La liste des Accompagnants est complète, les accompagnants supplémentaires "
+"seront mis en liste d'attente"
+
+#: /Controller/ShopsController.php:332
+msgid "You must fill out all required fields"
+msgstr "Vous devez remplis tous les champs requis"
+
+#: /Controller/ShopsController.php:343
+msgid "You must enter the date of birth for players"
+msgstr "Vous devez saisir la date de naissance des joueurs"
+
+#: /Controller/ShopsController.php:348
+msgid "The date of birth is not valid"
+msgstr "La date de naissance est invalide"
+
+#: /Controller/ShopsController.php:353
+msgid "You must be born in %d or earlier"
+msgstr "Vous devez être né en %d ou avant"
+
+#: /Controller/ShopsController.php:359
+msgid "Wrong birthday given"
+msgstr "Mauvaise date de naissance saisie"
+
+#: /Controller/ShopsController.php:368
+msgid ""
+"You must agree to the privacy policy when entering an email address or a "
+"phone number"
+msgstr ""
+"Vous devez donnez votre accord avec la politique de confidentialité en "
+"saisissant votre adresse email ou votre numéro de téléphone"
+
+#: /Controller/ShopsController.php:380
+msgid "The phone number is invalid"
+msgstr "Le numéro de téléphone est invalide"
+
+#: /Controller/ShopsController.php:388
+msgid "The email address has an invalid format"
+msgstr "L'adresse email a un format non valide"
+
+#: /Controller/ShopsController.php:445
+msgid "You cannot register people before registration opens on {0}"
+msgstr "Vous ne pouvez inscrire des personnes avant la date du {0}"
+
+#: /Controller/ShopsController.php:451
+msgid "You cannot register people after registration closed on {0}"
+msgstr "Vous ne pouvez inscrire des personnes après la date limite du {0}"
+
+#: /Controller/ShopsController.php:586
+msgid "You have to register people or buy something"
+msgstr "Vous devez inscrire des personnes ou acheter quelque chose"
+
+#: /Controller/ShopsController.php:729
+msgid "Given name cannot be empty"
+msgstr "Le Prénom doit être saisi"
+
+#: /Controller/ShopsController.php:734
+msgid "Family name cannot be empty"
+msgstr "Le nom de famille doit être saisi"
+
+#: /Controller/ShopsController.php:739
+msgid "Street name cannot be empty"
+msgstr "L'adresse doit être saisie"
+
+#: /Controller/ShopsController.php:744
+msgid "Zip code cannot be empty"
+msgstr "Le code postal doit être saisi"
+
+#: /Controller/ShopsController.php:749
+msgid "City cannot be empty"
+msgstr "La Ville doit est saisie"
+
+#: /Controller/ShopsController.php:754
+msgid "Country cannot be empty"
+msgstr "Le Pays doit être saisi"
+
+#: /Controller/ShopsController.php:759
+msgid "Email address cannot be empty"
+msgstr "L'adresse email doit être saisi"
+
+#: /Controller/ShopsController.php:799
+msgid "You must agree to the terms and conditions"
+msgstr "Vous devez donnez votre accord avec les conditions générales"
+
+#: /Controller/ShopsController.php:1146
+msgid "[{0}] Your registration {1} from {2}"
+msgstr "[{0}] Votre inscription {1} du {2}"
+
+#: /Controller/ShopsController.php:1273
+msgid "[{0}] Your voucher for your registration {1} from {2}"
+msgstr "[{0}] Le bon de votre inscription {1} du {2}"
+
+#: /Controller/ShopsController.php:1527
+msgid "The order was not found"
+msgstr "L'ordre n'est pas définie"
+
+#: /Controller/ShopsController.php:1598 /Controller/ShopsController.php:1606
+msgid "Invalid registration"
+msgstr "Inscription invalide"
+
+#: /Controller/ShopsController.php:1611
+msgid "The registration was already paid for"
+msgstr "L'inscription a déjà été payé pour"
+
+#: /Controller/ShopsController.php:1620
+msgid "You cannot pay for this registration at this moment"
+msgstr "Vous ne pouvez pas payer pour cette inscription en ce moment"
+
+#: /Controller/Component/OrderUpdateComponent.php:52
+#: /Controller/Component/OrderUpdateComponent.php:166
+msgid "Unknown registration"
+msgstr "Inscription inconnue"
+
+#: /Controller/Component/OrderUpdateComponent.php:67
+msgid "Illegal type"
+msgstr "Illégale Catégorie"
+
+#: /Controller/Component/OrderUpdateComponent.php:78
+msgid "Unknown user"
+msgstr "Utilisateur inconnu"
+
+#: /Controller/Component/OrderUpdateComponent.php:148
+msgid "The order could be be stored"
+msgstr "Le nouveau mot de passe n'a pu être enregistré"
+
+#: /Template/Element/creditcard.ctp:38 /Template/Element/creditcard.ctp:42
+#: /Template/Shops/Payment/authorizenet.ctp:35
+#: /Template/Shops/Payment/authorizenet.ctp:43
+#: /Template/Shops/Payment/bpayment.ctp:61
+#: /Template/Shops/Payment/bpayment.ctp:65
+#: /Template/Shops/Payment/card_pointe.ctp:33
+#: /Template/Shops/Payment/card_pointe.ctp:37
+#: /Template/Shops/Payment/dibs.ctp:49 /Template/Shops/Payment/dibs.ctp:53
+#: /Template/Shops/Payment/dummy.ctp:38 /Template/Shops/Payment/dummy.ctp:42
+#: /Template/Shops/Payment/ipayment.ctp:30
+#: /Template/Shops/Payment/ipayment.ctp:38
+#: /Template/Shops/Payment/paypal_express.ctp:40
+#: /Template/Shops/Payment/paypal_express.ctp:44
+#: /Template/Shops/Payment/redsys.ctp:40 /Template/Shops/Payment/redsys.ctp:44
+#: /Template/Shops/Payment/sogecommerce.ctp:33
+#: /Template/Shops/Payment/sogecommerce.ctp:37
+msgid "The payment could not be initiated. Please try again later."
+msgstr ""
+"Nous ne pouvons enclencher le paiement. Merci de recommencer plus tard."
+
+#: /Template/Element/creditcard.ctp:55
+#: /Template/Shops/Payment/authorizenet.ctp:84
+#: /Template/Shops/Payment/bpayment.ctp:113
+#: /Template/Shops/Payment/card_pointe.ctp:82
+#: /Template/Shops/Payment/dibs.ctp:101 /Template/Shops/Payment/dummy.ctp:86
+#: /Template/Shops/Payment/ipayment.ctp:71
+#: /Template/Shops/Payment/paypal_express.ctp:78
+#: /Template/Shops/Payment/redsys.ctp:83
+#: /Template/Shops/Payment/sogecommerce.ctp:67
+msgid "Amount"
+msgstr "Montant"
+
+#: /Template/Element/receipt.ctp:28
+msgid "Proforma Invoice"
+msgstr "Facture Proforma"
+
+#: /Template/Element/receipt.ctp:33 /Template/Element/voucher.ctp:11
+msgid "Invoice date"
+msgstr "Date de facture"
+
+#: /Template/Element/receipt.ctp:37 /Template/Element/voucher.ctp:15
+msgid "Invoice no"
+msgstr "N° de facture"
+
+#: /Template/Element/receipt.ctp:62
+msgid "Order"
+msgstr "Ordre"
+
+#: /Template/Element/receipt.ctp:83 /Template/Email/html/cancel.ctp:148
+#: /Template/Email/html/order.ctp:244 /Template/Shops/success.ctp:70
+msgid "Bank"
+msgstr "Banque"
+
+#: /Template/Element/receipt.ctp:89 /Template/Email/html/cancel.ctp:154
+#: /Template/Email/html/order.ctp:250
+msgid "Bank Address"
+msgstr "Adresse de la banque"
+
+#: /Template/Element/receipt.ctp:95 /Template/Email/html/cancel.ctp:160
+#: /Template/Email/html/order.ctp:262 /Template/Shops/success.ctp:78
+msgid "IBAN"
+msgstr "IBAN"
+
+#: /Template/Element/receipt.ctp:101 /Template/Email/html/order.ctp:256
+msgid "Account No"
+msgstr "N° de compte"
+
+#: /Template/Element/receipt.ctp:107 /Template/Email/html/order.ctp:268
+msgid "BIC (SWIFT)"
+msgstr "BIC (SWIFT)"
+
+#: /Template/Element/receipt.ctp:113 /Template/Email/html/order.ctp:274
+#: /Template/Shops/success.ctp:90
+msgid "ABA"
+msgstr "ABA"
+
+#: /Template/Element/receipt.ctp:119 /Template/Email/html/order.ctp:280
+#: /Template/Shops/success.ctp:94
+msgid "Correspondent Bank"
+msgstr "Banque correspondante"
+
+#: /Template/Element/receipt.ctp:127 /Template/Email/html/cancel.ctp:174
+#: /Template/Email/html/order.ctp:288 /Template/Shops/success.ctp:74
+msgid "Account Holder"
+msgstr "Propriétaire du compte"
+
+#: /Template/Element/receipt.ctp:145 /Template/Email/html/cancel.ctp:192
+#: /Template/Email/html/order.ctp:306 /Template/Shops/success.ctp:102
+msgid "Fax"
+msgstr "Fax"
+
+#: /Template/Element/receipt.ctp:151 /Template/Email/html/cancel.ctp:198
+#: /Template/Email/html/order.ctp:312 /Template/Shops/success.ctp:66
+msgid "VAT Reg Id"
+msgstr "N° de TVA"
+
+#: /Template/Element/shop_address.ctp:15 /Template/Shops/address.ctp:102
+msgid "Title"
+msgstr "Civilité"
+
+#: /Template/Element/shop_address.ctp:19 /Template/Shops/address.ctp:122
+#: /Template/Shops/Payment/authorizenet.ctp:156
+#: /Template/Shops/Payment/ipayment.ctp:132
+msgid "Street"
+msgstr "Adresse"
+
+#: /Template/Element/shop_address.ctp:21 /Template/Shops/address.ctp:132
+#: /Template/Shops/Payment/authorizenet.ctp:164
+#: /Template/Shops/Payment/ipayment.ctp:140
+msgid "City"
+msgstr "Ville"
+
+#: /Template/Element/shop_address.ctp:23 /Template/Element/shop_people.ctp:128
+#: /Template/Shops/address.ctp:137 /Template/Shops/Payment/authorizenet.ctp:168
+#: /Template/Shops/Payment/ipayment.ctp:144
+msgid "Country"
+msgstr "Pays"
+
+#: /Template/Element/shop_footer.ctp:13 /Template/Element/shop_footer.ctp:30
+#: /Template/Element/shop_footer.ctp:32
+msgid "Next"
+msgstr "Suivant"
+
+#: /Template/Element/shop_footer.ctp:22
+#: /Template/Shops/Payment/authorizenet.ctp:180
+#: /Template/Shops/Payment/bpayment.ctp:125
+#: /Template/Shops/Payment/card_pointe.ctp:94
+#: /Template/Shops/Payment/dibs.ctp:113 /Template/Shops/Payment/dummy.ctp:105
+#: /Template/Shops/Payment/ipayment.ctp:156
+#: /Template/Shops/Payment/paypal_express.ctp:90
+#: /Template/Shops/Payment/redsys.ctp:95
+msgid "Previous"
+msgstr "Précédent"
+
+#: /Template/Element/shop_header.ctp:5
+msgid "Buy"
+msgstr "Achat"
+
+#: /Template/Element/shop_header.ctp:6
+msgid "Address"
+msgstr "Coordonnées"
+
+#: /Template/Element/shop_header.ctp:7
+msgid "Review"
+msgstr "Bilan"
+
+#: /Template/Element/shop_header.ctp:8
+msgid "Payment"
+msgstr "Paiement"
+
+#: /Template/Element/shop_header.ctp:9 /Template/Element/shop_header.ctp:10
+msgid "Billing"
+msgstr "Facture"
+
+#: /Template/Element/shop_header.ctp:11
+msgid "Completed"
+msgstr "Terminé"
+
+#: /Template/Element/shop_header.ctp:12 /Template/Shops/waiting_list.ctp:4
+msgid "Waiting List"
+msgstr "Liste d'attente"
+
+#: /Template/Element/shop_order.ctp:20
+msgid "Date"
+msgstr "Date"
+
+#: /Template/Element/shop_order.ctp:20 /Template/Element/shop_people.ctp:58
+#: /Template/Element/shop_people.ctp:125 /Template/Element/voucher.ctp:88
+msgid "Pos"
+msgstr "N°"
+
+#: /Template/Element/shop_order.ctp:21 /Template/Element/voucher.ctp:89
+msgid "Qty"
+msgstr "Qté"
+
+#: /Template/Element/shop_order.ctp:22 /Template/Element/voucher.ctp:90
+#: /Template/Shops/buy.ctp:218
+msgid "Description"
+msgstr "Description"
+
+#: /Template/Element/shop_order.ctp:23
+msgid "Canc Fee"
+msgstr "Frais d'annuler"
+
+#: /Template/Element/shop_order.ctp:23
+msgid "Each"
+msgstr "Prix unitaire"
+
+#: /Template/Element/shop_order.ctp:25
+msgid "VAT"
+msgstr "TVA"
+
+#: /Template/Element/shop_order.ctp:26
+msgid "Total incl. VAT"
+msgstr "Total TVA incl"
+
+#: /Template/Element/shop_order.ctp:153
+msgid "Discount"
+msgstr "Réduction"
+
+#: /Template/Element/shop_order.ctp:166 /Template/Element/shop_order.ctp:203
+msgid "Cancellation Fee"
+msgstr "Frais d'annulation"
+
+#: /Template/Element/shop_order.ctp:179 /Template/Element/shop_order.ctp:214
+msgid "Cancellation Discount"
+msgstr "Réduction d'annulation"
+
+#: /Template/Element/shop_order.ctp:226 /Template/Element/shop_order.ctp:250
+msgid "Refund"
+msgstr "Remboursement"
+
+#: /Template/Element/shop_order.ctp:238
+msgid "Paid"
+msgstr "Payé"
+
+#: /Template/Element/shop_order.ctp:263
+msgid "Due"
+msgstr "Dû"
+
+#: /Template/Element/shop_people.ctp:54
+msgid "Players"
+msgstr "Joueurs"
+
+#: /Template/Element/shop_people.ctp:59 /Template/Element/shop_people.ctp:126
+#: /Template/Element/voucher.ctp:38 /Template/Shops/address.ctp:115
+msgid "Family name"
+msgstr "Nom de famille"
+
+#: /Template/Element/shop_people.ctp:60 /Template/Element/shop_people.ctp:127
+#: /Template/Element/voucher.ctp:39 /Template/Shops/address.ctp:109
+msgid "Given name"
+msgstr "Prénom"
+
+#: /Template/Element/shop_people.ctp:63
+msgid "Born"
+msgstr "Naissance"
+
+#: /Template/Element/shop_people.ctp:107 /Template/Element/shop_people.ctp:154
+#: /Template/Shops/buy.ctp:121 /Template/Shops/buy.ctp:321
+msgid "Remove"
+msgstr "Retirer"
+
+#: /Template/Element/shop_people.ctp:122
+msgid "Accompanying People"
+msgstr "Personnes accompagnants"
+
+#: /Template/Element/voucher.ctp:24
+msgid "Voucher"
+msgstr "Bon"
+
+#: /Template/Element/voucher.ctp:25
+msgid "Please present this voucher at the accreditation."
+msgstr "Merci de présenter ce bon à l'accréditation."
+
+#: /Template/Element/voucher.ctp:29
+msgid "People"
+msgstr "Personnes"
+
+#: /Template/Element/voucher.ctp:84
+msgid "Additional Items"
+msgstr "Objet supplémentaire"
+
+#: /Template/Email/html/cancel.ctp:113 /Template/Email/html/voucher.ctp:3
+msgid "Dear Mr. {0} {1},"
+msgstr "Cher M. {0} {1},"
+
+#: /Template/Email/html/cancel.ctp:116 /Template/Email/html/voucher.ctp:5
+msgid "Dear Mrs. {0} {1},"
+msgstr "Cher Mme. {0} {1},"
+
+#: /Template/Email/html/cancel.ctp:120
+msgid "We have cancelled your registration {0} on your request."
+msgstr "Nous avons annulé l'inscription {0} à votre demande."
+
+#: /Template/Email/html/cancel.ctp:122
+msgid ""
+"We have cancelled your registration {0} because we have not received your "
+"payment in due time."
+msgstr ""
+"Nous avons annulé l'inscription {0} car nous n'avons pas reçu votre paiement "
+"à la date limite."
+
+#: /Template/Email/html/cancel.ctp:124
+msgid "If you think this is an error please contact {0} immediately!"
+msgstr ""
+"Si vous pensez que c'est une erreur, n'hésitez pas à contacter {0} "
+"rapidement!"
+
+#: /Template/Email/html/cancel.ctp:128 /Template/Email/html/order.ctp:216
+msgid "Details of your registration:"
+msgstr "Détails de votre inscription:"
+
+#: /Template/Email/html/cancel.ctp:133
+msgid "You had entered the following players and accompanying persons:"
+msgstr "Vous avez inscrit les joueurs et les accompagnants suivant:"
+
+#: /Template/Email/html/cancel.ctp:137 /Template/Email/html/order.ctp:231
+#: /Template/Email/html/voucher.ctp:16
+msgid "Best regards"
+msgstr "Cordialement"
+
+#: /Template/Email/html/cancel.ctp:166 /Template/Shops/success.ctp:82
+msgid "BIC"
+msgstr "BIC"
+
+#: /Template/Email/html/order.ctp:128 /Template/Email/html/order.ctp:180
+msgid "Thank you for your registration."
+msgstr "Merci pour votre inscription."
+
+#: /Template/Email/html/order.ctp:130
+msgid "Please note that your registration is on a waiting list."
+msgstr "Votre inscription est en liste d'attente."
+
+#: /Template/Email/html/order.ctp:132 /Template/Shops/success.ctp:9
+msgid "The waiting list is processed on a first come first served basis."
+msgstr ""
+"La liste d'inscription fonctionne sur la base du 'premier inscrit-premier "
+"servi'."
+
+#: /Template/Email/html/order.ctp:134 /Template/Shops/success.ctp:11
+msgid "We will notify you by email when it is possible for you to register."
+msgstr ""
+"Nous vous informerons par email dès qu'il sera possible de de vous inscrire."
+
+#: /Template/Email/html/order.ctp:136 /Template/Shops/success.ctp:13
+msgid ""
+"Please do not pay the registration fee unless you have been asked to do so."
+msgstr ""
+"Merci de ne pas payer cette inscription sauf si nous vous en faisons la "
+"demande spécifiquement."
+
+#: /Template/Email/html/order.ctp:138
+msgid ""
+"If in the meantime you decide to cancel your registration please inform us "
+"so that we can remove you from the waiting list."
+msgstr ""
+"Si, entre temps, vous avez décidé d'annuler votre inscription, merci de nous "
+"le faire savoir par email. Nous pourrons ainsi vous retirer de la liste "
+"d'attente."
+
+#: /Template/Email/html/order.ctp:140
+msgid "We want to inform you that your registration {0} can now be processed."
+msgstr ""
+"Nous vous informons que votre inscription {0} peut maintenant être validée."
+
+#: /Template/Email/html/order.ctp:142 /Template/Email/html/order.ctp:187
+msgid "Please pay the amount due as soon as possible, but not later than {0}."
+msgstr ""
+"Merci de payer le montant due le plus rapidement possible, et avant la date "
+"du {0}."
+
+#: /Template/Email/html/order.ctp:144
+msgid ""
+"If we haven't received your payment by then we will cancel your registration."
+msgstr ""
+"Si nous n'avons reçu votre paiement à cette date, nous annulerons votre "
+"inscription."
+
+#: /Template/Email/html/order.ctp:146
+msgid ""
+"Please notify us if you want us to cancel your registration so that we can "
+"inform the next on the waiting list immediately."
+msgstr ""
+"Merci de nous faire savoir par email si vous désirez annuler votre "
+"inscription. Ainsi nous pourrons avertir le suivant sur la liste d'attente."
+
+#: /Template/Email/html/order.ctp:150 /Template/Email/html/order.ctp:170
+#: /Template/Email/html/order.ctp:195
+msgid ""
+"Don't forget to put your invoice number on the bank transfer so we can find "
+"your order."
+msgstr ""
+"Ne pas oublier de mettre votre N° de facture lors de votre transfert "
+"bancaire. Ainsi nous pourrons retrouver votre commande facilement."
+
+#: /Template/Email/html/order.ctp:155 /Template/Email/html/order.ctp:175
+#: /Template/Email/html/order.ctp:200 /Template/Email/html/order.ctp:208
+msgid "To pay with credit card use this link:"
+msgstr "Pour payer avec une carte de crédit, utilisez ce lien:"
+
+#: /Template/Email/html/order.ctp:160
+msgid ""
+"This is a friendly reminder that you haven't paid your registration {0} yet."
+msgstr ""
+"Ceci est un rappel concernant l'inscription {0} qui n'est pas encore payée."
+
+#: /Template/Email/html/order.ctp:162
+msgid "If you believe this is an error please contact {0}."
+msgstr ""
+"Si vous pensez que c'est une erreur, n'hésitez pas à contacter {0} "
+"rapidement."
+
+#: /Template/Email/html/order.ctp:164
+msgid "If you have not paid yet please do so until {0}."
+msgstr "Si vous n'avez pas encore payé, merci de la faire avant le {0}"
+
+#: /Template/Email/html/order.ctp:166
+msgid ""
+"If we haven't received your payment by then we reserve the right to cancel "
+"your registrations without further notice."
+msgstr ""
+"Si nous n'avons pas reçu votre paiement à cette date, nous nous réservons le "
+"droit d'annuler votre inscription."
+
+#: /Template/Email/html/order.ctp:182
+msgid "Your invoice number is {0}."
+msgstr "Votre n° de facture est {0}."
+
+#: /Template/Email/html/order.ctp:189
+msgid ""
+"Note that your registration is not completed until we have received the full "
+"amount still due."
+msgstr ""
+"Votre inscription ne sera validée qu'après réception du montant total de "
+"votre inscription."
+
+#: /Template/Email/html/order.ctp:191
+msgid ""
+"We reserve the right to cancel your order after that date if we haven't "
+"received the full amount still due until then."
+msgstr ""
+"Nous nous réservons le droit d'annuler votre inscription si nous n'avons pas "
+"reçu le montant total de l'inscription à cette date."
+
+#: /Template/Email/html/order.ctp:221
+msgid "You have entered the following players and accompanying persons:"
+msgstr "Vous avez inscrit les joueurs et les accompagnants suivant:"
+
+#: /Template/Email/html/order.ctp:227
+msgid "Please find your receipt attached."
+msgstr "Veuillez trouver votre reçu ci-joint."
+
+#: /Template/Email/html/voucher.ctp:7
+msgid "Dear Sir or Madam,"
+msgstr "Cher(e) Monsieur ou Madame,"
+
+#: /Template/Email/html/voucher.ctp:9
+msgid "Thank you for your registration to the {0}."
+msgstr "Merci pour votre inscription au {0}"
+
+#: /Template/Email/html/voucher.ctp:11
+msgid "A voucher is attached to this mail."
+msgstr "Un bon est joint à ce mail."
+
+#: /Template/Email/html/voucher.ctp:13
+msgid "Please print this voucher and present it at the accreditation desk."
+msgstr "Merci d'imprimer ce bon et de le présenter lors de l'accréditation."
+
+#: /Template/Shops/add_person.ctp:120
+msgid "Add Player or Accompanying Person"
+msgstr "Ajouter un(e) joueur(se) ou un(e) accompagnant(e)"
+
+#: /Template/Shops/add_person.ctp:124
+msgid "Enter here the data for players or accompanying persons."
+msgstr "Entrez ici les données des joueurs ou des accompagnants."
+
+#: /Template/Shops/add_person.ctp:128
+msgid "For players the birthday is required."
+msgstr "Pour les joueurs, la date de naissance est nécessaire."
+
+#: /Template/Shops/add_person.ctp:132
+msgid "For players you may add email and a phone number of a cell phone."
+msgstr ""
+"Pour les joueurs, vous pouvez ajouter un email et le numéro de téléphone "
+"portable."
+
+#: /Template/Shops/add_person.ctp:136
+msgid ""
+"If you enter an email address, this player will also receive the "
+"notifications when he is requested as a double partner or a double partner "
+"is chosen for him."
+msgstr ""
+"Si vous entrez une adresse e-mail, le joueur recevra également les messages "
+"lorsqu'il sera sollicité en tant que partenaire double ou si un partenaire "
+"double est sélectionné pour lui."
+
+#: /Template/Shops/add_person.ctp:140
+msgid ""
+"If you enter a phone number the player will receive free SMS notifications "
+"about schedules and results of his matches, if the organizer chooses to do "
+"so."
+msgstr ""
+"Si vous entrez un numéro de téléphone portable, le joueur recevra des SMS "
+"gratuits concernant les horaires et les résultats de ses matchs, si "
+"l'organisateur met en place cette option."
+
+#: /Template/Shops/add_person.ctp:144
+msgid ""
+"By entering email address or phone number you must agree to the terms and "
+"conditions."
+msgstr ""
+"En entrant une adresse email ou un numéro de téléphone, vous devez accepter "
+"les mentions légales."
+
+#: /Template/Shops/add_person.ctp:148
+msgid "You can add or change email address and phone number later, too."
+msgstr ""
+"Vous pourrez ajouter ou modifier votre adresse électronique et votre numéro "
+"de téléphone ultérieurement."
+
+#: /Template/Shops/add_person.ctp:230
+msgid "Mobile"
+msgstr "Téléphone portable"
+
+#: /Template/Shops/add_person.ctp:241
+msgid "I agree to the %s regarding email address and phone number"
+msgstr ""
+"Je suis d'accord avec la %s concernant l'utilisation de mon email et de mon "
+"numéro de téléphone"
+
+#: /Template/Shops/add_person.ctp:243
+msgid "privacy policy"
+msgstr "politique de confidentialité"
+
+#: /Template/Shops/address.ctp:77 /Template/Shops/review.ctp:28
+#: /Template/Shops/success.ctp:55
+msgid "Billing Address"
+msgstr "Adresse de Facturation"
+
+#: /Template/Shops/address.ctp:81
+msgid "Enter here your billing address."
+msgstr "Saisissez ici votre adresse de facturation."
+
+#: /Template/Shops/address.ctp:85
+msgid "All fields are required."
+msgstr "Tous les champs doivent être saisis."
+
+#: /Template/Shops/address.ctp:89
+msgid "Please make sure you enter a valid email address."
+msgstr "Vérifier bien la validité de votre adresse email."
+
+#: /Template/Shops/address.ctp:105
+msgid "Mr"
+msgstr "M"
+
+#: /Template/Shops/address.ctp:105
+msgid "Mrs"
+msgstr "Mme"
+
+#: /Template/Shops/address.ctp:106
+msgid "Please select"
+msgstr "Choisir"
+
+#: /Template/Shops/address.ctp:127 /Template/Shops/Payment/authorizenet.ctp:160
+#: /Template/Shops/Payment/ipayment.ctp:136
+msgid "Postal code"
+msgstr "Code postal"
+
+#: /Template/Shops/address.ctp:140 /Template/Shops/Payment/authorizenet.ctp:170
+#: /Template/Shops/Payment/ipayment.ctp:146
+msgid "Select Country"
+msgstr "Sélectionner un pays"
+
+#: /Template/Shops/banktransfer.ctp:4
+msgid "Payment by Bank Transfer"
+msgstr "Paiement par virement bancaire"
+
+#: /Template/Shops/banktransfer.ctp:7
+msgid "You will receive instructions in your confirmation email."
+msgstr "Vous allez recevoir des instructions dans l’email de confirmation."
+
+#: /Template/Shops/banktransfer.ctp:9
+msgid ""
+"Please note that your registration is not valid until we have received the "
+"full amount of due payment."
+msgstr ""
+"Votre inscription sera validée uniquement à partir de la réception des frais "
+"d'inscriptions."
+
+#: /Template/Shops/banktransfer.ctp:12
+#: /Template/Shops/Payment/authorizenet.ctp:183
+#: /Template/Shops/Payment/bpayment.ctp:128
+#: /Template/Shops/Payment/card_pointe.ctp:97
+#: /Template/Shops/Payment/dibs.ctp:116 /Template/Shops/Payment/dummy.ctp:108
+#: /Template/Shops/Payment/ipayment.ctp:159
+#: /Template/Shops/Payment/paypal_express.ctp:93
+#: /Template/Shops/Payment/redsys.ctp:98
+#: /Template/Shops/Payment/sogecommerce.ctp:78
+msgid "Confirm Registration"
+msgstr "Confirmer l’inscription"
+
+#: /Template/Shops/buy.ctp:29
+msgid "You must select a variant"
+msgstr "Vous devez choisir une option"
+
+#: /Template/Shops/buy.ctp:168
+msgid "Buy Additional Articles"
+msgstr "Acheter des articles supplémentaires"
+
+#: /Template/Shops/buy.ctp:173
+msgid "Here you may buy additional items, e.g. tickets for the gala dinner."
+msgstr ""
+"Vous pouvez sur cette page articles supplémentaires : e.g. dîner de gala."
+
+#: /Template/Shops/buy.ctp:178
+msgid "Available Articles"
+msgstr "Articles disponibles"
+
+#: /Template/Shops/buy.ctp:203 /Template/Shops/buy.ctp:264
+msgid "Add"
+msgstr "Ajouter"
+
+#: /Template/Shops/buy.ctp:216 /Template/Shops/buy.ctp:282
+msgid "Article"
+msgstr "Article"
+
+#: /Template/Shops/buy.ctp:217 /Template/Shops/buy.ctp:283
+msgid "Variant"
+msgstr "Variante"
+
+#: /Template/Shops/buy.ctp:219
+msgid "Photo"
+msgstr "Photo"
+
+#: /Template/Shops/buy.ctp:220 /Template/Shops/buy.ctp:284
+msgid "Price"
+msgstr "Prix"
+
+#: /Template/Shops/buy.ctp:242
+msgid "Select"
+msgstr "Sélectionner"
+
+#: /Template/Shops/buy.ctp:262
+msgid "Sold out"
+msgstr "Epuisé"
+
+#: /Template/Shops/buy.ctp:278
+msgid "Shopping Cart"
+msgstr "Panier"
+
+#: /Template/Shops/buy.ctp:285
+msgid "Quantity"
+msgstr "Quantité"
+
+#: /Template/Shops/buy.ctp:345
+msgid "Please visit our shop"
+msgstr "Merci de visiter notre boutique"
+
+#: /Template/Shops/failure.ctp:2
+msgid "An error has occured"
+msgstr "Une erreur est survenue"
+
+#: /Template/Shops/pay.ctp:4 /Template/Shops/Payment/authorizenet.ctp:54
+#: /Template/Shops/Payment/bpayment.ctp:81
+#: /Template/Shops/Payment/card_pointe.ctp:48
+#: /Template/Shops/Payment/dibs.ctp:64 /Template/Shops/Payment/dummy.ctp:71
+#: /Template/Shops/Payment/ipayment.ctp:49
+#: /Template/Shops/Payment/paypal_express.ctp:55
+#: /Template/Shops/Payment/redsys.ctp:60
+#: /Template/Shops/Payment/sogecommerce.ctp:48
+msgid "Please wait while your payment is being processed."
+msgstr "Merci de patienter, votre paiement est en cours."
+
+#: /Template/Shops/pay.ctp:6 /Template/Shops/Payment/authorizenet.ctp:56
+#: /Template/Shops/Payment/bpayment.ctp:83
+#: /Template/Shops/Payment/card_pointe.ctp:50
+#: /Template/Shops/Payment/dibs.ctp:66 /Template/Shops/Payment/dummy.ctp:73
+#: /Template/Shops/Payment/ipayment.ctp:51
+#: /Template/Shops/Payment/paypal_express.ctp:57
+#: /Template/Shops/Payment/redsys.ctp:62
+#: /Template/Shops/Payment/sogecommerce.ctp:50
+msgid "This may take several minutes."
+msgstr "Cela peut prendre quelques minutes."
+
+#: /Template/Shops/pay.ctp:11 /Template/Shops/Payment/authorizenet.ctp:63
+#: /Template/Shops/Payment/bpayment.ctp:90
+#: /Template/Shops/Payment/card_pointe.ctp:57
+#: /Template/Shops/Payment/dibs.ctp:73 /Template/Shops/Payment/dummy.ctp:82
+#: /Template/Shops/Payment/ipayment.ctp:58
+#: /Template/Shops/Payment/paypal_express.ctp:64
+#: /Template/Shops/Payment/redsys.ctp:69
+#: /Template/Shops/Payment/sogecommerce.ctp:56
+msgid "Billing Information"
+msgstr "Information de facturation"
+
+#: /Template/Shops/pay.ctp:14 /Template/Shops/Payment/authorizenet.ctp:67
+#: /Template/Shops/Payment/bpayment.ctp:93
+#: /Template/Shops/Payment/card_pointe.ctp:60
+#: /Template/Shops/Payment/dibs.ctp:76 /Template/Shops/Payment/ipayment.ctp:62
+#: /Template/Shops/Payment/paypal_express.ctp:67
+#: /Template/Shops/Payment/redsys.ctp:72
+#: /Template/Shops/Payment/sogecommerce.ctp:59
+msgid "Payment will be processed in a secure way by {0}."
+msgstr "Le paiement est sécurisé par {0}."
+
+#: /Template/Shops/pay.ctp:15 /Template/Shops/Payment/bpayment.ctp:94
+#: /Template/Shops/Payment/card_pointe.ctp:61
+#: /Template/Shops/Payment/dibs.ctp:77
+#: /Template/Shops/Payment/paypal_express.ctp:68
+#: /Template/Shops/Payment/redsys.ctp:73
+#: /Template/Shops/Payment/sogecommerce.ctp:60
+msgid ""
+"After the payment is completed you will be redirected to the registration."
+msgstr ""
+"Une fois que le paiement sera validé, vous serez redirigé vers la page "
+"d'inscription."
+
+#: /Template/Shops/payment_selection.ctp:4
+msgid "Select Payment Method"
+msgstr "Sélectionner une méthode de paiement"
+
+#: /Template/Shops/payment_selection.ctp:9
+#: /Template/Shops/payment_selection.ctp:14
+#: /Template/Shops/payment_selection.ctp:16
+msgid "Bank Transfer"
+msgstr "Virement bancaire"
+
+#: /Template/Shops/payment_selection.ctp:10
+msgid "You may pay by bank transfer"
+msgstr "Vous pouvez payer par virement bancaire"
+
+#: /Template/Shops/payment_selection.ctp:21
+#: /Template/Shops/payment_selection.ctp:26
+#: /Template/Shops/payment_selection.ctp:28
+#: /Template/Shops/Payment/authorizenet.ctp:93
+#: /Template/Shops/Payment/ipayment.ctp:79
+msgid "Credit Card"
+msgstr "Carte de crédit"
+
+#: /Template/Shops/payment_selection.ctp:22
+msgid "We accept MasterCard and Visa"
+msgstr "Nous acceptons les cartes MasterCard et Visa"
+
+#: /Template/Shops/payment_selection.ctp:36
+msgid "Payment Method"
+msgstr "Méthode de paiement"
+
+#: /Template/Shops/people.ctp:20
+msgid "Register Players and Accompanying Persons"
+msgstr "Joueurs et accompagnateurs inscrits"
+
+#: /Template/Shops/people.ctp:24
+msgid "Register here your players and accompanying persons."
+msgstr "Inscrire ici vos joueurs et leurs accompagnants."
+
+#: /Template/Shops/people.ctp:28
+msgid ""
+"Initially, players will be put into the competitions of their age category."
+msgstr ""
+"Dans un premier temps, les joueurs seront mis dans leur catégorie d'âge "
+"respective."
+
+#: /Template/Shops/people.ctp:32
+msgid ""
+"If your player chooses a double partner of a different age category later, "
+"both of them will be put into the correct age category automatically."
+msgstr ""
+"Si un(e) joueur(se) sélectionne un(e) partenaire de doubles d’une différente "
+"catégorie d’âge, les deux joueurs seront enregistrés dans la bonne catégorie "
+"d‘âge automatiquement."
+
+#: /Template/Shops/people.ctp:39
+msgid "Add Person"
+msgstr "Ajouter un participant"
+
+#: /Template/Shops/people.ctp:51
+msgid "You have not registered any player. Are you sure you want to continue?"
+msgstr "Vous n'avez inscrit aucun joueur. Êtes-vous sur de vouloir continuer?"
+
+#: /Template/Shops/review.ctp:8
+msgid "Review Registration"
+msgstr "Bilan de l’Inscription"
+
+#: /Template/Shops/review.ctp:12
+msgid "Please review your registration."
+msgstr "Merci de vérifier votre inscription."
+
+#: /Template/Shops/review.ctp:16
+msgid "You have to agree to the terms and conditions before you can proceed."
+msgstr "Vous devez accepter les conditions générales avant de continuer."
+
+#: /Template/Shops/review.ctp:36
+msgid "I agree to the {0}"
+msgstr "Je suis d'accord avec {0}"
+
+#: /Template/Shops/review.ctp:36
+msgid "terms and conditions"
+msgstr "conditions générales"
+
+#: /Template/Shops/success.ctp:2
+msgid "Your registration has been completed"
+msgstr "Votre inscription a bien été complété"
+
+#: /Template/Shops/success.ctp:7
+msgid "Your registration has been placed on the waiting list."
+msgstr "Votre inscription a été placé dans la liste d'attente."
+
+#: /Template/Shops/success.ctp:15
+msgid ""
+"An email with your invoice and instructions how to proceed has been sent to "
+"you."
+msgstr ""
+"Un email contenant votre facture et les instructions à suivre vient de vous "
+"être envoyé."
+
+#: /Template/Shops/success.ctp:17
+msgid "An email with your invoice has been sent to you."
+msgstr "Un email contenant la facture vient de vous être envoyé."
+
+#: /Template/Shops/success.ctp:19
+msgid ""
+"Once we have received your payment instructions on how to proceed will be "
+"sent to you."
+msgstr ""
+"Dès que nous aurons reçu votre paiement, des instructions sur la façon de "
+"procéder vous sera envoyé."
+
+#: /Template/Shops/success.ctp:33
+msgid "Download invoice"
+msgstr "Télécharger la facture"
+
+#: /Template/Shops/success.ctp:40
+msgid "Invoice number"
+msgstr "N° de facture"
+
+#: /Template/Shops/success.ctp:44
+msgid "Registration"
+msgstr "Inscription"
+
+#: /Template/Shops/success.ctp:63
+msgid "Banking Account"
+msgstr "Compte Bancaire"
+
+#: /Template/Shops/success.ctp:86
+msgid "SWIFT"
+msgstr "SWIFT"
+
+#: /Template/Shops/waiting_list.ctp:7
+msgid "If you confirm your order it will be put on a waiting list."
+msgstr "Si vous confirmez votre commande, vous serez mis en liste d'attente."
+
+#: /Template/Shops/waiting_list.ctp:8
+msgid ""
+"This waiting list will be processed first come first served as new "
+"registrations may become available."
+msgstr ""
+"La liste d'attente fonctionnera selon le principe du premier inscrit-premier "
+"servi dès que de nouvelles inscriptions seront disponibles."
+
+#: /Template/Shops/waiting_list.ctp:11
+msgid "Confirm Order"
+msgstr "Confirmer la commande"
+
+#: /Template/Shops/Payment/authorizenet.ctp:66
+#: /Template/Shops/Payment/ipayment.ctp:61
+msgid "Select your credit card and enter name and address of the card holder."
+msgstr ""
+"Sélectionner votre carte de crédit et saisissez le nom et l'adresse figurant "
+"sur la carte."
+
+#: /Template/Shops/Payment/authorizenet.ctp:95
+#: /Template/Shops/Payment/ipayment.ctp:81
+msgid "Select credit card type"
+msgstr "Sélectionner le type de carte de crédit"
+
+# Short for "Credit card number"
+#: /Template/Shops/Payment/authorizenet.ctp:103
+#: /Template/Shops/Payment/ipayment.ctp:88
+msgid "Card no."
+msgstr "N° de carte."
+
+#: /Template/Shops/Payment/authorizenet.ctp:110
+#: /Template/Shops/Payment/ipayment.ctp:95
+msgid "CVV code"
+msgstr "Code CVV"
+
+#: /Template/Shops/Payment/authorizenet.ctp:117
+#: /Template/Shops/Payment/ipayment.ctp:102
+msgid "Card expires"
+msgstr "Date d'expiration"
+
+#: /Template/Shops/Payment/authorizenet.ctp:142
+msgid "Card holder given name"
+msgstr "Prénom figurant sur la carte"
+
+#: /Template/Shops/Payment/authorizenet.ctp:149
+msgid "Card holder family name"
+msgstr "Nom de famille figurant sur la carte"
+
+#: /Template/Shops/Payment/dummy.ctp:94
+msgid "Return Error"
+msgstr "Erreur de retour"
+
+#: /Template/Shops/Payment/ipayment.ctp:125
+msgid "Card holder"
+msgstr "Titulaire de la carte"
+
+#~ msgid "Please transfer the balance to our bank account not later than {0}."
+#~ msgstr ""
+#~ "Merci de virer le montant restant vers notre compte bancaire avant le {0}."
+
+#~ msgid ""
+#~ "Don't forget to put your invoice number on the invoice so we can find "
+#~ "your order."
+#~ msgstr ""
+#~ "Ne pas oublier de mettre votre N° de facture lors de votre transfert "
+#~ "bancaire. Ainsi nous pourrons retrouver votre commande facilement."
+
+#~ msgid ""
+#~ "The phone number must start with the country code, prefixed with a \"+\" "
+#~ "sign"
+#~ msgstr "Le numéro de téléphone doit commencer un '+' suivi du code du pays"
+
+#~ msgid ""
+#~ "The phone number must start with the international country code and shall "
+#~ "not contain any spaces."
+#~ msgstr ""
+#~ "Le numéro de téléphone doit commencer par le code de pays international "
+#~ "et ne doit pas contenir d'espaces."
+
+#~ msgid "Could not create new registration"
+#~ msgstr "Ne peut créer de nouvelles inscriptions"
+
+#~ msgid "Last&nbsp;name"
+#~ msgstr "Nom"
+
+#~ msgid "Could not find registration"
+#~ msgstr "Inscription introuvable"
+
+#~ msgid "Could not store registration"
+#~ msgstr "L'inscription ne peut être enregistrée"
+
+#~ msgid ""
+#~ "Please to not pay the registration fee unless you have been asked to do "
+#~ "so."
+#~ msgstr ""
+#~ "Merci de ne pas payer cette inscription sauf si nous vous en faisons la "
+#~ "demande spécifiquement."
+
+#~ msgid "Please wait while your registration is being processed."
+#~ msgstr "Merci de patienter, votre paiement est en cours."

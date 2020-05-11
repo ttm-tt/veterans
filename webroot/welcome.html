@@ -1,0 +1,61 @@
+<html>
+<head>
+	<script type="text/javascript" src="js/xmlrpcclient.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+function submit() {
+	var data = undefined;
+
+	var username = $('table#login #username').val();
+	var password = $('table#login #password').val();
+
+	var id = $('table#user #id').val();
+
+	if (id != '')
+		data = id;
+
+	xmlrpc(
+		window.location.protocol + "//" + username + ":" + password + "@" + window.location.hostname + "/evc2013/RPC2",
+		"onlineentries.sendWelcomeMail",
+		[data],
+
+		function success(data) {
+		},
+
+		function error(e) {
+			alert(e);
+		}
+	);
+}
+	</script>
+</head>
+<body>
+	<table id="login">
+		<thead>
+			<tr>
+				<th>Username</th>
+				<th>Password</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><input type="text" id="username" value="tro.net"></td>
+				<td><input type="text" id="password" value="tro.net"></td>
+			</tr>
+		</tbody>
+	</table>
+	<table id="user">
+		<thead>
+			<tr>
+				<th>ID</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><input id="id" type="text" value=""></td>
+			</tr> 
+		</tbody>
+	</table>
+	<input type="button" onclick="submit();" value="Submit">
+</body>
+</html>

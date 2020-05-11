@@ -1,0 +1,838 @@
+/** Overwrite **/
+body {
+	background: #FFFFFF;
+	font-size: 100%;
+}
+
+a {
+	font-weight: normal;
+}
+
+#data th {
+	/* Same padding-left as table cells */
+	padding-left: 6px;
+}
+
+th a {
+	text-decoration: underline;
+}
+
+th a.asc:after {
+	content: '⇣';
+	padding-left: 4px;
+}
+
+th a.desc:after {
+	content: '⇡';
+	padding-left: 4px;
+}
+
+td select {
+	margin: 0;  /* other table cells don't have it either */
+}
+
+dl dt {
+	margin-bottom: 0;
+	padding-right: 1rem;
+}
+
+dl dt.detail {
+	text-align: right;
+}
+
+dl dd {
+	margin-left: 10em;
+	margin-top: -2.0rem;
+	margin-bottom: 0.3rem;
+}
+
+div[style="display:table-cell"] {
+	padding: 6px;
+	vertical-align: middle;
+}
+
+fieldset {
+	border: 1px solid #ccc;
+}
+
+label {
+	font-size: 100%;
+	font-weight: bold;
+	text-align: right;
+}
+
+#UserNotificationsForm label {
+	width: 240px;
+}
+
+/* In foundation line-height for label is different from input */
+label {
+	line-height: 1.5;
+}
+/* Could not make a left aligned checkbox / radio with foundation */
+input[type="checkbox"], input[type="radio"] {
+	margin-left: 0.9375rem;
+	margin-right: 0.46rem;
+	/* To align with label: line-height + padding of label */	
+	height: calc(1.5rem + 18px); 
+}
+
+input[type="submit"] {
+	padding: 4px 8px;
+	margin: 8px 0;
+}
+
+/* Add Foundation's padding to <p> inside grid-x */
+.grid-x > p {
+	padding-top: 9px;
+}
+
+/* datatable select width */
+div.dataTables_length select {
+    width: auto;
+}
+
+div.dataTables_filter input {
+	display: inline;
+}
+
+#Participant span.competitionError {
+	display: inline-block;
+	font-size: 100%;
+	width: 40%;
+	margin: 3px 10px 0px 0px;
+	padding: 1px;
+	background-color: #FDFD96;
+}
+
+form div div {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+#content {
+	display: table;
+}
+
+#content > div {
+	display: table-cell;
+}
+
+div.toggle-sidebar {
+	float: none;
+	width: 0.8em;
+	padding: 10px 8px;
+}
+
+div.toggle-sidebar h3 {
+	cursor: pointer;
+}
+
+div.sidebar {
+	float: none;
+	width: 16%;
+	min-width: 15em;
+	padding:1rem 1.5rem;	
+}
+
+div.sidebar h3 {
+	padding-top:0;	
+}
+
+div.form,
+div.index,
+div.view {
+	float: none;
+	width: auto;
+}
+
+/* remove underline from link in tabs */
+.tabs-title a {
+	text-decoration: none;
+	font-size: 1rem;
+}
+
+fieldset.has-tabs {
+	padding-left: 0;
+	padding-right: 0;
+	padding-bottom: 0;
+	margin: 0;
+}
+
+fieldset.has-tabs .tabs-content {
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+/** Navigation Menu **/
+.navmenu {
+	background: #003d4c;
+	color: #FFFFFF;
+}
+
+.navmenu li a {
+	color: inherit;
+}
+
+.navmenu .menu .is-active, .navmenu .menu .is-active > a {
+	background: #288ca5;
+}
+
+
+/** Special styles **/
+div .datetime select {
+	width: auto;
+}
+
+div .datetime span {
+	margin: 0 1em;
+}
+
+div .date select {
+	width: auto;
+	padding-left: 0.25rem;
+	padding-right: 1.5rem;
+}
+
+div .date span span {
+	padding: 0.5rem 0.5rem;
+	display: inline-block;
+}
+
+div .time select {
+	width: auto;
+}
+
+div .time span {
+	margin: 0 1em;
+}
+
+input.hint {
+	color: Gray;
+	font-style: italic;
+}
+
+/* Charts */
+div.chart canvas  {
+	width: 100%;
+	height: 400px;
+}
+
+/* Entry (player) was cancelled */
+td.cancelled {
+	text-decoration: line-through;
+}
+
+/* Entry with partner wanted */
+td.partnerwanted {
+	font-style: italic;
+}
+
+td.actions, td.actions-small {
+	text-align: left;
+	vertical-align: middle;
+	padding-right: 0px;
+}
+
+/* cake aligns top, but with controls in the table we need middle */
+table.vertical-align-middle tr td {
+	vertical-align: middle;
+}
+
+/* Reset margin for popup menu to foundations value */
+ul.menu li {
+	margin: 0;
+}
+
+/* Overbooked packages */
+td.overbooked {
+	font-style: italic;
+}
+
+/* Layout of pages */
+#container {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#header {
+	padding-left: 0;
+	padding-right: 0;	
+}
+
+#header #tournament-top-bar {
+	text-align:center;
+	background-color: inherit;
+	color: #2f606d;
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+#header #auth-top-bar {
+	background-color: inherit;
+	color: #2f606d;	
+}
+
+#header #menu-top-bar {
+	background: #003d4c;
+}
+
+#header .title-bar, #header .top-bar {
+	background-color: inherit;
+}
+
+/* Login, Forgot Password */
+#header a {
+	color: inherit;
+	background: inherit;
+	font-weight: normal;
+	text-decoration: underline;
+}
+
+#header a:hover {
+	color: #fff;
+	background: #003d4c;
+	text-decoration: none;
+}
+
+#header #tournament-top-bar h3 {
+	text-align:center;
+	color: inherit;
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+#header #logo {
+	background-image: url(../img/logo.png);
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 54px;
+}
+
+#header #auth {
+	text-align: left;
+	white-space: nowrap;
+}
+
+#auth a {
+	margin-left: 20px;
+}
+
+#auth a:first-child {
+	margin-left: 0px;
+}
+
+/* Current tournament */
+#header #tournament {
+	text-align: center;
+}
+
+#header #tournament h3 {
+	margin-bottom: 0px;
+}
+
+/* Help */
+#header #help {
+	display: none;
+	width: 25%;
+	padding-right: 10px;
+	text-align: right;
+	position: absolute;
+	right: 0;
+	bottom: 5px;
+	padding-top: 45px;
+	margin-left: 20px;
+}
+
+/* Language */
+#header #lang {
+	text-align: right;
+}
+
+/* Privacy, Impressum */
+#footer {
+	background: #003d4c;
+	text-align: left;
+	margin-top: 1rem;
+}
+
+/* So that the footer has the height of the included content */
+#footer a {
+	color: #fff;
+	background: #003d4c;
+	font-weight: normal;
+}
+
+#footer a:hover {
+	color: #fff;
+	background: #003d4c;
+}
+
+/* Filter for associations, functions, ... */
+div.filter fieldset {
+	padding: 0 10px; /* make it smaller when closed */
+}
+div.filter legend {
+	cursor: pointer;
+}
+div.filter table {
+	background: none;
+}
+
+div.filter table {
+	bckground: none;
+}
+
+div.filter td {
+	vertical-align: middle;
+}
+
+div.filter td:first-child {
+	vertical-align: top;
+	width: 150px;
+}
+
+div.filter .required label:after {
+	color: #e32;
+	content: '*';
+	display:inline;
+}
+
+div.hint {
+	color: Gray;
+	font-style: italic;
+	margin-bottom: 1em;
+}
+
+/* Paging */
+div.paging span {
+	border-style: none;
+	color: #333333;
+}
+
+div.paging a {
+	padding: 2px 8px;
+}
+
+div.paging select {
+	margin-left: 2px;
+	margin-right: 2px;
+	margin-bottom: 0;
+	width: auto;
+	vertical-align: middle;
+}
+
+/* flash messages */
+div#flash {
+	margin-top: 0.5em;
+	margin-left: 1px;
+	margin-right: 1px;
+}
+
+#flashMessages .flashMessage {
+	border-radius: 5px;
+	border-style: solid;
+	border-width: 2px;
+	box-shadow: 0 5px 5px -5px #050505;
+	margin-bottom: .5em;
+	min-height: 2em;
+	padding: 5px 10px 5px 35px;
+	font-size: 120%;
+}
+
+#flashMessages .toggleDetail {
+	font-size: 90%;	
+	font-weight: normal;
+	margin-left: 0.5em;
+}
+
+#flashMessages .detail {
+	font-size: 80%;
+	margin-top: 0.5em;
+}
+
+#flashMessages .error {
+	background-color: #FF7878;
+	/* background-image: url("/img/error.png"); */
+	border-color: black;
+}
+
+#flashMessages .warning {
+	background-color: #FDFD96;
+	/* background-image: url("/img/warning.png"); */
+	border-color: black;
+	color: black;
+}
+#flashMessages .success {
+	background-color: #BDECB6;
+	/* background-image: url("/img/success.png"); */
+	border-color: black;
+	color: black;
+}
+
+#flashMessages .info {
+	background-color: #c8dff2;
+	/* background-image: url("/img/notice.png"); */
+	border-color: black;
+	color: black;
+}
+
+
+/* Error messages */
+form div.error {
+	margin-bottom: 1rem;
+}
+
+div.error-message {
+	background-color: #FF7878;
+	color: black;
+}
+
+div.warning-message {
+	background-color: #FDFD96;
+	color: black;
+	display: inline;
+	margin-left: 1em;
+}
+
+/* Wizard for Registration */
+div.wizardnav {
+	margin-top: 2em;
+	margin-bottom: 3em;
+	padding-left: 7px;
+	overflow: visible;
+	display: inline-block;
+}
+
+.wizardnav > div {
+	clear:none;
+	display: block;;
+	float: left;
+	font-size: 100%;
+	line-height: 3em;;
+	padding: 0px 1.7rem 0px 3rem;
+	position: relative;
+	border-top: 2px solid black;
+	border-bottom: 2px solid black;
+	text-align: center;
+}
+
+.wizardnav > div:first-child {
+	border-left: 2px solid black;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	padding-left: 2rem;
+}
+
+.wizardnav > div:last-child {
+	border-right: 2px solid black;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+/* Display a square rotated by 45deg and scaled so that the diagonale is the height */
+/* The border shadow is the surrownding "arrow" pointing right */
+.wizardnav > div:after {
+	content: "";
+	position: absolute;
+	top: 0px;
+	right: -18px;
+	width: 3em;
+	height: 3em;
+	transform: translateX(5px) scale(0.75) rotate(45deg);
+	z-index: 1;
+	box-shadow: 2px -2px 0px 1px black;
+	border-radius: 0px 5px 0px 5px;
+}
+
+.wizardnav > div:last-child:after {
+	content: initial;
+}
+
+.wizardnav > div.complete {
+	background-color: #e8e8e8;
+}
+
+.wizardnav > div.complete:after {
+	background-color: #e8e8e8;
+}
+
+.wizardnav > div.incomplete {
+	background-color: #fafafa;
+}
+
+.wizardnav > div.incomplete:after {
+	background-color: #fafafa;
+}
+
+.wizardnav > div.expected {
+	background-color: #fafafa;
+}
+
+.wizardnav > div.expected:after {
+	background-color: #fafafa;
+}
+
+.wizardnav > div.active {
+	background-color: #e0e0e0;
+}
+
+.wizardnav > div.active:after {
+	background-color: #e0e0e0;
+}
+
+/* Numbers */
+tr .number {
+	text-align: right;
+	padding-right: 0.5em;	
+}
+
+/* Booleans */
+tr .boolean {
+	text-align: center;
+}
+
+
+/* Currency */
+tr .currency {
+	text-align: right;
+	padding-right: 0.5em;
+}
+
+/* Total sum */
+tr.total td {
+	border-top: 2px solid black;
+	font-size: 100%;
+	font-weight: bold;
+}
+
+tr .pos {
+	width: 2em;
+}
+
+tr .qty {
+	width: 3em;
+}
+
+.actions ul li a {
+	padding: 5px;
+}
+
+/* Don't show variants if they don't exist but keep the column visible */
+/* We can't just hide them because invisible columns mess with colspan or background */
+th.conceal, td.conceal {
+	width: 0;
+	max-width: 0;
+	overflow: hidden;
+}
+
+/* X-Small only, not part of foundation */
+@media screen and (max-width: 24.9375em) {		
+	div .date select {
+		padding-right: 0;
+	}	
+}
+
+/* Small and up */
+@media screen and (min-width: 25em) {
+	
+}
+
+/* Small only */
+@media screen and (min-width: 25em) and (max-width: 39.9375em) {
+	
+}
+
+/* Small and down */
+@media screen and (max-width: 39.9375em) {
+	/* Hide filters */
+	div.filter table {
+		display: none;
+	}
+	
+	/* Block display of filter elements */
+	div.filter tbody, div.filter tr, div.filter td {
+		display: block;
+	}
+	
+	/* Hide limits in paging */
+	div.paging .limit {
+		display: none;
+	}	
+	/* copy dl dt, dl dd from ttmtable.css */
+	dl {
+		width: 100%;
+	}
+	
+	dl dt {
+		width: 45%;
+		text-align: right;
+		padding-right: 1rem;
+		font-weight: bold;
+	}
+	
+	dl dd {
+		border-bottom: 1px solid #eee;
+		text-align: left;
+		margin-left: 45%;
+	}	
+	
+	label, label.middle {
+		margin-bottom: 0;
+	}
+	
+	input[type="checkbox"], input[type="radio"] {
+		width: 1em;
+	}
+	
+	input[type="checkbox"] ~ label, input[type="radio"] ~ label {
+		width: 80%;
+	}
+	
+	input[type="checkbox"] ~ label img, input[type="radio"] ~ label img {
+		width: 30%;
+	}
+	
+	div .date span span {
+		padding: 0.5rem 1px;
+	}	
+}
+
+/* Medium and up */
+@media screen and (min-width: 40em) {
+	
+}
+
+/* Medium and down */
+@media screen and (max-width: 63.9375em) {
+	#content > div.sidebar {
+		display: none;
+	}
+	
+	table.ttm-table thead th.actions,
+	table.ttm-table tbody td.actions {
+		display: none;
+	}
+	
+	.wizardnav {
+		width: 100%;
+	}
+	
+	.wizardnav > div {
+		width: auto;
+		min-width: 10rem;
+		margin: 0 1rem;
+	}
+	
+	.wizardnav > div:not(.active) {
+		display: none;
+	}
+	
+	/* Display a square rotated by 45deg and scaled so that the diagonale is the height */
+	/* The border shadow is the surrownding "arrow" pointing right */
+	.wizardnav > div:before {
+		content: "";
+		position: absolute;
+		top: 0px;
+		left: -2rem;
+		width: 3em;
+		height: 3em;
+		transform: translateX(5px) scale(0.75) rotate(45deg);
+		z-index: 1;
+		box-shadow: 2px -2px 0px 1px black;
+		border-radius: 0px 5px 0px 5px;
+		background-color: white;
+	}
+	
+	.wizardnav > div:first-child:before {
+		content: initial;
+	}
+
+	label {
+		text-align: left;
+	}
+	
+	input[type="button"], input[type="submit"] {
+		width: auto;
+	}
+}
+
+/* Large and up */
+@media screen and (min-width: 64em) {
+	table.ttm-table thead th.actions-small,
+	table.ttm-table tbody td.actions-small {
+		display: none;
+	}	
+}
+
+/* Large and down */
+@media screen and (max-width: 74.9375em) {
+
+}
+
+/* X-Large */
+@media screen and (min-width: 75em) {
+
+}
+
+
+/* Printing */
+@media print {
+	div#container div#header {
+		display: none;
+	}
+	
+	div#container div#flash {
+		display: none;
+	}
+	
+	div#container div#navmenu {
+		display: none;
+	}
+	
+	div#container div#footer {
+		display: none;
+	}
+	
+	body table.cake-sql-log {
+		display: none;
+	}
+	
+	div#container div#content div.filter a {
+		display: none;
+	}
+	
+	div#container div#content div.actions {
+		display: none;
+	}
+	
+	div#container div#content table th.actions {
+		display: none;
+	}
+	
+	div#container div#content table td.actions {
+		display: none;
+	}
+	
+	div#container div#content table th.select {
+		display: none;
+	}
+	
+	div#container div#content table td.select {
+		display: none;
+	}
+	
+	div#container div#content div.index div.select {
+		display: none;
+	}
+	
+	div#container div#content div.paging {
+		display: none;
+	}
+	
+	div.form, div.index, div.view {
+		border-left: none;
+		float: right;
+		padding: 10px 2%;
+		width: 100%;
+	}
+}

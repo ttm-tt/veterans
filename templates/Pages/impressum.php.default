@@ -1,0 +1,71 @@
+<?php
+function printOrganizer($organizer) {
+	echo '<strong>';
+	echo $organizer['description'];
+	if (!empty($organizer['name']))
+		echo ' (' . $organizer['name'] . ')';
+	echo '</strong>';
+	echo '<br>';
+	if (!empty($organizer['address'])) {
+		echo str_replace("\n", "<br>", $organizer['address']);
+		echo '<br>';
+	}
+	if (!empty($organizer['email'])) {
+		echo 'Email: <a href="mailto:' . $organizer['email'] . '">' . $organizer['email'] . '</a>';
+		echo '<br>';
+	}
+	if (!empty($organizer['phone'])) {
+		echo 'Phone: ' . $organizer['phone'];
+		echo '<br>';
+	}
+	if (!empty($organizer['fax'])) {
+		echo 'Fax: ' . $organizer['fax'];
+		echo '<br>';
+	}
+}
+?>
+<div id="impressum">
+<h3>Impressum</h3>
+<p>
+<span>
+<?php printOrganizer($tournament['organizer']); ?>
+</span>
+<br><br>
+</p>
+<?php if ($tournament['committee_id']) { ?>
+<p>
+<span>
+<?php printOrganizer($tournament['committee'])	; ?>
+</span>
+<br><br>
+</p>
+<?php } ?>
+<p>
+<span>
+<h5>The <?php echo $tournament['name']; ?> are organized by:</h5>
+<?php printOrganizer($tournament['host']); ?>
+</span>
+<br><br>
+</p>
+<?php if ($tournament['contractor_id']) { ?>
+<p>
+<span>
+<h5>The <?=$tournament['host']['name']?> has delegated organizing the <?= $tournament['name'] ?> to:</h5>
+<?php printOrganizer($tournament['contractor'])	; ?>
+<br><br>
+</span>
+</p>
+<?php } ?>
+<p>
+<span>
+<strong>This site is hosted by:</strong><br>
+<br>
+Christoph Theis<br>
+St. Antonistr. 7<br>
+7000 Eisenstadt<br>
+Austria<br>
+<br>
+Email: <a href="mailto:theis@ttm.co.at">theis@ttm.co.at</a><br>
+</p>
+</span>
+</div>

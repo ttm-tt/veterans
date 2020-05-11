@@ -1,0 +1,80 @@
+<?php
+
+return [
+	/**
+	 * Debug Level:
+	 *
+	 * Production Mode:
+	 * false: No error messages, errors, or warnings shown.
+	 *
+	 * Development Mode:
+	 * true: Errors and warnings shown.
+	 */
+	'debug' => true,
+	
+	// And optionally disable the cache to avoid stale entries
+	// Evaluated only if debug == true
+	'disableCache' => false,
+	
+	// Clear cache independent of debug
+	'clearCache' => false,
+	
+/**
+ * Application settings
+ */
+	'App' => [
+		
+	],
+	
+/**
+ * A random string used in security hashing methods.
+ */
+	'Security' => [
+		'salt' => 'dYhG93b0qyJfIxfs2guVoUubWwvniR2G0FgaC9mI',
+		'cookieKey' => 'dYhG93b0qyJfIxfs2guVoUubWwvniR2G0FgaC9mI'
+	],
+
+// Datasources
+	'Datasources' => [
+		'default' => [
+            'database' => 'veterans-v3_test',
+            'username' => 'ettu',
+            'password' => 'ettu',
+		]
+	],
+	
+// Session.Cookie
+	'Session' => [
+		'cookie' => 'veterans-v3'
+		// 'authcookie' => 'false'veterans-v3-auth
+	],
+
+// Email
+	'Email' => [
+		'default' => [
+			// Change /etc/aliases on galadriel when changing this
+			'sender' => 'ettu@localhost',
+			'from' => 'ettu@localhost',
+			'returnPath' => 'ettu@localhost'
+		]
+	],
+			
+// Shop settings
+	'Shop' => [
+		// Selected engine
+		'payment' => 'Dummy',
+		
+		// Global setting if refunds are allowed
+		'allowRefund' => false,
+		
+		// Use test URL
+		'testUrl' => false,
+		
+		// Configure payment provider
+		'PaymentProviders' => ['Dummy' => [
+			'accountData' => [
+				
+			]				
+		]]
+	],
+];

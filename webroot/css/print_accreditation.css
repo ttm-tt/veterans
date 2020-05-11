@@ -1,0 +1,399 @@
+/* 
+  The size is setup for a form sized 105 x 70 x 8
+  That is A4 landscape with 8mm margins left and right and a 4 x 2 perforated grid
+
+  When printing make sure the margins in the browser are set to 0
+*/
+
+@page {
+  margin-left: 8mm;
+  margin-right: 8mm;
+  margin-top: 0mm;
+  margin-bottom: 0mm;
+}
+
+html {
+}
+
+body {
+}
+
+ 
+/* This is the box containing one accreditation sheet */ 
+div.page {
+  float: left;
+  position: relative;
+  border: none;
+  border-left: 0pt;
+  border-top: 0pt;
+  /* width and height are set to A7 portrait: 7.4cm x 10.5cm */
+  width: 205pt; /* 7.4cm; */
+  /* If the printer cannot use the entire height of the paper, reduce height acc. */
+  height: 297pt; /* 10.5cm; */
+
+  /* Page breaks are allowed outside this box only */
+  page-break-after: auto;
+  page-break-inside: avoid;
+}
+
+/* The box at the top with either the logo or the player's photo */
+/* Enable / disable one of div.logo and div.photo */
+div.image {
+  width: 100%;
+  height: 120pt;
+}
+
+/* The logo in the image box */
+div.logo {
+  display: block;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+/* The photo in the image box */
+div.photo {
+  display: none;
+  background-size: 100%;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  /* Draw a border around the photo (in case there is none available) */
+  border: 1px solid black;
+  /* Photo is 350 x 450 */
+  width: 93pt;
+  height: 120pt;
+  margin-top: 5pt;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* The function of the person (PLA, UMP, REF, ...) */
+div.function {
+  padding-top: 10pt;
+  position: relative;
+  height: 40pt;
+}
+
+/* The text of the function */
+div.function div.name {
+  font-size: 32pt;
+  font-weight: bold;
+  position: absolute;
+  left: 10pt;
+}
+
+/* A colored access code (square) according to the function */
+div.function div.code {
+  width: 32pt;
+  height: 32pt;
+  position: absolute;
+  right: 10pt;
+}
+
+/* Allow replacing the function name with something else */
+div.function div.name.ACC:after {
+  content: "ACC";
+}
+
+div.function div.name.COA:after {
+  content: "COA";
+}
+
+div.function div.name.DEL:after {
+  content: "DEL";
+}
+
+div.function div.name.MED:after {
+  content: "MED";
+}
+
+div.function div.name.PLA:after {
+  content: "PLA";
+}
+
+div.function div.name.PRE:after {
+  content: "PRE";
+}
+
+div.function div.name.REF:after {
+  content: "REF";
+}
+
+div.function div.name.TV:after {
+  content: "TV";
+}
+
+div.function div.name.UMP:after {
+  content: "UMP";
+}
+
+div.function div.code.ACC {
+  background-color: black;
+}
+
+/* Color of the function code square */
+div.function div.code.COA {
+  background-color: black;
+}
+
+div.function div.code.DEL {
+  background-color: black;
+}
+
+div.function div.code.MED {
+  background-color: black;
+}
+
+div.function div.code.PLA {
+  background-color: black;
+}
+
+div.function div.code.PRE {
+  background-color: black;
+}
+
+div.function div.code.REF {
+  background-color: black;
+}
+
+div.function div.code.TV {
+  background-color: black;
+}
+
+div.function div.code.UMP {
+  background-color: black;
+}
+
+/* Person's name and association */
+div.person {
+  position: relative;
+  font-size: 20pt;
+  font-weight: bold;
+  width: 100%;
+  height: 65pt;
+}
+
+/* A box containing first and last name */
+div.person div.name {
+  position: absolute;
+  top: 0pt;
+  left: 10pt;
+  right: 10pt;
+  overflow: hidden;
+}
+
+/* First name */
+div.person div.first.name {
+  position: relative;
+  top: 0pt;
+  left: 0pt;
+  width: 70%;
+}
+
+/* Last name */
+div.person div.last.name {
+  position: relative;
+  top: 0pt;
+  left: 0pt;
+}
+
+/* Association */
+div.person div.assoc {
+  position: absolute;
+  top: 0pt;
+  right: 10pt;
+}
+
+/* A footer containing access area codes or a sponsors logo */
+div.footer {
+  position: absolute;
+  width: 100%;
+  height: 42pt;
+  bottom: 10pt;
+}
+
+/* Access area code, containing a table of 5 digits */
+div.access {
+  display: block;
+  position: absolute;
+  left: 10pt;
+  right: 10pt;
+}
+
+/* The table of the access area code */
+div.access table.access {
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 100%;
+  height: 100%;
+}
+
+/* A table cell */
+div.access td.access {
+  width: 20%;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 32pt;
+  font-weight: bold;
+}
+
+/* A pattern to match function code to area */
+/* Set color to transparent to "blank out" access */
+/* Set color to black (or something else) to allow access */
+div.access td.ACC.one {
+  /* color: transparent; */
+}
+
+div.access td.ACC.two {
+}
+
+div.access td.ACC.three {
+}
+
+div.access td.ACC.four {
+}
+
+div.access td.ACC.five {
+}
+
+
+div.access td.COA.one {
+  /* color: transparent; */
+}
+
+div.access td.COA.two {
+}
+
+div.access td.COA.three {
+}
+
+div.access td.COA.four {
+}
+
+div.access td.COA.five {
+}
+
+
+div.access td.DEL.one {
+  /* color: transparent; */
+}
+
+div.access td.DEL.two {
+}
+
+div.access td.DEL.three {
+}
+
+div.access td.DEL.four {
+}
+
+div.access td.DEL.five {
+}
+
+
+div.access td.MED.one {
+  /* color: transparent; */
+}
+
+div.access td.MED.two {
+}
+
+div.access td.MED.three {
+}
+
+div.access td.MED.four {
+}
+
+div.access td.MED.five {
+}
+
+
+div.access td.PLA.one {
+  /* color: transparent; */
+}
+
+div.access td.PLA.two {
+}
+
+div.access td.PLA.three {
+}
+
+div.access td.PLA.four {
+}
+
+div.access td.PLA.five {
+}
+
+
+div.access td.PRE.one {
+  /* color: transparent; */
+}
+
+div.access td.PRE.two {
+}
+
+div.access td.PRE.three {
+}
+
+div.access td.PRE.four {
+}
+
+div.access td.PRE.five {
+}
+
+
+div.access td.REF.one {
+  /* color: transparent; */
+}
+
+div.access td.REF.two {
+}
+
+div.access td.REF.three {
+}
+
+div.access td.REF.four {
+}
+
+div.access td.REF.five {
+}
+
+
+div.access td.TV.one {
+  /* color: transparent; */
+}
+
+div.access td.TV.two {
+}
+
+div.access td.TV.three {
+}
+
+div.access td.TV.four {
+}
+
+div.access td.TV.five {
+}
+
+div.access td.UMP.one {
+  /* color: transparent; */
+}
+
+div.access td.UMP.two {
+}
+
+div.access td.UMP.three {
+}
+
+div.access td.UMP.four {
+}
+
+div.access td.UMP.five {
+}
+
+/* The sponsosrs image. Set background image to display an image */
+div.sponsor {
+  display: none;
+}
+

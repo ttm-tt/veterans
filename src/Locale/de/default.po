@@ -1,0 +1,3586 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: veterans\n"
+"POT-Creation-Date: 2020-01-29 19:21+0100\n"
+"PO-Revision-Date: \n"
+"Last-Translator: Christoph Theis <theis@gmx.at>\n"
+"Language-Team: \n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#: /Controller/CompetitionsController.php:22
+#: /Controller/CompetitionsController.php:57
+msgid "Invalid competition"
+msgstr "Ungültiger Wettbewerb"
+
+#: /Controller/CompetitionsController.php:30
+#: /Controller/CompetitionsController.php:62
+#: /Controller/RegistrationsController.php:46
+#: /Controller/RegistrationsController.php:603
+#: /Controller/RegistrationsController.php:1352
+#: /Controller/RegistrationsController.php:1454
+#: /Controller/RegistrationsController.php:1684
+#: /Controller/RegistrationsController.php:1821
+#: /Controller/RegistrationsController.php:1879
+#: /Controller/RegistrationsController.php:2522
+#: /Controller/AllotmentsController.php:62
+#: /Controller/ArticlesController.php:13 /Controller/ArticlesController.php:134
+#: /Controller/ArticlesController.php:204
+#: /Controller/ArticlesController.php:295 /Controller/OrdersController.php:28
+#: /Controller/OrdersController.php:613 /Controller/OrdersController.php:1620
+#: /Controller/OrdersController.php:1666 /Controller/OrdersController.php:1751
+#: /Controller/ShopsController.php:1374 /Controller/ShopsController.php:1748
+#: /Controller/ShopsController.php:1860
+msgid "You must select a tournament first"
+msgstr "Sie müssen zuerst ein Turnier auswählen"
+
+#: /Controller/CompetitionsController.php:44
+#: /Controller/CompetitionsController.php:76
+msgid "The competition has been saved"
+msgstr "Der Wettbewerb wurde gespeichert"
+
+#: /Controller/CompetitionsController.php:48
+msgid "The competition could not be saved. Please, try again."
+msgstr ""
+"Der Wettbewerb konnte nicht gespeichert werden. Versuchen Sie es noch einmal."
+
+#: /Controller/CompetitionsController.php:86
+msgid "Invalid id for competition"
+msgstr "Ungültige ID für Wettbewerb"
+
+#: /Controller/CompetitionsController.php:93
+msgid "Competition deleted"
+msgstr "Wettbewerb wurde gelöscht"
+
+#: /Controller/CompetitionsController.php:97
+msgid "Competition was not deleted"
+msgstr "Wettbewerb wurde nicht gelöscht"
+
+#: /Controller/CompetitionsController.php:105
+#: /Template/Registrations/count.ctp:67 /Template/Registrations/history.ctp:5
+msgid "Singles"
+msgstr "Einzel"
+
+#: /Controller/CompetitionsController.php:106
+#: /Template/Registrations/count.ctp:68 /Template/Registrations/history.ctp:6
+msgid "Doubles"
+msgstr "Doppel"
+
+#: /Controller/CompetitionsController.php:107
+#: /Controller/CompetitionsController.php:113
+#: /Template/Registrations/count.ctp:45 /Template/Registrations/count.ctp:69
+#: /Template/Registrations/edit.ctp:243 /Template/Registrations/history.ctp:7
+#: /Template/Registrations/view.ctp:119
+msgid "Mixed"
+msgstr "Mixed"
+
+#: /Controller/CompetitionsController.php:108
+#: /Template/Registrations/count.ctp:70 /Template/Registrations/history.ctp:8
+msgid "Teams"
+msgstr "Mannschaft"
+
+#: /Controller/CompetitionsController.php:111
+#: /Template/Registrations/count.ctp:43
+msgid "Women"
+msgstr "Damen"
+
+#: /Controller/CompetitionsController.php:112
+#: /Template/Registrations/count.ctp:44
+msgid "Men"
+msgstr "Herren"
+
+#: /Controller/GroupsController.php:36 /Controller/GroupsController.php:88
+msgid "Invalid group"
+msgstr "Ungültige Gruppe"
+
+#: /Controller/GroupsController.php:68 /Controller/GroupsController.php:103
+msgid "The group has been saved"
+msgstr "Die Gruppe wurde gespeichert"
+
+#: /Controller/GroupsController.php:71 /Controller/GroupsController.php:106
+msgid "The group could not be saved. Please, try again."
+msgstr ""
+"Die Gruppe konnte nicht gespeichert werden. Versuchen Sie es noch einmal."
+
+#: /Controller/GroupsController.php:123
+msgid "Invalid id for group"
+msgstr "Ungültige ID für Gruppe"
+
+#: /Controller/GroupsController.php:130
+msgid "Group deleted"
+msgstr "Gruppe wurde gelöscht"
+
+#: /Controller/GroupsController.php:133
+msgid "Group was not deleted"
+msgstr "Gruppe wurde nicht gelöscht"
+
+#: /Controller/NationsController.php:19 /Controller/NationsController.php:47
+msgid "Invalid association"
+msgstr "Ungültiger Verband"
+
+#: /Controller/NationsController.php:35 /Controller/NationsController.php:61
+msgid "The association has been saved"
+msgstr "Der Verband wurde gespeichert"
+
+#: /Controller/NationsController.php:38 /Controller/NationsController.php:64
+msgid "The association could not be saved. Please, try again."
+msgstr ""
+"Der Verband konnte nicht gespeichert werden. Versuchen Sie es noch einmal."
+
+#: /Controller/NationsController.php:73
+msgid "Invalid id for association"
+msgstr "Ungültige ID für Verband"
+
+#: /Controller/NationsController.php:80
+msgid "Association deleted"
+msgstr "Verband wurde gelöscht"
+
+#: /Controller/NationsController.php:83
+msgid "Association was not deleted"
+msgstr "Verband wurde nicht gelöscht"
+
+#: /Controller/PeopleController.php:140 /Controller/PeopleController.php:264
+msgid "Invalid person"
+msgstr "Ungültige Person"
+
+#: /Controller/PeopleController.php:166 /Controller/PeopleController.php:179
+#: /Controller/PeopleController.php:199
+msgid "You are not allowed to view this person"
+msgstr "Sie dürfen Daten dieser Person nicht einsehen"
+
+#: /Controller/PeopleController.php:226
+msgid "You are not allowed to add this person"
+msgstr "Sie dürfen Daten dieser Person dem System nicht hinzufügen"
+
+#: /Controller/PeopleController.php:242 /Controller/PeopleController.php:357
+msgid "The person has been saved"
+msgstr "Daten der Person wurden gespeichert"
+
+#: /Controller/PeopleController.php:245 /Controller/PeopleController.php:361
+msgid "The person could not be saved. Please, try again."
+msgstr ""
+"Daten der Person konnten nicht gespeichert werden. Versuchen Sie es noch "
+"einmal."
+
+#: /Controller/PeopleController.php:298 /Controller/PeopleController.php:307
+#: /Controller/PeopleController.php:318
+msgid "You are not allowed to edit this person"
+msgstr "Sie dürfen die Daten dieser Person nicht bearbeiten"
+
+#: /Controller/PeopleController.php:383
+msgid "Invalid id for person"
+msgstr "Ungültige ID für Person"
+
+#: /Controller/PeopleController.php:392
+#: /Controller/Component/RegistrationUpdateComponent.php:835
+msgid "You are not allowed to delete this person"
+msgstr "Sie dürfen die Daten dieser Person nicht löschen"
+
+#: /Controller/PeopleController.php:398
+msgid "Person deleted"
+msgstr "Daten der Person wurden gelöscht"
+
+#: /Controller/PeopleController.php:401
+msgid "Person was not deleted"
+msgstr "Daten der Person wurden nicht gelöscht"
+
+#: /Controller/RegistrationsController.php:77
+msgid "You must fill out all required fields"
+msgstr "Sie müssen alle erforderlichen Felder ausfüllen"
+
+#: /Controller/RegistrationsController.php:83
+msgid "You must enter the date of birth for players"
+msgstr "Sie müssen für Spieler das Geburtsdatum angeben"
+
+#: /Controller/RegistrationsController.php:94
+msgid "You must be born in %d or earlier"
+msgstr "Sie müssen %d oder früher geboren sein"
+
+#: /Controller/RegistrationsController.php:99
+msgid "Wrong birthday given"
+msgstr "Falsches Geburtsdatum"
+
+#: /Controller/RegistrationsController.php:114
+#: /Controller/RegistrationsController.php:1437
+#: /Controller/RegistrationsController.php:1579
+#: /Controller/RegistrationsController.php:1865
+#: /Controller/RegistrationsController.php:1945
+msgid "The registration could not be saved."
+msgstr "Die Registrierung konnte nicht gespeichert werden."
+
+#: /Controller/RegistrationsController.php:116
+#: /Controller/RegistrationsController.php:1434
+msgid "The registration has been saved"
+msgstr "Die Registrierung wurde gespeichert"
+
+#: /Controller/RegistrationsController.php:136
+msgid ""
+"Maximum number of players reached, so you cannot enter them at this time"
+msgstr ""
+"Die maximale Anzahl von Spielern wurde erreicht und es ist nicht möglich, "
+"weitere zu registrieren"
+
+#: /Controller/RegistrationsController.php:141
+msgid ""
+"Maximum number of accompanying persons reached, so you cannot enter them at "
+"this time"
+msgstr ""
+"Die maximale Anzahl von Begleitpersonen wurde erreicht und es ist nicht "
+"möglich, weitere zu registrieren"
+
+#: /Controller/RegistrationsController.php:1037
+#: /Controller/RegistrationsController.php:1109
+#: /Controller/RegistrationsController.php:1222
+#: /Controller/RegistrationsController.php:1445
+msgid "Invalid registration"
+msgstr "Ungültige Registrierung"
+
+#: /Controller/RegistrationsController.php:1080
+#: /Controller/RegistrationsController.php:1251
+msgid "You are not allowed to view this registration"
+msgstr "Sie dürfen diese Registrierung nicht einsehen"
+
+#: /Controller/RegistrationsController.php:1190
+#: /Controller/RegistrationsController.php:1209
+#: /Template/Registrations/view.ctp:107 /Template/Registrations/view.ctp:146
+msgid "wanted"
+msgstr "gewünscht"
+
+#: /Controller/RegistrationsController.php:1227
+#: /Controller/OrdersController.php:452
+msgid "Invalid date"
+msgstr "Ungültiges Datum"
+
+#: /Controller/RegistrationsController.php:1370
+msgid "You cannot enter new people at this time any more"
+msgstr "Sie dürfen zu dieser Zeit keine neuen Personen mehr melden"
+
+#: /Controller/RegistrationsController.php:1374
+msgid "You cannot enter new players at this time any more"
+msgstr "Sie dürfen zu dieser Zeit keine neuen Spieler mehr melden"
+
+#: /Controller/RegistrationsController.php:1423
+#: /Controller/RegistrationsController.php:1539
+msgid "Start number must be unique"
+msgstr "Startnummer muss eindeutig sein"
+
+#: /Controller/RegistrationsController.php:1477
+#: /Controller/RegistrationsController.php:1847
+#: /Controller/RegistrationsController.php:1905
+#: /Controller/Component/RegistrationUpdateComponent.php:490
+msgid "You are not allowed to edit this registration"
+msgstr "Sie dürfen diese Registrierung nicht bearbeiten"
+
+#: /Controller/RegistrationsController.php:1572
+#: /Controller/OrdersController.php:1587
+msgid "Could not update person"
+msgstr "Konnte Person nicht aktualisieren"
+
+#: /Controller/RegistrationsController.php:1590
+#: /Controller/RegistrationsController.php:1656
+#: /Controller/OrdersController.php:1416 /Controller/ShopsController.php:1846
+msgid "Could not update order"
+msgstr "Konnte Registrierung nicht aktualisieren"
+
+#: /Controller/RegistrationsController.php:1596
+msgid "Registration updated"
+msgstr "Registrierung wurde aktualisiert"
+
+#: /Controller/RegistrationsController.php:1600
+#: /Controller/RegistrationsController.php:1662
+#: /Controller/OrdersController.php:1372
+msgid "Could not save changes"
+msgstr "Konnte die Änderungen nicht speichern"
+
+#: /Controller/RegistrationsController.php:1626
+#: /Controller/RegistrationsController.php:1826
+#: /Controller/RegistrationsController.php:1884
+msgid "Invalid id for registration"
+msgstr "Ungültige ID für Registrierung"
+
+#: /Controller/RegistrationsController.php:1648
+msgid "Registration could not be deleted"
+msgstr "Registrierung konnte nicht gelöscht werden"
+
+#: /Controller/RegistrationsController.php:1666
+msgid "Registration deleted"
+msgstr "Registrierung wurde gelöscht"
+
+#: /Controller/RegistrationsController.php:1692
+msgid "Invalid id for partner requests"
+msgstr "Ungültige ID für Partnerwunsch"
+
+#: /Controller/RegistrationsController.php:1868
+msgid "You have accepted {0} as the partner for {1}"
+msgstr "Sie haben den Partnerwunsch von {0} für {1} bestätigt"
+
+#: /Controller/RegistrationsController.php:1942
+msgid "You have rejected {0} as a partner for {1}"
+msgstr "Sie haben den Partnerwunsch von {0} für {1} abgelehnt"
+
+#: /Controller/RegistrationsController.php:2254
+#: /Controller/RegistrationsController.php:2255
+#: /Template/Registrations/count.ctp:137 /Template/Articles/chart.ctp:142
+#: /Template/Orders/storno.ctp:616 /Template/Shops/payment_received.ctp:72
+msgid "Total"
+msgstr "Gesamt"
+
+#: /Controller/RegistrationsController.php:2534
+msgid "Men before Women"
+msgstr "Herren vor Damen"
+
+#: /Controller/RegistrationsController.php:2535
+msgid "Women before Men"
+msgstr "Damen vor Herren"
+
+#: /Controller/RegistrationsController.php:2536 /Template/Nations/view.ctp:2
+#: /Template/People/add.ctp:73 /Template/People/edit.ctp:96
+#: /Template/People/edit.ctp:103 /Template/People/index.ctp:10
+#: /Template/People/index.ctp:77 /Template/People/view.ctp:40
+#: /Template/Registrations/count.ctp:15 /Template/Registrations/count.ctp:131
+#: /Template/Users/edit.ctp:53 /Template/Users/view.ctp:30
+#: /Template/Orders/edit_person.ctp:85 /Template/Orders/storno.ctp:296
+#: /Template/Orders/storno.ctp:398 /Template/Orders/view.ctp:164
+#: /Template/Orders/view.ctp:239
+msgid "Association"
+msgstr "Verband"
+
+#: /Controller/RegistrationsController.php:2537
+#: /Template/Competitions/view.ctp:4 /Template/Groups/view.ctp:8
+#: /Template/Nations/view.ctp:4 /Template/People/index.ctp:75
+#: /Template/Tournaments/view.ctp:4 /Template/Types/view.ctp:4
+#: /Template/Articles/add.ctp:68 /Template/Articles/edit.ctp:107
+#: /Template/Articles/edit.ctp:139 /Template/Articles/view.ctp:5
+#: /Template/Articles/view.ctp:101 /Template/Orders/index.ctp:61
+#: /Template/Orders/index.ctp:127 /Template/Orders/storno.ctp:294
+#: /Template/Orders/storno.ctp:397 /Template/Orders/view.ctp:163
+#: /Template/Orders/view.ctp:238
+msgid "Name"
+msgstr "Name"
+
+#: /Controller/RegistrationsController.php:2538
+msgid "Age category ascending"
+msgstr "Altersklasse aufsteigend"
+
+#: /Controller/RegistrationsController.php:2539
+msgid "Age category descending"
+msgstr "Altersklasse absteigend"
+
+#: /Controller/RegistrationsController.php:2540 /Template/People/add.ctp:63
+#: /Template/People/view.ctp:35
+msgid "Extern ID"
+msgstr "Externe ID"
+
+#: /Controller/RegistrationsController.php:3119
+#: /Controller/ArticlesController.php:364
+msgid "Only JPG, GIF and PNG images are allowed."
+msgstr "Nur JPG, GIF und PNG Bilder sind erlaubt."
+
+#: /Controller/TournamentsController.php:25
+#: /Controller/TournamentsController.php:68
+msgid "Invalid tournament"
+msgstr "Ungültiges Turnier"
+
+#: /Controller/TournamentsController.php:51
+#: /Controller/TournamentsController.php:90
+msgid "The tournament has been saved"
+msgstr "Das Turnier wurde gespeichert"
+
+#: /Controller/TournamentsController.php:54
+#: /Controller/TournamentsController.php:93
+msgid "The tournament could not be saved. Please, try again."
+msgstr ""
+"Das Turnier konnte nicht gespeichert werden. Versuchen Sie es noch einmal."
+
+#: /Controller/TournamentsController.php:103
+msgid "Invalid id for tournament"
+msgstr "Ungültige ID für Turnier"
+
+#: /Controller/TournamentsController.php:112
+msgid "Tournament deleted"
+msgstr "Turnier wurde gelöscht"
+
+#: /Controller/TournamentsController.php:116
+msgid "Tournament was not deleted"
+msgstr "Turnier wurde nicht gelöscht"
+
+#: /Controller/TypesController.php:17 /Controller/TypesController.php:46
+msgid "Invalid function"
+msgstr "Ungültige Funktion"
+
+#: /Controller/TypesController.php:34 /Controller/TypesController.php:60
+msgid "The function has been saved"
+msgstr "Die Funktion wurde gespeichert"
+
+#: /Controller/TypesController.php:37 /Controller/TypesController.php:63
+msgid "The function could not be saved. Please, try again."
+msgstr ""
+"Die Funktion konnte nicht gespeichert werden. Versuchen Sie es noch einmal."
+
+#: /Controller/TypesController.php:72
+msgid "Invalid id for function"
+msgstr "Ungültige ID für Funktion"
+
+#: /Controller/TypesController.php:79
+msgid "Function deleted"
+msgstr "Funktion wurde gelöscht"
+
+#: /Controller/TypesController.php:82
+msgid "Function was not deleted"
+msgstr "Funktion wurde nicht gelöscht"
+
+#: /Controller/UsersController.php:474 /Controller/UsersController.php:583
+#: /Controller/UsersController.php:675 /Controller/UsersController.php:680
+#: /Controller/UsersController.php:748
+msgid "Invalid user"
+msgstr "Ungültiger Benutzer"
+
+#: /Controller/UsersController.php:552 /Controller/UsersController.php:617
+msgid "The user has been saved"
+msgstr "Der Benutzer wurde gespeichert"
+
+#: /Controller/UsersController.php:555 /Controller/UsersController.php:620
+msgid "The user could not be saved. Please, try again."
+msgstr ""
+"Der Benutzer konnte nicht gespeichert werden. Versuchen Sie es bitte noch "
+"einmal."
+
+#: /Controller/UsersController.php:651
+msgid "Invalid id for user"
+msgstr "Ungültige ID für Benutzer"
+
+#: /Controller/UsersController.php:658
+msgid "User deleted"
+msgstr "Benutzer wurde gelöscht"
+
+#: /Controller/UsersController.php:661
+msgid "User was not deleted"
+msgstr "Benutzer wurde nicht gelöscht"
+
+#: /Controller/Component/RegistrationUpdateComponent.php:1059
+#: /Controller/Component/RegistrationUpdateComponent.php:1102
+msgid "SocketException while sending email: {0}"
+msgstr "SocketException beim Senden einer Email: {0}"
+
+#: /Model/Table/CompetitionsTable.php:31
+msgid "must be unique within a tournament"
+msgstr "muss innerhalb eines Turniers eindeutig sein"
+
+#: /Model/Table/CompetitionsTable.php:40
+msgid "value must be \"Mixed\""
+msgstr "Wert muss \"Mixed\" sein"
+
+#: /Model/Table/PeopleTable.php:56
+msgid "Birthday cannot be empty for players"
+msgstr "Der Geburtstag muss angegeben werden"
+
+#: /Model/Table/PeopleTable.php:58
+msgid "You must select an association"
+msgstr "Sie müssen einen Verband auswählen"
+
+#: /Model/Table/UsersTable.php:51
+msgid "A user with this name already exists"
+msgstr "Ein Benutzer mit diesen Namen existiert bereits"
+
+#: /Model/Table/UsersTable.php:54
+msgid "The prefix is already in use"
+msgstr "Der Präfix wird bereits verwendet"
+
+#: /Template/Competitions/add.ctp:4
+msgid "Add Competition"
+msgstr "Wettbewerb hinzufügen"
+
+#: /Template/Competitions/add.ctp:19 /Template/Competitions/edit.ctp:22
+#: /Template/Competitions/index.ctp:8 /Template/Competitions/view.ctp:19
+#: /Template/Registrations/count.ctp:59 /Template/Orders/view.ctp:167
+#: /Template/Orders/view.ctp:241
+msgid "Type"
+msgstr "Typ"
+
+#: /Template/Competitions/add.ctp:21 /Template/Competitions/edit.ctp:24
+msgid "Cutoff year"
+msgstr "Stichtag"
+
+#: /Template/Competitions/add.ctp:22 /Template/Competitions/edit.ctp:25
+msgid "No of Entries"
+msgstr "Anzahl Meldungen"
+
+#: /Template/Competitions/add.ctp:23 /Template/Competitions/edit.ctp:26
+msgid "No of Entries Host"
+msgstr "Anzahl Meldungen für Ausrichter"
+
+#: /Template/Competitions/add.ctp:27
+msgid "Save & Cont."
+msgstr "Speichern & Weiter"
+
+#: /Template/Competitions/add.ctp:34 /Template/Competitions/edit.ctp:38
+#: /Template/Competitions/view.ctp:56
+msgid "List Competitions"
+msgstr "Wettbewerbe anzeigen"
+
+#: /Template/Competitions/edit.ctp:4 /Template/Competitions/view.ctp:54
+msgid "Edit Competition"
+msgstr "Wettbewerb bearbeiten"
+
+#: /Template/Competitions/edit.ctp:16 /Template/Competitions/view.ctp:14
+#: /Template/People/edit.ctp:57 /Template/People/index.ctp:79
+#: /Template/People/view.ctp:24 /Template/Registrations/count.ctp:34
+msgid "Sex"
+msgstr "Geschlecht"
+
+#: /Template/Competitions/edit.ctp:37
+msgid "View Competition"
+msgstr "Wettbewerb ansehen"
+
+#: /Template/Competitions/index.ctp:2
+msgid "Competitions"
+msgstr "Wettbewerbe"
+
+#: /Template/Competitions/index.ctp:10 /Template/Groups/index.ctp:7
+#: /Template/Nations/index.ctp:8 /Template/People/index.ctp:88
+#: /Template/Tournaments/index.ctp:10 /Template/Users/index.ctp:53
+#: /Template/Allotments/index.ctp:9 /Template/Articles/index.ctp:50
+#: /Template/Orders/view.ctp:169 /Template/Orders/view.ctp:243
+msgid "Updated"
+msgstr "Aktualisiert"
+
+#: /Template/Competitions/index.ctp:11 /Template/Groups/index.ctp:8
+#: /Template/Nations/index.ctp:9 /Template/People/index.ctp:89
+#: /Template/Tournaments/index.ctp:12 /Template/Types/index.ctp:7
+#: /Template/Users/index.ctp:54 /Template/Allotments/index.ctp:10
+#: /Template/Articles/index.ctp:51 /Template/Orders/index.ctp:133
+msgid "Actions"
+msgstr "Aktionen"
+
+#: /Template/Competitions/index.ctp:33 /Template/Groups/index.ctp:27
+#: /Template/Nations/index.ctp:30 /Template/People/index.ctp:121
+#: /Template/Tournaments/index.ctp:53 /Template/Types/index.ctp:25
+#: /Template/Users/index.ctp:82 /Template/Allotments/index.ctp:31
+#: /Template/Articles/index.ctp:103 /Template/Orders/index.ctp:188
+msgid "View"
+msgstr "Ansicht"
+
+#: /Template/Competitions/index.ctp:34 /Template/Groups/index.ctp:28
+#: /Template/Nations/index.ctp:31 /Template/People/index.ctp:122
+#: /Template/Tournaments/index.ctp:54 /Template/Types/index.ctp:26
+#: /Template/Users/index.ctp:83 /Template/Allotments/index.ctp:32
+#: /Template/Articles/index.ctp:104 /Template/Orders/view.ctp:221
+#: /Template/Orders/view.ctp:223 /Template/Orders/view.ctp:286
+#: /Template/Orders/view.ctp:288
+msgid "Edit"
+msgstr "Bearbeiten"
+
+#: /Template/Competitions/index.ctp:35 /Template/Groups/index.ctp:29
+#: /Template/Nations/index.ctp:32 /Template/People/index.ctp:123
+#: /Template/Tournaments/index.ctp:55 /Template/Types/index.ctp:27
+#: /Template/Users/index.ctp:84 /Template/Allotments/index.ctp:33
+#: /Template/Articles/index.ctp:105
+msgid "Delete"
+msgstr "Löschen"
+
+#: /Template/Competitions/index.ctp:35 /Template/Competitions/view.ctp:55
+#: /Template/Groups/index.ctp:29 /Template/Groups/view.ctp:27
+#: /Template/Nations/index.ctp:32 /Template/Nations/view.ctp:35
+#: /Template/People/index.ctp:123 /Template/People/view.ctp:92
+#: /Template/Registrations/view.ctp:212 /Template/Tournaments/index.ctp:55
+#: /Template/Tournaments/view.ctp:70 /Template/Types/index.ctp:27
+#: /Template/Types/view.ctp:20 /Template/Users/index.ctp:84
+#: /Template/Users/view.ctp:81 /Template/Articles/index.ctp:105
+#: /Template/Articles/view.ctp:124
+msgid "Are you sure you want to delete %s?"
+msgstr "Sind Sie sicher, %s löschen zu wollen?"
+
+#: /Template/Competitions/index.ctp:47 /Template/Competitions/view.ctp:57
+msgid "New Competition"
+msgstr "Neuer Wettbewerb"
+
+#: /Template/Competitions/view.ctp:2
+msgid "Competition"
+msgstr "Wettbewerb"
+
+#: /Template/Competitions/view.ctp:9 /Template/Nations/view.ctp:9
+#: /Template/Tournaments/index.ctp:5 /Template/Tournaments/view.ctp:9
+#: /Template/Types/view.ctp:9 /Template/Articles/add.ctp:71
+#: /Template/Articles/edit.ctp:112 /Template/Articles/edit.ctp:142
+#: /Template/Articles/view.ctp:10 /Template/Articles/view.ctp:102
+#: /Template/Orders/storno.ctp:493
+msgid "Description"
+msgstr "Beschreibung"
+
+#: /Template/Competitions/view.ctp:24 /Template/People/index.ctp:80
+#: /Template/People/view.ctp:29 /Template/Orders/storno.ctp:295
+#: /Template/Orders/view.ctp:166
+msgid "Born"
+msgstr "Geboren"
+
+#: /Template/Competitions/view.ctp:29
+msgid "Entries"
+msgstr "Meldungen"
+
+#: /Template/Competitions/view.ctp:34
+msgid "Entries Host"
+msgstr "Meldungen Ausrichter"
+
+#: /Template/Competitions/view.ctp:39 /Template/Nations/view.ctp:19
+#: /Template/People/view.ctp:73 /Template/Registrations/view.ctp:185
+#: /Template/Tournaments/view.ctp:54 /Template/Allotments/view.ctp:20
+#: /Template/Articles/view.ctp:72
+msgid "Updated At"
+msgstr "Aktualisiert um"
+
+#: /Template/Competitions/view.ctp:44 /Template/Nations/view.ctp:24
+#: /Template/People/view.ctp:78 /Template/Registrations/view.ctp:190
+#: /Template/Tournaments/view.ctp:59 /Template/Allotments/view.ctp:25
+#: /Template/Articles/view.ctp:77
+msgid "Created At"
+msgstr "Erzeugt um"
+
+#: /Template/Competitions/view.ctp:55
+msgid "Delete Competition"
+msgstr "Wettbewerb löschen"
+
+#: /Template/Element/paginator.ctp:57
+msgid "Show %current% records out of %count% total, starting on record %start%"
+msgstr ""
+"Anzeige von %current% Datensätze von insgeasmt %count%, beginnend bei %start%"
+
+#: /Template/Groups/add.ctp:4
+msgid "Add Group"
+msgstr "Gruppe hinzufügen"
+
+#: /Template/Groups/add.ctp:11 /Template/Groups/edit.ctp:16
+#: /Template/Groups/index.ctp:6 /Template/Groups/view.ctp:15
+#: /Template/Types/index.ctp:2
+msgid "Functions"
+msgstr "Funktion"
+
+#: /Template/Groups/add.ctp:24 /Template/Groups/edit.ctp:33
+#: /Template/Groups/view.ctp:28 /Template/Users/add.ctp:68
+#: /Template/Users/edit.ctp:79 /Template/Users/index.ctp:95
+#: /Template/Users/view.ctp:84
+msgid "List Groups"
+msgstr "Gruppen anzeigen"
+
+#: /Template/Groups/add.ctp:25 /Template/Groups/edit.ctp:34
+#: /Template/Groups/index.ctp:43 /Template/Groups/view.ctp:30
+#: /Template/Users/add.ctp:67 /Template/Users/edit.ctp:78
+#: /Template/Users/notifications.ctp:34 /Template/Users/view.ctp:82
+msgid "List Users"
+msgstr "Benutzer anzeigen"
+
+#: /Template/Groups/edit.ctp:8 /Template/Groups/view.ctp:26
+msgid "Edit Group"
+msgstr "Gruppe bearbeiten"
+
+#: /Template/Groups/index.ctp:2 /Template/Users/index.ctp:9
+msgid "Groups"
+msgstr "Gruppen"
+
+#: /Template/Groups/index.ctp:41 /Template/Groups/view.ctp:29
+#: /Template/Users/add.ctp:69
+msgid "New Group"
+msgstr "Neue Gruppe"
+
+#: /Template/Groups/view.ctp:6 /Template/Users/view.ctp:9
+msgid "Group"
+msgstr "Gruppe"
+
+#: /Template/Groups/view.ctp:27
+msgid "Delete Group"
+msgstr "Gruppe löschen"
+
+#: /Template/Layout/default.ctp:20 /Template/Layout/error.ctp:28
+msgid "Online Registration"
+msgstr "Onlineregistrierung"
+
+#: /Template/Nations/add.ctp:4
+msgid "Add Association"
+msgstr "Verband hinzufügen"
+
+#: /Template/Nations/add.ctp:20 /Template/Nations/edit.ctp:22
+#: /Template/Nations/view.ctp:36
+msgid "List Associations"
+msgstr "Verbände anzeigen"
+
+#: /Template/Nations/add.ctp:21 /Template/People/add.ctp:90
+#: /Template/People/edit.ctp:122 /Template/People/update.ctp:17
+#: /Template/People/view.ctp:95 /Template/Registrations/add.ctp:159
+#: /Template/Users/view.ctp:85
+msgid "List People"
+msgstr "Personen anzeigen"
+
+#: /Template/Nations/add.ctp:22 /Template/People/index.ctp:133
+#: /Template/People/view.ctp:98
+msgid "New Person"
+msgstr "Neue Person"
+
+#: /Template/Nations/edit.ctp:4 /Template/Nations/view.ctp:34
+msgid "Edit Association"
+msgstr "Verband bearbeiten"
+
+#: /Template/Nations/edit.ctp:21
+msgid "View Association"
+msgstr "Verband ansehen"
+
+#: /Template/Nations/index.ctp:2
+msgid "Associations"
+msgstr "Verbände"
+
+#: /Template/Nations/index.ctp:44 /Template/Nations/view.ctp:37
+msgid "New Association"
+msgstr "Neuer Verband"
+
+#: /Template/Nations/view.ctp:14
+msgid "Continent"
+msgstr "Kontinent"
+
+#: /Template/Nations/view.ctp:35
+msgid "Delete Association"
+msgstr "Verband löschen"
+
+#: /Template/People/add.ctp:20
+msgid "Add Person"
+msgstr "Person hinzufügen"
+
+#: /Template/People/add.ctp:23 /Template/People/edit.ctp:27
+#: /Template/Orders/edit_person.ctp:52
+msgid "Given Name"
+msgstr "Vorname"
+
+#: /Template/People/add.ctp:27 /Template/People/edit.ctp:31
+#: /Template/Orders/edit_person.ctp:57
+msgid "Family Name"
+msgstr "Nachname"
+
+#: /Template/People/add.ctp:43 /Template/People/edit.ctp:22
+#: /Template/People/view.ctp:4 /Template/Orders/edit_person.ctp:64
+msgid "Woman"
+msgstr "Dame"
+
+#: /Template/People/add.ctp:43 /Template/People/edit.ctp:22
+#: /Template/People/view.ctp:4 /Template/Orders/edit_person.ctp:64
+msgid "Man"
+msgstr "Mann"
+
+#: /Template/People/add.ctp:52 /Template/People/edit.ctp:76
+#: /Template/Registrations/add_participant.ctp:119
+#: /Template/Registrations/edit_participant.ctp:228
+#: /Template/Tournaments/add.ctp:34 /Template/Tournaments/add.ctp:42
+#: /Template/Tournaments/add.ctp:50 /Template/Tournaments/add.ctp:58
+#: /Template/Tournaments/add.ctp:66 /Template/Tournaments/add.ctp:75
+#: /Template/Tournaments/edit.ctp:40 /Template/Tournaments/edit.ctp:48
+#: /Template/Tournaments/edit.ctp:56 /Template/Tournaments/edit.ctp:64
+#: /Template/Tournaments/edit.ctp:72 /Template/Tournaments/edit.ctp:81
+#: /Template/Articles/add.ctp:28 /Template/Articles/add.ctp:38
+#: /Template/Articles/edit.ctp:67 /Template/Articles/edit.ctp:76
+#: /Template/Orders/edit_person.ctp:73 /Template/Orders/settings.ctp:53
+#: /Template/Orders/settings.ctp:63 /Template/Shops/add_person.ctp:197
+msgid "Year"
+msgstr "Jahr"
+
+#: /Template/People/add.ctp:53 /Template/People/edit.ctp:77
+#: /Template/Registrations/add_participant.ctp:120
+#: /Template/Registrations/edit_participant.ctp:229
+#: /Template/Tournaments/add.ctp:35 /Template/Tournaments/add.ctp:43
+#: /Template/Tournaments/add.ctp:51 /Template/Tournaments/add.ctp:59
+#: /Template/Tournaments/add.ctp:67 /Template/Tournaments/add.ctp:76
+#: /Template/Tournaments/edit.ctp:41 /Template/Tournaments/edit.ctp:49
+#: /Template/Tournaments/edit.ctp:57 /Template/Tournaments/edit.ctp:65
+#: /Template/Tournaments/edit.ctp:73 /Template/Tournaments/edit.ctp:82
+#: /Template/Articles/add.ctp:29 /Template/Articles/add.ctp:39
+#: /Template/Articles/edit.ctp:68 /Template/Articles/edit.ctp:77
+#: /Template/Orders/edit_person.ctp:74 /Template/Orders/settings.ctp:54
+#: /Template/Orders/settings.ctp:64 /Template/Shops/add_person.ctp:198
+msgid "Month"
+msgstr "Monat"
+
+#: /Template/People/add.ctp:54 /Template/People/edit.ctp:78
+#: /Template/Registrations/add_participant.ctp:121
+#: /Template/Registrations/edit_participant.ctp:230
+#: /Template/Tournaments/add.ctp:36 /Template/Tournaments/add.ctp:44
+#: /Template/Tournaments/add.ctp:52 /Template/Tournaments/add.ctp:60
+#: /Template/Tournaments/add.ctp:68 /Template/Tournaments/add.ctp:77
+#: /Template/Tournaments/edit.ctp:42 /Template/Tournaments/edit.ctp:50
+#: /Template/Tournaments/edit.ctp:58 /Template/Tournaments/edit.ctp:66
+#: /Template/Tournaments/edit.ctp:74 /Template/Tournaments/edit.ctp:83
+#: /Template/Articles/add.ctp:30 /Template/Articles/add.ctp:40
+#: /Template/Articles/edit.ctp:69 /Template/Articles/edit.ctp:78
+#: /Template/Orders/edit_person.ctp:75 /Template/Orders/settings.ctp:55
+#: /Template/Orders/settings.ctp:65 /Template/Shops/add_person.ctp:199
+msgid "Day"
+msgstr "Tag"
+
+#: /Template/People/add.ctp:57 /Template/People/edit.ctp:81
+#: /Template/Registrations/add_participant.ctp:124
+#: /Template/Registrations/edit_participant.ctp:233
+#: /Template/Orders/edit_person.ctp:78
+msgid "Date Born"
+msgstr "Geburtstag"
+
+#: /Template/People/add.ctp:72 /Template/Orders/edit_person.ctp:88
+msgid "Select Association"
+msgstr "Verband auswählen"
+
+#: /Template/People/edit.ctp:20 /Template/People/view.ctp:89
+msgid "Edit Person"
+msgstr "Person bearbeiten"
+
+#: /Template/People/edit.ctp:68
+msgid "Date born"
+msgstr "Geburtstag"
+
+#: /Template/People/index.ctp:2 /Template/Orders/view.ctp:46
+msgid "People"
+msgstr "Personen"
+
+#: /Template/People/index.ctp:12 /Template/People/index.ctp:14
+#: /Template/People/index.ctp:37 /Template/People/index.ctp:39
+#: /Template/People/index.ctp:64 /Template/Registrations/count.ctp:17
+#: /Template/Registrations/count.ctp:19 /Template/Registrations/count.ctp:38
+#: /Template/Registrations/count.ctp:40 /Template/Registrations/count.ctp:62
+#: /Template/Registrations/count.ctp:64 /Template/Registrations/count.ctp:88
+#: /Template/Registrations/count.ctp:90 /Template/Registrations/index.ctp:125
+#: /Template/Users/index.ctp:11 /Template/Users/index.ctp:13
+#: /Template/Users/index.ctp:27 /Template/Users/index.ctp:29
+#: /Template/Orders/index.ctp:15 /Template/Orders/index.ctp:17
+#: /Template/Orders/index.ctp:31 /Template/Orders/index.ctp:33
+#: /Template/Orders/index.ctp:47 /Template/Orders/index.ctp:49
+#: /Template/Orders/index.ctp:73 /Template/Orders/index.ctp:75
+#: /Template/Orders/index.ctp:107 /Template/Orders/index.ctp:109
+msgid "all"
+msgstr "alle"
+
+#: /Template/People/index.ctp:26
+msgid "Last&nbsp;name"
+msgstr "Nachname"
+
+#: /Template/People/index.ctp:63 /Template/Users/index.ctp:24
+#: /Template/Users/view.ctp:4
+msgid "Username"
+msgstr "Benutzername"
+
+#: /Template/People/index.ctp:81
+msgid "Reg. ID"
+msgstr "Reg. ID"
+
+#: /Template/People/index.ctp:86 /Template/People/view.ctp:56
+#: /Template/Registrations/history.ctp:31 /Template/Users/view.ctp:2
+#: /Template/Allotments/index.ctp:6 /Template/Allotments/view.ctp:10
+#: /Template/Orders/history.ctp:4 /Template/Orders/history.ctp:28
+msgid "User"
+msgstr "Benutzer"
+
+#: /Template/People/update.ctp:4
+msgid "Update People"
+msgstr "Personen aktualisieren"
+
+#: /Template/People/update.ctp:10
+msgid "Update"
+msgstr "Aktualisieren"
+
+#: /Template/People/view.ctp:2 /Template/Registrations/edit.ctp:105
+#: /Template/Registrations/view.ctp:17
+msgid "Person"
+msgstr "Person"
+
+#: /Template/People/view.ctp:7
+msgid "First Name"
+msgstr "Vorname"
+
+#: /Template/People/view.ctp:12
+msgid "Last Name"
+msgstr "Nachname"
+
+#: /Template/People/view.ctp:18
+msgid "Display Name"
+msgstr "Anzeigename"
+
+#: /Template/People/view.ctp:46 /Template/Registrations/edit.ctp:282
+#: /Template/Users/view.ctp:14 /Template/Orders/edit_address.ctp:95
+#: /Template/Orders/edit_person.ctp:94 /Template/Orders/history.ctp:14
+#: /Template/Orders/index.ctp:126 /Template/Orders/settings.ctp:139
+#: /Template/Shops/import.ctp:12
+msgid "Email"
+msgstr "Email"
+
+#: /Template/People/view.ctp:51 /Template/Registrations/edit.ctp:286
+#: /Template/Orders/edit_address.ctp:106 /Template/Orders/edit_person.ctp:99
+#: /Template/Orders/settings.ctp:141 /Template/Shops/address.ctp:155
+msgid "Phone"
+msgstr "Telefon"
+
+#: /Template/People/view.ctp:62 /Template/Orders/history.ctp:7
+#: /Template/Orders/index.ctp:124 /Template/Orders/settings.ctp:32
+msgid "Invoice"
+msgstr "Rechnung"
+
+#: /Template/People/view.ctp:92
+msgid "Delete Person"
+msgstr "Person löschen"
+
+#: /Template/Registrations/add.ctp:28 /Template/Registrations/edit.ctp:162
+msgid "Select Event"
+msgstr "Wettbewerb auwählen"
+
+#: /Template/Registrations/add.ctp:38 /Template/Registrations/add.ctp:109
+msgid "Select Function"
+msgstr "Funktion auswählen"
+
+#: /Template/Registrations/add.ctp:61 /Template/Registrations/add.ctp:75
+#: /Template/Registrations/edit.ctp:24 /Template/Registrations/edit.ctp:43
+#: /Template/Registrations/edit.ctp:226 /Template/Registrations/edit.ctp:267
+#: /Template/Registrations/view.ctp:100 /Template/Registrations/view.ctp:139
+msgid "Partner wanted"
+msgstr "Partner gewünscht"
+
+#: /Template/Registrations/add.ctp:95
+msgid "Add Registration"
+msgstr "Registrierung hinzufügen"
+
+#: /Template/Registrations/add.ctp:102
+msgid "Select Person"
+msgstr "Person auswählen"
+
+#: /Template/Registrations/add.ctp:107 /Template/Registrations/edit.ctp:129
+#: /Template/Registrations/edit.ctp:133 /Template/Registrations/edit.ctp:137
+#: /Template/Registrations/index.ctp:59 /Template/Registrations/view.ctp:31
+#: /Template/Types/view.ctp:2
+msgid "Function"
+msgstr "Funktion"
+
+#: /Template/Registrations/add.ctp:127 /Template/Registrations/add.ctp:140
+msgid "Select Partner"
+msgstr "Partner auswählen"
+
+#: /Template/Registrations/add.ctp:158
+#: /Template/Registrations/assign_numbers.ctp:90
+#: /Template/Registrations/count.ctp:186 /Template/Registrations/edit.ctp:332
+#: /Template/Registrations/history.ctp:101
+#: /Template/Registrations/import.ctp:17
+#: /Template/Registrations/import_partner.ctp:17
+#: /Template/Registrations/print_accreditation_settings.ctp:21
+#: /Template/Registrations/view.ctp:214 /Template/Registrations/view.ctp:221
+#: /Template/Users/view.ctp:86
+msgid "List Registrations"
+msgstr "Registrierungen anzeigen"
+
+#: /Template/Registrations/assign_numbers.ctp:4
+#: /Template/Registrations/index.ctp:614
+msgid "Assign Start Numbers"
+msgstr "Startnummern vergeben"
+
+#: /Template/Registrations/assign_numbers.ctp:9
+msgid "Start with Number"
+msgstr "Beginne mit Nummer"
+
+#: /Template/Registrations/assign_numbers.ctp:33
+#: /Template/Registrations/assign_numbers.ctp:49
+#: /Template/Registrations/assign_numbers.ctp:65
+msgid "None"
+msgstr "Keine"
+
+#: /Template/Registrations/assign_numbers.ctp:81
+msgid "Assign Numbers"
+msgstr "Startnummern vergeben"
+
+#: /Template/Registrations/count.ctp:6 /Template/Registrations/index.ctp:618
+msgid "Count Participants"
+msgstr "Teilnehmer zählen"
+
+#: /Template/Registrations/count.ctp:85
+msgid "Partner"
+msgstr "Partner"
+
+#: /Template/Registrations/count.ctp:93 /Template/Registrations/count.ctp:95
+msgid "Wanted"
+msgstr "Gewünscht"
+
+#: /Template/Registrations/count.ctp:108 /Template/Registrations/count.ctp:110
+msgid "Not Confirmed"
+msgstr "Partner nicht bestätigt"
+
+#: /Template/Registrations/count.ctp:113 /Template/Registrations/count.ctp:115
+msgid "Confirmed"
+msgstr "Partner bestätigt"
+
+#: /Template/Registrations/count.ctp:184 /Template/Registrations/view.ctp:218
+msgid "New Registration"
+msgstr "Neue Registrierung"
+
+#: /Template/Registrations/count.ctp:188 /Template/Registrations/edit.ctp:335
+#: /Template/Registrations/view.ctp:216 /Template/Registrations/view.ctp:223
+msgid "List Partner Wanted"
+msgstr "Spieler ohne Partner"
+
+#: /Template/Registrations/count.ctp:190 /Template/Orders/index.ctp:298
+msgid "Export"
+msgstr "Export"
+
+#: /Template/Registrations/edit.ctp:87 /Template/Registrations/history.ctp:106
+#: /Template/Registrations/view.ctp:210
+msgid "Edit Registration"
+msgstr "Registrierung bearbeiten"
+
+#: /Template/Registrations/edit.ctp:176 /Template/Registrations/view.ctp:66
+msgid "Single"
+msgstr "Einzel"
+
+#: /Template/Registrations/edit.ctp:187
+msgid "Double Partner Category"
+msgstr "Kategorie des Doppelpartner"
+
+#: /Template/Registrations/edit.ctp:201 /Template/Registrations/view.ctp:80
+msgid "Double"
+msgstr "Doppel"
+
+#: /Template/Registrations/edit.ctp:218 /Template/Registrations/view.ctp:92
+msgid "Double Partner"
+msgstr "Doppelpartner"
+
+#: /Template/Registrations/edit.ctp:232
+msgid "Mixed Partner Category"
+msgstr "Kategorie Mixed Partner"
+
+#: /Template/Registrations/edit.ctp:259 /Template/Registrations/view.ctp:131
+msgid "Mixed Partner"
+msgstr "Mixed Partner"
+
+#: /Template/Registrations/edit.ctp:303 /Template/Orders/view.ctp:38
+msgid "Items"
+msgstr "Artikel"
+
+#: /Template/Registrations/history.ctp:3 /Template/Users/view.ctp:68
+#: /Template/Orders/history.ctp:3
+msgid "Created"
+msgstr "Erzeugt"
+
+#: /Template/Registrations/history.ctp:4 /Template/Registrations/view.ctp:172
+#: /Template/Articles/chart.ctp:41
+msgid "Cancelled"
+msgstr "Abgemeldet"
+
+#: /Template/Registrations/history.ctp:9
+msgid "Request double partner"
+msgstr "Doppelpartner anfragen"
+
+#: /Template/Registrations/history.ctp:10
+msgid "Request mixed partner"
+msgstr "Mixed Partner anfragen"
+
+#: /Template/Registrations/history.ctp:11
+msgid "Wanted as double partner by"
+msgstr "Als Doppelpartner gewünscht von"
+
+#: /Template/Registrations/history.ctp:12
+msgid "Wanted as mixed partner by"
+msgstr "Als Mixed Partner gewünscht von"
+
+#: /Template/Registrations/history.ctp:13
+msgid "Confirmed as double partner by"
+msgstr "Als Doppelpartner bestätigt von"
+
+#: /Template/Registrations/history.ctp:14
+msgid "Confirmed as mixed partner by"
+msgstr "Als Mixed Partner bestätigt von"
+
+#: /Template/Registrations/history.ctp:15
+msgid "Rejected as double partner by"
+msgstr "Als Doppelpartner abgelehnt von"
+
+#: /Template/Registrations/history.ctp:16
+msgid "Rejected as mixed partner by"
+msgstr "Als Mixed Partner abgelehnt von"
+
+#: /Template/Registrations/history.ctp:17
+msgid "Single cancelled"
+msgstr "Einzel abgemeldet"
+
+#: /Template/Registrations/history.ctp:18
+msgid "Double cancelled"
+msgstr "Doppel abgemeldet"
+
+#: /Template/Registrations/history.ctp:19
+msgid "Mixed cancelled"
+msgstr "Mixed abgemeldet"
+
+#: /Template/Registrations/history.ctp:20
+msgid "Team cancelled"
+msgstr "Mannschaft abgemeldet"
+
+#: /Template/Registrations/history.ctp:21
+msgid "Replaced by"
+msgstr "Ersetzt durch"
+
+#: /Template/Registrations/history.ctp:26
+msgid "Registration History of"
+msgstr "Registrierunghistorie von"
+
+#: /Template/Registrations/history.ctp:30 /Template/Tournaments/index.ctp:7
+#: /Template/Orders/history.ctp:27
+msgid "Date"
+msgstr "Datum"
+
+#: /Template/Registrations/history.ctp:32 /Template/Orders/history.ctp:29
+msgid "Field"
+msgstr "Feld"
+
+#: /Template/Registrations/history.ctp:33 /Template/Orders/history.ctp:30
+msgid "Old Value"
+msgstr "Alter Wert"
+
+#: /Template/Registrations/history.ctp:34 /Template/Orders/history.ctp:31
+msgid "New Value"
+msgstr "Neuer Wert"
+
+#: /Template/Registrations/history.ctp:41 /Template/Orders/history.ctp:38
+msgid "Current"
+msgstr "Aktuell"
+
+#: /Template/Registrations/history.ctp:103
+msgid "View Registration"
+msgstr "Registrierung ansehen"
+
+#: /Template/Registrations/import.ctp:4
+msgid "Import Registrations"
+msgstr "Registrierung importieren"
+
+#: /Template/Registrations/import.ctp:10
+#: /Template/Registrations/import_partner.ctp:10
+#: /Template/Registrations/index.ctp:622 /Template/Orders/index.ctp:297
+#: /Template/Shops/import.ctp:17
+msgid "Import"
+msgstr "Import"
+
+#: /Template/Registrations/import_partner.ctp:4
+msgid "Import Double Partners"
+msgstr "Doppelpartner importieren"
+
+#: /Template/Registrations/index.ctp:626
+msgid "Import Partner"
+msgstr "Import Partner"
+
+#: /Template/Registrations/print_accreditation_settings.ctp:4
+msgid "Print Accreditation Settings"
+msgstr "Einstellungen Akkreditierung drucken"
+
+#: /Template/Registrations/print_accreditation_settings.ctp:26
+msgid "Print Accreditation"
+msgstr "Akkreditierungen drucken"
+
+#: /Template/Registrations/view.ctp:10
+msgid "Registration of"
+msgstr "Registrierung von"
+
+#: /Template/Registrations/view.ctp:39
+msgid "Replaced By"
+msgstr "Ersetzt durch"
+
+#: /Template/Registrations/view.ctp:52
+msgid "Start No."
+msgstr "Startnr."
+
+#: /Template/Registrations/view.ctp:158
+msgid "Team"
+msgstr "Mannschaft"
+
+#: /Template/Registrations/view.ctp:179 /Template/Orders/edit_invoice.ctp:101
+#: /Template/Shops/payment_received.ctp:101
+msgid "Comment"
+msgstr "Kommentar"
+
+#: /Template/Registrations/view.ctp:208
+msgid "View History"
+msgstr "Registrierung ansehen"
+
+#: /Template/Registrations/view.ctp:212
+msgid "Delete Registration"
+msgstr "Gelöscht Registrierung"
+
+#: /Template/Tournaments/add.ctp:4
+msgid "Add Tournament"
+msgstr "Turnier hinzufügen"
+
+#: /Template/Tournaments/add.ctp:7 /Template/Tournaments/edit.ctp:7
+#: /Template/Tournaments/view.ctp:2 /Template/Users/view.ctp:37
+msgid "Tournament"
+msgstr "Turnier"
+
+#: /Template/Tournaments/add.ctp:10 /Template/Tournaments/edit.ctp:10
+msgid "Organizer"
+msgstr "Organisator"
+
+#: /Template/Tournaments/add.ctp:13 /Template/Tournaments/edit.ctp:13
+msgid "Comittee"
+msgstr "Komitee"
+
+#: /Template/Tournaments/add.ctp:16 /Template/Tournaments/edit.ctp:16
+msgid "Host"
+msgstr "Ausrichter"
+
+#: /Template/Tournaments/add.ctp:19 /Template/Tournaments/edit.ctp:19
+msgid "Contractor"
+msgstr "Kontraktor"
+
+#: /Template/Tournaments/add.ctp:22 /Template/Tournaments/edit.ctp:22
+msgid "Nat. DPA"
+msgstr "Nat. DSB"
+
+#: /Template/Tournaments/add.ctp:72 /Template/Tournaments/edit.ctp:78
+#: /Template/Tournaments/view.ctp:39
+msgid "Start Accreditation"
+msgstr "Beginn Akkreditierung"
+
+#: /Template/Tournaments/add.ctp:82 /Template/Tournaments/edit.ctp:88
+msgid "Select Host Association"
+msgstr "Ausrichter auswählen"
+
+#: /Template/Tournaments/add.ctp:83 /Template/Tournaments/edit.ctp:89
+#: /Template/Tournaments/view.ctp:44
+msgid "Host Association"
+msgstr "Ausrichter"
+
+#: /Template/Tournaments/add.ctp:129 /Template/Tournaments/edit.ctp:133
+#: /Template/Tournaments/view.ctp:71
+msgid "List Tournaments"
+msgstr "Turniere anzeigen"
+
+#: /Template/Tournaments/edit.ctp:4 /Template/Tournaments/view.ctp:69
+msgid "Edit Tournament"
+msgstr "Turnier bearbeiten"
+
+#: /Template/Tournaments/index.ctp:2
+msgid "Tournaments"
+msgstr "Turniere"
+
+#: /Template/Tournaments/index.ctp:6 /Template/Tournaments/view.ctp:49
+msgid "Location"
+msgstr "Ort"
+
+#: /Template/Tournaments/index.ctp:8
+msgid "Enter before"
+msgstr "Melden vor"
+
+#: /Template/Tournaments/index.ctp:9
+msgid "Modify before"
+msgstr "Ändern vor"
+
+#: /Template/Tournaments/index.ctp:63
+msgid "Hide past tournaments"
+msgstr "Vergangene Turniere verbergen"
+
+#: /Template/Tournaments/index.ctp:65
+msgid "Show past tournaments"
+msgstr "Vergangene Turnier anzeigen"
+
+#: /Template/Tournaments/index.ctp:74 /Template/Tournaments/view.ctp:72
+msgid "New Tournament"
+msgstr "Neues Turnier"
+
+#: /Template/Tournaments/view.ctp:14
+msgid "Start On"
+msgstr "Beginn am"
+
+#: /Template/Tournaments/view.ctp:19
+msgid "End On"
+msgstr "Ende am"
+
+#: /Template/Tournaments/view.ctp:24
+msgid "Enter After"
+msgstr "Melden nach"
+
+#: /Template/Tournaments/view.ctp:29
+msgid "Enter Before"
+msgstr "Melden vor"
+
+#: /Template/Tournaments/view.ctp:34
+msgid "Modify Before"
+msgstr "Ändern vor"
+
+#: /Template/Tournaments/view.ctp:70
+msgid "Delete Tournament"
+msgstr "Turnier löschen"
+
+#: /Template/Types/add.ctp:4
+msgid "Add Function"
+msgstr "Funktion hinzufügen"
+
+#: /Template/Types/add.ctp:18 /Template/Types/edit.ctp:19
+#: /Template/Types/view.ctp:21
+msgid "List Functions"
+msgstr "Funktionen anzeigen"
+
+#: /Template/Types/edit.ctp:4 /Template/Types/view.ctp:19
+msgid "Edit Function"
+msgstr "Funktion bearbeiten"
+
+#: /Template/Types/index.ctp:39 /Template/Types/view.ctp:22
+msgid "New Function"
+msgstr "Neue Funktion"
+
+#: /Template/Types/view.ctp:20
+msgid "Delete Function"
+msgstr "Funktion löschen"
+
+#: /Template/Users/add.ctp:38
+msgid "Add User"
+msgstr "Benutzer hinzufügen"
+
+#: /Template/Users/edit.ctp:39 /Template/Users/view.ctp:79
+msgid "Edit User"
+msgstr "Benutzer bearbeiten"
+
+#: /Template/Users/edit.ctp:46 /Template/Users/view.ctp:19
+#: /Template/Orders/settings.ctp:140
+msgid "Add. Email"
+msgstr "Weitere Email"
+
+#: /Template/Users/edit.ctp:58
+msgid "Language"
+msgstr "Sprache"
+
+#: /Template/Users/index.ctp:2
+msgid "Users"
+msgstr "Benutzer"
+
+#: /Template/Users/index.ctp:47
+msgid "Prefix"
+msgstr "Präfix"
+
+#: /Template/Users/index.ctp:49
+msgid "Successful"
+msgstr "Erfolgreich"
+
+#: /Template/Users/index.ctp:50
+msgid "Failed"
+msgstr "Fehlgeschlagen"
+
+#: /Template/Users/index.ctp:51
+msgid "Since"
+msgstr "Seit"
+
+#: /Template/Users/index.ctp:52
+msgid "Requests"
+msgstr "Partnerwünsche"
+
+#: /Template/Users/index.ctp:94 /Template/Users/view.ctp:83
+msgid "New User"
+msgstr "Neuer Benutzer"
+
+#: /Template/Users/login.ctp:45
+msgid "Login"
+msgstr "Anmelden"
+
+#: /Template/Users/notifications.ctp:4
+msgid "Edit Notification of {0}"
+msgstr "Benachrichtigungen für {0} bearbeiten"
+
+#: /Template/Users/notifications.ctp:7
+msgid "New Player"
+msgstr "Neuer Spieler"
+
+#: /Template/Users/notifications.ctp:8
+msgid "Delete player after deadline"
+msgstr "Spieler nach Meldefrist löschen"
+
+#: /Template/Users/notifications.ctp:9
+msgid "Edit player after deadline"
+msgstr "Spieler nach Meldefrist ändern"
+
+#: /Template/Users/view.ctp:24
+msgid "Enabled"
+msgstr "Freigegeben"
+
+#: /Template/Users/view.ctp:43
+msgid "Last Login"
+msgstr "Letzte Anmeldung"
+
+#: /Template/Users/view.ctp:48
+msgid "Failed since last"
+msgstr "Fehlgeschlagen seit letztem mal"
+
+#: /Template/Users/view.ctp:53
+msgid "Successful Logins"
+msgstr "Erfolgreiche Logins"
+
+#: /Template/Users/view.ctp:58
+msgid "Failed Logins"
+msgstr "Fehlgeschlagene Logins"
+
+#: /Template/Users/view.ctp:63
+msgid "Modified"
+msgstr "Geändert"
+
+#: /Template/Users/view.ctp:78
+msgid "Send Password"
+msgstr "Passwort senden"
+
+#: /Template/Users/view.ctp:80
+msgid "Edit Notifications"
+msgstr "Benachrichtigungen bearbeiten"
+
+#: /Template/Users/view.ctp:81
+msgid "Delete User"
+msgstr "Benutzer löschen"
+
+#: /Controller/AllotmentsController.php:50
+#: /Controller/AllotmentsController.php:115
+msgid "Invalid allotment"
+msgstr "Ungültiges Kontingent"
+
+#: /Controller/AllotmentsController.php:78
+#: /Controller/AllotmentsController.php:127
+msgid "The allotment has been saved"
+msgstr "Das Kontingent wurde gespeichert"
+
+#: /Controller/AllotmentsController.php:82
+#: /Controller/AllotmentsController.php:131
+msgid "The allotment could not be saved. Please try again"
+msgstr ""
+"Das Kontingent konnte nicht gespeichert werden. Versuchen Sie es noch einmal."
+
+#: /Controller/AllotmentsController.php:140
+msgid "Invalid id for allotment"
+msgstr "Ungültige ID für Kontingent"
+
+#: /Controller/AllotmentsController.php:147
+msgid "Allotment deleted"
+msgstr "Kontingent wurde gelöscht"
+
+#: /Controller/AllotmentsController.php:150
+msgid "Allotment was not deleted"
+msgstr "Kontingent wurde nicht gelöscht"
+
+#: /Controller/ArticlesController.php:120
+#: /Controller/ArticlesController.php:199 /Controller/OrdersController.php:1546
+msgid "Invalid article"
+msgstr "Ungültiger Artikel"
+
+#: /Controller/ArticlesController.php:183
+#: /Controller/ArticlesController.php:261
+msgid "The article has been saved"
+msgstr "Der Artikel wurde gespeichert"
+
+#: /Controller/ArticlesController.php:186
+#: /Controller/ArticlesController.php:264
+msgid "The article could not be saved. Please, try again."
+msgstr ""
+"Der Artikel  konnte nicht gespeichert werden. Versuchen Sie es noch einmal."
+
+#: /Controller/ArticlesController.php:273
+#: /Controller/ArticlesController.php:290
+msgid "Invalid id for article"
+msgstr "Ungültige ID für Artikel"
+
+#: /Controller/ArticlesController.php:280
+msgid "Article deleted"
+msgstr "Artikel wurde gelöscht"
+
+#: /Controller/ArticlesController.php:283
+msgid "Article was not deleted"
+msgstr "Artikel wurde nicht gelöscht"
+
+#: /Controller/OrdersController.php:265 /Controller/OrdersController.php:274
+#: /Controller/OrdersController.php:284 /Controller/OrdersController.php:389
+#: /Controller/OrdersController.php:447 /Controller/OrdersController.php:608
+#: /Controller/OrdersController.php:1257 /Controller/OrdersController.php:1269
+#: /Controller/OrdersController.php:1382 /Controller/OrdersController.php:1426
+#: /Controller/OrdersController.php:1519 /Controller/OrdersController.php:1532
+#: /Controller/ShopsController.php:1617 /Controller/ShopsController.php:1693
+#: /Controller/ShopsController.php:1743 /Controller/ShopsController.php:1855
+msgid "Invalid order"
+msgstr "Ungültige Besetllung"
+
+#: /Controller/OrdersController.php:670 /Controller/OrdersController.php:1283
+#: /Controller/ShopsController.php:1635 /Controller/ShopsController.php:1734
+#: /Controller/ShopsController.php:1788 /Controller/ShopsController.php:1809
+#: /Controller/ShopsController.php:1884
+msgid "Invalid order status"
+msgstr "Ungültiger Bestellstatus"
+
+#: /Controller/OrdersController.php:676
+msgid "Order cancelled"
+msgstr "Bestellung storniert"
+
+#: /Controller/OrdersController.php:680
+msgid "Could not cancel order"
+msgstr "Bestellung konnte nicht storniert werden"
+
+#: /Controller/OrdersController.php:759
+msgid "{0} Orders cancelled"
+msgstr "{0} Registrierungen storniert"
+
+#: /Controller/OrdersController.php:761
+msgid "Cancellation of {0} orders failed"
+msgstr "Storno von {0} Registrierungen fehlgeschlagen"
+
+#: /Controller/OrdersController.php:1180
+msgid "Refunded %.2f {0}"
+msgstr "%.2f {0} erstattet"
+
+#: /Controller/OrdersController.php:1325
+msgid "Failed to undo order storno"
+msgstr "Storno rückgängig machen fehlgeschlagen"
+
+#: /Controller/OrdersController.php:1365
+msgid "Failed to restore registration"
+msgstr "Konnte die Registrierung nicht wiederherstellen"
+
+#: /Controller/OrdersController.php:1374
+msgid "Order storno undone"
+msgstr "Storno wurde rückgängig gemacht"
+
+#: /Controller/OrdersController.php:1413 /Controller/ShopsController.php:1801
+#: /Controller/ShopsController.php:1843
+msgid "Order updated"
+msgstr "Registrierung Aktualisiert"
+
+#: /Controller/OrdersController.php:1488
+msgid "Invoice address has been saved"
+msgstr "Die Rechnungsadresse wurde gespeichert"
+
+#: /Controller/OrdersController.php:1503
+msgid "Could not update user"
+msgstr "Konnte Benutzer nicht aktualisieren"
+
+#: /Controller/OrdersController.php:1507
+msgid "Invoice address could not be saved"
+msgstr "Die Rechnungsadresse konnte nicht gespeichert werden"
+
+#: /Controller/OrdersController.php:1541
+msgid "Article already cancelled"
+msgstr "Artikel wurde bereits storniert"
+
+#: /Controller/OrdersController.php:1580
+msgid "Person has been updated"
+msgstr "Person wurde aktualisiert"
+
+#: /Controller/OrdersController.php:1654
+msgid "The settings have been saved"
+msgstr "Die Eigenschaften wurde gespeichert"
+
+#: /Controller/OrdersController.php:1657
+msgid "The settings could not be saved. Please, try again."
+msgstr ""
+"Die Eigenschaften konnten nicht gespeichert werden. Versuchen Sie es bitte "
+"noch einmal."
+
+#: /Controller/ShopsController.php:399
+msgid "No tournaments defined yet"
+msgstr "Es wurden noch keine Turniere angelegt"
+
+#: /Controller/ShopsController.php:1295
+msgid "{0} Mails have been sent"
+msgstr "{0} Mails wurden verschickt"
+
+#: /Controller/ShopsController.php:1298 /Controller/ShopsController.php:1470
+msgid "Mail has been sent"
+msgstr "Die Mail wurde verschickt"
+
+#: /Controller/ShopsController.php:1306 /Controller/ShopsController.php:1462
+#: /Payment/DibsPayment.php:244 /Payment/PaypalExpressPayment.php:210
+msgid "Invalid order id given"
+msgstr "Ungültige Auftrags ID angebeben"
+
+#: /Controller/ShopsController.php:1427
+msgid "Send reminders to registrations older than {0}"
+msgstr "Sende Zahlungserinnerungen an Registrierungen vor {0}"
+
+#: /Controller/ShopsController.php:1451
+msgid "{0} reminders sent"
+msgstr "{0} Zahlungserinnerungen gesendet"
+
+#: /Controller/ShopsController.php:1539 /Controller/ShopsController.php:1547
+msgid "Invalid receipt id given"
+msgstr "Ungültige Rechnungsnummer angebeben"
+
+#: /Controller/ShopsController.php:1633
+msgid "Order set to \"Payment delayed\""
+msgstr "Die Rechnung auf \"Bezahlt später\" setzen"
+
+#: /Controller/ShopsController.php:1685
+msgid "{0} orders from waiting list set to pending"
+msgstr "{0} Bestellungen von der Warteliste auf offen gesetzt"
+
+#: /Controller/ShopsController.php:1711 /Controller/ShopsController.php:1723
+msgid "Order reset to \"Pending\" and invoice sent"
+msgstr "Bestellung auf \"Offen\" zurückgesetzt und die Rechnung verschickt"
+
+#: /Controller/ShopsController.php:1716
+msgid "Order reset to \"Pending\""
+msgstr "Bestellung auf \"Offen\" zurückgesetzt"
+
+#: /Controller/ShopsController.php:1732
+msgid "Order set to \"Pending\" and invoice sent"
+msgstr "Die Rechnung auf \"Offen\" gesetzt und die Rechnung verschickt"
+
+#: /Controller/ShopsController.php:1803 /Controller/ShopsController.php:1895
+msgid "Could not save cart"
+msgstr "Konnte den Warenkorb nicht speichern"
+
+#: /Controller/ShopsController.php:1893
+msgid "Order converted to invoice"
+msgstr "Registrierung auf \"Rechnung\" konvertiert"
+
+#: /Controller/Component/OrderUpdateComponent.php:452
+msgid "To apply refunds you shall cancel within order {0} directly"
+msgstr ""
+"Um Stornozahlungen erstatten zu können stornieren Sie bitte in der "
+"Bestellung {0} direkt"
+
+#: /Controller/Component/OrderUpdateComponent.php:457
+msgid "Order is in the wrong state {0} to cancel people"
+msgstr "Die Bestellung ist im falschen Status {0}, um Personen zu stornieren"
+
+#: /Model/Table/AllotmentsTable.php:22
+msgid "You must select an article"
+msgstr "Sie müssen einen Artikel wählen"
+
+#: /Model/Table/AllotmentsTable.php:23
+msgid "You must select an user"
+msgstr "Sie müssen einen Benutzer wählen"
+
+#: /Payment/DibsPayment.php:218 /Payment/PaypalExpressPayment.php:176
+#: /Payment/RedsysPayment.php:212
+msgid "Automatic refunds disabled, do the refund manually"
+msgstr ""
+"Automatische Stornierungen sind ausgeschalten, die Rücküberweisung muss "
+"manuell geschehen"
+
+#: /Payment/DibsPayment.php:289
+msgid "Failed to make refund: {0}"
+msgstr "Rückerstattung ist fehlgeschlagen: {0}"
+
+#: /Payment/DibsPayment.php:300 /Payment/IPayment.php:158
+#: /Payment/RedsysPayment.php:275
+msgid "Refund money for order successful"
+msgstr "Rückerstattung war erfolgreich"
+
+#: /Payment/DibsPayment.php:308
+msgid "Failed to make refund with return code {0}{1}"
+msgstr "Rückerstattung ist mit folgendem Fehler fehlgeschlagen: {0}{1}"
+
+#: /Payment/IPayment.php:161
+msgid "Could not refund money for order:"
+msgstr "Konnte Rückerstattung nicht durchführen:"
+
+#: /Payment/PaypalExpressPayment.php:80
+msgid "Payment cancelled"
+msgstr "Bezahlvorgang abgebrochen"
+
+#: /Payment/PaypalExpressPayment.php:198
+msgid "Automatic refund not possible after 60 days"
+msgstr "Nach 60 Tagen sind keine automatischen Rücküberweisungen mehr möglich"
+
+#: /Payment/PaypalExpressPayment.php:230
+msgid "Invalid order state {0}"
+msgstr "Ungültiger Bestellstatus {0}"
+
+#: /Payment/PaypalExpressPayment.php:293
+msgid "{0}: Invoice no {1}"
+msgstr "{0}: Rechnungsnummer {1}"
+
+#: /Payment/RedsysPayment.php:67 /Payment/RedsysPayment.php:253
+msgid "Registration for {0}"
+msgstr "Meldung für {0}"
+
+#: /Payment/RedsysPayment.php:267
+msgid "Exception while trying to refund money: {0}"
+msgstr "Exception beim Rückerstatten: {0}"
+
+#: /Template/Allotments/add.ctp:4
+msgid "Add Allotment"
+msgstr "Kontentgent hinzufügen"
+
+#: /Template/Allotments/add.ctp:12
+msgid "Select Article"
+msgstr "Artikel auswählen"
+
+#: /Template/Allotments/add.ctp:17
+msgid "Select User"
+msgstr "Benutzer auswählen"
+
+#: /Template/Allotments/add.ctp:33 /Template/Allotments/edit.ctp:32
+#: /Template/Allotments/view.ctp:37 /Template/Articles/index.ctp:120
+msgid "List Allotments"
+msgstr "Kontingente anzeigen"
+
+#: /Template/Allotments/edit.ctp:4 /Template/Allotments/view.ctp:35
+msgid "Edit Allotment"
+msgstr "Kontingent bearbeiten"
+
+#: /Template/Allotments/index.ctp:2
+msgid "Allotments"
+msgstr "Kontingente"
+
+#: /Template/Allotments/index.ctp:5 /Template/Allotments/view.ctp:5
+#: /Template/Articles/view.ctp:2 /Template/Orders/index.ctp:29
+msgid "Article"
+msgstr "Artikel"
+
+#: /Template/Allotments/index.ctp:7 /Template/Allotments/view.ctp:2
+#: /Template/Allotments/view.ctp:15
+msgid "Allotment"
+msgstr "Kontingent"
+
+#: /Template/Allotments/index.ctp:8
+msgid "Used"
+msgstr "Abgerufen"
+
+#: /Template/Allotments/index.ctp:33 /Template/Allotments/view.ctp:36
+msgid "Are you sure you want to delete this allotment?"
+msgstr "Sind Sie sicher, dieses Kontingent löschen zu wollen?"
+
+#: /Template/Allotments/index.ctp:45 /Template/Allotments/view.ctp:38
+msgid "New Allotment"
+msgstr "Neues Kontingent"
+
+#: /Template/Allotments/index.ctp:48 /Template/Allotments/view.ctp:39
+#: /Template/Articles/add.ctp:96 /Template/Articles/chart.ctp:159
+#: /Template/Articles/edit.ctp:168 /Template/Articles/view.ctp:125
+#: /Template/Orders/index.ctp:300
+msgid "List Articles"
+msgstr "Artikel anzeigen"
+
+#: /Template/Allotments/index.ctp:51 /Template/Articles/chart.ctp:161
+#: /Template/Articles/index.ctp:123 /Template/Orders/edit_address.ctp:122
+#: /Template/Orders/edit_invoice.ctp:135 /Template/Orders/edit_person.ctp:113
+#: /Template/Orders/settings.ctp:190 /Template/Orders/storno.ctp:633
+#: /Template/Orders/storno_pending.ctp:30 /Template/Orders/view.ctp:473
+#: /Template/Shops/import.ctp:24 /Template/Shops/payment_received.ctp:131
+#: /Template/Shops/send_reminder.ctp:51
+msgid "List Orders"
+msgstr "Bestellungen anzeigen"
+
+#: /Template/Allotments/view.ctp:36
+msgid "Delete Allotment"
+msgstr "Kontingent löschen"
+
+#: /Template/Articles/add.ctp:4
+msgid "Add Article"
+msgstr "Artikel hinzufügen"
+
+#: /Template/Articles/add.ctp:12 /Template/Articles/edit.ctp:43
+#: /Template/Articles/view.ctp:21
+msgid "Text"
+msgstr "Text"
+
+#: /Template/Articles/add.ctp:13 /Template/Articles/edit.ctp:44
+msgid "Image"
+msgstr "Bild"
+
+#: /Template/Articles/add.ctp:14 /Template/Articles/edit.ctp:45
+msgid "Remove Photo"
+msgstr "Foto löschen"
+
+#: /Template/Articles/add.ctp:15 /Template/Articles/edit.ctp:46
+msgid "Url"
+msgstr "Url"
+
+#: /Template/Articles/add.ctp:32 /Template/Articles/edit.ctp:71
+#: /Template/Articles/view.ctp:47
+msgid "Available From"
+msgstr "Verfügbar ab"
+
+#: /Template/Articles/add.ctp:42 /Template/Articles/edit.ctp:80
+#: /Template/Articles/view.ctp:52
+msgid "Available Until"
+msgstr "Verfügbar bis"
+
+#: /Template/Articles/add.ctp:49 /Template/Articles/edit.ctp:86
+msgid "Waiting List Enabled"
+msgstr "Limit Warteliste aktiv"
+
+#: /Template/Articles/add.ctp:52 /Template/Articles/edit.ctp:89
+msgid "Waiting List Limit"
+msgstr "Limit Warteliste"
+
+#: /Template/Articles/add.ctp:60 /Template/Articles/edit.ctp:24
+#: /Template/Articles/view.ctp:98
+msgid "Variants"
+msgstr "Varianten"
+
+#: /Template/Articles/add.ctp:75 /Template/Articles/edit.ctp:118
+#: /Template/Articles/edit.ctp:146
+msgid "Category"
+msgstr "Kategorie"
+
+#: /Template/Articles/add.ctp:78 /Template/Articles/edit.ctp:35
+#: /Template/Articles/edit.ctp:122 /Template/Articles/edit.ctp:149
+#: /Template/Articles/view.ctp:67 /Template/Articles/view.ctp:103
+msgid "Sort Order"
+msgstr "Sortierreihenfolge"
+
+#: /Template/Articles/add.ctp:81 /Template/Articles/edit.ctp:127
+#: /Template/Articles/edit.ctp:152 /Template/Articles/index.ctp:19
+#: /Template/Articles/view.ctp:32 /Template/Articles/view.ctp:104
+#: /Template/Orders/storno.ctp:298 /Template/Orders/storno.ctp:400
+#: /Template/Orders/storno.ctp:495 /Template/Orders/storno.ctp:591
+msgid "Price"
+msgstr "Preis"
+
+#: /Template/Articles/chart.ctp:31 /Template/Orders/edit_invoice.ctp:79
+#: /Template/Orders/history.ctp:10 /Template/Orders/index.ctp:229
+#: /Template/Orders/index.ctp:233 /Template/Orders/index.ctp:241
+#: /Template/Orders/index.ctp:245 /Template/Shops/payment_received.ctp:80
+msgid "Paid"
+msgstr "Bezahlt"
+
+#: /Template/Articles/chart.ctp:36 /Template/Articles/index.ctp:36
+#: /Template/Orders/index.ctp:209 /Template/Orders/index.ctp:221
+#: /Template/Orders/index.ctp:237
+msgid "Pending"
+msgstr "Offen"
+
+#: /Template/Articles/chart.ctp:132
+msgid "Per Day"
+msgstr "Pro Tag"
+
+#: /Template/Articles/edit.ctp:4 /Template/Articles/view.ctp:123
+msgid "Edit Article"
+msgstr "Artikel bearbeiten"
+
+#: /Template/Articles/edit.ctp:12 /Template/Orders/settings.ctp:26
+msgid "General"
+msgstr "Allgemein"
+
+#: /Template/Articles/edit.ctp:15
+msgid "Presentation"
+msgstr "Präsentation"
+
+#: /Template/Articles/edit.ctp:18
+msgid "Cost"
+msgstr "Kosten"
+
+#: /Template/Articles/edit.ctp:21 /Template/Articles/view.ctp:42
+msgid "Available"
+msgstr "Verfügbar"
+
+#: /Template/Articles/index.ctp:15 /Template/Orders/storno.ctp:297
+#: /Template/Orders/storno.ctp:399 /Template/Orders/view.ctp:168
+#: /Template/Orders/view.ctp:242
+msgid "Articles"
+msgstr "Artikel"
+
+#: /Template/Articles/index.ctp:24
+msgid "From"
+msgstr "Ab"
+
+#: /Template/Articles/index.ctp:31
+msgid "Until"
+msgstr "Bis"
+
+#: /Template/Articles/index.ctp:35
+msgid "Sold"
+msgstr "Verkauft"
+
+#: /Template/Articles/index.ctp:40
+msgid "Allotted"
+msgstr "Zugeteilt"
+
+#: /Template/Articles/index.ctp:47
+msgid "Wait"
+msgstr "Wartend"
+
+#: /Template/Articles/index.ctp:102
+msgid "Charts"
+msgstr "Charts"
+
+#: /Template/Articles/index.ctp:117 /Template/Articles/view.ctp:126
+msgid "New Article"
+msgstr "Neuer Artikel"
+
+#: /Template/Articles/index.ctp:126 /Template/Orders/index.ctp:301
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: /Template/Articles/view.ctp:37 /Template/Orders/settings.ctp:162
+msgid "Tax"
+msgstr "MwSt"
+
+#: /Template/Articles/view.ctp:57
+msgid "Limit Waiting List"
+msgstr "Limit der Warteliste"
+
+#: /Template/Articles/view.ctp:62
+msgid "Visible"
+msgstr "Sichtbar"
+
+#: /Template/Articles/view.ctp:82
+msgid "Photo"
+msgstr "Foto"
+
+#: /Template/Articles/view.ctp:124
+msgid "Delete Article"
+msgstr "Artikel löschen"
+
+#: /Template/Orders/edit_address.ctp:55
+msgid "Edit Invoice Address in Order {0}"
+msgstr "Rechnungsadresse in Bestellung {0} bearbeiten"
+
+#: /Template/Orders/edit_address.ctp:65
+msgid "Title"
+msgstr "Anrede"
+
+#: /Template/Orders/edit_address.ctp:67
+msgid "Mr"
+msgstr "Herr"
+
+#: /Template/Orders/edit_address.ctp:67
+msgid "Mrs"
+msgstr "Frau"
+
+#: /Template/Orders/edit_address.ctp:68
+msgid "Please select"
+msgstr "Bitte auwählen"
+
+#: /Template/Orders/edit_address.ctp:71
+msgid "Given name"
+msgstr "Vorname"
+
+#: /Template/Orders/edit_address.ctp:75
+msgid "Family name"
+msgstr "Nachname"
+
+#: /Template/Orders/edit_address.ctp:80 /Template/Orders/settings.ctp:135
+msgid "Street"
+msgstr "Straße"
+
+#: /Template/Orders/edit_address.ctp:83
+msgid "Postal code"
+msgstr "Postleitzahl"
+
+#: /Template/Orders/edit_address.ctp:86 /Template/Orders/settings.ctp:136
+msgid "City"
+msgstr "Stadt"
+
+#: /Template/Orders/edit_address.ctp:89 /Template/Orders/index.ctp:45
+#: /Template/Orders/index.ctp:128 /Template/Orders/settings.ctp:137
+msgid "Country"
+msgstr "Land"
+
+#: /Template/Orders/edit_address.ctp:92
+msgid "Select Country"
+msgstr "Land auswählen"
+
+#: /Template/Orders/edit_invoice.ctp:43 /Template/Orders/view.ctp:385
+msgid "Edit Invoice"
+msgstr "Rechnung bearbeiten"
+
+#: /Template/Orders/edit_invoice.ctp:48 /Template/Orders/index.ctp:129
+#: /Template/Shops/payment_received.ctp:48
+msgid "Amount"
+msgstr "Betrag"
+
+#: /Template/Orders/edit_invoice.ctp:55 /Template/Shops/payment_received.ctp:55
+msgid "Canc. Fee"
+msgstr "Stornogebühr"
+
+#: /Template/Orders/edit_invoice.ctp:63 /Template/Orders/history.ctp:11
+#: /Template/Orders/storno.ctp:604 /Template/Shops/payment_received.ctp:63
+msgid "Discount"
+msgstr "Nachlass"
+
+#: /Template/Orders/edit_invoice.ctp:72
+msgid "Subtotal"
+msgstr "Zwischensumme"
+
+#: /Template/Orders/edit_invoice.ctp:89 /Template/Shops/payment_received.ctp:89
+msgid "Outstanding"
+msgstr "Ausstehend"
+
+#: /Template/Orders/edit_invoice.ctp:95
+msgid "Split No"
+msgstr "Sequenznr"
+
+#: /Template/Orders/edit_person.ctp:48
+msgid "Edit Person in Order {0}"
+msgstr "Person in Bestellung {0} bearbeiten"
+
+#: /Template/Orders/edit_person.ctp:63
+msgid "Select gender"
+msgstr "Geschlecht auswählen"
+
+#: /Template/Orders/history.ctp:5 /Template/Orders/index.ctp:12
+#: /Template/Orders/index.ctp:125 /Template/Shops/payment_received.ctp:95
+msgid "Status"
+msgstr "Status"
+
+#: /Template/Orders/history.ctp:6
+msgid "Gross Total"
+msgstr "Brutto"
+
+#: /Template/Orders/history.ctp:8
+msgid "Invoice Paid"
+msgstr "Rechnung bezahlt"
+
+#: /Template/Orders/history.ctp:9
+msgid "Invoice Cancelled"
+msgstr "Rechnung storniert"
+
+#: /Template/Orders/history.ctp:12
+msgid "Cancellation Fee"
+msgstr "Stornogebühr"
+
+#: /Template/Orders/history.ctp:13
+msgid "Cancellation Discount"
+msgstr "Nachlass auf Stornierung"
+
+#: /Template/Orders/history.ctp:21
+msgid "History of order"
+msgstr "Bestellhistorie"
+
+#: /Template/Orders/history.ctp:102
+msgid "List Order"
+msgstr "Bestellungen anzeigen"
+
+#: /Template/Orders/index.ctp:6
+msgid "Orders"
+msgstr "Bestellungen"
+
+#: /Template/Orders/index.ctp:80 /Template/Orders/index.ctp:82
+msgid "none"
+msgstr "keine"
+
+#: /Template/Orders/index.ctp:105
+msgid "Duplicates"
+msgstr "Duplikate"
+
+#: /Template/Orders/index.ctp:130
+msgid "Order date"
+msgstr "Bestelldatum"
+
+#: /Template/Orders/index.ctp:131
+msgid "Accepted"
+msgstr "Akzeptiert"
+
+#: /Template/Orders/index.ctp:132
+msgid "Payment date"
+msgstr "Bezahldatum"
+
+#: /Template/Orders/index.ctp:197 /Template/Orders/index.ctp:201
+#: /Template/Orders/index.ctp:205 /Template/Orders/index.ctp:213
+#: /Template/Orders/index.ctp:217 /Template/Orders/storno.ctp:293
+#: /Template/Orders/storno.ctp:396 /Template/Orders/storno.ctp:492
+#: /Template/Orders/view.ctp:42 /Template/Orders/view.ctp:464
+msgid "Storno"
+msgstr "Storno"
+
+#: /Template/Orders/index.ctp:261
+msgid "Search"
+msgstr "Suche"
+
+#: /Template/Orders/index.ctp:267
+msgid "Invoice Number"
+msgstr "Rechnungsnummer"
+
+#: /Template/Orders/index.ctp:276
+msgid "Mail Reminders"
+msgstr "Erinnerungen mailen"
+
+#: /Template/Orders/index.ctp:281
+msgid "Mail Vouchers"
+msgstr "Vouchers versenden"
+
+#: /Template/Orders/index.ctp:283
+msgid "Are you sure you want to send vouchers to all?"
+msgstr "Sind Sie sicher, einen Voucher an alle verschicken zu wollen?"
+
+#: /Template/Orders/index.ctp:287
+msgid "Cancel Pending"
+msgstr "Offene stornieren"
+
+#: /Template/Orders/index.ctp:292
+msgid "Process Waiting List"
+msgstr "Warteliste abarbeiten"
+
+#: /Template/Orders/index.ctp:294
+msgid "Are you sure you want to accept the waiting list?"
+msgstr "Sind Sie sicher, die Warteliste akzeptieren zu wollen?"
+
+#: /Template/Orders/index.ctp:299
+msgid "Export Players"
+msgstr "Export Spieler"
+
+#: /Template/Orders/settings.ctp:23
+msgid "Shop Settings"
+msgstr "Shop Einstellungen"
+
+#: /Template/Orders/settings.ctp:29
+msgid "Contact"
+msgstr "Kontakt"
+
+#: /Template/Orders/settings.ctp:35
+msgid "Payment"
+msgstr "Bezahlart"
+
+#: /Template/Orders/settings.ctp:38
+msgid "Bank"
+msgstr "Bank"
+
+#: /Template/Orders/settings.ctp:57
+msgid "Open From"
+msgstr "Offen von"
+
+#: /Template/Orders/settings.ctp:67
+msgid "Open Until"
+msgstr "Offen bis"
+
+#: /Template/Orders/settings.ctp:87
+msgid "Cancellation Fee [%]"
+msgstr "Stornogebühr [%]"
+
+#: /Template/Orders/settings.ctp:88
+msgid "Start"
+msgstr "Beginn"
+
+#: /Template/Orders/settings.ctp:134
+msgid "Company"
+msgstr "Firma"
+
+#: /Template/Orders/settings.ctp:138
+msgid "VAT Reg ID"
+msgstr "UID"
+
+#: /Template/Orders/settings.ctp:142
+msgid "Fax"
+msgstr "Fax"
+
+#: /Template/Orders/settings.ctp:148
+msgid "Invoice No. Prefix"
+msgstr "Bestellnr. Präfix"
+
+#: /Template/Orders/settings.ctp:149
+msgid "Invoice No. Postfix"
+msgstr "Bestellnr. Postfix"
+
+#: /Template/Orders/settings.ctp:150
+msgid "Invoice Header"
+msgstr "Rechnungskopf"
+
+#: /Template/Orders/settings.ctp:151
+msgid "Invoice Footer"
+msgstr "Rechnungsfuß"
+
+#: /Template/Orders/settings.ctp:152
+msgid "Add. Footer"
+msgstr "Zus. Fußzeile"
+
+#: /Template/Orders/settings.ctp:159
+msgid "Currency"
+msgstr "Währung"
+
+#: /Template/Orders/settings.ctp:164
+msgid "Credit Card"
+msgstr "Kreditkarte"
+
+#: /Template/Orders/settings.ctp:165
+msgid "Bank Transfer"
+msgstr "Überweisung"
+
+#: /Template/Orders/settings.ctp:171
+msgid "Bank Name"
+msgstr "Bank"
+
+#: /Template/Orders/settings.ctp:172
+msgid "Bank Address"
+msgstr "Banksadresse"
+
+#: /Template/Orders/settings.ctp:173
+msgid "Account Holder"
+msgstr "Kontoinhaber"
+
+#: /Template/Orders/settings.ctp:174
+msgid "IBAN"
+msgstr "IBAN"
+
+#: /Template/Orders/settings.ctp:175
+msgid "BIC (SWIFT)"
+msgstr "BIC (SWIFT)"
+
+#: /Template/Orders/settings.ctp:176
+msgid "ABA"
+msgstr "ABA"
+
+#: /Template/Orders/settings.ctp:177
+msgid "Corresp. Bank"
+msgstr "Korresp. Bank"
+
+#: /Template/Orders/storno.ctp:230
+msgid "Storno Order %s"
+msgstr "Storno Bestellung %s"
+
+#: /Template/Orders/storno.ctp:240
+msgid "Send Mail"
+msgstr "Email senden"
+
+#: /Template/Orders/storno.ctp:252
+msgid "Automatic Refund"
+msgstr "Automatische Erstattung"
+
+#: /Template/Orders/storno.ctp:265
+msgid "Entire Order"
+msgstr "Gesamte Bestellung"
+
+#: /Template/Orders/storno.ctp:276
+msgid "Part of Order"
+msgstr "Teil der Bestellung"
+
+#: /Template/Orders/storno.ctp:289
+msgid "Players"
+msgstr "Spieler"
+
+#: /Template/Orders/storno.ctp:299 /Template/Orders/storno.ctp:401
+#: /Template/Orders/storno.ctp:496
+msgid "Fee"
+msgstr "Gebühr"
+
+#: /Template/Orders/storno.ctp:392
+msgid "Accompanying Persons"
+msgstr "Begleitperson"
+
+#: /Template/Orders/storno.ctp:488
+msgid "Additional Items"
+msgstr "Weitere Artikel"
+
+#: /Template/Orders/storno.ctp:494
+msgid "Quantity"
+msgstr "Anzahl"
+
+#: /Template/Orders/storno.ctp:596
+msgid "Refund"
+msgstr "Erstattung"
+
+#: /Template/Orders/storno.ctp:600
+msgid "Storno Fee"
+msgstr "Stornogebühr"
+
+#: /Template/Orders/storno.ctp:632
+msgid "View Order"
+msgstr "Bestellung anzeigen"
+
+#: /Template/Orders/storno_pending.ctp:8
+msgid "Cancel Pendings"
+msgstr "Offene stornieren"
+
+#: /Template/Orders/storno_pending.ctp:17 /Template/Shops/send_reminder.ctp:18
+msgid "All before"
+msgstr "Alle vor"
+
+#: /Template/Orders/view.ctp:12
+msgid "Order {0} from {1}"
+msgstr "Registrierung {0} von {1}"
+
+#: /Template/Orders/view.ctp:28
+msgid "Status:"
+msgstr "Status:"
+
+#: /Template/Orders/view.ctp:162 /Template/Orders/view.ctp:237
+msgid "Pos"
+msgstr "Pos."
+
+#: /Template/Orders/view.ctp:301
+msgid "Address"
+msgstr "Adresse"
+
+#: /Template/Orders/view.ctp:311
+msgid "Payment Details"
+msgstr "Bezahldaten"
+
+#: /Template/Orders/view.ctp:361
+msgid "Comments"
+msgstr "Kommentare"
+
+#: /Template/Orders/view.ctp:388
+msgid "Edit Address"
+msgstr "Adresse bearbeiten"
+
+#: /Template/Orders/view.ctp:391
+msgid "Set Delayed"
+msgstr "Auf \"Bezahlt später\" setzen"
+
+#: /Template/Orders/view.ctp:398
+msgid "Set Pending"
+msgstr "Auf Offen setzen"
+
+#: /Template/Orders/view.ctp:404
+msgid "Set Invoice"
+msgstr "Auf Rechnung setzen"
+
+#: /Template/Orders/view.ctp:406
+msgid "Are you sure to set this order to Invoice?"
+msgstr "Sind Sie sicher, diese Registrierung auf Rechnung setzen zu wollen"
+
+#: /Template/Orders/view.ctp:414
+msgid "Set Paid"
+msgstr "Bezahlt Setzen"
+
+#: /Template/Orders/view.ctp:423
+msgid "View Invoice"
+msgstr "Rechnung anzeigen"
+
+#: /Template/Orders/view.ctp:430
+msgid "Mail Invoice"
+msgstr "Rechnung versenden"
+
+#: /Template/Orders/view.ctp:439
+msgid "Mail Reminder"
+msgstr "Erinnerung mailen"
+
+#: /Template/Orders/view.ctp:446
+msgid "View Voucher"
+msgstr "Voucher anzeigen"
+
+#: /Template/Orders/view.ctp:453
+msgid "Mail Voucher"
+msgstr "Voucher versenden"
+
+#: /Template/Orders/view.ctp:467
+msgid "Undo Storno"
+msgstr "Storno Rückgängig"
+
+#: /Template/Orders/view.ctp:472
+msgid "History"
+msgstr "Historie"
+
+#: /Template/Shops/import.ctp:4
+msgid "Import Orders"
+msgstr "Bestellungen importieren"
+
+#: /Template/Shops/import.ctp:8
+msgid "File"
+msgstr "Datei"
+
+#: /Template/Shops/pay.ctp:31
+msgid "Confirm"
+msgstr "Bestätigen"
+
+#: /Template/Shops/payment_received.ctp:43
+msgid "Payment Received"
+msgstr "Bezahlung erhalten"
+
+#: /Template/Shops/send_reminder.ctp:8
+msgid "Send Reminders"
+msgstr "Erinnerungen mailen"
+
+#: /Template/Shops/send_reminder.ctp:33
+msgid "Payment until"
+msgstr "Zahlungsfrist bis"
+
+#: /Template/Shops/send_reminder.ctp:38
+msgid "Reminder"
+msgstr "Erinnerung"
+
+#~ msgid "50% Fee From"
+#~ msgstr "50% Gebühr ab"
+
+#~ msgid "100% Fee From"
+#~ msgstr "100% Gebühr ab"
+
+#~ msgid "Account No"
+#~ msgstr "Kontonr."
+
+#~ msgid "BIC"
+#~ msgstr "BIC"
+
+#~ msgid "Not in all events"
+#~ msgstr "Nicht in allen Wettbewerben"
+
+#~ msgid "CakePHP: the rapid development php framework"
+#~ msgstr "CakePHP: the rapid development php framework"
+
+#~ msgid "Are you sure you want to send reminders to all?"
+#~ msgstr ""
+#~ "Sind Sie sicher, eine Zahlungserinnerung an alle verschicken zu wollen?"
+
+#~ msgid "Are you sure you want to cancel all pending registrations?"
+#~ msgstr "Sind Sie sicher, alle offenen Registrierungen stornieren zu wollen?"
+
+#~ msgid "Print Settings"
+#~ msgstr "Druckeinstellungen"
+
+#~ msgid "ETTU Online Registration"
+#~ msgstr "ETTU Onlineregistrierung"
+
+#~ msgid "[%s] Cancellation of registration %s from %s"
+#~ msgstr "[%s] Storno Ihrer Meldung %s von %s"
+
+#~ msgid "View Article"
+#~ msgstr "Artikel ansehen"
+
+#~ msgid "Process Callback not found. Please create Controller::%s"
+#~ msgstr "Process Callback not found. Please create Controller::%s"
+
+#~ msgid "View Group"
+#~ msgstr "Gruppe ansehen"
+
+#~ msgid "Umpire"
+#~ msgstr "Schiedsrichter"
+
+#~ msgid "View Person"
+#~ msgstr "Person ansehen"
+
+#~ msgid "View Tournament"
+#~ msgstr "Turnier ansehen"
+
+#~ msgid "View Function"
+#~ msgstr "Funktion ansehen"
+
+#~ msgid "View User"
+#~ msgstr "Benutzer ansehen"
+
+#~ msgid "Debug setting does not allow access to this url."
+#~ msgstr "Debugeinstellungen erlauben nicht, diese URL aufzurufen"
+
+#~ msgid "rule"
+#~ msgstr "Regel"
+
+#~ msgid ""
+#~ "Username shall only container alphanumeric characters, \"@\", \".\", \"_"
+#~ "\" or \"-\""
+#~ msgstr ""
+#~ "Benutzername darf nur alphanumerische Zeichen sowie \"@\", \".\", \"_\" "
+#~ "or \"-\" enthalten"
+
+#~ msgid "Username must be unique"
+#~ msgstr "Benutzername muss eindeutig sein"
+
+#~ msgid "Participants"
+#~ msgstr "Teilnehmer"
+
+#~ msgid "Description (DE)"
+#~ msgstr "Beschreibung (DE)"
+
+#~ msgid "Organizers Email"
+#~ msgstr "Email des Ausrichter"
+
+#~ msgid "Double partner confirmed"
+#~ msgstr "Als Doppelpartner bestätigt"
+
+#~ msgid "Mixed partner confirmed"
+#~ msgstr "Als Mixed Partner bestätigt"
+
+#~ msgid "Double partner withdrawn"
+#~ msgstr "Doppelpartner abgemeldet"
+
+#~ msgid "Mixed partner withdrawn"
+#~ msgstr "Mixed Partner abgemeldet"
+
+#~ msgid "Double partner wanted"
+#~ msgstr "Als Doppelpartner gewünscht"
+
+#~ msgid "Mixed partner wanted"
+#~ msgstr "Als Mixed Partner gewünscht"
+
+#~ msgid "Partner rejected"
+#~ msgstr "Partnerwunsch abgelehnt"
+
+#~ msgid "%d people added and %d modified with errors"
+#~ msgstr "%d Personen hinzugefügt und %d geändert mit Fehlern"
+
+#~ msgid "%d people added and %d modified"
+#~ msgstr "%d Personen hinzugefügt und %d geändert"
+
+#~ msgid "This player may not play yet."
+#~ msgstr "Dieser Spieler darf noch nicht spielen."
+
+#~ msgid "Ranking"
+#~ msgstr "Rangfolge"
+
+#~ msgid "Please select an association and try again."
+#~ msgstr ""
+#~ "Bitte wählen Sie einen Verband aus und versuchen Sie es noch einmal."
+
+#~ msgid "Yes"
+#~ msgstr "Ja"
+
+#~ msgid "No"
+#~ msgstr "Nein"
+
+#~ msgid "Player"
+#~ msgstr "Spieler"
+
+#~ msgid "Registration has been updated"
+#~ msgstr "Registrierung wurde aktualisiert"
+
+#~ msgid "Could not update registration"
+#~ msgstr "Konnte Registrierung nicht aktualisieren"
+
+#~ msgid "Registration shall be updated manually"
+#~ msgstr "Registrierung muss manuell aktualisiert werden"
+
+#~ msgid "Registration From"
+#~ msgstr "Registrierung von"
+
+#~ msgid "Registration Until"
+#~ msgstr "Registrierung bis"
+
+#~ msgid "Invalid accommodation"
+#~ msgstr "Ungültige Unterbringung"
+
+#~ msgid "The accommodation has been saved"
+#~ msgstr "Die Unterbringung wurde gespeichert"
+
+#~ msgid "The accommodation could not be saved"
+#~ msgstr "Die Unterbringung konnte nicht gespeichert werden"
+
+#~ msgid "Invalid id for accommodation"
+#~ msgstr "Ungültige ID für die Unterbringung"
+
+#~ msgid "Invalid hotel"
+#~ msgstr "Ungültiges Hotel"
+
+#~ msgid "Hotel deleted"
+#~ msgstr "Hotel wurde gelöscht"
+
+#~ msgid "Invalid package"
+#~ msgstr "Ungültiges Angebot"
+
+#~ msgid "The package has been saved"
+#~ msgstr "Das Angebot wurde gespeichert"
+
+#~ msgid "The package could not be saved. Please, try again."
+#~ msgstr ""
+#~ "Das Angebot konnte nicht gespeichert werden. Versuchen Sie es noch einmal"
+
+#~ msgid "Invalid id for package"
+#~ msgstr "Ungültige ID für Angebot"
+
+#~ msgid "Package deleted"
+#~ msgstr "Angebot wurde gelöscht"
+
+#~ msgid "Package was not deleted"
+#~ msgstr "Angebot wurde nicht gelöscht"
+
+#~ msgid "Count Packages"
+#~ msgstr "Angebote zählen"
+
+#~ msgid "List Rooms"
+#~ msgstr "Zimmer auflisten"
+
+#~ msgid "List Accommodations"
+#~ msgstr "Unterbringung auflisten"
+
+#~ msgid "car, train, flight details"
+#~ msgstr "Auto, Zug, Flug Details"
+
+#~ msgid "Edit Accommodation"
+#~ msgstr "Unterbringung bearbeiten"
+
+#~ msgid "Plane"
+#~ msgstr "Flugzeug"
+
+#~ msgid "Train"
+#~ msgstr "Zug"
+
+#~ msgid "Car"
+#~ msgstr "Auto"
+
+#~ msgid "Arrival date"
+#~ msgstr "Ankunftstag"
+
+#~ msgid "Arrival time"
+#~ msgstr "Ankunftszeit"
+
+#~ msgid "Arrival with"
+#~ msgstr "Ankunft mit"
+
+#~ msgid "Other"
+#~ msgstr "Andere"
+
+#~ msgid "Arrival by"
+#~ msgstr "Ankunft per"
+
+#~ msgid "Departure date"
+#~ msgstr "Abreisetag"
+
+#~ msgid "Departure time"
+#~ msgstr "Abreisezeit"
+
+#~ msgid "Departure with"
+#~ msgstr "Abreise mit"
+
+#~ msgid "Departure by"
+#~ msgstr "Abreise per"
+
+#~ msgid "Package"
+#~ msgstr "Angebot"
+
+#~ msgid "Select package"
+#~ msgstr "Angebot auswählen"
+
+#~ msgid "View Accommodation"
+#~ msgstr "Unterbringung ansehen"
+
+#~ msgid "Select roommate"
+#~ msgstr "Zimmergenosse auswählen"
+
+#~ msgid "Select hotel"
+#~ msgstr "Hotel auswählen"
+
+#~ msgid "Edit Room"
+#~ msgstr "Zimmer bearbeiten"
+
+#~ msgid "Share room with"
+#~ msgstr "Zimmer teilen mit"
+
+#~ msgid "and"
+#~ msgstr "und"
+
+#~ msgid "Accommodations"
+#~ msgstr "Unterbringung"
+
+#~ msgid "Hotel"
+#~ msgstr "Hotel"
+
+#~ msgid "Arrival"
+#~ msgstr "Ankunft"
+
+#~ msgid "Departure"
+#~ msgstr "Abreise"
+
+#~ msgid "Update Hotels"
+#~ msgstr "Hotels aktualisieren"
+
+#~ msgid "List Accommodation"
+#~ msgstr "Unterbringung anzeigen"
+
+#~ msgid "Accommodation"
+#~ msgstr "Unterbringung"
+
+#~ msgid "Arrival By"
+#~ msgstr "Anknuft per"
+
+#~ msgid "Departure By"
+#~ msgstr "Abreise per"
+
+#~ msgid "Add Hotel"
+#~ msgstr "Hotel hinzufügen"
+
+#~ msgid "List Hotels"
+#~ msgstr "Hotels anzeigen"
+
+#~ msgid "View Hotel"
+#~ msgstr "Hotel ansehen"
+
+#~ msgid "Hotels"
+#~ msgstr "Hotels"
+
+#~ msgid "Packages"
+#~ msgstr "Angebote"
+
+#~ msgid "Are you sure to delete %s?"
+#~ msgstr "Sind Sie sicher, %s zu löschen zu wollen?"
+
+#~ msgid "New Hotel"
+#~ msgstr "Neues Hotel"
+
+#~ msgid "List Packages"
+#~ msgstr "Angebote anzeigen"
+
+#~ msgid "Delete Hotel"
+#~ msgstr "Hotel löschen"
+
+#~ msgid "Add Package"
+#~ msgstr "Angebot hinzufügen"
+
+#~ msgid "No of Beds"
+#~ msgstr "Anzahl Betten"
+
+#~ msgid "N/A"
+#~ msgstr "N/A"
+
+#~ msgid "1 Bed"
+#~ msgstr "1 Bett"
+
+#~ msgid "2 Beds"
+#~ msgstr "2 Betten"
+
+#~ msgid "3 Beds"
+#~ msgstr "3 Betten"
+
+#~ msgid "Edit Package"
+#~ msgstr "Angebot bearbeiten"
+
+#~ msgid "View Package"
+#~ msgstr "Angebot ansehen"
+
+#~ msgid "Beds"
+#~ msgstr "Betten"
+
+#~ msgid "Rooms"
+#~ msgstr "Zimmer"
+
+#~ msgid "fully booked"
+#~ msgstr "ausgebucht"
+
+#~ msgid "overbooked"
+#~ msgstr "überbucht"
+
+#~ msgid "New Package"
+#~ msgstr "Neues Angebot"
+
+#~ msgid "Delete Package"
+#~ msgstr "Angebot löschen"
+
+#~ msgid "cancelled"
+#~ msgstr "abgemeldet"
+
+#~ msgid "Privacy Policy"
+#~ msgstr "Privacy Poilcy"
+
+#~ msgid "Impressum"
+#~ msgstr "Impressum"
+
+#~ msgid "Not logged in"
+#~ msgstr "Nicht angemeldet"
+
+#~ msgid "Forgot Password"
+#~ msgstr "Passwort vergessen"
+
+#~ msgid "Logged in as "
+#~ msgstr "Angemeldet als"
+
+#~ msgid "Logout"
+#~ msgstr "Abmelden"
+
+#~ msgid "Save"
+#~ msgstr "Speichern"
+
+#~ msgid "Cancel"
+#~ msgstr "Abbrechen"
+
+#~ msgid ""
+#~ "This is a friendly reminder that you haven't paid your registration  %s "
+#~ "yet."
+#~ msgstr ""
+#~ "Dies ist eine freundliche Erinnerung, dass Sie Ihre Rechnung noch nicht "
+#~ "bezahlt haben."
+
+#~ msgid "If you believe this is an error please contact %s."
+#~ msgstr ""
+#~ "Wenn Sie glauben, dies sei ein Fehler, dann kontaktieren Sie bitte %s."
+
+#~ msgid "If you have not paid yet please do so until %s."
+#~ msgstr ""
+#~ "Wenn Sie noch nicht bezahlt haben, dann bezahlen Sie bitte bis zum %s."
+
+#~ msgid ""
+#~ "If we haven't received your payment by then we reserve the right to "
+#~ "cancel your registrations without further notice."
+#~ msgstr ""
+#~ "Falls wir bis dahin nicht den Betrag von Ihnen erhalten haben halten wir "
+#~ "uns das Recht vor, Ihre Registrierung ohne weitere Benachrichtigung zu "
+#~ "stornieren."
+
+#~ msgid "Thank you for your registration."
+#~ msgstr "Vielen Dank für Ihre Meldung."
+
+#~ msgid "Your invoice number is %s."
+#~ msgstr "Ihre Rechnungsnummer ist %s."
+
+#~ msgid "You have entered the following players and accompanying persons:"
+#~ msgstr "Sie haben folgende Spieler und Begleitpersonen gemeldet:"
+
+#~ msgid "Please find your receipt attached."
+#~ msgstr "Sie finden die Rechnung im Anhang."
+
+#~ msgid ""
+#~ "Note that your registration is not completed until we have received the "
+#~ "full amount still due."
+#~ msgstr ""
+#~ "Beachten Sie bitte, dass ihre Meldung erst gültig ist nachdem wir den "
+#~ "gesamten Betrag erhalten haben."
+
+#~ msgid "Please transfer the balance to our bank account as soon as possible."
+#~ msgstr ""
+#~ "Bitte überweisen Sie sobald wie möglich den Betrag auf unser Bankkonto."
+
+#~ msgid "Please transfer the balance to our bank account not later than %s."
+#~ msgstr ""
+#~ "Bitte überweisen Sie den Betrag auf unser Bankkonto bis spätestens %s."
+
+#~ msgid ""
+#~ "Don't forget to put your invoice number on the invoice so we can find "
+#~ "your order."
+#~ msgstr ""
+#~ "Vergessen Sie nicht, die Rechnungsnummer unter Verwendungszweck "
+#~ "einzutragen, damit wir Ihre Meldung finden können."
+
+#~ msgid ""
+#~ "We reserve the right to cancel your order if we haven't received the full "
+#~ "amount still due in the next days."
+#~ msgstr ""
+#~ "Wir behalten uns das Recht vor, Ihre Meldung zu stornieren, wenn wir "
+#~ "nicht den gesamten Betrag in den nächsten Tagen erhalten haben."
+
+#~ msgid ""
+#~ "We reserve the right to cancel your order after that date if we haven't "
+#~ "received the full amount still due until then."
+#~ msgstr ""
+#~ "Wir behalten uns das Recht vor, Ihre Meldung zu stornieren, wenn wir bis "
+#~ "zum Fälligkeitsdatum nicht den gesamten Betrag erhalten haben."
+
+#~ msgid "Best regards"
+#~ msgstr "Mit freundlichen Grüßen"
+
+#~ msgid "VAT Reg Id"
+#~ msgstr "Mwst. ID"
+
+#~ msgid "Dear Mr. %s %s,"
+#~ msgstr "Sehr geehrter Herr %s %s,"
+
+#~ msgid "Dear Mrs. %s %s,"
+#~ msgstr "Sehr geehrter Frau %s %s"
+
+#~ msgid "Dear Sir or Madam,"
+#~ msgstr "Sehr geehrte Damen und Herren,"
+
+#~ msgid "Thank you for your registration to the %s."
+#~ msgstr "Vielen Dank für Ihre Meldung zur %s."
+
+#~ msgid "A voucher is attached to this mail."
+#~ msgstr "Ein Voucher is an diese mail angehängt."
+
+#~ msgid "Please print this voucher and present it at the accreditation desk."
+#~ msgstr ""
+#~ "Drucken Sie diesen Voucher bitte aus und zeigen ihn bei der "
+#~ "Akkreditierung vor."
+
+#~ msgid "Accompanying Person"
+#~ msgstr "Begleitperson"
+
+#~ msgid "You cannot register any more players"
+#~ msgstr "Sie können keine weiteren Spieler melden"
+
+#~ msgid "You cannot register any more accompanying persons"
+#~ msgstr "Sie können keine weiteren Begleitpersonen melden"
+
+#~ msgid ""
+#~ "You must agree to the privacy policy when entering an email address or a "
+#~ "phone number"
+#~ msgstr ""
+#~ "Sie müssen den Datenschutzbestimmungen zustimmen, wenn Sie eine "
+#~ "Emailadresse oder eine Telefonnummer angeben"
+
+#~ msgid ""
+#~ "The phone number must start with the country code, prefixed with a \"+\" "
+#~ "sign"
+#~ msgstr ""
+#~ "Die Telefonnummer muss mit der internationalen Vorwahl, beginnend mit \"+"
+#~ "\", beginnen"
+
+#~ msgid "The email address has an invalid format"
+#~ msgstr "Die Emailadresse hat ein ungültiges Format"
+
+#~ msgid "You cannot register people before registration opens on %s"
+#~ msgstr ""
+#~ "Sie können keine Personen melden bevor die Registrierung am %s öffnet"
+
+#~ msgid "You cannot register people after registration closed on %s"
+#~ msgstr "Sie können keine Personen nach Ende der Registrierung am %s melden"
+
+#~ msgid "You have to register at least one player"
+#~ msgstr "Sie müssen mindestens einen Spieler melden"
+
+#~ msgid "You must register exactly 3 player"
+#~ msgstr "Sie müssen genau 3 Spieler melden"
+
+#~ msgid "All players must come from the same association"
+#~ msgstr "Alle Spieler müssen dem gleichen Verband angehören"
+
+#~ msgid "All players must have the same sex"
+#~ msgstr "Alle Spieler müssen das gleiche Geschlecht haben"
+
+#~ msgid "You must enter the home town of the team captain"
+#~ msgstr "Sie müssen die Heimatstadt des Mannschaftskapitäns angeben"
+
+#~ msgid "You have to buy something"
+#~ msgstr "Sie müssen etwas kaufen"
+
+#~ msgid "Given name cannot be empty"
+#~ msgstr "Der Vorname muss angegeben werden"
+
+#~ msgid "Family name cannot be empty"
+#~ msgstr "Der Nachname muss angegeben werden"
+
+#~ msgid "Street name cannot be empty"
+#~ msgstr "Der Straßenname muss angegeben werden"
+
+#~ msgid "Zip code cannot be empty"
+#~ msgstr "Die PLZ muss angegeben werden"
+
+#~ msgid "Country cannot be empty"
+#~ msgstr "Das Land muss angegeben werden"
+
+#~ msgid "Email address cannot be empty"
+#~ msgstr "Die Emailadresse muss angegeben werden"
+
+#~ msgid "You must agree to the terms and conditions"
+#~ msgstr "Sie müssen den allgemeinen Geschäftsbedingungen zustimmen"
+
+#~ msgid "[%s] Your voucher for your registration %s from %s"
+#~ msgstr "[%s] Ihr Voucher für Ihre Meldung %s von %s"
+
+#~ msgid "Could not find registration"
+#~ msgstr "Die Registrierung konnte nicht gefunden werden."
+
+#~ msgid "Illegal function"
+#~ msgstr "Ungültige Funktion"
+
+#~ msgid "Unknown user"
+#~ msgstr "Unbekannter Benutzer"
+
+#~ msgid "Could not store order"
+#~ msgstr "Konnte Registrierung nicht speichern"
+
+#~ msgid "Invoice date"
+#~ msgstr "Rechnungsdatum"
+
+#~ msgid "Order"
+#~ msgstr "Bestellung"
+
+#~ msgid "Cancellation Date"
+#~ msgstr "Stornodatum"
+
+#~ msgid "Position"
+#~ msgstr "Position"
+
+#~ msgid "Each"
+#~ msgstr "Je"
+
+#~ msgid "Due"
+#~ msgstr "Ausstehend"
+
+#~ msgid "Remove"
+#~ msgstr "Löschen"
+
+#~ msgid "Accompanying People"
+#~ msgstr "Begleitperson"
+
+#~ msgid "Event"
+#~ msgstr "Wettbewerb"
+
+#~ msgid "Invalid media"
+#~ msgstr "Unbekannter Journalist"
+
+#~ msgid "The media person has been saved"
+#~ msgstr "Die Daten des Journalisten wurden gespeichert"
+
+#~ msgid "The media person could not be saved. Please, try again."
+#~ msgstr ""
+#~ "Die Daten des Journalisten konnten nicht gespeichert werden. Versuchen "
+#~ "Sie es noch einmal."
+
+#~ msgid "Invalid id for media person"
+#~ msgstr "Ungültige ID für Journalisten"
+
+#~ msgid "Media person deleted"
+#~ msgstr "Die Daten des Journalisten wurden gelöscht"
+
+#~ msgid "Media person was not deleted"
+#~ msgstr "Die Daten des Journalisten wurden nicht gelöscht"
+
+#~ msgid "A mail has been sent to the media officer"
+#~ msgstr "Eine Mail wurde an den Media Officer verschickt"
+
+#~ msgid "The accreditation could not be saved"
+#~ msgstr "Die Akkreditierung konnte nicht gespeichert werden"
+
+#~ msgid "Confirmation has been sent"
+#~ msgstr "Eine Bestätigung wurde verschickt"
+
+#~ msgid "Denial has been sent"
+#~ msgstr "Eine Absage wurde verschickt"
+
+#~ msgid "Add Media"
+#~ msgstr "Journalist hinzufügen"
+
+#~ msgid "List Media"
+#~ msgstr "Journalisten anzeigen"
+
+#~ msgid "Confirm Accreditation"
+#~ msgstr "Akkreditierung bestätigen"
+
+#~ msgid "Deny"
+#~ msgstr "Absagen"
+
+#~ msgid "List Media People"
+#~ msgstr "Journalisten anzeigen"
+
+#~ msgid "Edit Media"
+#~ msgstr "Journalist bearbeiten"
+
+#~ msgid "View Media Person"
+#~ msgstr "Journalist ansehen"
+
+#~ msgid "Media"
+#~ msgstr "Journalist"
+
+#~ msgid "New Media Person"
+#~ msgstr "Neuer Journalist"
+
+#~ msgid "Request Accreditation"
+#~ msgstr "Akkreditierung anfordern"
+
+#~ msgid "Partner withdrawn"
+#~ msgstr "Partner abgemeldet"
+
+#~ msgid "Partner Requested"
+#~ msgstr "Partner gewünscht"
+
+#~ msgid "Partner Rejected"
+#~ msgstr "Partnerwunsch abgelehnt"
+
+#~ msgid "Registration Cancelled"
+#~ msgstr "Meldung anulliert"
+
+#~ msgid "Double Entries"
+#~ msgstr "Doppelmeldungen"
+
+#~ msgid "Help"
+#~ msgstr "Hilfe"
+
+#~ msgid "WR ID"
+#~ msgstr "WR ID"
+
+#~ msgid "Rank. Pts."
+#~ msgstr "Ranglistenpunkte"
+
+#~ msgid "Banned until"
+#~ msgstr "Gesperrt bis"
+
+#~ msgid "Passport No."
+#~ msgstr "Paß Nr."
+
+#~ msgid "Valid to"
+#~ msgstr "Gültig bis"
+
+#~ msgid "You must fill in your username / email address"
+#~ msgstr "Sie müssen Ihren Benutzernamen / Email Adresse angeben"
+
+#~ msgid "You must fill in your email address"
+#~ msgstr "Sie müssen ihre Email Adresse angeben"
+
+#~ msgid "Email do not match"
+#~ msgstr "Email Adresse nicht gefunden"
+
+#~ msgid "Username and email do not match"
+#~ msgstr "Benutzernamen und Email Adresse nicht gefunden"
+
+#~ msgid "Invalid request to reset the password"
+#~ msgstr "Ungültige Anfrage, das Password zurückzusetzen"
+
+#~ msgid "Your ticket has expired"
+#~ msgstr "Das Ticket ist abgelaufen"
+
+#~ msgid "Could not create ticket to request a new password."
+#~ msgstr "Konnte kein Ticket, um ein neues Passwort anzufordern, erzeugen"
+
+#~ msgid ""
+#~ "A new password has been requested with your username and email address."
+#~ msgstr ""
+#~ "Ein neues Password wurde mit Ihrem Benutzernamen und Email Adresse "
+#~ "angefordert"
+
+#~ msgid ""
+#~ "If you did not initiate this request, please ignore this mail. You "
+#~ "password will remain unchanged."
+#~ msgstr ""
+#~ "Wenn Sie diese Anforderung nicht getätigt haben ignorieren Sie bitte "
+#~ "diese Mail. Ihr Passwort bleibt dann unverändert."
+
+#~ msgid ""
+#~ "To get a new password click the link below. A new password will then be "
+#~ "sent to your email address."
+#~ msgstr ""
+#~ "Um ein neues Passwort zu erhalten klicken Sie bitte den Link unten. Ein "
+#~ "neues Passwort wird an Ihre Email Adresse zugesendet."
+
+#~ msgid "The email confirming your password request could not be sent."
+#~ msgstr ""
+#~ "Die Email mit der Bestätigung der Passwortanfrage konnte nicht verschickt "
+#~ "werden."
+
+#~ msgid ""
+#~ "An email has been sent. Follow the instructions in the mail to receive a "
+#~ "new password."
+#~ msgstr ""
+#~ "Eine Email wurde verschickt. Bitte folgen Sie den Anweisungen in der "
+#~ "Email, um ein neues Passwort zu erhalten."
+
+#~ msgid "Your new password is: "
+#~ msgstr "Ihr neues Passwort ist: "
+
+#~ msgid "The email could not be sent, password remains unchanged"
+#~ msgstr ""
+#~ "Die Email konnte nicht verschickt werden, Ihr Passwort bleibt unverändert."
+
+#~ msgid "A new password has been sent to your email address"
+#~ msgstr "Ein neues Passwort wurde an Ihre Email Adresse geschickt."
+
+#~ msgid "You are logged in!"
+#~ msgstr "Sie sind angemeldet!"
+
+#~ msgid "Good-Bye"
+#~ msgstr "Auf Wiedersehen"
+
+#~ msgid "Your profile has been saved"
+#~ msgstr "Ihr Profil wurde gespeichert"
+
+#~ msgid "Your profile could not be saved. Please, try again."
+#~ msgstr ""
+#~ "Ihr Profil konnte nicht gespeichert werden. Versuchen Sie es noch einmal."
+
+#~ msgid "A password has been sent."
+#~ msgstr "Ein Passwort wurde verschickt."
+
+#~ msgid "Next"
+#~ msgstr "Weiter"
+
+#~ msgid "Previous"
+#~ msgstr "Zurück"
+
+#~ msgid "Register"
+#~ msgstr "Melden"
+
+#~ msgid "Buy"
+#~ msgstr "Kaufen"
+
+#~ msgid "Review"
+#~ msgstr "Prüfen"
+
+#~ msgid "Billing"
+#~ msgstr "Bezahlen"
+
+#~ msgid "Completed"
+#~ msgstr "Abschließen"
+
+#~ msgid "Voucher"
+#~ msgstr "Voucher"
+
+#~ msgid "Present this voucher at the accreditation"
+#~ msgstr "Bitte zeigen Sie diesen Voucher bei der Akkreditierung vor"
+
+#~ msgid "Add Player or Accompanying Person"
+#~ msgstr "Spieler oder Begleitperson hinzufügen"
+
+#~ msgid "Enter here the data for players or accompanying persons."
+#~ msgstr "Daten für Spieler oder Begleitperson angeben"
+
+#~ msgid "For players the birthday is required."
+#~ msgstr "Für Spieler ist die Angabe des Geburtsdatums erforderlich."
+
+#~ msgid "For players you may add email and a phone number of a cell phone."
+#~ msgstr ""
+#~ "Sie können eine Emailadresse oder eine Telefonnummer eines Spielers "
+#~ "angeben"
+
+#~ msgid ""
+#~ "The phone number shall start with the international country code and "
+#~ "shall not contain any spaces."
+#~ msgstr ""
+#~ "Die Telefonnummer muss mit der internationalen Vorwahl beginnen und darf "
+#~ "keine Leerzeichen enthalten."
+
+#~ msgid ""
+#~ "If you enter an email address, this player will also receive the "
+#~ "notifications when he is requested as a double partner or a double "
+#~ "partner is chosen for him."
+#~ msgstr ""
+#~ "Wenn Sie eine Emailadresse angeben wird der Spieler ebenfalls "
+#~ "benachrichtigt, wenn er als Doppelpartner gewünscht wird oder wenn für "
+#~ "ihn ein Doppelpartner ausgewählt wird."
+
+#~ msgid ""
+#~ "If you enter a phone number the player will receive free SMS "
+#~ "notifications about schedules and results of his matches, if the "
+#~ "organizer chooses to do so."
+#~ msgstr ""
+#~ "Wenn Sie eine Telefonnummer angeben wird der Spieler ebenfalls kostenlose "
+#~ "SMS Benachrichtigungen mit Ansetzung und Ergebnis erhalten, wenn der "
+#~ "Veranstalter dieses anbietet."
+
+#~ msgid ""
+#~ "By entering email address or phone number you must agree to the terms and "
+#~ "conditions."
+#~ msgstr ""
+#~ "Wenn Sie eine Emailadresse oder eine Telefonnummer angeben müssen Sie den "
+#~ "Bedingungen zustimmen."
+
+#~ msgid "You can add or change email address and phone number later, too."
+#~ msgstr ""
+#~ "Sie können die Emailadresse und Telefonnummer auch später noch angeben "
+#~ "bzw. ändern."
+
+#~ msgid "Events"
+#~ msgstr "Wettbewerbe"
+
+#~ msgid "I agree to the %s regarding email address and phone number"
+#~ msgstr "Ich stimme den %s bezüglich Emailadresse und Telefonnummer zu"
+
+#~ msgid "privacy policy"
+#~ msgstr "Datenschutzbestimmung"
+
+#~ msgid "Billing Address"
+#~ msgstr "Rechnungsadresse"
+
+#~ msgid "Enter here your billing address."
+#~ msgstr "Geben Sie hier Ihre Rechnungsadresse an."
+
+#~ msgid "All fields are required."
+#~ msgstr "Alle Felder sind erforderlich."
+
+#~ msgid "Please make sure you enter a valid email address."
+#~ msgstr "Stellen Sie sicher, eine gültige Emailadresse anzugeben."
+
+#~ msgid "Payment by Bank Transfer"
+#~ msgstr "Bezahlen per Überweisung"
+
+#~ msgid "You will receive instructions in your confirmation email."
+#~ msgstr "Sie erhalten eine Anleitung in der Bestätigungsmail."
+
+#~ msgid ""
+#~ "Please note that your registration is not valid until we have received "
+#~ "the full amount of due payment."
+#~ msgstr ""
+#~ "Beachten Sie bitte, dass ihre Meldung erst gültig ist nachdem wir den "
+#~ "gesamten Betrag erhalten haben."
+
+#~ msgid "Confirm Order"
+#~ msgstr "Bestellung bestätigen"
+
+#~ msgid "Buy Additional Articles"
+#~ msgstr "Weiter Artikel kaufen"
+
+#~ msgid "Here you may buy additional items, e.g. ticket for the gala dinner."
+#~ msgstr ""
+#~ "Hier können Sie weitere Artikel kaufen wie z.B. Eintrittskarte für das "
+#~ "Gala Diner."
+
+#~ msgid "Variant"
+#~ msgstr "Variante"
+
+#~ msgid "Select Variant"
+#~ msgstr "Variante wählen"
+
+#~ msgid "Sold out"
+#~ msgstr "Ausverkauft"
+
+#~ msgid "Add"
+#~ msgstr "Hinzufügen"
+
+#~ msgid "Shopping Cart"
+#~ msgstr "Warenkorb"
+
+#~ msgid "An error has occured"
+#~ msgstr "Ein Fehler ist aufgetreten"
+
+#~ msgid "Select Payment Method"
+#~ msgstr "Bezahlmethode auswählen"
+
+#~ msgid "You may pay by bank transfer"
+#~ msgstr "Sie können per Überweisung bezahlen"
+
+#~ msgid "We accept MasterCard and Visa"
+#~ msgstr "Wir akzeptieren MasterCard und Visa"
+
+#~ msgid "Payment Method"
+#~ msgstr "Bezahlart"
+
+#~ msgid "Register Players and Accompanying Persons"
+#~ msgstr "Spieler und Begleitpersonen melden"
+
+#~ msgid "Register here your players and accompanying persons."
+#~ msgstr "Hier können Sie Spieler und Begleitpersonen melden"
+
+#~ msgid ""
+#~ "According to the age of the players they will first be put in the "
+#~ "appropriate age category."
+#~ msgstr ""
+#~ "Der Spieler wird entsprechend seinem Alter in der entsprechenden "
+#~ "Altersklasse gemeldet."
+
+#~ msgid ""
+#~ "If your player chooses a double partner of a different age category "
+#~ "later, both of them will be put in the correct age category automatically."
+#~ msgstr ""
+#~ "Wenn der Spieler einen Doppelpartner einer anderen Alterklasse wählt "
+#~ "werden beide Spieler in die entsprechende Alterklasse für das Doppel "
+#~ "gemeldet."
+
+#~ msgid "Review Order"
+#~ msgstr "Bestellung prüfen"
+
+#~ msgid "Please review your order."
+#~ msgstr "Bitte überprüfen Sie ihre Bestellung."
+
+#~ msgid ""
+#~ "You have to agree to the terms and conditions before you can proceed."
+#~ msgstr "Sie müssen den allgemeinen Geschäftsbedingungen zustimmen."
+
+#~ msgid "I aggree to the %s"
+#~ msgstr "Ich stimme den %s zu"
+
+#~ msgid "terms and conditions"
+#~ msgstr "Geschäftsbedingungen"
+
+#~ msgid "Your registration has been completed"
+#~ msgstr "Die Registrierung wurde abgeschlossen"
+
+#~ msgid ""
+#~ "An email with your invoice and instructions how to proceed has been sent "
+#~ "to you."
+#~ msgstr ""
+#~ "Eine Email mit der Rechnung ein einer Anleitung mit weiteren Schritten "
+#~ "wurde Ihnen zugeschickt."
+
+#~ msgid "An email with your invoice has been sent to you."
+#~ msgstr "Eine Email mit der Rechung wurde Ihnen zugeschickt."
+
+#~ msgid ""
+#~ "Once we have received your payment instructions on how to proceed will be "
+#~ "sent to you."
+#~ msgstr ""
+#~ "Sobald wir den Betrag erhalten haben erhalten Sie eine Anleitung mit "
+#~ "weiteren Schritten."
+
+#~ msgid "Download invoice"
+#~ msgstr "Rechnung herunterladen"
+
+#~ msgid "Banking Account"
+#~ msgstr "Kontonummer"
+
+#~ msgid "Setup Team"
+#~ msgstr "Mannschaft zusammenstellen"
+
+#~ msgid "Select the team captain and enter his home town"
+#~ msgstr "Wählen Sie den Mannschaftskapitän und seine Heimatstadt"
+
+#~ msgid "Team Captain"
+#~ msgstr "Mannschaftskapitän"
+
+#~ msgid "Select team captain"
+#~ msgstr "Mannschaftskapitän auswählen"
+
+#~ msgid "Home Town"
+#~ msgstr "Heimatstadt"
+
+#~ msgid "Could not initiate payment. Please try again later."
+#~ msgstr ""
+#~ "Der Bezahlvorgang konnte nicht gestartet werden. Versuchen Sie es bitte "
+#~ "später noch einmal."
+
+#~ msgid "Please wait while your registration is being processed."
+#~ msgstr "Bitte warten Sie während Ihre Meldung bearbeitet wird."
+
+#~ msgid "This may take several minutes."
+#~ msgstr "Dies kann mehrere Minuten dauern."
+
+#~ msgid "Billing Information"
+#~ msgstr "Bezahlinformationen"
+
+#~ msgid ""
+#~ "Select your credit card and enter name and address of the card holder."
+#~ msgstr ""
+#~ "Wählen Sie ihre Kreditkarte und füllen Sie Namen und Adresse des "
+#~ "Karteninhabers aus."
+
+#~ msgid "Payment will be processed in a secure way by %s."
+#~ msgstr "Die Bezahlung wird in gesicherter Art und Weise von %s abgewickelt."
+
+#~ msgid "Select credit card type"
+#~ msgstr "Kreditkarte auswählen"
+
+#~ msgid "Card no."
+#~ msgstr "Kartennr."
+
+#~ msgid "CVV code"
+#~ msgstr "CVV Code"
+
+#~ msgid "Card expires"
+#~ msgstr "Gültig bis"
+
+#~ msgid "Card holder given name"
+#~ msgstr "Nachname des Karteninhaber"
+
+#~ msgid "Card holder family name"
+#~ msgstr "Vorname des Karteninhaber"
+
+#~ msgid "Return Error"
+#~ msgstr "Mit Fehler abschliessen"
+
+#~ msgid "Card holder"
+#~ msgstr "Karteninhaber"
+
+#~ msgid "Payment will be processed in a secure way by %s"
+#~ msgstr "Die Bezahlung wird in gesicherter Art und Weise von %s abgewickelt"
+
+#~ msgid ""
+#~ "After the payment is completed you will be redirected to the registration."
+#~ msgstr ""
+#~ "Nachdem der Bezahlvorgang abgeschlossen ist werden Sie wieder zur "
+#~ "Registrierungsseite weitergeleitet."
+
+#~ msgid "Not Playing Singles"
+#~ msgstr "Spielt nicht Einzel"
+
+#~ msgid "Not Playing Doubles"
+#~ msgstr "Spielt nicht Doppel"
+
+#~ msgid "Not Playing Mixed"
+#~ msgstr "Spielt nicht Mixed"
+
+#~ msgid "Not Playing Teams"
+#~ msgstr "Spielt nicht Mannschaft"
+
+#~ msgid "Partner Wanted"
+#~ msgstr "Partner gewünscht"
+
+#~ msgid "Not cancelled"
+#~ msgstr "Nicht abgemeldet"
+
+#~ msgid "Partner Requests"
+#~ msgstr "Partnerwünsche"
+
+#~ msgid "Partner Requests for %s"
+#~ msgstr "Partnerwünsche für %s"
+
+#~ msgid "Reject"
+#~ msgstr "Ablehnen"
+
+#~ msgid "Are you sure you want to reject the partner request from %s?"
+#~ msgstr "Sind Sie sicher, den Partnerwunsch von %s zurückweisen zu wollen?"
+
+#~ msgid "Request Password"
+#~ msgstr "Passwort anfordern"
+
+#~ msgid "Edit Profile"
+#~ msgstr "Profil bearbeiten"
+
+#~ msgid "Pref. language"
+#~ msgstr "Bevorz. Sprache"
+
+#~ msgid "Double Partner Requested"
+#~ msgstr "Doppelpartner gewünscht"
+
+#~ msgid "Gross Price (%s)"
+#~ msgstr "Brutto (%s)"
+
+#~ msgid "Net Price (%s)"
+#~ msgstr "Netto (%s)"
+
+#~ msgid "Gross price"
+#~ msgstr "Brutto"
+
+#~ msgid "Net price"
+#~ msgstr "Netto"
+
+#~ msgid "Net Total"
+#~ msgstr "Netto"
+
+#~ msgid "Could not updater order"
+#~ msgstr "Konnte Registrierung nicht aktualisieren"
+
+#~ msgid "Could not refund order"
+#~ msgstr "Rückerstattung ist fehlgeschlagen"
+
+#~ msgid "Order refunded"
+#~ msgstr "Bestellung zurückerstattet"
+
+#~ msgid "Storno Date"
+#~ msgstr "Storno Datum"
+
+#~ msgid "Price per unit"
+#~ msgstr "Preis per Stück"
+
+#~ msgid "The registration could not be changed"
+#~ msgstr "Die Registrierung konnte nicht geändert werden"
+
+#~ msgid "Thank you for your order."
+#~ msgstr "Vielen Dank für Ihre Meldung."
+
+#~ msgid "Order&nbsp;Status"
+#~ msgstr "Bestellstatus"
+
+#~ msgid "The transaction has failed"
+#~ msgstr "Die Transaktion ist fehlgeschlagen"
+
+#~ msgid "You must cancel the registration of people manually!"
+#~ msgstr "Sie müssen die Registrierungen der Teilnehmner manuell löschen!"
+
+#~ msgid "Buy Items"
+#~ msgstr "Artikel kaufen"
+
+#~ msgid "Enter Address"
+#~ msgstr "Adresse angeben"
+
+#~ msgid "Registration Completed"
+#~ msgstr "Registrierung ist abgeschlossen"
+
+#~ msgid "Could not refund:"
+#~ msgstr "Rückerstattung nicht möglich:"
+
+#~ msgid "By clicking on Pay you pay!"
+#~ msgstr "Verbindlich bestellen!"
+
+#~ msgid "Cancel Registration"
+#~ msgstr "Meldung anulliert"
+
+#~ msgid "No payment data found"
+#~ msgstr "Keine Bezahldaten gefunden"
+
+#~ msgid "ID"
+#~ msgstr "ID"
+
+#~ msgid "Ranking Points"
+#~ msgstr "Ranglistenpunkte"
+
+#~ msgid "from"
+#~ msgstr "von"
+
+#~ msgid "(0 and 1 are always the digits 0 and 1)"
+#~ msgstr "(0 und 1 sind immer die Ziffern 0 und 1)"
+
+#~ msgid "function"
+#~ msgstr "Funktion"
+
+#~ msgid ""
+#~ "The role model name is unknown. The ACL plugin bootstrap.php file has to "
+#~ "be loaded in order to work. (see the README file)"
+#~ msgstr ""
+#~ "Der Name der Rolle ist unbekannt. Das ACL plugin bootstrap.php muss "
+#~ "geladen sein, um zu funktionieren. (Siehe README Datei)"
+
+#~ msgid "the ACL plugin \"tmp\" directory is not writable"
+#~ msgstr "das ACL plugin \"tmp\" Verzeichnis ist nicht schreibbar"
+
+#~ msgid "next"
+#~ msgstr "Nächste"
+
+#~ msgid "EVC2013 Bremen Online Registration"
+#~ msgstr "EVC2013 Bremen Online Registrierung"
+
+#~ msgid "Changed Partner"
+#~ msgstr "Partner geändert"
+
+#~ msgid "European Veterans Championships 2013: Password for "
+#~ msgstr "European Veterans Championships 2013: Password for "
+
+#~ msgid "ETTU Onlineentries Password Request For "
+#~ msgstr "ETTU Onlineentries Password Anforderung für "
+
+#~ msgid "Login will be available 15 August"
+#~ msgstr "Anmelden wird ab 15. August möglich sein"
+
+#~ msgid ""
+#~ "Page %page% of %pages%, showing %current% records of %count% total, "
+#~ "starting on record %start%, ending on %end%"
+#~ msgstr ""
+#~ "Seite %page% von %pages%, Anzeige von %current% Datensätze von insgeasmt "
+#~ "%count%, beginnend bei %start% bis %end%"
+
+#~ msgid "Nation"
+#~ msgstr "Verband"
