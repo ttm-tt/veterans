@@ -188,7 +188,7 @@ class ShopsController extends ShopAppController {
 			if (!empty($enter_before) && $enter_before < date('Y-m-d')) {
 				unset($types['PLA']);
 				$waiting['PLA'] = 0;
-
+				
 				$this->MultipleFlash->setFlash(
 					__d('user', 'You cannot register players after registration closed for players on {0}', $enter_before->format('jS F Y')), 'info'
 				);
@@ -196,9 +196,14 @@ class ShopsController extends ShopAppController {
 				unset($types['PLA']);
 				$waiting['PLA'] = 0;
 
-				$this->MultipleFlash->setFlash(
-					__d('user', 'You cannot register players before registration opens for players on {0}', $available_from->format('jS F Y')), 'info'
-				);
+				if ($available_from > date('Y-m-d', strtotime('+4 weeks')))
+					$this->MultipleFlash->setFlash(
+						__d('user', 'You cannot register players at the moment. Registration will open soon.'), 'info'
+					);
+				else 
+					$this->MultipleFlash->setFlash(
+						__d('user', 'You cannot register players before registration opens for players on {0}', $available_from->format('jS F Y')), 'info'
+					);
 			} else if (!empty($available_until && $available_until < date('Y-m-d'))) {
 				unset($types['PLA']);
 				$waiting['PLA'] = 0;
@@ -439,14 +444,19 @@ class ShopsController extends ShopAppController {
 			$open_from = $this->_shopSettings['open_from'];
 			$open_until = $this->_shopSettings['open_until'];
 			if ( !empty($open_from) && $open_from > date('Y-m-d') ) {
-				$this->MultipleFlash->setFlash(
-					__d('user', 'You cannot register people before registration opens on {0}', $open_from->format('jS F Y')), 'error'
-				);
+				if ($open_from > date('Y-m-d', strtotime('+4 weeks')))
+					$this->MultipleFlash->setFlash(
+						__d('user', 'You cannot register people at the moment. Registration will open soon.'), 'info'
+					);
+				else 
+					$this->MultipleFlash->setFlash(
+						__d('user', 'You cannot register people before registration opens on {0}', $open_from->format('jS F Y')), 'info'
+					);
 				
 				return $this->redirect('/');				
 			} else if ( !empty($open_until) && $open_until < date('Y-m-d') ) {
 				$this->MultipleFlash->setFlash(
-					__d('user', 'You cannot register people after registration closed on {0}', $open_until->format('jS F Y')), 'error'
+					__d('user', 'You cannot register people after registration closed on {0}', $open_until->format('jS F Y')), 'info'
 				);
 				
 				return $this->redirect('/');				
@@ -455,9 +465,14 @@ class ShopsController extends ShopAppController {
 				__d('user', 'You cannot register players after registration closed for players on {0}', $enter_before->format('jS F Y')), 'info'
 				);
 			} else if (!empty($available_from) && $available_from > date('Y-m-d')) {
-				$this->MultipleFlash->setFlash(
-				__d('user', 'You cannot register players before registration opens for players on {0}', $available_from->format('jS F Y')), 'info'
-				);
+				if ($available_from > date('Y-m-d', strtotime('+4 weeks')))
+					$this->MultipleFlash->setFlash(
+						__d('user', 'You cannot register players at the moment. Registration will open soon.'), 'info'
+					);
+				else 
+					$this->MultipleFlash->setFlash(
+					__d('user', 'You cannot register players before registration opens for players on {0}', $available_from->format('jS F Y')), 'info'
+					);
 			} else if (!empty($available_until) && $available_until < date('Y-m-d')) {
 				$this->MultipleFlash->setFlash(
 				__d('user', 'You cannot register players after registration closed for players on {0}', $available_until->format('jS F Y')), 'info'
