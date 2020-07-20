@@ -129,6 +129,10 @@ class AppController extends ShimController {
 	public function beforeFilter(EventInterface $event) {
 		parent::beforeFilter($event);
 		
+		// Don't validate Ajax calls
+		if ($this->request->is('ajax'))
+			$this->Security->setConfig('validatePost', false);
+
 		// Default format for DateTime
 		FrozenDateTime::setToStringFormat('yyyy-MM-dd HH:mm:ss');
 		FrozenDate::setToStringFormat('yyyy-MM-dd');
