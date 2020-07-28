@@ -970,14 +970,16 @@ class RegistrationUpdateComponent extends Component {
 		// Not all user may view all people
 		if ( !empty($registration['person']['user_id'])) {
 			$addTo = $this->getController()->Users->fieldByConditions('email', array(
-				'id' => $registration['person']['user_id']
+				'id' => $registration['person']['user_id'],
+				'enabled' => 1
 			));
 			
 			if (!empty($addTo) && filter_var($addTo, FILTER_VALIDATE_EMAIL))
 				$email->addTo($addTo);
 
 			$add = $this->getController()->Users->fieldByConditions('add_email', array(
-				'id' => $registration['person']['user_id']
+				'id' => $registration['person']['user_id'],
+				'enabled' => 1
 			));
 
 			if (!empty($add)) {
@@ -992,7 +994,8 @@ class RegistrationUpdateComponent extends Component {
 			return;
 
 		$tmp = $this->getController()->Users->fieldByConditions('email', array(
-			'username' => 'admin'
+			'username' => 'admin',
+			'enabled' => 1
 		));
 		if (filter_var($tmp, FILTER_VALIDATE_EMAIL))
 			$email->addBcc($tmp);
