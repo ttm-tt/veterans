@@ -2703,7 +2703,7 @@ class ShopsController extends ShopAppController {
 				->first()
 			;
 			
-			if ($sum['count'] < $a['allotment']) {
+			if ($sum !== null && $sum['count'] < $a['allotment']) {
 				$counts[$a['article']['name']]['allotted'] += ($a['allotment'] - $sum['count']);
 			}
 		}
