@@ -126,7 +126,7 @@ class ShopsController extends ShopAppController {
 		$tid = $this->request->getSession()->read('Tournaments.id');
 		
 		$this->loadModel('Tournaments');
-		$tournament = $this->Tournaments->get($tid, ['contain' => ['Organizer']]);
+		$tournament = $this->Tournaments->get($tid, ['contain' => ['Organizers']]);
 		$enter_before = $tournament->url;
 		
 		$this->loadModel('Competitions');
