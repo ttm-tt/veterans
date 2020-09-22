@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2020-05-18 16:43+0200\n"
+"POT-Creation-Date: 2020-09-22 08:23+0200\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -521,7 +521,7 @@ msgid "Sex"
 msgstr ""
 
 #: Template/Registrations/index.ctp:304
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:165
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:166
 msgid "Player"
 msgstr ""
 
@@ -650,145 +650,145 @@ msgstr ""
 msgid "[{0}] Cancellation of registration {1} from {2}"
 msgstr ""
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:167
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:168
 msgid "Accompanying Person"
 msgstr ""
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:195
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:214
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:467
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:480
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:196
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:216
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:471
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:485
 msgid "You cannot register players after registration closed for players on {0}"
 msgstr ""
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:203
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:472
-msgid "You cannot register players at the moment. Registration will open soon."
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:204
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:476
+msgid "You cannot register players at the moment. Registration will open soon. Please visit <a href=\"{0}\" target=\"_blank\">{0}</a> for more information."
 msgstr ""
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:207
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:476
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:209
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:481
 msgid "You cannot register players before registration opens for players on {0}"
 msgstr ""
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:224
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:226
 msgid "The registration for players has been closed"
 msgstr ""
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:233
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:235
 msgid "Players are already sold out and adding more will put your registration on the waiting list"
 msgstr ""
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:242
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:244
 msgid "The registration for accompanying persons has been closed"
 msgstr ""
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:251
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:253
 msgid "Accompanying persons are already sold out and adding more will put your registration on the waiting list"
 msgstr ""
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:337
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:339
 msgid "You must fill out all required fields"
 msgstr ""
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:348
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:350
 msgid "You must enter the date of birth for players"
 msgstr ""
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:353
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:355
 msgid "The date of birth is not valid"
 msgstr ""
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:358
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:360
 msgid "You must be born in %d or earlier"
 msgstr ""
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:364
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:366
 msgid "Wrong birthday given"
 msgstr ""
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:373
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:375
 msgid "You must agree to the privacy policy when entering an email address or a phone number"
 msgstr ""
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:385
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:387
 msgid "The phone number is invalid"
 msgstr ""
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:393
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:395
 msgid "The email address has an invalid format"
 msgstr ""
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:451
-msgid "You cannot register people at the moment. Registration will open soon."
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:454
+msgid "You cannot register people at the moment. Registration will open soon. Please visit <a href=\"{0}\" target=\"_blank\">{0}</a> for more information."
 msgstr ""
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:455
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:459
 msgid "You cannot register people before registration opens on {0}"
 msgstr ""
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:461
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:465
 msgid "You cannot register people after registration closed on {0}"
 msgstr ""
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:601
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:606
 msgid "You have to register people or buy something"
 msgstr ""
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:744
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:749
 msgid "Given name cannot be empty"
 msgstr ""
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:749
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:754
 msgid "Family name cannot be empty"
 msgstr ""
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:754
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:759
 msgid "Street name cannot be empty"
 msgstr ""
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:759
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:764
 msgid "Zip code cannot be empty"
 msgstr ""
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:764
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:769
 msgid "City cannot be empty"
 msgstr ""
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:769
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:774
 msgid "Country cannot be empty"
 msgstr ""
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:774
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:779
 msgid "Email address cannot be empty"
 msgstr ""
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:814
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:819
 msgid "You must agree to the terms and conditions"
 msgstr ""
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:1161
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:1166
 msgid "[{0}] Your registration {1} from {2}"
 msgstr ""
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:1288
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:1293
 msgid "[{0}] Your voucher for your registration {1} from {2}"
 msgstr ""
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:1542
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:1547
 msgid "The order was not found"
 msgstr ""
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:1613
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:1621
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:1618
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:1626
 msgid "Invalid registration"
 msgstr ""
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:1626
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:1631
 msgid "The registration was already paid for"
 msgstr ""
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:1635
+#: /home/ettu/veterans-v3//Controller/ShopsController.php:1640
 msgid "You cannot pay for this registration at this moment"
 msgstr ""
 

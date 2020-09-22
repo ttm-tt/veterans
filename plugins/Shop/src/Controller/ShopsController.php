@@ -126,7 +126,8 @@ class ShopsController extends ShopAppController {
 		$tid = $this->request->getSession()->read('Tournaments.id');
 		
 		$this->loadModel('Tournaments');
-		$enter_before = $this->Tournaments->fieldByConditions('enter_before', array('id' => $tid));
+		$tournament = $this->Tournaments->get($tid, ['contain' => ['Organizer']]);
+		$enter_before = $tournament->url;
 		
 		$this->loadModel('Competitions');
 		$maxYear = $this->Competitions->fieldByConditions(
@@ -198,7 +199,8 @@ class ShopsController extends ShopAppController {
 
 				if ($available_from > date('Y-m-d', strtotime('+4 weeks')))
 					$this->MultipleFlash->setFlash(
-						__d('user', 'You cannot register players at the moment. Registration will open soon.'), 'info'
+						__d('user', 
+							"You cannot register players at the moment. Registration will open soon. Please visit <a href=\"{0}\" target=\"_blank\">{0}</a> for more information.", $tournament->organizer->url), 'info'
 					);
 				else 
 					$this->MultipleFlash->setFlash(
@@ -427,8 +429,9 @@ class ShopsController extends ShopAppController {
 		}
 				
 		$tid = $this->request->getSession()->read('Tournaments.id');
-		
-		$enter_before = $this->Tournaments->fieldByConditions('enter_before', array('id' => $tid));		
+
+		$tournament = $this->Tournaments->get($tid, ['contain' => ['Organizers']]);		
+		$enter_before = $tournament->enter_before;	
 			
 		$available_from = $this->Articles->fieldByConditions('available_from', [
 			'tournament_id' => $tid,
@@ -446,7 +449,8 @@ class ShopsController extends ShopAppController {
 			if ( !empty($open_from) && $open_from > date('Y-m-d') ) {
 				if ($open_from > date('Y-m-d', strtotime('+4 weeks')))
 					$this->MultipleFlash->setFlash(
-						__d('user', 'You cannot register people at the moment. Registration will open soon.'), 'info'
+						__d('user', 
+							"You cannot register people at the moment. Registration will open soon. Please visit <a href=\"{0}\" target=\"_blank\">{0}</a> for more information.", $tournament->organizer->url), 'info'
 					);
 				else 
 					$this->MultipleFlash->setFlash(
@@ -467,7 +471,8 @@ class ShopsController extends ShopAppController {
 			} else if (!empty($available_from) && $available_from > date('Y-m-d')) {
 				if ($available_from > date('Y-m-d', strtotime('+4 weeks')))
 					$this->MultipleFlash->setFlash(
-						__d('user', 'You cannot register players at the moment. Registration will open soon.'), 'info'
+						__d('user', 
+							"You cannot register players at the moment. Registration will open soon. Please visit <a href=\"{0}\" target=\"_blank\">{0}</a> for more information.", $tournament->organizer->url), 'info'
 					);
 				else 
 					$this->MultipleFlash->setFlash(
