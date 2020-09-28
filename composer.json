@@ -20,12 +20,12 @@
 		"cakephp/plugin-installer": "*",
 		"cakephp/cache": "^4.0",
 		"phpzip/phpzip": "^2.0",
-		"friendsofcake/cakepdf": "dev-cake-4.x",
+		"friendsofcake/cakepdf": "^4.0",
 		"dompdf/dompdf": "^0.8",
 		"ebrigham1/cakephp-error-email": "dev-cake4",
 		"geoip2/geoip2": "~2.0",
 		"stripe/stripe-php": "^7.27",
-		"cakephp/migrations": "4.x-dev",
+		"cakephp/migrations": "^3.0",
 		"cakephp/bake": "^2.1"
 	},
 	"require-dev" : {
