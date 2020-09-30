@@ -1089,7 +1089,7 @@ class ShopsController extends ShopAppController {
 		$cakepdf = new CakePdf();
 		$pdf = $cakepdf->output($html);
 		
-		$this->response->type('application/pdf');
+		$this->response = $this->response->withType('application/pdf');
 		$this->response->body($pdf);
 		$this->response->download('test.pdf');
 		
@@ -1398,7 +1398,7 @@ class ShopsController extends ShopAppController {
 	
 		} else {
 			// Configure::write('debug', 0);
-			$this->response->type('application/pdf');
+			$this->response = $this->response->withType('application/pdf');
 			$this->pdfConfig = array(
 				'fullbase' => true,
 				'filename' => 'voucher.pdf',
@@ -1531,7 +1531,7 @@ class ShopsController extends ShopAppController {
 				$this->render('/Pdf/receipt', 'pdf/default');		
 				
 		} else {
-			$this->response->type('application/pdf');
+			$this->response = $this->response->withType('application/pdf');
 			$this->viewBuilder()->setClassName('CakePdf.Pdf');
 			$this->viewBuilder()->setOptions(array('pdfConfig' => [
 				'fullbase' => true,
@@ -1601,7 +1601,7 @@ class ShopsController extends ShopAppController {
 		$this->autoRender = false;
 		
 		// Configure::write('debug', 0);
-		$this->response->type('application/pdf');
+		$this->response = $this->response->withType('application/pdf');
 		$this->viewBuilder()->setClassName('CakePdf.Pdf');
 		$this->viewBuilder()->setOptions(array('pdfConfig' => [
 			'fullbase' => true,
