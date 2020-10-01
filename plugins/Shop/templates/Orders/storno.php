@@ -321,7 +321,8 @@ $(document).ready(function() {
 							<?php 
 								if ($isPaid && !empty($pa['cancelled'])) {
 									echo $this->Form->hidden('Player.' . $i . '.storno', array('value' => true));
-									echo $this->Form->checkbox(null, array(
+									echo $this->Form->checkbox('Player.' . $i . '.checked', array(
+										'name' => false,
 										'hiddenField' => false, 
 										'onChange' => 'updatePartial(); return false;',
 										'checked' => !empty($pa['cancelled']),
@@ -419,7 +420,8 @@ $(document).ready(function() {
 							<?php
 								if ($isPaid && !empty($aa['cancelled'])) {
 									echo $this->Form->hidden('Accompanying.' . $i . '.storno', array('value' => true));
-									echo $this->Form->checkbox(null, array(
+									echo $this->Form->checkbox('Accompanying.' . $i . '.checked', array(
+										'name' => false,
 										'hiddenField' => false, 
 										'onChange' => 'updatePartial(); return false;',
 										'checked' => !empty($aa['cancelled']),
