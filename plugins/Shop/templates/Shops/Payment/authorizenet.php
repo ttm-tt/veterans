@@ -80,7 +80,7 @@ function onPay() {
 	<input type="hidden" name="x_invoice_num" value="" id="x_invoice_num">
 	
 	<?php 
-		echo $this->Form->control(null, array(
+		echo $this->Form->control('amount', array(
 			'label' => __d('user', 'Amount'),
 			'type' => 'text',
 			'readonly' => 'readonly',
@@ -89,7 +89,7 @@ function onPay() {
 		));
 	?>
 	<?php 
-		echo $this->Form->control(null, array(
+		echo $this->Form->control('cardtype', array(
 			'label' => __d('user', 'Credit Card'),
 			'type' => 'select',
 			'empty' => __d('user', 'Select credit card type'),
@@ -99,14 +99,14 @@ function onPay() {
 		));
 	?>
 	<?php
-		echo $this->Form->control(null, array(
+		echo $this->Form->control('cardno', array(
 			'label' => __d('user', 'Card no.'),
 			'name' => 'x_card_num',
 			'type' => 'text'
 		));
 	?>
 	<?php 
-		echo $this->Form->control(null, array(
+		echo $this->Form->control('cvv', array(
 			'label' => __d('user', 'CVV code'),
 			'name' => 'x_card_code',
 			'type' => 'text',
@@ -116,7 +116,7 @@ function onPay() {
 	<div class="input select">
 	<label><?php echo __d('user', 'Card expires');?></label>
 	<?php 
-		echo $this->Form->month(null, array(
+		echo $this->Form->month('month', array(
 			'label' => false,
 			'div' => false,
 			'id' => 'expdate_month',
@@ -127,7 +127,7 @@ function onPay() {
 	?>
 	<span style="width: 2%;">&nbsp;/&nbsp;</span>
 	<?php
-		echo $this->Form->year(null, date('Y'), date('Y') + 10, array(
+		echo $this->Form->year('year', date('Y'), date('Y') + 10, array(
 			'label' => false,
 			'div' => false,
 			'id' => 'expdate_year',
@@ -138,33 +138,33 @@ function onPay() {
 	?>
 	</div>
 	<?php 
-		echo $this->Form->control(null, array(
+		echo $this->Form->control('given', array(
 			'label' => __d('user', 'Card holder given name'),
 			'name' => 'x_first_name',
 			'type' => 'text'
 		));
 	?>
 	<?php 
-		echo $this->Form->control(null, array(
+		echo $this->Form->control('family', array(
 			'label' => __d('user', 'Card holder family name'),
 			'name' => 'x_last_name',
 			'type' => 'text'
 		));
 	?>
 	<?php
-		echo $this->Form->control(null, array(
+		echo $this->Form->control('street', array(
 			'label' => __d('user', 'Street'),
 			'name' => 'x_address'
 		));
-		echo $this->Form->control(null, array(
+		echo $this->Form->control('zip', array(
 			'label' => __d('user', 'Postal code'),
 			'name' => 'x_zip'
 		));
-		echo $this->Form->control(null, array(
+		echo $this->Form->control('city', array(
 			'label' => __d('user', 'City'),
 			'name' => 'x_city'
 		));
-		echo $this->Form->control(null, array(
+		echo $this->Form->control('contry', array(
 			'label' => __d('user', 'Country'),
 			'options' => $countries,
 			'empty' => __d('user', 'Select Country'),

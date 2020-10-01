@@ -515,7 +515,8 @@ $(document).ready(function() {
 							<?php
 								if ($isPaid && !empty($ua['cancelled'])) {
 									echo $this->Form->hidden('Item.' . $i . '.storno', array('value' => true));
-									echo $this->Form->checkbox(null, array(
+									echo $this->Form->checkbox('Item.' . $i . '.checked', array(
+										'name' => false,
 										'hiddenField' => true, 
 										'onChange' => 'onCancelItem($(this).closest("tr")); return false;',
 										'checked' => !empty($ua['cancelled']),

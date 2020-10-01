@@ -79,7 +79,7 @@ function onPay() {
 	<input type="hidden" name="Ds_Signature" value="" id="signature"><br>	
 	
 	<?php 
-		echo $this->Form->control(null, array(
+		echo $this->Form->control('amount', array(
 			'label' => __d('user', 'Amount'),
 			'type' => 'text',
 			'readonly' => 'readonly',

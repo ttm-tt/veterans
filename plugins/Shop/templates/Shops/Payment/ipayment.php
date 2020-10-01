@@ -67,7 +67,7 @@ function onPay() {
 	<input type="hidden" name="return_paymentdata_details", value="1">
 
 	<?php 
-		echo $this->Form->control(null, array(
+		echo $this->Form->control('amount', array(
 			'label' => __d('user', 'Amount'),
 			'type' => 'text',
 			'readonly' => 'readonly',
@@ -75,7 +75,7 @@ function onPay() {
 		));
 	?>
 	<?php 
-		echo $this->Form->control(null, array(
+		echo $this->Form->control('cardtype', array(
 			'label' => __d('user', 'Credit Card'),
 			'type' => 'select',
 			'empty' => __d('user', 'Select credit card type'),
@@ -84,14 +84,14 @@ function onPay() {
 		));
 	?>
 	<?php
-		echo $this->Form->control(null, array(
+		echo $this->Form->control('cardno', array(
 			'label' => __d('user', 'Card no.'),
 			'name' => 'cc_number',
 			'type' => 'text'
 		));
 	?>
 	<?php 
-		echo $this->Form->control(null, array(
+		echo $this->Form->control('cvv', array(
 			'label' => __d('user', 'CVV code'),
 			'name' => 'cc_checkcode',
 			'type' => 'text',
@@ -101,7 +101,7 @@ function onPay() {
 	<div class="input select">
 	<label><?php echo __d('user', 'Card expires');?></label>
 	<?php 
-		echo $this->Form->month(null, array(
+		echo $this->Form->month('month', array(
 			'label' => false,
 			'div' => false,
 			'name' => 'cc_expdate_month',
@@ -111,7 +111,7 @@ function onPay() {
 	?>
 	<span style="width: 2%;">&nbsp;/&nbsp;</span>
 	<?php
-		echo $this->Form->year(null, date('Y'), date('Y') + 10, array(
+		echo $this->Form->year('year', date('Y'), date('Y') + 10, array(
 			'label' => false,
 			'div' => false,
 			'name' => 'cc_expdate_year',
@@ -121,26 +121,26 @@ function onPay() {
 	?>
 	</div>
 	<?php 
-		echo $this->Form->control(null, array(
+		echo $this->Form->control('name', array(
 			'label' => __d('user', 'Card holder'),
 			'name' => 'addr_name',
 			'type' => 'text'
 		));
 	?>
 	<?php
-		echo $this->Form->control(null, array(
+		echo $this->Form->control('street', array(
 			'label' => __d('user', 'Street'),
 			'name' => 'addr_street'
 		));
-		echo $this->Form->control(null, array(
+		echo $this->Form->control('zip', array(
 			'label' => __d('user', 'Postal code'),
 			'name' => 'addr_zip'
 		));
-		echo $this->Form->control(null, array(
+		echo $this->Form->control('city', array(
 			'label' => __d('user', 'City'),
 			'name' => 'addr_city'
 		));
-		echo $this->Form->control(null, array(
+		echo $this->Form->control('country', array(
 			'label' => __d('user', 'Country'),
 			'options' => $countries,
 			'empty' => __d('user', 'Select Country'),

@@ -82,7 +82,7 @@ function fakeSubmit(orderId) {
 	<h2><?php echo __d('user', 'Billing Information');?></h2>
 	<input type="hidden" name="orderid">
 	<?php 
-		echo $this->Form->control(null, array(
+		echo $this->Form->control('amount', array(
 			'label' => __d('user', 'Amount'),
 			'type' => 'text',
 			'readonly' => 'readonly',
