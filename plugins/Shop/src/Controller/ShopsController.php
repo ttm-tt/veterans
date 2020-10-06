@@ -1392,9 +1392,9 @@ class ShopsController extends ShopAppController {
 		
 		if (true) {
 			if ($this->request->getParam('_ext') !== false)
-				$this->render('/Pdf/voucher', 'default');		
+				$this->render('/pdf/voucher', 'default');		
 			else
-				$this->render('/Pdf/voucher', 'default');		
+				$this->render('/pdf/voucher', 'default');		
 	
 		} else {
 			// Configure::write('debug', 0);
@@ -1405,7 +1405,7 @@ class ShopsController extends ShopAppController {
 				'download' => true			
 			); 
 
-			$this->render('/Pdf/voucher', 'default');		
+			$this->render('/pdf/voucher', 'default');		
 		}
 	}
 	
@@ -1526,9 +1526,9 @@ class ShopsController extends ShopAppController {
 		
 		if (true) {
 			if ($this->request->getParam('_ext') !== false)
-				$this->render('/Pdf/receipt', 'default');		
+				$this->render('/pdf/receipt', 'default');		
 			else
-				$this->render('/Pdf/receipt', 'pdf/default');		
+				$this->render('/pdf/receipt', 'pdf/default');		
 				
 		} else {
 			$this->response = $this->response->withType('application/pdf');
@@ -1539,7 +1539,7 @@ class ShopsController extends ShopAppController {
 				'download' => true			
 			])); 
 			
-			$this->render('/Pdf/receipt', 'default');		
+			$this->render('/pdf/receipt', 'default');		
 		}
 	}
 	
@@ -1609,7 +1609,7 @@ class ShopsController extends ShopAppController {
 			'download' => true			
 		])); 
 		
-		$this->render('/Pdf/receipt', 'default');		
+		$this->render('/pdf/receipt', 'default');		
 	}
 	
 	
