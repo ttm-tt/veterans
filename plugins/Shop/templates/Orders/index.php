@@ -103,6 +103,7 @@
 		<?php if (!isset($method))
 			echo '<th>' . $this->Paginator->sort('Orders.payment_method', __('method')) . '</th>';
 		?>
+		<th><?php echo $this->Paginator->sort('Orders.invoice_paid', __('Cancelled'));?></th>
 		<th class="actions" colspan="3"><?php echo __('Actions');?></th>
 	</tr>
 
@@ -158,6 +159,7 @@
 			<?php if (!isset($method))
 				echo '<td>' . $order['payment_method'] . '</td>';
 			?>
+			<td><?php echo $order['invoice_cancelled'];?></td>
 			<td class="actions">
 				<?php 
 					if ($allowView) {

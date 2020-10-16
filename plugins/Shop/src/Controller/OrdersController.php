@@ -169,7 +169,8 @@ class OrdersController extends ShopAppController {
 				'Orders.total',
 				'Orders.created',
 				'Orders.accepted',
-				'Orders.invoice_paid'
+				'Orders.invoice_paid',
+				'Orders.invoice_cancelled'
 			]
 		);
 		
