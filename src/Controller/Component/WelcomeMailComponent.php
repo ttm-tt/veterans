@@ -4,9 +4,8 @@
 namespace App\Controller\Component;
 
 use Cake\Controller\Component;
-use Cake\Controller\ComponentRegistry;
 use Cake\Core\Configure;
-use Cake\Mailer\Email;
+use Cake\Mailer\Mailer;
 use Cake\Log\Log;
 
 use App\Model\Table\GroupsTable;
@@ -104,7 +103,7 @@ class WelcomeMailComponent extends Component {
 					'email IS NOT NULL'
 				));
 
-			$email = new Email('default');
+			$email = new Mailer('default');
 			$email
 				->setEmailFormat('both')
 				->setSubject($subjectPrefix . __d('user', 'Double Entries'))

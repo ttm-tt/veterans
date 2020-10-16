@@ -8,9 +8,8 @@ use App\Model\Table\TypesTable;
 use App\Model\Table\UsersTable;
 
 use Cake\Controller\Component;
-use Cake\Controller\ComponentRegistry;
 use Cake\I18n\I18n;
-use Cake\Mailer\Email;
+use Cake\Mailer\Mailer;
 use Cake\Utility\Inflector;
 
 
@@ -949,7 +948,7 @@ class RegistrationUpdateComponent extends Component {
 					'email IS NOT NULL'
 			));
 
-		$email = new Email('default');
+		$email = new Mailer('default');
 
 		$email
 			->setEmailFormat('both')
@@ -1063,7 +1062,7 @@ class RegistrationUpdateComponent extends Component {
 		if (in_array($registration['person']['email'], $email->getTo()))
 			return;
 		
-		$email = new Email('default');
+		$email = new Mailer('default');
 		$email
 			->setEmailFormat('both')
 			->setSubject(

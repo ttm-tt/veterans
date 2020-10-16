@@ -1280,7 +1280,7 @@ class ShopsController extends ShopAppController {
 		$bcc = $this->Users->fieldByConditions('email', array('username' => 'theis'));
 		
 		// Send Mail
-		$email = new Email('default');
+		$email = new Mailer('default');
 		
 		if (!empty($replyTo))
 			$email->setReplyTo($replyTo);

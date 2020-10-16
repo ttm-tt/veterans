@@ -10,7 +10,7 @@ use Cake\Event\EventInterface;
 use Cake\Routing\Router;
 use Cake\Log\Log;
 use Cake\Utility\Hash;
-use Cake\Mailer\Email;
+use Cake\Mailer\Mailer;
 use Cake\I18n\I18n;
 use App\Model\Table\GroupsTable;
 use App\Model\Table\UsersTable;
@@ -159,7 +159,7 @@ class UsersController extends AppController {
 					'email IS NOT NULL'
 			));
 
-		$email = new Email('default');
+		$email = new Mailer('default');
 		$email
 			->setEmailFormat('text')
 			->setSubject($subjectPrefix . __d('user', 'Double Entries'))
@@ -225,7 +225,7 @@ class UsersController extends AppController {
 			));
 
 		// Send email
-		$email = new Email('default');
+		$email = new Mailer('default');
 		$email
 			->setEmailFormat('text')
 			->setSubject($subjectPrefix . __d('user', 'Double Entries'))
