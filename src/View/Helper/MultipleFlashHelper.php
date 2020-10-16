@@ -43,22 +43,23 @@ class MultipleFlashHelper extends AppHelper {
 		}
 		unset($messages['info']);
 
+		// Iterate over remaining messages (e.g. from normal FlashComponent)
 		if (!empty($messages)) {
 			foreach ($messages as $type => $message) {
 				foreach ($message as $text) {
-					// Messages from Cake are arrays 
-					if (is_array($text) && array_key_exists('message', $text))
-						$text = $text['message'];
-					
-					if (!is_string($text))
-						continue;
-					
-					$out .= '<div class="flashMessage ' . $type . '">' . $text . '</div>' . "\n";
+					$out .= '<div class="flashMessage ' . $type . '">' . $this->getText($text) . '</div>' . "\n";
 				}
 			}
 		}
 
 		return $out;
+	}
+	
+	private function getText($message) : string {
+		if (is_array($message))
+			return $message['message'] ?: '';
+		
+		return $message;
 	}
 }
 
