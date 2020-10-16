@@ -45,8 +45,16 @@ class MultipleFlashHelper extends AppHelper {
 
 		if (!empty($messages)) {
 			foreach ($messages as $type => $message) {
-				foreach ($message as $text) 
+				foreach ($message as $text) {
+					// Messages from Cake are arrays 
+					if (is_array($text) && array_key_exists('message', $text))
+						$text = $text['message'];
+					
+					if (!is_string($text))
+						continue;
+					
 					$out .= '<div class="flashMessage ' . $type . '">' . $text . '</div>' . "\n";
+				}
 			}
 		}
 
