@@ -948,7 +948,7 @@ class RegistrationUpdateComponent extends Component {
 					'email IS NOT NULL'
 			));
 
-		$email = new Mailer('default');
+		$email = new Email('default');
 
 		$email
 			->setEmailFormat('both')
