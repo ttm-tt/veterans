@@ -9,7 +9,7 @@ use App\Model\Table\UsersTable;
 
 use Cake\Controller\Component;
 use Cake\I18n\I18n;
-use Cake\Mailer\Mailer;
+use Cake\Mailer\Email;
 use Cake\Utility\Inflector;
 
 
@@ -1062,7 +1062,7 @@ class RegistrationUpdateComponent extends Component {
 		if (in_array($registration['person']['email'], $email->getTo()))
 			return;
 		
-		$email = new Mailer('default');
+		$email = new Email('default');
 		$email
 			->setEmailFormat('both')
 			->setSubject(

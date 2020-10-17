@@ -7,7 +7,7 @@ use App\Model\Table\UsersTable;
 
 use Shop\Model\Table\OrderStatusTable;
 
-use Cake\Mailer\Mailer;
+use Cake\Mailer\Email;
 use CakePdf\Pdf\CakePdf;
 use Cake\Core\Configure;
 use Cake\Event\EventInterface;
@@ -1154,7 +1154,7 @@ class ShopsController extends ShopAppController {
 		$bcc = $this->Users->fieldByConditions('email', array('username' => 'theis'));
 		
 		// Send Mail
-		$email = new Mailer('default');
+		$email = new Email('default');
 		if (!empty($replyTo))
 			$email->setReplyTo($replyTo);
 
@@ -1280,7 +1280,7 @@ class ShopsController extends ShopAppController {
 		$bcc = $this->Users->fieldByConditions('email', array('username' => 'theis'));
 		
 		// Send Mail
-		$email = new Mailer('default');
+		$email = new Email('default');
 		
 		if (!empty($replyTo))
 			$email->setReplyTo($replyTo);

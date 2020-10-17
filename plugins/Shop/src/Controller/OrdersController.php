@@ -2,7 +2,7 @@
 namespace Shop\Controller;
 
 use Cake\Utility\Hash;
-use Cake\Mailer\Mailer;
+use Cake\Mailer\Email;
 use Cake\I18n\Date;
 use Cake\I18n\I18n;
 use Cake\Database\Expression\QueryExpression;
@@ -1244,7 +1244,7 @@ class OrdersController extends ShopAppController {
 
 			$this->OrderUpdate->setVarsForOrder($id);
 
-			$email = new Mailer('default');
+			$email = new Email('default');
 			$email
 				->viewBuilder()->setTemplate('Shop.cancel', 'default');
 
