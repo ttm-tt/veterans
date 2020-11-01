@@ -1,14 +1,18 @@
 <?php
 $baseDir = dirname(dirname(__FILE__));
+
 return [
     'plugins' => [
-        'ErrorEmail' => $baseDir . '/vendor/ebrigham1/cakephp-error-email/',
-        'Cake/TwigView' => $baseDir . '/vendor/cakephp/twig-view/',
-        'Bake' => $baseDir . '/vendor/cakephp/bake/',
         'Acl' => $baseDir . '/vendor/cakephp/acl/',
+        'AclEdit' => $baseDir . '/plugins/AclEdit/',
+        'Bake' => $baseDir . '/vendor/cakephp/bake/',
         'CakePdf' => $baseDir . '/vendor/friendsofcake/cakepdf/',
+        'Cake/TwigView' => $baseDir . '/vendor/cakephp/twig-view/',
+        'DebugKit' => $baseDir . '/vendor/cakephp/debug_kit/',
+        'ErrorEmail' => $baseDir . '/vendor/ebrigham1/cakephp-error-email/',
         'Migrations' => $baseDir . '/vendor/cakephp/migrations/',
         'Shim' => $baseDir . '/vendor/dereuromark/cakephp-shim/',
-        'DebugKit' => $baseDir . '/vendor/cakephp/debug_kit/'
-    ]
+        'Shop' => $baseDir . '/plugins/Shop/',
+        'Wizard' => $baseDir . '/plugins/Wizard/',
+    ],
 ];
