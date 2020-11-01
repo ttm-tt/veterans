@@ -1,5 +1,5 @@
 <div class="people form">
-	<?php echo $this->Form->create(false, array('action' => 'import', 'type' => 'file')); ?>
+	<?php echo $this->Form->create(null, array('action' => 'import', 'type' => 'file')); ?>
 	<fieldset>
  		<legend><?php echo __('Import Orders'); ?></legend>
 	<?php

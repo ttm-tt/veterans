@@ -111,10 +111,10 @@ function fakeSubmit(orderId) {
 	</form>
 </div>
 <?php 
-	echo $this->Form->create(false, array('id' => 'cancel'));
+	echo $this->Form->create(null, array('id' => 'cancel'));
 		echo $this->Form->hidden('Cancel', array('value' => 'Cancel'));
 	echo $this->Form->end();
-	echo $this->Form->create(false, array('id' => 'previous'));
+	echo $this->Form->create(null, array('id' => 'previous'));
 		echo $this->Form->hidden('Previous', array('value' => 'Previous'));
 	echo $this->Form->end();
 ?>

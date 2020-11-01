@@ -24,7 +24,7 @@
 
 		<?= $this->element('creditcard'); ?>
 
-		<?= $this->Form->create(false, array('id' => 'submit', 'onsubmit' => 'onPay(); return false;')); ?>
+		<?= $this->Form->create(null, array('id' => 'submit', 'onsubmit' => 'onPay(); return false;')); ?>
 
 		<?php if (!empty($ticket)) echo $this->Form->hidden(false, ['name' => 'ticket', 'value' => $ticket]); ?>
 		
