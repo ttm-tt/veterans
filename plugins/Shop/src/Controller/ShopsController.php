@@ -1483,7 +1483,9 @@ class ShopsController extends ShopAppController {
 		$until = date('Y-m-d', strtotime('+7 days'));
 		if ($this->request->getData('until')) {
 			$until = $this->request->getData('until');
-			$until = $until['year'] . '-' . $until['month'] . '-' . $until['day'];
+			// $until was an array and should be a string now
+			if (is_array($until))
+				$until = $until['year'] . '-' . $until['month'] . '-' . $until['day'];
 		}
 		
 		$this->set('until', $until);
