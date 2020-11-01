@@ -116,7 +116,7 @@ class BPayment extends AbstractPayment {
 			$this->_controller->loadModel('Shop.OrderPayments');
 			$this->_controller->OrderPayments->setTable('shop_order_bpayment');
 			
-			$data = $request->data;
+			$data = $request->getData();
 			$data['order_id'] = $orderId;
 			$this->_controller->OrderPayments->save(
 					$this->_controller->OrderPayments->newEntity($data)
@@ -150,9 +150,9 @@ class BPayment extends AbstractPayment {
 
 
 		if ($request->is(['post', 'put']))
-			$data = $request->data;
+			$data = $request->getData();
 		else if ($request->is(['get']))
-			$data = $request->query;
+			$data = $request->getQuery();
 		else
 			return;
 				

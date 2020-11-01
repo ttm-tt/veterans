@@ -13,9 +13,9 @@ class DummyPayment extends AbstractPayment {
 	
 	public function completed($request) {
 		if ($request->isPost())
-			$data = $request->data;
+			$data = $request->getData();
 		else if ($request->isGet())
-			$data = $request->query;
+			$data = $request->getQuery();
 		else
 			return;
 		

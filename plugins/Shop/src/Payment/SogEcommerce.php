@@ -108,9 +108,9 @@ class SogEcommerce extends AbstractPayment {
 		file_put_contents(TMP . '/sogecommerce/xxxsuccess-' . date('Ymd-His'), print_r($request, true));		
 		
 		if ($request->isPost())
-			$data = $request->data;
+			$data = $request->getData();
 		else if ($request->isGet())
-			$data = $request->query;
+			$data = $request->getQuery();
 		else
 			return;
 
@@ -153,9 +153,9 @@ class SogEcommerce extends AbstractPayment {
 		file_put_contents(TMP . '/sogecommerce/xxxerror-' . date('Ymd-His'), print_r($request, true));		
 
 		if ($request->isPost())
-			$data = $request->data;
+			$data = $request->getData();
 		else if ($request->isGet())
-			$data = $request->query;
+			$data = $request->getQuery();
 		else
 			return;
 
@@ -197,9 +197,9 @@ class SogEcommerce extends AbstractPayment {
 		);				
 		
 		if ($request->is(['post', 'put']))
-			$data = $request->data;
+			$data = $request->getData();
 		else if ($request->is(['get']))
-			$data = $request->query;
+			$data = $request->getQuery();
 		else
 			return;
 				

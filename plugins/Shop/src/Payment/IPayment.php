@@ -82,9 +82,9 @@ class IPayment extends AbstractPayment {
 		file_put_contents(TMP . '/ipayment/xxxerror-' . date('Ymd-His'), print_r($request, true));
 
 		if ($request->isPost())
-			$data = $request->data;
+			$data = $request->getData();
 		else if ($request->isGet())
-			$data = $request->params;
+			$data = $request->getQuery();
 		else
 			return;
 		
@@ -95,9 +95,9 @@ class IPayment extends AbstractPayment {
 		file_put_contents(TMP . '/ipayment/xxxsuccess-' . date('Ymd-His'), print_r($request, true));
 
 		if ($request->isPost())
-			$data = $request->data;
+			$data = $request->getData();
 		else if ($request->isGet())
-			$data = $request->query;
+			$data = $request->getQuery();
 		else
 			return;
 		
@@ -112,9 +112,9 @@ class IPayment extends AbstractPayment {
 		);
 
 		if ($request->is(['post', 'pust']))
-			$data = $request->data;
+			$data = $request->getData();
 		else if ($request->is(['get']))
-			$data = $request->query;
+			$data = $request->getQuery();
 		else
 			return;
 		

@@ -105,9 +105,9 @@ class RedsysPayment extends AbstractPayment {
 		);
 
 		if ($request->is(['post', 'put']))
-			$data = $request->data;
+			$data = $request->getData();
 		else if ($request->is(['get']))
-			$data = $request->query;
+			$data = $request->getQuery();
 		else
 			return;
 				

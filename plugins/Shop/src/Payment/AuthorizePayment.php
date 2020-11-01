@@ -55,7 +55,7 @@ class AuthorizePayment extends AbstractPayment {
 	public function success($request) {
 		file_put_contents(TMP . '/authorizenet/xxxsuccess-' . date('Ymd-His'), print_r($request, true));
 		
-		$data = $request->data;
+		$data = $request->getData();
 		$order_id = $data['x_invoice_num'];
 		$data['order_id'] = $order_id;
 

@@ -21,7 +21,7 @@ class CardPointePayment extends AbstractPayment {
 		if (!$request->is(['post', 'put']))
 			return;
 
-		$data = json_decode($request->data['json'], true);
+		$data = json_decode($request->getData('json'), true);
 		
 		$this->_controller->loadModel('Shop.Orders');
 

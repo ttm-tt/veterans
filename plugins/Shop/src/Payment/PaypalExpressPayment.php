@@ -82,7 +82,7 @@ class PaypalExpressPayment extends AbstractPayment {
 
 	// Payment completed
 	public function completed($request) {
-		file_put_contents(TMP . '/paypal/xxxipn-' . date('Ymd-His') . '-' . $request->data['payment_status'], 
+		file_put_contents(TMP . '/paypal/xxxipn-' . date('Ymd-His') . '-' . $request->getData('payment_status'), 
 				print_r([
 					'POST/GET' => $request->is(['post', 'put', 'get']), 
 					'Request' => $request], true)
@@ -102,7 +102,7 @@ class PaypalExpressPayment extends AbstractPayment {
 			CURLOPT_SSL_VERIFYHOST => 2,
 			CURLOPT_RETURNTRANSFER => 1,
 			CURLOPT_POST => 1,
-			CURLOPT_POSTFIELDS => array('cmd' => '_notify-validate') + $request->data
+			CURLOPT_POSTFIELDS => array('cmd' => '_notify-validate') + $request->getData()
 		);
 		
 		$curl = curl_init();
@@ -116,7 +116,7 @@ class PaypalExpressPayment extends AbstractPayment {
 		
 		$orderId = $request->query['order'];
 		
-		// $orderId = $request->data['PAYMENT_REQUEST_0_CUSTOM'];
+		// $orderId = $request->getData('PAYMENT_REQUEST_0_CUSTOM');
 		
 		$this->_controller->loadModel('Shop.Orders');
 		$order = $this->_controller->Order->find('first', array(
@@ -134,7 +134,7 @@ class PaypalExpressPayment extends AbstractPayment {
 		$this->_controller->loadModel('Shop.OrderPayments');
 		$this->_controller->OrderPayments->setTable('shop_order_paypal');
 		
-		$params = $request->data;
+		$params = $request->getData();
 		$params['order_id'] = $orderId;
 		
 		// Convert paypal timestamp to MySQL readable

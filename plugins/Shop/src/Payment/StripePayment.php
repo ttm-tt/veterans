@@ -113,9 +113,9 @@ class StripePayment extends AbstractPayment {
 		file_put_contents(TMP . '/stripe/xxxcompleted-' . date('Ymd-His'), print_r($request, true));
 		
 		if ($request->is(['post', 'put']))
-			$data = $request->data;
+			$data = $request->getData();
 		else if ($request->is(['get']))
-			$data = $request->query;
+			$data = $request->getQuery();
 		else
 			return;
 				

@@ -97,8 +97,8 @@ class DibsPayment extends AbstractPayment {
 	public function success($request) {
 		file_put_contents(TMP . '/dibs/xxxsuccess-' . date('Ymd-His'), print_r($request, true));		
 		
-		if (!empty($request->data['order_id']))
-			$orderId = $request->data['order_id'];
+		if (!empty($request->getData('order_id')))
+			$orderId = $request->getData('order_id');
 		else
 			$orderId = false;
 		
@@ -110,9 +110,9 @@ class DibsPayment extends AbstractPayment {
 		file_put_contents(TMP . '/dibs/xxxerror-' . date('Ymd-His'), print_r($request, true));		
 
 		if ($request->isPost())
-			$data = $request->data;
+			$data = $request->getData();
 		else if ($request->isGet())
-			$data = $request->query;
+			$data = $request->getQuery();
 		else
 			return;
 
@@ -152,9 +152,9 @@ class DibsPayment extends AbstractPayment {
 		);
 		
 		if ($request->is(['post', 'put']))
-			$data = $request->data;
+			$data = $request->getDat();
 		else if ($request->is(['get']))
-			$data = $request->query;
+			$data = $request->getQuery();
 		else
 			return;
 				
