@@ -51,7 +51,9 @@ class SogEcommerce extends AbstractPayment {
 		$this->_controller->loadModel('Shop.Orders');
 		$this->_controller->loadModel('Shop.OrderArticles');
 		
-		$order = $this->_controller->Orders->get($orderId);
+		$order = $this->_controller->Orders->get($orderId, [
+			'contain' => ['InvoiceAddresses']
+		]);
 		
 		$amount = $order->outstanding;
 		
@@ -68,7 +70,13 @@ class SogEcommerce extends AbstractPayment {
 			'vads_capture_delay' => 0,
 			'vads_ctx_mode' => $ctx_mode,
 			'vads_currency' => $currency,
+			'vads_cust_address' => $order->invoice_address->street,
+			'vads_cust_city' => $order->invoice_address->city,
+			'vads_cust_first_name' => $order->invoice_address->first_name,
+			'vads_cust_last_name' => $order->invoice_address->first_name,
+			'vads_cust_zip' => $order->invoice_address->zip,
 			'vads_order_id' => $orderId,
+			'vads_order_info' => $order->invoice,
 			'vads_page_action' => 'PAYMENT',
 			'vads_payment_config' => 'SINGLE',
 			'vads_return_mode' => 'POST',
