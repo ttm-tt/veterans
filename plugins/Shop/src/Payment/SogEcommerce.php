@@ -64,7 +64,7 @@ class SogEcommerce extends AbstractPayment {
 		$ctx_mode = Configure::read($configBaseName . '.ctx_mode');
 		$currency = Configure::read($configBaseName . '.currency');
 		
-		$parameters = [
+		$parameters = array_filter([
 			'vads_action_mode' => 'INTERACTIVE',
 			'vads_amount' => intval($amount * 100),
 			'vads_capture_delay' => 0,
@@ -73,10 +73,10 @@ class SogEcommerce extends AbstractPayment {
 			'vads_cust_address' => $order->invoice_address->street,
 			'vads_cust_city' => $order->invoice_address->city,
 			'vads_cust_first_name' => $order->invoice_address->first_name,
-			'vads_cust_last_name' => $order->invoice_address->first_name,
+			'vads_cust_last_name' => $order->invoice_address->last_name,
 			'vads_cust_zip' => $order->invoice_address->zip,
 			'vads_order_id' => $orderId,
-			'vads_order_info' => $order->invoice,
+			'vads_order_info' => str_replace('/', '-', $order->invoice),
 			'vads_page_action' => 'PAYMENT',
 			'vads_payment_config' => 'SINGLE',
 			'vads_return_mode' => 'POST',
@@ -89,7 +89,7 @@ class SogEcommerce extends AbstractPayment {
 			'vads_url_return' => $this->_getUrlError($order->id),
 			'vads_url_success' => $this->_getUrlSuccess($order->id),
 			'vads_version' => 'V2'
-		];
+		], function($val) {return $val !== null;});
 		
 		$signature = $this->_makeSignature($parameters, $key);
 		
