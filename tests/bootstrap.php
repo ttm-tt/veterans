@@ -16,7 +16,7 @@ require dirname(__DIR__) . '/config/bootstrap.php';
 
 $_SERVER['PHP_SELF'] = '/';
 
-Configure::write('App.fullBaseUrl', 'https://localhost/onlineentries-v4');
+Configure::write('App.fullBaseUrl', 'https://localhost/veterans-v4');
 
 // DebugKit skips settings these connection config if PHP SAPI is CLI / PHPDBG.
 // But since PagesControllerTest is run with debug enabled and DebugKit is loaded

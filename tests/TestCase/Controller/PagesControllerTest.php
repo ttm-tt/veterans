@@ -16,8 +16,12 @@ use App\Test\TestCase\AppTestCase;
  */
 class PagesControllerTest extends AppTestCase {
 	public $fixtures = [
-		// 'app.Groups',
-		// 'app.Users'
+		'app.Groups',
+		'app.Languages',
+		'app.Organisations',
+		'app.Nations',
+		'app.Tournaments',
+		'app.Users'
 	];
 	
 	public function setUp() : void {
