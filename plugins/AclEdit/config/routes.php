@@ -2,5 +2,5 @@
 use Cake\Routing\Router;
 
 Router::plugin('AclEdit', ['path' => '/AclEdit'], function ($routes) {
-    $routes->fallbacks('InflectedRoute');
+    $routes->fallbacks('DatasourceRoute');
 });

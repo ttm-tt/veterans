@@ -21,7 +21,7 @@ use Cake\Routing\Router;
  * `:action` markers.
  *
  */
-Router::defaultRouteClass('InflectedRoute');
+Router::defaultRouteClass('DatasourceRoute');
 
 Router::extensions(['csv', 'pdf', 'json']);
 
@@ -67,5 +67,5 @@ Router::scope('/', function (RouteBuilder $routes) {
      * You can remove these routes once you've connected the
      * routes you want in your application.
      */
-    $routes->fallbacks('InflectedRoute');
+    $routes->fallbacks('DatasourceRoute');
 });

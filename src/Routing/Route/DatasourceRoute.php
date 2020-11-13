@@ -8,9 +8,10 @@
 
 namespace App\Routing\Route;
 
+use Cake\Controller\ControllerFactory;
 use Cake\Datasource\ConnectionManager;
 use Cake\Routing\Route\InflectedRoute;
-
+use Psr\Http\Message\ServerRequestInterface;
 
 class DatasourceRoute extends InflectedRoute {
 	
@@ -54,4 +55,36 @@ class DatasourceRoute extends InflectedRoute {
 
         parent::__construct($template, $defaults, $options);		
 	}	
+	
+    /**
+     * Checks to see if the given URL can be parsed by this route.
+	 * 
+	 * To find the best route the base class will sort all routes by (length of)
+	 * the leading fixed part, but inside such group there is no further sorting.
+	 * In case of this type of routes the fixed part will be '/' and the first
+	 * matching route there may not be the best match but the first connected.
+	 * This results that a plugin part is not recognized as such but as a controller.
+	 * Therefore, if we don't have a plugin we will check if the controller exists.
+	 * 
+	 * Caveat: we don't get an error "controller does not exist" but "missing route"
+	 * if we mistyped the controller name.
+     *
+     * @param \Psr\Http\Message\ServerRequestInterface $request The URL to attempt to parse.
+     * @return array|null An array of request parameters, or null on failure.
+     */
+    public function parseRequest(ServerRequestInterface $request): ?array
+    {
+        $params = parent::parseRequest($request);
+		
+		if ($params === null || $params['plugin'] !== null)
+			return $params;
+		
+		// ControllerFactory does not have any instance variables so we can just
+		// create one. We could even use a static instance ...
+		if ( (new ControllerFactory())->getControllerClass(
+				$request->withAttribute('params', $params)) === null )
+			return null;
+		
+		return $params;
+    }
 }
