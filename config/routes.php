@@ -1,5 +1,6 @@
 <?php
 
+use Cake\Http\ServerRequest;
 use Cake\Routing\RouteBuilder;
 use Cake\Routing\Router;
 
@@ -25,6 +26,16 @@ Router::defaultRouteClass('DatasourceRoute');
 
 Router::extensions(['csv', 'pdf', 'json']);
 
+Router::addUrlFilter(function (array $params, ?ServerRequest $request) {
+	if ($request !== null && $request->getParam('ds') && !isset($params['ds'])) {
+		$params['ds'] = $request->getParam('ds');
+	}
+
+	$params += ['ds' => null];
+
+	return $params;
+});	
+				
 Router::scope('/', function (RouteBuilder $routes) {
     /**
      * Here, we are connecting '/' (base path) to a controller called 'Pages',

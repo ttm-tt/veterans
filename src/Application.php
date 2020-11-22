@@ -69,28 +69,9 @@ class Application extends BaseApplication
             ->add(AssetMiddleware::class)
 
             // Add routing middleware.
-            // Routes collection cache enabled by default, to disable route caching
-            // pass null as cacheConfig, example: `new RoutingMiddleware($this)`
-            // you might want to disable this cache in case your routing is extremely simple
-            ->add(new RoutingMiddleware($this, '_cake_routes_'))
+			// Disable caching because URL filters are not part of the cache
+            ->add(new RoutingMiddleware($this, null))
 				
-			->add(function(
-					ServerRequestInterface $request, 
-					ResponseInterface $response, 
-					callable $next
-			) {
-				Router::addUrlFilter(function (array $params, ?ServerRequest $request) {
-					if ($request !== null && $request->getParam('ds') && !isset($params['ds'])) {
-						$params['ds'] = $request->getParam('ds');
-					}
-
-					$params += ['ds' => null];
-
-					return $params;
-				});	
-				
-				return $next($request, $response);
-			})
 			// CORS OPTIONS handler
 			->add(new HttpOptionsMiddleware($this))
         
