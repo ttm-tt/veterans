@@ -97,7 +97,7 @@ class AppController extends ShimController {
 		// sort-*, direction-* are secondary (previous) sort parameters:
 		// A click on a header will first sort by this header, then by what was the previous sort
 		$this->loadComponent('Paginator', [
-	        'whitelist' => ['limit', 'sort', 'page', 'direction', 'sort-0', 'direction-0', 'sort-1', 'direction-1'],
+	        'allowedParameters' => ['limit', 'sort', 'page', 'direction', 'sort-0', 'direction-0', 'sort-1', 'direction-1'],
 			'paginator' => new Paginator()
 		]);
 		

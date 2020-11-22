@@ -15,7 +15,7 @@
 <?php
 	$class = empty($required) ? '' : ' class="required" ';
 
-	echo '<tr><td ' . $class . '><label class="filter">' . $label . '</td><td>';
+	echo '<tr><td ' . $class . '><label class="filter">' . $label . '</label></td><td>';
 	if (!isset(${$id}) || ${$id} === false)
 		echo __('all');
 	else
@@ -55,5 +55,6 @@
 
 	echo '</td></tr>' . "\n";
 
-	echo '<tr/>' . "\n";
+	// tidy wants at least one <td> in <tr>, so add an empty one
+	echo '<tr><td colspan="2" style="padding:0;border-width:0;margin:0;"></td></tr>' . "\n";
 ?>

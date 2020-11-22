@@ -21,7 +21,12 @@ class PagesControllerTest extends AppTestCase {
 		'app.Organisations',
 		'app.Nations',
 		'app.Tournaments',
-		'app.Users'
+		'app.Users',
+		'app.People',
+		'app.Types',
+		'app.Competitions',
+		'app.Registrations',
+		'app.Participants'
 	];
 	
 	public function setUp() : void {
@@ -42,5 +47,17 @@ class PagesControllerTest extends AppTestCase {
 	public function testTestRoot() : void {
 		$this->get('/test/');
 		$this->assertRedirectContains('/test/');
+	}
+	
+	// Test /participants
+	public function testParticipants() : void {
+		$this->get('/participants');
+		$this->assertResponseOk();
+	}
+	
+	// Test /onParticipantData
+	public function testOnParticipantData() : void {
+		$this->post(['controller' => 'Pages', 'action' => 'onParticipantData'], []);
+		$this->assertRedirectContains('/pages/onparticipantdata');
 	}
 }

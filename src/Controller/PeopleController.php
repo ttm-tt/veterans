@@ -57,7 +57,7 @@ class PeopleController extends AppController {
 			'conditions' => $conditions,
 			'contain' => ['Nations', 'Users', 'Registrations'],
 			'order' => ['People.display_name' => 'ASC'],
-			'sortWhitelist' => [
+			'sortableFields' => [
 				'People.display_name',
 				'People.sex',
 				'People.dob',

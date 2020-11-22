@@ -846,7 +846,7 @@ class RegistrationsController extends AppController {
 
 		
 		$this->paginate = array(
-			'sortWhitelist' => [
+			'sortableFields' => [
 				'People.display_name',
 				'Nations.name',
 				'Types.name',
@@ -2029,7 +2029,7 @@ class RegistrationsController extends AppController {
 		$conditions[] = array('OR' => $or);
 
 		$this->paginate = array(
-			'sortWhitelist' => [
+			'sortableFields' => [
 				'People.display_name',
 				'Nations.name',
 				'Types.name',

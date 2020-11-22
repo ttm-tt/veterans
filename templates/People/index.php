@@ -15,7 +15,7 @@
 			]);
 		}
 
-		echo '<tr><td><label class="filter">' . __('Last&nbsp;name') .	'</td><td>';
+		echo '<tr><td><label class="filter">' . __('Last&nbsp;name') .	'</label></td><td>';
 
 		foreach ($allchars as $idx => $chars) {
 			if (count($chars) == 0)
@@ -122,7 +122,13 @@
 
 <?php $this->start('action'); ?>
 	<ul>
-		<?php if ($Acl->check($current_user, 'People/add')) echo '<li>' . $this->Html->link(__('New Person'), array('action' => 'add')) . '</li>'; ?></li>
-		<?php // if ($Acl->check($current_user, 'People/update')) echo '<li>' . $this->Html->link(__('Update People'), array('action' => 'update')) . '</li>'; ?></li>
+		<?php 
+			if ($Acl->check($current_user, 'People/add')) 
+				echo '<li>' . $this->Html->link(__('New Person'), array('action' => 'add')) . '</li>'; 
+		?>
+		<?php 
+			// if ($Acl->check($current_user, 'People/update')) 
+			// 	echo '<li>' . $this->Html->link(__('Update People'), array('action' => 'update')) . '</li>'; 
+		?>
 	</ul>
 <?php $this->end(); ?>
