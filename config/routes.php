@@ -2,6 +2,7 @@
 
 use Cake\Routing\RouteBuilder;
 use Cake\Routing\Router;
+use Cake\Http\ServerRequest;
 
 /**
  * The default class to use for all routes
@@ -24,6 +25,16 @@ use Cake\Routing\Router;
 Router::defaultRouteClass('DatasourceRoute');
 
 Router::extensions(['csv', 'pdf', 'json']);
+
+Router::addUrlFilter(function (array $params, ?ServerRequest $request) {
+    if ($request !== null && $request->getParam('ds') && !isset($params['ds'])) {
+        $params['ds'] = $request->getParam('ds');
+    }
+	
+	$params += ['ds' => null];
+	
+    return $params;
+});
 
 Router::scope('/', function (RouteBuilder $routes) {
     /**
