@@ -8,11 +8,12 @@ use Cake\Core\Configure;
 use Cake\Http\BaseApplication;
 use Cake\Http\MiddlewareQueue;
 use Cake\Http\ServerRequest;
-use Cake\Routing\RouteBuilder;
 use Cake\Routing\Router;
 use Cake\Routing\Middleware\AssetMiddleware;
 use Cake\Routing\Middleware\RoutingMiddleware;
 use App\Middleware\HttpOptionsMiddleware;
+use Psr\Http\Message\ServerRequestInterface;
+use Psr\Http\Message\ResponseInterface;
 
 
 /**
@@ -73,6 +74,23 @@ class Application extends BaseApplication
             // you might want to disable this cache in case your routing is extremely simple
             ->add(new RoutingMiddleware($this, '_cake_routes_'))
 				
+			->add(function(
+					ServerRequestInterface $request, 
+					ResponseInterface $response, 
+					callable $next
+			) {
+				Router::addUrlFilter(function (array $params, ?ServerRequest $request) {
+					if ($request !== null && $request->getParam('ds') && !isset($params['ds'])) {
+						$params['ds'] = $request->getParam('ds');
+					}
+
+					$params += ['ds' => null];
+
+					return $params;
+				});	
+				
+				return $next($request, $response);
+			})
 			// CORS OPTIONS handler
 			->add(new HttpOptionsMiddleware($this))
         
@@ -115,25 +133,4 @@ class Application extends BaseApplication
             // Do not halt if the plugin is missing
         }
     }	
-	
-	/*
-	 * By default load config/routes.php, if not done so
-	 * Will also add an URL filter: it is not done so if routes were already
-	 * added from cache
-	 */
-    public function routes(RouteBuilder $routes): void
-    {
-		parent::routes($routes);
-
-		Router::addUrlFilter(function (array $params, ?ServerRequest $request) {
-			if ($request !== null && $request->getParam('ds') && !isset($params['ds'])) {
-				$params['ds'] = $request->getParam('ds');
-			}
-
-			$params += ['ds' => null];
-
-			return $params;
-		});		
-    }
-	
 }
