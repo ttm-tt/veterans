@@ -7,12 +7,11 @@ use Cake\Cache\Cache;
 use Cake\Core\Configure;
 use Cake\Http\BaseApplication;
 use Cake\Http\MiddlewareQueue;
+use Cake\Http\ServerRequest;
+use Cake\Routing\RouteBuilder;
+use Cake\Routing\Router;
 use Cake\Routing\Middleware\AssetMiddleware;
 use Cake\Routing\Middleware\RoutingMiddleware;
-use Cake\Http\Middleware\CsrfProtectionMiddleware;
-use Psr\Http\Message\ResponseInterface;
-use Psr\Http\Message\ServerRequestInterface;
-
 use App\Middleware\HttpOptionsMiddleware;
 
 
@@ -116,4 +115,25 @@ class Application extends BaseApplication
             // Do not halt if the plugin is missing
         }
     }	
+	
+	/*
+	 * By default load config/routes.php, if not done so
+	 * Will also add an URL filter: it is not done so if routes were already
+	 * added from cache
+	 */
+    public function routes(RouteBuilder $routes): void
+    {
+		parent::routes($routes);
+
+		Router::addUrlFilter(function (array $params, ?ServerRequest $request) {
+			if ($request !== null && $request->getParam('ds') && !isset($params['ds'])) {
+				$params['ds'] = $request->getParam('ds');
+			}
+
+			$params += ['ds' => null];
+
+			return $params;
+		});		
+    }
+	
 }
