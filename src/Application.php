@@ -72,6 +72,14 @@ class Application extends BaseApplication
 			// Disable caching because URL filters are not part of the cache
             ->add(new RoutingMiddleware($this, null))
 				
+			->add(function($request, $response, $next) {
+				$params = $request->getAttribute('params');
+				if (($params['ds'] ?? '') !== '')
+					\Cake\Datasource\ConnectionManager::alias($params['ds'], 'default');		
+				
+				return $next($request, $response);
+			})
+				
 			// CORS OPTIONS handler
 			->add(new HttpOptionsMiddleware($this))
         
