@@ -17,9 +17,17 @@
 
 		// Filter nach Zahlweise
 		echo $this->element('filter', [
-			'label'=> __('Method'),
-			'id' => 'method',
-			'options' => $methods
+			'label'=> __('Payment Method'),
+			'id' => 'payment_method',
+			'empty' => true,
+			'options' => $payment_methods
+		]);
+		
+		// Filter for  Paid / Refunding ... 
+		echo $this->element('filter', [
+			'label' => 'Refund Status',
+			'id' => 'refund_status',
+			'options' => $refund_statuses
 		]);
 		
 		// Filter nach Artikel
@@ -104,6 +112,7 @@
 			echo '<th>' . $this->Paginator->sort('Orders.payment_method', __('method')) . '</th>';
 		?>
 		<th><?php echo $this->Paginator->sort('Orders.invoice_paid', __('Cancelled'));?></th>
+		<th><?php echo $this->Paginator->sort('Orders.refund', __('Refund'));?></th>
 		<th class="actions" colspan="3"><?php echo __('Actions');?></th>
 	</tr>
 
@@ -160,6 +169,7 @@
 				echo '<td>' . $order['payment_method'] . '</td>';
 			?>
 			<td><?php echo $order['invoice_cancelled'];?></td>
+			<td><?= $order['refund'] ?></td>
 			<td class="actions">
 				<?php 
 					if ($allowView) {

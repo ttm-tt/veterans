@@ -2,21 +2,32 @@
 	$this->Html->scriptStart(array('block' => true));
 ?>
 
-function updateSubtotal() {
+function handleNaN(val) {
+	return isNaN(val) ? 0.00 : val;
+}
+
+function updateSubtotal(field) {
+	if (field && field.val() === '')
+		field.val('0.00');
+		
 	var subtotal = 0;
 	subtotal += parseFloat($('input#total').val());
 	subtotal -= parseFloat($('input#cancellation-fee').val());  // Negative number
-	subtotal -= parseFloat($('input#discount').val());
+	subtotal -= handleNaN(parseFloat($('input#discount').val()));
 	
 	$('input#subtotal').val(subtotal);
 	
 	updateOutstanding();
 }
 
-function updateOutstanding() {
+function updateOutstanding(field) {
+	if (field && field.val() === '')
+		field.val('0.00');
+		
 	var subtotal = 0.;
-	subtotal += parseFloat($('input#subtotal').val());
-	subtotal -= parseFloat($('input#paid').val());
+	subtotal += handleNaN(parseFloat($('input#subtotal').val()));
+	subtotal -= handleNaN(parseFloat($('input#paid').val()));
+	subtotal += handleNaN(parseFloat($('input#refund').val()));
 	$('input#outstanding').val(subtotal);
 	
 	if (subtotal <= 0.) {
@@ -63,7 +74,7 @@ $(document).ready(function() {
 				'label' => __('Discount'),
 				'type' => 'text',
 				'after' => '&nbsp;' . $shopSettings['currency'],
-				'onBlur' => 'updateSubtotal(); return false;'
+				'onBlur' => 'updateSubtotal($(this)); return false;'
 			));
 			
 			echo $this->Form->control('subtotal', array(
@@ -80,7 +91,15 @@ $(document).ready(function() {
 				'id' => 'paid',
 				'type' => 'text',
 				'after' => '&nbsp;' . $shopSettings['currency'],
-				'onBlur' => 'updateOutstanding(); return false;'
+				'onBlur' => 'updateOutstanding($(this)); return false;'
+			));
+			
+			echo $this->Form->control('refund', array(
+				'label' => __('Refund'),
+				'id' => 'refund',
+				'type' => 'text',
+				'after' => '&nbsp;' . $shopSettings['currency'],
+				'onBlur' => 'updateOutstanding($(this)); return false;'
 			));
 			
 			echo $this->Form->control('outstanding', array(

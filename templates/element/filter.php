@@ -22,7 +22,7 @@
 		echo $this->Html->link(__('all'), ['?' => [$id => (empty($all) ? 'all' : $all)]]);
 
 	if (!empty($empty)) {
-		if (${$id} == 'null')
+		if (${$id} == 'none')
 			echo ' ' . __('none');
 		else
 			echo ' ' . $this->Html->link(__('none'), ['?' => [$id => 'none']]);

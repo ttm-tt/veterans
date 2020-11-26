@@ -78,6 +78,13 @@ class OrdersController extends ShopAppController {
 				$this->request->getSession()->write('Shop.Orders.payment_method', $this->request->getQuery('payment_method'));
 		}
 		
+		if ($this->request->getQuery('refund_status') !== null) {
+			if ($this->request->getQuery('refund_status') == 'all')
+				$this->request->getSession()->delete('Shop.Orders.refund_status');
+			else 
+				$this->request->getSession()->write('Shop.Orders.refund_status', $this->request->getQuery('refund_status'));
+		}
+		
 		if ($this->request->getQuery('article_id') !== null) {
 			if ($this->request->getQuery('article_id') == 'all')
 				$this->request->getSession()->delete('Shop.Articles.id');
@@ -97,8 +104,8 @@ class OrdersController extends ShopAppController {
 
 			if ($last_name == '*')
 				$this->request->getSession()->delete('Shop.InvoiceAddresses.last_name');
-			else if ($last_name == 'null')
-				$this->request->getSession()->write('Shop.InvoiceAddresses.last_name', 'null');
+			else if ($last_name == 'none')
+				$this->request->getSession()->write('Shop.InvoiceAddresses.last_name', 'none');
 			else
 				$this->request->getSession()->write('Shop.InvoiceAddresses.last_name', str_replace('_', ' ', $last_name));
 		}
@@ -129,7 +136,7 @@ class OrdersController extends ShopAppController {
 			$conditions['InvoiceAddresses.country_id'] = $this->request->getSession()->read('Shop.InvoiceAddresses.country_id');
 		
 		if ($this->request->getSession()->check('Shop.InvoiceAddresses.last_name')) {
-			if ($this->request->getSession()->read('Shop.InvoiceAddresses.last_name') == 'null')
+			if ($this->request->getSession()->read('Shop.InvoiceAddresses.last_name') == 'none')
 				$conditions[] = 'UPPER(InvoiceAddresses.last_name) COLLATE utf8_bin IS NULL';
 			else
 				$conditions[] = 'UPPER(InvoiceAddresses.last_name) COLLATE utf8_bin LIKE \'' . $this->request->getSession()->read('Shop.InvoiceAddresses.last_name') . '%\'';
@@ -141,6 +148,17 @@ class OrdersController extends ShopAppController {
 				$conditions[] = 'Orders.payment_method IS NULL';
 			else
 				$conditions['Orders.payment_method'] = $this->request->getSession()->read('Shop.Orders.payment_method');
+		}
+		
+		// Filter by refund status
+		if ($this->request->getSession()->check('Shop.Orders.refund_status')) {
+			if ($this->request->getSession()->read('Shop.Orders.refund_status') === 'refunding')
+				$conditions[] = 
+					'Orders.invoice_paid IS NOT NULL AND ' .
+					'Orders.refund < Orders.paid - Orders.total - Orders.discount - ' .
+					'	Orders.cancellation_fee + Orders.cancellation_discount ';
+			if ($this->request->getSession()->read('Shop.Orders.refund_status') === 'refunded')
+				$conditions[] = 'Orders.refund > 0';
 		}
 		
 		// Filter by Article
@@ -170,7 +188,8 @@ class OrdersController extends ShopAppController {
 				'Orders.created',
 				'Orders.accepted',
 				'Orders.invoice_paid',
-				'Orders.invoice_cancelled'
+				'Orders.invoice_cancelled',
+				'Orders.refund'
 			]
 		);
 		
@@ -236,7 +255,7 @@ class OrdersController extends ShopAppController {
 
 		if (!$last_name)
 			$last_name = '';
-		if ($last_name == 'null')
+		if ($last_name == 'none')
 			$last_name = null;
 
 		for ($count = 0; $count <= mb_strlen($last_name); $count++) {
@@ -280,8 +299,14 @@ class OrdersController extends ShopAppController {
 			'conditions' => ['payment_method IS NOT NULL', 'payment_method <>' => ''],
 			'order' => ['payment_method' => 'ASC']
 		));
-		$this->set('methods', Hash::extract($tmp->toArray(), '{n}.method'));
-		$this->set('method', $this->request->getSession()->read('Shop.Orders.payment_method'));
+		$this->set('payment_methods', Hash::combine($tmp->toArray(), '{n}.method', '{n}.method'));
+		$this->set('payment_method', $this->request->getSession()->read('Shop.Orders.payment_method'));
+		
+		$this->set('refund_statuses', [
+			'refunding' => __('Pending'),
+			'refunded' => __('Done')
+		]);
+		$this->set('refund_status', $this->request->getSession()->read('Shop.Orders.refund_status'));
 	}
 	
 	
@@ -963,8 +988,6 @@ class OrdersController extends ShopAppController {
 				$playerArticle['cancellation_fee'] = 0.;
 
 				$updateOrder['order_articles'][] = $playerArticle->toArray();
-
-				$updateOrder['total'] += $playerArticle['total'];
 			}
 
 			// Same for acc. persons
@@ -1067,8 +1090,6 @@ class OrdersController extends ShopAppController {
 
 					$updateOrder['order_articles'][] = $itemArticle->toArray();
 
-					$updateOrder['total'] += $itemArticle['total'];
-
 					continue;
 				}
 
@@ -1121,8 +1142,9 @@ class OrdersController extends ShopAppController {
 		$updateOrder['cancellation_fee'] += $fee;
 
 		// TODO: $discount abspeichern, evtl. als eigener Artikel
-
-		if (!$this->Orders->save($this->Orders->patchEntity($order, $updateOrder), array('modified' => $ct))) {
+		
+		$order = $this->Orders->patchEntity($order, $updateOrder);
+		if (!$this->Orders->save($order, array('modified' => $ct))) {
 			return false;
 		}
 
@@ -1196,10 +1218,10 @@ class OrdersController extends ShopAppController {
 			}
 		}
 
-		if ($isPaid) {
+		if ($isPaid && ($refund - $fee + $discount) > 0) {
 			// $data['Storno']['refund'] is not set if refund is not applicable
 			// But we are only interested if the value is true
-			if (!empty($data['Storno']['refund']) && ($refund - $fee + $discount) > 0) {
+			if (!empty($data['Storno']['refund'])) {
 				// Only orders for which we received payment can be refunded
 				$payment = $this->_getPayment($order['payment_method']);
 				// Payment provider should write error message if refund failed
@@ -1211,6 +1233,10 @@ class OrdersController extends ShopAppController {
 							), 
 							'success'
 					);
+					
+					// Update order
+					$order->refund += $refund - $fee + $discount;
+					$this->Orders->save($order, ['modified' => $ct]);
 				}
 			}
 		}

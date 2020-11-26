@@ -616,8 +616,8 @@ class ShopsController extends ShopAppController {
 		if ($key === null && isset($data['key']))
 			$key = $data['key'];
 		
-		// null may be transfered as 'null'
-		if ($key === 'null')
+		// null may be transfered as 'none'
+		if ($key === 'none')
 			$key = null;
 		
 		// key is a required field
@@ -628,7 +628,7 @@ class ShopsController extends ShopAppController {
 		if ($variant === null && isset($data['variant']))
 			$variant = $data['variant'];
 
-		if ($variant === 'null' || strlen($variant) === 0)
+		if ($variant === 'none' || strlen($variant) === 0)
 			$variant = null;
 		
 		if ($variant === null) {
@@ -692,8 +692,8 @@ class ShopsController extends ShopAppController {
 		if ($key === null)
 			$key = $data['key'];
 
-		// null may be transfered as 'null';
-		if ($key === 'null')
+		// null may be transfered as 'none';
+		if ($key === 'none')
 			$key = null;
 		
 		if ($key != null)
