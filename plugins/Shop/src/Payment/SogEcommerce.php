@@ -257,7 +257,7 @@ class SogEcommerce extends AbstractPayment {
 	 *  Cancel a payment
 	 */
 	public function storno($orderId, $amount) {
-		
+		return false;
 	}
 	
 	/**
