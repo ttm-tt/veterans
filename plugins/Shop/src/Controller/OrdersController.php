@@ -545,7 +545,8 @@ class OrdersController extends ShopAppController {
 		// added fields
 		$order = array_merge($order, array(
 			'paid' => 0.,
-			'cancellation_discount' => 0.
+			'cancellation_discount' => 0.,
+			'refund' => 0.
 		));
 		
 		$articles = $this->OrderArticles->find('all', array(
@@ -569,7 +570,7 @@ class OrdersController extends ShopAppController {
 				$old_value  = $history['old_value'];
 				$new_value  = $history['new_value'];
 
-				if (array_key_exists($field_name, $article))
+				if ($article->has($field_name))
 					$article[$field_name] = $old_value;				
 			}
 		}
