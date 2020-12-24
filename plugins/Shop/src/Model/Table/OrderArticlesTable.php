@@ -19,7 +19,25 @@ class OrderArticlesTable extends ShopAppModelTable {
 		$this->belongsTo('Shop.Articles', ['foreignKey' => 'article_id']);
 		$this->belongsTo('Shop.ArticleVariants', ['foreignKey' => 'article_variant_id']);
 		
+		$this->belongsTo('People', ['foreignKey' => 'person_id']);
+		
 		$this->hasMany('Shop.OrderArticleHistories', ['foreignKey' => 'order_article_id']);
+		
+		// We need to catch Person.beforeDelete, so we can stop if order articles are still referenced
+		TableRegistry::get('People')
+				->getEventManager()
+				->on('Person.deleteRule', function(\Cake\Event\EventInterface $event) {
+						if ($this->find()
+								->where(['person_id' => $event->getSubject()->id])
+								->count()) {
+							$event->stopPropagation();
+							$event->getSubject()->setError('person_id', __('Person has orders and therefore cannot be deleted'));
+							
+							// No result, it is in the entity
+							return null;
+						}
+					}
+				);
 	}	
 
 	private $oldData;

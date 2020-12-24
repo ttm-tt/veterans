@@ -384,6 +384,10 @@ class PeopleController extends AppController {
 			}
 		}
 
+		// Need them to check rules :(
+		$this->loadModel('Shop.OrderArticles');
+		$this->loadModel('Shop.Orders');
+
 		if ($this->People->delete($person)) {
 			$this->MultipleFlash->setFlash(__('Person deleted'), 'success');
 			$this->redirect(array('action'=>'index'));

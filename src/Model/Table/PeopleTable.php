@@ -6,6 +6,7 @@ use App\Model\Table\AppTable;
 use ArrayObject;
 use Cake\Event\EventInterface;
 use Cake\Datasource\EntityInterface;
+use Cake\ORM\RulesChecker;
 use Cake\Validation\Validator;
 
 class PeopleTable extends AppTable {
@@ -23,6 +24,7 @@ class PeopleTable extends AppTable {
 				'Users'
 			]
 		]);
+		
 	}
 	
 	public function validationDefault(Validator $validator) : Validator {
@@ -42,10 +44,10 @@ class PeopleTable extends AppTable {
 				],
 			])
  */
-			->allowEmpty('display_name')
+			->allowEmptyString('display_name')
 			->inList('sex', ['M', 'F'])
 			->date('dob', ['ymd', 'dmy', 'mdy'])
-			->allowEmpty('dob', function($context) {
+			->allowEmptyDateTime('dob', null, function($context) {
 					// Only players have a 'P' in the extern_id
 					// Acc. have an 'A' instead
 					if (!empty($context['data']['extern_id']) && strpos($context['data']['extern_id'], 'P') !== false)
@@ -60,6 +62,16 @@ class PeopleTable extends AppTable {
 		return $validator;
 	}
 	
+
+	// Application rules
+	public function buildRules(RulesChecker $rules) : RulesChecker {
+		$rules->addDelete(function($entity, $options) {
+			return !$this->dispatchEvent('Person.deleteRule', null, $entity)->isStopped();
+		});
+		
+		return $rules;
+	}
+
 	// ----------------------------------------------------------------------
 	public function beforeSave(EventInterface $event, EntityInterface $entity, ArrayObject $options) {
 		parent::beforeSave($event, $entity, $options);

@@ -186,19 +186,7 @@ class PeopleControllerTest extends AppTestCase {
 			'is_umpire' => true,
 			'is_player' => true,
 			'dob' => date('Y-m-d', strtotime('-15 years')),
-			'player' => [
-				'extern_id' => -1,
-				'rank_pts' => 100,
-				'ranking_points' => [
-					0 => [
-						'age' => 15,
-						'rank_pts' => 1000						
-					]
-				],
-				'banned_until' => null,				
-			],
-			'passport' => 'Z123456',
-			'passport_expires' => date('Y-m-d', strtotime('+5 years')),
+			'extern_id' => -1,
 			'country_id' => null
 		];
 	}
@@ -313,19 +301,7 @@ class PeopleControllerTest extends AppTestCase {
 			'is_umpire' => false,
 			'is_player' => true,
 			'dob' => date('Y-m-d', strtotime('-15 years')),
-			'player' => [
-				'extern_id' => -1,
-				'rank_pts' => 100,
-				'ranking_points' => [
-					0 => [
-						'age' => 15,
-						'rank_pts' => 1000						
-					]
-				],
-				'banned_until' => null,				
-			],
-			'passport' => 'Z123456',
-			'passport_expires' => date('Y-m-d', strtotime('+5 years')),
+			'extern_id' => -1,
 			'country_id' => null
 		];
 	}
@@ -409,10 +385,51 @@ class PeopleControllerTest extends AppTestCase {
 	
 	
 	/**
-	 * Test delete if a person which is still referenced
+	 * Test delete when some checks rail
 	 */
 	public function testDeleteNOK() : void {
 		$this->markTestIncomplete();
+	}
+	
+	
+	/**
+	 * Test delete with event triggered by delete rule 
+	 */
+	public function testDeleteDeleteRule() : void {
+		// Add a person to the list, so we can be sure we can delete him
+		$patches = $this->providerAddOK();
+		$base = $this->getBaseAdd();
+		
+		$data = Hash::merge($base, $patches[0][0]);		
+		$this->post(['controller' => 'People', 'action' => 'add'], $data);
+		
+		// Find id of new person
+		$people = TableRegistry::get('People');
+		$person = $people->find()->where(['first_name' => $data['first_name']])->first();
+		$id = $person->id;
+		
+		$ret = false;
+		
+		// Add an event for Person.deleteRule, which returns false
+		$people
+				->getEventManager()
+				->on('Person.deleteRule', function(\Cake\Event\EventInterface $event) use(&$ret) {
+						if (!$ret) {
+							$event->stopPropagation();
+							$event->getSubject()->setError('person_id', __('Person cannot be deleted'));
+							
+							// No result, it is in the entity
+							return null;
+						}
+					}
+				);
+				
+		// Should fail because event returns fail
+		$this->assertFalse($people->delete($people->get($id)));
+		
+		// Now the same but should succeed
+		$ret = true;		
+		$this->assertTrue($people->delete($people->get($id)));		
 	}
 	
 	
@@ -438,6 +455,44 @@ class PeopleControllerTest extends AppTestCase {
 		
 		// And person doesn't exist anymore
 		$this->assertNull($table->find()->where(['id' => $id])->first());
+	}
+	/**
+	 * Test delete if the person is still referenced by Registrations
+	 */
+	
+	
+	public function testDeleteOKWithRegistration() : void {
+		// We need a tournament here
+		$this->mergeSession(['Tournaments' => ['id' => 1]]);
+		
+		// Add a person to the list which is referenced
+		$patches = $this->providerAddOK();
+		$base = $this->getBaseAdd();
+		
+		$data = Hash::merge($base, $patches[0][0]);		
+		$this->post(['controller' => 'People', 'action' => 'add'], $data);
+		
+		// Find id of new person
+		$people = TableRegistry::get('People');
+
+		$person = $people->find()->where(['first_name' => $data['first_name']])->first();
+		$id = $person->id;
+		
+		// Add a registration
+		$registration = [
+			'person_id' => $id,
+			'type_id' => 5, // ACC
+			'tournament_id' => 1
+		];
+		
+		$registrations = TableRegistry::get('Registrations');
+		$this->assertNotFalse($registrations->save($registrations->newEntity($registration)));
+		
+		// And now delete it
+		$this->post(['controller' => 'People', 'action' => 'delete', $id]);
+		$this->assertRedirect(['controller' => 'People', 'action' => 'index']);
+		$this->assertNotNull($this->getSession()->read('Flash.error'));
+		$this->assertNull($people->record($id));
 	}
 	
 	
