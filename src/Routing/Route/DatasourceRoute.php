@@ -9,6 +9,7 @@
 namespace App\Routing\Route;
 
 use Cake\Controller\ControllerFactory;
+use Cake\Core\Container;
 use Cake\Datasource\ConnectionManager;
 use Cake\Routing\Route\InflectedRoute;
 use Psr\Http\Message\ServerRequestInterface;
@@ -81,7 +82,7 @@ class DatasourceRoute extends InflectedRoute {
 		
 		// ControllerFactory does not have any instance variables so we can just
 		// create one. We could even use a static instance ...
-		if ( (new ControllerFactory())->getControllerClass(
+		if ( (new ControllerFactory(new Container()))->getControllerClass(
 				$request->withAttribute('params', $params)) === null )
 			return null;
 		
