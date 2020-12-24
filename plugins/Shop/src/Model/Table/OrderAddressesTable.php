@@ -2,6 +2,8 @@
 namespace Shop\Model\Table;
 
 use Shop\Model\Table\ShopAppModelTable;
+use Cake\Validation\Validator;
+
 
 class OrderAddressesTable extends ShopAppModelTable {
 	public function initialize(array $config) : void {
@@ -11,6 +13,19 @@ class OrderAddressesTable extends ShopAppModelTable {
 		
 		$this->belongsTo('Shop.Countries', ['foreignKey' => 'country_id']);
 		
+	}
+	
+	
+	public function validationDefault(Validator $validator) : Validator {
+		
+		$validator
+			->notBlank('first_name')
+			->notBlank('last_name')
+			->notBlank('city')
+			->notBlank('country_id', __('You must select a country'))
+		;
+				
+		return $validator;
 	}
 }
 ?>
