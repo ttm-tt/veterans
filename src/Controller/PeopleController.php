@@ -132,7 +132,7 @@ class PeopleController extends AppController {
 
 		$this->loadModel('Groups');
 
-		$person = $this->People->get($id, ['contain' => ['Nations', 'Users']]);
+		$person = $this->People->get($id, ['contain' => ['Nations', 'Users', 'Registrations']]);
 		
 		$this->loadModel('Shop.OrderArticles');
 		$this->loadModel('Shop.Orders');
