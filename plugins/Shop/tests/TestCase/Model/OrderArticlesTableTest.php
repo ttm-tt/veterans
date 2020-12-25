@@ -21,14 +21,15 @@ use App\Model\Table\GroupsTable;
 class OrderArticlesTableTest extends AppTestCase {
 	public $fixtures = [
 		'app.Groups',
-		'app.Users',
 		'app.Languages',
 		'app.Nations',
+		'app.Organisations',
 		'app.Tournaments',
+		'app.Users',
 		'app.People',
 		'app.Competitions',
-		'app.Registrations',
-		'app.Types'
+		'app.Types',
+		'app.Registrations'
 	];
 	
 	public function setUp() : void {
