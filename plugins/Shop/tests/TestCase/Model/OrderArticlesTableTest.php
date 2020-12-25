@@ -7,10 +7,6 @@ namespace App\Test\TestCase\Controller;
 
 use App\Test\TestCase\AppTestCase;
 
-use Cake\ORM\TableRegistry;
-use Cake\Utility\Hash;
-
-use App\Model\Table\GroupsTable;
 
 /**
  * Test of PeopleController
