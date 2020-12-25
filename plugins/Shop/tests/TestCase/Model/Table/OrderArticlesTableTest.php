@@ -9,10 +9,8 @@ use App\Test\TestCase\AppTestCase;
 
 
 /**
- * Test of PeopleController
- * @covers App\Controller\PeopleController
- * @covers App\Model\Table\PeopleTable
- * @covers App\Model\Entity\Person
+ * Test of OrderArticlesTable
+ * @covers Shop\Model\Table\OrderArticlesTable
  */
 class OrderArticlesTableTest extends AppTestCase {
 	public $fixtures = [
