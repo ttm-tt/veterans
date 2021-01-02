@@ -4,6 +4,10 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 
+use Cake\Datasource\Exception\RecordNotFoundException;
+use Cake\Datasource\Exception\InvalidPrimaryKeyException;
+
+
 class NationsController extends AppController {
 
 	public $name = 'Nations';
@@ -20,7 +24,14 @@ class NationsController extends AppController {
 			$this->MultipleFlash->setFlash(__('Invalid association'), 'error');
 			$this->redirect(array('action' => 'index'));
 		}
-		$this->set('nation', $this->Nations->get($id));
+
+		try {
+			$this->set('nation', $this->Nations->get($id));
+		} catch (InvalidPrimaryKeyException | RecordNotFoundException $_ex) {
+			$this->_UNUSED($_ex);
+			$this->MultipleFlash->setFlash(__('Invalid association'), 'error');
+			return $this->redirect(array('action' => 'index'));			
+		}
 	}
 
 	function add() {
@@ -51,8 +62,14 @@ class NationsController extends AppController {
 			return $this->redirect(array('action' => 'index'));
 		} 
 		
-		$nation = $this->Nations->get($id);
-		
+		try {
+			$nation = $this->Nations->get($id);
+		} catch (InvalidPrimaryKeyException | RecordNotFoundException $_ex) {
+			$this->_UNUSED($_ex);
+			$this->MultipleFlash->setFlash(__('Invalid association'), 'error');
+			return $this->redirect(array('action' => 'index'));			
+		}
+
 		if ($this->request->is(['post', 'put'])) {
 			$nation = $this->Nations->patchEntity($nation, $this->request->getData());
 			
@@ -68,12 +85,20 @@ class NationsController extends AppController {
 	}
 
 	function delete($id = null) {
+		$this->request->allowMethod(['post', 'delete']);
+		
 		if (!$id) {
 			$this->MultipleFlash->setFlash(__('Invalid id for association'), 'error');
 			return $this->redirect(array('action'=>'index'));
 		}
 		
-		$nation = $this->Nations->get($id);
+		try {
+			$nation = $this->Nations->get($id);
+		} catch (InvalidPrimaryKeyException | RecordNotFoundException $_ex) {
+			$this->_UNUSED($_ex);
+			$this->MultipleFlash->setFlash(__('Invalid association'), 'error');
+			return $this->redirect(array('action' => 'index'));			
+		}
 		
 		if ($this->Nations->delete($nation)) {
 			$this->MultipleFlash->setFlash(__('Association deleted'), 'success');
