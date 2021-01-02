@@ -43,16 +43,14 @@ class CompetitionsTable extends AppTable {
 					return ($value === 'X') === ($context['data']['sex'] === 'X');
 				}
 			])
-			->allowEmpty('born')
+			->allowEmptyString('born')
 			->integer('born')
 			->lessThan('born', date('Y'))
-			->greaterThanOrEqual('born', date('Y') - 100)
-			->allowEmpty('entries')
+			->greaterThanOrEqual('born', date('Y') - 120)
+			->allowEmptyString('entries')
 			->nonNegativeInteger('entries')
-			->allowEmpty('entries-host')
-			->nonNegativeInteger('entries-host')
-			->allowEmpty('entries-min')
-			->nonNegativeInteger('entries-min')
+			->allowEmptyString('entries_host')
+			->nonNegativeInteger('entries_host')
 		;
 		
 		return $validator;

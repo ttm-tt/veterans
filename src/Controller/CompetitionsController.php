@@ -4,6 +4,8 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 
+use Cake\Datasource\Exception\RecordNotFoundException;
+use Cake\Datasource\Exception\InvalidPrimaryKeyException;
 use Cake\Event\EventInterface;
 
 class CompetitionsController extends AppController {
@@ -66,7 +68,13 @@ class CompetitionsController extends AppController {
 			return $this->redirect(array('controller' => 'tournaments', 'action' => 'index'));
 		}
 		
-		$competition = $this->Competitions->get($id);
+		try {
+			$competition = $this->Competitions->get($id);
+		} catch (InvalidPrimaryKeyException | RecordNotFoundException $_ex) {
+			$this->_UNUSED($_ex);
+			$this->MultipleFlash->setFlash(__('Invalid competition'), 'error');
+			return $this->redirect(array('action' => 'index'));			
+		}
 		
 		if ($this->request->is(['post', 'put'])) {
 			$competition = $this->Competitions->patchEntity($competition, $this->request->getData());
@@ -75,6 +83,8 @@ class CompetitionsController extends AppController {
 				$this->MultipleFlash->setFlash(__('The competition has been saved'), 'success');
 				return $this->redirect(array('action' => 'index'));
 			}
+				
+			$this->MultipleFlash->setFlash(__('The competition could not be saved. Please, try again.'), 'error');
 		}
 		
 		$this->set('competition', $competition);
