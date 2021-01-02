@@ -57,7 +57,10 @@ class PagesControllerTest extends AppTestCase {
 	
 	// Test /onParticipantData
 	public function testOnParticipantData() : void {
+        $this->configRequest([
+            'headers' => ['Accept' => 'application/json']
+        ]);
 		$this->post(['controller' => 'Pages', 'action' => 'onParticipantData'], []);
-		$this->assertRedirectContains('/pages/onparticipantdata');
+		$this->assertResponseOk();
 	}
 }
