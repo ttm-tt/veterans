@@ -51,7 +51,6 @@ function camelizeName(name) {
 				'options' => $sex
 			));
 		} else {
-			echo $this->Form->control('sex', array('type' => 'hidden'));
 			echo $this->Form->control('sex', array(
 				'value' => $sex[$person['sex']],
 				'type' => 'text',
@@ -97,7 +96,6 @@ function camelizeName(name) {
 				'label' => __('Association')
 			));
 		} else {
-			echo $this->Form->control('nation_id', array('type' => 'hidden'));
 			echo $this->Form->control('nation_id', array(
 				'value' => $nations[$person['nation_id']],
 				'type' => 'text',

@@ -98,6 +98,8 @@ class AppTestCase extends TestCase {
 		$body = $this->_getBodyAsString();
 		$tidy = new \tidy;
 		$tidy->parseString($body);
+		if ($tidy->getStatus() !== 0)
+			file_put_contents (TMP . date('Ymd\THis') . '-' . $this->getName() . '.html', $body);
 		$this->assertEquals(0, $tidy->getStatus(), $tidy->errorBuffer ?? '');
 	}	
 }

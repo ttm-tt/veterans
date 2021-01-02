@@ -5,6 +5,9 @@ namespace App\Controller;
 use App\Controller\AppController;
 use App\Model\Table\GroupsTable;
 use App\Model\Table\UsersTable;
+
+use Cake\Datasource\Exception\RecordNotFoundException;
+use Cake\Datasource\Exception\InvalidPrimaryKeyException;
 use Cake\Utility\Hash;
 
 class PeopleController extends AppController {
@@ -28,6 +31,13 @@ class PeopleController extends AppController {
 				$this->request->getSession()->write('People.last_name', str_replace('_', ' ', $last_name));
 		}
 
+		if ($this->request->getQuery('sex') !== null) {
+			if ($this->request->getQuery('sex') === 'all')
+				$this->request->getSession()->delete('People.sex');
+			else
+				$this->request->getSession()->write('People.sex', $this->request->getQuery('sex'));
+		}
+
 		if ($this->request->getQuery('user_id') !== null) {
 			if ($this->request->getQuery('user_id') == 'all')
 				$this->request->getSession()->delete('Users.id');
@@ -44,6 +54,10 @@ class PeopleController extends AppController {
 		// Filter for Name
 		if ($this->request->getSession()->check('People.last_name'))
 			$conditions[] = 'People.last_name COLLATE utf8_bin LIKE \'' . $this->request->getSession()->read('People.last_name') . '%\'';
+
+		// Filter for Sex
+		if ($this->request->getSession()->check('People.sex'))
+			$conditions['People.sex'] = $this->request->getSession()->read('People.sex');
 
 		// Filter for User
 		if ($this->request->getSession()->check('Users.id'))
@@ -369,12 +383,20 @@ class PeopleController extends AppController {
 	}
 
 	function delete($id = null) {
+		$this->request->allowMethod(['post', 'delete']);
+		
 		if (!$id) {
 			$this->MultipleFlash->setFlash(__('Invalid id for person'), 'error');
 			$this->redirect(array('action'=>'index'));
 		}
 
-		$person = $this->People->get($id);
+		try {
+			$person = $this->People->get($id);
+		} catch (InvalidPrimaryKeyException | RecordNotFoundException $_ex) {
+			$this->_UNUSED($_ex);
+			$this->MultipleFlash->setFlash(__('Invalid person'), 'error');
+			return $this->redirect(array('action' => 'index'));			
+		}
 
 		// Security check: May the current user view this person?
 		if (!UsersTable::hasRootPrivileges($this->_user)) {

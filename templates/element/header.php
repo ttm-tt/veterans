@@ -71,7 +71,7 @@ use Cake\Routing\Router;
 
 <?php if (!empty($controllerMenu)) { ?>
 <div id="menu-top-bar" class="top-bar navmenu" data-responsive-toggle="navmenu" data-hide-for="large">
-  <button class="menu-icon" type="button" data-toggle="navmenu"></button>
+	<button class="menu-icon" type="button" data-toggle="navmenu">&nbsp;</button>
 </div>
 
 <div id="navmenu" class="navmenu">

@@ -411,4 +411,10 @@ class AppController extends ShimController {
 
 		return $str;
 	}
+
+
+	// A dummy method to avoid warnings about unused variables
+	protected function _UNUSED($unused) {
+		
+	}
 }

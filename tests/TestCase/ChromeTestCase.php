@@ -60,7 +60,7 @@ class ChromeTestCase extends TestCase {
 
 	public function tearDown() : void {
 		if ($this->hasFailed()) {
-			$this->webDriver->takeScreenshot(TMP . date('YmdTHis') . '-' . $this->getName() . '.png');
+			$this->webDriver->takeScreenshot(TMP . date('Ymd\THis') . '-' . $this->getName() . '.png');
 		}
 		$this->webDriver->close();
 		

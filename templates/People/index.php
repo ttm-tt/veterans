@@ -47,9 +47,17 @@
 					echo ' ' . $this->Html->link($name, ['?' => ['last_name' => urlencode(str_replace(' ', '_', $char))]]);
 			}
 		}
-
 		echo '</td></tr>';
 
+		echo $this->element('filter', [
+			'label' => __('Sex'),
+			'id' => 'sex',
+			'options' => [
+				'F' => __('Women'),
+				'M' => __('Men')
+			]
+		]);
+		
 		if (!empty($user_id)) {
 			echo '<tr></tr>';
 			echo '<tr><td><label class="filter">' . __('Username') . '</td><td>';

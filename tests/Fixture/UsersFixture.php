@@ -12,7 +12,6 @@ class UsersFixture extends TestFixture
 {
 	public $import = ['model' => 'Users'];
 
-	/*
 	public function init(): void
     {
         $this->records = [
@@ -45,7 +44,7 @@ class UsersFixture extends TestFixture
                 'enabled' => true,
                 'email' => 'nobody@middle.nowhere',
                 'add_email' => '',
-                'group_id' => 2,
+                'group_id' => 8,
                 'nation_id' => 2,
                 'tournament_id' => null,
 				'language_id' => null,
@@ -82,5 +81,4 @@ class UsersFixture extends TestFixture
         ];
         parent::init();
     }
-	 */
 }

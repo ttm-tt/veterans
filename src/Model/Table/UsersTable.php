@@ -41,7 +41,7 @@ class UsersTable extends AppTable {
 
 	public function validationDefault(Validator $validator) : Validator {		
 		// Username may not be empty
-		$validator->notEmpty('username');
+		$validator->notEmptyString('username');
 		
 		return $validator;
 	}

@@ -9,9 +9,6 @@ use App\Test\TestCase\AppTestCase;
 
 use Cake\ORM\TableRegistry;
 use Cake\Utility\Hash;
-use Laminas\Diactoros\UploadedFile;
-
-use App\Model\Table\GroupsTable;
 
 /**
  * Test of PeopleController
@@ -22,14 +19,16 @@ use App\Model\Table\GroupsTable;
 class PeopleControllerTest extends AppTestCase {
 	public $fixtures = [
 		'app.Groups',
-		'app.Users',
 		'app.Languages',
+		'app.Organisations',
 		'app.Nations',
 		'app.Tournaments',
+		'app.Users',
 		'app.People',
+		'app.Types',
 		'app.Competitions',
 		'app.Registrations',
-		'app.Types'
+		'app.Participants'
 	];
 	
 	public function setUp() : void {
@@ -94,43 +93,7 @@ class PeopleControllerTest extends AppTestCase {
 		$this->get(['controller' => 'People', 'action' => 'index', '?' => ['sex' => 'all']]);
 		$this->assertNull($this->getSession()->read('People.sex'));
 		$this->assertResponseOk();
-		$this->assertBodyIsValid();
-		
-		// Player
-		$this->get(['controller' => 'People', 'action' => 'index', '?' => ['is_player' => 1]]);
-		$this->assertResponseOk();
-		$this->assertBodyIsValid();
-		
-		// Check Session
-		$this->assertEquals(1, $this->getSession()->read('People.is_player'));
-		
-		// Not player
-		$this->get(['controller' => 'People', 'action' => 'index', '?' => ['is_player' => -1]]);
-		$this->assertResponseOk();
-		$this->assertBodyIsValid();
-		
-		// Check Session
-		$this->assertEquals(-1, $this->getSession()->read('People.is_player'));
-		
-		// Reset filter
-		$this->get(['controller' => 'People', 'action' => 'index', '?' => ['is_player' => 'all']]);
-		$this->assertNull($this->getSession()->read('People.is_player'));
-		$this->assertResponseOk();
-		$this->assertBodyIsValid();
-		
-		// Umpire
-		$this->get(['controller' => 'People', 'action' => 'index', '?' => ['is_umpire' => 1]]);
-		$this->assertResponseOk();
-		$this->assertBodyIsValid();
-		
-		// Check Session
-		$this->assertEquals(1, $this->getSession()->read('People.is_umpire'));
-		
-		// Reset filter
-		$this->get(['controller' => 'People', 'action' => 'index', '?' => ['is_umpire' => 'all']]);
-		$this->assertNull($this->getSession()->read('People.is_umpire'));
-		$this->assertResponseOk();
-		$this->assertBodyIsValid();
+		$this->assertBodyIsValid();		
 	}
 	
 	
@@ -148,9 +111,12 @@ class PeopleControllerTest extends AppTestCase {
 	 * Test view with valid id
 	 */
 	public function testView() {
+		$this->markTestIncomplete('Requires Shop.Orders, ...');
+/*		
 		$this->get(['controller' => 'People', 'action' => 'view', 1]);
 		$this->assertResponseOk();
 		$this->assertBodyIsValid();
+ */
 	}
 	
 	
@@ -199,13 +165,6 @@ class PeopleControllerTest extends AppTestCase {
 			// Empty values
 			[[				
 			]],			
-			// Duplicate name
-			[[
-				'first_name' => 'Max',
-				'last_name' => 'MUSTERMANN',
-				'sex' => 'M',
-				'nation_id' => 2,				
-			]],
 		);
 	}
 	
@@ -235,6 +194,13 @@ class PeopleControllerTest extends AppTestCase {
 				'sex' => 'M',
 				'nation_id' => 2,				
 			]],
+			// Duplicate name is OK, display_name is calculated in this case
+			[[
+				'first_name' => 'Max',
+				'last_name' => 'MUSTERMANN',
+				'sex' => 'M',
+				'nation_id' => 2,				
+			]],
 		);
 	}
 	
@@ -247,13 +213,15 @@ class PeopleControllerTest extends AppTestCase {
 		$base = $this->getBaseAdd();
 		$data = Hash::merge($base, $patch);
 		
+		$table = TableRegistry::get('People');
+		$oldCount = $table->find()->where(['first_name' => $data['first_name']])->count();
+
 		$this->post(['controller' => 'People', 'action' => 'add'], $data);
 		$this->assertNull($this->getSession()->read('Flash.error'));
 		$this->assertRedirect(['controller' => 'People', 'action' => 'index']);	
 		
-		$table = TableRegistry::get('People');
 		$person = $table->find()->where(['first_name' => $data['first_name']]);
-		$this->assertEquals(1, $person->count());
+		$this->assertEquals($oldCount + 1, $person->count());
 	}
 	
 	
@@ -305,69 +273,6 @@ class PeopleControllerTest extends AppTestCase {
 			'country_id' => null
 		];
 	}
-	
-	/**
-	 * Test edit with different association
-	 */
-	public function testEditForbidden() : void {
-		// Change nation_id of 'association' user to sthg different than the person
-		// We use bulk update so Aros is not triggered
-		TableRegistry::get('Users')->updateAll(
-				['nation_id' => 1], ['id' => 2]
-		);
-		
-		$this->session([
-			'Auth' => [
-				'User' => [
-					'id' => 2,
-					'username' => 'association',
-					'group_id' => GroupsTable::getAssociationId(),
-					'nation_id' => 1,
-					'enabled' => true
-				]
-			]
-		]);		
-
-		$data = $this->getBaseEdit();
-		$this->post(['controller' => 'People', 'action' => 'edit', 3], $data);
-		$this->assertNotNull($this->getSession()->read('Flash.error'));
-		$this->assertRedirect(['controller' => 'People', 'action' => 'index']);
-	}
-	
-	
-	/**
-	 * Test edit with different association
-	 */
-	public function testEditAllowed() : void {
-		$data = $this->getBaseEdit();
-		$this->post(['controller' => 'People', 'action' => 'edit', 3], $data);
-		$this->assertNull($this->getSession()->read('Flash.error'));
-		$this->assertRedirect(['controller' => 'People', 'action' => 'index']);
-		
-		$table = TableRegistry::get('People');
-		$count = $table->find()->where(['first_name' => 'Kevin'])->count();
-		$this->assertEquals(1, $count);
-	}
-	
-	/**
-	 * Test change nationality, which adds to the History
-	 */
-	public function testEditNationality() : void {
-		$data = $this->getBaseEdit();
-		$data['nation_id'] = 1;
-		$this->post(['controller' => 'People', 'action' => 'edit', 3], $data);
-		$this->assertNull($this->getSession()->read('Flash.error'));
-		$this->assertRedirect(['controller' => 'People', 'action' => 'index']);
-		
-		$table = TableRegistry::get('People');
-		$person = $table->find()->where(['id' => '3'])->first();
-		$this->assertEquals(1, $person->nation_id);	
-		
-		$table = TableRegistry::get('PersonHistories');
-		$count = $table->find()->where(['person_id' => 3])->count();
-		$this->assertGreaterThan(0, $count);
-	}
-	
 	
 	/**
 	 * Test delete with invalid method or id
@@ -437,6 +342,8 @@ class PeopleControllerTest extends AppTestCase {
 	 * Test delete valid id
 	 */
 	public function testDeleteOK() : void {
+		$this->markTestIncomplete('Requires Shop.Orders, ...');		
+/*		
 		// Add a person to the list, so we can be sure we can delete him
 		$patches = $this->providerAddOK();
 		$base = $this->getBaseAdd();
@@ -455,13 +362,16 @@ class PeopleControllerTest extends AppTestCase {
 		
 		// And person doesn't exist anymore
 		$this->assertNull($table->find()->where(['id' => $id])->first());
+ */
 	}
+	
+	
 	/**
 	 * Test delete if the person is still referenced by Registrations
 	 */
-	
-	
 	public function testDeleteOKWithRegistration() : void {
+		$this->markTestIncomplete('Requires Shop.Orders, ...');		
+/*		
 		// We need a tournament here
 		$this->mergeSession(['Tournaments' => ['id' => 1]]);
 		
@@ -493,187 +403,7 @@ class PeopleControllerTest extends AppTestCase {
 		$this->assertRedirect(['controller' => 'People', 'action' => 'index']);
 		$this->assertNotNull($this->getSession()->read('Flash.error'));
 		$this->assertNull($people->record($id));
-	}
-	
-	
-	/**
-	 * Test upload_photo
-	 */
-	public function testUploadPhotoOK() : void {
-		$fname = TESTS . 'Fixture' . DS . 'Files' . DS . 'person.png';
-		$fsize = filesize($fname);
-		
-		$temp = tmpfile();
-		fwrite($temp, file_get_contents($fname));
-		
-		$data = [
-			'UploadPhoto' => new UploadedFile(
-					$temp, $fsize, UPLOAD_ERR_OK, 'person.png', 'image/png'
-			)
-		];
-		
-		$this->post(['controller' => 'People', 'action' => 'upload_photo', 1], $data);
-		$this->assertRedirect();
-		
-		$table = TableRegistry::get('Photos');
-		$count = $table->find()->where(['person_id' => 1])->count();
-		$this->assertEquals(1, $count);
-
-		// TODO: Verify no tmp file remains
-		
-		fclose($temp);
-	}
-	
-	
-	/**
-	 * Test upload_photo
-	 */
-	public function testUploadPhotoNOK() : void {
-		$fname = TESTS . 'Fixture' . DS . 'Files' . DS . 'person.png';
-		$fsize = filesize($fname);
-		
-		$temp = tmpfile();
-		fwrite($temp, file_get_contents($fname));
-		
-		$data = [
-			'UploadPhoto' => new UploadedFile(
-					$temp, $fsize, UPLOAD_ERR_NO_FILE, 'person.png', 'image/png'
-			)
-		];
-		
-		$this->post(['controller' => 'People', 'action' => 'upload_photo', 1], $data);
-		$this->assertRedirect();
-		$this->assertNotNull($this->getSession()->read('Flash.warning'));
-		
-		$table = TableRegistry::get('Photos');
-		$count = $table->find()->where(['person_id' => 1])->count();
-		$this->assertEquals(0, $count);
-
-		// TODO: Verify no tmp file remains
-		
-		fclose($temp);
-	}
-	
-	
-	/**
-	 * Test update people
-	 */
-	public function testUpdatePeople() : void {
-		$fname = TESTS . 'Fixture' . DS . 'Files' . DS . 'update_people.csv';
-		$fsize = filesize($fname);
-		
-		$temp = tmpfile();
-		fwrite($temp, file_get_contents($fname));
-		
-		$data = [
-			'File' => new UploadedFile(
-					$temp, $fsize, UPLOAD_ERR_OK, 'update_people.csv', 'text/csv'
-			)
-		];
-		
-		$this->get(['controller' => 'People', 'action' => 'update_people']);
-		$this->assertResponseOk();
-		$this->assertBodyIsValid();
-		
-		$this->post(['controller' => 'People', 'action' => 'update_people'], $data);
-		$this->assertRedirect();
-		$this->assertNull($this->getSession()->read('Flash.error'));
-		
-		// Kevin was added
-		$table = TableRegistry::get('People');
-		$count = $table->find()->where(['first_name' => 'Kevin'])->count();
-		$this->assertEquals(1, $count);
-
-		// Chantal, though inactive, was added, too
-		$table = TableRegistry::get('Players');
-		$count = $table->find()->where(['extern_id >=' => 200000])->count();
-		$this->assertEquals(2, $count);
-
-		// TODO: Verify no tmp file remains
-		
-		fclose($temp);		
-	}
-	
-	
-	/**
-	 * Test update ranking points U15
-	 */
-	public function testUpdateRanking() : void {
-		$fname = TESTS . 'Fixture' . DS . 'Files' . DS . 'update_u15.csv';
-		$fsize = filesize($fname);
-		
-		$temp = tmpfile();
-		fwrite($temp, file_get_contents($fname));
-		
-		$data = [
-			'age' => 15,
-			'File' => new UploadedFile(
-					$temp, $fsize, UPLOAD_ERR_OK, 'update_u15.csv', 'text/csv'
-			)
-		];
-		
-		$this->get(['controller' => 'People', 'action' => 'update_ranking']);
-		$this->assertResponseOk();
-		$this->assertBodyIsValid();
-		
-		$this->post(['controller' => 'People', 'action' => 'update_ranking'], $data);
-		$this->assertRedirect();
-		$this->assertNull($this->getSession()->read('Flash.error'));
-
-		// Check U15 ranking points of Leon
-		$people = TableRegistry::get('People');
-		
-		$leon = $people->get(3, [
-				'contain' => [
-					'Players' => 'RankingPoints'
-				]
-			]
-		);
-
-		$this->assertNotNull($leon);
-		$this->assertNotNull($leon->player);
-		$this->assertNotNull($leon->player->ranking_points);
-		
-		$pts = null;
-		
-		foreach ($leon->player->ranking_points as $val) {
-			if ($val->age === 15)
-				$pts = $val->rank_pts;
-		}
-		
-		$this->assertEquals(1000, $pts);
-		
-		fclose($temp);		
-	}
-	
-	
-	/**
-	 * Test list_registrations by invalid id
-	 */
-	public function testListRegistrationsInvalid() : void {
-		$this->get(['controller' => 'People', 'action' => 'list_registrations']);
-		$this->assertNotNull($this->getSession()->read('Flash.error'));
-		$this->assertRedirect();
-	}
-	
-	
-	/**
-	 * Test list_registrations without permissions
-	 */
-	public function testListRegistrationsForbidden() : void {
-		// TODO Run test with non-admin
-		$this->markTestIncomplete();
-	}
-	
-	
-	/**
-	 * Test list_registrations by valid id
-	 */
-	public function testListRegistrationsOK() : void {
-		$this->get(['controller' => 'People', 'action' => 'list_registrations', 3]);
-		$this->assertNull($this->getSession()->read('Flash.error'));
-		$this->assertResponseOk();
-		$this->assertBodyIsValid();
+ */
 	}
 	
 	
