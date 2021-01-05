@@ -80,7 +80,6 @@ class Rpc2Controller extends AppController
 	function _listCompetitions($tid) {
 		$this->loadModel('Competitions');
 		return $this->Competitions->find('all', array(
-			'recursive' => -1,
 			'conditions' => array('tournament_id' => $tid)
 		))->hydrate(false)->all()->toArray();
 	}
@@ -91,7 +90,6 @@ class Rpc2Controller extends AppController
 		$this->loadModel('Registrations');
 		
 		return $this->Nations->find('all', array(
-			'recursive' => -1,
 			'conditions' => [
 				'Nations.id IN' => $this->Registrations->find('all', array(
 					'contain' => ['People'],
@@ -148,7 +146,6 @@ class Rpc2Controller extends AppController
 		$this->loadModel('Team');
 		
 		$teams = $this->Team->find('all', array(
-			'recursive' => -1,
 			'contain' => 'RegistrationTeam',
 			'conditions' => array(
 				'Registration.tournament_id' => $tid				

@@ -5,6 +5,7 @@
 	<tr>
 			<th><?php echo $this->Paginator->sort('name');?></th>
 			<th><?php echo $this->Paginator->sort('description');?></th>
+			<th><?php echo $this->Paginator->sort('category');?></th>
 			<th><?php echo $this->Paginator->sort('sex');?></th>
 			<th><?php echo $this->Paginator->sort('type_of', __('Type'));?></th>
 			<th><?php echo $this->Paginator->sort('born');?></th>
@@ -26,6 +27,7 @@
 	<tr<?php echo $class;?>>
 		<td><?php echo $competition['name']; ?>&nbsp;</td>
 		<td><?php echo $competition['description']; ?>&nbsp;</td>
+		<td><?php echo $competition['category']; ?>&nbsp;</td>
 		<td><?php echo $competition['sex']; ?>&nbsp;</td>
 		<td><?php echo $competition['type_of']; ?>&nbsp;</td>
 		<td><?php echo $competition['born']; ?>&nbsp;</td>

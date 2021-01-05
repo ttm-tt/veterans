@@ -10,6 +10,7 @@
 		));
 		echo $this->Form->control('name');
 		echo $this->Form->control('description');
+		echo $this->Form->control('category');
 		echo $this->Form->control('sex', array(
 			'type' => 'select',
 			'options' => $sex

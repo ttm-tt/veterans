@@ -10,6 +10,7 @@
 		echo $this->Form->control('tournament_id', array('type' => 'hidden'));
 		echo $this->Form->control('name');
 		echo $this->Form->control('description');
+		echo $this->Form->control('category');
 		echo $this->Form->control('value_sex', array(
 			'readonly' => 'readonly', 
 			'type' => 'text', 
