@@ -254,7 +254,7 @@ class PagesController extends AppController {
 		$response = $this->Datatable->getResponse($request, $this->Registrations);
 		
 		$this->set('response', $response);
-		$this->viewBuilder()->setOption('serialize', ['response']);
+		$this->viewBuilder()->setOption('serialize', 'response');
 		// $this->set('_serialize', 'response');
 		// echo json_encode($response);
 	}
