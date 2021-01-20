@@ -299,9 +299,10 @@ class IXR_Server {
             $this->callbacks = $callbacks;
         }
         $this->setCallbacks();
-	if (!$wait) {
-            $this->serve($data);
-	}
+		if (!$wait) {
+			$xml = $this->serve($data);
+			$this->output($xml);
+		}
     }
     function serve($data = false) {
         if (!$data) {
@@ -339,7 +340,10 @@ class IXR_Server {
 
 EOD;
         // Send it
-        $this->output($xml);
+        // $this->output($xml);
+		// Instead of echoing the result we return it and leave it to the caller
+		// what to do with it. This way we can use it in tests
+		return $xml;
     }
     function call($methodname, $args) {
         if (!$this->hasMethod($methodname)) {

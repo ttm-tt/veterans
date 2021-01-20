@@ -9,18 +9,15 @@ use App\Model\Table\TypesTable;
 use Cake\Event\EventInterface;
 
 // XXX: Why do I have to do this manually?
-require ROOT . '/vendor/greenfieldtech-nirs/ixr-xmlrpc/ixr_xmlrpc.php';
+require_once ROOT . '/vendor/greenfieldtech-nirs/ixr-xmlrpc/ixr_xmlrpc.php';
 
-use \IXR_Server;
 
 class Rpc2Controller extends AppController
 {
-	var $server = null;
-
 	function beforeFilter(EventInterface $event) {
 		parent::beforeFilter($event);
 		
-		$this->Auth->config('authenticate', array('Basic' => [
+		$this->Auth->setConfig('authenticate', array('Basic' => [
 				'passwordHasher' => [
 					'className' => 'Fallback',
 					'hashers' => [
@@ -48,7 +45,7 @@ class Rpc2Controller extends AppController
 		
 		$this->autoRender = false;
 
-		$this->server = new IXR_server(array(
+		$server = new \IXR_server(array(
 			'onlineentries.echo' => array(&$this, '_echo'),
 			'onlineentries.listTournaments' => array(&$this, '_listTournaments'),
 			'onlineentries.listCompetitions' => array(&$this, '_listCompetitions'),
@@ -59,7 +56,15 @@ class Rpc2Controller extends AppController
 			'onlinenetries.listTeams' => array(&$this, '_listTeams'),
 			'onlineentries.addPeople' => array(&$this, '_addPeople'),
 			'onlineentries.sendWelcomeMail' => array(&$this, '_sendWelcomeMail'),
-		));
+		), false, true);
+		
+		$ret = $server->serve($this->request->getBody());
+		
+		// Setup a response with the returned data
+		$this->response = $this->response
+				->withType('text/xml')
+				->withStringBody($ret)
+		;		
 	}
 
 
@@ -74,14 +79,14 @@ class Rpc2Controller extends AppController
 		return $this->Tournaments->find('all', array(
 			'conditions' => 'start_on > ' . date('Y-m-d'),
 			'order' => 'start_on DESC'
-		))->hydrate(false)->all()->toArray();
+		))->disableHydration()->all()->toArray();
 	}
 
 	function _listCompetitions($tid) {
 		$this->loadModel('Competitions');
 		return $this->Competitions->find('all', array(
 			'conditions' => array('tournament_id' => $tid)
-		))->hydrate(false)->all()->toArray();
+		))->disableHydration()->all()->toArray();
 	}
 
 
@@ -100,7 +105,7 @@ class Rpc2Controller extends AppController
 					]
 				))
 			]
-		))->hydrate(false)->all()->toArray();
+		))->disableHydration()->all()->toArray();
 	}
 
 	
@@ -115,7 +120,7 @@ class Rpc2Controller extends AppController
 				'Registrations.tournament_id' => $tid,
 				'Registrations.type_id' => TypesTable::getPlayerId()
 			)
-		))->hydrate(false)->all()->toArray();
+		))->disableHydration()->all()->toArray();
 	}
 
 	
@@ -137,7 +142,7 @@ class Rpc2Controller extends AppController
 				'Registrations.tournament_id' => $tid, 
 				'Registrations.type_id' => TypesTable::getPlayerId()
 			),
-		))->hydrate(false)->all()->toArray();
+		))->disableHydration()->all()->toArray();
 	}
 	
 	
