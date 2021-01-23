@@ -5,9 +5,9 @@ declare(strict_types=1);
 
 namespace App\Test\TestCase\Controller;
 
-use Cake\ORM\TableRegistry;
-use App\Test\TestCase\AppTestCase;
 use App\Model\Table\GroupsTable;
+use App\Test\TestCase\AppTestCase;
+use Cake\ORM\TableRegistry;
 
 /**
  * Test of RegistrationsController
@@ -30,8 +30,11 @@ class RegistrationsControllerTest extends AppTestCase {
 		'app.ParticipantHistories',
 		'plugin.Shop.Articles',
 		'plugin.Shop.OrderStatus',
+		'plugin.Shop.OrderSettings',
 		'plugin.Shop.Orders',
-		'plugin.Shop.OrderArticles'
+		'plugin.Shop.OrderHistories',
+		'plugin.Shop.OrderArticles',
+		'plugin.Shop.OrderArticleHistories'
 	];
 
 	
@@ -106,6 +109,57 @@ class RegistrationsControllerTest extends AppTestCase {
 	
 
 	/**
+	 * Get add template
+	 */
+	public function testAddParticipantGet() : void {
+		$this->get(['controller' => 'Registrations', 'action' => 'add_participant']);
+		$this->assertResponseOk();
+		$this->assertBodyIsValid();
+	}
+	
+	
+	/**
+	 * Cancel add 
+	 */
+	public function testAddParticipantCancel() : void {
+		$this->post(['controller' => 'Registrations', 'action' => 'add_participant'], ['cancel' => 'Cancel']);
+		$this->assertRedirect(['action' => 'index']);
+	}
+	
+	
+	/**
+	 * Test add valid
+	 */
+	public function testAddParticipantValid() : void {
+		$data = [
+			'tournament_id' => 1,
+			'person' => [
+				'first_name' => 'Player',
+				'last_name' => 'Aaa',
+				'sex' => 'M',
+				'nation_id' => 2, // GER
+				'dob' => date('Y-m-d', strtotime('-41 years')),
+				'username' => 'touroperator'
+			],
+			'type_id' => 1,
+			'participant' => ['single_id' => 1]
+		];
+		
+		$this->post(['controller' => 'Registrations', 'action' => 'add_participant'], $data);
+		$this->assertRedirect();
+		$this->assertNotNull($this->getSession()->read('Flash.success'));		
+		
+		// Read back what is in DB
+		$table = TableRegistry::get('People');
+		$person = $table->find()->where(['first_name' => 'Player', 'last_name' => 'Aaa'])->first();
+		$this->assertNotNull($person);
+		$table = TableRegistry::get('Registrations');
+		$registration = $table->find()->where(['person_id' => $person->id])->first();
+		$this->assertNotNull($registration);
+	}
+	
+
+	/**
 	 * Test onChangePerson
 	 */
 	public function testOnChangePerson() : void {
@@ -156,6 +210,18 @@ class RegistrationsControllerTest extends AppTestCase {
 		$rid = $this->_addRegistration();
 		
 		$this->get(['controller' => 'Registrations', 'action' => 'edit', $rid]);
+		$this->assertResponseOk();
+		$this->assertBodyIsValid();
+	}
+	
+	
+	/**
+	 * Get edit template
+	 */
+	public function testEditParticipantGet() : void {
+		$rid = $this->_addRegistration();
+		
+		$this->get(['controller' => 'Registrations', 'action' => 'edit_participant', $rid]);
 		$this->assertResponseOk();
 		$this->assertBodyIsValid();
 	}

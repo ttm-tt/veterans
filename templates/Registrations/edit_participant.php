@@ -141,8 +141,6 @@ $(document).ready(function() {
 		echo $this->Form->control('participant.cancelled', array('type' => 'hidden'));
 		echo $this->Form->control('participant.team_cancelled', array('type' => 'hidden'));
 
-		echo $this->Form->control('person_id', array('type' => 'hidden'));
-
 		if ($isParticipant) {
 			echo $this->Form->control('person.display_name', array(
 				'label' => __d('user', 'Person'), 
@@ -204,7 +202,8 @@ $(document).ready(function() {
 				'type' => 'select', 
 				'empty' => __d('user', 'Select gender'),
 				'options' =>array('M' => __d('user', 'Man'), 'F' => __d('user', 'Woman')),
-				'readonly' => true
+				'readonly' => true,
+				'id' => false
 			));
 		}
 		
@@ -296,7 +295,7 @@ $(document).ready(function() {
 					echo $this->Form->control('participant.double_partner_id', array(
 						'div' => array(
 							'id' => 'ParticipantDoublePartner', 
-							'style' => ($registration['participant']['double_id'] ? "display:block" : "display:none")
+							'style' => ($registration['participant']['double_id'] ? '"display:block"' : '"display:none"')
 						), 
 						'empty' => __d('user', 'Partner wanted'), 
 						'options' => $double_partner
@@ -335,7 +334,7 @@ $(document).ready(function() {
 					echo $this->Form->control('participant.mixed_partner_id', array(
 						'div' => array(
 							'id' => 'ParticipantMixedPartner', 
-							'style' => ($registration['participant']['mixed_id'] ? "display:block" : "display:none")
+							'style' => ($registration['participant']['mixed_id'] ? '"display:block"' : '"display:none"')
 						), 
 						'empty' => __d('user', 'Partner wanted'), 
 						'options' => $mixed_partner
@@ -343,7 +342,7 @@ $(document).ready(function() {
 				}
 			echo '</div>';
 
-			echo '<div id="ParticipantTeam" style=' . (count($competitions['teams']) ? "display:block" : "display:none") . '>';
+			echo '<div id="ParticipantTeam" style=' . (count($competitions['teams']) ? '"display:block"' : '"display:none"') . '>';
 				echo $this->Form->control('participant.team_id', array(
 					'div' => 'teams', 
 					'empty' => $isParticipant ? false : __d('user', 'Not Playing Teams'),

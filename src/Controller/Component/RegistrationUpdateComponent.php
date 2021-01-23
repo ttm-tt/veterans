@@ -42,7 +42,7 @@ class RegistrationUpdateComponent extends Component {
 				$uid = false;
 
 			if (empty($uid)) {
-				$this->cMultipleFlash->setFlash(__d('user', 'Unknown user {0}', $registration['person']['username']), 'error');
+				$this->MultipleFlash->setFlash(__d('user', 'Unknown user {0}', $registration['person']['username']), 'error');
 				$this->getController()->log('No user id ' . $registration['person']['username'], 'error');
 				return false;
 			}

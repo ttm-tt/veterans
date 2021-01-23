@@ -149,7 +149,7 @@ function camelizeName(name) {
 			));						
 		} else {
 			echo $this->Form->control('person.sex', array('type' => 'hidden'));
-			echo $this->Form->control('person_sex', array(
+			echo $this->Form->control('person.sex', array(
 				'type' => 'select', 
 				'empty' => __d('user', 'Select gender'),
 				'options' =>array('M' => __d('user', 'Man'), 'F' => __d('user', 'Woman')),

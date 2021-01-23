@@ -51,7 +51,7 @@ class OrderUpdateComponent extends Component {
 			return false;
 		}
 		
-		$tid = $this->getController()->getRequest()->getSession()->read('Tournaments.id');
+		$tid = $registration['tournament_id'];
 		$pid = $registration['person']['id'];
 		$uid = $registration['person']['user_id'];
 		$type_id = $registration['type_id'];
@@ -100,7 +100,7 @@ class OrderUpdateComponent extends Component {
 		))->first();
 		
 		if ($order === null) {
-			$order = $this->_createNewOrder($user, $invoStatusId, 'Invoice');
+			$order = $this->_createNewOrder($tid, $user, $invoStatusId, 'Invoice');
 		}
 		
 		$article = $articles[$type];
@@ -269,7 +269,7 @@ class OrderUpdateComponent extends Component {
 		
 		if (empty($invoiceOrder)) {
 			// Still not found: create a new one
-			$invoiceOrder = $this->_createNewOrder($user, $invoStatusId, 'Invoice');
+			$invoiceOrder = $this->_createNewOrder($tid, $user, $invoStatusId, 'Invoice');
 			
 			$invoiceAddress = $this->OrderAddresses->find('all', array(
 				'conditions' => array(
@@ -780,9 +780,7 @@ class OrderUpdateComponent extends Component {
 	}
 	
 	
-	private function _createNewOrder($user, $order_status_id, $payment_method = null) {
-		$tid = $this->getController()->getRequest()->getSession()->read('Tournaments.id');
-		
+	private function _createNewOrder($tid, $user, $order_status_id, $payment_method = null) {
 		$tmp = $this->OrderSettings->find('all', array(
 			'conditions' => array(
 				'tournament_id' => $tid
