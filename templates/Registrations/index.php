@@ -3,6 +3,7 @@
 	use App\Model\Table\GroupsTable;
 	use App\Model\Table\TypesTable;
 	use App\Model\Table\RegistrationsTable;
+	use Cake\ORM\TableRegistry;
 ?>
 
 <?php
@@ -92,7 +93,7 @@
 				]);
 			}
 
-			echo '<tr><td><label class="filter">' . __d('user', 'Family Name') .	'</td><td>';
+			echo '<tr><td><label class="filter">' . __d('user', 'Family Name') .	'</label></td><td>';
 
 			foreach ($allchars as $idx => $chars) {
 				if (count($chars) == 0)
@@ -127,16 +128,12 @@
 
 			echo '</td></tr>';
 			
-			echo '<tr/>';
-
 			if (!empty($user_id)) {
-				echo '<tr><td><label class="filter">' . __d('user', 'Username') . '</td><td>';
+				echo '<tr><td><label class="filter">' . __d('user', 'Username') . '</label></td><td>';
 				echo $this->Html->link(__d('user', 'all'), ['?' => ['user_id' => 'all']]);
 				echo ' ' . $username;
 
 				echo '</td></tr>';
-				
-				echo '<tr/>';
 			}
 
 			echo '</table>' . "\n";
@@ -147,8 +144,8 @@
 	<?php
 		$wantAssociation = 
 			$hasRootPrivileges || $isPartnerWanted ||
-			$current_user['User']['group_id'] == GroupsTable::getOrganizerId() ||
-			empty($current_user['User']['nation_id'])
+			$current_user['group_id'] == GroupsTable::getOrganizerId() ||
+			empty($current_user['nation_id'])
 		;
 
 		$wantSex = 
@@ -229,7 +226,7 @@
 				<?php if (!$isPartnerWanted) { ?>
 					<th class="ttm-table-col"><?php echo $this->Paginator->sort('People.extern_id', $wrid);?></th>
 				<?php } ?>
-				<?php if ($current_user['User']['group_id'] != GroupsTable::getParticipantId()) { ?>
+				<?php if ($current_user['group_id'] != GroupsTable::getParticipantId()) { ?>
 					<th class="ttm-table-col"><?php echo $this->Paginator->sort('Participants.start_no', __d('user', 'Start No.'));?></th>
 				<?php } ?>
 				<?php // In "partner wanted" view we don't need to show the singles competition ?>
@@ -261,6 +258,9 @@
 		if ($i++ % 2 == 0) {
 			$class = ' class="altrow"';
 		}
+
+		if ($registration->participant === null)
+			$registration->participant = TableRegistry::get('Participants')->newEmptyEntity();
 
 		$participant = $registration['participant'];
 
