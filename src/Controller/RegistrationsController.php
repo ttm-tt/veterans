@@ -3478,7 +3478,10 @@ class RegistrationsController extends AppController {
 				'contain' => array('Participants', 'People'),
 				'group' => 'Participants.single_id',
 				'fields' => array('Participants.single_id',  'count' => 'COUNT(Registrations.id)'),
-				'conditions' => $conditions + ['NOT Participants.single_cancelled']
+				'conditions' => $conditions + [
+					'NOT Participants.single_cancelled',
+					'Participants.single_id IS NOT NULL'
+				]
 			));
 
 			foreach ($singles as $s) 
@@ -3488,7 +3491,10 @@ class RegistrationsController extends AppController {
 				'contain' => array('Participants', 'People'),
 				'group' => 'Participants.double_id',
 				'fields' => array('Participants.double_id', 'count' => 'COUNT(Registrations.id)'),
-				'conditions' => $conditions + ['NOT Participants.double_cancelled']
+				'conditions' => $conditions + [
+					'NOT Participants.double_cancelled',
+					'Participants.double_id IS NOT NULL'
+				]
 			));
 
 			foreach ($doubles as $d) 
@@ -3498,7 +3504,10 @@ class RegistrationsController extends AppController {
 				'contain' => array('Participants', 'People'),
 				'group' => 'Participants.mixed_id',
 				'fields' => array('Participants.mixed_id', 'count' => 'COUNT(Registrations.id)'),
-				'conditions' => $conditions + ['NOT Participants.mixed_cancelled']
+				'conditions' => $conditions + [
+					'NOT Participants.mixed_cancelled',
+					'Participants.mixed_id IS NOT NULL'
+				]
 			));
 
 			foreach ($mixed as $m) 
@@ -3508,7 +3517,10 @@ class RegistrationsController extends AppController {
 				'contain' => array('Participants', 'People'),
 				'group' => 'Participants.team_id',
 				'fields' => array('Participants.team_id', 'count' => 'COUNT(Registrations.id)'),
-				'conditions' => $conditions + ['NOT Participants.team_cancelled']
+				'conditions' => $conditions + [
+					'NOT Participants.team_cancelled',
+					'Participants.team_id IS NOT NULL'
+				]
 			));
 
 			foreach ($teams as $t) 

@@ -52,14 +52,14 @@ class GroupsFixture extends TestFixture
                 'type_ids' => '1'
             ],
             [
-                'id' => 12,
-                'name' => 'Competition Manager',
+                'id' => 11,
+                'name' => 'Tour Operator',
                 'parent_id' => null,
                 'type_ids' => ''
             ],
             [
-                'id' => 11,
-                'name' => 'Tour Operator',
+                'id' => 12,
+                'name' => 'Competition Manager',
                 'parent_id' => null,
                 'type_ids' => ''
             ],

@@ -99,8 +99,6 @@ function camelizeName(name) {
 		echo $this->Form->control('participant.cancelled', array('type' => 'hidden'));
 		echo $this->Form->control('participant.team_cancelled', array('type' => 'hidden'));
 
-		echo $this->Form->control('person_id', array('type' => 'hidden'));
-
 		if ($isParticipant) {
 			echo $this->Form->control('person.display_name', array(
 				'label' => __('Person'), 
@@ -151,11 +149,12 @@ function camelizeName(name) {
 			));						
 		} else {
 			echo $this->Form->control('person.sex', array('type' => 'hidden'));
-			echo $this->Form->control('person.sex', array(
+			echo $this->Form->control('person_sex', array(
 				'type' => 'select', 
 				'empty' => __d('user', 'Select gender'),
 				'options' =>array('M' => __d('user', 'Man'), 'F' => __d('user', 'Woman')),
-				'readonly' => true
+				'readonly' => true,
+				'id' => false
 			));
 		}
 		
@@ -222,7 +221,7 @@ function camelizeName(name) {
 					echo $this->Form->control('participant.double_partner_id', array(
 						'div' => array(
 							'id' => 'ParticipantDoublePartner', 
-							'style' => ($registration['participant']['double_id'] ? "display:block" : "display:none")
+							'style' => ($registration['participant']['double_id'] ? '"display:block"' : '"display:none"')
 						), 
 						'empty' => __('Partner wanted'), 
 						'options' => $double_partner
@@ -263,7 +262,7 @@ function camelizeName(name) {
 					echo $this->Form->control('participant.mixed_partner_id', array(
 						'div' => array(
 							'id' => 'ParticipantMixedPartner', 
-							'style' => ($registration['participant']['mixed_id'] ? "display:block" : "display:none")
+							'style' => ($registration['participant']['mixed_id'] ? '"display:block"' : '"display:none"')
 						), 
 						'empty' => __('Partner wanted'), 
 						'options' => $mixed_partner
@@ -271,7 +270,7 @@ function camelizeName(name) {
 				}
 			echo '</div>';
 
-			echo '<div id="ParticipantTeam" style=' . (count($competitions['teams']) ? "display:block" : "display:none") . '>';
+			echo '<div id="ParticipantTeam" style=' . (count($competitions['teams']) ? '"display:block"' : '"display:none"') . '>';
 				echo $this->Form->control('participant.team_id', array(
 					'div' => 'teams', 
 					'empty' => $empty,

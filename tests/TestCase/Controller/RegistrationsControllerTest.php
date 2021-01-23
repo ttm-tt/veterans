@@ -28,8 +28,10 @@ class RegistrationsControllerTest extends AppTestCase {
 		'app.Registrations',
 		'app.Participants',
 		'app.ParticipantHistories',
+		'plugin.Shop.Articles',
 		'plugin.Shop.OrderStatus',
-		'plugin.Shop.Orders'
+		'plugin.Shop.Orders',
+		'plugin.Shop.OrderArticles'
 	];
 
 	
@@ -107,13 +109,22 @@ class RegistrationsControllerTest extends AppTestCase {
 	 * Test onChangePerson
 	 */
 	public function testOnChangePerson() : void {
-		// Request as association
+		// Change user id and dob of person
+		$this->post([
+			'controller' => 'People', 'action' => 'edit', 1
+		], [
+			'id' => 1, 
+			'user_id' => 10,
+			'dob' => strtotime('41 years')
+		]);
+		
+		// Request as organizer
 		$this->mergeSession([
 			'Auth' => [
 				'User' => [
-					'id' => 2,
-					'username' => 'association',
-					'group_id' => GroupsTable::getAssociationId(),
+					'id' => 10,
+					'username' => 'touroperator',
+					'group_id' => GroupsTable::getTourOperatorId(),
 					// 'enabled' => true
 				]
 			]
@@ -127,7 +138,7 @@ class RegistrationsControllerTest extends AppTestCase {
         ]);
 		$data = [
 			'tournament_id' => 1,
-			'person_id' => 3
+			'person_id' => 1
 		];
 		$this->post(['controller' => 'registrations', 'action' => 'onChangePerson'], $data);
 		$this->assertResponseSuccess();
@@ -139,7 +150,7 @@ class RegistrationsControllerTest extends AppTestCase {
 	
 	
 	/**
-	 * Get add template
+	 * Get edit template
 	 */
 	public function testEditGet() : void {
 		$rid = $this->_addRegistration();
@@ -150,38 +161,22 @@ class RegistrationsControllerTest extends AppTestCase {
 	}
 	
 	
-	/*
-	 * Test participants
-	 */
-	public function testParticipants() : void {
-		$this->post(['controller' => 'registrations', 'action' => 'participants'], []);
-		$this->assertResponseSuccess();
-		$this->assertBodyIsValid();
-	}
-	
-	
-	// Test onParticipantData
-	public function testOnParticipantData() : void {
-		$this->setupSession();
-		$this->configRequest([
-            'headers' => [
-				'X-Requested-With' => 'XMLHttpRequest',
-				'Accept' => 'application/json'
-			]
-        ]);
-		$this->post(['controller' => 'registrations', 'action' => 'onParticipantData'], ['tid' => 2]);
-		$this->assertResponseOk();
-		$result = json_decode($this->_getBodyAsString(), true);
-		$this->assertEquals(JSON_ERROR_NONE, json_last_error());	
-		$this->assertArrayHasKey('recordsTotal', $result);
-	}
-	
-	
 	// Helper
 	private function _addRegistration() : int {
+		// Change user id and dob of person
+		$this->post([
+			'controller' => 'People', 
+			'action' => 'edit', 
+			1
+		], [
+			'id' => 1, 
+			'user_id' => 10,
+			'dob' => strtotime('41 years')
+		]);
+		
 		$data = [
 			'tournament_id' => 1,
-			'person_id' => 3,
+			'person_id' => 1,
 			'type_id' => 1,
 			'participant' => ['single_id' => 1]
 		];
@@ -190,7 +185,7 @@ class RegistrationsControllerTest extends AppTestCase {
 		
 		// Read back what is in DB
 		$table = TableRegistry::get('Registrations');
-		$registration = $table->find()->where(['person_id' => 3])->first();
+		$registration = $table->find()->where(['person_id' => 1])->first();
 
 	    return $registration->id;
 	}

@@ -97,7 +97,7 @@ class AppTestCase extends TestCase {
 	protected function assertBodyIsValid() : void {
 		$body = $this->_getBodyAsString();
 		$tidy = new \tidy();
-		$tidy->parseString($body, ['drop-empty-elements' => 'no']);
+		$tidy->parseString($body, ['drop-empty-elements' => false]);
 		if ($tidy->getStatus() !== 0)
 			file_put_contents (TMP . date('Ymd\THis') . '-' . $this->getName() . '.html', $body);
 		$this->assertEquals(0, $tidy->getStatus(), $tidy->errorBuffer ?? '');
