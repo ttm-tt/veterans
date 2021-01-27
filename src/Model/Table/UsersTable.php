@@ -4,6 +4,7 @@ namespace App\Model\Table;
 
 use App\Model\Table\AppTable;
 use App\Model\Table\GroupsTable;
+use App\Model\Entity\User;
 
 use ArrayObject;
 use Cake\Event\EventInterface;
@@ -73,8 +74,8 @@ class UsersTable extends AppTable {
 		}
 	}
 
-	public static function hasRootPrivileges($user) {
-		return $user['group_id'] == GroupsTable::getAdminId();
+	public static function hasRootPrivileges(?User $user) {
+		return $user && $user->group_id == GroupsTable::getAdminId();
 	}
 
 
