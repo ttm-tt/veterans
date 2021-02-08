@@ -7,15 +7,11 @@
 		{
 			"type" : "vcs",
 			"url" : "https://github.com/chtheis/ixr-xmlrpc"
-		},
-		{
-			"type" : "vcs",
-			"url" : "https://github.com/chtheis/acl"
 		}
 	],
 	"require" : {
 		"cakephp/cakephp" : "^4.0",
-		"cakephp/acl": "4.x-dev",
+		"cakephp/acl": "^0.7",
 		"dereuromark/cakephp-shim": "^2.0",
 		"cakephp/plugin-installer": "*",
 		"cakephp/cache": "^4.0",
