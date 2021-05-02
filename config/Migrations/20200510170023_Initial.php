@@ -344,22 +344,22 @@ class Initial extends AbstractMigration
                 'limit' => 11,
                 'null' => false,
             ])
-            ->addColumn('all_notifications', 'tinyinteger', [
+            ->addColumn('all_notifications', 'boolean', [
                 'default' => '1',
                 'limit' => 4,
                 'null' => false,
             ])
-            ->addColumn('new_player', 'tinyinteger', [
+            ->addColumn('new_player', 'boolean', [
                 'default' => '1',
                 'limit' => 4,
                 'null' => false,
             ])
-            ->addColumn('delete_registration_player_after', 'tinyinteger', [
+            ->addColumn('delete_registration_player_after', 'boolean', [
                 'default' => '1',
                 'limit' => 4,
                 'null' => false,
             ])
-            ->addColumn('edit_registration_player_after', 'tinyinteger', [
+            ->addColumn('edit_registration_player_after', 'boolean', [
                 'default' => '1',
                 'limit' => 4,
                 'null' => false,
