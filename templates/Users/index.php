@@ -73,7 +73,7 @@
 		<td class="actions">
 			<?php if ($mayView) echo $this->Html->link(__('View'), array('action' => 'view', $user['id'])); ?>
 			<?php if ($mayEdit) echo $this->Html->link(__('Edit'), array('action' => 'edit', $user['id'])); ?>
-			<?php if ($mayDelete) echo $this->Html->link(__('Delete'), array('action' => 'delete', $user->id), ['confirm' => sprintf(__('Are you sure you want to delete %s?'), $user->username)]); ?>
+			<?php if ($mayDelete) echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $user->id), ['confirm' => sprintf(__('Are you sure you want to delete %s?'), $user->username)]); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>

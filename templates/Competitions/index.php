@@ -35,7 +35,7 @@
 		<td class="actions">
 			<?php if ($mayView) echo $this->Html->link(__('View'), array('action' => 'view', $competition['id'])); ?>
 			<?php if ($mayEdit) echo $this->Html->link(__('Edit'), array('action' => 'edit', $competition['id'])); ?>
-			<?php if ($mayDelete) echo $this->Html->link(__('Delete'), array('action' => 'delete', $competition['id']), ['confirm' => sprintf(__('Are you sure you want to delete %s?'), $competition['description'])]); ?>
+			<?php if ($mayDelete) echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $competition['id']), ['confirm' => sprintf(__('Are you sure you want to delete %s?'), $competition['description'])]); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>

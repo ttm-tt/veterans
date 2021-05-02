@@ -120,7 +120,7 @@
 		<td class="actions">
 			<?php if ($mayView) echo $this->Html->link(__('View'), array('action' => 'view', $person['id'])); ?>
 			<?php if ($mayEdit) echo $this->Html->link(__('Edit'), array('action' => 'edit', $person['id'])); ?>
-			<?php if ($mayDelete && count($person->registrations) === 0) echo $this->Html->link(__('Delete'), array('action' => 'delete', $person['id']), ['confirm' => sprintf(__('Are you sure you want to delete %s?'), $person['display_name'])]); ?>
+			<?php if ($mayDelete && count($person->registrations) === 0) echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $person['id']), ['confirm' => sprintf(__('Are you sure you want to delete %s?'), $person['display_name'])]); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>

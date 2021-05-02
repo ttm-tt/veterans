@@ -27,7 +27,7 @@
 		<td class="actions">
 			<?php if ($mayView) echo $this->Html->link(__('View'), array('action' => 'view', $group['id'])); ?>
 			<?php if ($mayEdit) echo $this->Html->link(__('Edit'), array('action' => 'edit', $group['id'])); ?>
-			<?php if ($mayDelete) echo $this->Html->link(__('Delete'), array('action' => 'delete', $group['id']), ['confirm' => sprintf(__('Are you sure you want to delete %s?'), $group['name'])]); ?>
+			<?php if ($mayDelete) echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $group['id']), ['confirm' => sprintf(__('Are you sure you want to delete %s?'), $group['name'])]); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
