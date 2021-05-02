@@ -1975,7 +1975,7 @@ class Initial extends AbstractMigration
                 'null' => false,
             ])
             ->addColumn('created', 'datetime', [
-                'default' => 'current_timestamp()',
+                'default' => 'CURRENT_TIMESTAMP',
                 'limit' => null,
                 'null' => false,
             ])
