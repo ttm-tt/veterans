@@ -1,6 +1,21 @@
 <?php /* Copyright (c) 2020 Christoph Theis */ ?>
 <div class="nations index">
 	<h2><?php echo __('Associations');?></h2>
+<?php	
+	echo '<div class="filter">';
+	echo '<fieldset>';
+	echo '<legend>' . __d('user', 'Filter') . '</legend>';
+	echo '<table>';
+
+	echo $this->element('filter', [
+		'label'=> __d('user', 'Continent'),
+		'id' => 'continent',
+		'options' => $continents,
+	]);
+
+	echo '</table>' . "\n";
+	echo '</fieldset></div>' . "\n";
+?>
 	<table>
 	<tr>
 			<th><?php echo $this->Paginator->sort('name');?></th>

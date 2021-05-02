@@ -6,6 +6,7 @@ use App\Controller\AppController;
 
 use Cake\Datasource\Exception\RecordNotFoundException;
 use Cake\Datasource\Exception\InvalidPrimaryKeyException;
+use Cake\Utility\Hash;
 
 
 class NationsController extends AppController {
@@ -15,8 +16,30 @@ class NationsController extends AppController {
 	public $paginate = array();
 
 	function index() {
-		$this->paginate = array('order' => ['Nations.name' => 'ASC']);
+		if ($this->request->getQuery('continent') !== null) {
+			if ($this->request->getQuery('continent') == 'all')
+				$this->request->getSession()->delete('Nations.continent');
+			else
+				$this->request->getSession()->write('Nations.continent', $this->request->getQuery('continent'));
+		}
+
+		$conditions = [1 => 1];
+		if ($this->request->getSession()->check('Nations.continent'))
+			$conditions['Nations.continent'] = $this->request->getSession()->read('Nations.continent');
+		
+		$this->paginate = array(
+			'conditions' => $conditions,
+			'order' => ['Nations.name' => 'ASC']
+		);
+		$continents = $this->Nations->find()
+				->select('continent')
+				->distinct('continent')
+				->order(['continent' => 'ASC'])
+				->toArray()
+		;
 		$this->set('nations', $this->paginate());
+		$this->set('continents', Hash::combine($continents, '{n}.continent', '{n}.continent'));
+		$this->set('continent', $this->request->getSession()->read('Nations.continent'));
 	}
 
 	function view($id = null) {
