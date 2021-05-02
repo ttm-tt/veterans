@@ -30,7 +30,7 @@
 		<td class="actions">
 			<?php if ($mayView) echo $this->Html->link(__('View'), array('action' => 'view', $nation['id'])); ?>
 			<?php if ($mayEdit) echo $this->Html->link(__('Edit'), array('action' => 'edit', $nation['id'])); ?>
-			<?php if ($mayDelete) echo $this->Html->link(__('Delete'), array('action' => 'delete', $nation['id']), ['confirm' => sprintf(__('Are you sure you want to delete %s?'), $nation['description'])]); ?>
+			<?php if ($mayDelete) echo $this->Html->postLink(__('Delete'), array('action' => 'delete', $nation['id']), ['confirm' => sprintf(__('Are you sure you want to delete %s?'), $nation['description'])]); ?>
 		</td>
 	</tr>
 <?php endforeach; ?>
