@@ -545,7 +545,7 @@ class NationsSeed extends AbstractSeed
                 'id' => '103',
                 'name' => 'AUS',
                 'description' => 'Australia',
-                'continent' => 'Australia',
+                'continent' => 'Oceania',
                 'modified' => NULL,
                 'created' => NULL,
             ],
