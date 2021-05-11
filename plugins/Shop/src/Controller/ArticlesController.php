@@ -112,7 +112,8 @@ class ArticlesController extends ShopAppController {
 				->first()
 			;
 			
-			if ($sum['count'] < $a['allotment']) {
+			// Query returns null if no row matches
+			if (($sum['count'] ?? 0) < $a['allotment']) {
 				$allotted[$a['article_id']] += ($a['allotment'] - $sum['count']);
 			}
 		}
