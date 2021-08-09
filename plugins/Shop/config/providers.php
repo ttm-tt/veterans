@@ -130,10 +130,23 @@ return [
 					'secret_key' => 'sk_test_4yhY91fNn5b2SYKNAcOof42B001yLH0r3A'
 				]
 			],
+			
+			/*
+			 * BNL POSitivity
+			 */
+			'Positivity' => [
+				'endpoint' => 'https://pftest.bnlpositivity.it/service/',
+				'engine' => 'PositivityPayment',
+				'accountData' => [
+					// TEST data
+					'storeId' => '08000001_S',
+					'kSig' => 'xHosiSb08fs8BQmt9Yhq3Ub99E8='
+				]
+			]
 		],
 		
 		// Selected engine
-		'payment' => 'BPayment',
+		'payment' => '',
 		
 		'allowRefund' => true,
 		
