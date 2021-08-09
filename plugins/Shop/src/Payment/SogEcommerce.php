@@ -8,8 +8,6 @@ use Shop\Payment\AbstractPayment;
 
 class SogEcommerce extends AbstractPayment {
 
-	protected $_controller = null;
-	
 	private $acceptedStatus = [
 		'AUTHORISED',
 		'AUTHORISED_TO_VALIDATE',
@@ -27,7 +25,7 @@ class SogEcommerce extends AbstractPayment {
 	];
 	
 	public function __construct($controller) {
-		$this->_controller = $controller;
+		parent::__construct($controller);
 	}
 	
 	/**
@@ -43,7 +41,7 @@ class SogEcommerce extends AbstractPayment {
 	}
 	
 	/**
-	 *  Optional callback when customer confirms payment
+	 *  Callback when customer confirms payment
 	 */
 	public function confirm($orderId) {
 		$this->_controller->loadModel('Tournaments');
