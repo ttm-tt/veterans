@@ -40,7 +40,58 @@ class PositivityPayment extends AbstractPayment {
 			return;
 				
 		$this->_controller->loadModel('Shop.Orders');
+		$this->_controller->loadModel('Shop.OrderPayments');
+		$this->_controller->OrderPayments->setTable('shop_order_payment_details');
 
+		// Get order id. In test mode there is a random postfix to make the order id unique
+		$orderId = explode('-', $data['oid'])[0] ?? 0;
+
+		try {
+			$order = $this->_controller->Orders->get($orderId);
+		} catch (InvalidPrimaryKeyException | RecordNotFoundException $_ex) {
+			$this->_UNUSED($_ex);
+			file_put_contents(TMP . '/positivity/xxxerror-' . date('Ymd-His'), print_r($data, true));
+			return;			
+		}
+		
+		// Read (last) payment details for order to get txndate
+		$details = $this->_controller->OrderPayments->find()
+				->where(['order_id' => $orderId])
+				->order(['created' => 'DESC'])
+				->first()
+		;
+		
+		if ($details === null)
+			return;
+		
+		$txnDateTime = $details->created->format('Y:m:d-H:i:s');
+		
+		$details->value = json_encode($data);
+		$this->_controller->OrderPayments->save($details);
+		
+		$amount = number_format($order->outstanding, 2, '.', '');
+		$currency = 'EUR';
+		$status = 'PAID';
+		$sha = $this->_verifyHashCode($txnDateTime, $data);
+		
+		if ($sha !== $data['response_hash'] || 
+				$currency !== $data['currency'] ||
+				$amount !== $data['chargetotal']) {
+			file_put_contents(TMP . '/positivity/xxxfraud-' . date('Ymd-His'), print_r(
+				['got' => $sha, 'data' => $data], true)
+			);
+			$status = 'FRD';
+		} else if ($data['status'] !== 'APPROVED') {
+			file_put_contents(TMP . '/positivity/xxxerror-' . date('Ymd-His'), print_r($data, true));
+			$status = 'ERR';
+		} else {
+			$status = 'PAID';
+		}
+		
+		if ($status === 'PAID')
+			$this->_controller->_onSuccess($orderId, $status);
+		else 
+			$this->_controller->_onError($orderId, $status);		
 	}
 
 	/**
@@ -56,13 +107,32 @@ class PositivityPayment extends AbstractPayment {
 			'contain' => ['InvoiceAddresses']
 		]);
 		
+		$ct = time();
+		
+		// Transaction time (see below) is used later to verify the hash, 
+		// but it is not included in the parameters returned from the server.
+		// To access it any time later create a new record in payment_details
+		// (we need it anyway later) with the 'created' timestamp set to $ct
+		$this->_controller->loadModel('Shop.OrderPayments');
+		$this->_controller->OrderPayments->setTable('shop_order_payment_details');
+		
+		$this->_controller->OrderPayments->save(
+				$this->_controller->OrderPayments->newEntity([
+					'order_id' => $order->id,
+					'payment' => 'positivity',
+					'value' => '',
+					'created' => date('Y-m-d H:i:s', $ct)
+				])
+		);
+		
 		$amount = number_format($order->outstanding, 2, '.', '');
 		
 		$configBaseName = 'Shop.PaymentProviders.Positivity';
 				
+		$isTest = Configure::read('Shop.testUrl');
 		$storeId = Configure::read($configBaseName . '.accountData.storeId');
 		$kSig = Configure::read($configBaseName . '.accountData.kSig');
-		$txnDateTime = date('Y:m:d-H:i:s');
+		$txnDateTime = date('Y:m:d-H:i:s', $ct);
 		$currency = 'EUR';
 
 		$parameters = [
@@ -78,7 +148,9 @@ class PositivityPayment extends AbstractPayment {
 			'responseFailURL' => $this->_getUrlError($order),
 			'transactionNotificationURL' => $this->_getUrlCompleted($order),
 			'chargetotal' => $amount,
-			'oid' => $order->id,
+			// In test environment the order id may be a duplicate so we append 
+			// something unique
+			'oid' => $isTest ? $order->id . '-' . uniqid() : $order->id,
 			'invoicenumber' => $order->invoice,
 		];
 		
@@ -94,7 +166,22 @@ class PositivityPayment extends AbstractPayment {
 	 */
 	public function error($request) {
 		file_put_contents(TMP . '/positivity/xxxerror-' . date('Ymd-His'), print_r($request, true));		
+				
+		if ($request->isPost())
+			$data = $request->getData();
+		else if ($request->isGet())
+			$data = $request->getQuery();
+		else
+			return;
 		
+		$orderId = explode('-', $data['oid'])[0];
+		
+		$errMsg = 'The transaction has failed';
+		
+		// Set status to ERR, if not yet done
+		// If the users cancels the order UrlKO was not called.
+		$this->_controller->_onError($orderId, 'ERR');
+		$this->_controller->_failure($orderId, $errMsg);		
 	}
 
 	public function getOrderPayment($orderId) {
@@ -153,7 +240,7 @@ class PositivityPayment extends AbstractPayment {
 	 *  Payment was successful, redirect initiated from PSP in case of success
 	 */
 	public function success($request) {
-		file_put_contents(TMP . '/sogecommerce/xxxsuccess-' . date('Ymd-His'), print_r($request, true));		
+		file_put_contents(TMP . '/positivity/xxxsuccess-' . date('Ymd-His'), print_r($request, true));		
 		
 		if ($request->isPost())
 			$data = $request->getData();
@@ -161,14 +248,30 @@ class PositivityPayment extends AbstractPayment {
 			$data = $request->getQuery();
 		else
 			return;
+				
+		$orderId = explode('-', $data['oid'])[0];
 		
+		$this->_controller->_success($orderId);		
 	}
 
 	private function _getHashCode($storeId, $txnDateTime, $amount, $currency, $kSig) : string {
-		$strToHash = '' . $storeId . $txnDateTime . $amount . $currency . $kSig;
+		$strToHash = $storeId . $txnDateTime . $amount . $currency . $kSig;
 		$hex = bin2hex($strToHash);		
 		$sha = sha1($hex);
 		
+		return $sha;
+	}
+	
+	private function _verifyHashCode($txnDateTime, $data) : string {
+		$configBaseName = 'Shop.PaymentProviders.Positivity';
+				
+		$storeId = Configure::read($configBaseName . '.accountData.storeId');
+		$kSig = Configure::read($configBaseName . '.accountData.kSig');
+		
+		$strToHash = $kSig . $data['approval_code'] . $data['chargetotal'] . $data['currency'] . $txnDateTime . $storeId;
+		$hex = bin2hex($strToHash);
+		$sha = sha1($hex);
+
 		return $sha;
 	}
 	

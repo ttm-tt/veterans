@@ -139,7 +139,7 @@ return [
 				'engine' => 'PositivityPayment',
 				'accountData' => [
 					// TEST data
-					'storeId' => '08000001_S',
+					'storeId' => '08000001',
 					'kSig' => 'xHosiSb08fs8BQmt9Yhq3Ub99E8='
 				]
 			]
