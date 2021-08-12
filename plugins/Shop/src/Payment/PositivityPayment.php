@@ -129,7 +129,9 @@ class PositivityPayment extends AbstractPayment {
 		
 		$configBaseName = 'Shop.PaymentProviders.Positivity';
 				
-		$isTest = Configure::read('Shop.testUrl');
+		// In test mode we need to make our order id unique, but in production
+		// we want to detect duplicates
+		$isTest = Configure::read($configBaseName . '.test') == true;
 		$storeId = Configure::read($configBaseName . '.accountData.storeId');
 		$kSig = Configure::read($configBaseName . '.accountData.kSig');
 		$txnDateTime = date('Y:m:d-H:i:s', $ct);
@@ -277,7 +279,7 @@ class PositivityPayment extends AbstractPayment {
 	
 	private function _getUrlSuccess($order) {
 		if (Configure::read('Shop.testUrl'))
-			return 'https://galadriel.ttm.co.at/veterans-v4/evc2022/shop/shops/payment_success';
+			return 'https://galadriel.ttm.co.at/veterans-v4/' . $this->_controller->getRequest()->getParam('ds') . '/shop/shops/payment_success';
 		else
 			return Router::url(array('plugin' => 'shop', 'controller' => 'shops', 'action' => 'payment_success'), true);
 	}
@@ -285,14 +287,14 @@ class PositivityPayment extends AbstractPayment {
 	
 	private function _getUrlError($order) {
 		if (Configure::read('Shop.testUrl'))
-			return 'https://galadriel.ttm.co.at/veterans-v4/evc2022/shop/shops/payment_error';
+			return 'https://galadriel.ttm.co.at/veterans-v4/' . $this->_controller->getRequest()->getParam('ds') . '/shop/shops/payment_error';
 		else
 			return Router::url(array('plugin' => 'shop', 'controller' => 'shops', 'action' => 'payment_error'), true);		
 	}
 
 	private function _getUrlCompleted($order) {
 		if (Configure::read('Shop.testUrl'))
-			return 'https://galadriel.ttm.co.at/veterans-v4/evc2022/shop/shops/payment_complete';
+			return 'https://galadriel.ttm.co.at/veterans-v4/' . $this->_controller->getRequest()->getParam('ds') . '/shop/shops/payment_complete';
 		else
 			Router::url(array('plugin' => 'shop', 'controller' => 'shops', 'action' => 'payment_complete'), true);
 	}

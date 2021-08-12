@@ -135,6 +135,8 @@ return [
 			 * BNL POSitivity
 			 */
 			'Positivity' => [
+				// We need a separate setting for testUrl and test mode
+				'test' => true, // In production change to false
 				'endpoint' => 'https://pftest.bnlpositivity.it/service/',
 				'engine' => 'PositivityPayment',
 				'accountData' => [
