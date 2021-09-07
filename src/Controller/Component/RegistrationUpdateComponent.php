@@ -74,6 +74,8 @@ class RegistrationUpdateComponent extends Component {
 				$prefix .= '-P';
 			else if ($registration['type_id'] == TypesTable::getAccId())
 				$prefix .= '-A';
+			else if ($registration['type_id'] == TypesTable::getCoachId())
+				$prefix .= '-C';
 			else
 				$prefix .= '-X';
 
