@@ -61,6 +61,8 @@ class OrderUpdateComponent extends Component {
 			$type = 'PLA';
 		else if ($type_id == TypesTable::getAccId())
 			$type = 'ACC';
+		else if ($type_id == TypesTable::getCoachId())
+			$type = 'COA';
 		else {
 			$this->MultipleFlash->setFlash(__d('user', 'Illegal type'), 'error');
 			return false;
@@ -178,6 +180,8 @@ class OrderUpdateComponent extends Component {
 			$type = 'PLA';
 		else if ($registration['type_id'] == TypesTable::getAccId())
 			$type = 'ACC';
+		else if ($registration['type_id'] == TypesTable::getCoachIdId())
+			$type = 'COA';
 		else
 			return true;
 		
@@ -711,6 +715,7 @@ class OrderUpdateComponent extends Component {
 			switch ($detail['type']) {
 				case 'PLA' :
 				case 'ACC' :
+				case 'COA' :
 					$people[] = $detail;
 					break;
 			}

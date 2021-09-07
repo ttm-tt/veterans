@@ -22,6 +22,11 @@ class TypesTable extends AppTable {
 	public static function getAccId() {
 		return TypesTable::_getId('ACC');
 	}
+	
+	
+	public static function getCoachId() {
+		return TypesTable::_getId('COA');
+	}
 
 
 	public static function getUmpireId() {

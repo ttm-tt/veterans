@@ -23,6 +23,11 @@ use Cake\Datasource\ConnectionManager;
 			->getSchemaCollection()
 			->describe('shop_order_addresses')
 	;
+	$orderSchema = 
+		$db
+			->getSchemaCollection()
+			->describe('shop_orders')
+	;
 ?>
 
 <?php $this->Html->scriptStart(array('block' => true)); ?>
@@ -142,7 +147,7 @@ function camelizeName(name) {
 		echo $this->Form->control('email', array(
 			'label' => __d('user', 'Email'),
 			'required' => 'required',
-			'maxLength' => $addressSchema->getColumn('email')['length']
+			'maxLength' => $orderSchema->getColumn('email')['length']
 		));
 
 		echo $this->Form->control('phone', array(

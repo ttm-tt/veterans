@@ -164,6 +164,8 @@ class ShopsController extends ShopAppController {
 			$types['PLA'] = __d('user', 'Player');
 		if (isset($articleList['ACC']))
 			$types['ACC'] = __d('user', 'Accompanying Person');
+		if (isset($articleList['COA']))
+			$types['COA'] = __d('user', 'Coach');
 		
 
 		// Calculate what is overbooked
@@ -183,7 +185,7 @@ class ShopsController extends ShopAppController {
 		))->toArray(), '{n}.article.name', '{n}.count');
 		
 		// Make sure we have an entry for PLA and ACC
-		$waitingCount += ['PLA' => 0, 'ACC' => 0];
+		$waitingCount += ['PLA' => 0, 'ACC' => 0, 'COA' => 0];
 		
 		if (!UsersTable::hasRootPrivileges($this->_user)) {
 			if (!empty($enter_before) && $enter_before < date('Y-m-d')) {
@@ -252,6 +254,24 @@ class ShopsController extends ShopAppController {
 			);
 		}
 		
+		// Dto. for COA, but we don't evaluate a limit here
+		if (isset($types['COA']) && $waiting['COA'] && !empty($articleList['COA']['waitinglist_limit_enabled'])) {
+			$accArticle = $articleList['COA'];
+			if ($coaArticle['waitinglist_limit_enabled'] && $waitingCount['COA'] >= $coaArticle['waitinglist_limit_max']) {
+				$this->MultipleFlash->setFlash(
+					__d('user', 'The registration for accompanying persons has been closed'), 'warning'
+				);
+				
+				unset($types['COA']);
+			}
+		} 
+		
+		if (isset($types['COA']) && !empty($waiting['COA'])) {
+			$this->MultipleFlash->setFlash(
+				__d('user', 'Coaches are already sold out and adding more will put your registration on the waiting list'), 'warning'
+			);
+		}
+		
 		$this->set('types', $types);
 		
 		$this->set('waiting', $waiting);
@@ -286,6 +306,23 @@ class ShopsController extends ShopAppController {
 			'contain' => array('Articles'),
 			'conditions' => array(
 				'Articles.name' => 'ACC',
+				'Articles.tournament_id' => $tid
+			),
+			'order' => array('ArticleVariants.sort_order' => 'ASC'),
+			'fields' => array(
+				'ArticleVariants.id',
+				'ArticleVariants.description',
+				'ArticleVariants.variant_type'
+			)
+		))->toArray();
+
+		$variants['COA'] = $this->ArticleVariants->find('list', array(
+			'keyField' => 'id', 
+			'valueField' =>	'description',
+			'groupField' =>	'variant_type',
+			'contain' => array('Articles'),
+			'conditions' => array(
+				'Articles.name' => 'COA',
 				'Articles.tournament_id' => $tid
 			),
 			'order' => array('ArticleVariants.sort_order' => 'ASC'),
@@ -2022,7 +2059,7 @@ class ShopsController extends ShopAppController {
 		$this->loadModel('Users');
 		$this->loadModel('Tournaments');
 		
-		$people = array('PLA' => array(), 'ACC' => array());
+		$people = array('PLA' => array(), 'ACC' => array(), 'COA' => array());
 
 		foreach ($this->Cart->getPeople() as $person) {
 			$people[$person['type']][] = $person;
@@ -2096,6 +2133,10 @@ class ShopsController extends ShopAppController {
 
 				case 'ACC' :
 					$detail = $people['ACC'];
+					break;
+
+				case 'COA' :
+					$detail = $people['COA'];
 					break;
 			}
 			
@@ -2291,6 +2332,19 @@ class ShopsController extends ShopAppController {
 				}
 
 				$registrations[] = $registration;
+			} else if ( !empty($allArticles['COA']) && $article['article_id'] == $allArticles['COA'] ) {
+				$a = unserialize($article['detail']);
+					
+				$registration = array('person' => $a);
+				$registration['person']['user_id'] = $uid;
+				$registration['type_id'] = TypesTable::getCoachId();
+				$registration['OrderArticle'] = $article;
+				if (!empty($article['person_id'])) {					
+					$registration['person']['id'] = $article['person_id'];
+					$registration['person_id'] = $article['person_id'];
+				}
+
+				$registrations[] = $registration;
 			}
 		}
 		
@@ -2409,6 +2463,14 @@ class ShopsController extends ShopAppController {
 			)
 		))->first();
 		
+		$articles['COA'] = $this->Article->find('all', array(
+			'recursive' => -1,
+			'conditions' => array(
+				'tournament_id' => $tid,
+				'name' => 'COA'
+			)
+		))->first();
+		
 		$articles['GALA'] = $this->Article->find('all', array(
 			'recursive' => -1,
 			'conditions' => array(
@@ -2450,7 +2512,7 @@ class ShopsController extends ShopAppController {
 			'OrderArticle' => array()
 		);
 
-		$people = array('PLA' => array(), 'ACC' => array());
+		$people = array('PLA' => array(), 'ACC' => array(), 'COA' => array());
 		
 		$count = array(
 			'GALA' => 0,			
@@ -2530,6 +2592,10 @@ class ShopsController extends ShopAppController {
 				$detail['type'] = 'ACC';
 				
 				$people['ACC'][] = $detail;				
+			} else if ($type === 'COA') {				
+				$detail['type'] = 'COA';
+				
+				$people['COA'][] = $detail;				
 			} 
 			
 			if ($farewell_party)
@@ -2563,6 +2629,21 @@ class ShopsController extends ShopAppController {
 				);				
 
 				$order['total'] += $articles['ACC']['price'];
+			}
+		}
+
+		if (count($people['COA']) > 0) {
+			foreach ($people['COA'] as $a) {
+				$order['order_articles'][] = array(
+					'article_id' => $articles['COA']['id'],
+					'description' => $articles['COA']['description'],
+					'price' => $articles['COA']['price'],
+					'total' =>  $articles['COA']['price'],
+					'quantity' => 1,
+					'detail' => serialize($a)
+				);				
+
+				$order['total'] += $articles['COA']['price'];
 			}
 		}
 		
