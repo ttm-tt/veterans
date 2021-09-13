@@ -296,6 +296,6 @@ class PositivityPayment extends AbstractPayment {
 		if (Configure::read('Shop.testUrl'))
 			return 'https://galadriel.ttm.co.at/veterans-v4/' . $this->_controller->getRequest()->getParam('ds') . '/shop/shops/payment_complete';
 		else
-			Router::url(array('plugin' => 'shop', 'controller' => 'shops', 'action' => 'payment_complete'), true);
+			return Router::url(array('plugin' => 'shop', 'controller' => 'shops', 'action' => 'payment_complete'), true);
 	}
 }
