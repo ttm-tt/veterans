@@ -153,8 +153,11 @@ class PositivityPayment extends AbstractPayment {
 			// In test environment the order id may be a duplicate so we append 
 			// something unique
 			'oid' => $isTest ? $order->id . '-' . uniqid() : $order->id,
-			'invoicenumber' => $order->invoice,
+			// Accounting at EVC2022 already use that field for other purposes
+			// 'invoicenumber' => $order->invoice,
+			// Special fields for EVC2022 accounting
 			'addInfo2' => 'EVC_' . $order->id,
+			'addInfo4' => $order->invoice,
 		];
 		
 		$this->_controller->set('json_object', 
