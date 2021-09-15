@@ -1699,7 +1699,8 @@ class OrdersController extends ShopAppController {
 			// Leere Eintraege ausfiltern
 			$data['order_cancellation_fees'] = 
 					array_filter($data['order_cancellation_fees'], function($fee) {
-						return !empty($fee['fee']) && !empty($fee['start']['year']);
+						$ret = !empty($fee['fee']) && !empty($fee['start']);
+						return $ret;
 					});
 									
 			$settings = $this->OrderSettings->patchEntity($settings, $data);
