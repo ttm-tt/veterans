@@ -154,6 +154,7 @@ class PositivityPayment extends AbstractPayment {
 			// something unique
 			'oid' => $isTest ? $order->id . '-' . uniqid() : $order->id,
 			'invoicenumber' => $order->invoice,
+			'addInfo4' => 'EVC_' . $order->id,
 		];
 		
 		$this->_controller->set('json_object', 
