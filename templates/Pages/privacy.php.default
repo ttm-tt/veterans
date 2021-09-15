@@ -75,14 +75,14 @@ which is made up the following different legal entities:
 </ul>
 </p>
 <p>
-This Privacy Policy is issued on behalf of the <?= $contractor['description'] ?>
+This Privacy Policy is issued on behalf of the <?= $contractor['description'] ?> 
 and Christoph Theis so when We refer to "We", "Us", or "Our" in this Privacy Policy,
 We are referring to the relevant company/person responsible for processing your data.
 </p>	
 <p>
 We respect your privacy and are committed to protecting your personal data.
 This Privacy Policy will inform you as to how We look after your personal data
-when you visit Our web site at <?= Router::url('/', true) ?> )the "Site"), 
+when you visit Our web site at <?= Router::url('/', true) ?> ) the "Site"), 
 regardless of where you visit it from, and tell you about your privacy rights
 and how the law protects you.
 </p>
