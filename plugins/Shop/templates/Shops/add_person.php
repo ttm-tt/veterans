@@ -216,17 +216,19 @@ function onChangeType(cb) {
 
 		echo $this->Form->control('email', array(
 			'type' => 'text',
+			'required' => true,
 			'label' => __d('user', 'Email')
 		));
 		
 		echo $this->Form->control('phone', array(
-			'type' => 'hidden'
+			'type' => 'hidden',
 		));
 		
 		$this->Form->unlockField('phone');
 
 		echo $this->Form->control('phoneinput', array(
 			'type' => 'tel',
+			'required' => true,
 			'label' => __d('user', 'Mobile'),
 			'id' => 'phoneinput',
 			'name' => false
