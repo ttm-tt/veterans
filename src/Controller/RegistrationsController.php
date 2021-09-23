@@ -71,11 +71,15 @@ class RegistrationsController extends AppController {
 			unset($registration['Article']);
 			// foreach ($data['Article'])
 			
-			if ( empty($registration['person']['first_name']) || 
+			if ( 
+				 empty($registration['type_id']) ||
+ 				 empty($registration['person']['first_name']) || 
 				 empty($registration['person']['last_name']) ||
 				 empty($registration['person']['sex']) || 
 				 empty($registration['person']['nation_id']) ||
-				 empty($registration['type_id']) ) {
+				 $registration['type_id'] == TypesTable::getPlayerId() && empty($registration['person']['email']) ||
+				 $registration['type_id'] == TypesTable::getPlayerId() && empty($registration['person']['phone'])
+			) {
 				$this->MultipleFlash->setFlash(__('You must fill out all required fields'), 'error');
 				return $this->redirect(['action' => 'index']);
 			}

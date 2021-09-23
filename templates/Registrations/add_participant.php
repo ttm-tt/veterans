@@ -146,8 +146,13 @@ $(document).ready(function() {
 					'type' => 'hidden'
 				));
 			
-			echo $this->Form->control('person.email');
-			echo $this->Form->control('person.phone');
+			echo $this->Form->control('person.email', [
+				'required' => true
+			]);
+			
+			echo $this->Form->control('person.phone', [
+				'required' => true
+			]);
 
 		?>
 	</fieldset>	
