@@ -60,7 +60,7 @@
 	<tr<?php echo $class;?>>
 		<td><?php echo $user['username']; ?>&nbsp;</td>
 		<td>
-			<?php echo $this->Html->link($user['group']['name'], array('controller' => 'groups', 'action' => 'view', $user['Group']['id'])); ?>
+			<?php echo $this->Html->link($user['group']['name'], array('controller' => 'groups', 'action' => 'view', $user['group']['id'])); ?>
 		</td>
 		<td><?php echo $user['email']; ?>&nbsp;</td>
 		<td><?php echo $user['prefix_people']; ?>&nbsp;</td>

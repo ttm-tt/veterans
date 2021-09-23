@@ -627,7 +627,7 @@ class RegistrationsController extends AppController {
 						'Registrations.tournament_id' => $tid,
 						'People.user_id' => $this->Auth->user('id')
 					)
-				))->count() <= $this->Paginator->settings['limit']) {
+				))->count() <= $this->Paginator->getConfig('limit')) {
 
 				$this->request->getSession()->delete('Nations.id');
 				$this->request->getSession()->delete('Competitions.id');
