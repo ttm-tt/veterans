@@ -369,13 +369,8 @@ class ShopsController extends ShopAppController {
 			unset($person['Submit']);
 			unset($person['_Token']);
 
-			if ( empty($person['first_name']) || 
-				 empty($person['last_name']) ||
-				 empty($person['sex']) || 
-				 empty($person['nation_id']) ||
-				 $person['type'] == 'PLA' && empty($person['email']) ||
-				 $person['type'] == 'PLA' && empty($person['phone'])
-			) {
+			if ( empty($person['first_name']) || empty($person['last_name']) ||
+				 empty($person['sex']) || empty($person['nation_id']) ) {
 				$this->MultipleFlash->setFlash(__d('user', 'You must fill out all required fields'), 'error');
 				return;
 			}
