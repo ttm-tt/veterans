@@ -440,7 +440,7 @@ class RegistrationUpdateComponent extends Component {
 			return false;
 
 		// Check nation_id
-		$person_id = $data['person_id'];
+		$person_id = $data['person']['id'];
 		
 		if (!empty($nation_id) && $this->getController()->People->fieldByConditions('nation_id', array('id' => $person_id)) != $nation_id)
 			return false;
@@ -648,7 +648,7 @@ class RegistrationUpdateComponent extends Component {
 		$this->getController()->loadModel('Competitions');
 		$this->getController()->loadModel('People');
 		
-		$born = $this->getController()->People->fieldByConditions('born', array('id' => $newRegistration['person_id']));
+		$born = $this->getController()->People->fieldByConditions('born', array('id' => $newRegistration['person']['id']));
 		$conditions = array('Competitions.tournament_id' => $tid);
 		$order = [];
 

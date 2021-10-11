@@ -256,7 +256,7 @@ class ShopsController extends ShopAppController {
 		
 		// Dto. for COA, but we don't evaluate a limit here
 		if (isset($types['COA']) && $waiting['COA'] && !empty($articleList['COA']['waitinglist_limit_enabled'])) {
-			$accArticle = $articleList['COA'];
+			$coaArticle = $articleList['COA'];
 			if ($coaArticle['waitinglist_limit_enabled'] && $waitingCount['COA'] >= $coaArticle['waitinglist_limit_max']) {
 				$this->MultipleFlash->setFlash(
 					__d('user', 'The registration for accompanying persons has been closed'), 'warning'
@@ -288,6 +288,7 @@ class ShopsController extends ShopAppController {
 			'groupField' =>	'variant_type',
 			'contain' => array('Articles'),
 			'conditions' => array(
+				'ArticleVariants.visible' => true,
 				'Articles.name' => 'PLA',
 				'Articles.tournament_id' => $tid
 			),
@@ -305,6 +306,7 @@ class ShopsController extends ShopAppController {
 			'groupField' =>	'variant_type',
 			'contain' => array('Articles'),
 			'conditions' => array(
+				'ArticleVariants.visible' => true,
 				'Articles.name' => 'ACC',
 				'Articles.tournament_id' => $tid
 			),
@@ -322,6 +324,7 @@ class ShopsController extends ShopAppController {
 			'groupField' =>	'variant_type',
 			'contain' => array('Articles'),
 			'conditions' => array(
+				'ArticleVariants.visible' => true,
 				'Articles.name' => 'COA',
 				'Articles.tournament_id' => $tid
 			),
@@ -414,8 +417,16 @@ class ShopsController extends ShopAppController {
 			
 			if ($person['type'] != 'PLA') {
 				$person['dob'] = null;
-				$person['variant_id'] = null;
 			}
+			
+			// Add discount for nationality
+			$person['variant_id'] = 
+					$this->ArticleVariants->fieldByConditions('id', [
+							'article_id' => $articleList[$person['type']]['id'],
+							'variant_type' => 'Nationality',
+							'name' => $this->Nations->fieldByConditions('name', ['id' => $person['nation_id']])
+						])
+			;
 			
 			if (!empty($person['phone'])) {
 				if (!preg_match('/\+[0-9]+$/ui', $person['phone'])) {

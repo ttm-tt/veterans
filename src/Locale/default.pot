@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2020-11-27 19:33+0100\n"
+"POT-Creation-Date: 2021-10-08 11:13+0200\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -14,755 +14,2712 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: /Controller/CompetitionsController.php:23
-#: /Controller/CompetitionsController.php:60
+#: Controller/CompetitionsController.php:25
+#: Controller/CompetitionsController.php:62
+#: Controller/CompetitionsController.php:75
 msgid "Invalid competition"
 msgstr ""
 
-#: /Controller/CompetitionsController.php:34
-#: /Controller/CompetitionsController.php:65
-#: /Controller/RegistrationsController.php:51
-#: /Controller/RegistrationsController.php:611
-#: /Controller/RegistrationsController.php:1371
-#: /Controller/RegistrationsController.php:1469
-#: /Controller/RegistrationsController.php:1701
-#: /Controller/RegistrationsController.php:1841
-#: /Controller/RegistrationsController.php:1899
-#: /Controller/RegistrationsController.php:2545
-#: /Controller/AllotmentsController.php:65
-#: /Controller/ArticlesController.php:24
-#: /Controller/ArticlesController.php:148
-#: /Controller/ArticlesController.php:214
-#: /Controller/ArticlesController.php:306
-#: /Controller/OrdersController.php:30
-#: /Controller/OrdersController.php:665
-#: /Controller/OrdersController.php:1676
-#: /Controller/OrdersController.php:1720
-#: /Controller/OrdersController.php:1813
-#: /Controller/ShopsController.php:1426
-#: /Controller/ShopsController.php:1802
-#: /Controller/ShopsController.php:1915
+#: Controller/CompetitionsController.php:36
+#: Controller/CompetitionsController.php:67
+#: Controller/RegistrationsController.php:51
+#: Controller/RegistrationsController.php:615
+#: Controller/RegistrationsController.php:1375
+#: Controller/RegistrationsController.php:1473
+#: Controller/RegistrationsController.php:1705
+#: Controller/RegistrationsController.php:1845
+#: Controller/RegistrationsController.php:1903
+#: Controller/RegistrationsController.php:2549
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/AllotmentsController.php:65
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ArticlesController.php:24
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ArticlesController.php:149
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ArticlesController.php:215
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ArticlesController.php:307
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:30
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:665
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:1676
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:1721
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:1814
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1468
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1844
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1957
 msgid "You must select a tournament first"
 msgstr ""
 
-#: /Controller/CompetitionsController.php:44
-#: /Controller/CompetitionsController.php:75
+#: Controller/CompetitionsController.php:46
+#: Controller/CompetitionsController.php:83
 msgid "The competition has been saved"
 msgstr ""
 
-#: /Controller/CompetitionsController.php:48
+#: Controller/CompetitionsController.php:50
+#: Controller/CompetitionsController.php:87
 msgid "The competition could not be saved. Please, try again."
 msgstr ""
 
-#: /Controller/CompetitionsController.php:85
+#: Controller/CompetitionsController.php:95
 msgid "Invalid id for competition"
 msgstr ""
 
-#: /Controller/CompetitionsController.php:92
+#: Controller/CompetitionsController.php:102
 msgid "Competition deleted"
 msgstr ""
 
-#: /Controller/CompetitionsController.php:96
+#: Controller/CompetitionsController.php:106
 msgid "Competition was not deleted"
 msgstr ""
 
-#: /Controller/CompetitionsController.php:104
+#: Controller/CompetitionsController.php:114
+#: /home/ettu/veterans-v4/templates/Registrations/count.php:36
+#: /home/ettu/veterans-v4/templates/Registrations/history.php:6
 msgid "Singles"
 msgstr ""
 
-#: /Controller/CompetitionsController.php:105
+#: Controller/CompetitionsController.php:115
+#: /home/ettu/veterans-v4/templates/Registrations/count.php:37
+#: /home/ettu/veterans-v4/templates/Registrations/history.php:7
 msgid "Doubles"
 msgstr ""
 
-#: /Controller/CompetitionsController.php:106
-#: /Controller/CompetitionsController.php:112
+#: Controller/CompetitionsController.php:116
+#: Controller/CompetitionsController.php:122
+#: /home/ettu/veterans-v4/templates/Registrations/count.php:28
+#: /home/ettu/veterans-v4/templates/Registrations/count.php:38
+#: /home/ettu/veterans-v4/templates/Registrations/edit.php:243
+#: /home/ettu/veterans-v4/templates/Registrations/history.php:8
+#: /home/ettu/veterans-v4/templates/Registrations/view.php:120
 msgid "Mixed"
 msgstr ""
 
-#: /Controller/CompetitionsController.php:107
+#: Controller/CompetitionsController.php:117
+#: /home/ettu/veterans-v4/templates/Registrations/count.php:39
+#: /home/ettu/veterans-v4/templates/Registrations/history.php:9
 msgid "Teams"
 msgstr ""
 
-#: /Controller/CompetitionsController.php:110
+#: Controller/CompetitionsController.php:120
+#: /home/ettu/veterans-v4/templates/People/index.php:56
+#: /home/ettu/veterans-v4/templates/Registrations/count.php:26
 msgid "Women"
 msgstr ""
 
-#: /Controller/CompetitionsController.php:111
+#: Controller/CompetitionsController.php:121
+#: /home/ettu/veterans-v4/templates/People/index.php:57
+#: /home/ettu/veterans-v4/templates/Registrations/count.php:27
 msgid "Men"
 msgstr ""
 
-#: /Controller/Component/RegistrationUpdateComponent.php:482
-#: /Controller/RegistrationsController.php:1492
-#: /Controller/RegistrationsController.php:1867
-#: /Controller/RegistrationsController.php:1925
+#: Controller/Component/RegistrationUpdateComponent.php:484
+#: Controller/RegistrationsController.php:1496
+#: Controller/RegistrationsController.php:1871
+#: Controller/RegistrationsController.php:1929
 msgid "You are not allowed to edit this registration"
 msgstr ""
 
-#: /Controller/Component/RegistrationUpdateComponent.php:826
-#: /Controller/PeopleController.php:382
+#: Controller/Component/RegistrationUpdateComponent.php:828
+#: Controller/PeopleController.php:404
 msgid "You are not allowed to delete this person"
 msgstr ""
 
-#: /Controller/Component/RegistrationUpdateComponent.php:1053
-#: /Controller/Component/RegistrationUpdateComponent.php:1096
+#: Controller/Component/RegistrationUpdateComponent.php:1055
+#: Controller/Component/RegistrationUpdateComponent.php:1098
 msgid "SocketException while sending email: {0}"
 msgstr ""
 
-#: /Controller/GroupsController.php:37
-#: /Controller/GroupsController.php:91
+#: Controller/GroupsController.php:37
+#: Controller/GroupsController.php:91
 msgid "Invalid group"
 msgstr ""
 
-#: /Controller/GroupsController.php:68
-#: /Controller/GroupsController.php:102
+#: Controller/GroupsController.php:68
+#: Controller/GroupsController.php:102
 msgid "The group has been saved"
 msgstr ""
 
-#: /Controller/GroupsController.php:71
-#: /Controller/GroupsController.php:105
+#: Controller/GroupsController.php:71
+#: Controller/GroupsController.php:105
 msgid "The group could not be saved. Please, try again."
 msgstr ""
 
-#: /Controller/GroupsController.php:122
+#: Controller/GroupsController.php:122
 msgid "Invalid id for group"
 msgstr ""
 
-#: /Controller/GroupsController.php:129
+#: Controller/GroupsController.php:129
 msgid "Group deleted"
 msgstr ""
 
-#: /Controller/GroupsController.php:132
+#: Controller/GroupsController.php:132
 msgid "Group was not deleted"
 msgstr ""
 
-#: /Controller/NationsController.php:20
-#: /Controller/NationsController.php:50
+#: Controller/NationsController.php:47
+#: Controller/NationsController.php:55
+#: Controller/NationsController.php:84
+#: Controller/NationsController.php:92
+#: Controller/NationsController.php:122
 msgid "Invalid association"
 msgstr ""
 
-#: /Controller/NationsController.php:35
-#: /Controller/NationsController.php:60
+#: Controller/NationsController.php:69
+#: Controller/NationsController.php:100
 msgid "The association has been saved"
 msgstr ""
 
-#: /Controller/NationsController.php:38
-#: /Controller/NationsController.php:63
+#: Controller/NationsController.php:72
+#: Controller/NationsController.php:103
 msgid "The association could not be saved. Please, try again."
 msgstr ""
 
-#: /Controller/NationsController.php:72
+#: Controller/NationsController.php:114
 msgid "Invalid id for association"
 msgstr ""
 
-#: /Controller/NationsController.php:79
+#: Controller/NationsController.php:127
 msgid "Association deleted"
 msgstr ""
 
-#: /Controller/NationsController.php:82
+#: Controller/NationsController.php:130
 msgid "Association was not deleted"
 msgstr ""
 
-#: /Controller/PeopleController.php:129
-#: /Controller/PeopleController.php:256
+#: Controller/PeopleController.php:143
+#: Controller/PeopleController.php:270
+#: Controller/PeopleController.php:397
 msgid "Invalid person"
 msgstr ""
 
-#: /Controller/PeopleController.php:155
-#: /Controller/PeopleController.php:168
-#: /Controller/PeopleController.php:188
+#: Controller/PeopleController.php:169
+#: Controller/PeopleController.php:182
+#: Controller/PeopleController.php:202
 msgid "You are not allowed to view this person"
 msgstr ""
 
-#: /Controller/PeopleController.php:215
+#: Controller/PeopleController.php:229
 msgid "You are not allowed to add this person"
 msgstr ""
 
-#: /Controller/PeopleController.php:231
-#: /Controller/PeopleController.php:347
+#: Controller/PeopleController.php:245
+#: Controller/PeopleController.php:361
 msgid "The person has been saved"
 msgstr ""
 
-#: /Controller/PeopleController.php:234
-#: /Controller/PeopleController.php:351
+#: Controller/PeopleController.php:248
+#: Controller/PeopleController.php:365
 msgid "The person could not be saved. Please, try again."
 msgstr ""
 
-#: /Controller/PeopleController.php:288
-#: /Controller/PeopleController.php:297
-#: /Controller/PeopleController.php:308
+#: Controller/PeopleController.php:302
+#: Controller/PeopleController.php:311
+#: Controller/PeopleController.php:322
 msgid "You are not allowed to edit this person"
 msgstr ""
 
-#: /Controller/PeopleController.php:373
+#: Controller/PeopleController.php:389
 msgid "Invalid id for person"
 msgstr ""
 
-#: /Controller/PeopleController.php:388
+#: Controller/PeopleController.php:414
 msgid "Person deleted"
 msgstr ""
 
-#: /Controller/PeopleController.php:391
+#: Controller/PeopleController.php:417
 msgid "Person was not deleted"
 msgstr ""
 
-#: /Controller/RegistrationsController.php:79
+#: Controller/RegistrationsController.php:83
 msgid "You must fill out all required fields"
 msgstr ""
 
-#: /Controller/RegistrationsController.php:85
+#: Controller/RegistrationsController.php:89
 msgid "You must enter the date of birth for players"
 msgstr ""
 
-#: /Controller/RegistrationsController.php:96
+#: Controller/RegistrationsController.php:100
 msgid "You must be born in %d or earlier"
 msgstr ""
 
-#: /Controller/RegistrationsController.php:101
+#: Controller/RegistrationsController.php:105
 msgid "Wrong birthday given"
 msgstr ""
 
-#: /Controller/RegistrationsController.php:116
-#: /Controller/RegistrationsController.php:1433
-#: /Controller/RegistrationsController.php:1596
-#: /Controller/RegistrationsController.php:1885
-#: /Controller/RegistrationsController.php:1965
+#: Controller/RegistrationsController.php:120
+#: Controller/RegistrationsController.php:1437
+#: Controller/RegistrationsController.php:1600
+#: Controller/RegistrationsController.php:1889
+#: Controller/RegistrationsController.php:1969
 msgid "The registration could not be saved."
 msgstr ""
 
-#: /Controller/RegistrationsController.php:118
-#: /Controller/RegistrationsController.php:1430
+#: Controller/RegistrationsController.php:122
+#: Controller/RegistrationsController.php:1434
 msgid "The registration has been saved"
 msgstr ""
 
-#: /Controller/RegistrationsController.php:138
+#: Controller/RegistrationsController.php:142
 msgid "Maximum number of players reached, so you cannot enter them at this time"
 msgstr ""
 
-#: /Controller/RegistrationsController.php:143
+#: Controller/RegistrationsController.php:147
 msgid "Maximum number of accompanying persons reached, so you cannot enter them at this time"
 msgstr ""
 
-#: /Controller/RegistrationsController.php:1052
-#: /Controller/RegistrationsController.php:1124
-#: /Controller/RegistrationsController.php:1237
-#: /Controller/RegistrationsController.php:1464
+#: Controller/RegistrationsController.php:1056
+#: Controller/RegistrationsController.php:1128
+#: Controller/RegistrationsController.php:1241
+#: Controller/RegistrationsController.php:1468
 msgid "Invalid registration"
 msgstr ""
 
-#: /Controller/RegistrationsController.php:1095
-#: /Controller/RegistrationsController.php:1266
+#: Controller/RegistrationsController.php:1099
+#: Controller/RegistrationsController.php:1270
 msgid "You are not allowed to view this registration"
 msgstr ""
 
-#: /Controller/RegistrationsController.php:1205
-#: /Controller/RegistrationsController.php:1224
+#: Controller/RegistrationsController.php:1209
+#: Controller/RegistrationsController.php:1228
+#: /home/ettu/veterans-v4/templates/Registrations/view.php:108
+#: /home/ettu/veterans-v4/templates/Registrations/view.php:147
 msgid "wanted"
 msgstr ""
 
-#: /Controller/RegistrationsController.php:1242
-#: /Controller/OrdersController.php:503
+#: Controller/RegistrationsController.php:1246
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:503
 msgid "Invalid date"
 msgstr ""
 
-#: /Controller/RegistrationsController.php:1419
-#: /Controller/RegistrationsController.php:1556
+#: Controller/RegistrationsController.php:1423
+#: Controller/RegistrationsController.php:1560
 msgid "Start number must be unique"
 msgstr ""
 
-#: /Controller/RegistrationsController.php:1445
+#: Controller/RegistrationsController.php:1449
 msgid "You cannot enter new people at this time any more"
 msgstr ""
 
-#: /Controller/RegistrationsController.php:1449
+#: Controller/RegistrationsController.php:1453
 msgid "You cannot enter new players at this time any more"
 msgstr ""
 
-#: /Controller/RegistrationsController.php:1589
-#: /Controller/OrdersController.php:1640
+#: Controller/RegistrationsController.php:1593
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:1640
 msgid "Could not update person"
 msgstr ""
 
-#: /Controller/RegistrationsController.php:1607
-#: /Controller/RegistrationsController.php:1673
-#: /Controller/OrdersController.php:1470
-#: /Controller/ShopsController.php:1898
+#: Controller/RegistrationsController.php:1611
+#: Controller/RegistrationsController.php:1677
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:1470
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1940
 msgid "Could not update order"
 msgstr ""
 
-#: /Controller/RegistrationsController.php:1613
+#: Controller/RegistrationsController.php:1617
 msgid "Registration updated"
 msgstr ""
 
-#: /Controller/RegistrationsController.php:1617
-#: /Controller/RegistrationsController.php:1679
-#: /Controller/OrdersController.php:1427
+#: Controller/RegistrationsController.php:1621
+#: Controller/RegistrationsController.php:1683
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:1427
 msgid "Could not save changes"
 msgstr ""
 
-#: /Controller/RegistrationsController.php:1646
-#: /Controller/RegistrationsController.php:1846
-#: /Controller/RegistrationsController.php:1904
+#: Controller/RegistrationsController.php:1650
+#: Controller/RegistrationsController.php:1850
+#: Controller/RegistrationsController.php:1908
 msgid "Invalid id for registration"
 msgstr ""
 
-#: /Controller/RegistrationsController.php:1665
+#: Controller/RegistrationsController.php:1669
 msgid "Registration could not be deleted"
 msgstr ""
 
-#: /Controller/RegistrationsController.php:1683
+#: Controller/RegistrationsController.php:1687
 msgid "Registration deleted"
 msgstr ""
 
-#: /Controller/RegistrationsController.php:1709
+#: Controller/RegistrationsController.php:1713
 msgid "Invalid id for partner requests"
 msgstr ""
 
-#: /Controller/RegistrationsController.php:1888
+#: Controller/RegistrationsController.php:1892
 msgid "You have accepted {0} as the partner for {1}"
 msgstr ""
 
-#: /Controller/RegistrationsController.php:1962
+#: Controller/RegistrationsController.php:1966
 msgid "You have rejected {0} as a partner for {1}"
 msgstr ""
 
-#: /Controller/RegistrationsController.php:2274
-#: /Controller/RegistrationsController.php:2275
+#: Controller/RegistrationsController.php:2278
+#: Controller/RegistrationsController.php:2279
+#: /home/ettu/veterans-v4/templates/Registrations/count.php:73
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/chart.php:142
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/storno.php:619
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/payment_received.php:72
 msgid "Total"
 msgstr ""
 
-#: /Controller/RegistrationsController.php:2557
+#: Controller/RegistrationsController.php:2561
 msgid "Men before Women"
 msgstr ""
 
-#: /Controller/RegistrationsController.php:2558
+#: Controller/RegistrationsController.php:2562
 msgid "Women before Men"
 msgstr ""
 
-#: /Controller/RegistrationsController.php:2559
+#: Controller/RegistrationsController.php:2563
+#: /home/ettu/veterans-v4/templates/Nations/view.php:3
+#: /home/ettu/veterans-v4/templates/People/add.php:74
+#: /home/ettu/veterans-v4/templates/People/edit.php:96
+#: /home/ettu/veterans-v4/templates/People/edit.php:102
+#: /home/ettu/veterans-v4/templates/People/index.php:77
+#: /home/ettu/veterans-v4/templates/People/view.php:41
+#: /home/ettu/veterans-v4/templates/Registrations/count.php:67
+#: /home/ettu/veterans-v4/templates/Users/edit.php:54
+#: /home/ettu/veterans-v4/templates/Users/view.php:31
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_person.php:85
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/storno.php:296
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/storno.php:399
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:184
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:259
 msgid "Association"
 msgstr ""
 
-#: /Controller/RegistrationsController.php:2560
+#: Controller/RegistrationsController.php:2564
+#: /home/ettu/veterans-v4/templates/Competitions/view.php:5
+#: /home/ettu/veterans-v4/templates/Groups/view.php:9
+#: /home/ettu/veterans-v4/templates/Nations/view.php:5
+#: /home/ettu/veterans-v4/templates/People/index.php:75
+#: /home/ettu/veterans-v4/templates/Tournaments/view.php:5
+#: /home/ettu/veterans-v4/templates/Types/view.php:5
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/add.php:10
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/add.php:145
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:10
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:150
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:187
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/view.php:5
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/view.php:101
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:46
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:105
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/storno.php:294
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/storno.php:398
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:183
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:258
 msgid "Name"
 msgstr ""
 
-#: /Controller/RegistrationsController.php:2561
+#: Controller/RegistrationsController.php:2565
 msgid "Age category ascending"
 msgstr ""
 
-#: /Controller/RegistrationsController.php:2562
+#: Controller/RegistrationsController.php:2566
 msgid "Age category descending"
 msgstr ""
 
-#: /Controller/RegistrationsController.php:2563
+#: Controller/RegistrationsController.php:2567
+#: /home/ettu/veterans-v4/templates/People/add.php:64
+#: /home/ettu/veterans-v4/templates/People/view.php:36
 msgid "Extern ID"
 msgstr ""
 
-#: /Controller/RegistrationsController.php:3147
-#: /Controller/ArticlesController.php:382
+#: Controller/RegistrationsController.php:3151
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ArticlesController.php:383
 msgid "Only JPG, GIF and PNG images are allowed."
 msgstr ""
 
-#: /Controller/TournamentsController.php:26
-#: /Controller/TournamentsController.php:68
+#: Controller/TournamentsController.php:26
+#: Controller/TournamentsController.php:68
 msgid "Invalid tournament"
 msgstr ""
 
-#: /Controller/TournamentsController.php:51
-#: /Controller/TournamentsController.php:90
+#: Controller/TournamentsController.php:51
+#: Controller/TournamentsController.php:90
 msgid "The tournament has been saved"
 msgstr ""
 
-#: /Controller/TournamentsController.php:54
-#: /Controller/TournamentsController.php:93
+#: Controller/TournamentsController.php:54
+#: Controller/TournamentsController.php:93
 msgid "The tournament could not be saved. Please, try again."
 msgstr ""
 
-#: /Controller/TournamentsController.php:103
+#: Controller/TournamentsController.php:103
 msgid "Invalid id for tournament"
 msgstr ""
 
-#: /Controller/TournamentsController.php:112
+#: Controller/TournamentsController.php:112
 msgid "Tournament deleted"
 msgstr ""
 
-#: /Controller/TournamentsController.php:116
+#: Controller/TournamentsController.php:116
 msgid "Tournament was not deleted"
 msgstr ""
 
-#: /Controller/TypesController.php:18
-#: /Controller/TypesController.php:49
+#: Controller/TypesController.php:18
+#: Controller/TypesController.php:49
 msgid "Invalid function"
 msgstr ""
 
-#: /Controller/TypesController.php:34
-#: /Controller/TypesController.php:59
+#: Controller/TypesController.php:34
+#: Controller/TypesController.php:59
 msgid "The function has been saved"
 msgstr ""
 
-#: /Controller/TypesController.php:37
-#: /Controller/TypesController.php:62
+#: Controller/TypesController.php:37
+#: Controller/TypesController.php:62
 msgid "The function could not be saved. Please, try again."
 msgstr ""
 
-#: /Controller/TypesController.php:71
+#: Controller/TypesController.php:71
 msgid "Invalid id for function"
 msgstr ""
 
-#: /Controller/TypesController.php:78
+#: Controller/TypesController.php:78
 msgid "Function deleted"
 msgstr ""
 
-#: /Controller/TypesController.php:81
+#: Controller/TypesController.php:81
 msgid "Function was not deleted"
 msgstr ""
 
-#: /Controller/UsersController.php:479
-#: /Controller/UsersController.php:593
-#: /Controller/UsersController.php:683
-#: /Controller/UsersController.php:688
-#: /Controller/UsersController.php:762
+#: Controller/UsersController.php:479
+#: Controller/UsersController.php:593
+#: Controller/UsersController.php:683
+#: Controller/UsersController.php:688
+#: Controller/UsersController.php:762
 msgid "Invalid user"
 msgstr ""
 
-#: /Controller/UsersController.php:558
-#: /Controller/UsersController.php:625
+#: Controller/UsersController.php:558
+#: Controller/UsersController.php:625
 msgid "The user has been saved"
 msgstr ""
 
-#: /Controller/UsersController.php:561
-#: /Controller/UsersController.php:628
+#: Controller/UsersController.php:561
+#: Controller/UsersController.php:628
 msgid "The user could not be saved. Please, try again."
 msgstr ""
 
-#: /Controller/UsersController.php:659
+#: Controller/UsersController.php:659
 msgid "Invalid id for user"
 msgstr ""
 
-#: /Controller/UsersController.php:666
+#: Controller/UsersController.php:666
 msgid "User deleted"
 msgstr ""
 
-#: /Controller/UsersController.php:669
+#: Controller/UsersController.php:669
 msgid "User was not deleted"
 msgstr ""
 
-#: /Model/Table/CompetitionsTable.php:32
+#: Model/Table/CompetitionsTable.php:32
 msgid "must be unique within a tournament"
 msgstr ""
 
-#: /Model/Table/CompetitionsTable.php:41
+#: Model/Table/CompetitionsTable.php:41
 msgid "value must be \"Mixed\""
 msgstr ""
 
-#: /Model/Table/PeopleTable.php:55
+#: Model/Table/PeopleTable.php:57
 msgid "Birthday cannot be empty for players"
 msgstr ""
 
-#: /Model/Table/PeopleTable.php:57
+#: Model/Table/PeopleTable.php:59
 msgid "You must select an association"
 msgstr ""
 
-#: /Model/Table/UsersTable.php:52
+#: Model/Table/UsersTable.php:53
 msgid "A user with this name already exists"
 msgstr ""
 
-#: /Model/Table/UsersTable.php:55
+#: Model/Table/UsersTable.php:56
 msgid "The prefix is already in use"
 msgstr ""
 
-#: /Controller/AllotmentsController.php:50
-#: /Controller/AllotmentsController.php:113
+#: /home/ettu/veterans-v4/templates/Competitions/add.php:5
+msgid "Add Competition"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Competitions/add.php:21
+#: /home/ettu/veterans-v4/templates/Competitions/edit.php:24
+#: /home/ettu/veterans-v4/templates/Competitions/index.php:10
+#: /home/ettu/veterans-v4/templates/Competitions/view.php:20
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:187
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:261
+msgid "Type"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Competitions/add.php:23
+#: /home/ettu/veterans-v4/templates/Competitions/edit.php:26
+msgid "Cutoff year"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Competitions/add.php:24
+#: /home/ettu/veterans-v4/templates/Competitions/edit.php:27
+msgid "No of Entries"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Competitions/add.php:25
+#: /home/ettu/veterans-v4/templates/Competitions/edit.php:28
+msgid "No of Entries Host"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Competitions/add.php:29
+msgid "Save & Cont."
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Competitions/add.php:36
+#: /home/ettu/veterans-v4/templates/Competitions/edit.php:40
+#: /home/ettu/veterans-v4/templates/Competitions/view.php:57
+msgid "List Competitions"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Competitions/edit.php:5
+#: /home/ettu/veterans-v4/templates/Competitions/view.php:55
+msgid "Edit Competition"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Competitions/edit.php:18
+#: /home/ettu/veterans-v4/templates/Competitions/view.php:15
+#: /home/ettu/veterans-v4/templates/People/edit.php:57
+#: /home/ettu/veterans-v4/templates/People/index.php:53
+#: /home/ettu/veterans-v4/templates/People/index.php:79
+#: /home/ettu/veterans-v4/templates/People/view.php:25
+msgid "Sex"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Competitions/edit.php:39
+msgid "View Competition"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Competitions/index.php:3
+msgid "Competitions"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Competitions/index.php:12
+#: /home/ettu/veterans-v4/templates/Groups/index.php:8
+#: /home/ettu/veterans-v4/templates/Nations/index.php:24
+#: /home/ettu/veterans-v4/templates/People/index.php:88
+#: /home/ettu/veterans-v4/templates/Tournaments/index.php:11
+#: /home/ettu/veterans-v4/templates/Users/index.php:45
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Allotments/index.php:9
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/index.php:50
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:189
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:263
+msgid "Updated"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Competitions/index.php:13
+#: /home/ettu/veterans-v4/templates/Groups/index.php:9
+#: /home/ettu/veterans-v4/templates/Nations/index.php:25
+#: /home/ettu/veterans-v4/templates/People/index.php:89
+#: /home/ettu/veterans-v4/templates/Tournaments/index.php:13
+#: /home/ettu/veterans-v4/templates/Types/index.php:8
+#: /home/ettu/veterans-v4/templates/Users/index.php:46
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Allotments/index.php:10
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/index.php:51
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:116
+msgid "Actions"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Competitions/index.php:36
+#: /home/ettu/veterans-v4/templates/Groups/index.php:28
+#: /home/ettu/veterans-v4/templates/Nations/index.php:46
+#: /home/ettu/veterans-v4/templates/People/index.php:121
+#: /home/ettu/veterans-v4/templates/Tournaments/index.php:54
+#: /home/ettu/veterans-v4/templates/Types/index.php:26
+#: /home/ettu/veterans-v4/templates/Users/index.php:74
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Allotments/index.php:31
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/index.php:103
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:176
+msgid "View"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Competitions/index.php:37
+#: /home/ettu/veterans-v4/templates/Groups/index.php:29
+#: /home/ettu/veterans-v4/templates/Nations/index.php:47
+#: /home/ettu/veterans-v4/templates/People/index.php:122
+#: /home/ettu/veterans-v4/templates/Tournaments/index.php:55
+#: /home/ettu/veterans-v4/templates/Types/index.php:27
+#: /home/ettu/veterans-v4/templates/Users/index.php:75
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Allotments/index.php:32
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/index.php:104
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:241
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:243
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:306
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:308
+msgid "Edit"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Competitions/index.php:38
+#: /home/ettu/veterans-v4/templates/Groups/index.php:30
+#: /home/ettu/veterans-v4/templates/Nations/index.php:48
+#: /home/ettu/veterans-v4/templates/People/index.php:123
+#: /home/ettu/veterans-v4/templates/Tournaments/index.php:56
+#: /home/ettu/veterans-v4/templates/Types/index.php:28
+#: /home/ettu/veterans-v4/templates/Users/index.php:76
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Allotments/index.php:33
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/index.php:105
+msgid "Delete"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Competitions/index.php:38
+#: /home/ettu/veterans-v4/templates/Competitions/view.php:56
+#: /home/ettu/veterans-v4/templates/Groups/index.php:30
+#: /home/ettu/veterans-v4/templates/Groups/view.php:28
+#: /home/ettu/veterans-v4/templates/Nations/index.php:48
+#: /home/ettu/veterans-v4/templates/Nations/view.php:36
+#: /home/ettu/veterans-v4/templates/People/index.php:123
+#: /home/ettu/veterans-v4/templates/People/view.php:93
+#: /home/ettu/veterans-v4/templates/Registrations/view.php:213
+#: /home/ettu/veterans-v4/templates/Tournaments/index.php:56
+#: /home/ettu/veterans-v4/templates/Tournaments/view.php:71
+#: /home/ettu/veterans-v4/templates/Types/index.php:28
+#: /home/ettu/veterans-v4/templates/Types/view.php:21
+#: /home/ettu/veterans-v4/templates/Users/index.php:76
+#: /home/ettu/veterans-v4/templates/Users/view.php:82
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/index.php:105
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/view.php:124
+msgid "Are you sure you want to delete %s?"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Competitions/index.php:50
+#: /home/ettu/veterans-v4/templates/Competitions/view.php:58
+msgid "New Competition"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Competitions/view.php:3
+msgid "Competition"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Competitions/view.php:10
+#: /home/ettu/veterans-v4/templates/Nations/view.php:10
+#: /home/ettu/veterans-v4/templates/Tournaments/index.php:6
+#: /home/ettu/veterans-v4/templates/Tournaments/view.php:10
+#: /home/ettu/veterans-v4/templates/Types/view.php:10
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/add.php:13
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/add.php:148
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:13
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:155
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:190
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/view.php:10
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/view.php:102
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/storno.php:495
+msgid "Description"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Competitions/view.php:25
+#: /home/ettu/veterans-v4/templates/People/index.php:80
+#: /home/ettu/veterans-v4/templates/People/view.php:30
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/storno.php:295
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:186
+msgid "Born"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Competitions/view.php:30
+msgid "Entries"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Competitions/view.php:35
+msgid "Entries Host"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Competitions/view.php:40
+#: /home/ettu/veterans-v4/templates/Nations/view.php:20
+#: /home/ettu/veterans-v4/templates/People/view.php:74
+#: /home/ettu/veterans-v4/templates/Registrations/view.php:186
+#: /home/ettu/veterans-v4/templates/Tournaments/view.php:55
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Allotments/view.php:20
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/view.php:72
+msgid "Updated At"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Competitions/view.php:45
+#: /home/ettu/veterans-v4/templates/Nations/view.php:25
+#: /home/ettu/veterans-v4/templates/People/view.php:79
+#: /home/ettu/veterans-v4/templates/Registrations/view.php:191
+#: /home/ettu/veterans-v4/templates/Tournaments/view.php:60
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Allotments/view.php:25
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/view.php:77
+msgid "Created At"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Competitions/view.php:56
+msgid "Delete Competition"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Groups/add.php:5
+msgid "Add Group"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Groups/add.php:12
+#: /home/ettu/veterans-v4/templates/Groups/edit.php:18
+#: /home/ettu/veterans-v4/templates/Groups/index.php:7
+#: /home/ettu/veterans-v4/templates/Groups/view.php:16
+#: /home/ettu/veterans-v4/templates/Types/index.php:3
+msgid "Functions"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Groups/add.php:25
+#: /home/ettu/veterans-v4/templates/Groups/edit.php:30
+#: /home/ettu/veterans-v4/templates/Groups/view.php:29
+#: /home/ettu/veterans-v4/templates/Users/add.php:69
+#: /home/ettu/veterans-v4/templates/Users/edit.php:80
+#: /home/ettu/veterans-v4/templates/Users/index.php:87
+#: /home/ettu/veterans-v4/templates/Users/view.php:85
+msgid "List Groups"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Groups/add.php:26
+#: /home/ettu/veterans-v4/templates/Groups/edit.php:31
+#: /home/ettu/veterans-v4/templates/Groups/index.php:44
+#: /home/ettu/veterans-v4/templates/Groups/view.php:31
+#: /home/ettu/veterans-v4/templates/Users/add.php:68
+#: /home/ettu/veterans-v4/templates/Users/edit.php:79
+#: /home/ettu/veterans-v4/templates/Users/notifications.php:35
+#: /home/ettu/veterans-v4/templates/Users/view.php:83
+msgid "List Users"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Groups/edit.php:9
+#: /home/ettu/veterans-v4/templates/Groups/view.php:27
+msgid "Edit Group"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Groups/index.php:3
+#: /home/ettu/veterans-v4/templates/Users/index.php:11
+msgid "Groups"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Groups/index.php:42
+#: /home/ettu/veterans-v4/templates/Groups/view.php:30
+#: /home/ettu/veterans-v4/templates/Users/add.php:70
+msgid "New Group"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Groups/view.php:7
+#: /home/ettu/veterans-v4/templates/Users/view.php:10
+msgid "Group"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Groups/view.php:28
+msgid "Delete Group"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Nations/add.php:5
+msgid "Add Association"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Nations/add.php:21
+#: /home/ettu/veterans-v4/templates/Nations/edit.php:23
+#: /home/ettu/veterans-v4/templates/Nations/view.php:37
+msgid "List Associations"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Nations/add.php:22
+#: /home/ettu/veterans-v4/templates/People/add.php:91
+#: /home/ettu/veterans-v4/templates/People/edit.php:121
+#: /home/ettu/veterans-v4/templates/People/update.php:18
+#: /home/ettu/veterans-v4/templates/People/view.php:96
+#: /home/ettu/veterans-v4/templates/Registrations/add.php:150
+#: /home/ettu/veterans-v4/templates/Users/view.php:86
+msgid "List People"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Nations/add.php:23
+#: /home/ettu/veterans-v4/templates/People/index.php:135
+#: /home/ettu/veterans-v4/templates/People/view.php:99
+msgid "New Person"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Nations/edit.php:5
+#: /home/ettu/veterans-v4/templates/Nations/view.php:35
+msgid "Edit Association"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Nations/edit.php:22
+msgid "View Association"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Nations/index.php:3
+msgid "Associations"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Nations/index.php:60
+#: /home/ettu/veterans-v4/templates/Nations/view.php:38
+msgid "New Association"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Nations/view.php:15
+msgid "Continent"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Nations/view.php:36
+msgid "Delete Association"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/People/add.php:21
+msgid "Add Person"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/People/add.php:24
+#: /home/ettu/veterans-v4/templates/People/edit.php:28
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_person.php:52
+msgid "Given Name"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/People/add.php:28
+#: /home/ettu/veterans-v4/templates/People/edit.php:32
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_person.php:57
+msgid "Family Name"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/People/add.php:44
+#: /home/ettu/veterans-v4/templates/People/edit.php:23
+#: /home/ettu/veterans-v4/templates/People/view.php:5
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_person.php:64
+msgid "Woman"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/People/add.php:44
+#: /home/ettu/veterans-v4/templates/People/edit.php:23
+#: /home/ettu/veterans-v4/templates/People/view.php:5
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_person.php:64
+msgid "Man"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/People/add.php:53
+#: /home/ettu/veterans-v4/templates/People/edit.php:76
+#: /home/ettu/veterans-v4/templates/Registrations/add_participant.php:120
+#: /home/ettu/veterans-v4/templates/Registrations/edit_participant.php:228
+#: /home/ettu/veterans-v4/templates/Tournaments/add.php:35
+#: /home/ettu/veterans-v4/templates/Tournaments/add.php:43
+#: /home/ettu/veterans-v4/templates/Tournaments/add.php:51
+#: /home/ettu/veterans-v4/templates/Tournaments/add.php:59
+#: /home/ettu/veterans-v4/templates/Tournaments/add.php:67
+#: /home/ettu/veterans-v4/templates/Tournaments/add.php:76
+#: /home/ettu/veterans-v4/templates/Tournaments/edit.php:41
+#: /home/ettu/veterans-v4/templates/Tournaments/edit.php:49
+#: /home/ettu/veterans-v4/templates/Tournaments/edit.php:57
+#: /home/ettu/veterans-v4/templates/Tournaments/edit.php:65
+#: /home/ettu/veterans-v4/templates/Tournaments/edit.php:73
+#: /home/ettu/veterans-v4/templates/Tournaments/edit.php:82
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/add.php:109
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/add.php:118
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:110
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:119
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_person.php:73
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:53
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:63
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/add_person.php:203
+msgid "Year"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/People/add.php:54
+#: /home/ettu/veterans-v4/templates/People/edit.php:77
+#: /home/ettu/veterans-v4/templates/Registrations/add_participant.php:121
+#: /home/ettu/veterans-v4/templates/Registrations/edit_participant.php:229
+#: /home/ettu/veterans-v4/templates/Tournaments/add.php:36
+#: /home/ettu/veterans-v4/templates/Tournaments/add.php:44
+#: /home/ettu/veterans-v4/templates/Tournaments/add.php:52
+#: /home/ettu/veterans-v4/templates/Tournaments/add.php:60
+#: /home/ettu/veterans-v4/templates/Tournaments/add.php:68
+#: /home/ettu/veterans-v4/templates/Tournaments/add.php:77
+#: /home/ettu/veterans-v4/templates/Tournaments/edit.php:42
+#: /home/ettu/veterans-v4/templates/Tournaments/edit.php:50
+#: /home/ettu/veterans-v4/templates/Tournaments/edit.php:58
+#: /home/ettu/veterans-v4/templates/Tournaments/edit.php:66
+#: /home/ettu/veterans-v4/templates/Tournaments/edit.php:74
+#: /home/ettu/veterans-v4/templates/Tournaments/edit.php:83
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/add.php:110
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/add.php:119
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:111
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:120
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_person.php:74
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:54
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:64
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/add_person.php:204
+msgid "Month"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/People/add.php:55
+#: /home/ettu/veterans-v4/templates/People/edit.php:78
+#: /home/ettu/veterans-v4/templates/Registrations/add_participant.php:122
+#: /home/ettu/veterans-v4/templates/Registrations/edit_participant.php:230
+#: /home/ettu/veterans-v4/templates/Tournaments/add.php:37
+#: /home/ettu/veterans-v4/templates/Tournaments/add.php:45
+#: /home/ettu/veterans-v4/templates/Tournaments/add.php:53
+#: /home/ettu/veterans-v4/templates/Tournaments/add.php:61
+#: /home/ettu/veterans-v4/templates/Tournaments/add.php:69
+#: /home/ettu/veterans-v4/templates/Tournaments/add.php:78
+#: /home/ettu/veterans-v4/templates/Tournaments/edit.php:43
+#: /home/ettu/veterans-v4/templates/Tournaments/edit.php:51
+#: /home/ettu/veterans-v4/templates/Tournaments/edit.php:59
+#: /home/ettu/veterans-v4/templates/Tournaments/edit.php:67
+#: /home/ettu/veterans-v4/templates/Tournaments/edit.php:75
+#: /home/ettu/veterans-v4/templates/Tournaments/edit.php:84
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/add.php:111
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/add.php:120
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:112
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:121
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_person.php:75
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:55
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:65
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/add_person.php:205
+msgid "Day"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/People/add.php:58
+#: /home/ettu/veterans-v4/templates/People/edit.php:81
+#: /home/ettu/veterans-v4/templates/Registrations/add_participant.php:125
+#: /home/ettu/veterans-v4/templates/Registrations/edit_participant.php:233
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_person.php:78
+msgid "Date Born"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/People/add.php:73
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_person.php:88
+msgid "Select Association"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/People/edit.php:21
+#: /home/ettu/veterans-v4/templates/People/view.php:90
+msgid "Edit Person"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/People/edit.php:68
+msgid "Date born"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/People/index.php:3
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:66
+msgid "People"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/People/index.php:18
+msgid "Last&nbsp;name"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/People/index.php:29
+#: /home/ettu/veterans-v4/templates/People/index.php:31
+#: /home/ettu/veterans-v4/templates/People/index.php:64
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:107
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:109
+#: /home/ettu/veterans-v4/templates/Users/index.php:19
+#: /home/ettu/veterans-v4/templates/Users/index.php:21
+#: /home/ettu/veterans-v4/templates/element/filter.php:20
+#: /home/ettu/veterans-v4/templates/element/filter.php:22
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:58
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:60
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:85
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:87
+msgid "all"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/People/index.php:63
+#: /home/ettu/veterans-v4/templates/Users/index.php:16
+#: /home/ettu/veterans-v4/templates/Users/view.php:5
+msgid "Username"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/People/index.php:81
+msgid "Reg. ID"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/People/index.php:86
+#: /home/ettu/veterans-v4/templates/People/view.php:57
+#: /home/ettu/veterans-v4/templates/Registrations/history.php:32
+#: /home/ettu/veterans-v4/templates/Users/view.php:3
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Allotments/index.php:6
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Allotments/view.php:10
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/history.php:4
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/history.php:28
+msgid "User"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/People/update.php:5
+msgid "Update People"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/People/update.php:11
+msgid "Update"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/People/view.php:3
+#: /home/ettu/veterans-v4/templates/Registrations/edit.php:104
+#: /home/ettu/veterans-v4/templates/Registrations/view.php:18
+msgid "Person"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/People/view.php:8
+msgid "First Name"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/People/view.php:13
+msgid "Last Name"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/People/view.php:19
+msgid "Display Name"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/People/view.php:47
+#: /home/ettu/veterans-v4/templates/Registrations/edit.php:282
+#: /home/ettu/veterans-v4/templates/Users/view.php:15
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_address.php:95
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_person.php:94
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/history.php:14
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:104
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:139
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/import.php:12
+msgid "Email"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/People/view.php:52
+#: /home/ettu/veterans-v4/templates/Registrations/edit.php:286
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_address.php:106
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_person.php:99
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:141
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/address.php:160
+msgid "Phone"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/People/view.php:63
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/history.php:7
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:102
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:32
+msgid "Invoice"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/People/view.php:93
+msgid "Delete Person"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/add.php:29
+#: /home/ettu/veterans-v4/templates/Registrations/edit.php:162
+msgid "Select Event"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/add.php:39
+#: /home/ettu/veterans-v4/templates/Registrations/add.php:106
+msgid "Select Function"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/add.php:59
+#: /home/ettu/veterans-v4/templates/Registrations/add.php:73
+#: /home/ettu/veterans-v4/templates/Registrations/edit.php:25
+#: /home/ettu/veterans-v4/templates/Registrations/edit.php:44
+#: /home/ettu/veterans-v4/templates/Registrations/edit.php:226
+#: /home/ettu/veterans-v4/templates/Registrations/edit.php:267
+#: /home/ettu/veterans-v4/templates/Registrations/view.php:101
+#: /home/ettu/veterans-v4/templates/Registrations/view.php:140
+msgid "Partner wanted"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/add.php:93
+msgid "Add Registration"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/add.php:100
+msgid "Select Person"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/add.php:105
+#: /home/ettu/veterans-v4/templates/Registrations/edit.php:128
+#: /home/ettu/veterans-v4/templates/Registrations/edit.php:132
+#: /home/ettu/veterans-v4/templates/Registrations/edit.php:136
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:48
+#: /home/ettu/veterans-v4/templates/Registrations/view.php:32
+#: /home/ettu/veterans-v4/templates/Types/view.php:3
+msgid "Function"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/add.php:122
+#: /home/ettu/veterans-v4/templates/Registrations/add.php:131
+msgid "Select Partner"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/add.php:149
+#: /home/ettu/veterans-v4/templates/Registrations/assign_numbers.php:91
+#: /home/ettu/veterans-v4/templates/Registrations/count.php:122
+#: /home/ettu/veterans-v4/templates/Registrations/edit.php:332
+#: /home/ettu/veterans-v4/templates/Registrations/history.php:103
+#: /home/ettu/veterans-v4/templates/Registrations/import.php:18
+#: /home/ettu/veterans-v4/templates/Registrations/import_partner.php:18
+#: /home/ettu/veterans-v4/templates/Registrations/print_accreditation_settings.php:22
+#: /home/ettu/veterans-v4/templates/Registrations/view.php:215
+#: /home/ettu/veterans-v4/templates/Registrations/view.php:222
+#: /home/ettu/veterans-v4/templates/Users/view.php:87
+msgid "List Registrations"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/assign_numbers.php:5
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:530
+msgid "Assign Start Numbers"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/assign_numbers.php:10
+msgid "Start with Number"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/assign_numbers.php:34
+#: /home/ettu/veterans-v4/templates/Registrations/assign_numbers.php:50
+#: /home/ettu/veterans-v4/templates/Registrations/assign_numbers.php:66
+msgid "None"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/assign_numbers.php:82
+msgid "Assign Numbers"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/count.php:7
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:534
+msgid "Count Participants"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/count.php:120
+#: /home/ettu/veterans-v4/templates/Registrations/view.php:219
+msgid "New Registration"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/count.php:124
+#: /home/ettu/veterans-v4/templates/Registrations/edit.php:335
+#: /home/ettu/veterans-v4/templates/Registrations/view.php:217
+#: /home/ettu/veterans-v4/templates/Registrations/view.php:224
+msgid "List Partner Wanted"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/count.php:126
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:286
+msgid "Export"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/edit.php:88
+#: /home/ettu/veterans-v4/templates/Registrations/history.php:108
+#: /home/ettu/veterans-v4/templates/Registrations/view.php:211
+msgid "Edit Registration"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/edit.php:176
+#: /home/ettu/veterans-v4/templates/Registrations/view.php:67
+msgid "Single"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/edit.php:187
+msgid "Double Partner Category"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/edit.php:201
+#: /home/ettu/veterans-v4/templates/Registrations/view.php:81
+msgid "Double"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/edit.php:218
+#: /home/ettu/veterans-v4/templates/Registrations/view.php:93
+msgid "Double Partner"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/edit.php:232
+msgid "Mixed Partner Category"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/edit.php:259
+#: /home/ettu/veterans-v4/templates/Registrations/view.php:132
+msgid "Mixed Partner"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/edit.php:303
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:58
+msgid "Items"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/history.php:4
+#: /home/ettu/veterans-v4/templates/Users/view.php:69
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/history.php:3
+msgid "Created"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/history.php:5
+#: /home/ettu/veterans-v4/templates/Registrations/view.php:173
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/chart.php:41
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:114
+msgid "Cancelled"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/history.php:10
+msgid "Request double partner"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/history.php:11
+msgid "Request mixed partner"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/history.php:12
+msgid "Wanted as double partner by"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/history.php:13
+msgid "Wanted as mixed partner by"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/history.php:14
+msgid "Confirmed as double partner by"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/history.php:15
+msgid "Confirmed as mixed partner by"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/history.php:16
+msgid "Rejected as double partner by"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/history.php:17
+msgid "Rejected as mixed partner by"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/history.php:18
+msgid "Single cancelled"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/history.php:19
+msgid "Double cancelled"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/history.php:20
+msgid "Mixed cancelled"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/history.php:21
+msgid "Team cancelled"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/history.php:22
+msgid "Replaced by"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/history.php:27
+msgid "Registration History of"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/history.php:31
+#: /home/ettu/veterans-v4/templates/Tournaments/index.php:8
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/history.php:27
+msgid "Date"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/history.php:33
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/history.php:29
+msgid "Field"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/history.php:34
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/history.php:30
+msgid "Old Value"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/history.php:35
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/history.php:31
+msgid "New Value"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/history.php:42
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/history.php:38
+msgid "Current"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/history.php:105
+msgid "View Registration"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/import.php:5
+msgid "Import Registrations"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/import.php:11
+#: /home/ettu/veterans-v4/templates/Registrations/import_partner.php:11
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:538
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:285
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/import.php:17
+msgid "Import"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/import_partner.php:5
+msgid "Import Double Partners"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:542
+msgid "Import Partner"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/print_accreditation_settings.php:5
+msgid "Print Accreditation Settings"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/print_accreditation_settings.php:27
+msgid "Print Accreditation"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/view.php:11
+msgid "Registration of"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/view.php:40
+msgid "Replaced By"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/view.php:53
+msgid "Start No."
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/view.php:159
+msgid "Team"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/view.php:180
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_invoice.php:120
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/payment_received.php:101
+msgid "Comment"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/view.php:209
+msgid "View History"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Registrations/view.php:213
+msgid "Delete Registration"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Tournaments/add.php:5
+msgid "Add Tournament"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Tournaments/add.php:8
+#: /home/ettu/veterans-v4/templates/Tournaments/edit.php:8
+#: /home/ettu/veterans-v4/templates/Tournaments/view.php:3
+#: /home/ettu/veterans-v4/templates/Users/view.php:38
+msgid "Tournament"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Tournaments/add.php:11
+#: /home/ettu/veterans-v4/templates/Tournaments/edit.php:11
+msgid "Organizer"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Tournaments/add.php:14
+#: /home/ettu/veterans-v4/templates/Tournaments/edit.php:14
+msgid "Comittee"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Tournaments/add.php:17
+#: /home/ettu/veterans-v4/templates/Tournaments/edit.php:17
+msgid "Host"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Tournaments/add.php:20
+#: /home/ettu/veterans-v4/templates/Tournaments/edit.php:20
+msgid "Contractor"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Tournaments/add.php:23
+#: /home/ettu/veterans-v4/templates/Tournaments/edit.php:23
+msgid "Nat. DPA"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Tournaments/add.php:73
+#: /home/ettu/veterans-v4/templates/Tournaments/edit.php:79
+#: /home/ettu/veterans-v4/templates/Tournaments/view.php:40
+msgid "Start Accreditation"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Tournaments/add.php:83
+#: /home/ettu/veterans-v4/templates/Tournaments/edit.php:89
+msgid "Select Host Association"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Tournaments/add.php:84
+#: /home/ettu/veterans-v4/templates/Tournaments/edit.php:90
+#: /home/ettu/veterans-v4/templates/Tournaments/view.php:45
+msgid "Host Association"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Tournaments/add.php:130
+#: /home/ettu/veterans-v4/templates/Tournaments/edit.php:134
+#: /home/ettu/veterans-v4/templates/Tournaments/view.php:72
+msgid "List Tournaments"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Tournaments/edit.php:5
+#: /home/ettu/veterans-v4/templates/Tournaments/view.php:70
+msgid "Edit Tournament"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Tournaments/index.php:3
+msgid "Tournaments"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Tournaments/index.php:7
+#: /home/ettu/veterans-v4/templates/Tournaments/view.php:50
+msgid "Location"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Tournaments/index.php:9
+msgid "Enter before"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Tournaments/index.php:10
+msgid "Modify before"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Tournaments/index.php:64
+msgid "Hide past tournaments"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Tournaments/index.php:66
+msgid "Show past tournaments"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Tournaments/index.php:75
+#: /home/ettu/veterans-v4/templates/Tournaments/view.php:73
+msgid "New Tournament"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Tournaments/view.php:15
+msgid "Start On"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Tournaments/view.php:20
+msgid "End On"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Tournaments/view.php:25
+msgid "Enter After"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Tournaments/view.php:30
+msgid "Enter Before"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Tournaments/view.php:35
+msgid "Modify Before"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Tournaments/view.php:71
+msgid "Delete Tournament"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Types/add.php:5
+msgid "Add Function"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Types/add.php:19
+#: /home/ettu/veterans-v4/templates/Types/edit.php:20
+#: /home/ettu/veterans-v4/templates/Types/view.php:22
+msgid "List Functions"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Types/edit.php:5
+#: /home/ettu/veterans-v4/templates/Types/view.php:20
+msgid "Edit Function"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Types/index.php:40
+#: /home/ettu/veterans-v4/templates/Types/view.php:23
+msgid "New Function"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Types/view.php:21
+msgid "Delete Function"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Users/add.php:39
+msgid "Add User"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Users/edit.php:40
+#: /home/ettu/veterans-v4/templates/Users/view.php:80
+msgid "Edit User"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Users/edit.php:47
+#: /home/ettu/veterans-v4/templates/Users/view.php:20
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:140
+msgid "Add. Email"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Users/edit.php:59
+msgid "Language"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Users/index.php:3
+msgid "Users"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Users/index.php:39
+msgid "Prefix"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Users/index.php:41
+msgid "Successful"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Users/index.php:42
+msgid "Failed"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Users/index.php:43
+msgid "Since"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Users/index.php:44
+msgid "Requests"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Users/index.php:86
+#: /home/ettu/veterans-v4/templates/Users/view.php:84
+msgid "New User"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Users/login.php:46
+msgid "Login"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Users/notifications.php:5
+msgid "Edit Notification of {0}"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Users/notifications.php:8
+msgid "New Player"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Users/notifications.php:9
+msgid "Delete player after deadline"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Users/notifications.php:10
+msgid "Edit player after deadline"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Users/view.php:25
+msgid "Enabled"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Users/view.php:44
+msgid "Last Login"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Users/view.php:49
+msgid "Failed since last"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Users/view.php:54
+msgid "Successful Logins"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Users/view.php:59
+msgid "Failed Logins"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Users/view.php:64
+msgid "Modified"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Users/view.php:79
+msgid "Send Password"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Users/view.php:81
+msgid "Edit Notifications"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/Users/view.php:82
+msgid "Delete User"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/element/filter.php:26
+#: /home/ettu/veterans-v4/templates/element/filter.php:28
+msgid "none"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/element/paginator.php:55
+msgid "Show %current% records out of %count% total, starting on record %start%"
+msgstr ""
+
+#: /home/ettu/veterans-v4/templates/layout/default.php:21
+#: /home/ettu/veterans-v4/templates/layout/error.php:13
+msgid "Online Registration"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/AllotmentsController.php:50
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/AllotmentsController.php:113
 msgid "Invalid allotment"
 msgstr ""
 
-#: /Controller/AllotmentsController.php:77
-#: /Controller/AllotmentsController.php:125
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/AllotmentsController.php:77
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/AllotmentsController.php:125
 msgid "The allotment has been saved"
 msgstr ""
 
-#: /Controller/AllotmentsController.php:81
-#: /Controller/AllotmentsController.php:129
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/AllotmentsController.php:81
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/AllotmentsController.php:129
 msgid "The allotment could not be saved. Please try again"
 msgstr ""
 
-#: /Controller/AllotmentsController.php:138
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/AllotmentsController.php:138
 msgid "Invalid id for allotment"
 msgstr ""
 
-#: /Controller/AllotmentsController.php:145
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/AllotmentsController.php:145
 msgid "Allotment deleted"
 msgstr ""
 
-#: /Controller/AllotmentsController.php:148
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/AllotmentsController.php:148
 msgid "Allotment was not deleted"
 msgstr ""
 
-#: /Controller/ArticlesController.php:131
-#: /Controller/ArticlesController.php:209
-#: /Controller/OrdersController.php:1599
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ArticlesController.php:132
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ArticlesController.php:210
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:1599
 msgid "Invalid article"
 msgstr ""
 
-#: /Controller/ArticlesController.php:194
-#: /Controller/ArticlesController.php:272
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ArticlesController.php:195
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ArticlesController.php:273
 msgid "The article has been saved"
 msgstr ""
 
-#: /Controller/ArticlesController.php:197
-#: /Controller/ArticlesController.php:275
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ArticlesController.php:198
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ArticlesController.php:276
 msgid "The article could not be saved. Please, try again."
 msgstr ""
 
-#: /Controller/ArticlesController.php:284
-#: /Controller/ArticlesController.php:301
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ArticlesController.php:285
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ArticlesController.php:302
 msgid "Invalid id for article"
 msgstr ""
 
-#: /Controller/ArticlesController.php:291
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ArticlesController.php:292
 msgid "Article deleted"
 msgstr ""
 
-#: /Controller/ArticlesController.php:294
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ArticlesController.php:295
 msgid "Article was not deleted"
 msgstr ""
 
-#: /Controller/Component/OrderUpdateComponent.php:450
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/Component/OrderUpdateComponent.php:454
 msgid "To apply refunds you shall cancel within order {0} directly"
 msgstr ""
 
-#: /Controller/Component/OrderUpdateComponent.php:455
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/Component/OrderUpdateComponent.php:459
 msgid "Order is in the wrong state {0} to cancel people"
 msgstr ""
 
-#: /Controller/OrdersController.php:306
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:306
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/chart.php:36
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/index.php:36
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:197
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:209
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:225
 msgid "Pending"
 msgstr ""
 
-#: /Controller/OrdersController.php:307
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:307
 msgid "Done"
 msgstr ""
 
-#: /Controller/OrdersController.php:316
-#: /Controller/OrdersController.php:325
-#: /Controller/OrdersController.php:335
-#: /Controller/OrdersController.php:440
-#: /Controller/OrdersController.php:498
-#: /Controller/OrdersController.php:660
-#: /Controller/OrdersController.php:1312
-#: /Controller/OrdersController.php:1324
-#: /Controller/OrdersController.php:1440
-#: /Controller/OrdersController.php:1483
-#: /Controller/OrdersController.php:1572
-#: /Controller/OrdersController.php:1585
-#: /Controller/ShopsController.php:1667
-#: /Controller/ShopsController.php:1743
-#: /Controller/ShopsController.php:1797
-#: /Controller/ShopsController.php:1910
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:316
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:325
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:335
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:440
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:498
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:660
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:1312
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:1324
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:1440
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:1483
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:1572
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:1585
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1709
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1785
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1839
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1952
 msgid "Invalid order"
 msgstr ""
 
-#: /Controller/OrdersController.php:722
-#: /Controller/OrdersController.php:1338
-#: /Controller/ShopsController.php:1685
-#: /Controller/ShopsController.php:1784
-#: /Controller/ShopsController.php:1838
-#: /Controller/ShopsController.php:1859
-#: /Controller/ShopsController.php:1935
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:722
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:1338
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1727
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1826
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1880
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1901
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1977
 msgid "Invalid order status"
 msgstr ""
 
-#: /Controller/OrdersController.php:728
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:728
 msgid "Order cancelled"
 msgstr ""
 
-#: /Controller/OrdersController.php:732
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:732
 msgid "Could not cancel order"
 msgstr ""
 
-#: /Controller/OrdersController.php:813
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:813
 msgid "{0} Orders cancelled"
 msgstr ""
 
-#: /Controller/OrdersController.php:815
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:815
 msgid "Cancellation of {0} orders failed"
 msgstr ""
 
-#: /Controller/OrdersController.php:1231
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:1231
 msgid "Refunded {0} {1}"
 msgstr ""
 
-#: /Controller/OrdersController.php:1380
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:1380
 msgid "Failed to undo order storno"
 msgstr ""
 
-#: /Controller/OrdersController.php:1420
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:1420
 msgid "Failed to restore registration"
 msgstr ""
 
-#: /Controller/OrdersController.php:1429
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:1429
 msgid "Order storno undone"
 msgstr ""
 
-#: /Controller/OrdersController.php:1467
-#: /Controller/ShopsController.php:1851
-#: /Controller/ShopsController.php:1895
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:1467
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1893
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1937
 msgid "Order updated"
 msgstr ""
 
-#: /Controller/OrdersController.php:1541
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:1541
 msgid "Invoice address has been saved"
 msgstr ""
 
-#: /Controller/OrdersController.php:1556
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:1556
 msgid "Could not update user"
 msgstr ""
 
-#: /Controller/OrdersController.php:1560
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:1560
 msgid "Invoice address could not be saved"
 msgstr ""
 
-#: /Controller/OrdersController.php:1594
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:1594
 msgid "Article already cancelled"
 msgstr ""
 
-#: /Controller/OrdersController.php:1633
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:1633
 msgid "Person has been updated"
 msgstr ""
 
-#: /Controller/OrdersController.php:1708
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:1709
 msgid "The settings have been saved"
 msgstr ""
 
-#: /Controller/OrdersController.php:1711
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:1712
 msgid "The settings could not be saved. Please, try again."
 msgstr ""
 
-#: /Controller/ShopsController.php:425
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:467
 msgid "No tournaments defined yet"
 msgstr ""
 
-#: /Controller/ShopsController.php:1343
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1385
 msgid "{0} Mails have been sent"
 msgstr ""
 
-#: /Controller/ShopsController.php:1346
-#: /Controller/ShopsController.php:1520
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1388
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1562
 msgid "Mail has been sent"
 msgstr ""
 
-#: /Controller/ShopsController.php:1354
-#: /Controller/ShopsController.php:1512
-#: /Payment/DibsPayment.php:244
-#: /Payment/PaypalExpressPayment.php:210
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1396
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1554
+#: /home/ettu/veterans-v4/plugins/Shop/src/Payment/DibsPayment.php:244
+#: /home/ettu/veterans-v4/plugins/Shop/src/Payment/PaypalExpressPayment.php:210
 msgid "Invalid order id given"
 msgstr ""
 
-#: /Controller/ShopsController.php:1475
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1517
 msgid "Send reminders to registrations older than {0}"
 msgstr ""
 
-#: /Controller/ShopsController.php:1501
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1543
 msgid "{0} reminders sent"
 msgstr ""
 
-#: /Controller/ShopsController.php:1589
-#: /Controller/ShopsController.php:1597
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1631
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1639
 msgid "Invalid receipt id given"
 msgstr ""
 
-#: /Controller/ShopsController.php:1683
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1725
 msgid "Order set to \"Payment delayed\""
 msgstr ""
 
-#: /Controller/ShopsController.php:1735
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1777
 msgid "{0} orders from waiting list set to pending"
 msgstr ""
 
-#: /Controller/ShopsController.php:1761
-#: /Controller/ShopsController.php:1773
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1803
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1815
 msgid "Order reset to \"Pending\" and invoice sent"
 msgstr ""
 
-#: /Controller/ShopsController.php:1766
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1808
 msgid "Order reset to \"Pending\""
 msgstr ""
 
-#: /Controller/ShopsController.php:1782
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1824
 msgid "Order set to \"Pending\" and invoice sent"
 msgstr ""
 
-#: /Controller/ShopsController.php:1853
-#: /Controller/ShopsController.php:1946
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1895
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1988
 msgid "Could not save cart"
 msgstr ""
 
-#: /Controller/ShopsController.php:1944
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1986
 msgid "Order converted to invoice"
 msgstr ""
 
-#: /Model/Table/AllotmentsTable.php:22
+#: /home/ettu/veterans-v4/plugins/Shop/src/Model/Table/AllotmentsTable.php:22
 msgid "You must select an article"
 msgstr ""
 
-#: /Model/Table/AllotmentsTable.php:23
+#: /home/ettu/veterans-v4/plugins/Shop/src/Model/Table/AllotmentsTable.php:23
 msgid "You must select an user"
 msgstr ""
 
-#: /Model/Table/AllotmentsTable.php:24
+#: /home/ettu/veterans-v4/plugins/Shop/src/Model/Table/AllotmentsTable.php:24
 msgid "You must enter the number of alloted articles"
 msgstr ""
 
-#: /Payment/DibsPayment.php:218
-#: /Payment/PaypalExpressPayment.php:176
-#: /Payment/RedsysPayment.php:211
+#: /home/ettu/veterans-v4/plugins/Shop/src/Model/Table/OrderAddressesTable.php:25
+msgid "You must select a country"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/src/Model/Table/OrderArticlesTable.php:34
+msgid "Person has orders and therefore cannot be deleted"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/src/Payment/DibsPayment.php:218
+#: /home/ettu/veterans-v4/plugins/Shop/src/Payment/PaypalExpressPayment.php:176
+#: /home/ettu/veterans-v4/plugins/Shop/src/Payment/RedsysPayment.php:211
 msgid "Automatic refunds disabled, do the refund manually"
 msgstr ""
 
-#: /Payment/DibsPayment.php:289
+#: /home/ettu/veterans-v4/plugins/Shop/src/Payment/DibsPayment.php:289
 msgid "Failed to make refund: {0}"
 msgstr ""
 
-#: /Payment/DibsPayment.php:300
-#: /Payment/IPayment.php:158
-#: /Payment/RedsysPayment.php:274
+#: /home/ettu/veterans-v4/plugins/Shop/src/Payment/DibsPayment.php:300
+#: /home/ettu/veterans-v4/plugins/Shop/src/Payment/IPayment.php:158
+#: /home/ettu/veterans-v4/plugins/Shop/src/Payment/RedsysPayment.php:274
 msgid "Refund money for order successful"
 msgstr ""
 
-#: /Payment/DibsPayment.php:308
+#: /home/ettu/veterans-v4/plugins/Shop/src/Payment/DibsPayment.php:308
 msgid "Failed to make refund with return code {0}{1}"
 msgstr ""
 
-#: /Payment/IPayment.php:161
+#: /home/ettu/veterans-v4/plugins/Shop/src/Payment/IPayment.php:161
 msgid "Could not refund money for order:"
 msgstr ""
 
-#: /Payment/PaypalExpressPayment.php:80
+#: /home/ettu/veterans-v4/plugins/Shop/src/Payment/PaypalExpressPayment.php:80
 msgid "Payment cancelled"
 msgstr ""
 
-#: /Payment/PaypalExpressPayment.php:198
+#: /home/ettu/veterans-v4/plugins/Shop/src/Payment/PaypalExpressPayment.php:198
 msgid "Automatic refund not possible after 60 days"
 msgstr ""
 
-#: /Payment/PaypalExpressPayment.php:230
+#: /home/ettu/veterans-v4/plugins/Shop/src/Payment/PaypalExpressPayment.php:230
 msgid "Invalid order state {0}"
 msgstr ""
 
-#: /Payment/PaypalExpressPayment.php:293
+#: /home/ettu/veterans-v4/plugins/Shop/src/Payment/PaypalExpressPayment.php:293
 msgid "{0}: Invoice no {1}"
 msgstr ""
 
-#: /Payment/RedsysPayment.php:66
-#: /Payment/RedsysPayment.php:252
+#: /home/ettu/veterans-v4/plugins/Shop/src/Payment/RedsysPayment.php:66
+#: /home/ettu/veterans-v4/plugins/Shop/src/Payment/RedsysPayment.php:252
 msgid "Registration for {0}"
 msgstr ""
 
-#: /Payment/RedsysPayment.php:266
+#: /home/ettu/veterans-v4/plugins/Shop/src/Payment/RedsysPayment.php:266
 msgid "Exception while trying to refund money: {0}"
 msgstr ""
 
-#: /Payment/StripePayment.php:208
+#: /home/ettu/veterans-v4/plugins/Shop/src/Payment/StripePayment.php:208
 msgid "Could not refund payment: {0}"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Allotments/add.php:4
+msgid "Add Allotment"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Allotments/add.php:12
+msgid "Select Article"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Allotments/add.php:17
+msgid "Select User"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Allotments/add.php:33
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Allotments/edit.php:32
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Allotments/view.php:37
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/index.php:120
+msgid "List Allotments"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Allotments/edit.php:4
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Allotments/view.php:35
+msgid "Edit Allotment"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Allotments/index.php:2
+msgid "Allotments"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Allotments/index.php:5
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Allotments/view.php:5
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/view.php:2
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:35
+msgid "Article"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Allotments/index.php:7
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Allotments/view.php:2
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Allotments/view.php:15
+msgid "Allotment"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Allotments/index.php:8
+msgid "Used"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Allotments/index.php:33
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Allotments/view.php:36
+msgid "Are you sure you want to delete this allotment?"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Allotments/index.php:45
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Allotments/view.php:38
+msgid "New Allotment"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Allotments/index.php:48
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Allotments/view.php:39
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/add.php:180
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/chart.php:159
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:222
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/view.php:125
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:288
+msgid "List Articles"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Allotments/index.php:51
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/chart.php:161
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/index.php:123
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_address.php:122
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_invoice.php:154
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_person.php:113
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:190
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/storno.php:636
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/storno_pending.php:30
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:480
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/import.php:24
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/payment_received.php:131
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/send_reminder.php:51
+msgid "List Orders"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Allotments/view.php:36
+msgid "Delete Allotment"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/add.php:17
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/add.php:152
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:17
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:161
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:194
+msgid "Category"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/add.php:20
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/add.php:155
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:20
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:165
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:197
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/view.php:62
+msgid "Visible"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/add.php:24
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/add.php:77
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/add.php:160
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:24
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:78
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:170
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:202
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/view.php:67
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/view.php:103
+msgid "Sort Order"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/add.php:27
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/add.php:163
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:27
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:175
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:205
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/index.php:19
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/view.php:32
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/view.php:104
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/storno.php:298
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/storno.php:401
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/storno.php:497
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/storno.php:594
+msgid "Price"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/add.php:47
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:47
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/view.php:123
+msgid "Edit Article"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/add.php:54
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:55
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:26
+msgid "General"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/add.php:57
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:58
+msgid "Presentation"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/add.php:60
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:61
+msgid "Cost"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/add.php:63
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:64
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/view.php:42
+msgid "Available"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/add.php:66
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:67
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/view.php:98
+msgid "Variants"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/add.php:85
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:86
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/view.php:21
+msgid "Text"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/add.php:86
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:87
+msgid "Image"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/add.php:87
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:88
+msgid "Remove Photo"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/add.php:88
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:89
+msgid "Url"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/add.php:113
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:114
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/view.php:47
+msgid "Available From"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/add.php:122
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:123
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/view.php:52
+msgid "Available Until"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/add.php:128
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:129
+msgid "Waiting List Enabled"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/add.php:131
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:132
+msgid "Waiting List Limit"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/add.php:168
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/edit.php:210
+msgid "Add Variant"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/chart.php:31
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_invoice.php:90
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/history.php:10
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:217
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:221
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:229
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:233
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/payment_received.php:80
+msgid "Paid"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/chart.php:132
+msgid "Per Day"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/index.php:15
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/storno.php:297
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/storno.php:400
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:188
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:262
+msgid "Articles"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/index.php:24
+msgid "From"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/index.php:31
+msgid "Until"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/index.php:35
+msgid "Sold"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/index.php:40
+msgid "Allotted"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/index.php:47
+msgid "Wait"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/index.php:102
+msgid "Charts"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/index.php:117
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/view.php:126
+msgid "New Article"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/index.php:126
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:289
+msgid "Settings"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/view.php:37
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:162
+msgid "Tax"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/view.php:57
+msgid "Limit Waiting List"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/view.php:82
+msgid "Photo"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/view.php:124
+msgid "Delete Article"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_address.php:55
+msgid "Edit Invoice Address in Order {0}"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_address.php:65
+msgid "Title"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_address.php:67
+msgid "Mr"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_address.php:67
+msgid "Mrs"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_address.php:68
+msgid "Please select"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_address.php:71
+msgid "Given name"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_address.php:75
+msgid "Family name"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_address.php:80
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:135
+msgid "Street"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_address.php:83
+msgid "Postal code"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_address.php:86
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:136
+msgid "City"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_address.php:89
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:41
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:106
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:137
+msgid "Country"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_address.php:92
+msgid "Select Country"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_invoice.php:54
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:392
+msgid "Edit Invoice"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_invoice.php:59
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:107
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/payment_received.php:48
+msgid "Amount"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_invoice.php:66
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/payment_received.php:55
+msgid "Canc. Fee"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_invoice.php:74
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/history.php:11
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/storno.php:607
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/payment_received.php:63
+msgid "Discount"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_invoice.php:83
+msgid "Subtotal"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_invoice.php:98
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:115
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/storno.php:599
+msgid "Refund"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_invoice.php:108
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/payment_received.php:89
+msgid "Outstanding"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_invoice.php:114
+msgid "Split No"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_person.php:48
+msgid "Edit Person in Order {0}"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_person.php:63
+msgid "Select gender"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/history.php:5
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:13
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:103
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/payment_received.php:95
+msgid "Status"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/history.php:6
+msgid "Gross Total"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/history.php:8
+msgid "Invoice Paid"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/history.php:9
+msgid "Invoice Cancelled"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/history.php:12
+msgid "Cancellation Fee"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/history.php:13
+msgid "Cancellation Discount"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/history.php:21
+msgid "History of order"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/history.php:102
+msgid "List Order"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:6
+msgid "Orders"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:20
+msgid "Payment Method"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:83
+msgid "Duplicates"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:108
+msgid "Order date"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:109
+msgid "Accepted"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:110
+msgid "Payment date"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:112
+msgid "method"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:185
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:189
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:193
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:201
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:205
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/storno.php:293
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/storno.php:397
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/storno.php:494
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:62
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:471
+msgid "Storno"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:249
+msgid "Search"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:255
+msgid "Invoice Number"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:264
+msgid "Mail Reminders"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:269
+msgid "Mail Vouchers"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:271
+msgid "Are you sure you want to send vouchers to all?"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:275
+msgid "Cancel Pending"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:280
+msgid "Process Waiting List"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:282
+msgid "Are you sure you want to accept the waiting list?"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:287
+msgid "Export Players"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:23
+msgid "Shop Settings"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:29
+msgid "Contact"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:35
+msgid "Payment"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:38
+msgid "Bank"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:57
+msgid "Open From"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:67
+msgid "Open Until"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:87
+msgid "Cancellation Fee [%]"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:88
+msgid "Start"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:134
+msgid "Company"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:138
+msgid "VAT Reg ID"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:142
+msgid "Fax"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:148
+msgid "Invoice No. Prefix"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:149
+msgid "Invoice No. Postfix"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:150
+msgid "Invoice Header"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:151
+msgid "Invoice Footer"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:152
+msgid "Add. Footer"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:159
+msgid "Currency"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:164
+msgid "Credit Card"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:165
+msgid "Bank Transfer"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:171
+msgid "Bank Name"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:172
+msgid "Bank Address"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:173
+msgid "Account Holder"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:174
+msgid "IBAN"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:175
+msgid "BIC (SWIFT)"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:176
+msgid "ABA"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:177
+msgid "Corresp. Bank"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/storno.php:230
+msgid "Storno Order %s"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/storno.php:240
+msgid "Send Mail"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/storno.php:252
+msgid "Automatic Refund"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/storno.php:265
+msgid "Entire Order"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/storno.php:276
+msgid "Part of Order"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/storno.php:289
+msgid "Players"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/storno.php:299
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/storno.php:402
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/storno.php:498
+msgid "Fee"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/storno.php:393
+msgid "Accompanying Persons"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/storno.php:490
+msgid "Additional Items"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/storno.php:496
+msgid "Quantity"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/storno.php:603
+msgid "Storno Fee"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/storno.php:635
+msgid "View Order"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/storno_pending.php:8
+msgid "Cancel Pendings"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/storno_pending.php:17
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/send_reminder.php:18
+msgid "All before"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:32
+msgid "Order {0} from {1}"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:48
+msgid "Status:"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:182
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:257
+msgid "Pos"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:321
+msgid "Address"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:331
+msgid "Payment Details"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:368
+msgid "Comments"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:395
+msgid "Edit Address"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:398
+msgid "Set Delayed"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:405
+msgid "Set Pending"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:411
+msgid "Set Invoice"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:413
+msgid "Are you sure to set this order to Invoice?"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:421
+msgid "Set Paid"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:430
+msgid "View Invoice"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:437
+msgid "Mail Invoice"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:446
+msgid "Mail Reminder"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:453
+msgid "View Voucher"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:460
+msgid "Mail Voucher"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:474
+msgid "Undo Storno"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:479
+msgid "History"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/import.php:4
+msgid "Import Orders"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/import.php:8
+msgid "File"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/pay.php:31
+msgid "Confirm"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/payment_received.php:43
+msgid "Payment Received"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/send_reminder.php:8
+msgid "Send Reminders"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/send_reminder.php:33
+msgid "Payment until"
+msgstr ""
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/send_reminder.php:38
+msgid "Reminder"
 msgstr ""
 

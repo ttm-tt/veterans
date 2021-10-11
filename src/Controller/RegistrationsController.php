@@ -1533,7 +1533,7 @@ class RegistrationsController extends AppController {
 			$this->loadModel('People');
 
 			$tid = $data['tournament_id'];
-			$pid = $data['person_id'];
+			$pid = $data['person']['id'];
 	
 			$person_id = $this->Registrations->fieldByConditions('person_id', array('id = ' => $id));
 
@@ -1570,7 +1570,7 @@ class RegistrationsController extends AppController {
 				}
 			}
 
-			$person = $this->People->get($data['person_id']);
+			$person = $this->People->get($pid);
 			$person = $this->People->patchEntity($person, $data['person']);
 			
 			if ($person->isDirty('first_name') || $person->isDirty('last_name')) {
@@ -3671,9 +3671,9 @@ class RegistrationsController extends AppController {
 
 		// In mixed: opposite sex
 		if ($field == 'mixed')
-			$conditions['People.sex <>'] =  $this->People->find()->where(['People.id' => $data['person_id']])->select('People.sex');
+			$conditions['People.sex <>'] =  $this->People->find()->where(['People.id' => $data['person']['id']])->select('People.sex');
 		else
-			$conditions['People.sex'] =  $this->People->find()->where(['People.id' => $data['person_id']])->select('People.sex');
+			$conditions['People.sex'] =  $this->People->find()->where(['People.id' => $data['person']['id']])->select('People.sex');
 
 		// Playes in this event
 		$conditions['Participants.' . $event_id] = $data['participant'][$event_id];

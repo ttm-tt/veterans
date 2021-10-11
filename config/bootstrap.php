@@ -40,8 +40,8 @@ use Cake\Database\TypeFactory;
 use Cake\Datasource\ConnectionManager;
 use Cake\Error\ConsoleErrorHandler;
 // ChT: Replace with Cake\Error\... to debug bootstrap.php
-// use ErrorEmail\Error\ErrorHandler;
-use Cake\Error\ErrorHandler;
+use ErrorEmail\Error\ErrorHandler;
+// use Cake\Error\ErrorHandler;
 use Cake\Http\ServerRequest;
 use Cake\Log\Log;
 use Cake\Mailer\Email;

@@ -41,10 +41,12 @@ use Shop\Model\Table\OrderStatusTable;
 		echo $LF;
 		echo __d('user', 'Please notify us if you want us to cancel your registration so that we can inform the next on the waiting list immediately.');
 		if ($wantBanktransfer) {
-		echo $LF;
+			echo $LF;
 			echo '*';
 			echo __d('user', 'Don\'t forget to put your invoice number on the bank transfer so we can find your order.') . ' ';
 			echo '*';
+			echo $LF;
+			echo __d('user', 'Please note that it may take several days until the payment is credited to our account and is processed.');
 		}
 		if ($wantCreditcard) {
 			echo $LF;
@@ -65,6 +67,8 @@ use Shop\Model\Table\OrderStatusTable;
 			echo '*';
 			echo __d('user', 'Don\'t forget to put your invoice number on the bank transfer so we can find your order.') . ' ';
 			echo '*';
+			echo $LF;
+			echo __d('user', 'Please note that it may take several days until the payment is credited to our account and is processed.');
 		}
 		if ($wantCreditcard) {
 			echo $LF;
@@ -90,6 +94,8 @@ use Shop\Model\Table\OrderStatusTable;
 				echo '*';
 				echo __d('user', 'Don\'t forget to put your invoice number on the bank transfer so we can find your order.') . ' ';
 				echo '*';
+				echo $LF;
+				echo __d('user', 'Please note that it may take several days until the payment is credited to our account and is processed.');
 			}
 			if ($wantCreditcard) {
 				echo $LF;

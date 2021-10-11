@@ -16,6 +16,10 @@ echo htmlspecialchars_decode($this->Form->control('article_variants.IDX.descript
 echo htmlspecialchars_decode($this->Form->control('article_variants.IDX.variant_type', array(
 		'label' => __('Category')
 	)));
+echo htmlspecialchars_decode($this->Form->control('article_variants.IDX.visible', array(
+		'label' => __('Visible'),
+		'type' => 'chekbox'
+	)));
 echo htmlspecialchars_decode($this->Form->control('article_variants.IDX.sort_order', array(
 		'label' => __('Sort Order')
 	)));
@@ -146,6 +150,11 @@ function addVariant() {
 							));
 						echo $this->Form->control('article_variants.' . $k . '.variant_type', array(
 								'label' => __('Category')
+							));
+						echo $this->Form->control('article_variants.' . $k . '.visible', array(
+								'label' => __('Visible'),
+								'type' => 'checkbox',
+								'checked' => true
 							));
 						echo $this->Form->control('article_variants.' . $k . '.sort_order', array(
 								'label' => __('Sort Order')

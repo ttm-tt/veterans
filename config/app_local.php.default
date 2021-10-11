@@ -49,6 +49,33 @@ return [
 		// 'authcookie' => 'false'veterans-v3-auth
 	],
 
+// EmailTransport
+	'EmailTransport' => [
+			'default' => [
+			// 'additionalParameters' => '-f wvc2020@ttm.co.at'
+		],
+		// Use Sendinblue as relay
+		'sendinblue' => [
+			'className' => 'Smtp',
+			'host' => 'smtp-relay.sendinblue.com',
+			'port' => 587,
+			'username' => '',
+			'password' => '',
+			'client' => ''
+		],
+		// Send certain mails via sendinblue, most via default
+		'switch' => [
+			'className' => 'Switch',
+			'transports' => [
+				'sendinblue' => [
+					'filterAddress' => [
+						// @hotmail.com
+					]				
+				]
+			]
+		]
+	],
+	
 // Email
 	'Email' => [
 		'default' => [

@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: veterans\n"
-"POT-Creation-Date: 2020-09-22 08:23+0200\n"
-"PO-Revision-Date: 2020-09-22 08:27+0200\n"
+"POT-Creation-Date: 2021-09-24 19:10+0200\n"
+"PO-Revision-Date: 2021-09-24 19:22+0200\n"
 "Last-Translator: Christoph Theis <theis@gmx.at>\n"
 "Language-Team: EMAIL@ADDRESS\n"
 "Language: es\n"
@@ -13,38 +13,50 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 2.2.1\n"
+"X-Generator: Poedit 2.4.2\n"
 
-#: Controller/UsersController.php:56
-msgid "You must fill in your email address"
-msgstr "Debe completar su dirección de email"
+#: Controller/Component/RegistrationUpdateComponent.php:45
+msgid "Unknown user {0}"
+msgstr "Usuario desconocido {0}"
 
-#: Controller/UsersController.php:70
-msgid "Email address not found"
-msgstr "Dirección de email no encontrado"
+#: Controller/Component/RegistrationUpdateComponent.php:118
+msgid "Cannot change type of registration"
+msgstr "No se pudo cambiar el tipo de la inscripción"
 
-#: Controller/UsersController.php:103
-msgid "Invalid request to reset the password"
-msgstr "Solicitud no válida para restablecer la contraseña"
+#: Controller/Component/RegistrationUpdateComponent.php:151
+msgid "The new registration could not be created"
+msgstr "La inscripción no se pudo guardar"
 
-#: Controller/UsersController.php:108
-msgid "Your ticket has expired"
-msgstr "Su billete ha expirado"
-
-#: Controller/UsersController.php:141
-msgid "The ticket to request a new password could not be created"
-msgstr "El boleto para solicitar una contraseña nueva no puede ser creado"
-
-#: Controller/UsersController.php:162 Controller/UsersController.php:226
-#: Controller/Component/WelcomeMailComponent.php:117
+#: Controller/Component/WelcomeMailComponent.php:109
+#: Controller/UsersController.php:165 Controller/UsersController.php:231
 msgid "Double Entries"
 msgstr "Entradas dobles"
 
-#: Controller/UsersController.php:176
+#: Controller/UsersController.php:59
+msgid "You must fill in your email address"
+msgstr "Debe completar su dirección de email"
+
+#: Controller/UsersController.php:73
+msgid "Email address not found"
+msgstr "Dirección de email no encontrado"
+
+#: Controller/UsersController.php:106
+msgid "Invalid request to reset the password"
+msgstr "Solicitud no válida para restablecer la contraseña"
+
+#: Controller/UsersController.php:111
+msgid "Your ticket has expired"
+msgstr "Su billete ha expirado"
+
+#: Controller/UsersController.php:144
+msgid "The ticket to request a new password could not be created"
+msgstr "El boleto para solicitar una contraseña nueva no puede ser creado"
+
+#: Controller/UsersController.php:181
 msgid "A new password has been requested with your email address."
 msgstr "Una nueva contraseña ha sido solicitada con su dirección de email."
 
-#: Controller/UsersController.php:178
+#: Controller/UsersController.php:183
 msgid ""
 "If you did not initiate this request, please ignore this mail. You password "
 "will remain unchanged."
@@ -52,7 +64,7 @@ msgstr ""
 "Si usted no inició este solicitud, por favor, ignora este email. Usted "
 "contraseña se mantendrá sin cambios."
 
-#: Controller/UsersController.php:180
+#: Controller/UsersController.php:185
 msgid ""
 "To get a new password click the link below. A new password will then be sent "
 "to your email address."
@@ -60,11 +72,11 @@ msgstr ""
 "Para obtener una nueva contraseña, haga clic en el enlace de abajo. Una "
 "nueva contraseña será enviada a su dirección de email."
 
-#: Controller/UsersController.php:188
+#: Controller/UsersController.php:193
 msgid "The link above will also log you in one time."
 msgstr "El enlace de arriba también lo registrará una vez."
 
-#: Controller/UsersController.php:190
+#: Controller/UsersController.php:195
 msgid ""
 "To login another time you have to use the password or request a new link "
 "with \"Forgot Password\"."
@@ -72,12 +84,12 @@ msgstr ""
 "Para iniciar sesión otra vez, debe utilizar la contraseña o solicitar un "
 "nuevo enlace con \"Olvidó su contraseña\"."
 
-#: Controller/UsersController.php:194
+#: Controller/UsersController.php:199
 msgid "The email confirming your password request could not be sent"
 msgstr ""
 "El emailo de confirmación de su solicitud de contraseña no se pudo enviar"
 
-#: Controller/UsersController.php:196
+#: Controller/UsersController.php:201
 msgid ""
 "An email has been sent. Follow the instructions in the mail to receive a new "
 "password"
@@ -85,565 +97,604 @@ msgstr ""
 "Un email ha sido enviado. Sigas las instrucciones en la email para recibir "
 "una contraseña nueva"
 
-#: Controller/UsersController.php:240
+#: Controller/UsersController.php:247
 msgid "Your new password is: "
 msgstr "Su contraseña nueva es: "
 
-#: Controller/UsersController.php:248
+#: Controller/UsersController.php:255
 msgid "The email could not be sent, password remains unchanged"
 msgstr "El email no se pudo enviar, la contraseña se mantiene sin cambios"
 
-#: Controller/UsersController.php:250
+#: Controller/UsersController.php:257
 msgid "The new password could not be saved"
 msgstr "La contraseña nueva no se pudo guardar"
 
-#: Controller/UsersController.php:252
+#: Controller/UsersController.php:259
 msgid "A new password has been sent to your email address"
 msgstr "Una contraseña nueva ha sido enviada a su dirección de email"
 
-#: Controller/UsersController.php:304
+#: Controller/UsersController.php:313
 msgid "You are logged in"
 msgstr "Usted está en el sistema"
 
-#: Controller/UsersController.php:398
+#: Controller/UsersController.php:423
 msgid "Good-Bye"
 msgstr "Adiós"
 
-#: Controller/UsersController.php:707
+#: Controller/UsersController.php:717
 msgid "Your profile has been saved"
 msgstr "Su perfil se ha guardado"
 
-#: Controller/UsersController.php:710
+#: Controller/UsersController.php:720
 msgid "Your profile could not be saved"
 msgstr "Su perfil no se pudo guardar"
 
-#: Controller/UsersController.php:804
+#: Controller/UsersController.php:816
 msgid "A password has been sent"
 msgstr "Una contraseña ha sido enviada"
 
-#: Controller/Component/RegistrationUpdateComponent.php:52
-msgid "Unknown user {0}"
-msgstr "Usuario desconocido {0}"
-
-#: Controller/Component/RegistrationUpdateComponent.php:123
-msgid "Cannot change type of registration"
-msgstr "No se pudo cambiar el tipo de la inscripción"
-
-#: Controller/Component/RegistrationUpdateComponent.php:156
-msgid "The new registration could not be created"
-msgstr "La inscripción no se pudo guardar"
-
-#: Template/Element/footer.ctp:7
-msgid "Privacy Policy"
-msgstr "Política de privacidad"
-
-#: Template/Element/footer.ctp:16
-msgid "Impressum"
-msgstr "Pie de imprenta"
-
-#: Template/Element/footer.ctp:25
-msgid "Terms & Conditions"
-msgstr "Términos y Condiciones"
-
-#: Template/Element/header.ctp:35
-msgid "Not logged in"
-msgstr "Sin iniciar sesión"
-
-#: Template/Element/header.ctp:36 Template/Users/login.ctp:14
-msgid "Login"
-msgstr "Iniciar sesión"
-
-#: Template/Element/header.ctp:40
-#: /home/ettu/veterans-v3//Template/Element/shop_header.ctp:4
-msgid "Register"
-msgstr "Inscribe"
-
-#: Template/Element/header.ctp:43
-msgid "Logged in as "
-msgstr "Está en el sistema "
-
-#: Template/Element/header.ctp:45
-msgid "Logout"
-msgstr "Cerrar sesión"
-
-#: Template/Element/savecancel.ctp:38
-msgid "Save"
-msgstr "Guardar"
-
-#: Template/Element/savecancel.ctp:40
-#: /home/ettu/veterans-v3//Template/Element/shop_footer.ctp:18
-#: /home/ettu/veterans-v3//Template/Shops/Payment/authorizenet.ctp:177
-#: /home/ettu/veterans-v3//Template/Shops/Payment/bpayment.ctp:122
-#: /home/ettu/veterans-v3//Template/Shops/Payment/card_pointe.ctp:91
-#: /home/ettu/veterans-v3//Template/Shops/Payment/dibs.ctp:110
-#: /home/ettu/veterans-v3//Template/Shops/Payment/dummy.ctp:102
-#: /home/ettu/veterans-v3//Template/Shops/Payment/ipayment.ctp:153
-#: /home/ettu/veterans-v3//Template/Shops/Payment/paypal_express.ctp:87
-#: /home/ettu/veterans-v3//Template/Shops/Payment/redsys.ctp:92
-msgid "Cancel"
-msgstr "Anular"
-
-#: Template/Element/savecancel.ctp:49
-#: Template/Registrations/add_participant.ctp:168
-msgid "Save & Cont."
-msgstr "Guardar y Cont."
-
-#: Template/Layout/default.ctp:118 Template/Registrations/index.ctp:337
-#: Template/Registrations/requests.ctp:16
-#: /home/ettu/veterans-v3//Template/Element/shop_people.ctp:67
-#: /home/ettu/veterans-v3//Template/Element/shop_people.ctp:130
-#: /home/ettu/veterans-v3//Template/Shops/buy.ctp:221
-#: /home/ettu/veterans-v3//Template/Shops/buy.ctp:287
-msgid "Actions"
-msgstr "Acciones"
-
-#: Template/Pages/participants.ctp:34
-msgid "Participants"
-msgstr "Participantes"
-
-#: Template/Pages/participants.ctp:36
-msgid "Only confirmed double partners are shown"
-msgstr "Sólo se muestran compañeros de dobles confirmados"
-
-#: Template/Pages/participants.ctp:42 Template/Registrations/index.ctp:291
-#: Template/Registrations/requests.ctp:6
-#: /home/ettu/veterans-v3//Template/Element/shop_address.ctp:17
-msgid "Name"
-msgstr "Nombre"
-
-#: Template/Pages/participants.ctp:43
-#: Template/Registrations/add_participant.ctp:135
-#: Template/Registrations/edit_participant.ctp:168
-#: Template/Registrations/index.ctp:37 Template/Registrations/index.ctp:299
-#: Template/Registrations/requests.ctp:7
-#: Template/Registrations/csv/export_count.ctp:3
-#: /home/ettu/veterans-v3//Template/Element/shop_people.ctp:61
-#: /home/ettu/veterans-v3//Template/Element/voucher.ctp:40
-#: /home/ettu/veterans-v3//Template/Shops/add_person.ctp:183
-msgid "Association"
-msgstr "Asociación"
-
-#: Template/Pages/participants.ctp:45
-#: /home/ettu/veterans-v3//Template/Element/shop_people.ctp:64
-msgid "Singles"
-msgstr "Individual"
-
-#: Template/Pages/participants.ctp:48
-#: /home/ettu/veterans-v3//Template/Element/shop_people.ctp:65
-msgid "Doubles"
-msgstr "Dobles"
-
-#: Template/Pages/participants.ctp:49
-#: Template/Registrations/edit_participant.ctp:292
-#: Template/Registrations/index.ctp:325
-msgid "Double Partner"
-msgstr "Compañaro de dobles"
-
-#: Template/Pages/participants.ctp:52
-#: Template/Registrations/edit_participant.ctp:315
-#: Template/Registrations/index.ctp:328 Template/Registrations/requests.ctp:14
-#: /home/ettu/veterans-v3//Template/Element/shop_people.ctp:66
-msgid "Mixed"
-msgstr "Dobles mixtos"
-
-#: Template/Pages/participants.ctp:53
-#: Template/Registrations/edit_participant.ctp:331
-#: Template/Registrations/index.ctp:329
-msgid "Mixed Partner"
-msgstr "Compañaro de dobles mixta"
-
-#: Template/Pages/participants.ctp:56
-msgid "Teams"
-msgstr "Equipos"
-
-#: Template/People/index.ctp:6 Template/Registrations/count.ctp:10
-#: Template/Registrations/index.ctp:33 Template/Users/index.ctp:6
-#: /home/ettu/veterans-v3//Template/Orders/index.ctp:10
+#: /home/ettu/veterans-v4/templates/Nations/index.php:7
+#: /home/ettu/veterans-v4/templates/People/index.php:7
+#: /home/ettu/veterans-v4/templates/Registrations/count.php:11
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:35
+#: /home/ettu/veterans-v4/templates/Users/index.php:7
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/index.php:10
 msgid "Filter"
 msgstr "Filtro"
 
-#: Template/Registrations/add_participant.ctp:84
+#: /home/ettu/veterans-v4/templates/Nations/index.php:11
+msgid "Continent"
+msgstr "Continente"
+
+#: /home/ettu/veterans-v4/templates/Pages/participants.php:35
+msgid "Participants"
+msgstr "Participantes"
+
+#: /home/ettu/veterans-v4/templates/Pages/participants.php:37
+msgid "Only confirmed double partners are shown"
+msgstr "Sólo se muestran compañeros de dobles confirmados"
+
+#: /home/ettu/veterans-v4/templates/Pages/participants.php:43
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:204
+#: /home/ettu/veterans-v4/templates/Registrations/requests.php:7
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_address.php:17
+msgid "Name"
+msgstr "Nombre"
+
+#: /home/ettu/veterans-v4/templates/Pages/participants.php:44
+#: /home/ettu/veterans-v4/templates/People/index.php:12
+#: /home/ettu/veterans-v4/templates/Registrations/add_participant.php:136
+#: /home/ettu/veterans-v4/templates/Registrations/count.php:16
+#: /home/ettu/veterans-v4/templates/Registrations/csv/export_count.php:4
+#: /home/ettu/veterans-v4/templates/Registrations/edit_participant.php:167
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:40
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:212
+#: /home/ettu/veterans-v4/templates/Registrations/requests.php:8
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/add_person.php:189
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_people.php:61
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/voucher.php:40
+msgid "Association"
+msgstr "Asociación"
+
+#: /home/ettu/veterans-v4/templates/Pages/participants.php:46
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_people.php:64
+msgid "Singles"
+msgstr "Individual"
+
+#: /home/ettu/veterans-v4/templates/Pages/participants.php:49
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_people.php:65
+msgid "Doubles"
+msgstr "Dobles"
+
+#: /home/ettu/veterans-v4/templates/Pages/participants.php:50
+#: /home/ettu/veterans-v4/templates/Registrations/edit_participant.php:292
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:238
+msgid "Double Partner"
+msgstr "Compañaro de dobles"
+
+#: /home/ettu/veterans-v4/templates/Pages/participants.php:53
+#: /home/ettu/veterans-v4/templates/Registrations/edit_participant.php:315
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:241
+#: /home/ettu/veterans-v4/templates/Registrations/requests.php:15
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_people.php:66
+msgid "Mixed"
+msgstr "Dobles mixtos"
+
+#: /home/ettu/veterans-v4/templates/Pages/participants.php:54
+#: /home/ettu/veterans-v4/templates/Registrations/edit_participant.php:331
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:242
+msgid "Mixed Partner"
+msgstr "Compañaro de dobles mixta"
+
+#: /home/ettu/veterans-v4/templates/Pages/participants.php:57
+msgid "Teams"
+msgstr "Equipos"
+
+#: /home/ettu/veterans-v4/templates/Registrations/add_participant.php:85
 msgid "Add Participant"
 msgstr "Agregar participante"
 
-#: Template/Registrations/add_participant.ctp:88
+#: /home/ettu/veterans-v4/templates/Registrations/add_participant.php:89
 msgid "Select Type"
 msgstr "Seleccione tipo"
 
-#: Template/Registrations/add_participant.ctp:89
-#: Template/Registrations/edit_participant.ctp:178
-#: Template/Registrations/edit_participant.ctp:182
-#: Template/Registrations/edit_participant.ctp:186
-#: Template/Registrations/index.ctp:57 Template/Registrations/index.ctp:306
-#: /home/ettu/veterans-v3//Template/Element/voucher.ctp:41
-#: /home/ettu/veterans-v3//Template/Shops/add_person.ctp:154
+#: /home/ettu/veterans-v4/templates/Registrations/add_participant.php:90
+#: /home/ettu/veterans-v4/templates/Registrations/count.php:33
+#: /home/ettu/veterans-v4/templates/Registrations/edit_participant.php:177
+#: /home/ettu/veterans-v4/templates/Registrations/edit_participant.php:181
+#: /home/ettu/veterans-v4/templates/Registrations/edit_participant.php:185
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:48
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:219
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/add_person.php:160
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/voucher.php:41
 msgid "Type"
 msgstr "Tipo"
 
-#: Template/Registrations/add_participant.ctp:95
-#: Template/Registrations/edit.ctp:115
-#: Template/Registrations/edit_participant.ctp:158
-#: /home/ettu/veterans-v3//Template/Shops/add_person.ctp:163
+#: /home/ettu/veterans-v4/templates/Registrations/add_participant.php:96
+#: /home/ettu/veterans-v4/templates/Registrations/edit.php:114
+#: /home/ettu/veterans-v4/templates/Registrations/edit_participant.php:157
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/add_person.php:169
 msgid "Given Name"
 msgstr "Nombre de pila"
 
-#: Template/Registrations/add_participant.ctp:100
-#: Template/Registrations/edit.ctp:120
-#: Template/Registrations/edit_participant.ctp:163
-#: Template/Registrations/index.ctp:179
-#: /home/ettu/veterans-v3//Template/Shops/add_person.ctp:169
+#: /home/ettu/veterans-v4/templates/Registrations/add_participant.php:101
+#: /home/ettu/veterans-v4/templates/Registrations/edit.php:119
+#: /home/ettu/veterans-v4/templates/Registrations/edit_participant.php:162
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:96
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/add_person.php:175
 msgid "Family Name"
 msgstr "Apellido"
 
-#: Template/Registrations/add_participant.ctp:110
-#: Template/Registrations/edit.ctp:155
-#: Template/Registrations/edit_participant.ctp:204
-#: /home/ettu/veterans-v3//Template/Shops/add_person.ctp:177
+#: /home/ettu/veterans-v4/templates/Registrations/add_participant.php:111
+#: /home/ettu/veterans-v4/templates/Registrations/edit.php:154
+#: /home/ettu/veterans-v4/templates/Registrations/edit_participant.php:203
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/add_person.php:183
 msgid "Select gender"
 msgstr "Seleccione sexo"
 
-#: Template/Registrations/add_participant.ctp:111
-#: Template/Registrations/edit.ctp:149 Template/Registrations/edit.ctp:156
-#: Template/Registrations/edit_participant.ctp:198
-#: Template/Registrations/edit_participant.ctp:205
-#: /home/ettu/veterans-v3//Template/Shops/add_person.ctp:179
+#: /home/ettu/veterans-v4/templates/Registrations/add_participant.php:112
+#: /home/ettu/veterans-v4/templates/Registrations/edit.php:148
+#: /home/ettu/veterans-v4/templates/Registrations/edit.php:155
+#: /home/ettu/veterans-v4/templates/Registrations/edit_participant.php:197
+#: /home/ettu/veterans-v4/templates/Registrations/edit_participant.php:204
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/add_person.php:185
 msgid "Man"
 msgstr "Hombre"
 
-#: Template/Registrations/add_participant.ctp:111
-#: Template/Registrations/edit.ctp:149 Template/Registrations/edit.ctp:156
-#: Template/Registrations/edit_participant.ctp:198
-#: Template/Registrations/edit_participant.ctp:205
-#: /home/ettu/veterans-v3//Template/Shops/add_person.ctp:179
+#: /home/ettu/veterans-v4/templates/Registrations/add_participant.php:112
+#: /home/ettu/veterans-v4/templates/Registrations/edit.php:148
+#: /home/ettu/veterans-v4/templates/Registrations/edit.php:155
+#: /home/ettu/veterans-v4/templates/Registrations/edit_participant.php:197
+#: /home/ettu/veterans-v4/templates/Registrations/edit_participant.php:204
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/add_person.php:185
 msgid "Woman"
 msgstr "Mujer"
 
-#: Template/Registrations/add_participant.ctp:134
-#: /home/ettu/veterans-v3//Template/Shops/add_person.ctp:186
+#: /home/ettu/veterans-v4/templates/Registrations/add_participant.php:135
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/add_person.php:192
 msgid "Select Association"
 msgstr "Seleccione asociación"
 
-#: Template/Registrations/add_participant.ctp:154
-#: Template/Registrations/edit_participant.ctp:375
+#: /home/ettu/veterans-v4/templates/Registrations/add_participant.php:160
+#: /home/ettu/veterans-v4/templates/Registrations/edit_participant.php:375
 msgid "Items"
 msgstr "Artículos"
 
-#: Template/Registrations/add_participant.ctp:175
-#: Template/Registrations/edit_participant.ctp:404
-#: Template/Registrations/index.ctp:606 Template/Registrations/requests.ctp:80
+#: /home/ettu/veterans-v4/templates/Registrations/add_participant.php:174
+#: /home/ettu/veterans-v4/templates/element/savecancel.php:50
+msgid "Save & Cont."
+msgstr "Guardar y Cont."
+
+#: /home/ettu/veterans-v4/templates/Registrations/add_participant.php:181
+#: /home/ettu/veterans-v4/templates/Registrations/edit_participant.php:404
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:522
+#: /home/ettu/veterans-v4/templates/Registrations/requests.php:81
 msgid "List Registrations"
 msgstr "Lista de inscripciones"
 
-#: Template/Registrations/count.ctp:98 Template/Registrations/count.ctp:100
-#: Template/Registrations/index.ctp:133 Template/Registrations/index.ctp:135
+#: /home/ettu/veterans-v4/templates/Registrations/count.php:23
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:207
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:185
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/view.php:260
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/add_person.php:181
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_people.php:62
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_people.php:129
+msgid "Sex"
+msgstr "Sexo"
+
+#: /home/ettu/veterans-v4/templates/Registrations/count.php:45
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:73
+msgid "Partner"
+msgstr "Compañaro/a"
+
+#: /home/ettu/veterans-v4/templates/Registrations/count.php:48
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:76
+msgid "Wanted"
+msgstr "Sin compañaro/a"
+
+#: /home/ettu/veterans-v4/templates/Registrations/count.php:49
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:77
 msgid "Requested As"
 msgstr "Solicitado"
 
-#: Template/Registrations/count.ctp:103 Template/Registrations/count.ctp:105
-#: Template/Registrations/index.ctp:138 Template/Registrations/index.ctp:140
+#: /home/ettu/veterans-v4/templates/Registrations/count.php:50
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:78
 msgid "Multiple"
 msgstr "Múltiple"
 
-#: Template/Registrations/count.ctp:126
+#: /home/ettu/veterans-v4/templates/Registrations/count.php:51
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:79
+msgid "Not Confirmed"
+msgstr "No confirmado"
+
+#: /home/ettu/veterans-v4/templates/Registrations/count.php:52
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:80
+msgid "Confirmed"
+msgstr "Confirmado"
+
+#: /home/ettu/veterans-v4/templates/Registrations/count.php:62
 msgid ""
 "Only registered and paid for players are counted but not reserved positions."
 msgstr ""
 "Solo las posiciones registradas y pagadas por jugadores se cuentan pero no "
 "las posiciones reservadas."
 
-#: Template/Registrations/edit_participant.ctp:24
-#: Template/Registrations/edit_participant.ctp:43
-#: Template/Registrations/edit_participant.ctp:300
-#: Template/Registrations/edit_participant.ctp:339
-#: Template/Registrations/index.ctp:483 Template/Registrations/index.ctp:509
-msgid "Partner wanted"
-msgstr "Sin compañero/a"
-
-#: Template/Registrations/edit_participant.ctp:128
-msgid "Edit Registration"
-msgstr "Editar inscripción"
-
-#: Template/Registrations/edit_participant.ctp:147
-msgid "Person"
-msgstr "Persona"
-
-#: Template/Registrations/edit_participant.ctp:218
-#: /home/ettu/veterans-v3//Template/Shops/add_person.ctp:202
-msgid "Date Born"
-msgstr "Fecha de nacimiento"
-
-#: Template/Registrations/edit_participant.ctp:252
-#: Template/Registrations/index.ctp:321 Template/Registrations/requests.ctp:10
-msgid "Single"
-msgstr "Individual"
-
-#: Template/Registrations/edit_participant.ctp:257
-msgid "Not Playing Singles"
-msgstr "No jugar individual"
-
-#: Template/Registrations/edit_participant.ctp:275
-#: Template/Registrations/index.ctp:324 Template/Registrations/requests.ctp:12
-msgid "Double"
-msgstr "Doble"
-
-#: Template/Registrations/edit_participant.ctp:280
-msgid "Not Playing Doubles"
-msgstr "No jugar dobles"
-
-#: Template/Registrations/edit_participant.ctp:282
-msgid "Double Partner Category"
-msgstr "Categoría de compañaro de dobles"
-
-#: Template/Registrations/edit_participant.ctp:319
-msgid "Not Playing Mixed"
-msgstr "No juega dobles mixta"
-
-#: Template/Registrations/edit_participant.ctp:321
-msgid "Mixed Partner Category"
-msgstr "Categoría de compañaro de dobles mixta"
-
-#: Template/Registrations/edit_participant.ctp:348
-msgid "Not Playing Teams"
-msgstr "No jugar equipos"
-
-#: Template/Registrations/edit_participant.ctp:354
-#: Template/Users/forgot_password.ctp:9 Template/Users/login.ctp:16
-#: /home/ettu/veterans-v3//Template/Element/receipt.ctp:133
-#: /home/ettu/veterans-v3//Template/Element/shop_address.ctp:25
-#: /home/ettu/veterans-v3//Template/Email/html/cancel.ctp:180
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:294
-#: /home/ettu/veterans-v3//Template/Shops/add_person.ctp:219
-#: /home/ettu/veterans-v3//Template/Shops/address.ctp:143
-msgid "Email"
-msgstr "Email"
-
-#: Template/Registrations/edit_participant.ctp:358
-#: /home/ettu/veterans-v3//Template/Element/receipt.ctp:139
-#: /home/ettu/veterans-v3//Template/Element/shop_address.ctp:27
-#: /home/ettu/veterans-v3//Template/Email/html/cancel.ctp:186
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:300
-#: /home/ettu/veterans-v3//Template/Shops/success.ctp:98
-msgid "Phone"
-msgstr "Teléfono"
-
-#: Template/Registrations/edit_participant.ctp:407
-#: Template/Registrations/index.ctp:609 Template/Registrations/requests.ctp:82
-msgid "List Partner Wanted"
-msgstr "Lista sin compañero/a"
-
-#: Template/Registrations/index.ctp:27
-msgid "Partner Wanted"
-msgstr "Sin compañero/a"
-
-#: Template/Registrations/index.ctp:27
-msgid "Registrations"
-msgstr "Inscripciones"
-
-#: Template/Registrations/index.ctp:39 Template/Registrations/index.ctp:41
-#: Template/Registrations/index.ctp:61 Template/Registrations/index.ctp:63
-#: Template/Registrations/index.ctp:80 Template/Registrations/index.ctp:82
-#: Template/Registrations/index.ctp:98 Template/Registrations/index.ctp:100
-#: Template/Registrations/index.ctp:123 Template/Registrations/index.ctp:160
-#: Template/Registrations/index.ctp:162 Template/Registrations/index.ctp:190
-#: Template/Registrations/index.ctp:192 Template/Registrations/index.ctp:218
-msgid "all"
-msgstr "todas"
-
-#: Template/Registrations/index.ctp:78
-msgid "Competition"
-msgstr "Concurso"
-
-#: Template/Registrations/index.ctp:96
-msgid "Age Category"
-msgstr "Categoría de edad"
-
-#: Template/Registrations/index.ctp:103 Template/Registrations/index.ctp:105
-msgid "Different"
-msgstr "Diferente"
-
-#: Template/Registrations/index.ctp:108 Template/Registrations/index.ctp:110
-msgid "Not in all events"
-msgstr "No en todas las competiciones"
-
-#: Template/Registrations/index.ctp:120
-msgid "Partner"
-msgstr "Compañaro/a"
-
-#: Template/Registrations/index.ctp:128 Template/Registrations/index.ctp:130
-msgid "Wanted"
-msgstr "Sin compañaro/a"
-
-#: Template/Registrations/index.ctp:143 Template/Registrations/index.ctp:145
-msgid "Not Confirmed"
-msgstr "No confirmado"
-
-#: Template/Registrations/index.ctp:148 Template/Registrations/index.ctp:150
-msgid "Confirmed"
-msgstr "Confirmado"
-
-#: Template/Registrations/index.ctp:158
-msgid "Status"
-msgstr "Estado"
-
-#: Template/Registrations/index.ctp:165 Template/Registrations/index.ctp:167
-msgid "Not cancelled"
-msgstr "No anulado"
-
-#: Template/Registrations/index.ctp:170 Template/Registrations/index.ctp:172
-msgid "Cancelled"
-msgstr "Anulado"
-
-#: Template/Registrations/index.ctp:217
-msgid "Username"
-msgstr "Nombre de usuario"
-
-#: Template/Registrations/index.ctp:294
-#: /home/ettu/veterans-v3//Template/Element/shop_people.ctp:62
-#: /home/ettu/veterans-v3//Template/Element/shop_people.ctp:129
-#: /home/ettu/veterans-v3//Template/Orders/view.ctp:185
-#: /home/ettu/veterans-v3//Template/Orders/view.ctp:260
-#: /home/ettu/veterans-v3//Template/Shops/add_person.ctp:175
-msgid "Sex"
-msgstr "Sexo"
-
-#: Template/Registrations/index.ctp:304
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:166
-msgid "Player"
-msgstr "Jugador"
-
-#: Template/Registrations/index.ctp:312 Template/Registrations/requests.ctp:8
-#: /home/ettu/veterans-v3//Template/Element/voucher.ctp:37
-msgid "Reg. ID"
-msgstr "Inscr. ID"
-
-#: Template/Registrations/index.ctp:317
-msgid "Start No."
-msgstr "No. de jug."
-
-#: Template/Registrations/index.ctp:333
-msgid "Team"
-msgstr "Equipo"
-
-#: Template/Registrations/index.ctp:336
-msgid "Updated"
-msgstr "Actualizado"
-
-#: Template/Registrations/index.ctp:439
-msgid "Yes"
-msgstr "Sí"
-
-#: Template/Registrations/index.ctp:439
-msgid "No"
-msgstr "No"
-
-#: Template/Registrations/index.ctp:490 Template/Registrations/index.ctp:516
-msgid "wanted"
-msgstr "deseado"
-
-#: Template/Registrations/index.ctp:539
-msgid "History"
-msgstr "Historia"
-
-#: Template/Registrations/index.ctp:541
-msgid "View"
-msgstr "Ver"
-
-#: Template/Registrations/index.ctp:549 Template/Registrations/index.ctp:551
-msgid "Edit"
-msgstr "Editar"
-
-#: Template/Registrations/index.ctp:557 Template/Registrations/index.ctp:561
-msgid "Delete"
-msgstr "Retirar"
-
-#: Template/Registrations/index.ctp:558 Template/Registrations/index.ctp:562
-msgid "Are you sure you want to delete %s?"
-msgstr "¿Seguro que quieres retirar %s?"
-
-#: Template/Registrations/index.ctp:585
-msgid "Requests"
-msgstr "Solicitudes"
-
-#: Template/Registrations/index.ctp:599 Template/Registrations/index.ctp:601
-msgid "New Registration"
-msgstr "Inscripción nueva"
-
-#: Template/Registrations/index.ctp:630
-msgid "Export"
-msgstr "Exportar"
-
-#: Template/Registrations/index.ctp:632
-msgid "Export Order"
-msgstr "Exportar orden"
-
-#: Template/Registrations/requests.ctp:2
-msgid "Partner Requests for {0}"
-msgstr "Las solicitudes de compañeros para {0}"
-
-#: Template/Registrations/requests.ctp:63
-msgid "Accept"
-msgstr "Aceptar"
-
-#: Template/Registrations/requests.ctp:65
-msgid "Reject"
-msgstr "Rechazar"
-
-#: Template/Registrations/requests.ctp:67
-msgid "Are you sure you want to reject the partner request from {0}?"
-msgstr "¿Seguro que deseas rechazar la solicitud de compañaro {0}?"
-
-#: Template/Registrations/csv/export_count.ctp:8
-#: /home/ettu/veterans-v3//Template/Element/shop_order.ctp:28
-#: /home/ettu/veterans-v3//Template/Element/shop_order.ctp:193
-#: /home/ettu/veterans-v3//Template/Shops/buy.ctp:143
-#: /home/ettu/veterans-v3//Template/Shops/buy.ctp:286
-#: /home/ettu/veterans-v3//Template/Shops/buy.ctp:333
+#: /home/ettu/veterans-v4/templates/Registrations/csv/export_count.php:9
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/buy.php:143
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/buy.php:286
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/buy.php:333
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_order.php:28
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_order.php:193
 msgid "Total"
 msgstr "Total"
 
-#: Template/Users/forgot_password.ctp:6 Template/Users/forgot_password.ctp:14
+#: /home/ettu/veterans-v4/templates/Registrations/edit_participant.php:25
+#: /home/ettu/veterans-v4/templates/Registrations/edit_participant.php:44
+#: /home/ettu/veterans-v4/templates/Registrations/edit_participant.php:300
+#: /home/ettu/veterans-v4/templates/Registrations/edit_participant.php:339
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:399
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:425
+msgid "Partner wanted"
+msgstr "Sin compañero/a"
+
+#: /home/ettu/veterans-v4/templates/Registrations/edit_participant.php:129
+msgid "Edit Registration"
+msgstr "Editar inscripción"
+
+#: /home/ettu/veterans-v4/templates/Registrations/edit_participant.php:146
+msgid "Person"
+msgstr "Persona"
+
+#: /home/ettu/veterans-v4/templates/Registrations/edit_participant.php:218
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/add_person.php:208
+msgid "Date Born"
+msgstr "Fecha de nacimiento"
+
+#: /home/ettu/veterans-v4/templates/Registrations/edit_participant.php:252
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:234
+#: /home/ettu/veterans-v4/templates/Registrations/requests.php:11
+msgid "Single"
+msgstr "Individual"
+
+#: /home/ettu/veterans-v4/templates/Registrations/edit_participant.php:257
+msgid "Not Playing Singles"
+msgstr "No jugar individual"
+
+#: /home/ettu/veterans-v4/templates/Registrations/edit_participant.php:275
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:237
+#: /home/ettu/veterans-v4/templates/Registrations/requests.php:13
+msgid "Double"
+msgstr "Doble"
+
+#: /home/ettu/veterans-v4/templates/Registrations/edit_participant.php:280
+msgid "Not Playing Doubles"
+msgstr "No jugar dobles"
+
+#: /home/ettu/veterans-v4/templates/Registrations/edit_participant.php:282
+msgid "Double Partner Category"
+msgstr "Categoría de compañaro de dobles"
+
+#: /home/ettu/veterans-v4/templates/Registrations/edit_participant.php:319
+msgid "Not Playing Mixed"
+msgstr "No juega dobles mixta"
+
+#: /home/ettu/veterans-v4/templates/Registrations/edit_participant.php:321
+msgid "Mixed Partner Category"
+msgstr "Categoría de compañaro de dobles mixta"
+
+#: /home/ettu/veterans-v4/templates/Registrations/edit_participant.php:348
+msgid "Not Playing Teams"
+msgstr "No jugar equipos"
+
+#: /home/ettu/veterans-v4/templates/Registrations/edit_participant.php:354
+#: /home/ettu/veterans-v4/templates/Users/forgot_password.php:10
+#: /home/ettu/veterans-v4/templates/Users/login.php:17
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/add_person.php:226
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/address.php:148
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/receipt.php:133
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_address.php:25
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/cancel.php:180
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:304
+msgid "Email"
+msgstr "Email"
+
+#: /home/ettu/veterans-v4/templates/Registrations/edit_participant.php:358
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/success.php:98
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/receipt.php:139
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_address.php:27
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/cancel.php:186
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:310
+msgid "Phone"
+msgstr "Teléfono"
+
+#: /home/ettu/veterans-v4/templates/Registrations/edit_participant.php:407
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:525
+#: /home/ettu/veterans-v4/templates/Registrations/requests.php:83
+msgid "List Partner Wanted"
+msgstr "Lista sin compañero/a"
+
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:29
+msgid "Partner Wanted"
+msgstr "Sin compañero/a"
+
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:29
+msgid "Registrations"
+msgstr "Inscripciones"
+
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:55
+msgid "Competition"
+msgstr "Concurso"
+
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:62
+msgid "Age Category"
+msgstr "Categoría de edad"
+
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:65
+msgid "Different"
+msgstr "Diferente"
+
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:66
+msgid "Not in all events"
+msgstr "No en todas las competiciones"
+
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:87
+msgid "Status"
+msgstr "Estado"
+
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:90
+msgid "Not cancelled"
+msgstr "No anulado"
+
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:91
+msgid "Cancelled"
+msgstr "Anulado"
+
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:132
+msgid "Username"
+msgstr "Nombre de usuario"
+
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:133
+msgid "all"
+msgstr "todas"
+
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:217
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:164
+msgid "Player"
+msgstr "Jugador"
+
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:225
+#: /home/ettu/veterans-v4/templates/Registrations/requests.php:9
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/voucher.php:37
+msgid "Reg. ID"
+msgstr "Inscr. ID"
+
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:230
+msgid "Start No."
+msgstr "No. de jug."
+
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:246
+msgid "Team"
+msgstr "Equipo"
+
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:249
+msgid "Updated"
+msgstr "Actualizado"
+
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:250
+#: /home/ettu/veterans-v4/templates/Registrations/requests.php:17
+#: /home/ettu/veterans-v4/templates/layout/default.php:119
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/buy.php:221
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/buy.php:287
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_people.php:67
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_people.php:130
+msgid "Actions"
+msgstr "Acciones"
+
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:355
+msgid "Yes"
+msgstr "Sí"
+
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:355
+msgid "No"
+msgstr "No"
+
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:406
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:432
+msgid "wanted"
+msgstr "deseado"
+
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:455
+msgid "History"
+msgstr "Historia"
+
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:457
+msgid "View"
+msgstr "Ver"
+
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:465
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:467
+msgid "Edit"
+msgstr "Editar"
+
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:473
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:477
+msgid "Delete"
+msgstr "Retirar"
+
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:474
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:478
+msgid "Are you sure you want to delete %s?"
+msgstr "¿Seguro que quieres retirar %s?"
+
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:501
+msgid "Requests"
+msgstr "Solicitudes"
+
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:515
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:517
+msgid "New Registration"
+msgstr "Inscripción nueva"
+
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:546
+msgid "Export"
+msgstr "Exportar"
+
+#: /home/ettu/veterans-v4/templates/Registrations/index.php:548
+msgid "Export Order"
+msgstr "Exportar orden"
+
+#: /home/ettu/veterans-v4/templates/Registrations/requests.php:3
+msgid "Partner Requests for {0}"
+msgstr "Las solicitudes de compañeros para {0}"
+
+#: /home/ettu/veterans-v4/templates/Registrations/requests.php:64
+msgid "Accept"
+msgstr "Aceptar"
+
+#: /home/ettu/veterans-v4/templates/Registrations/requests.php:66
+msgid "Reject"
+msgstr "Rechazar"
+
+#: /home/ettu/veterans-v4/templates/Registrations/requests.php:68
+msgid "Are you sure you want to reject the partner request from {0}?"
+msgstr "¿Seguro que deseas rechazar la solicitud de compañaro {0}?"
+
+#: /home/ettu/veterans-v4/templates/Users/forgot_password.php:7
+#: /home/ettu/veterans-v4/templates/Users/forgot_password.php:15
 msgid "Request Password"
 msgstr "Solicitud de contraseña"
 
-#: Template/Users/login.ctp:20
+#: /home/ettu/veterans-v4/templates/Users/login.php:15
+#: /home/ettu/veterans-v4/templates/element/header.php:37
+msgid "Login"
+msgstr "Iniciar sesión"
+
+#: /home/ettu/veterans-v4/templates/Users/login.php:21
 msgid "Forgot Password"
 msgstr "He olvidado la contraseña"
 
-#: Template/Users/login.ctp:24
+#: /home/ettu/veterans-v4/templates/Users/login.php:25
 msgid "Password"
 msgstr "Contraseña"
 
-#: Template/Users/login.ctp:38
+#: /home/ettu/veterans-v4/templates/Users/login.php:39
 msgid "Remember me"
 msgstr "Recuérdame"
 
-#: Template/Users/profile.ctp:8
+#: /home/ettu/veterans-v4/templates/Users/profile.php:9
 msgid "Edit Profile"
 msgstr "Editar perfil"
 
-#: Template/Users/profile.ctp:14
+#: /home/ettu/veterans-v4/templates/Users/profile.php:15
 msgid "Pref. language"
 msgstr "Idioma preferido"
 
-#: /home/ettu/veterans-v3//Controller/OrdersController.php:1258
+#: /home/ettu/veterans-v4/templates/element/footer.php:8
+msgid "Privacy Policy"
+msgstr "Política de privacidad"
+
+#: /home/ettu/veterans-v4/templates/element/footer.php:17
+msgid "Impressum"
+msgstr "Pie de imprenta"
+
+#: /home/ettu/veterans-v4/templates/element/footer.php:26
+msgid "Terms & Conditions"
+msgstr "Términos y Condiciones"
+
+#: /home/ettu/veterans-v4/templates/element/header.php:36
+msgid "Not logged in"
+msgstr "Sin iniciar sesión"
+
+#: /home/ettu/veterans-v4/templates/element/header.php:41
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_header.php:4
+msgid "Register"
+msgstr "Inscribe"
+
+#: /home/ettu/veterans-v4/templates/element/header.php:44
+msgid "Logged in as "
+msgstr "Está en el sistema "
+
+#: /home/ettu/veterans-v4/templates/element/header.php:46
+msgid "Logout"
+msgstr "Cerrar sesión"
+
+#: /home/ettu/veterans-v4/templates/element/savecancel.php:39
+msgid "Save"
+msgstr "Guardar"
+
+#: /home/ettu/veterans-v4/templates/element/savecancel.php:41
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/authorizenet.php:177
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/bpayment.php:122
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/card_pointe.php:91
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/dibs.php:110
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/dummy.php:102
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/ipayment.php:153
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/paypal_express.php:87
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/redsys.php:92
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_footer.php:18
+msgid "Cancel"
+msgstr "Anular"
+
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/Component/OrderUpdateComponent.php:50
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/Component/OrderUpdateComponent.php:166
+msgid "Unknown registration"
+msgstr "Inscripción desconocido"
+
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/Component/OrderUpdateComponent.php:67
+msgid "Illegal type"
+msgstr "Tipo ilegal"
+
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/Component/OrderUpdateComponent.php:78
+msgid "Unknown user"
+msgstr "Usuario desconocido"
+
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/Component/OrderUpdateComponent.php:148
+msgid "The order could be be stored"
+msgstr "El pedido nuevo no se pudo guardar"
+
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:1290
 msgid "[{0}] Cancellation of registration {1} from {2}"
 msgstr "[{0}] Anulación de su inscripción {1} de {2}"
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:168
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:166
 msgid "Accompanying Person"
 msgstr "Acompañante"
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:196
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:216
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:471
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:485
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:168
+msgid "Coach"
+msgstr "Entrenador"
+
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:196
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:216
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:511
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:525
 msgid ""
 "You cannot register players after registration closed for players on {0}"
 msgstr ""
 "No se puede registrar a las personas después de registrarse cerrado {0}"
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:204
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:476
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:204
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:516
 msgid ""
 "You cannot register players at the moment. Registration will open soon. "
 "Please visit <a href=\"{0}\" target=\"_blank\">{0}</a> for more information."
@@ -652,17 +703,17 @@ msgstr ""
 "pronto. Visite <a href=\"{0}\" target=\"_blank\">{0}</a> para obtener más "
 "información."
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:209
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:481
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:209
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:521
 msgid ""
 "You cannot register players before registration opens for players on {0}"
 msgstr "No se puede registrar a los jugadores antes de registrarse abra {0}"
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:226
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:226
 msgid "The registration for players has been closed"
 msgstr "La inscripción para jugadores ha sido cerrada"
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:235
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:235
 msgid ""
 "Players are already sold out and adding more will put your registration on "
 "the waiting list"
@@ -670,11 +721,12 @@ msgstr ""
 "Los jugadores ya están agotadas y añadiendo más pondrá su inscripción en la "
 "lista de espera"
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:244
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:244
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:262
 msgid "The registration for accompanying persons has been closed"
 msgstr "La inscripción para acompañantes adicional ha sido cerrada"
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:253
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:253
 msgid ""
 "Accompanying persons are already sold out and adding more will put your "
 "registration on the waiting list"
@@ -682,27 +734,35 @@ msgstr ""
 "Los acompañantes ya están agotadas y añadiendo más pondrá su inscripción en "
 "la lista de espera"
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:339
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:271
+msgid ""
+"Coaches are already sold out and adding more will put your registration on "
+"the waiting list"
+msgstr ""
+"Los entrenadores ya están agotadas y añadiendo más pondrá su inscripción en "
+"la lista de espera"
+
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:379
 msgid "You must fill out all required fields"
 msgstr "Debe llenar todos las casillas requeridas"
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:350
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:390
 msgid "You must enter the date of birth for players"
 msgstr "Usted debe insertar la fecha de nacimiento de los jugadores"
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:355
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:395
 msgid "The date of birth is not valid"
 msgstr "La fecha de nacimiento es inválida"
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:360
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:400
 msgid "You must be born in %d or earlier"
 msgstr "Usted tiene que nacer de %d o antes"
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:366
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:406
 msgid "Wrong birthday given"
 msgstr "Cumpleaños incorrecto dada"
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:375
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:415
 msgid ""
 "You must agree to the privacy policy when entering an email address or a "
 "phone number"
@@ -710,15 +770,15 @@ msgstr ""
 "Debe aceptar la política de privacidad al introducir una dirección de email "
 "o un número de teléfono"
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:387
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:427
 msgid "The phone number is invalid"
 msgstr "El número telefónico es inválido"
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:395
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:435
 msgid "The email address has an invalid format"
 msgstr "La dirección de email tiene un formato inválido"
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:454
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:494
 msgid ""
 "You cannot register people at the moment. Registration will open soon. "
 "Please visit <a href=\"{0}\" target=\"_blank\">{0}</a> for more information."
@@ -727,671 +787,347 @@ msgstr ""
 "pronto. Visite <a href=\"{0}\" target=\"_blank\">{0}</a> para obtener más "
 "información."
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:459
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:499
 msgid "You cannot register people before registration opens on {0}"
 msgstr ""
 "No se puede inscribir personas antes de que los registros se abre en {0}"
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:465
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:505
 msgid "You cannot register people after registration closed on {0}"
 msgstr ""
 "No se puede inscribir personas después de que los registrarse se cierra en "
 "{0}"
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:606
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:646
 msgid "You have to register people or buy something"
 msgstr "Usted tiene que inscribir personas o comprar algo"
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:749
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:795
 msgid "Given name cannot be empty"
 msgstr "Nombre dado no puede estar vacío"
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:754
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:800
 msgid "Family name cannot be empty"
 msgstr "El apellido no puede estar vacío"
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:759
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:805
 msgid "Street name cannot be empty"
 msgstr "Nombre de pila no puede estar vacío"
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:764
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:810
 msgid "Zip code cannot be empty"
 msgstr "Código postal no puede estar vacío"
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:769
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:815
 msgid "City cannot be empty"
 msgstr "Ciudad no puede estar vacío"
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:774
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:820
 msgid "Country cannot be empty"
 msgstr "País no puede estar vacío"
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:779
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:825
 msgid "Email address cannot be empty"
 msgstr "Dirección de email no puede estar vacío"
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:819
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:867
 msgid "You must agree to the terms and conditions"
 msgstr "Usted debe aceptar los términos y condiciones"
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:1166
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1215
 msgid "[{0}] Your registration {1} from {2}"
 msgstr "[{0}] Su Inscripción {1} de {2}"
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:1293
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1342
 msgid "[{0}] Your voucher for your registration {1} from {2}"
 msgstr "[{0}] Su vale para su inscripción {1} de {2}"
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:1547
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1598
 msgid "The order was not found"
 msgstr "El pedido no fue encontrado"
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:1618
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:1626
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1669
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1677
 msgid "Invalid registration"
 msgstr "Inscripción inválida"
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:1631
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1682
 msgid "The registration was already paid for"
 msgstr "La inscripcíon ya fue pagado"
 
-#: /home/ettu/veterans-v3//Controller/ShopsController.php:1640
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1691
 msgid "You cannot pay for this registration at this moment"
 msgstr "No se puede paga este inscripción en este momento"
 
-#: /home/ettu/veterans-v3//Controller/Component/OrderUpdateComponent.php:52
-#: /home/ettu/veterans-v3//Controller/Component/OrderUpdateComponent.php:166
-msgid "Unknown registration"
-msgstr "Inscripción desconocido"
-
-#: /home/ettu/veterans-v3//Controller/Component/OrderUpdateComponent.php:67
-msgid "Illegal type"
-msgstr "Tipo ilegal"
-
-#: /home/ettu/veterans-v3//Controller/Component/OrderUpdateComponent.php:78
-msgid "Unknown user"
-msgstr "Usuario desconocido"
-
-#: /home/ettu/veterans-v3//Controller/Component/OrderUpdateComponent.php:148
-msgid "The order could be be stored"
-msgstr "El pedido nuevo no se pudo guardar"
-
-#: /home/ettu/veterans-v3//Template/Element/creditcard.ctp:38
-#: /home/ettu/veterans-v3//Template/Element/creditcard.ctp:42
-#: /home/ettu/veterans-v3//Template/Shops/Payment/authorizenet.ctp:35
-#: /home/ettu/veterans-v3//Template/Shops/Payment/authorizenet.ctp:43
-#: /home/ettu/veterans-v3//Template/Shops/Payment/bpayment.ctp:61
-#: /home/ettu/veterans-v3//Template/Shops/Payment/bpayment.ctp:65
-#: /home/ettu/veterans-v3//Template/Shops/Payment/card_pointe.ctp:33
-#: /home/ettu/veterans-v3//Template/Shops/Payment/card_pointe.ctp:37
-#: /home/ettu/veterans-v3//Template/Shops/Payment/dibs.ctp:49
-#: /home/ettu/veterans-v3//Template/Shops/Payment/dibs.ctp:53
-#: /home/ettu/veterans-v3//Template/Shops/Payment/dummy.ctp:38
-#: /home/ettu/veterans-v3//Template/Shops/Payment/dummy.ctp:42
-#: /home/ettu/veterans-v3//Template/Shops/Payment/ipayment.ctp:30
-#: /home/ettu/veterans-v3//Template/Shops/Payment/ipayment.ctp:38
-#: /home/ettu/veterans-v3//Template/Shops/Payment/paypal_express.ctp:40
-#: /home/ettu/veterans-v3//Template/Shops/Payment/paypal_express.ctp:44
-#: /home/ettu/veterans-v3//Template/Shops/Payment/redsys.ctp:40
-#: /home/ettu/veterans-v3//Template/Shops/Payment/redsys.ctp:44
-#: /home/ettu/veterans-v3//Template/Shops/Payment/sogecommerce.ctp:33
-#: /home/ettu/veterans-v3//Template/Shops/Payment/sogecommerce.ctp:37
-#: /home/ettu/veterans-v3//Template/Shops/Payment/stripe.ctp:41
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/authorizenet.php:35
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/authorizenet.php:43
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/bpayment.php:61
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/bpayment.php:65
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/card_pointe.php:33
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/card_pointe.php:37
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/dibs.php:49
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/dibs.php:53
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/dummy.php:38
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/dummy.php:42
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/ipayment.php:30
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/ipayment.php:38
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/paypal_express.php:40
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/paypal_express.php:44
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/positivity.php:33
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/positivity.php:37
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/redsys.php:40
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/redsys.php:44
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/sogecommerce.php:33
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/sogecommerce.php:37
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/stripe.php:41
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/creditcard.php:38
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/creditcard.php:42
 msgid "The payment could not be initiated. Please try again later."
 msgstr "No se pudo iniciar el pago. Por favor, inténtelo de nuevo más tarde."
 
-#: /home/ettu/veterans-v3//Template/Element/creditcard.ctp:55
-#: /home/ettu/veterans-v3//Template/Shops/Payment/authorizenet.ctp:84
-#: /home/ettu/veterans-v3//Template/Shops/Payment/bpayment.ctp:113
-#: /home/ettu/veterans-v3//Template/Shops/Payment/card_pointe.ctp:82
-#: /home/ettu/veterans-v3//Template/Shops/Payment/dibs.ctp:101
-#: /home/ettu/veterans-v3//Template/Shops/Payment/dummy.ctp:86
-#: /home/ettu/veterans-v3//Template/Shops/Payment/ipayment.ctp:71
-#: /home/ettu/veterans-v3//Template/Shops/Payment/paypal_express.ctp:78
-#: /home/ettu/veterans-v3//Template/Shops/Payment/redsys.ctp:83
-#: /home/ettu/veterans-v3//Template/Shops/Payment/sogecommerce.ctp:67
-#: /home/ettu/veterans-v3//Template/Shops/Payment/stripe.ctp:71
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/authorizenet.php:54
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/bpayment.php:81
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/card_pointe.php:48
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/dibs.php:64
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/dummy.php:71
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/ipayment.php:49
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/paypal_express.php:55
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/positivity.php:48
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/redsys.php:60
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/sogecommerce.php:48
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/stripe.php:52
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/pay.php:4
+msgid "Please wait while your payment is being processed."
+msgstr "Por favor espere mientras su paga se está procesando."
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/authorizenet.php:56
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/bpayment.php:83
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/card_pointe.php:50
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/dibs.php:66
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/dummy.php:73
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/ipayment.php:51
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/paypal_express.php:57
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/positivity.php:50
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/redsys.php:62
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/sogecommerce.php:50
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/stripe.php:54
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/pay.php:6
+msgid "This may take several minutes."
+msgstr "Esto podría tomar varios minutos."
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/authorizenet.php:63
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/bpayment.php:90
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/card_pointe.php:57
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/dibs.php:73
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/dummy.php:82
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/ipayment.php:58
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/paypal_express.php:64
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/positivity.php:56
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/redsys.php:69
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/sogecommerce.php:56
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/stripe.php:60
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/pay.php:11
+msgid "Billing Information"
+msgstr "Datos de facturación"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/authorizenet.php:66
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/ipayment.php:61
+msgid "Select your credit card and enter name and address of the card holder."
+msgstr ""
+"Seleccione su tarjeta de crédito e introduzca el nombre y la dirección del "
+"titular de la tarjeta."
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/authorizenet.php:67
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/bpayment.php:93
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/card_pointe.php:60
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/dibs.php:76
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/ipayment.php:62
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/paypal_express.php:67
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/positivity.php:59
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/redsys.php:72
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/sogecommerce.php:59
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/stripe.php:63
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/pay.php:14
+msgid "Payment will be processed in a secure way by {0}."
+msgstr "El pago será procesado de manera segura {0}."
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/authorizenet.php:84
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/bpayment.php:113
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/card_pointe.php:82
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/dibs.php:101
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/dummy.php:86
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/ipayment.php:71
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/paypal_express.php:78
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/positivity.php:67
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/redsys.php:83
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/sogecommerce.php:67
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/stripe.php:71
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/creditcard.php:55
 msgid "Amount"
 msgstr "Importe"
 
-#: /home/ettu/veterans-v3//Template/Element/receipt.ctp:28
-msgid "Proforma Invoice"
-msgstr "Factura Proforma"
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/authorizenet.php:93
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/ipayment.php:79
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/payment_selection.php:21
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/payment_selection.php:26
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/payment_selection.php:28
+msgid "Credit Card"
+msgstr "Tarjeta de crédito"
 
-#: /home/ettu/veterans-v3//Template/Element/receipt.ctp:33
-#: /home/ettu/veterans-v3//Template/Element/voucher.ctp:11
-msgid "Invoice date"
-msgstr "Fecha de la factura"
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/authorizenet.php:95
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/ipayment.php:81
+msgid "Select credit card type"
+msgstr "Seleccione el tipo de tarjeta de crédito"
 
-#: /home/ettu/veterans-v3//Template/Element/receipt.ctp:37
-#: /home/ettu/veterans-v3//Template/Element/voucher.ctp:15
-msgid "Invoice no"
-msgstr "No de factura"
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/authorizenet.php:103
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/ipayment.php:88
+msgid "Card no."
+msgstr "No. de tarjeta"
 
-#: /home/ettu/veterans-v3//Template/Element/receipt.ctp:62
-msgid "Order"
-msgstr "Orden"
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/authorizenet.php:110
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/ipayment.php:95
+msgid "CVV code"
+msgstr "Codigo CVV"
 
-#: /home/ettu/veterans-v3//Template/Element/receipt.ctp:83
-#: /home/ettu/veterans-v3//Template/Email/html/cancel.ctp:148
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:244
-#: /home/ettu/veterans-v3//Template/Shops/success.ctp:70
-msgid "Bank"
-msgstr "Banco"
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/authorizenet.php:117
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/ipayment.php:102
+msgid "Card expires"
+msgstr "La tarjeta expira"
 
-#: /home/ettu/veterans-v3//Template/Element/receipt.ctp:89
-#: /home/ettu/veterans-v3//Template/Email/html/cancel.ctp:154
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:250
-msgid "Bank Address"
-msgstr "Dirección bancaria"
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/authorizenet.php:142
+msgid "Card holder given name"
+msgstr "Nombre del titular de la tarjeta"
 
-#: /home/ettu/veterans-v3//Template/Element/receipt.ctp:95
-#: /home/ettu/veterans-v3//Template/Email/html/cancel.ctp:160
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:262
-#: /home/ettu/veterans-v3//Template/Shops/success.ctp:78
-msgid "IBAN"
-msgstr "IBAN"
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/authorizenet.php:149
+msgid "Card holder family name"
+msgstr "Apellido de titular de la tarjeta "
 
-#: /home/ettu/veterans-v3//Template/Element/receipt.ctp:101
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:256
-msgid "Account No"
-msgstr "Nº de cuenta"
-
-#: /home/ettu/veterans-v3//Template/Element/receipt.ctp:107
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:268
-msgid "BIC (SWIFT)"
-msgstr "BIC (SWIFT)"
-
-#: /home/ettu/veterans-v3//Template/Element/receipt.ctp:113
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:274
-#: /home/ettu/veterans-v3//Template/Shops/success.ctp:90
-msgid "ABA"
-msgstr "ABA"
-
-#: /home/ettu/veterans-v3//Template/Element/receipt.ctp:119
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:280
-#: /home/ettu/veterans-v3//Template/Shops/success.ctp:94
-msgid "Correspondent Bank"
-msgstr "Banco correspondiente"
-
-#: /home/ettu/veterans-v3//Template/Element/receipt.ctp:127
-#: /home/ettu/veterans-v3//Template/Email/html/cancel.ctp:174
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:288
-#: /home/ettu/veterans-v3//Template/Shops/success.ctp:74
-msgid "Account Holder"
-msgstr "Titular de la cuenta"
-
-#: /home/ettu/veterans-v3//Template/Element/receipt.ctp:145
-#: /home/ettu/veterans-v3//Template/Email/html/cancel.ctp:192
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:306
-#: /home/ettu/veterans-v3//Template/Shops/success.ctp:102
-msgid "Fax"
-msgstr "Fax"
-
-#: /home/ettu/veterans-v3//Template/Element/receipt.ctp:151
-#: /home/ettu/veterans-v3//Template/Email/html/cancel.ctp:198
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:312
-#: /home/ettu/veterans-v3//Template/Shops/success.ctp:66
-msgid "VAT Reg Id"
-msgstr "IVA"
-
-#: /home/ettu/veterans-v3//Template/Element/shop_address.ctp:15
-#: /home/ettu/veterans-v3//Template/Shops/address.ctp:102
-msgid "Title"
-msgstr "Título"
-
-#: /home/ettu/veterans-v3//Template/Element/shop_address.ctp:19
-#: /home/ettu/veterans-v3//Template/Shops/address.ctp:122
-#: /home/ettu/veterans-v3//Template/Shops/Payment/authorizenet.ctp:156
-#: /home/ettu/veterans-v3//Template/Shops/Payment/ipayment.ctp:132
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/authorizenet.php:156
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/ipayment.php:132
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/address.php:127
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_address.php:19
 msgid "Street"
 msgstr "Calle"
 
-#: /home/ettu/veterans-v3//Template/Element/shop_address.ctp:21
-#: /home/ettu/veterans-v3//Template/Shops/address.ctp:132
-#: /home/ettu/veterans-v3//Template/Shops/Payment/authorizenet.ctp:164
-#: /home/ettu/veterans-v3//Template/Shops/Payment/ipayment.ctp:140
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/authorizenet.php:160
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/ipayment.php:136
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/address.php:132
+msgid "Postal code"
+msgstr "Código postal"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/authorizenet.php:164
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/ipayment.php:140
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/address.php:137
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_address.php:21
 msgid "City"
 msgstr "Ciudad"
 
-#: /home/ettu/veterans-v3//Template/Element/shop_address.ctp:23
-#: /home/ettu/veterans-v3//Template/Element/shop_people.ctp:128
-#: /home/ettu/veterans-v3//Template/Shops/address.ctp:137
-#: /home/ettu/veterans-v3//Template/Shops/Payment/authorizenet.ctp:168
-#: /home/ettu/veterans-v3//Template/Shops/Payment/ipayment.ctp:144
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/authorizenet.php:168
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/ipayment.php:144
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/address.php:142
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_address.php:23
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_people.php:128
 msgid "Country"
 msgstr "País"
 
-#: /home/ettu/veterans-v3//Template/Element/shop_footer.ctp:13
-#: /home/ettu/veterans-v3//Template/Element/shop_footer.ctp:30
-#: /home/ettu/veterans-v3//Template/Element/shop_footer.ctp:32
-msgid "Next"
-msgstr "Siguiente"
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/authorizenet.php:170
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/ipayment.php:146
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/address.php:145
+msgid "Select Country"
+msgstr "Seleccione país"
 
-#: /home/ettu/veterans-v3//Template/Element/shop_footer.ctp:22
-#: /home/ettu/veterans-v3//Template/Shops/Payment/authorizenet.ctp:180
-#: /home/ettu/veterans-v3//Template/Shops/Payment/bpayment.ctp:125
-#: /home/ettu/veterans-v3//Template/Shops/Payment/card_pointe.ctp:94
-#: /home/ettu/veterans-v3//Template/Shops/Payment/dibs.ctp:113
-#: /home/ettu/veterans-v3//Template/Shops/Payment/dummy.ctp:105
-#: /home/ettu/veterans-v3//Template/Shops/Payment/ipayment.ctp:156
-#: /home/ettu/veterans-v3//Template/Shops/Payment/paypal_express.ctp:90
-#: /home/ettu/veterans-v3//Template/Shops/Payment/redsys.ctp:95
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/authorizenet.php:180
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/bpayment.php:125
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/card_pointe.php:94
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/dibs.php:113
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/dummy.php:105
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/ipayment.php:156
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/paypal_express.php:90
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/redsys.php:95
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_footer.php:22
 msgid "Previous"
 msgstr "Anterior"
 
-#: /home/ettu/veterans-v3//Template/Element/shop_header.ctp:5
-msgid "Buy"
-msgstr "Comprar"
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/authorizenet.php:183
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/bpayment.php:128
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/card_pointe.php:97
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/dibs.php:116
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/dummy.php:108
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/ipayment.php:159
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/paypal_express.php:93
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/positivity.php:78
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/redsys.php:98
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/sogecommerce.php:78
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/stripe.php:82
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/banktransfer.php:12
+msgid "Confirm Registration"
+msgstr "Confirmar inscripción"
 
-#: /home/ettu/veterans-v3//Template/Element/shop_header.ctp:6
-msgid "Address"
-msgstr "Dirección"
-
-#: /home/ettu/veterans-v3//Template/Element/shop_header.ctp:7
-msgid "Review"
-msgstr "Reseña"
-
-#: /home/ettu/veterans-v3//Template/Element/shop_header.ctp:8
-msgid "Payment"
-msgstr "Pago"
-
-#: /home/ettu/veterans-v3//Template/Element/shop_header.ctp:9
-#: /home/ettu/veterans-v3//Template/Element/shop_header.ctp:10
-msgid "Billing"
-msgstr "Facturación"
-
-#: /home/ettu/veterans-v3//Template/Element/shop_header.ctp:11
-msgid "Completed"
-msgstr "Terminado"
-
-#: /home/ettu/veterans-v3//Template/Element/shop_header.ctp:12
-#: /home/ettu/veterans-v3//Template/Shops/waiting_list.ctp:4
-msgid "Waiting List"
-msgstr "Lista de espera"
-
-#: /home/ettu/veterans-v3//Template/Element/shop_order.ctp:20
-msgid "Date"
-msgstr "Fecha"
-
-#: /home/ettu/veterans-v3//Template/Element/shop_order.ctp:20
-#: /home/ettu/veterans-v3//Template/Element/shop_people.ctp:58
-#: /home/ettu/veterans-v3//Template/Element/shop_people.ctp:125
-#: /home/ettu/veterans-v3//Template/Element/voucher.ctp:88
-msgid "Pos"
-msgstr "Pos."
-
-#: /home/ettu/veterans-v3//Template/Element/shop_order.ctp:21
-#: /home/ettu/veterans-v3//Template/Element/voucher.ctp:89
-msgid "Qty"
-msgstr "Count"
-
-#: /home/ettu/veterans-v3//Template/Element/shop_order.ctp:22
-#: /home/ettu/veterans-v3//Template/Element/voucher.ctp:90
-#: /home/ettu/veterans-v3//Template/Shops/buy.ctp:218
-msgid "Description"
-msgstr "Descripción"
-
-#: /home/ettu/veterans-v3//Template/Element/shop_order.ctp:23
-msgid "Canc Fee"
-msgstr "Tarifa de canc."
-
-#: /home/ettu/veterans-v3//Template/Element/shop_order.ctp:23
-msgid "Each"
-msgstr "Cada"
-
-#: /home/ettu/veterans-v3//Template/Element/shop_order.ctp:25
-msgid "VAT"
-msgstr "IVA"
-
-#: /home/ettu/veterans-v3//Template/Element/shop_order.ctp:26
-msgid "Total incl. VAT"
-msgstr "Total incl. IVA"
-
-#: /home/ettu/veterans-v3//Template/Element/shop_order.ctp:153
-msgid "Discount"
-msgstr "Descuento"
-
-#: /home/ettu/veterans-v3//Template/Element/shop_order.ctp:166
-#: /home/ettu/veterans-v3//Template/Element/shop_order.ctp:203
-msgid "Cancellation Fee"
-msgstr "Tarifa de anulación"
-
-#: /home/ettu/veterans-v3//Template/Element/shop_order.ctp:179
-#: /home/ettu/veterans-v3//Template/Element/shop_order.ctp:214
-msgid "Cancellation Discount"
-msgstr "Descuente de anulación"
-
-#: /home/ettu/veterans-v3//Template/Element/shop_order.ctp:226
-#: /home/ettu/veterans-v3//Template/Element/shop_order.ctp:250
-msgid "Refund"
-msgstr "Reembolso"
-
-#: /home/ettu/veterans-v3//Template/Element/shop_order.ctp:238
-msgid "Paid"
-msgstr "Pagado"
-
-#: /home/ettu/veterans-v3//Template/Element/shop_order.ctp:263
-msgid "Due"
-msgstr "Debido"
-
-#: /home/ettu/veterans-v3//Template/Element/shop_people.ctp:54
-msgid "Players"
-msgstr "Jugadores"
-
-#: /home/ettu/veterans-v3//Template/Element/shop_people.ctp:59
-#: /home/ettu/veterans-v3//Template/Element/shop_people.ctp:126
-#: /home/ettu/veterans-v3//Template/Element/voucher.ctp:38
-#: /home/ettu/veterans-v3//Template/Shops/address.ctp:115
-msgid "Family name"
-msgstr "Apellido"
-
-#: /home/ettu/veterans-v3//Template/Element/shop_people.ctp:60
-#: /home/ettu/veterans-v3//Template/Element/shop_people.ctp:127
-#: /home/ettu/veterans-v3//Template/Element/voucher.ctp:39
-#: /home/ettu/veterans-v3//Template/Shops/address.ctp:109
-msgid "Given name"
-msgstr "Nombre de pila"
-
-#: /home/ettu/veterans-v3//Template/Element/shop_people.ctp:63
-msgid "Born"
-msgstr "Nacido"
-
-#: /home/ettu/veterans-v3//Template/Element/shop_people.ctp:107
-#: /home/ettu/veterans-v3//Template/Element/shop_people.ctp:154
-#: /home/ettu/veterans-v3//Template/Shops/buy.ctp:121
-#: /home/ettu/veterans-v3//Template/Shops/buy.ctp:321
-msgid "Remove"
-msgstr "Retirar"
-
-#: /home/ettu/veterans-v3//Template/Element/shop_people.ctp:122
-msgid "Accompanying People"
-msgstr "Acompañantes"
-
-#: /home/ettu/veterans-v3//Template/Element/voucher.ctp:24
-msgid "Voucher"
-msgstr "Cupón"
-
-#: /home/ettu/veterans-v3//Template/Element/voucher.ctp:25
-msgid "Please present this voucher at the accreditation."
-msgstr "Por favor presenta este cupón en la acreditación."
-
-#: /home/ettu/veterans-v3//Template/Element/voucher.ctp:29
-msgid "People"
-msgstr "Gente"
-
-#: /home/ettu/veterans-v3//Template/Element/voucher.ctp:84
-msgid "Additional Items"
-msgstr "Artículos adicionales"
-
-#: /home/ettu/veterans-v3//Template/Email/html/cancel.ctp:113
-#: /home/ettu/veterans-v3//Template/Email/html/voucher.ctp:3
-#: /home/ettu/veterans-v3//Template/Email/text/cancel.ctp:6
-#: /home/ettu/veterans-v3//Template/Email/text/voucher.ctp:7
-msgid "Dear Mr. {0} {1},"
-msgstr "Estimado señor {0} {1},"
-
-#: /home/ettu/veterans-v3//Template/Email/html/cancel.ctp:116
-#: /home/ettu/veterans-v3//Template/Email/html/voucher.ctp:5
-#: /home/ettu/veterans-v3//Template/Email/text/cancel.ctp:9
-#: /home/ettu/veterans-v3//Template/Email/text/voucher.ctp:9
-msgid "Dear Mrs. {0} {1},"
-msgstr "Estimada señora {0} {1},"
-
-#: /home/ettu/veterans-v3//Template/Email/html/cancel.ctp:120
-#: /home/ettu/veterans-v3//Template/Email/text/cancel.ctp:13
-msgid "We have cancelled your registration {0} on your request."
-msgstr "Hemos cancelado tu inscripción {0} en tu petición."
-
-#: /home/ettu/veterans-v3//Template/Email/html/cancel.ctp:122
-#: /home/ettu/veterans-v3//Template/Email/text/cancel.ctp:15
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/bpayment.php:94
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/card_pointe.php:61
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/dibs.php:77
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/paypal_express.php:68
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/positivity.php:60
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/redsys.php:73
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/sogecommerce.php:60
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/stripe.php:64
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/pay.php:15
 msgid ""
-"We have cancelled your registration {0} because we have not received your "
-"payment in due time."
-msgstr ""
-"Hemos cancelado tu inscripción {0} porque no hemos recibido tu pago a tu "
-"debido tiempo."
+"After the payment is completed you will be redirected to the registration."
+msgstr "Después de que se complete el pago se le redirige a la inscripción."
 
-#: /home/ettu/veterans-v3//Template/Email/html/cancel.ctp:124
-#: /home/ettu/veterans-v3//Template/Email/text/cancel.ctp:17
-msgid "If you think this is an error please contact {0} immediately!"
-msgstr "Si crees que esto es un error, por favor póngate en contacto {0}"
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/dummy.php:94
+msgid "Return Error"
+msgstr "Volver con error"
 
-#: /home/ettu/veterans-v3//Template/Email/html/cancel.ctp:128
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:216
-msgid "Details of your registration:"
-msgstr "Los detalles de su inscripción:"
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/Payment/ipayment.php:125
+msgid "Card holder"
+msgstr "Titular de la tarjeta"
 
-#: /home/ettu/veterans-v3//Template/Email/html/cancel.ctp:133
-msgid "You had entered the following players and accompanying persons:"
-msgstr "Haz introducido los siguientes jugadores y acompañantes:"
-
-#: /home/ettu/veterans-v3//Template/Email/html/cancel.ctp:137
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:231
-#: /home/ettu/veterans-v3//Template/Email/html/voucher.ctp:16
-#: /home/ettu/veterans-v3//Template/Email/text/order.ctp:108
-#: /home/ettu/veterans-v3//Template/Email/text/voucher.ctp:20
-msgid "Best regards"
-msgstr "Atentamente"
-
-#: /home/ettu/veterans-v3//Template/Email/html/cancel.ctp:166
-#: /home/ettu/veterans-v3//Template/Shops/success.ctp:82
-msgid "BIC"
-msgstr "BIC"
-
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:128
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:180
-#: /home/ettu/veterans-v3//Template/Email/text/order.ctp:14
-#: /home/ettu/veterans-v3//Template/Email/text/order.ctp:66
-msgid "Thank you for your registration."
-msgstr "Gracias por su inscripción."
-
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:130
-#: /home/ettu/veterans-v3//Template/Email/text/order.ctp:16
-msgid "Please note that your registration is on a waiting list."
-msgstr "Tenga en cuenta que tu inscripción está en una lista de espera."
-
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:132
-#: /home/ettu/veterans-v3//Template/Email/text/order.ctp:18
-#: /home/ettu/veterans-v3//Template/Shops/success.ctp:9
-msgid "The waiting list is processed on a first come first served basis."
-msgstr "La lista de espera se procesa en orden de llegada primero servido."
-
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:134
-#: /home/ettu/veterans-v3//Template/Email/text/order.ctp:20
-#: /home/ettu/veterans-v3//Template/Shops/success.ctp:11
-msgid "We will notify you by email when it is possible for you to register."
-msgstr "Le notificaremos por email cuando es posible que se registre."
-
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:136
-#: /home/ettu/veterans-v3//Template/Email/text/order.ctp:22
-#: /home/ettu/veterans-v3//Template/Shops/success.ctp:13
-msgid ""
-"Please do not pay the registration fee unless you have been asked to do so."
-msgstr ""
-"Por favor, no pagar la cuota de inscripción a menos que se le ha pedido que "
-"lo haga."
-
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:138
-#: /home/ettu/veterans-v3//Template/Email/text/order.ctp:24
-msgid ""
-"If in the meantime you decide to cancel your registration please inform us "
-"so that we can remove you from the waiting list."
-msgstr ""
-"Si mientras tanto tu decides cancelar tu inscripción por favor infórmenos "
-"para que podamos eliminar de la lista de espera."
-
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:140
-#: /home/ettu/veterans-v3//Template/Email/text/order.ctp:26
-msgid "We want to inform you that your registration {0} can now be processed."
-msgstr "Queremos informarle de que su inscripción {0} ahora se puede procesar."
-
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:142
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:187
-#: /home/ettu/veterans-v3//Template/Email/text/order.ctp:28
-#: /home/ettu/veterans-v3//Template/Email/text/order.ctp:73
-msgid "Please pay the amount due as soon as possible, but not later than {0}."
-msgstr "Por favor, transferir el saldo de nuestra cuenta bancaria a más {0}."
-
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:144
-#: /home/ettu/veterans-v3//Template/Email/text/order.ctp:30
-msgid ""
-"If we haven't received your payment by then we will cancel your registration."
-msgstr ""
-"Si no hemos recibido tu pago por el entonces tendremos que anular su "
-"inscripción."
-
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:146
-#: /home/ettu/veterans-v3//Template/Email/text/order.ctp:32
-msgid ""
-"Please notify us if you want us to cancel your registration so that we can "
-"inform the next on the waiting list immediately."
-msgstr ""
-"Por favor avísenos si desea cancelar tu inscripción para que podamos "
-"informar a la siguiente en la lista de espera inmediatamente."
-
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:150
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:170
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:195
-#: /home/ettu/veterans-v3//Template/Email/text/order.ctp:36
-#: /home/ettu/veterans-v3//Template/Email/text/order.ctp:56
-#: /home/ettu/veterans-v3//Template/Email/text/order.ctp:81
-msgid ""
-"Don't forget to put your invoice number on the bank transfer so we can find "
-"your order."
-msgstr ""
-"No se olvide de poner su número de factura en la remesa para que podamos "
-"encontrar su orden."
-
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:155
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:175
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:200
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:208
-#: /home/ettu/veterans-v3//Template/Email/text/order.ctp:41
-#: /home/ettu/veterans-v3//Template/Email/text/order.ctp:61
-#: /home/ettu/veterans-v3//Template/Email/text/order.ctp:86
-#: /home/ettu/veterans-v3//Template/Email/text/order.ctp:94
-msgid "To pay with credit card use this link:"
-msgstr "Para pagar con tarjeta de crédito utiliza este enlace:"
-
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:160
-#: /home/ettu/veterans-v3//Template/Email/text/order.ctp:46
-msgid ""
-"This is a friendly reminder that you haven't paid your registration {0} yet."
-msgstr ""
-"Este es un recordatorio de que usted no ha pagado su inscripción {0} todavía."
-
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:162
-#: /home/ettu/veterans-v3//Template/Email/text/order.ctp:48
-msgid "If you believe this is an error please contact {0}."
-msgstr "Si usted cree que esto es un error, por favor contactar {0}"
-
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:164
-#: /home/ettu/veterans-v3//Template/Email/text/order.ctp:50
-msgid "If you have not paid yet please do so until {0}."
-msgstr "Si usted no ha pagado todavía por favor hacerlo {0}"
-
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:166
-#: /home/ettu/veterans-v3//Template/Email/text/order.ctp:52
-msgid ""
-"If we haven't received your payment by then we reserve the right to cancel "
-"your registrations without further notice."
-msgstr ""
-"Si no hemos recibido su pago por el entonces nos reservamos el derecho de "
-"anular sus inscripciones sin previo aviso."
-
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:182
-#: /home/ettu/veterans-v3//Template/Email/text/order.ctp:68
-msgid "Your invoice number is {0}."
-msgstr "Su número de factura es {0}."
-
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:189
-#: /home/ettu/veterans-v3//Template/Email/text/order.ctp:75
-msgid ""
-"Note that your registration is not completed until we have received the full "
-"amount still due."
-msgstr ""
-"Tenga en cuenta que su inscripción no se completa hasta que hayamos recibido "
-"el importe total todavía debe."
-
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:191
-#: /home/ettu/veterans-v3//Template/Email/text/order.ctp:77
-msgid ""
-"We reserve the right to cancel your order after that date if we haven't "
-"received the full amount still due until then."
-msgstr ""
-"Nos reservamos el derecho de anular su orden después de esa fecha si no "
-"hemos recibido el importe total todavía debe hasta entonces."
-
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:221
-msgid "You have entered the following players and accompanying persons:"
-msgstr "Has inscrito los jugadores y acompañantes siguientes:"
-
-#: /home/ettu/veterans-v3//Template/Email/html/order.ctp:227
-#: /home/ettu/veterans-v3//Template/Email/text/order.ctp:104
-#: /home/ettu/veterans-v3//Template/Email/text/receipt.ctp:2
-msgid "Please find your receipt attached."
-msgstr "Encuentre su recibo adjunto."
-
-#: /home/ettu/veterans-v3//Template/Email/html/voucher.ctp:7
-#: /home/ettu/veterans-v3//Template/Email/text/voucher.ctp:11
-msgid "Dear Sir or Madam,"
-msgstr "Estimado señor o señora,"
-
-#: /home/ettu/veterans-v3//Template/Email/html/voucher.ctp:9
-#: /home/ettu/veterans-v3//Template/Email/text/voucher.ctp:13
-msgid "Thank you for your registration to the {0}."
-msgstr "Gracias por su inscripción a la {0}."
-
-#: /home/ettu/veterans-v3//Template/Email/html/voucher.ctp:11
-#: /home/ettu/veterans-v3//Template/Email/text/voucher.ctp:15
-msgid "A voucher is attached to this mail."
-msgstr "Un cupón se adjunta a este email."
-
-#: /home/ettu/veterans-v3//Template/Email/html/voucher.ctp:13
-#: /home/ettu/veterans-v3//Template/Email/text/voucher.ctp:17
-msgid "Please print this voucher and present it at the accreditation desk."
-msgstr "Por favor imprimir este cupón y presentarlo en la acreditación."
-
-#: /home/ettu/veterans-v3//Template/Shops/add_person.ctp:120
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/add_person.php:120
 msgid "Add Player or Accompanying Person"
 msgstr "Añadir jugador o acompañante"
 
-#: /home/ettu/veterans-v3//Template/Shops/add_person.ctp:124
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/add_person.php:124
 msgid "Enter here the data for players or accompanying persons."
 msgstr "Introduzca aquí los datos para los jugadores o acompañantes."
 
-#: /home/ettu/veterans-v3//Template/Shops/add_person.ctp:128
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/add_person.php:128
 msgid "For players the birthday is required."
 msgstr "Para los jugadores se requiere el cumpleaños."
 
-#: /home/ettu/veterans-v3//Template/Shops/add_person.ctp:132
-msgid "For players you may add email and a phone number of a cell phone."
-msgstr ""
-"Para los jugadores que usted puede agregar el email y un número de teléfono "
-"de un teléfono celular."
-
-#: /home/ettu/veterans-v3//Template/Shops/add_person.ctp:136
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/add_person.php:132
 msgid ""
-"If you enter an email address, this player will also receive the "
-"notifications when he is requested as a double partner or a double partner "
-"is chosen for him."
+"For players you have to add email and a phone number of a cell phone to use "
+"exclusively for health issues (compulsory COVID tracking required by current "
+"regulations) or to convey all useful information concerning your "
+"participation at the event."
 msgstr ""
-"Si llenes una dirección de email, este jugador también recibirá las "
-"notificaciones cuando se solicita un compañero de dobles o un compañero es "
-"elegido por él."
+"Para los jugadores, debe agregar un correo electrónico y un número de "
+"teléfono de un teléfono celular para usar exclusivamente para problemas de "
+"salud (seguimiento obligatorio de COVID requerido por la normativa vigente) "
+"o transmitir toda la información útil sobre su participación en el evento."
 
-#: /home/ettu/veterans-v3//Template/Shops/add_person.ctp:140
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/add_person.php:138
 msgid ""
-"If you enter a phone number the player will receive free SMS notifications "
-"about schedules and results of his matches, if the organizer chooses to do "
-"so."
+"On the email address, this player will receive the notifications when he is "
+"requested as a double partner or a double partner is chosen for him."
 msgstr ""
-"Si llene un número de teléfono que el jugador recibirá notificaciones por "
-"SMS gratuitos sobre horarios y resultados de sus partidos, si el organizador "
-"decide hacerlo."
+"En la dirección de correo electrónico, este jugador recibirá las "
+"notificaciones cuando se le solicite como socio doble o se elija un socio "
+"doble por él."
 
-#: /home/ettu/veterans-v3//Template/Shops/add_person.ctp:144
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/add_person.php:144
+msgid ""
+"On the phone number, this player will receive free SMS notifications about "
+"schedules and results of their matches, if the organizer chooses to do so "
+"and/or useful information concerning his participation at the event."
+msgstr ""
+"En el número de teléfono, este jugador recibirá notificaciones SMS gratuitas "
+"sobre los horarios y resultados de sus partidos, si así lo decide el "
+"organizador y / o información útil sobre su participación en el evento."
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/add_person.php:150
 msgid ""
 "By entering email address or phone number you must agree to the terms and "
 "conditions."
@@ -1399,76 +1135,83 @@ msgstr ""
 "Al llenar la dirección de email o el número de teléfono al que debe aceptar "
 "los términos y condiciones."
 
-#: /home/ettu/veterans-v3//Template/Shops/add_person.ctp:148
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/add_person.php:154
 msgid "You can add or change email address and phone number later, too."
 msgstr ""
 "Usted puede agregar o cambiar la dirección de email y número de teléfono "
 "después, también."
 
-#: /home/ettu/veterans-v3//Template/Shops/add_person.ctp:230
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/add_person.php:238
 msgid "Mobile"
 msgstr "Móvil"
 
-#: /home/ettu/veterans-v3//Template/Shops/add_person.ctp:241
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/add_person.php:249
 msgid "I agree to the %s regarding email address and phone number"
 msgstr ""
 "Acepto los %s con respecto a la dirección de email y número de teléfono"
 
-#: /home/ettu/veterans-v3//Template/Shops/add_person.ctp:243
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/add_person.php:251
 msgid "privacy policy"
 msgstr "política de privacidad"
 
-#: /home/ettu/veterans-v3//Template/Shops/address.ctp:77
-#: /home/ettu/veterans-v3//Template/Shops/review.ctp:28
-#: /home/ettu/veterans-v3//Template/Shops/success.ctp:55
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/address.php:82
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/review.php:28
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/success.php:55
 msgid "Billing Address"
 msgstr "Dirección de envio"
 
-#: /home/ettu/veterans-v3//Template/Shops/address.ctp:81
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/address.php:86
 msgid "Enter here your billing address."
 msgstr "Llene aquí su dirección fiscal."
 
-#: /home/ettu/veterans-v3//Template/Shops/address.ctp:85
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/address.php:90
 msgid "All fields are required."
 msgstr "Todos las casillas son obligatorias."
 
-#: /home/ettu/veterans-v3//Template/Shops/address.ctp:89
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/address.php:94
 msgid "Please make sure you enter a valid email address."
 msgstr "Por favor, asegúrese de llenar una dirección de email válida."
 
-#: /home/ettu/veterans-v3//Template/Shops/address.ctp:105
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/address.php:107
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_address.php:15
+msgid "Title"
+msgstr "Título"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/address.php:110
 msgid "Mr"
 msgstr "Señor"
 
-#: /home/ettu/veterans-v3//Template/Shops/address.ctp:105
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/address.php:110
 msgid "Mrs"
 msgstr "Señora"
 
-#: /home/ettu/veterans-v3//Template/Shops/address.ctp:106
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/address.php:111
 msgid "Please select"
 msgstr "Por favor seleccione"
 
-#: /home/ettu/veterans-v3//Template/Shops/address.ctp:127
-#: /home/ettu/veterans-v3//Template/Shops/Payment/authorizenet.ctp:160
-#: /home/ettu/veterans-v3//Template/Shops/Payment/ipayment.ctp:136
-msgid "Postal code"
-msgstr "Código postal"
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/address.php:114
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_people.php:60
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_people.php:127
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/voucher.php:39
+msgid "Given name"
+msgstr "Nombre de pila"
 
-#: /home/ettu/veterans-v3//Template/Shops/address.ctp:140
-#: /home/ettu/veterans-v3//Template/Shops/Payment/authorizenet.ctp:170
-#: /home/ettu/veterans-v3//Template/Shops/Payment/ipayment.ctp:146
-msgid "Select Country"
-msgstr "Seleccione país"
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/address.php:120
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_people.php:59
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_people.php:126
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/voucher.php:38
+msgid "Family name"
+msgstr "Apellido"
 
-#: /home/ettu/veterans-v3//Template/Shops/banktransfer.ctp:4
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/banktransfer.php:4
 msgid "Payment by Bank Transfer"
 msgstr "Pago por transferencia bancaria"
 
-#: /home/ettu/veterans-v3//Template/Shops/banktransfer.ctp:7
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/banktransfer.php:7
 msgid "You will receive instructions in your confirmation email."
 msgstr "Usted recibirá instrucciones en el email de confirmación."
 
-#: /home/ettu/veterans-v3//Template/Shops/banktransfer.ctp:9
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/banktransfer.php:9
 msgid ""
 "Please note that your registration is not valid until we have received the "
 "full amount of due payment."
@@ -1476,199 +1219,123 @@ msgstr ""
 "Tenga en cuenta que su inscripción no es válida hasta que hayamos recibido "
 "el importe total de vencimiento del pago."
 
-#: /home/ettu/veterans-v3//Template/Shops/banktransfer.ctp:12
-#: /home/ettu/veterans-v3//Template/Shops/Payment/authorizenet.ctp:183
-#: /home/ettu/veterans-v3//Template/Shops/Payment/bpayment.ctp:128
-#: /home/ettu/veterans-v3//Template/Shops/Payment/card_pointe.ctp:97
-#: /home/ettu/veterans-v3//Template/Shops/Payment/dibs.ctp:116
-#: /home/ettu/veterans-v3//Template/Shops/Payment/dummy.ctp:108
-#: /home/ettu/veterans-v3//Template/Shops/Payment/ipayment.ctp:159
-#: /home/ettu/veterans-v3//Template/Shops/Payment/paypal_express.ctp:93
-#: /home/ettu/veterans-v3//Template/Shops/Payment/redsys.ctp:98
-#: /home/ettu/veterans-v3//Template/Shops/Payment/sogecommerce.ctp:78
-#: /home/ettu/veterans-v3//Template/Shops/Payment/stripe.ctp:82
-msgid "Confirm Registration"
-msgstr "Confirmar inscripción"
-
-#: /home/ettu/veterans-v3//Template/Shops/buy.ctp:29
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/buy.php:29
 msgid "You must select a variant"
 msgstr "Debe seleccionar una variante"
 
-#: /home/ettu/veterans-v3//Template/Shops/buy.ctp:168
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/buy.php:121
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/buy.php:321
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_people.php:107
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_people.php:154
+msgid "Remove"
+msgstr "Retirar"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/buy.php:168
 msgid "Buy Additional Articles"
 msgstr "Comprar artículos adicionales"
 
-#: /home/ettu/veterans-v3//Template/Shops/buy.ctp:173
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/buy.php:173
 msgid "Here you may buy additional items, e.g. tickets for the gala dinner."
 msgstr ""
 "Aquí usted puede comprar artículos adicionales, por ejemplo, entradas para "
 "la cena de gala."
 
-#: /home/ettu/veterans-v3//Template/Shops/buy.ctp:178
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/buy.php:178
 msgid "Available Articles"
 msgstr "Artículos disponibles"
 
-#: /home/ettu/veterans-v3//Template/Shops/buy.ctp:203
-#: /home/ettu/veterans-v3//Template/Shops/buy.ctp:264
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/buy.php:203
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/buy.php:264
 msgid "Add"
 msgstr "Añadir"
 
-#: /home/ettu/veterans-v3//Template/Shops/buy.ctp:216
-#: /home/ettu/veterans-v3//Template/Shops/buy.ctp:282
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/buy.php:216
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/buy.php:282
 msgid "Article"
 msgstr "Artículo"
 
-#: /home/ettu/veterans-v3//Template/Shops/buy.ctp:217
-#: /home/ettu/veterans-v3//Template/Shops/buy.ctp:283
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/buy.php:217
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/buy.php:283
 msgid "Variant"
 msgstr "Variante"
 
-#: /home/ettu/veterans-v3//Template/Shops/buy.ctp:219
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/buy.php:218
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_order.php:22
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/voucher.php:90
+msgid "Description"
+msgstr "Descripción"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/buy.php:219
 msgid "Photo"
 msgstr "Foto"
 
-#: /home/ettu/veterans-v3//Template/Shops/buy.ctp:220
-#: /home/ettu/veterans-v3//Template/Shops/buy.ctp:284
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/buy.php:220
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/buy.php:284
 msgid "Price"
 msgstr "Precio"
 
-#: /home/ettu/veterans-v3//Template/Shops/buy.ctp:242
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/buy.php:242
 msgid "Select"
 msgstr "Seleccione"
 
-#: /home/ettu/veterans-v3//Template/Shops/buy.ctp:262
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/buy.php:262
 msgid "Sold out"
 msgstr "Agotado"
 
-#: /home/ettu/veterans-v3//Template/Shops/buy.ctp:278
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/buy.php:278
 msgid "Shopping Cart"
 msgstr "Carrito de compras"
 
-#: /home/ettu/veterans-v3//Template/Shops/buy.ctp:285
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/buy.php:285
 msgid "Quantity"
 msgstr "Cantidad"
 
-#: /home/ettu/veterans-v3//Template/Shops/buy.ctp:345
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/buy.php:345
 msgid "Please visit our shop"
 msgstr "Por favor visite nuestra tienda"
 
-#: /home/ettu/veterans-v3//Template/Shops/failure.ctp:2
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/failure.php:2
 msgid "An error has occured"
 msgstr "Ha habido un error"
 
-#: /home/ettu/veterans-v3//Template/Shops/pay.ctp:4
-#: /home/ettu/veterans-v3//Template/Shops/Payment/authorizenet.ctp:54
-#: /home/ettu/veterans-v3//Template/Shops/Payment/bpayment.ctp:81
-#: /home/ettu/veterans-v3//Template/Shops/Payment/card_pointe.ctp:48
-#: /home/ettu/veterans-v3//Template/Shops/Payment/dibs.ctp:64
-#: /home/ettu/veterans-v3//Template/Shops/Payment/dummy.ctp:71
-#: /home/ettu/veterans-v3//Template/Shops/Payment/ipayment.ctp:49
-#: /home/ettu/veterans-v3//Template/Shops/Payment/paypal_express.ctp:55
-#: /home/ettu/veterans-v3//Template/Shops/Payment/redsys.ctp:60
-#: /home/ettu/veterans-v3//Template/Shops/Payment/sogecommerce.ctp:48
-#: /home/ettu/veterans-v3//Template/Shops/Payment/stripe.ctp:52
-msgid "Please wait while your payment is being processed."
-msgstr "Por favor espere mientras su paga se está procesando."
-
-#: /home/ettu/veterans-v3//Template/Shops/pay.ctp:6
-#: /home/ettu/veterans-v3//Template/Shops/Payment/authorizenet.ctp:56
-#: /home/ettu/veterans-v3//Template/Shops/Payment/bpayment.ctp:83
-#: /home/ettu/veterans-v3//Template/Shops/Payment/card_pointe.ctp:50
-#: /home/ettu/veterans-v3//Template/Shops/Payment/dibs.ctp:66
-#: /home/ettu/veterans-v3//Template/Shops/Payment/dummy.ctp:73
-#: /home/ettu/veterans-v3//Template/Shops/Payment/ipayment.ctp:51
-#: /home/ettu/veterans-v3//Template/Shops/Payment/paypal_express.ctp:57
-#: /home/ettu/veterans-v3//Template/Shops/Payment/redsys.ctp:62
-#: /home/ettu/veterans-v3//Template/Shops/Payment/sogecommerce.ctp:50
-#: /home/ettu/veterans-v3//Template/Shops/Payment/stripe.ctp:54
-msgid "This may take several minutes."
-msgstr "Esto podría tomar varios minutos."
-
-#: /home/ettu/veterans-v3//Template/Shops/pay.ctp:11
-#: /home/ettu/veterans-v3//Template/Shops/Payment/authorizenet.ctp:63
-#: /home/ettu/veterans-v3//Template/Shops/Payment/bpayment.ctp:90
-#: /home/ettu/veterans-v3//Template/Shops/Payment/card_pointe.ctp:57
-#: /home/ettu/veterans-v3//Template/Shops/Payment/dibs.ctp:73
-#: /home/ettu/veterans-v3//Template/Shops/Payment/dummy.ctp:82
-#: /home/ettu/veterans-v3//Template/Shops/Payment/ipayment.ctp:58
-#: /home/ettu/veterans-v3//Template/Shops/Payment/paypal_express.ctp:64
-#: /home/ettu/veterans-v3//Template/Shops/Payment/redsys.ctp:69
-#: /home/ettu/veterans-v3//Template/Shops/Payment/sogecommerce.ctp:56
-#: /home/ettu/veterans-v3//Template/Shops/Payment/stripe.ctp:60
-msgid "Billing Information"
-msgstr "Datos de facturación"
-
-#: /home/ettu/veterans-v3//Template/Shops/pay.ctp:14
-#: /home/ettu/veterans-v3//Template/Shops/Payment/authorizenet.ctp:67
-#: /home/ettu/veterans-v3//Template/Shops/Payment/bpayment.ctp:93
-#: /home/ettu/veterans-v3//Template/Shops/Payment/card_pointe.ctp:60
-#: /home/ettu/veterans-v3//Template/Shops/Payment/dibs.ctp:76
-#: /home/ettu/veterans-v3//Template/Shops/Payment/ipayment.ctp:62
-#: /home/ettu/veterans-v3//Template/Shops/Payment/paypal_express.ctp:67
-#: /home/ettu/veterans-v3//Template/Shops/Payment/redsys.ctp:72
-#: /home/ettu/veterans-v3//Template/Shops/Payment/sogecommerce.ctp:59
-#: /home/ettu/veterans-v3//Template/Shops/Payment/stripe.ctp:63
-msgid "Payment will be processed in a secure way by {0}."
-msgstr "El pago será procesado de manera segura {0}."
-
-#: /home/ettu/veterans-v3//Template/Shops/pay.ctp:15
-#: /home/ettu/veterans-v3//Template/Shops/Payment/bpayment.ctp:94
-#: /home/ettu/veterans-v3//Template/Shops/Payment/card_pointe.ctp:61
-#: /home/ettu/veterans-v3//Template/Shops/Payment/dibs.ctp:77
-#: /home/ettu/veterans-v3//Template/Shops/Payment/paypal_express.ctp:68
-#: /home/ettu/veterans-v3//Template/Shops/Payment/redsys.ctp:73
-#: /home/ettu/veterans-v3//Template/Shops/Payment/sogecommerce.ctp:60
-#: /home/ettu/veterans-v3//Template/Shops/Payment/stripe.ctp:64
-msgid ""
-"After the payment is completed you will be redirected to the registration."
-msgstr "Después de que se complete el pago se le redirige a la inscripción."
-
-#: /home/ettu/veterans-v3//Template/Shops/payment_selection.ctp:4
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/payment_selection.php:4
 msgid "Select Payment Method"
 msgstr "Seleccione el método de pago"
 
-#: /home/ettu/veterans-v3//Template/Shops/payment_selection.ctp:9
-#: /home/ettu/veterans-v3//Template/Shops/payment_selection.ctp:14
-#: /home/ettu/veterans-v3//Template/Shops/payment_selection.ctp:16
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/payment_selection.php:9
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/payment_selection.php:14
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/payment_selection.php:16
 msgid "Bank Transfer"
 msgstr "Transferencia bancaria"
 
-#: /home/ettu/veterans-v3//Template/Shops/payment_selection.ctp:10
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/payment_selection.php:10
 msgid "You may pay by bank transfer"
 msgstr "Usted puede pagar por transferencia bancaria"
 
-#: /home/ettu/veterans-v3//Template/Shops/payment_selection.ctp:21
-#: /home/ettu/veterans-v3//Template/Shops/payment_selection.ctp:26
-#: /home/ettu/veterans-v3//Template/Shops/payment_selection.ctp:28
-#: /home/ettu/veterans-v3//Template/Shops/Payment/authorizenet.ctp:93
-#: /home/ettu/veterans-v3//Template/Shops/Payment/ipayment.ctp:79
-msgid "Credit Card"
-msgstr "Tarjeta de crédito"
-
-#: /home/ettu/veterans-v3//Template/Shops/payment_selection.ctp:22
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/payment_selection.php:22
 msgid "We accept MasterCard and Visa"
 msgstr "Aceptamos MasterCard y Visa"
 
-#: /home/ettu/veterans-v3//Template/Shops/payment_selection.ctp:36
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/payment_selection.php:36
 msgid "Payment Method"
 msgstr "Metodo de pago"
 
-#: /home/ettu/veterans-v3//Template/Shops/people.ctp:20
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/people.php:20
 msgid "Register Players and Accompanying Persons"
 msgstr "Registra los jugadores y acompañantes"
 
-#: /home/ettu/veterans-v3//Template/Shops/people.ctp:24
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/people.php:24
 msgid "Register here your players and accompanying persons."
 msgstr "Registra aquí su jugadores y acompañantes."
 
-#: /home/ettu/veterans-v3//Template/Shops/people.ctp:28
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/people.php:28
 msgid ""
 "Initially, players will be put into the competitions of their age category."
 msgstr ""
 "Inicialmente los jugadores que primero se ponen en la categoría de edad "
 "apropiada."
 
-#: /home/ettu/veterans-v3//Template/Shops/people.ctp:32
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/people.php:32
 msgid ""
 "If your player chooses a double partner of a different age category later, "
 "both of them will be put into the correct age category automatically."
@@ -1677,43 +1344,64 @@ msgstr ""
 "diferente después, ambos serán puestos en la categoría de edad correcta de "
 "forma automática."
 
-#: /home/ettu/veterans-v3//Template/Shops/people.ctp:39
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/people.php:39
 msgid "Add Person"
 msgstr "Agregar persona"
 
-#: /home/ettu/veterans-v3//Template/Shops/people.ctp:51
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/people.php:51
 msgid "You have not registered any player. Are you sure you want to continue?"
 msgstr "No ha inscribido algun jugador. Deseas continuar todavía?"
 
-#: /home/ettu/veterans-v3//Template/Shops/review.ctp:8
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/review.php:8
 msgid "Review Registration"
 msgstr "Revisión de Inscripción"
 
-#: /home/ettu/veterans-v3//Template/Shops/review.ctp:12
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/review.php:12
 msgid "Please review your registration."
 msgstr "Por favor revisa tu inscripción."
 
-#: /home/ettu/veterans-v3//Template/Shops/review.ctp:16
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/review.php:16
 msgid "You have to agree to the terms and conditions before you can proceed."
 msgstr "Usted tiene que aceptar los términos y condiciones antes de continuar."
 
-#: /home/ettu/veterans-v3//Template/Shops/review.ctp:36
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/review.php:36
 msgid "I agree to the {0}"
 msgstr "Yo accepto los {0}"
 
-#: /home/ettu/veterans-v3//Template/Shops/review.ctp:36
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/review.php:36
 msgid "terms and conditions"
 msgstr "términos y condiciones"
 
-#: /home/ettu/veterans-v3//Template/Shops/success.ctp:2
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/success.php:2
 msgid "Your registration has been completed"
 msgstr "Su inscripción se ha completado"
 
-#: /home/ettu/veterans-v3//Template/Shops/success.ctp:7
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/success.php:7
 msgid "Your registration has been placed on the waiting list."
 msgstr "Tu inscripción se ha colocado en la lista de espera."
 
-#: /home/ettu/veterans-v3//Template/Shops/success.ctp:15
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/success.php:9
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:142
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/order.php:28
+msgid "The waiting list is processed on a first come first served basis."
+msgstr "La lista de espera se procesa en orden de llegada primero servido."
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/success.php:11
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:144
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/order.php:30
+msgid "We will notify you by email when it is possible for you to register."
+msgstr "Le notificaremos por email cuando es posible que se registre."
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/success.php:13
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:146
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/order.php:32
+msgid ""
+"Please do not pay the registration fee unless you have been asked to do so."
+msgstr ""
+"Por favor, no pagar la cuota de inscripción a menos que se le ha pedido que "
+"lo haga."
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/success.php:15
 msgid ""
 "An email with your invoice and instructions how to proceed has been sent to "
 "you."
@@ -1721,11 +1409,11 @@ msgstr ""
 "Un email con su factura y las instrucciones de cómo proceder se ha enviado a "
 "usted."
 
-#: /home/ettu/veterans-v3//Template/Shops/success.ctp:17
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/success.php:17
 msgid "An email with your invoice has been sent to you."
 msgstr "Un email con la factura ha sido enviada a usted."
 
-#: /home/ettu/veterans-v3//Template/Shops/success.ctp:19
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/success.php:19
 msgid ""
 "Once we have received your payment instructions on how to proceed will be "
 "sent to you."
@@ -1733,31 +1421,88 @@ msgstr ""
 "Una vez que hemos recibido sus instrucciones de pago en la forma de proceder "
 "será enviado a usted."
 
-#: /home/ettu/veterans-v3//Template/Shops/success.ctp:33
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/success.php:33
 msgid "Download invoice"
 msgstr "Descargar factura"
 
-#: /home/ettu/veterans-v3//Template/Shops/success.ctp:40
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/success.php:40
 msgid "Invoice number"
 msgstr "Número de factura"
 
-#: /home/ettu/veterans-v3//Template/Shops/success.ctp:44
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/success.php:44
 msgid "Registration"
 msgstr "Inscripción"
 
-#: /home/ettu/veterans-v3//Template/Shops/success.ctp:63
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/success.php:63
 msgid "Banking Account"
 msgstr "Cuenta bancaria"
 
-#: /home/ettu/veterans-v3//Template/Shops/success.ctp:86
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/success.php:66
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/receipt.php:151
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/cancel.php:198
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:322
+msgid "VAT Reg Id"
+msgstr "IVA"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/success.php:70
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/receipt.php:83
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/cancel.php:148
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:254
+msgid "Bank"
+msgstr "Banco"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/success.php:74
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/receipt.php:127
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/cancel.php:174
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:298
+msgid "Account Holder"
+msgstr "Titular de la cuenta"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/success.php:78
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/receipt.php:95
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/cancel.php:160
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:272
+msgid "IBAN"
+msgstr "IBAN"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/success.php:82
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/cancel.php:166
+msgid "BIC"
+msgstr "BIC"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/success.php:86
 msgid "SWIFT"
 msgstr "SWIFT"
 
-#: /home/ettu/veterans-v3//Template/Shops/waiting_list.ctp:7
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/success.php:90
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/receipt.php:113
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:284
+msgid "ABA"
+msgstr "ABA"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/success.php:94
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/receipt.php:119
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:290
+msgid "Correspondent Bank"
+msgstr "Banco correspondiente"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/success.php:102
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/receipt.php:145
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/cancel.php:192
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:316
+msgid "Fax"
+msgstr "Fax"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/waiting_list.php:4
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_header.php:12
+msgid "Waiting List"
+msgstr "Lista de espera"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/waiting_list.php:7
 msgid "If you confirm your order it will be put on a waiting list."
 msgstr "Si confirmas tu pedido serás puesto en lista de espera."
 
-#: /home/ettu/veterans-v3//Template/Shops/waiting_list.ctp:8
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/waiting_list.php:8
 msgid ""
 "This waiting list will be processed first come first served as new "
 "registrations may become available."
@@ -1765,52 +1510,369 @@ msgstr ""
 "Esta lista de espera será procesado por orden de llegada como nuevos "
 "registros pueden estar disponibles."
 
-#: /home/ettu/veterans-v3//Template/Shops/waiting_list.ctp:11
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/waiting_list.php:11
 msgid "Confirm Order"
 msgstr "Confirmar inscripción"
 
-#: /home/ettu/veterans-v3//Template/Shops/Payment/authorizenet.ctp:66
-#: /home/ettu/veterans-v3//Template/Shops/Payment/ipayment.ctp:61
-msgid "Select your credit card and enter name and address of the card holder."
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/receipt.php:28
+msgid "Proforma Invoice"
+msgstr "Factura Proforma"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/receipt.php:33
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/voucher.php:11
+msgid "Invoice date"
+msgstr "Fecha de la factura"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/receipt.php:37
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/voucher.php:15
+msgid "Invoice no"
+msgstr "No de factura"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/receipt.php:62
+msgid "Order"
+msgstr "Orden"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/receipt.php:89
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/cancel.php:154
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:260
+msgid "Bank Address"
+msgstr "Dirección bancaria"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/receipt.php:101
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:266
+msgid "Account No"
+msgstr "Nº de cuenta"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/receipt.php:107
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:278
+msgid "BIC (SWIFT)"
+msgstr "BIC (SWIFT)"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_footer.php:13
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_footer.php:30
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_footer.php:32
+msgid "Next"
+msgstr "Siguiente"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_header.php:5
+msgid "Buy"
+msgstr "Comprar"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_header.php:6
+msgid "Address"
+msgstr "Dirección"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_header.php:7
+msgid "Review"
+msgstr "Reseña"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_header.php:8
+msgid "Payment"
+msgstr "Pago"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_header.php:9
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_header.php:10
+msgid "Billing"
+msgstr "Facturación"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_header.php:11
+msgid "Completed"
+msgstr "Terminado"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_order.php:20
+msgid "Date"
+msgstr "Fecha"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_order.php:20
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_people.php:58
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_people.php:125
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/voucher.php:88
+msgid "Pos"
+msgstr "Pos."
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_order.php:21
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/voucher.php:89
+msgid "Qty"
+msgstr "Count"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_order.php:23
+msgid "Canc Fee"
+msgstr "Tarifa de canc."
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_order.php:23
+msgid "Each"
+msgstr "Cada"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_order.php:25
+msgid "VAT"
+msgstr "IVA"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_order.php:26
+msgid "Total incl. VAT"
+msgstr "Total incl. IVA"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_order.php:153
+msgid "Discount"
+msgstr "Descuento"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_order.php:166
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_order.php:203
+msgid "Cancellation Fee"
+msgstr "Tarifa de anulación"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_order.php:179
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_order.php:214
+msgid "Cancellation Discount"
+msgstr "Descuente de anulación"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_order.php:226
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_order.php:250
+msgid "Refund"
+msgstr "Reembolso"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_order.php:238
+msgid "Paid"
+msgstr "Pagado"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_order.php:263
+msgid "Due"
+msgstr "Debido"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_people.php:54
+msgid "Players"
+msgstr "Jugadores"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_people.php:63
+msgid "Born"
+msgstr "Nacido"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/shop_people.php:122
+msgid "Accompanying People"
+msgstr "Acompañantes"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/voucher.php:24
+msgid "Voucher"
+msgstr "Cupón"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/voucher.php:25
+msgid "Please present this voucher at the accreditation."
+msgstr "Por favor presenta este cupón en la acreditación."
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/voucher.php:29
+msgid "People"
+msgstr "Gente"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/element/voucher.php:84
+msgid "Additional Items"
+msgstr "Artículos adicionales"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/cancel.php:113
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/voucher.php:3
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/cancel.php:6
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/voucher.php:7
+msgid "Dear Mr. {0} {1},"
+msgstr "Estimado señor {0} {1},"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/cancel.php:116
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/voucher.php:5
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/cancel.php:9
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/voucher.php:9
+msgid "Dear Mrs. {0} {1},"
+msgstr "Estimada señora {0} {1},"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/cancel.php:120
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/cancel.php:13
+msgid "We have cancelled your registration {0} on your request."
+msgstr "Hemos cancelado tu inscripción {0} en tu petición."
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/cancel.php:122
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/cancel.php:15
+msgid ""
+"We have cancelled your registration {0} because we have not received your "
+"payment in due time."
 msgstr ""
-"Seleccione su tarjeta de crédito e introduzca el nombre y la dirección del "
-"titular de la tarjeta."
+"Hemos cancelado tu inscripción {0} porque no hemos recibido tu pago a tu "
+"debido tiempo."
 
-#: /home/ettu/veterans-v3//Template/Shops/Payment/authorizenet.ctp:95
-#: /home/ettu/veterans-v3//Template/Shops/Payment/ipayment.ctp:81
-msgid "Select credit card type"
-msgstr "Seleccione el tipo de tarjeta de crédito"
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/cancel.php:124
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/cancel.php:17
+msgid "If you think this is an error please contact {0} immediately!"
+msgstr "Si crees que esto es un error, por favor póngate en contacto {0}"
 
-#: /home/ettu/veterans-v3//Template/Shops/Payment/authorizenet.ctp:103
-#: /home/ettu/veterans-v3//Template/Shops/Payment/ipayment.ctp:88
-msgid "Card no."
-msgstr "No. de tarjeta"
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/cancel.php:128
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:226
+msgid "Details of your registration:"
+msgstr "Los detalles de su inscripción:"
 
-#: /home/ettu/veterans-v3//Template/Shops/Payment/authorizenet.ctp:110
-#: /home/ettu/veterans-v3//Template/Shops/Payment/ipayment.ctp:95
-msgid "CVV code"
-msgstr "Codigo CVV"
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/cancel.php:133
+msgid "You had entered the following players and accompanying persons:"
+msgstr "Haz introducido los siguientes jugadores y acompañantes:"
 
-#: /home/ettu/veterans-v3//Template/Shops/Payment/authorizenet.ctp:117
-#: /home/ettu/veterans-v3//Template/Shops/Payment/ipayment.ctp:102
-msgid "Card expires"
-msgstr "La tarjeta expira"
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/cancel.php:137
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:241
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/voucher.php:16
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/order.php:118
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/voucher.php:20
+msgid "Best regards"
+msgstr "Atentamente"
 
-#: /home/ettu/veterans-v3//Template/Shops/Payment/authorizenet.ctp:142
-msgid "Card holder given name"
-msgstr "Nombre del titular de la tarjeta"
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:138
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:190
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/order.php:24
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/order.php:76
+msgid "Thank you for your registration."
+msgstr "Gracias por su inscripción."
 
-#: /home/ettu/veterans-v3//Template/Shops/Payment/authorizenet.ctp:149
-msgid "Card holder family name"
-msgstr "Apellido de titular de la tarjeta "
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:140
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/order.php:26
+msgid "Please note that your registration is on a waiting list."
+msgstr "Tenga en cuenta que tu inscripción está en una lista de espera."
 
-#: /home/ettu/veterans-v3//Template/Shops/Payment/dummy.ctp:94
-msgid "Return Error"
-msgstr "Volver con error"
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:148
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/order.php:34
+msgid ""
+"If in the meantime you decide to cancel your registration please inform us "
+"so that we can remove you from the waiting list."
+msgstr ""
+"Si mientras tanto tu decides cancelar tu inscripción por favor infórmenos "
+"para que podamos eliminar de la lista de espera."
 
-#: /home/ettu/veterans-v3//Template/Shops/Payment/ipayment.ctp:125
-msgid "Card holder"
-msgstr "Titular de la tarjeta"
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:150
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/order.php:36
+msgid "We want to inform you that your registration {0} can now be processed."
+msgstr "Queremos informarle de que su inscripción {0} ahora se puede procesar."
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:152
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:197
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/order.php:38
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/order.php:83
+msgid "Please pay the amount due as soon as possible, but not later than {0}."
+msgstr "Por favor, transferir el saldo de nuestra cuenta bancaria a más {0}."
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:154
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/order.php:40
+msgid ""
+"If we haven't received your payment by then we will cancel your registration."
+msgstr ""
+"Si no hemos recibido tu pago por el entonces tendremos que anular su "
+"inscripción."
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:156
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/order.php:42
+msgid ""
+"Please notify us if you want us to cancel your registration so that we can "
+"inform the next on the waiting list immediately."
+msgstr ""
+"Por favor avísenos si desea cancelar tu inscripción para que podamos "
+"informar a la siguiente en la lista de espera inmediatamente."
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:160
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:180
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:205
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/order.php:46
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/order.php:66
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/order.php:91
+msgid ""
+"Don't forget to put your invoice number on the bank transfer so we can find "
+"your order."
+msgstr ""
+"No se olvide de poner su número de factura en la remesa para que podamos "
+"encontrar su orden."
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:165
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:185
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:210
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:218
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/order.php:51
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/order.php:71
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/order.php:96
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/order.php:104
+msgid "To pay with credit card use this link:"
+msgstr "Para pagar con tarjeta de crédito utiliza este enlace:"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:170
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/order.php:56
+msgid ""
+"This is a friendly reminder that you haven't paid your registration {0} yet."
+msgstr ""
+"Este es un recordatorio de que usted no ha pagado su inscripción {0} todavía."
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:172
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/order.php:58
+msgid "If you believe this is an error please contact {0}."
+msgstr "Si usted cree que esto es un error, por favor contactar {0}"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:174
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/order.php:60
+msgid "If you have not paid yet please do so until {0}."
+msgstr "Si usted no ha pagado todavía por favor hacerlo {0}"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:176
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/order.php:62
+msgid ""
+"If we haven't received your payment by then we reserve the right to cancel "
+"your registrations without further notice."
+msgstr ""
+"Si no hemos recibido su pago por el entonces nos reservamos el derecho de "
+"anular sus inscripciones sin previo aviso."
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:192
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/order.php:78
+msgid "Your invoice number is {0}."
+msgstr "Su número de factura es {0}."
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:199
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/order.php:85
+msgid ""
+"Note that your registration is not completed until we have received the full "
+"amount still due."
+msgstr ""
+"Tenga en cuenta que su inscripción no se completa hasta que hayamos recibido "
+"el importe total todavía debe."
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:201
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/order.php:87
+msgid ""
+"We reserve the right to cancel your order after that date if we haven't "
+"received the full amount still due until then."
+msgstr ""
+"Nos reservamos el derecho de anular su orden después de esa fecha si no "
+"hemos recibido el importe total todavía debe hasta entonces."
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:231
+msgid "You have entered the following players and accompanying persons:"
+msgstr "Has inscrito los jugadores y acompañantes siguientes:"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/order.php:237
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/order.php:114
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/receipt.php:2
+msgid "Please find your receipt attached."
+msgstr "Encuentre su recibo adjunto."
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/voucher.php:7
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/voucher.php:11
+msgid "Dear Sir or Madam,"
+msgstr "Estimado señor o señora,"
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/voucher.php:9
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/voucher.php:13
+msgid "Thank you for your registration to the {0}."
+msgstr "Gracias por su inscripción a la {0}."
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/voucher.php:11
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/voucher.php:15
+msgid "A voucher is attached to this mail."
+msgstr "Un cupón se adjunta a este email."
+
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/html/voucher.php:13
+#: /home/ettu/veterans-v4/plugins/Shop/templates/email/text/voucher.php:17
+msgid "Please print this voucher and present it at the accreditation desk."
+msgstr "Por favor imprimir este cupón y presentarlo en la acreditación."
+
+#~ msgid "For players you may add email and a phone number of a cell phone."
+#~ msgstr ""
+#~ "Para los jugadores que usted puede agregar el email y un número de "
+#~ "teléfono de un teléfono celular."
 
 #~ msgid "Please transfer the balance to our bank account not later than {0}."
 #~ msgstr ""
