@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2021-10-08 11:13+0200\n"
+"POT-Creation-Date: 2021-10-11 20:32+0200\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -23,13 +23,13 @@ msgstr ""
 #: Controller/CompetitionsController.php:36
 #: Controller/CompetitionsController.php:67
 #: Controller/RegistrationsController.php:51
-#: Controller/RegistrationsController.php:615
-#: Controller/RegistrationsController.php:1375
-#: Controller/RegistrationsController.php:1473
-#: Controller/RegistrationsController.php:1705
-#: Controller/RegistrationsController.php:1845
-#: Controller/RegistrationsController.php:1903
-#: Controller/RegistrationsController.php:2549
+#: Controller/RegistrationsController.php:611
+#: Controller/RegistrationsController.php:1371
+#: Controller/RegistrationsController.php:1469
+#: Controller/RegistrationsController.php:1701
+#: Controller/RegistrationsController.php:1841
+#: Controller/RegistrationsController.php:1899
+#: Controller/RegistrationsController.php:2545
 #: /home/ettu/veterans-v4/plugins/Shop/src/Controller/AllotmentsController.php:65
 #: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ArticlesController.php:24
 #: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ArticlesController.php:149
@@ -40,9 +40,9 @@ msgstr ""
 #: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:1676
 #: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:1721
 #: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:1814
-#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1468
-#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1844
-#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1957
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1474
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1850
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1963
 msgid "You must select a tournament first"
 msgstr ""
 
@@ -109,9 +109,9 @@ msgid "Men"
 msgstr ""
 
 #: Controller/Component/RegistrationUpdateComponent.php:484
-#: Controller/RegistrationsController.php:1496
-#: Controller/RegistrationsController.php:1871
-#: Controller/RegistrationsController.php:1929
+#: Controller/RegistrationsController.php:1492
+#: Controller/RegistrationsController.php:1867
+#: Controller/RegistrationsController.php:1925
 msgid "You are not allowed to edit this registration"
 msgstr ""
 
@@ -226,130 +226,130 @@ msgstr ""
 msgid "Person was not deleted"
 msgstr ""
 
-#: Controller/RegistrationsController.php:83
+#: Controller/RegistrationsController.php:79
 msgid "You must fill out all required fields"
 msgstr ""
 
-#: Controller/RegistrationsController.php:89
+#: Controller/RegistrationsController.php:85
 msgid "You must enter the date of birth for players"
 msgstr ""
 
-#: Controller/RegistrationsController.php:100
+#: Controller/RegistrationsController.php:96
 msgid "You must be born in %d or earlier"
 msgstr ""
 
-#: Controller/RegistrationsController.php:105
+#: Controller/RegistrationsController.php:101
 msgid "Wrong birthday given"
 msgstr ""
 
-#: Controller/RegistrationsController.php:120
-#: Controller/RegistrationsController.php:1437
-#: Controller/RegistrationsController.php:1600
-#: Controller/RegistrationsController.php:1889
-#: Controller/RegistrationsController.php:1969
+#: Controller/RegistrationsController.php:116
+#: Controller/RegistrationsController.php:1433
+#: Controller/RegistrationsController.php:1596
+#: Controller/RegistrationsController.php:1885
+#: Controller/RegistrationsController.php:1965
 msgid "The registration could not be saved."
 msgstr ""
 
-#: Controller/RegistrationsController.php:122
-#: Controller/RegistrationsController.php:1434
+#: Controller/RegistrationsController.php:118
+#: Controller/RegistrationsController.php:1430
 msgid "The registration has been saved"
 msgstr ""
 
-#: Controller/RegistrationsController.php:142
+#: Controller/RegistrationsController.php:138
 msgid "Maximum number of players reached, so you cannot enter them at this time"
 msgstr ""
 
-#: Controller/RegistrationsController.php:147
+#: Controller/RegistrationsController.php:143
 msgid "Maximum number of accompanying persons reached, so you cannot enter them at this time"
 msgstr ""
 
-#: Controller/RegistrationsController.php:1056
-#: Controller/RegistrationsController.php:1128
-#: Controller/RegistrationsController.php:1241
-#: Controller/RegistrationsController.php:1468
+#: Controller/RegistrationsController.php:1052
+#: Controller/RegistrationsController.php:1124
+#: Controller/RegistrationsController.php:1237
+#: Controller/RegistrationsController.php:1464
 msgid "Invalid registration"
 msgstr ""
 
-#: Controller/RegistrationsController.php:1099
-#: Controller/RegistrationsController.php:1270
+#: Controller/RegistrationsController.php:1095
+#: Controller/RegistrationsController.php:1266
 msgid "You are not allowed to view this registration"
 msgstr ""
 
-#: Controller/RegistrationsController.php:1209
-#: Controller/RegistrationsController.php:1228
+#: Controller/RegistrationsController.php:1205
+#: Controller/RegistrationsController.php:1224
 #: /home/ettu/veterans-v4/templates/Registrations/view.php:108
 #: /home/ettu/veterans-v4/templates/Registrations/view.php:147
 msgid "wanted"
 msgstr ""
 
-#: Controller/RegistrationsController.php:1246
+#: Controller/RegistrationsController.php:1242
 #: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:503
 msgid "Invalid date"
 msgstr ""
 
-#: Controller/RegistrationsController.php:1423
-#: Controller/RegistrationsController.php:1560
+#: Controller/RegistrationsController.php:1419
+#: Controller/RegistrationsController.php:1556
 msgid "Start number must be unique"
 msgstr ""
 
-#: Controller/RegistrationsController.php:1449
+#: Controller/RegistrationsController.php:1445
 msgid "You cannot enter new people at this time any more"
 msgstr ""
 
-#: Controller/RegistrationsController.php:1453
+#: Controller/RegistrationsController.php:1449
 msgid "You cannot enter new players at this time any more"
 msgstr ""
 
-#: Controller/RegistrationsController.php:1593
+#: Controller/RegistrationsController.php:1589
 #: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:1640
 msgid "Could not update person"
 msgstr ""
 
-#: Controller/RegistrationsController.php:1611
-#: Controller/RegistrationsController.php:1677
+#: Controller/RegistrationsController.php:1607
+#: Controller/RegistrationsController.php:1673
 #: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:1470
-#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1940
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1946
 msgid "Could not update order"
 msgstr ""
 
-#: Controller/RegistrationsController.php:1617
+#: Controller/RegistrationsController.php:1613
 msgid "Registration updated"
 msgstr ""
 
-#: Controller/RegistrationsController.php:1621
-#: Controller/RegistrationsController.php:1683
+#: Controller/RegistrationsController.php:1617
+#: Controller/RegistrationsController.php:1679
 #: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:1427
 msgid "Could not save changes"
 msgstr ""
 
-#: Controller/RegistrationsController.php:1650
-#: Controller/RegistrationsController.php:1850
-#: Controller/RegistrationsController.php:1908
+#: Controller/RegistrationsController.php:1646
+#: Controller/RegistrationsController.php:1846
+#: Controller/RegistrationsController.php:1904
 msgid "Invalid id for registration"
 msgstr ""
 
-#: Controller/RegistrationsController.php:1669
+#: Controller/RegistrationsController.php:1665
 msgid "Registration could not be deleted"
 msgstr ""
 
-#: Controller/RegistrationsController.php:1687
+#: Controller/RegistrationsController.php:1683
 msgid "Registration deleted"
 msgstr ""
 
-#: Controller/RegistrationsController.php:1713
+#: Controller/RegistrationsController.php:1709
 msgid "Invalid id for partner requests"
 msgstr ""
 
-#: Controller/RegistrationsController.php:1892
+#: Controller/RegistrationsController.php:1888
 msgid "You have accepted {0} as the partner for {1}"
 msgstr ""
 
-#: Controller/RegistrationsController.php:1966
+#: Controller/RegistrationsController.php:1962
 msgid "You have rejected {0} as a partner for {1}"
 msgstr ""
 
-#: Controller/RegistrationsController.php:2278
-#: Controller/RegistrationsController.php:2279
+#: Controller/RegistrationsController.php:2274
+#: Controller/RegistrationsController.php:2275
 #: /home/ettu/veterans-v4/templates/Registrations/count.php:73
 #: /home/ettu/veterans-v4/plugins/Shop/templates/Articles/chart.php:142
 #: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/storno.php:619
@@ -357,15 +357,15 @@ msgstr ""
 msgid "Total"
 msgstr ""
 
-#: Controller/RegistrationsController.php:2561
+#: Controller/RegistrationsController.php:2557
 msgid "Men before Women"
 msgstr ""
 
-#: Controller/RegistrationsController.php:2562
+#: Controller/RegistrationsController.php:2558
 msgid "Women before Men"
 msgstr ""
 
-#: Controller/RegistrationsController.php:2563
+#: Controller/RegistrationsController.php:2559
 #: /home/ettu/veterans-v4/templates/Nations/view.php:3
 #: /home/ettu/veterans-v4/templates/People/add.php:74
 #: /home/ettu/veterans-v4/templates/People/edit.php:96
@@ -383,7 +383,7 @@ msgstr ""
 msgid "Association"
 msgstr ""
 
-#: Controller/RegistrationsController.php:2564
+#: Controller/RegistrationsController.php:2560
 #: /home/ettu/veterans-v4/templates/Competitions/view.php:5
 #: /home/ettu/veterans-v4/templates/Groups/view.php:9
 #: /home/ettu/veterans-v4/templates/Nations/view.php:5
@@ -406,21 +406,21 @@ msgstr ""
 msgid "Name"
 msgstr ""
 
-#: Controller/RegistrationsController.php:2565
+#: Controller/RegistrationsController.php:2561
 msgid "Age category ascending"
 msgstr ""
 
-#: Controller/RegistrationsController.php:2566
+#: Controller/RegistrationsController.php:2562
 msgid "Age category descending"
 msgstr ""
 
-#: Controller/RegistrationsController.php:2567
+#: Controller/RegistrationsController.php:2563
 #: /home/ettu/veterans-v4/templates/People/add.php:64
 #: /home/ettu/veterans-v4/templates/People/view.php:36
 msgid "Extern ID"
 msgstr ""
 
-#: Controller/RegistrationsController.php:3151
+#: Controller/RegistrationsController.php:3147
 #: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ArticlesController.php:383
 msgid "Only JPG, GIF and PNG images are allowed."
 msgstr ""
@@ -908,7 +908,7 @@ msgstr ""
 #: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_person.php:73
 #: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:53
 #: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:63
-#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/add_person.php:203
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/add_person.php:197
 msgid "Year"
 msgstr ""
 
@@ -935,7 +935,7 @@ msgstr ""
 #: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_person.php:74
 #: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:54
 #: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:64
-#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/add_person.php:204
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/add_person.php:198
 msgid "Month"
 msgstr ""
 
@@ -962,7 +962,7 @@ msgstr ""
 #: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/edit_person.php:75
 #: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:55
 #: /home/ettu/veterans-v4/plugins/Shop/templates/Orders/settings.php:65
-#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/add_person.php:205
+#: /home/ettu/veterans-v4/plugins/Shop/templates/Shops/add_person.php:199
 msgid "Day"
 msgstr ""
 
@@ -1736,20 +1736,20 @@ msgstr ""
 #: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:1483
 #: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:1572
 #: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:1585
-#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1709
-#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1785
-#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1839
-#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1952
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1715
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1791
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1845
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1958
 msgid "Invalid order"
 msgstr ""
 
 #: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:722
 #: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:1338
-#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1727
-#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1826
-#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1880
-#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1901
-#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1977
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1733
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1832
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1886
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1907
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1983
 msgid "Invalid order status"
 msgstr ""
 
@@ -1786,8 +1786,8 @@ msgid "Order storno undone"
 msgstr ""
 
 #: /home/ettu/veterans-v4/plugins/Shop/src/Controller/OrdersController.php:1467
-#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1893
-#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1937
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1899
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1943
 msgid "Order updated"
 msgstr ""
 
@@ -1819,66 +1819,66 @@ msgstr ""
 msgid "The settings could not be saved. Please, try again."
 msgstr ""
 
-#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:467
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:473
 msgid "No tournaments defined yet"
 msgstr ""
 
-#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1385
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1391
 msgid "{0} Mails have been sent"
 msgstr ""
 
-#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1388
-#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1562
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1394
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1568
 msgid "Mail has been sent"
 msgstr ""
 
-#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1396
-#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1554
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1402
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1560
 #: /home/ettu/veterans-v4/plugins/Shop/src/Payment/DibsPayment.php:244
 #: /home/ettu/veterans-v4/plugins/Shop/src/Payment/PaypalExpressPayment.php:210
 msgid "Invalid order id given"
 msgstr ""
 
-#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1517
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1523
 msgid "Send reminders to registrations older than {0}"
 msgstr ""
 
-#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1543
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1549
 msgid "{0} reminders sent"
 msgstr ""
 
-#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1631
-#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1639
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1637
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1645
 msgid "Invalid receipt id given"
 msgstr ""
 
-#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1725
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1731
 msgid "Order set to \"Payment delayed\""
 msgstr ""
 
-#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1777
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1783
 msgid "{0} orders from waiting list set to pending"
 msgstr ""
 
-#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1803
-#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1815
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1809
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1821
 msgid "Order reset to \"Pending\" and invoice sent"
 msgstr ""
 
-#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1808
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1814
 msgid "Order reset to \"Pending\""
 msgstr ""
 
-#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1824
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1830
 msgid "Order set to \"Pending\" and invoice sent"
 msgstr ""
 
-#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1895
-#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1988
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1901
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1994
 msgid "Could not save cart"
 msgstr ""
 
-#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1986
+#: /home/ettu/veterans-v4/plugins/Shop/src/Controller/ShopsController.php:1992
 msgid "Order converted to invoice"
 msgstr ""
 
