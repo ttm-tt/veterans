@@ -1882,7 +1882,8 @@ class ShopsController extends ShopAppController {
 			
 			if ( $order_status_id !== $stati['PEND'] &&
 				 $order_status_id !== $stati['INIT'] &&
-				 $order_status_id !== $stati['DEL'] ) {
+				 $order_status_id !== $stati['DEL']  &&
+				 $order_status_id !== $stati['FRD'] ) {
 				$this->MultipleFlash->setFlash(__('Invalid order status'), 'error');
 				return $this->redirect($this->referer());
 			}

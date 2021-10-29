@@ -191,7 +191,7 @@ function camelizeName(name) {
 				$style = 'display:none';
 			if ($isParticipant && empty($registration['participant']['double_id']))
 				$style = 'display:none';
-			if ($isParticipant && $registration['participant']['double_cancelled'] != 0)
+			if ($isParticipant && ($registration['participant']['double_cancelled'] ?? 0) != 0)
 				$style = 'display:none';
 			
 			echo '<div id="ParticipantDouble" style="padding:0;' . $style . '">';
@@ -221,7 +221,7 @@ function camelizeName(name) {
 					echo $this->Form->control('participant.double_partner_id', array(
 						'div' => array(
 							'id' => 'ParticipantDoublePartner', 
-							'style' => ($registration['participant']['double_id'] ? '"display:block"' : '"display:none"')
+							'style' => (empty($registration['participant']['double_id']) ? '"display:none"' : '"display:block"')
 						), 
 						'empty' => __('Partner wanted'), 
 						'options' => $double_partner
@@ -236,7 +236,7 @@ function camelizeName(name) {
 				$style = 'display:none';
 			if ($isParticipant && empty($registration['participant']['mixed_id']))
 				$style = 'display:none';
-			if ($isParticipant && $registration['participant']['mixed_cancelled'] != 0)
+			if ($isParticipant && ($registration['participant']['mixed_cancelled'] ?? 0) != 0)
 				$style = 'display:none';
 			
 			echo '<div id="ParticipantMixed" style="padding:0;' . $style . '">';
@@ -262,7 +262,7 @@ function camelizeName(name) {
 					echo $this->Form->control('participant.mixed_partner_id', array(
 						'div' => array(
 							'id' => 'ParticipantMixedPartner', 
-							'style' => ($registration['participant']['mixed_id'] ? '"display:block"' : '"display:none"')
+							'style' => (empty($registration['participant']['mixed_id']) ? '"display:none"' : '"display:block"')
 						), 
 						'empty' => __('Partner wanted'), 
 						'options' => $mixed_partner

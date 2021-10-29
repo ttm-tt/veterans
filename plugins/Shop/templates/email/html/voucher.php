@@ -1,7 +1,7 @@
 <?php 
 	if ($order['invoice_address']['title'] === 'Mr')
 		echo __d('user', 'Dear Mr. {0} {1},', $order['invoice_address']['first_name'], $order['invoice_address']['last_name']);
-	else if ($order['InvoiceAddress']['title'] === 'Mrs')
+	else if ($order['invoice_address']['title'] === 'Mrs')
 		echo __d('user', 'Dear Mrs. {0} {1},', $order['invoice_address']['first_name'], $order['invoice_address']['last_name']);
 	else
 		echo __d('user', 'Dear Sir or Madam,');

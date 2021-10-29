@@ -417,7 +417,8 @@ use Cake\Utility\Hash;
 			if ( $order['order_status']['name'] === 'INIT' ||
 				 $order['order_status']['name'] === 'INVO' ||
 				 $order['order_status']['name'] === 'PEND' ||
-				 $order['order_status']['name'] === 'DEL' ) {
+				 $order['order_status']['name'] === 'DEL'  ||
+				 $order['order_status']['name'] === 'FRD' ) {
 				echo '<li>' . $this->Html->link(__('Set Paid'), array('controller' => 'shops', 'action' => 'setPaid', $order['id']));
 			}
 

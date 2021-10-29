@@ -1496,31 +1496,33 @@ class RegistrationsController extends AppController {
 		// If participation in an event was cancelled, reset to null.
 		// But keep the partner around, we will need the id to initialize the combo box, so when
 		// the player is added again to the event the old partner is selected by default (if still available)
-		if ($registration['participant']['single_cancelled']) {
-			$registration['participant']['single_id'] = null;
-		}
+		if ($registration->type_id == TypesTable::getPlayerId()) {
+			if ($registration['participant']['single_cancelled']) {
+				$registration['participant']['single_id'] = null;
+			}
 
-		if ($registration['participant']['double_cancelled']) {
-			$registration['participant']['double_id'] = null;
-			// $registration['participant']['double_partner_id'] = null;
-		}
+			if ($registration['participant']['double_cancelled']) {
+				$registration['participant']['double_id'] = null;
+				// $registration['participant']['double_partner_id'] = null;
+			}
 
-		if ($registration['participant']['mixed_cancelled']) {
-			$registration['participant']['mixed_id'] = null;
-			// $registration['participant']['mixed_partner_id'] = null;
-		}
+			if ($registration['participant']['mixed_cancelled']) {
+				$registration['participant']['mixed_id'] = null;
+				// $registration['participant']['mixed_partner_id'] = null;
+			}
 
-		if ($registration['participant']['team_cancelled']) {
-			$registration['participant']['team_id'] = null;
-		}
+			if ($registration['participant']['team_cancelled']) {
+				$registration['participant']['team_id'] = null;
+			}
 
-		// For veterans select age category of double / mixed partner
-		if (!$registration['participant']['double_cancelled'] && !empty($registration['participant']['double_partner_id']))
-			$registration['participant']['double_id'] = 
-				$registration['participant']['double_partner']['participant']['double_id'];
-		if (!$registration['participant']['mixed_cancelled'] && !empty($registration['participant']['mixed_partnerid']))
-			$registration['participant']['mixed_id'] =
-				$registration['participant']['mixed_partner']['participant']['mixed_id'];
+			// For veterans select age category of double / mixed partner
+			if (!$registration['participant']['double_cancelled'] && !empty($registration['participant']['double_partner_id']))
+				$registration['participant']['double_id'] = 
+					$registration['participant']['double_partner']['participant']['double_id'];
+			if (!$registration['participant']['mixed_cancelled'] && !empty($registration['participant']['mixed_partnerid']))
+				$registration['participant']['mixed_id'] =
+					$registration['participant']['mixed_partner']['participant']['mixed_id'];
+		}
 
 		$tid = $registration['tournament_id'];
 		$pid = $registration['person_id'];

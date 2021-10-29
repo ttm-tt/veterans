@@ -151,7 +151,7 @@ class RegistrationUpdateComponent extends Component {
 			$this->MultipleFlash->setFlash(__d('user', 'The new registration could not be created'), 'error');
 			
 			$this->getController()->log('Cannot create or update registration');
-			$this->getController()->log(print_r($registration->errors(), true));
+			$this->getController()->log(print_r($registration->getErrors(), true));
 			$this->getController()->log(print_r($registration, true));
 			return false;
 		}
@@ -297,7 +297,7 @@ class RegistrationUpdateComponent extends Component {
 
 					$newPartner['participant'][$partner_id] = $newRegistration['id'];
 					$newPartner['participant'][$event_id] = $newRegistration['participant'][$event_id];
-					$newPartner['participant'][$field] = $newRegistration['participant'][$event];
+					$newPartner['participant'][$field] = $newRegistration['participant'][$field];
 
 					if ($this->getController()->Registrations->$funConfirmed($newRegistration) || $this->_isEditAllowed($newPartner))
 						$this->_sendMail('partner_confirmed_partner', 'Partner Confirmed', $field, $newPartner, $newRegistration);

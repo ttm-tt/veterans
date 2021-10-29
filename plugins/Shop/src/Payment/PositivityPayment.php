@@ -78,10 +78,14 @@ class PositivityPayment extends AbstractPayment {
 				$currency !== $data['currency'] ||
 				$amount !== $data['chargetotal']) {
 			file_put_contents(TMP . '/positivity/xxxfraud-' . date('Ymd-His'), print_r(
-				['got' => $sha, 'data' => $data], true)
+				[
+					'sha' => $sha, 
+					'amount' => $amount,
+					'data' => $data
+				], true)
 			);
 			$status = 'FRD';
-		} else if ($data['status'] !== 'APPROVED') {
+		} else if (($data['status'] ?? '') !== 'APPROVED') {
 			file_put_contents(TMP . '/positivity/xxxerror-' . date('Ymd-His'), print_r($data, true));
 			$status = 'ERR';
 		} else {
@@ -255,6 +259,9 @@ class PositivityPayment extends AbstractPayment {
 		else
 			return;
 				
+		if (empty($data['oid']))
+			return;
+		
 		$orderId = explode('-', $data['oid'])[0];
 		
 		$this->_controller->_success($orderId);		
