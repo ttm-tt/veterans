@@ -188,24 +188,6 @@ TypeFactory::map('datetime', 'App\Model\Type\DateTimeType');
 // And our own boolean type so we can overcome a regression
 TypeFactory::map('boolean', 'App\Model\Type\BoolType');
 
-/*
- * Enable immutable time objects in the ORM.
- *
- * You can enable default locale format parsing by adding calls
- * to `useLocaleParser()`. This enables the automatic conversion of
- * locale specific date formats. For details see
- * @link https://book.cakephp.org/3.0/en/core-libraries/internationalization-and-localization.html#parsing-localized-datetime-data
- */
-Type::build('time')
-    ->useImmutable();
-Type::build('date')
-    ->useImmutable();
-Type::build('datetime')
-    ->useImmutable();
-Type::build('timestamp')
-    ->useImmutable();
-
-
 // Debug settings, should be here
 if ($isCli) {
 	Configure::write('Log.debug.file', 'cli-debug');
