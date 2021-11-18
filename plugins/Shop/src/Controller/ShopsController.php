@@ -405,6 +405,27 @@ class ShopsController extends ShopAppController {
 					// return $this->redirect(array('action' => 'wizard'));
 					return;
 				}
+				
+				// Check para settings
+				if (($person['isPara'] ?? 0) == 0) {
+					$person['ptt_class'] = 0;
+					$person['wchc'] = 0;
+				}
+				
+				if ($person['ptt_class'] > 10) {
+					$person['ptt_class'] = 10;
+					$person['schc'] = 0;
+				} else if ($person['ptt_class'] > 5) {
+					$person['wchc'] = 0;
+				} else if ($person['ptt_class'] > 0) {
+					if ($person['wchc'] == 0) {
+						$this->MultipleFlash->setFlash(__('You must select the wheel chair requirement'));
+						return;
+					}
+				} else {
+					$person['ptt_class'] = 0;
+					$person['wchc'] = 0;
+				}
 			}
 			
 			$person['phone'] = str_replace(" ()./", "", $person['phone']);
@@ -419,14 +440,40 @@ class ShopsController extends ShopAppController {
 				$person['dob'] = null;
 			}
 			
-			// Add discount for nationality
-			$person['variant_id'] = 
-					$this->ArticleVariants->fieldByConditions('id', [
-							'article_id' => $articleList[$person['type']]['id'],
-							'variant_type' => 'Nationality',
-							'name' => $this->Nations->fieldByConditions('name', ['id' => $person['nation_id']])
-						])
-			;
+			$naName = $this->Nations->fieldByConditions('name', ['id' => $person['nation_id']]);
+			
+			// Add discount for para players, if no other is set
+			if (($person['ptt_class'] ?? 0) > 0 && empty($person['variant_id'])) {
+				// Nation-specific para variant
+				$person['variant_id'] = 
+						$this->ArticleVariants->fieldByConditions('id', [
+								'article_id' => $articleList[$person['type']]['id'],
+								'variant_type' => 'Para',
+								'name' => 'PARA-' . $naName
+							])
+				;
+				
+				// General para variant
+				if ($person['variant_id'] === null)
+					$person['variant_id'] = 
+							$this->ArticleVariants->fieldByConditions('id', [
+									'article_id' => $articleList[$person['type']]['id'],
+									'variant_type' => 'Para',
+									'name' => 'PARA'
+								])
+					;
+			}
+			
+			// Add discount for nationality, if no other is set
+			if (empty($person['variant_id'])) {
+				$person['variant_id'] = 
+						$this->ArticleVariants->fieldByConditions('id', [
+								'article_id' => $articleList[$person['type']]['id'],
+								'variant_type' => 'Nationality',
+								'name' => $naName
+							])
+				;
+			}
 			
 			if (!empty($person['phone'])) {
 				if (!preg_match('/\+[0-9]+$/ui', $person['phone'])) {
@@ -448,6 +495,17 @@ class ShopsController extends ShopAppController {
 
 			return $this->redirect(array('action' => 'wizard', 'people'));	
 		}
+		
+		$this->loadModel('Competitions');
+		$havePara = $this->Competitions->find()
+				->where([
+					'tournament_id' => $tid,
+					'ptt_class > 0'
+				]) 
+				->count()
+			> 0;
+		
+		$this->set('havePara', $havePara);
 	}
 
 

@@ -32,6 +32,16 @@ class AppTable extends ShimTable {
 		return $fields;
 	}
 
+	
+	// Retrieve record but also catch null
+	public function record($id, array $options = []) {
+		if ($id === null)
+			return null;
+		
+		return parent::record($id, $options);
+	}
+
+	
 	public function beforeSave(EventInterface $event, EntityInterface $entity, ArrayObject $options) {
 		$ct = date('Y-m-d H:i:s');
 		

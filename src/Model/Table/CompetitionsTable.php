@@ -88,6 +88,13 @@ class CompetitionsTable extends AppTable {
 			$conditions[] = 'Competitions.born IS NULL';
 		}
 
+		// ptt_class. 
+		if (($person['ptt_class'] ?? 0) == 0) {
+			$conditions[] = 'ptt_class = 0';			
+		} else {
+			$conditions['ptt_class >='] = $person['ptt_class'];
+		}
+
 		$ret = array();
 
 		if (empty($person['born'])) {
@@ -95,14 +102,20 @@ class CompetitionsTable extends AppTable {
 			$ret['singles'] = $this->find('list', array(
 				'fields' => array('id', 'description'),
 				'conditions' => ['Competitions.type_of' => 'S'] + $conditions,
-				'order' => ['Competitions.description' => 'ASC']
+				'order' => [
+					'Competitions.ptt_class' => 'DESC',
+					'Competitions.description' => 'ASC'
+				]
 			))->toArray();
 		} else if ($person['born'] < date('Y') - 30) {
 			// Veterans, only the oldest is eligable
 			$ret['singles'] = $this->find('list', array(
 				'fields' => array('id', 'description'),
 				'conditions' => ['Competitions.type_of' => 'S'] + $conditions,
-				'order' => ['Competitions.born' => 'ASC'],
+				'order' => [
+					'Competitions.ptt_class' => 'DESC',
+					'Competitions.born' => 'ASC'
+				],
 				'limit' => 1
 			))->toArray();
 		} else if ($person['born'] > date('Y') - 30) {
@@ -110,7 +123,10 @@ class CompetitionsTable extends AppTable {
 			$ret['singles'] = $this->find('list', array(
 				'fields' => array('id', 'description'),
 				'conditions' => ['Competitions.type_of' => 'S'] + $conditions,
-				'order' => ['Competitions.born' => 'DESC'],
+				'order' => [
+					'Competitions.ptt_class' => 'DESC',
+					'Competitions.born' => 'DESC'
+				],
 				'limit' => 1
 			))->toArray();
 		} else {
@@ -118,51 +134,75 @@ class CompetitionsTable extends AppTable {
 			$ret['singles'] = $this->find('list', array(
 				'fields' => array('id', 'description'),
 				'conditions' => ['Competitions.type_of' => 'S'] + $conditions,
-				'order' => ['Competitions.description' => 'ASC']
+				'order' => [
+					'Competitions.ptt_class' => 'DESC',
+					'Competitions.description' => 'ASC'
+				]
 			))->toArray();
 		}
 
 		$ret['doubles'] = $this->find('list', array(
 			'fields' => array('id', 'description'),
 			'conditions' => ['Competitions.type_of' => 'D'] + $conditions,
-			'order' => ['Competitions.description' => 'ASC']
+			'order' => [
+				'Competitions.ptt_class' => 'DESC',
+				'Competitions.description' => 'ASC'
+			]
 		))->toArray();
 
 		$ret['mixed'] = $this->find('list', array(
 			'fields' => array('id', 'description'),
 			'conditions' => ['Competitions.type_of' => 'X'] + $conditions,
-			'order' => ['Competitions.description' => 'ASC']
+			'order' => [
+				'Competitions.ptt_class' => 'DESC',
+				'Competitions.description' => 'ASC'
+			]
 		))->toArray();
 
 		$ret['teams'] = $this->find('list', array(
 			'fields' => array('id', 'description'),
 			'conditions' => ['Competitions.type_of' => 'T'] + $conditions,
-			'order' => ['Competitions.description' => 'ASC']
+			'order' => [
+				'Competitions.ptt_class' => 'DESC',
+				'Competitions.description' => 'ASC'
+			]
 		))->toArray();
 
 		return $ret;
 	}
 	
 	
-	function findEventForPerson($person, $type, $tid) {
-		if (isset($person['person']))
-			return $this->findEventForPerson($person['person'], $type, $tid);
-		
+	function findEventForPerson($person, $type, $tid, $partner = null) {
 		if (empty($tid))
 			return null;
 		
+		if (isset($person['person']))
+			return $this->findEventForPerson($person['person'], $type, $tid, $partner);
+		
 		$year = is_array($person['dob']) ? $person['dob']['year'] : date('Y', strtotime($person['dob']));
+		$partnerYear = ($partner === null ? null : (is_array($partner['dob']) ? $partner['dob']['year'] : date('Y', strtotime($partner['dob']))));
 		$born = ($year < date('Y') - 30 ? 'born >=' : 'born <=');
+		
+		$conditions = array(
+			'tournament_id' => $tid,
+			'sex' => ($type == 'X' ? 'X' : $person['sex']),
+			'type_of' => $type,
+			$born => $year < date('Y') - 30 ? max($year, $partnerYear ?? $year) : min($year, $partnerYear ?? $year)
+		);
+		
+		if (($person['ptt_class'] ?? 0) == 0) {
+			$conditions[] = 'ptt_class = 0';
+		} else {
+			$conditions['ptt_class >= '] = $person['ptt_class'];
+		}
 
 		$c = $this->find('all', array(
 			'fields' => array('id'),
-			'conditions' => array(
-				'tournament_id' => $tid,
-				'sex' => ($type == 'X' ? 'X' : $person['sex']),
-				'type_of' => $type,
-				$born => $year
-			),
-			'order' => 'born ' . ($year < date('Y') - 30 ? ' ASC' : 'DESC')
+			'conditions' => $conditions,
+			'order' => [
+				'ptt_class' => 'DESC',
+				'born' => ($year < date('Y') - 30 ? 'ASC' : 'DESC')
+			]
 		))->first();
 
 		if (!empty($c))

@@ -160,7 +160,7 @@ class RegistrationUpdateComponent extends Component {
 	}
 	
 	
-	function _selectEvent($person, $type, $tid = null) {
+	function _selectEvent($person, $type, $tid, $partner = null) {
 		if ($tid === null)
 			$tid = $this->getController()->getRequest()->getSession()->read('Tournaments.id');
 		
@@ -168,7 +168,7 @@ class RegistrationUpdateComponent extends Component {
 			return null;
 		
 		$this->getController()->loadModel('Competitions');
-		return $this->getController()->Competitions->findEventForPerson($person, $type, $tid);
+		return $this->getController()->Competitions->findEventForPerson($person, $type, $tid, $partner);
 	}
 
 	// Iterate over the registrations and change obsoleted / new doubles partners as well (if so allowed)
@@ -648,66 +648,18 @@ class RegistrationUpdateComponent extends Component {
 		$this->getController()->loadModel('Competitions');
 		$this->getController()->loadModel('People');
 		
-		$born = $this->getController()->People->fieldByConditions('born', array('id' => $newRegistration['person']['id']));
-		$conditions = array('Competitions.tournament_id' => $tid);
-		$order = [];
-
-		$bornCondition = false;
-
-		if ($born < date('Y') - 30) {
-			$bornCondition = 'Competitions.born >=';
-			$order = ['Competitions.born' => 'ASC'];
-		} else if ($born > date('Y') - 30) {
-			$bornCondition = 'Competitions.born <=';
-			$order = ['Competitions.born' => 'DESC'];
-		}
+		$doublePartner = $this->getController()->People->record($newRegistration['participant']['double_partner_id'] ?? null);
+		$mixedPartner = $this->getController()->People->record($newRegistration['participant']['mixed_partner_id'] ?? null);
 
 		if (!empty($newRegistration['participant']['single_id']))
 			$newRegistration['participant']['single_id'] = $this->_selectEvent($newRegistration, 'S', $tid);
-
-		// If the player doesn't have a double / mixed partner, put him in his own competition
-		// But if the player has a partner, choose the event carfully ...
-		// XXX: double_id, mixed_id could be empty strings. Why does that bother us as admin but not as "participant"?
-		if (isset($newRegistration['participant']['double_id']) && !empty($newRegistration['participant']['double_id'])) {
-			if (!empty($newRegistration['participant']['double_partner_id'])) {
-				$dpid = $this->getController()->Registrations->fieldByConditions('person_id', array('id' => $newRegistration['participant']['double_partner_id']));
-
-				if ($born < date('Y') - 30)
-					$born = max($born, $this->getController()->People->fieldByConditions('born', array('id' => $dpid)));
-				else if ($born > date('Y') - 30)
-					$born = min($born, $this->getController()->People->fieldByConditions('born', array('id' => $dpid)));
-			}
-
-			if (!empty($bornCondition))
-				$conditions[$bornCondition] = $born;
-
-			$conditions['sex'] = $newRegistration['person']['sex'];
-			$conditions['Competitions.type_of'] = 'D';
-			$newRegistration['participant']['double_id'] = 
-					$this->getController()->Competitions->fieldByConditions('id',$conditions, ['order' => $order]				
-			);
-		}
-
-		if (isset($newRegistration['participant']['mixed_id']) && !empty($newRegistration['participant']['mixed_id'])) {
-			if (!empty($newRegistration['participant']['mixed_partner_id'])) {
-				$mpid = $this->getController()->Registrations->fieldByConditions('person_id', array('id' => $newRegistration['participant']['mixed_partner_id']));
-
-				if ($born < date('Y') - 30)
-					$born = max($born, $this->getController()->People->fieldByConditions('born', array('id' => $mpid)));
-				else if ($born > date('Y') - 30)
-					$born = min($born, $this->getController()->People->fieldByConditions('born', array('id' => $mpid)));
-			}
-
-			if (!empty($bornCondition))
-				$conditions[$bornCondition] = $born;
-
-			$conditions['sex'] = 'X';
-			$conditions['Competitions.type_of'] = 'X';
-			$newRegistration['participant']['mixed_id'] = 
-					$this->getController()->Competitions->fieldByConditions('id', $conditions, ['order' => $order]
-			);
-		}
-
+		
+		if (!empty($newRegistration['participant']['double_id']))
+			$newRegistration['participant']['double_id'] = $this->_selectEvent($newRegistration, 'D', $tid, $doublePartner);
+		
+		if (!empty($newRegistration['participant']['mixed_id']))
+			$newRegistration['participant']['mixed_id'] = $this->_selectEvent($newRegistration, 'X', $tid, $mixedPartner);
+		
 		// We don't want to save the People record. It is included for the players name only.
 		// The same is true for the Type record, it is included for the description only.
 		unset($newRegistration['person']);

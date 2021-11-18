@@ -1,4 +1,8 @@
 <?php /* Copyright (c) 2020 Christoph Theis */ ?>
+<?php
+use Cake\Utility\Hash;
+?>
+
 <?php $this->Html->scriptStart(array('block' => true)); ?>
 function camelizeName(name) {
 	name = name.trim();
@@ -62,6 +66,14 @@ function camelizeName(name) {
 			
 			// Extern ID: Only visible to root
 			echo $this->Form->control('extern_id', array('type' => 'text', 'label' => __('Extern ID')));
+
+			echo $this->Form->control('ptt_class', array(
+				'label' => 'Para TT Class', 
+				'type' => 'select',
+				'options' => Hash::combine(range(0, 10), '{n}', '{n}'),
+				'empty' => false,
+				'value' => 0
+			));
 		}
 
 		if (empty($current_user['nation_id'])) {

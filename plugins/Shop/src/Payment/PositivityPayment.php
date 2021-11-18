@@ -38,6 +38,10 @@ class PositivityPayment extends AbstractPayment {
 			$data = $request->getQuery();
 		else
 			return;
+		
+		// Nothing we can do without the order id
+		if (empty($data['oid']))
+			return;
 				
 		$this->_controller->loadModel('Shop.Orders');
 		$this->_controller->loadModel('Shop.OrderPayments');
@@ -80,6 +84,7 @@ class PositivityPayment extends AbstractPayment {
 			file_put_contents(TMP . '/positivity/xxxfraud-' . date('Ymd-His'), print_r(
 				[
 					'sha' => $sha, 
+					'txnDateTime' => $txnDateTime,
 					'amount' => $amount,
 					'data' => $data
 				], true)
@@ -184,6 +189,10 @@ class PositivityPayment extends AbstractPayment {
 		else
 			return;
 		
+		// Nothing we can do without order id
+		if (empty($data['oid']))
+			return;
+		
 		$orderId = explode('-', $data['oid'])[0];
 		
 		$errMsg = 'The transaction has failed';
@@ -259,6 +268,7 @@ class PositivityPayment extends AbstractPayment {
 		else
 			return;
 				
+		// Nothing we can do without order id
 		if (empty($data['oid']))
 			return;
 		

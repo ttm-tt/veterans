@@ -347,22 +347,22 @@ class RegistrationsController extends AppController {
 				$data['participant'] = array();
 
 				if (!empty($person['single']))
-					$data['participant']['single_id'] = $this->_selectEvent($person, 'S');
+					$data['participant']['single_id'] = $this->_selectEvent($person, 'S', $tid);
 				else
 					$data['participant']['single_id'] = null;
 
 				if (!empty($person['double']))
-					$data['participant']['double_id'] = $this->_selectEvent($person, 'D');
+					$data['participant']['double_id'] = $this->_selectEvent($person, 'D', $tid);
 				else
 					$data['participant']['double_id'] = null;
 
 				if (!empty($person['mixed']))
-					$data['participant']['mixed_id']  = $this->_selectEvent($person, 'X');
+					$data['participant']['mixed_id']  = $this->_selectEvent($person, 'X', $tid);
 				else
 					$data['participant']['mixed_id'] = null;
 
 				if (!empty($person['team']))
-					$data['participant']['team_id']   = $this->_selectEvent($person, 'T');
+					$data['participant']['team_id']   = $this->_selectEvent($person, 'T', $tid);
 				else
 					$data['participant']['team_id'] = null;
 			}
@@ -548,6 +548,14 @@ class RegistrationsController extends AppController {
 		if (!empty($this->request->getQuery('tournament_id'))) {
 			$this->request->getSession()->write('Tournaments.id', $this->request->getQuery('tournament_id'));
 		}
+		
+		// Silent cancellation
+		if ($this->request->getQuery('silent')) {
+			$this->request->getSession()->write('Registrations.silent', true);
+		}
+		
+		if ($this->request->getSession()->check('Registrations.silent'))
+			$this->fromImport = true;
 
 		if ($this->request->getQuery('nation_id') !== null) {
 			if ($this->request->getQuery('nation_id') === 'all')
@@ -1097,11 +1105,11 @@ class RegistrationsController extends AppController {
 		}
 
 		// 'contain' above does not work if there is no double / mixed partner
-		if (!$registration['participant']['double_partner_id']) {
+		if (empty($registration['participant']['double_partner_id'])) {
 			$registration['participant']['double_partner']['person'] = array('display_name' => false);
 		}
 		
-		if (!$registration['participant']['mixed_partner_id']) {
+		if (empty($registration['participant']['mixed_partner_id'])) {
 			$registration['participant']['mixed_partner']['person'] = array('display_name' => false);
 		}
 
@@ -1649,6 +1657,9 @@ class RegistrationsController extends AppController {
 			return $this->redirect(array('action'=>'index'));
 		}
 		
+		if ($this->request->getSession()->check('Registrations.silent'))
+			$this->RegistrationUpdate->fromImport = true;
+
 		$pid = $this->Registrations->fieldByConditions('person_id', array(
 			'Registrations.id' => $id
 		));
@@ -1763,9 +1774,13 @@ class RegistrationsController extends AppController {
 									'Competitions.born >=' => max($me['person']['born'], $r['person']['born']),
 									'Competitions.tournament_id' => $tid,
 									'Competitions.type_of' => 'D',
-									'Competitions.sex' => $me['person']['sex']
-								),
-								['order' => ['Competitions.born ASC']]
+									'Competitions.sex' => $me['person']['sex'],
+									'Competitions.ptt_class >=' => max($me['person']['ptt_class'], $r['person']['ptt_class'])
+								) + ($me['person']['ptt_class'] == 0 ? array('Competitions.ptt_class = 0') : 'Competitions.ptt_class > 0'),
+								['order' => [
+									'Competitions.ptt_class' => 'DESC',
+									'Competitions.born' => 'ASC'
+								]]
 							);
 					} else {
 						// Youth
@@ -1774,9 +1789,13 @@ class RegistrationsController extends AppController {
 									'Competitions.born <=' => min($me['person']['born'], $r['person']['born']),
 									'Competitions.tournament_id' => $tid,
 									'Competitions.type_of' => 'D',
-									'Competitions.sex' => $me['person']['sex']
-								),
-								['order' => ['Competitions.born DESC']]
+									'Competitions.sex' => $me['person']['sex'],
+									'Competitions.ptt_class >=' => max($me['person']['ptt_class'], $r['person']['ptt_class'])
+								) + ($me['person']['ptt_class'] == 0 ? array('Competitions.ptt_class = 0') : 'Competitions.ptt_class > 0'),
+								['order' => [
+									'Competitions.ptt_class' => 'DESC',
+									'Competitions.born' => 'ASC'
+								]]
 							);						
 					}
 				}
@@ -1791,8 +1810,12 @@ class RegistrationsController extends AppController {
 									'Competitions.born >=' => max($me['person']['born'], $r['person']['born']),
 									'Competitions.tournament_id' => $tid,
 									'Competitions.type_of' => 'X',								
-								),
-								['order' => ['Competitions.born ASC']]
+									'Competitions.ptt_class >=' => max($me['person']['ptt_class'], $r['person']['ptt_class'])
+								) + ($me['person']['ptt_class'] == 0 ? array('Competitions.ptt_class = 0') : 'Competitions.ptt_class > 0'),
+								['order' => [
+									'Competitions.ptt_class' => 'DESC',
+									'Competitions.born' => 'ASC'
+								]]
 							);
 					} else {
 						// Youth
@@ -1800,9 +1823,13 @@ class RegistrationsController extends AppController {
 							$this->Competitions->fieldBConditions('id', array(
 									'Competitions.born <= ' . min($me['person']['born'], $r['person']['born']),
 									'Competitions.tournament_id' => $tid,
-									'Competitions.type_of' => 'X'
-								),
-								['order' => ['Competitions.born DESC']]
+									'Competitions.type_of' => 'X',
+									'Competitions.ptt_class >=' => max($me['person']['ptt_class'], $r['person']['ptt_class'])
+								) + ($me['person']['ptt_class'] == 0 ? array('Competitions.ptt_class = 0') : 'Competitions.ptt_class > 0'),
+								['order' => [
+									'Competitions.ptt_class' => 'DESC',
+									'Competitions.born' => 'ASC'
+								]]
 							);						
 					}
 				}
@@ -1893,6 +1920,11 @@ class RegistrationsController extends AppController {
 	}
 	
 	function reject($id = null, $partner_id = null) {
+		if (!$id || !$partner_id) {
+			$this->MultipleFlash->setFlash(__('Invalid id for registration'), 'error');
+			return $this->redirect(array('action'=>'index'));
+		}
+		
 		if (!empty($this->request->getQuery('tournament_id'))) {
 			$this->request->getSession()->write('Tournaments.id', $this->request->getQuery('tournament_id'));
 		}
@@ -1901,11 +1933,8 @@ class RegistrationsController extends AppController {
 			$this->MultipleFlash->setFlash(__('You must select a tournament first'), 'error');
 			return $this->redirect(array('controller' => 'tournaments', 'action' => 'index'));
 		}
-
-		if (!$id || !$partner_id) {
-			$this->MultipleFlash->setFlash(__('Invalid id for registration'), 'error');
-			return $this->redirect(array('action'=>'index'));
-		}
+		
+		$tid = $this->request->getSession()->read('Tournaments.id');
 		
 		$me = $this->Registrations->find('all', array(
 			'conditions' => array('Registrations.id' => $id),
@@ -1940,7 +1969,7 @@ class RegistrationsController extends AppController {
 		
 		if ($partner->participant->double_partner_id == $me['id']) {
 			$partner->participant->double_partner_id = null;
-			$partner->participant->double_id = $this->_selectEvent($partner['person'], 'D');
+			$partner->participant->double_id = $this->_selectEvent($partner['person'], 'D', $tid);
 			
 			// Mark $partner explicitely as dirty, because without using patchEntity
 			// this is not done automatically
@@ -1950,7 +1979,7 @@ class RegistrationsController extends AppController {
 		
 		if ($partner->participant->mixed_partner_id == $me['id']) {
 			$partner->participant->mixed_partner_id = null;
-			$partner->participant->mixed_id = $this->_selectEvent($partner['person'], 'X');
+			$partner->participant->mixed_id = $this->_selectEvent($partner['person'], 'X', $tid);
 			
 			// Mark $partner explicitely as dirty, because without using patchEntity
 			// this is not done automatically
@@ -3420,14 +3449,23 @@ class RegistrationsController extends AppController {
 		// Participants may choose any double / mixed event
 		// TODO: clear array for competition types the player did not enter.
 		// Only an admin can enter him after he registered, if he did not do so at registration.
+		// ptt_class:
+		if ($person['ptt_class'] == 0)
+			$ptt_class = array('ptt_class = 0');
+		else
+			$ptt_class = array('ptt_class >= ' => $person['ptt_class']);
+
 		$competitions['doubles'] = $this->Competitions->find('list', array(
 			'fields' => array('id', 'description'),
 			'conditions' => array(
 				'Competitions.tournament_id' => $tid, 
 				'Competitions.type_of' => 'D', 
 				'sex' => $person['sex']
-			),
-			'order' => ['Competitions.born' => 'DESC']
+			) + $ptt_class,
+			'order' => [
+				'Competitions.ptt_class' => 'DESC',
+				'Competitions.born' => 'DESC'
+			]
 		))->toArray();
 
 		$competitions['mixed'] = $this->Competitions->find('list', array(
@@ -3435,8 +3473,11 @@ class RegistrationsController extends AppController {
 			'conditions' => array(
 				'Competitions.tournament_id' => $tid, 
 				'Competitions.type_of' => 'X'
-			),
-			'order' => ['Competitions.born' => 'DESC']
+			) + $ptt_class,
+			'order' => [
+				'Competitions.ptt_class' => 'DESC',
+				'Competitions.born' => 'DESC'
+			]
 		))->toArray();
 
 		$enter_before = $tournament->enter_before;
@@ -3779,7 +3820,7 @@ class RegistrationsController extends AppController {
 		return $registration;
 	}
 	
-	function _selectEvent($person, $type, $tid = null) {
-		return $this->RegistrationUpdate->_selectEvent($person, $type, $tid);
+	function _selectEvent($person, $type, $tid, $partner = null) {
+		return $this->RegistrationUpdate->_selectEvent($person, $type, $tid, $partner);
 	}
 }

@@ -1,5 +1,6 @@
 <?php
 use Cake\Core\Configure;
+use Cake\Utility\Hash;
 ?>
 
 <?php
@@ -40,6 +41,24 @@ function _setHint(input, hint) {
 }
 
 $(document).ready(function() {
+	// Show / hide para settings
+	$('select#ptt-class').parent().hide();
+	$('select#wchc').parent().hide();
+	
+	$('input#is_para').change(function() {
+		if (this.checked)
+			$('select#ptt-class').parent().show();
+		else
+			$('select#ptt-class').parent().hide();
+	});
+	
+	$('select#ptt-class').change(function() {
+		if (this.value <= 5)
+			$('select#wchc').parent().show();
+		else
+			$('select#wchc').parent().hide();
+	});
+	
 	// intlTelInput may throw an exception which we can't handle
 	try {
 		$('#phoneinput').intlTelInput( {
@@ -147,6 +166,11 @@ function onChangeType(cb) {
 			echo '<p>';
 			echo __d('user', 'You can add or change email address and phone number later, too.');
 			echo '</p>';
+			
+			echo '<p>';
+			echo __d('user', 'If you are a Paralympic Athlete flag the appropriate field and after put your international classification.');
+			echo __d('user', 'Paralympic athletes can participate only in the single event.');
+			echo '</p>';
 		?>
 		</div>
 	<?php
@@ -212,6 +236,34 @@ function onChangeType(cb) {
 					'required' => true
 				));
 			}
+		}
+		
+		if (!empty($havePara)) {
+			echo $this->Form->control('isPara', array(
+				'label' => __('Paralympic athlete'),
+				'type' => 'checkbox',
+				'id' => 'is_para',
+				'checked' => false,
+			));
+			
+			echo $this->Form->control('ptt_class', array(
+				'label' => 'ITTF paralympic classification', 
+				'type' => 'select',
+				'options' => Hash::combine(range(1, 10), '{n}', '{n}'),
+				'empty' => __('Select your ITTF paralympic classification'),
+				'required' => true,
+			));
+			
+			echo $this->Form->control('wchc', array(
+				'label' => __('Wheelchair Required'),
+				'type' => 'select',
+				'options' => [
+					1 => __('Wheel chair completely'),
+					2 => __('Wheel char ramp')
+				],
+				'empty' => __('Select when a wheel chair is required'),
+				'required' => true,
+			));
 		}
 
 		echo $this->Form->control('email', array(

@@ -1,5 +1,9 @@
 <?php /* Copyright (c) 2020 Christoph Theis */ ?>
-<?php $this->Html->scriptStart(array('block' => true)); ?>
+<?php
+use Cake\Utility\Hash;
+?>
+
+	<?php $this->Html->scriptStart(array('block' => true)); ?>
 function camelizeName(name) {
 	name = name.trim();
 	if (name === name.toUpperCase() || name === name.toLowerCase()) {
@@ -89,6 +93,17 @@ function camelizeName(name) {
 			echo $this->Form->control('extern_id', array('label' => 'Extern ID', 'type' => 'text'));
 		} else {
 			echo $this->Form->control('extern_id', array('label' => 'Extern ID', 'type' => 'hidden'));			
+		}
+
+		if ($hasRootPrivileges) {
+			echo $this->Form->control('ptt_class', array(
+				'label' => 'Para TT Class', 
+				'type' => 'select',
+				'options' => Hash::combine(range(0, 10), '{n}', '{n}'),
+				'empty' => false,
+			));
+		} else {
+			echo $this->Form->control('ptt_class', array('label' => 'Para TT Class', 'type' => 'hidden'));			
 		}
 
 		if ($hasRootPrivileges) {

@@ -235,7 +235,9 @@ $(document).ready(function() {
 				'minYear' => date('Y') - 120
 			));		
 		}
-				
+
+		// PTT
+		echo $this->Form->control('person.ptt_class', array('type' => 'hidden'));				
 
 		echo '<div id="participant" style="' . ($registration['type_id'] == TypesTable::getPlayerId() ? 'display:block;' : 'display:none;') . '">';
 			if ($hasRootPrivileges)
@@ -295,7 +297,7 @@ $(document).ready(function() {
 					echo $this->Form->control('participant.double_partner_id', array(
 						'div' => array(
 							'id' => 'ParticipantDoublePartner', 
-							'style' => ($registration['participant']['double_id'] ? '"display:block"' : '"display:none"')
+							'style' => (empty($registration['participant']['double_id']) ? '"display:none"' : '"display:block"')
 						), 
 						'empty' => __d('user', 'Partner wanted'), 
 						'options' => $double_partner
@@ -334,7 +336,7 @@ $(document).ready(function() {
 					echo $this->Form->control('participant.mixed_partner_id', array(
 						'div' => array(
 							'id' => 'ParticipantMixedPartner', 
-							'style' => ($registration['participant']['mixed_id'] ? '"display:block"' : '"display:none"')
+							'style' => (empty($registration['participant']['mixed_id']) ? '"display:none"' : '"display:block"')
 						), 
 						'empty' => __d('user', 'Partner wanted'), 
 						'options' => $mixed_partner

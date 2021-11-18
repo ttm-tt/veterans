@@ -63,7 +63,7 @@
 					'?' => ['date' => $history['created']->format('Y-m-d H:i:s')]
 				)) . 
 				'</td>';
-			echo '<td>' . $history['user']['username'] . '</td>';
+			echo '<td>' . ($history['user']['username'] ?? '') . '</td>';
 		}
 
 		$lastTime = $history['created'];
