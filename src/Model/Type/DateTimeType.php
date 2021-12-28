@@ -14,7 +14,15 @@ use App\I18n\FrozenDateTime;
  */
 class DateTimeType extends CakeDateTimeType
 {
-	public function useImmutable() {
+    /**
+     * {@inheritDoc}
+     *
+     * @param string|null $name The name identifying this type
+     */
+    public function __construct(?string $name = null)
+    {
+        parent::__construct($name);
+
         $this->_setClassName(FrozenDateTime::class, DateTimeImmutable::class);
-	}
+    }
 }

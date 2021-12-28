@@ -426,6 +426,11 @@ class ShopsController extends ShopAppController {
 					$person['ptt_class'] = 0;
 					$person['wchc'] = 0;
 				}
+			} else {
+				// Not player, reset some fields
+				unset($person['dob']);
+				unset($person['ptt_class']);
+				unset($person['wchc']);
 			}
 			
 			$person['phone'] = str_replace(" ()./", "", $person['phone']);
@@ -2378,6 +2383,11 @@ class ShopsController extends ShopAppController {
 			
 			if ( !empty($allArticles['PLA']) && $article['article_id'] == $allArticles['PLA'] ) {
 				$p = unserialize($article['detail']);
+				
+				if (isset($p['ptt_class']) && !is_numeric($p['ptt_class']))
+					unset($p['ptt_class']);
+				if (isset($p['wchc']) && !is_numeric($p['wchc']))
+					unset($p['wchc']);
 					
 				$registration = array('person' => $p);
 				$registration['person']['user_id'] = $uid;
@@ -2391,6 +2401,11 @@ class ShopsController extends ShopAppController {
 				$registrations[] = $registration;
 			} else if ( !empty($allArticles['ACC']) && $article['article_id'] == $allArticles['ACC'] ) {
 				$a = unserialize($article['detail']);
+				
+				if (isset($a['ptt_class']) && !is_numeric($a['ptt_class']))
+					unset($a['ptt_class']);
+				if (isset($a['wchc']) && !is_numeric($a['wchc']))
+					unset($a['wchc']);
 					
 				$registration = array('person' => $a);
 				$registration['person']['user_id'] = $uid;
@@ -2404,6 +2419,11 @@ class ShopsController extends ShopAppController {
 				$registrations[] = $registration;
 			} else if ( !empty($allArticles['COA']) && $article['article_id'] == $allArticles['COA'] ) {
 				$a = unserialize($article['detail']);
+				
+				if (isset($a['ptt_class']) && !is_numeric($a['ptt_class']))
+					unset($a['ptt_class']);
+				if (isset($a['wchc']) && !is_numeric($a['wchc']))
+					unset($a['wchc']);
 					
 				$registration = array('person' => $a);
 				$registration['person']['user_id'] = $uid;

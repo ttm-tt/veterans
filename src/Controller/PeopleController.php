@@ -374,9 +374,9 @@ class PeopleController extends AppController {
 		if (UsersTable::hasRootPrivileges($current_user)) {
 			// Only root may change the user of this person
 			if (empty($person['user_id']))
-				$data['username'] = '';
+				$person->username = '';
 			else
-				$data['username'] = $this->Users->fieldByConditions('username', array('id' => $person['user_id']));
+				$person->username = $this->Users->fieldByConditions('username', array('id' => $person['user_id']));
 		}
 
 		$this->set('person', $person);

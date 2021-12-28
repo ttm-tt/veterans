@@ -20,9 +20,9 @@ class DummyPayment extends AbstractPayment {
 			return;
 		
 		$orderId = $data['orderid'];
-		$error = $data['error'] ?? null;
+		$error = $data['error'];
 		
-		if ($error === null)
+		if (empty($error))
 			$this->_controller->_onSuccess($orderId);
 		else
 			$this->_controller->_onError($orderId, 'ERR');		

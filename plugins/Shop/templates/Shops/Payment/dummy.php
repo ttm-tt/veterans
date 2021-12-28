@@ -30,9 +30,9 @@ function onPay() {
 		'dataType' : 'json',
 		'url'  : '<?php echo Router::url(array('action' => 'onPrepareCreditcard')); ?>',
 		'success' : function(data) {
-			if ($.isArray(data)) {
-				$('#orderid').val(data[0]);
-				fakeSubmit(data[0]);
+			if ($.isPlainObject(data)) {
+				$('#orderid').val(data.orderid);
+				fakeSubmit(data.orderid);
 				// $('form#dummy').submit();
 			} else {
 				$('div#processing h2').html("<?php echo __d('user', 'The payment could not be initiated. Please try again later.');?>");
@@ -49,14 +49,14 @@ function onPay() {
 function fakeSubmit(orderId) {
 	$.post(
 		'<?php echo Router::url(array('plugin' => 'shop', 'controller' => 'shops', 'action' => 'payment_complete'));?>', 
-		{ id : orderId, error : $('#error').is(':checked') }, 
+		{ orderid : orderId, error : $('#error').is(':checked') }, 
 		function() {
 			if ($('#error').is(':checked')) {
 				window.location.replace(
-					'<?php echo Router::url(array('plugin' => 'shop', 'controller' => 'shops', 'action' => 'payment_error'));?>?id=' + orderId);			
+					'<?php echo Router::url(array('plugin' => 'shop', 'controller' => 'shops', 'action' => 'payment_error'));?>?orderid=' + orderId);			
 			} else {
 				window.location.replace(
-					'<?php echo Router::url(array('plugin' => 'shop', 'controller' => 'shops', 'action' => 'payment_success'));?>?id=' + orderId);
+					'<?php echo Router::url(array('plugin' => 'shop', 'controller' => 'shops', 'action' => 'payment_success'));?>?orderid=' + orderId);
 			}
 		}
 	);

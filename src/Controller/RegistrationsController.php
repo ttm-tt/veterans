@@ -578,6 +578,13 @@ class RegistrationsController extends AppController {
 				$this->request->getSession()->write('Competitions.id', $this->request->getQuery('competition_id'));
 		}
 
+		if ($this->request->getQuery('para') !== null) {
+			if ($this->request->getQuery('para') == 'all')
+				$this->request->getSession()->delete('Participants.para');
+			else
+				$this->request->getSession()->write('Participants.para', $this->request->getQuery('para'));
+		}
+
 		if ($this->request->getQuery('age_category') !== null) {
 			if ($this->request->getQuery('age_category') == 'all') 
 				$this->request->getSession()->delete('Participants.age_category');
@@ -591,7 +598,7 @@ class RegistrationsController extends AppController {
 			else
 				$this->request->getSession()->write('Participants.partner', $this->request->getQuery('partner'));
 		}
-
+		
 		if ($this->request->getQuery('cancelled') !== null) {
 			if ($this->request->getQuery('cancelled') == 'all') 
 				$this->request->getSession()->delete('Registrations.cancelled');
@@ -772,7 +779,14 @@ class RegistrationsController extends AppController {
 			
 			if (count($or))
 				$conditions[] = ['OR' => $or];
-		}			
+		}		
+		
+		if ($this->request->getSession()->check('Participants.para')) {
+			if ($this->request->getSession()->read('Participants.para') == 'no')
+				$conditions[] = 'People.ptt_class = 0';
+			else if ($this->request->getSession()->read('Participants.para') == 'yes')
+				$conditions[] = 'People.ptt_class <> 0';
+		}
 			
 		if ($this->request->getSession()->read('Participants.age_category') == 'different')  {
 			$conditions[] = array(
@@ -988,6 +1002,8 @@ class RegistrationsController extends AppController {
 			]
 		))->toArray());
 		$this->set('competition_id', $this->request->getSession()->check('Competitions.id') ?: false);
+		
+		$this->set('para', $this->request->getSession()->read('Participants.para') ?: false);
 		
 		// Don't set if not in session
 		if ($this->request->getSession()->check('Participants.partner'))
@@ -1973,7 +1989,7 @@ class RegistrationsController extends AppController {
 			
 			// Mark $partner explicitely as dirty, because without using patchEntity
 			// this is not done automatically
-			$partner->isDirty('participant', true);
+			$partner->setDirty('participant', true);
 			$type = 'double';
 		}
 		
@@ -1983,7 +1999,7 @@ class RegistrationsController extends AppController {
 			
 			// Mark $partner explicitely as dirty, because without using patchEntity
 			// this is not done automatically
-			$partner->isDirty('participant', true);
+			$partner->setDirty('participant', true);
 			$type = 'mixed';
 		}
 		

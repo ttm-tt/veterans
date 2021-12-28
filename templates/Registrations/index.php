@@ -56,6 +56,14 @@
 				'id' => 'competition_id',
 				'options' => $competitions
 			]);
+			
+			if ($hasRootPrivileges) {
+				echo $this->element('filter', [
+					'label' => __d('user', 'Paralympic'),
+					'id' => 'para',
+					'options' => ['no' => __d('user', 'No'), 'yes' => __d('user', 'Yes')],
+				]);
+			}
 
 			if (!$isPartnerWanted) {
 				echo $this->element('filter', [
