@@ -12,7 +12,7 @@ use App\Model\Table\GroupsTable;
 			&nbsp;
 		</dd>
 		<?php // Hide allowed functions for admins: They are allowed to do everything. ?>
-		<?php if ($group['Group']['id'] != GroupsTable::getAdminId()) { ?>
+		<?php if ($group['id'] != GroupsTable::getAdminId()) { ?>
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php echo __('Functions'); ?></dt>
 		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
 			<?php echo $group['type_names']; ?>
