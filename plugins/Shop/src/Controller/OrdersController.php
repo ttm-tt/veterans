@@ -1168,7 +1168,7 @@ class OrdersController extends ShopAppController {
 					if (!empty($cancelled))
 						continue;
 
-					$this->RegistrationUpdate->_delete($regId, array('modified' => $ct));
+					$this->RegistrationUpdate->_delete($regId, array('sendMail' => $sendMail, 'modified' => $ct));
 				}
 			} else {
 				foreach ($data['Player'] as $player) {

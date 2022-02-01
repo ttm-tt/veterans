@@ -36,7 +36,7 @@ Router::addUrlFilter(function (array $params, ?ServerRequest $request) {
 	return $params;
 });	
 				
-Router::scope('/', function (RouteBuilder $routes) {
+$routes->scope('/', function (RouteBuilder $routes) {
     /**
      * Here, we are connecting '/' (base path) to a controller called 'Pages',
      * its action called 'display', and we pass a param to select the view file
@@ -53,14 +53,14 @@ Router::scope('/', function (RouteBuilder $routes) {
 	 * ChT
 	 * Route to participants
 	 */
-	Router::connect('/participants', array('controller' => 'pages', 'action' => 'participants'));
-	Router::connect('/count_participants', array('plugin' => 'shop', 'controller' => 'shops', 'action' => 'count_participants'));
+	$routes->connect('/participants', array('controller' => 'pages', 'action' => 'participants'));
+	$routes->connect('/count_participants', array('plugin' => 'shop', 'controller' => 'shops', 'action' => 'count_participants'));
 
 	/**
 	 * ChT
 	 * Route to register
 	 */
-	Router::connect('/register', array('plugin' => 'shop', 'controller' => 'shops', 'action' => 'wizard'));
+	$routes->connect('/register', array('plugin' => 'shop', 'controller' => 'shops', 'action' => 'wizard'));
 
     /**
      * Connect catchall routes for all controllers.

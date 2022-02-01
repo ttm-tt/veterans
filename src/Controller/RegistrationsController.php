@@ -423,12 +423,12 @@ class RegistrationsController extends AppController {
 
 	function _doImportPartner($file) {
 		// Load models
-		$this->loadModel('Person');
-		$this->loadModel('Nation');
-		$this->loadModel('Registration');
-		$this->loadModel('Participant');
-		$this->loadModel('Tournament');
-		$this->loadModel('User');
+		$this->loadModel('People');
+		$this->loadModel('Nations');
+		$this->loadModel('Registrations');
+		$this->loadModel('Participants');
+		$this->loadModel('Tournaments');
+		$this->loadModel('Users');
 
 		// Skip first line
 		fgets($file);
@@ -476,14 +476,14 @@ class RegistrationsController extends AppController {
 			}
 
 			$registration = $this->Registrations->find('all', array(
-				'contain' => array('Participant', 'Person'),
+				'contain' => array('Participants', 'People'),
 				'conditions' => array(
 					'Registration.tournament_id' => $tid,
 					'Registration.person_id' => $pid
 				)
 			))->first();
 
-			if (empty($registration['Participant']['double_id']))
+			if (empty($registration['participant']['double_id']))
 				continue;
 
 			$conditions = array('Participant.double_id IS NOT NULL');
@@ -506,7 +506,7 @@ class RegistrationsController extends AppController {
 			}
 
 			$partner = $this->Registrations->find('all', array(
-				'contain' => array('Person', 'Participant'),
+				'contain' => array('People', 'Participants'),
 				'conditions' => $conditions
 			));
 
@@ -518,13 +518,13 @@ class RegistrationsController extends AppController {
 				$this->log($id . ': Partner ' . $doublePartner . ' not unique', 'debug');
 				$this->log($id . ': Partner ' . $doublePartner . ' not unique', 'error');
 				continue;
-			} else if (!empty($registration['Participant']['double_partner_id']) &&
-			           $registration['Participant']['double_partner_id'] != $partner[0]['Registration']['id'] ) {
+			} else if (!empty($registration['participant']['double_partner_id']) &&
+			           $registration['participant']['double_partner_id'] != $partner[0]['Registration']['id'] ) {
 				$this->log($id . ' already has a partner', 'debug');
 				$this->log($id . ' already has a partner', 'error');
 				continue;
-			} else if (!empty($partner['Participant']['double_partner_id']) &&
-			           $partner[0]['Participant']['double_partner_id'] != $registration['Registration']['id'] ) {
+			} else if (!empty($partner['participant']['double_partner_id']) &&
+			           $partner[0]['articipant']['double_partner_id'] != $registration['Registration']['id'] ) {
 				$this->log($doublePartner . ' already has a partner', 'debug');
 				$this->log($doublePartner . ' already has a partner', 'error');
 				continue;
@@ -535,7 +535,7 @@ class RegistrationsController extends AppController {
 			$data = $registration;
 
 			$this->log('Partner ' . $fields[17] . ' found', 'debug');
-			$data['Participant']['double_partner_id'] = $partner[0]['Registration']['id'];
+			$data['participant']['double_partner_id'] = $partner[0]['Registration']['id'];
 
 			if (!$this->RegistrationUpdate->_save($data)) {
 				$this->log('Could not save participant ' . $registration['Person']['last_name'] . ', ' . $registration['Person']['first_name'], 'error');
@@ -1223,7 +1223,7 @@ class RegistrationsController extends AppController {
 
 					if ( empty($partner['participant'][$partnerField]) || 
 					     $oldRegistration['participant'][$partnerField] != $partner['id'] ||
-						 $oldRegistration['id'] != $partner['Participant'][$partnerField]) {
+						 $oldRegistration['id'] != $partner['participant'][$partnerField]) {
 
 						if ($field_name != 'replaced_by_id')
 							$name = $name . ' (' . __('wanted') . ')';
@@ -3109,7 +3109,7 @@ class RegistrationsController extends AppController {
 			$conditions['People.last_name COLLATE utf8_bin LIKE '] = $this->request->getSession()->read('People.last_name') . '%';
 
 		$registrations = $this->Registrations->find('all', array(
-			// 'contain' => array('Person', 'Participant'),
+			// 'contain' => array('People', 'Participants'),
 			'conditions' => $conditions,
 			'contain' => [
 				'People',
@@ -3262,7 +3262,7 @@ class RegistrationsController extends AppController {
 
 		$data = $this->Registrations->find('all', array(
 			'conditions' => $conditions,
-			'contains' => array( 'Person', 'Participant' )
+			'contains' => array( 'People', 'Participants' )
 		));
 
 		$this->set('nations', $nations);

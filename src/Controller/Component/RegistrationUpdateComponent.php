@@ -819,8 +819,9 @@ class RegistrationUpdateComponent extends Component {
 		if (! $this->_save($oldRegistration, $options))
 			return false;
 
-		// Notify users
-		$this->_sendMail('delete_registration', 'Registration Cancelled', null, $oldRegistration);
+		// Notify users if so wanted
+		if ($options['sendMail'] ?? true)
+			$this->_sendMail('delete_registration', 'Registration Cancelled', null, $oldRegistration);
 
 		return true;
 	}
