@@ -53,14 +53,14 @@ $routes->scope('/', function (RouteBuilder $routes) {
 	 * ChT
 	 * Route to participants
 	 */
-	$routes->connect('/participants', array('controller' => 'pages', 'action' => 'participants'));
-	$routes->connect('/count_participants', array('plugin' => 'shop', 'controller' => 'shops', 'action' => 'count_participants'));
+	$routes->connect('/participants', array('controller' => 'Pages', 'action' => 'participants'));
+	$routes->connect('/count_participants', array('plugin' => 'Shop', 'controller' => 'Shops', 'action' => 'count_participants'));
 
 	/**
 	 * ChT
 	 * Route to register
 	 */
-	$routes->connect('/register', array('plugin' => 'shop', 'controller' => 'shops', 'action' => 'wizard'));
+	$routes->connect('/register', array('plugin' => 'Shop', 'controller' => 'Shops', 'action' => 'wizard'));
 
     /**
      * Connect catchall routes for all controllers.
