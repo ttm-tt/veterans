@@ -1001,7 +1001,7 @@ class RegistrationsController extends AppController {
 				'tournament_id' => $tid
 			]
 		))->toArray());
-		$this->set('competition_id', $this->request->getSession()->check('Competitions.id') ?: false);
+		$this->set('competition_id', $this->request->getSession()->read('Competitions.id') ?: false);
 		
 		$this->set('para', $this->request->getSession()->read('Participants.para') ?: false);
 		
@@ -2728,6 +2728,8 @@ class RegistrationsController extends AppController {
 			$this->request->getSession()->write('Tournaments.id', $this->request->getQuery('tournament_id'));
 			return $this->redirect(array('action' => 'index'));
 		}
+
+		ini_set('memory_limit', '512M');
 
 		// Disable debug output
 		// Configure::write('debug', false);

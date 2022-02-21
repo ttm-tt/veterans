@@ -24,7 +24,8 @@ use Cake\Routing\Router;
  */
 Router::defaultRouteClass('DatasourceRoute');
 
-Router::extensions(['csv', 'pdf', 'json']);
+// Moved to scope '/'
+// Router::extensions(['csv', 'pdf', 'json']);
 
 Router::addUrlFilter(function (array $params, ?ServerRequest $request) {
 	if ($request !== null && $request->getParam('ds') && !isset($params['ds'])) {
@@ -37,6 +38,8 @@ Router::addUrlFilter(function (array $params, ?ServerRequest $request) {
 });	
 				
 $routes->scope('/', function (RouteBuilder $routes) {
+	$routes->setExtensions(['csv', 'pdf', 'json']);
+	
     /**
      * Here, we are connecting '/' (base path) to a controller called 'Pages',
      * its action called 'display', and we pass a param to select the view file

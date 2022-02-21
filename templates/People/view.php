@@ -1,4 +1,12 @@
 <?php /* Copyright (c) 2020 Christoph Theis */ ?>
+<?php
+	$wcOptions = [
+		0 => __('None'),
+		1 => __('Complete'),
+		2 => __('Ramp')
+	];
+?>
+
 <div class="people view">
 <h2><?php echo __('Person');?></h2>
 	<?php
@@ -38,12 +46,16 @@
 				<?php echo $person['extern_id']; ?>
 				&nbsp;
 			</dd>
-			<dt<?php if ($i % 2 == 0) echo $class;?>><?php echo __('Association'); ?></dt>
-			<dd<?php if ($i++ % 2 == 0) echo $class;?>>
-				<?php echo $person['nation']['description']; ?>
-				&nbsp;
-			</dd>
 		<?php } ?>
+			<dt><?= __('Para TT Class'); ?></dt>
+			<dd><?= $person['ptt_class']; ?></dd>
+			<dt><?= __('Wheelchair'); ?></dt>
+			<dd><?= $wcOptions[$person['ptt_wchc']]; ?>
+		<dt<?php if ($i % 2 == 0) echo $class;?>><?php echo __('Association'); ?></dt>
+		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+			<?php echo $person['nation']['description']; ?>
+			&nbsp;
+		</dd>
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php echo __('Email'); ?></dt>
 		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
 			<?php echo $person['email']; ?>
