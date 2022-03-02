@@ -5,12 +5,7 @@ use Cake\Core\Configure;
 use Cake\Routing\Router;
 use Shop\Payment\AbstractPayment;
 
-/**
- * Description of AxeptaPayment
- *
- * @author ettu
- */
-class PositivityPayment extends AbstractPayment {
+class SmartPayPayment extends AbstractPayment {
 	public function __construct($controller) {
 		parent::__construct($controller);
 	}
@@ -19,7 +14,7 @@ class PositivityPayment extends AbstractPayment {
 	 *  Payment completed Hidden callback from PSP
 	 */
 	public function completed($request) {
-		file_put_contents(TMP . '/positivity/xxxcompleted-' . date('Ymd-His'), 
+		file_put_contents(TMP . '/smartpay/xxxcompleted-' . date('Ymd-His'), 
 				print_r([
 					'POST' => $request->is(['post', 'put']), 
 					'Request' => $request], true)
@@ -47,7 +42,7 @@ class PositivityPayment extends AbstractPayment {
 			$order = $this->_controller->Orders->get($orderId);
 		} catch (InvalidPrimaryKeyException | RecordNotFoundException $_ex) {
 			$this->_UNUSED($_ex);
-			file_put_contents(TMP . '/positivity/xxxerror-' . date('Ymd-His'), print_r($data, true));
+			file_put_contents(TMP . '/smartpay/xxxerror-' . date('Ymd-His'), print_r($data, true));
 			return;			
 		}
 		
@@ -84,7 +79,7 @@ class PositivityPayment extends AbstractPayment {
 			);
 			$status = 'FRD';
 		} else if (($data['status'] ?? '') !== 'APPROVED') {
-			file_put_contents(TMP . '/positivity/xxxerror-' . date('Ymd-His'), print_r($data, true));
+			file_put_contents(TMP . '/smartpay/xxxerror-' . date('Ymd-His'), print_r($data, true));
 			$status = 'ERR';
 		} else {
 			$status = 'PAID';
@@ -121,7 +116,7 @@ class PositivityPayment extends AbstractPayment {
 		$this->_controller->OrderPayments->save(
 				$this->_controller->OrderPayments->newEntity([
 					'order_id' => $order->id,
-					'payment' => 'positivity',
+					'payment' => 'smartpay',
 					'value' => '',
 					'created' => date('Y-m-d H:i:s', $ct)
 				])
@@ -129,42 +124,33 @@ class PositivityPayment extends AbstractPayment {
 		
 		$amount = number_format($order->outstanding, 2, '.', '');
 		
-		$configBaseName = 'Shop.PaymentProviders.Positivity';
+		$configBaseName = 'Shop.PaymentProviders.SmartPay';
+		$access_code = Configure::read($configBaseName . '.accountData.access_code');
+		$encryption_key = Configure::read($configBaseName . '.accountData.encryption_key');
 				
-		// In test mode we need to make our order id unique, but in production
-		// we want to detect duplicates
-		$isTest = Configure::read($configBaseName . '.test') == true;
-		$storeId = Configure::read($configBaseName . '.accountData.storeId');
-		$kSig = Configure::read($configBaseName . '.accountData.kSig');
-		$txnDateTime = date('Y:m:d-H:i:s', $ct);
-		$currency = 'EUR';
-
 		$parameters = [
-			'txntype' => 'PURCHASE',
-			'timezone' => 'CET',
-			'txndatetime' => $txnDateTime,
-			'hash' => $this->_getHashCode($storeId, $txnDateTime, $amount, $currency, $kSig),
-			'storename' => $storeId,
-			'mode' => 'payonly',
-			'currency' => $currency,
-			'language' => 'EN',
-			'responseSuccessURL' => $this->_getUrlSuccess($order),
-			'responseFailURL' => $this->_getUrlError($order),
-			'transactionNotificationURL' => $this->_getUrlCompleted($order),
-			'chargetotal' => $amount,
-			// In test environment the order id may be a duplicate so we append 
-			// something unique
-			'oid' => $isTest ? $order->id . '-' . uniqid() : $order->id,
-			// Accounting at EVC2022 already use that field for other purposes
-			// 'invoicenumber' => $order->invoice,
-			// Special fields for EVC2022 accounting
-			'addInfo2' => 'EVC_' . $order->id,
-			'addInfo4' => $order->invoice,
+			'tid' => $ct,
+			'merchant_id' => Configure::read($configBaseName . '.accountData.merchant_id'),
+			'order_id' => $orderId,
+			'amount' => number_format($amount, 3),
+			'currency' => $this->_controller->_shopSettings['currency'],
+			'cancel_url' => $this->_getUrlCompleted($orderId),
+			'redirect_url' => $this->_getUrlCompleted($orderId,),
+			'billing_name' => $order->invoice_address->title . ' ' . 
+							  $order->invoice_address->first_name . ' ' . 
+							  $order->invoice_address->last_name,
+			'billing_address' => $order->invoice_address->street,
+			'billing_city' => $order->invoice_address->city,
+			'billing_country' => $order->invoice_address->country->name ?? '',
+			'billing_email' => $order->email
 		];
 		
-		$this->_controller->set('json_object', 
-			$parameters
-		);
+		$data = $this->_encrypt($parameters, $encryption_key);
+		
+		$this->_controller->set('json_object', [
+			'encRequest' => $data,
+			'access_code' => $access_code
+		]);
 		
 		$this->_controller->render('json');		
 	}
@@ -173,7 +159,7 @@ class PositivityPayment extends AbstractPayment {
 	 *  Payment was not successful, redirect initiated from PSP in case of error
 	 */
 	public function error($request) {
-		file_put_contents(TMP . '/positivity/xxxerror-' . date('Ymd-His'), print_r($request, true));		
+		file_put_contents(TMP . '/smartpay/xxxerror-' . date('Ymd-His'), print_r($request, true));		
 				
 		if ($request->isPost())
 			$data = $request->getData();
@@ -218,20 +204,20 @@ class PositivityPayment extends AbstractPayment {
 	}
 
 	public function getPaymentName() {
-		return 'BNL POSitivity';
+		return 'SmartPay';
 	}
 
 	public function getSubmitUrl() {
-		return Configure::read('Shop.PaymentProviders.Positivity.endpoint');		
+		return Configure::read('Shop.PaymentProviders.SmartPay.endpoint');		
 	}
 
 	public function prepare($amount) {
-		$submitUrl = Configure::read('Shop.PaymentProviders.Positivity.endpoint');
+		$submitUrl = $this->getSubmitUrl();
 		
 		$this->_controller->set('amount', $amount);
 		$this->_controller->set('submitUrl', $submitUrl);
 		
-		$this->_controller->render('Shops/Payment/positivity');				
+		$this->_controller->render('Shops/Payment/smartpay');				
 	}
 
 	/**
@@ -252,7 +238,7 @@ class PositivityPayment extends AbstractPayment {
 	 *  Payment was successful, redirect initiated from PSP in case of success
 	 */
 	public function success($request) {
-		file_put_contents(TMP . '/positivity/xxxsuccess-' . date('Ymd-His'), print_r($request, true));		
+		file_put_contents(TMP . '/smartpay/xxxsuccess-' . date('Ymd-His'), print_r($request, true));		
 		
 		if ($request->isPost())
 			$data = $request->getData();
@@ -270,28 +256,37 @@ class PositivityPayment extends AbstractPayment {
 		$this->_controller->_success($orderId);		
 	}
 
-	private function _getHashCode($storeId, $txnDateTime, $amount, $currency, $kSig) : string {
-		$strToHash = $storeId . $txnDateTime . $amount . $currency . $kSig;
-		$hex = bin2hex($strToHash);		
-		$sha = sha1($hex);
-		
-		return $sha;
-	}
-	
-	private function _verifyHashCode($txnDateTime, $data) : string {
-		$configBaseName = 'Shop.PaymentProviders.Positivity';
+	private function _encrypt(array $params, $encryption_key) : string {
+		// $data = http_build_query($params);
+		$data = '';
+		foreach ($params as $key => $val)
+			$data .= $key . '=' . urlencode($val) . '&';
 				
-		$storeId = Configure::read($configBaseName . '.accountData.storeId');
-		$kSig = Configure::read($configBaseName . '.accountData.kSig');
+		$iv = openssl_random_pseudo_bytes(16);
+		$tag = '';
 		
-		$strToHash = $kSig . $data['approval_code'] . $data['chargetotal'] . $data['currency'] . $txnDateTime . $storeId;
-		$hex = bin2hex($strToHash);
-		$sha = sha1($hex);
+		$openMode = openssl_encrypt($data, 'AES-256-GCM', $encryption_key, OPENSSL_RAW_DATA, $iv, $tag);
+		$b2h = bin2hex($iv) . bin2hex($openMode . $tag);
+		
+		return $b2h;
+	}
 
-		return $sha;
+	private function _decrypt(string $encryptedText, $encryption_key) : array {
+		$iv_len = $tag_len = 16;
+		
+		$encryptedText = hex2bin($encryptedText);
+		$iv = substr($encryptedText, 0, $iv_len);
+		$tag = substr($encryptedText, -$tag_len, $iv_len);
+		$cyphertext = substr($encryptedText, $iv_len, $tag_len);
+		$data = openssl_decrypt($cyphertext, 'AES-256-GCM', $encryption_key, OPENSSL_RAW_DATA, $iv, $tag);
+		
+		parse_str($data, $res);
+		
+		return $res;
 	}
 	
-	private function _getUrlSuccess($order) {
+	
+	private function _getUrlSuccess($orderId) {
 		if (Configure::read('Shop.testUrl'))
 			return 'https://galadriel.ttm.co.at/veterans-v4/' . $this->_controller->getRequest()->getParam('ds') . '/shop/shops/payment_success';
 		else
@@ -299,14 +294,14 @@ class PositivityPayment extends AbstractPayment {
 	}
 	
 	
-	private function _getUrlError($order) {
+	private function _getUrlError($orderId) {
 		if (Configure::read('Shop.testUrl'))
 			return 'https://galadriel.ttm.co.at/veterans-v4/' . $this->_controller->getRequest()->getParam('ds') . '/shop/shops/payment_error';
 		else
 			return Router::url(array('plugin' => 'shop', 'controller' => 'shops', 'action' => 'payment_error'), true);		
 	}
 
-	private function _getUrlCompleted($order) {
+	private function _getUrlCompleted($orderId) {
 		if (Configure::read('Shop.testUrl'))
 			return 'https://galadriel.ttm.co.at/veterans-v4/' . $this->_controller->getRequest()->getParam('ds') . '/shop/shops/payment_complete';
 		else

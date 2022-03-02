@@ -144,6 +144,19 @@ return [
 					'storeId' => '08000001',
 					'kSig' => 'xHosiSb08fs8BQmt9Yhq3Ub99E8='
 				]
+			],
+			
+			/*
+			 * SmartPay
+			 */
+			'SmartPay' => [
+				'engine' => 'SmartPayPayment',
+				'endpoint' => 'https://mti.bankmuscat.com:6443/transaction.do?command=initiateTransaction',
+				'accountData' => [
+					'merchant_id' => 0,
+					'access_code' => '',
+					'encryption_key' => ''					
+				]
 			]
 		],
 		

@@ -6,7 +6,7 @@ use Cake\Utility\Hash;
 // Get the configuration engine so we can load our default config file
 $engine = new PhpConfig();
 // Read our providers file
-$configValues = $engine->read('Shop.providers');
+$configValues = $engine->read('Shop.payments');
 
 // Merge our default ErrorEmail config with the apps config ErrorEmail config prefering the apps version
 Configure::write(
