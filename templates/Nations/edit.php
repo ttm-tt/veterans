@@ -8,6 +8,7 @@
 		echo $this->Form->control('name');
 		echo $this->Form->control('description');
 		echo $this->Form->control('continent');
+		echo $this->Form->control('enabled');
 	?>
 	</fieldset>
 <?php 

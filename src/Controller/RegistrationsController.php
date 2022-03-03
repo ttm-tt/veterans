@@ -127,6 +127,7 @@ class RegistrationsController extends AppController {
 		
 		$this->set('nations', $this->Nations->find('list', array(
 			'fields' => array('id', 'description'),
+			'conditions' => ['enabled' => 1],
 			'order' => array('description' => 'ASC')			
 		))->toArray());
 		

@@ -140,6 +140,7 @@ class ShopsController extends ShopAppController {
 
 		$this->set('nations', $this->Nations->find('list', array(
 			'fields' => array('id', 'description'), 
+			'conditions' => ['enabled' => 1],
 			'order' => ['description' => 'ASC']
 		))->toArray());
 		
