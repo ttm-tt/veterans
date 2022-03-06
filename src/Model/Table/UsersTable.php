@@ -86,7 +86,7 @@ class UsersTable extends AppTable {
     	if (isset($this->data['group_id'])) {
 			$groupId = $this->data['group_id'];
 	    } else {
-    		$groupId = $this->field('group_id');
+    		$groupId = $this->fieldByConditions('group_id');
 	    }
     	if (!$groupId) {
 			return null;

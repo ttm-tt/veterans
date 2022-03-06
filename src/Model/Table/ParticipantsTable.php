@@ -70,7 +70,7 @@ class ParticipantsTable extends AppTable {
 
 		$histories = array();
 
-		$tid = $this->Registrations->field('tournament_id', array(
+		$tid = $this->Registrations->fieldByConditions('tournament_id', array(
 					'id' => $newData['registration_id']
 		));
 
@@ -91,7 +91,7 @@ class ParticipantsTable extends AppTable {
 			// Also records for wanted double / mixed partner, if any
 			if (!empty($newData['double_partner_id'])) {
 				$h['registration_id'] = $newData['double_partner_id'];
-				$currentPartner = $this->field('double_partner_id', array('registration_id' => $h['registration_id']));
+				$currentPartner = $this->fieldByConditions('double_partner_id', array('registration_id' => $h['registration_id']));
 				if ($currentPartner == $newData['registration_id'])
 					$h['field_name'] = 'double_partner_confirmed';
 				else
@@ -105,7 +105,7 @@ class ParticipantsTable extends AppTable {
 
 			if (!empty($newData['mixed_partner_id'])) {
 				$h['registration_id'] = $newData['mixed_partner_id'];
-				$currentPartner = $this->field('mixed_partner_id', array('registration_id' => $h['registration_id']));
+				$currentPartner = $this->fieldByConditions('mixed_partner_id', array('registration_id' => $h['registration_id']));
 				if ($currentPartner == $newData['registration_id'])
 					$h['field_name'] = 'mixed_partner_confirmed';
 				else
@@ -133,7 +133,7 @@ class ParticipantsTable extends AppTable {
 			if (empty($newData['double_cancelled'])) {
 				if (!empty($newData['double_partner_id'])) {
 					$h['registration_id'] = $newData['double_partner_id'];
-					$currentPartner = $this->field('double_partner_id', array('registration_id' => $h['registration_id']));
+					$currentPartner = $this->fieldByConditions('double_partner_id', array('registration_id' => $h['registration_id']));
 					if ($currentPartner == $newData['registration_id'])
 						$h['field_name'] = 'double_partner_confirmed';
 					else
@@ -149,7 +149,7 @@ class ParticipantsTable extends AppTable {
 			if (empty($newData['mixed_cancelled'])) {
 				if (!empty($newData['mixed_partner_id'])) {
 					$h['registration_id'] = $newData['mixed_partner_id'];
-					$currentPartner = $this->field('mixed_partner_id', array('registration_id' => $h['registration_id']));
+					$currentPartner = $this->fieldByConditions('mixed_partner_id', array('registration_id' => $h['registration_id']));
 					if ($currentPartner == $newData['registration_id'])
 						$h['field_name'] = 'mixed_partner_confirmed';
 					else
@@ -230,7 +230,7 @@ class ParticipantsTable extends AppTable {
 
 					if (!empty($newData['double_partner_id'])) {
 						$h['registration_id'] = $newData['double_partner_id'];
-						$currentPartner = $this->field('double_partner_id', array('registration_id' => $h['registration_id']));
+						$currentPartner = $this->fieldByConditions('double_partner_id', array('registration_id' => $h['registration_id']));
 						if ($currentPartner == $newData['registration_id'])
 							$h['field_name'] = 'double_partner_confirmed';
 						else
@@ -256,7 +256,7 @@ class ParticipantsTable extends AppTable {
 
 					if (!empty($newData['mixed_partner_id'])) {
 						$h['registration_id'] = $newData['mixed_partner_id'];
-						$currentPartner = $this->field('mixed_partner_id', array('registration_id' => $h['registration_id']));
+						$currentPartner = $this->fieldByConditions('mixed_partner_id', array('registration_id' => $h['registration_id']));
 						if ($currentPartner == $newData['registration_id'])
 							$h['field_name'] = 'mixed_partner_confirmed';
 						else
@@ -275,7 +275,7 @@ class ParticipantsTable extends AppTable {
 					     !empty($newData['double_partner_id']) ) {
 
 						$h['registration_id'] = $newData['double_partner_id'];
-						$currentPartner = $this->field('double_partner_id', array('registration_id' => $h['registration_id']));
+						$currentPartner = $this->fieldByConditions('double_partner_id', array('registration_id' => $h['registration_id']));
 						if ($currentPartner == $newData['registration_id'])
 							$h['field_name'] = 'double_partner_confirmed';
 						else
@@ -308,7 +308,7 @@ class ParticipantsTable extends AppTable {
 					     !empty($newData['mixed_partner_id']) ) {
 
 						$h['registration_id'] = $newData['mixed_partner_id'];
-						$currentPartner = $this->field('mixed_partner_id', array('registration_id' => $h['registration_id']));
+						$currentPartner = $this->fieldByConditions('mixed_partner_id', array('registration_id' => $h['registration_id']));
 						if ($currentPartner == $newData['registration_id'])
 							$h['field_name'] = 'mixed_partner_confirmed';
 						else
