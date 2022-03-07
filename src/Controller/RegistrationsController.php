@@ -867,6 +867,12 @@ class RegistrationsController extends AppController {
 			$conditions[] = ['OR' => $or];
 		}
 
+		if ($this->request->getSession()->read('Participants.age_category') == 'wrong')  {
+			$conditions[] = ['OR' => [
+					'double_id <> (SELECT double_id FROM participants p WHERE p.registration_id = Participants.double_partner_id)',
+					'mixed_id <> (SELECT mixed_id FROM participants p WHERE p.registration_id = Participants.mixed_partner_id)'
+				]];
+		}
 		
 		$this->paginate = array(
 			'sortableFields' => [
