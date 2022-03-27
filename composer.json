@@ -22,7 +22,8 @@
 		"geoip2/geoip2": "~2.0",
 		"stripe/stripe-php": "^7.27",
 		"cakephp/migrations": "^3.0",
-		"cakephp/bake": "^2.1"
+		"cakephp/bake": "^2.1",
+		"otherguy/php-currency-api": "^1.7"
 	},
 	"require-dev" : {
 		"ext-tidy": "^7.2",

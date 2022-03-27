@@ -1,6 +1,14 @@
 <div class="shops index">
 	<h2><?php echo __d('user', 'Your registration has been completed');?></h2>
 	<br>
+	<?php
+	if (!empty($shopSettings['invoice_add_body_top'])) {
+		echo '<h3>';
+		echo $shopSettings['invoice_add_body_top'];
+		echo '</h3>';
+		echo '<br>';		
+	}
+	?>
 	<div class="hint">
 	<?php
 		if ($order['order_status']['name'] === 'WAIT') {

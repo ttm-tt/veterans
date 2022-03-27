@@ -3,6 +3,14 @@ return [
 // Shop settings
 	'Shop' => [
 		/*
+		 * Currency converter
+		 */
+		'CurrencyConverter' => [
+			'engine' => 'openexchangerates',
+			'key' => '',
+			'currency' => 'USD',
+		],
+		/*
 		 * Payment service providers
 		 */
 		'PaymentProviders' => [

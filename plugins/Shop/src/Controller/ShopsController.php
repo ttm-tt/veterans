@@ -1168,7 +1168,7 @@ class ShopsController extends ShopAppController {
 			'zip_code' => '7000',
 			'city' => 'Eisenstadt',
 			'country_id' => $this->Countries->fieldByConditions('id', ['iso_code_3' => 'AUT']),
-			'email' => 'ettu@localhost.localdomain'
+			'email' => 'theis@gmx.at'
 		));
 		
 		$this->set('test', true);

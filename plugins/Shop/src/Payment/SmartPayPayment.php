@@ -14,7 +14,8 @@ class SmartPayPayment extends AbstractPayment {
 	 *  Payment completed Hidden callback from PSP
 	 */
 	public function completed($request) {
-		file_put_contents(TMP . '/smartpay/xxxcompleted-' . date('Ymd-His'), 
+		$ct = time();
+		file_put_contents(TMP . '/smartpay/xxxcompleted-' . date('Ymd-His', $ct), 
 				print_r([
 					'POST' => $request->is(['post', 'put']), 
 					'Request' => $request], true)
@@ -27,68 +28,63 @@ class SmartPayPayment extends AbstractPayment {
 		else
 			return;
 		
-		// Nothing we can do without the order id
-		if (empty($data['oid']))
+		// Nothing we can do without the valid response
+		if (empty($data['encResp']))
 			return;
 				
+		$configBaseName = 'Shop.PaymentProviders.SmartPay';
+		$encryption_key = Configure::read($configBaseName . '.accountData.encryption_key');
+				
+		// decrypt data
+		$decryptedText = '';
+		$response = $this->_decrypt($data['encResp'], $encryption_key, $decryptedText);
+		file_put_contents(TMP . '/smartpay/xxxdecrypt-response' . date('Ymd-His', $ct), 
+				print_r([$decryptedText, $response], true));
+		if (empty($response['order_id']))
+			return;
+		
 		$this->_controller->loadModel('Shop.Orders');
 		$this->_controller->loadModel('Shop.OrderPayments');
 		$this->_controller->OrderPayments->setTable('shop_order_payment_details');
 
 		// Get order id. In test mode there is a random postfix to make the order id unique
-		$orderId = explode('-', $data['oid'])[0] ?? 0;
+		$orderId = substr($response['order_id'], 0, 5);;
+		
+		// We need a unique order id
 
-		try {
-			$order = $this->_controller->Orders->get($orderId);
-		} catch (InvalidPrimaryKeyException | RecordNotFoundException $_ex) {
-			$this->_UNUSED($_ex);
-			file_put_contents(TMP . '/smartpay/xxxerror-' . date('Ymd-His'), print_r($data, true));
-			return;			
+		$order = $this->_controller->Orders->get($orderId);
+		if ($order === null) {
+			file_put_contents(TMP . '/smartpay/xxxerror-' . date('Ymd-His', $ct), print_r($response, true));
+			return;
 		}
 		
-		// Read (last) payment details for order to get txndate
-		$details = $this->_controller->OrderPayments->find()
-				->where(['order_id' => $orderId])
-				->order(['created' => 'DESC'])
-				->first()
-		;
-		
-		if ($details === null)
-			return;
-		
-		$txnDateTime = $details->created->format('Y:m:d-H:i:s');
-		
-		$details->value = json_encode($data);
-		$this->_controller->OrderPayments->save($details);
-		
-		$amount = number_format($order->outstanding, 2, '.', '');
-		$currency = 'EUR';
+		$this->_controller->OrderPayments->save(
+				$this->_controller->OrderPayments->newEntity([
+						'order_id' => $orderId,
+						'payment' => 'smartpay',
+						'value' => json_encode($response)
+					])
+		);
+
+		// $amount = number_format($order->outstanding, 2, '.', '');
+		// $currency = $response['currency'];
 		$status = 'PAID';
-		$sha = $this->_verifyHashCode($txnDateTime, $data);
 		
-		if ($sha !== $data['response_hash'] || 
-				$currency !== $data['currency'] ||
-				$amount !== $data['chargetotal']) {
-			file_put_contents(TMP . '/positivity/xxxfraud-' . date('Ymd-His'), print_r(
-				[
-					'sha' => $sha, 
-					'txnDateTime' => $txnDateTime,
-					'amount' => $amount,
-					'data' => $data
-				], true)
-			);
-			$status = 'FRD';
-		} else if (($data['status'] ?? '') !== 'APPROVED') {
-			file_put_contents(TMP . '/smartpay/xxxerror-' . date('Ymd-His'), print_r($data, true));
+		if (($response['order_status'] ?? '') !== 'Success') {
+			file_put_contents(TMP . '/smartpay/xxxerror-' . date('Ymd-His'), print_r($response, true));
 			$status = 'ERR';
 		} else {
 			$status = 'PAID';
 		}
 		
-		if ($status === 'PAID')
+		if ($status === 'PAID') {
 			$this->_controller->_onSuccess($orderId, $status);
-		else 
-			$this->_controller->_onError($orderId, $status);		
+		} else {
+			$this->_controller->_onError($orderId, $status);
+		}
+		
+		return $this->_controller->redirect($status === 'PAID' ? 
+				$this->_getUrlSuccess($orderId) : $this->_getUrlError($orderId));
 	}
 
 	/**
@@ -101,26 +97,10 @@ class SmartPayPayment extends AbstractPayment {
 		$this->_controller->loadModel('Shop.OrderArticles');
 		
 		$order = $this->_controller->Orders->get($orderId, [
-			'contain' => ['InvoiceAddresses']
+			'contain' => ['InvoiceAddresses' => 'Countries']
 		]);
 		
 		$ct = time();
-		
-		// Transaction time (see below) is used later to verify the hash, 
-		// but it is not included in the parameters returned from the server.
-		// To access it any time later create a new record in payment_details
-		// (we need it anyway later) with the 'created' timestamp set to $ct
-		$this->_controller->loadModel('Shop.OrderPayments');
-		$this->_controller->OrderPayments->setTable('shop_order_payment_details');
-		
-		$this->_controller->OrderPayments->save(
-				$this->_controller->OrderPayments->newEntity([
-					'order_id' => $order->id,
-					'payment' => 'smartpay',
-					'value' => '',
-					'created' => date('Y-m-d H:i:s', $ct)
-				])
-		);
 		
 		$amount = number_format($order->outstanding, 2, '.', '');
 		
@@ -128,15 +108,32 @@ class SmartPayPayment extends AbstractPayment {
 		$access_code = Configure::read($configBaseName . '.accountData.access_code');
 		$encryption_key = Configure::read($configBaseName . '.accountData.encryption_key');
 				
+		$isTest = Configure::read($configBaseName . '.test') == true;
+
+		// Convert currency to accepted currency by provider, if necessary
+		
+		$shopCurrency = $this->_controller->_shopSettings['currency'];
+		$bankCurrency = Configure::read('Shop.CurrencyConverter.currency', $shopCurrency);
+		
+		if ($shopCurrency !== $bankCurrency) {
+			$driver = \Otherguy\Currency\DriverFactory::make(Configure::read('Shop.CurrencyConverter.engine'));
+			$driver->accessKey(Configure::read('Shop.CurrencyConverter.key'));
+			$driver->config('format', '1');
+
+			$result = $driver->from($shopCurrency)->to($bankCurrency)->get();
+		
+			$amount = $result->convert($amount, $shopCurrency, $bankCurrency);
+		}
+		
 		$parameters = [
-			'tid' => $ct,
 			'merchant_id' => Configure::read($configBaseName . '.accountData.merchant_id'),
-			'order_id' => $orderId,
+			'order_id' => sprintf('%05d', $orderId) . ($isTest ? substr('' . $ct, -8) : ''),
 			'amount' => number_format($amount, 3),
-			'currency' => $this->_controller->_shopSettings['currency'],
+			'currency' => $bankCurrency, 
+			'si_type' => 'ONDEMAND',
 			'cancel_url' => $this->_getUrlCompleted($orderId),
-			'redirect_url' => $this->_getUrlCompleted($orderId,),
-			'billing_name' => $order->invoice_address->title . ' ' . 
+			'redirect_url' => $this->_getUrlCompleted($orderId),
+			'billing_name' => // $order->invoice_address->title . ' ' . 
 							  $order->invoice_address->first_name . ' ' . 
 							  $order->invoice_address->last_name,
 			'billing_address' => $order->invoice_address->street,
@@ -148,6 +145,7 @@ class SmartPayPayment extends AbstractPayment {
 		$data = $this->_encrypt($parameters, $encryption_key);
 		
 		$this->_controller->set('json_object', [
+			// 'parameters' => $parameters,
 			'encRequest' => $data,
 			'access_code' => $access_code
 		]);
@@ -169,15 +167,15 @@ class SmartPayPayment extends AbstractPayment {
 			return;
 		
 		// Nothing we can do without order id
+		// I use 'oid' as the URL parameter, it is shorter
 		if (empty($data['oid']))
 			return;
 		
-		$orderId = explode('-', $data['oid'])[0];
+		$orderId = substr($data['oid'], 0, 5);
 		
 		$errMsg = 'The transaction has failed';
 		
 		// Set status to ERR, if not yet done
-		// If the users cancels the order UrlKO was not called.
 		$this->_controller->_onError($orderId, 'ERR');
 		$this->_controller->_failure($orderId, $errMsg);		
 	}
@@ -248,10 +246,11 @@ class SmartPayPayment extends AbstractPayment {
 			return;
 				
 		// Nothing we can do without order id
+		// I use 'oid' as the URL parameter, it is shorter
 		if (empty($data['oid']))
 			return;
 		
-		$orderId = explode('-', $data['oid'])[0];
+		$orderId = substr($data['oid'], 0, 5);
 		
 		$this->_controller->_success($orderId);		
 	}
@@ -271,16 +270,17 @@ class SmartPayPayment extends AbstractPayment {
 		return $b2h;
 	}
 
-	private function _decrypt(string $encryptedText, $encryption_key) : array {
+	private function _decrypt(string $encryptedText, $encryption_key, &$decryptedText) : array {
 		$iv_len = $tag_len = 16;
 		
 		$encryptedText = hex2bin($encryptedText);
 		$iv = substr($encryptedText, 0, $iv_len);
 		$tag = substr($encryptedText, -$tag_len, $iv_len);
-		$cyphertext = substr($encryptedText, $iv_len, $tag_len);
-		$data = openssl_decrypt($cyphertext, 'AES-256-GCM', $encryption_key, OPENSSL_RAW_DATA, $iv, $tag);
+		$cyphertext = substr($encryptedText, $iv_len, -$tag_len);
+		$decryptedText = openssl_decrypt($cyphertext, 'AES-256-GCM', $encryption_key, OPENSSL_RAW_DATA, $iv, $tag);
 		
-		parse_str($data, $res);
+		$res = [];
+		parse_str($decryptedText, $res);
 		
 		return $res;
 	}
@@ -288,17 +288,17 @@ class SmartPayPayment extends AbstractPayment {
 	
 	private function _getUrlSuccess($orderId) {
 		if (Configure::read('Shop.testUrl'))
-			return 'https://galadriel.ttm.co.at/veterans-v4/' . $this->_controller->getRequest()->getParam('ds') . '/shop/shops/payment_success';
+			return 'https://galadriel.ttm.co.at/veterans-v4/' . $this->_controller->getRequest()->getParam('ds') . '/shop/shops/payment_success?oid=' . $orderId;
 		else
-			return Router::url(array('plugin' => 'shop', 'controller' => 'shops', 'action' => 'payment_success'), true);
+			return Router::url(array('plugin' => 'shop', 'controller' => 'shops', 'action' => 'payment_success', '?' => ['oid' => $orderId]), true);
 	}
 	
 	
 	private function _getUrlError($orderId) {
 		if (Configure::read('Shop.testUrl'))
-			return 'https://galadriel.ttm.co.at/veterans-v4/' . $this->_controller->getRequest()->getParam('ds') . '/shop/shops/payment_error';
+			return 'https://galadriel.ttm.co.at/veterans-v4/' . $this->_controller->getRequest()->getParam('ds') . '/shop/shops/payment_error?oid=' . $orderId;
 		else
-			return Router::url(array('plugin' => 'shop', 'controller' => 'shops', 'action' => 'payment_error'), true);		
+			return Router::url(array('plugin' => 'shop', 'controller' => 'shops', 'action' => 'payment_error', '?' => ['oid' => $orderId]), true);		
 	}
 
 	private function _getUrlCompleted($orderId) {
