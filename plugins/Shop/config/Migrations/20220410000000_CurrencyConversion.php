@@ -14,7 +14,7 @@ class CurrencyConversion extends AbstractMigration {
 					'scale' => 3
 				])
 				->addColumn('payment_currency', 'string', [
-					'after' => 'payment_total',
+					'after' => 'payment_amount',
 					'default' => null,
 					'null' => true,
 					'limit' => 3
