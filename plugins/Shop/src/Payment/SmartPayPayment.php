@@ -123,6 +123,11 @@ class SmartPayPayment extends AbstractPayment {
 			$result = $driver->from($shopCurrency)->to($bankCurrency)->get();
 		
 			$amount = $result->convert($amount, $shopCurrency, $bankCurrency);
+			
+			$order->payment_total = $amount;
+			$order->payment_currency = $bankCurrency;
+			
+			$this->_controller->Oders->save($order);
 		}
 		
 		$parameters = [
