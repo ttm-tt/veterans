@@ -127,7 +127,7 @@ class SmartPayPayment extends AbstractPayment {
 			$order->payment_total = $amount;
 			$order->payment_currency = $bankCurrency;
 			
-			$this->_controller->Oders->save($order);
+			$this->_controller->Orders->save($order);
 		}
 		
 		$parameters = [
