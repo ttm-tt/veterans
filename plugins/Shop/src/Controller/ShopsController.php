@@ -2440,15 +2440,14 @@ class ShopsController extends ShopAppController {
 		}
 		
 		$variants = $this->ArticleVariants->find('list', array(
-			'fields' => array('id', 'name')
+			'fields' => array('id', 'name'),
+			'conditions' => ['variant_type' => 'Events']
 		))->toArray();		
 
 		foreach ($registrations as $registration) {
 			$events = array('S', 'D', 'X', 'T');
 			if ( !empty($registration['person']['variant_id']) && 
-				 !empty($variants[$registration['person']['variant_id']]) &&
-				 !empty($variants[$registration['person']['variant_id']]['variant_type']) &&
-				 $variants[$registration['person']['variant_id']]['variant_type'] === 'Events' )
+				 !empty($variants[$registration['person']['variant_id']]) )
 				$events = explode(',', $variants[$registration['person']['variant_id']]);
 				
 			$article = $registration['OrderArticle'];

@@ -25,7 +25,7 @@ class RegistrationUpdateComponent extends Component {
 		$this->getController()->loadModel('Participants');
 		
 		if (is_array($registration))
-			return $this->addParticipant($this->getController()->Registrations->newEntity($registration));
+			return $this->addParticipant($this->getController()->Registrations->newEntity($registration), $events, $options);
 
 		$tid = $this->getController()->getRequest()->getSession()->read('Tournaments.id');
 		
