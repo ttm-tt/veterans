@@ -25,14 +25,7 @@ function onPay() {
 		'dataType' : 'json',
 		'url'  : '<?php echo Router::url(array('action' => 'onPrepareCreditcard')); ?>',
 		'success' : function(data) {
-			if ($.isPlainObject(data)) {
-				$.each(data, function(key, value) {
-					$('form#netseasy').append('<input type="hidden" name="' + key + '" value="' + value + '">');
-				});
-				$('form#netseasy').submit();
-			} else {
-				$('div#processing h2').html("<?php echo __d('user', 'The payment could not be initiated. Please try again later.');?>");
-			}
+			window.location.href = data['hostedPaymentPageUrl'];
 		},
 		'error' : function(xhr, status, error) {
 			$('div#processing h2').html("<?php echo __d('user', 'The payment could not be initiated. Please try again later.');?>");

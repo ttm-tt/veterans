@@ -28,6 +28,10 @@ class NetsEasyPayment extends AbstractPayment {
 	// Called when customer confirms order
 	public function confirm($orderId) {
 		$response = $this->_executeCall($orderId);
+		$redirectURl = $response['hostedPaymentPageUrl'];
+		$this->_controller->set('json_object', ['hostedPaymentPageUrl' => $response['hostedPaymentPageUrl']]);
+		$this->_controller->render('json');		
+		
 	}
 
 	// Callback when payment is completed
@@ -70,14 +74,20 @@ class NetsEasyPayment extends AbstractPayment {
 
 	// Get options for the call
 	private function _getOptions(int $orderId) : array {
-		$order = $this->_controller->Orders->record($orderId);
+		$order = $this->_controller->Orders->record($orderId, [
+			'contain' => [
+				'InvoiceAddresses' => 'Countries'
+			]
+		]);
+		// debug($order);
 		
 		return [
 			'checkout' => [
 				'integrationType' => 'HostedPaymentPage',
-				'returnUrl' => Router::url(['plugin' => 'shop', 'controller' => 'shops', 'action' => 'payment_success', '?' => ['order' => $orderId]]),
+				'returnUrl' => Router::url(['plugin' => 'shop', 'controller' => 'shops', 'action' => 'payment_success', '?' => ['order' => $orderId]], true),
 				'errorUrl' => ['plugin' => 'Shop', 'controller' => 'shops', 'action' => 'payment_error', '?' => ['order' => $orderId]],
 				'termsUrl' => Router::url(['plugin' => 'shop', 'controller' => 'pages', 'action' => 'shop_agb']),
+				'merchantHandlesConsumerData' => true,
 			],
 			'order' => [
 				'amount' => $order->outstanding * 100,
@@ -118,8 +128,10 @@ class NetsEasyPayment extends AbstractPayment {
 			'Authorization: ' . Configure::read($this->configBaseName . '.accountData.secretKey')
 		]);
 		$json = curl_exec($curl);
-		debug($json);
+		// debug($json);
 		$result = json_decode($json, true);
+		
+		file_put_contents(TMP . '/netseasy/xxxconfirm-' . date('Ymd-His'), print_r(['result' => $result], true));
 		
 		return $result;
 	}
