@@ -165,6 +165,18 @@ return [
 					'access_code' => '',
 					'encryption_key' => ''					
 				]
+			],
+			
+			/*
+			 * 'Nets Easy
+			 */
+			'NetsEasy' => [
+				'engine' => 'NetsEasyPayment',
+				'endpoint' => 'https://test.api.dibspayment.eu/v1/payments',
+				'accountData' => [
+					'secretKey' => '',
+				]
+
 			]
 		],
 		
