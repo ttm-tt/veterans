@@ -1,3 +1,4 @@
+<?php /* Copyright (c) 2022 Christoph Theis */ ?>
 <?php
 
 /*
