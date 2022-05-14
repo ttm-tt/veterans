@@ -34,7 +34,7 @@ class ShopsController extends ShopAppController {
 		$this->Wizard->autoAdvance = false;
 		$this->Wizard->steps = array(
 			'people', 
-			'buy', 
+			['ITEMS' => ['buy']], 
 			'address', 
 			'review', 
 			array(
@@ -651,6 +651,16 @@ class ShopsController extends ShopAppController {
 
 
 	public function _processPeople() {
+		$this->loadModel('Shop.Articles');
+		$items = 
+				$this->Articles->find()
+					->where(['visible' => true])
+		;
+		
+		// If no items are available (and never were), skip buy
+		if ($items->count() === 0)
+			$this->Wizard->branch('ITEMS', true);
+				
 		return true;
 	}
 	
