@@ -3478,7 +3478,11 @@ class RegistrationsController extends AppController {
 		if ($person['ptt_class'] == 0)
 			$ptt_class = array('ptt_class = 0');
 		else
-			$ptt_class = array('ptt_class >= ' => $person['ptt_class']);
+			$ptt_class = ['OR' => [
+				'Competitions.ptt_class >=' => $person['ptt_class'],
+				'Competitions.ptt_class =' => 0,
+			]];
+			// $ptt_class = array('ptt_class >= ' => $person['ptt_class']);
 
 		$competitions['doubles'] = $this->Competitions->find('list', array(
 			'fields' => array('id', 'description'),

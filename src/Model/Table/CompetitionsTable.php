@@ -92,7 +92,11 @@ class CompetitionsTable extends AppTable {
 		if (($person['ptt_class'] ?? 0) == 0) {
 			$conditions[] = 'ptt_class = 0';			
 		} else {
-			$conditions['ptt_class >='] = $person['ptt_class'];
+			$conditions[] = ['OR' => [
+				'Competitions.ptt_class >=' => $person['ptt_class'],
+				'Competitions.ptt_class =' => 0,
+			]];
+			// $conditions['ptt_class >= '] = $person['ptt_class'];
 		}
 
 		$ret = array();
@@ -103,7 +107,7 @@ class CompetitionsTable extends AppTable {
 				'fields' => array('id', 'description'),
 				'conditions' => ['Competitions.type_of' => 'S'] + $conditions,
 				'order' => [
-					'Competitions.ptt_class' => 'ASC',
+					'Competitions.ptt_class' => 'DESC',
 					'Competitions.description' => 'ASC'
 				]
 			))->toArray();
@@ -113,7 +117,7 @@ class CompetitionsTable extends AppTable {
 				'fields' => array('id', 'description'),
 				'conditions' => ['Competitions.type_of' => 'S'] + $conditions,
 				'order' => [
-					'Competitions.ptt_class' => 'ASC',
+					'Competitions.ptt_class' => 'DESC',
 					'Competitions.born' => 'ASC'
 				],
 				'limit' => 1
@@ -124,7 +128,7 @@ class CompetitionsTable extends AppTable {
 				'fields' => array('id', 'description'),
 				'conditions' => ['Competitions.type_of' => 'S'] + $conditions,
 				'order' => [
-					'Competitions.ptt_class' => 'ASC',
+					'Competitions.ptt_class' => 'DESC',
 					'Competitions.born' => 'DESC'
 				],
 				'limit' => 1
@@ -193,14 +197,18 @@ class CompetitionsTable extends AppTable {
 		if (($person['ptt_class'] ?? 0) == 0) {
 			$conditions[] = 'ptt_class = 0';
 		} else {
-			$conditions['ptt_class >= '] = $person['ptt_class'];
+			$conditions[] = ['OR' => [
+				'Competitions.ptt_class >=' => $person['ptt_class'],
+				'Competitions.ptt_class =' => 0,
+			]];
+			// $conditions['ptt_class >= '] = $person['ptt_class'];
 		}
 
 		$c = $this->find('all', array(
 			'fields' => array('id'),
 			'conditions' => $conditions,
 			'order' => [
-				'ptt_class' => 'ASC',
+				'ptt_class' => 'DESC',
 				'born' => ($year < date('Y') - 30 ? 'ASC' : 'DESC')
 			]
 		))->first();
