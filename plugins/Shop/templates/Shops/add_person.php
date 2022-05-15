@@ -168,8 +168,7 @@ function onChangeType(cb) {
 			echo '</p>';
 			
 			echo '<p>';
-			echo __d('user', 'If you are a Paralympic Athlete flag the appropriate field and after put your international classification.');
-			echo __d('user', 'Paralympic athletes can participate only in the single event.');
+			echo __d('user', 'If you are a Paralympic Athlete flag the appropriate field and put your international classification.');
 			echo '</p>';
 		?>
 		</div>
