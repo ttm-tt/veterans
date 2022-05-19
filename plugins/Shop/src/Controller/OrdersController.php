@@ -550,6 +550,7 @@ class OrdersController extends ShopAppController {
 		));
 		
 		$articles = $this->OrderArticles->find('all', array(
+			'contain' => ['Articles'],
 			'conditions' => array(
 				'OrderArticles.order_id' => $id,
 				'OrderArticles.created <= ' => $when
