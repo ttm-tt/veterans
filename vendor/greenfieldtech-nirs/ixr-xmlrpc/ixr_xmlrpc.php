@@ -343,7 +343,7 @@ EOD;
         // $this->output($xml);
 		// Instead of echoing the result we return it and leave it to the caller
 		// what to do with it. This way we can use it in tests
-		return $xml;
+		return '<?xml version="1.0"?>' . "\n" . $xml;
     }
     function call($methodname, $args) {
         if (!$this->hasMethod($methodname)) {
