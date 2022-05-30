@@ -2706,6 +2706,8 @@ class RegistrationsController extends AppController {
 					$count = $data['second_grouping'];
 				else if($this->_compareBy($data['third'], $last, $p))
 					$count = $data['third_grouping'];
+				else if($this->_compareBy($data['fourth'], $last, $p))
+					$count = $data['fourth_grouping'];
 
 				// Increment number to next multiple of count
 			    if ($count > 0) 

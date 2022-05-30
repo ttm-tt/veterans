@@ -75,6 +75,22 @@
 					?>
 				</div>	
 			</div>
+			<div style="display:table-row">
+				<div style="display:table-cell">
+					<?php 
+						echo $this->Form->select('fourth', $sort_options, array(
+							'empty' => __('None'),
+							'style' => 'width:100%',
+						));
+					?>
+				</div>	
+				<div style="display:table-cell">
+					<?php
+						echo $this->Form->text('fourth_grouping', array(
+						));
+					?>
+				</div>	
+			</div>
 		</div>
 	</fieldset>
 
