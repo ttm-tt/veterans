@@ -148,7 +148,7 @@ class NetsEasyPayment extends AbstractPayment {
 	}
 
 	public function getSubmitUrl() : string {
-		
+		return '';
 	}
 
 	public function process() {
