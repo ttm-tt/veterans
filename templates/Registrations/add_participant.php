@@ -1,9 +1,38 @@
 <?php /* Copyright (c) 2020 Christoph Theis */ ?>
 <?php
 use App\Model\Table\TypesTable;
+
+use Cake\Utility\Hash;
 ?>	
 <?php $this->Html->scriptStart(array('block' => true)); ?>
 
+$(document).ready(function() {
+	// Show / hide para settings
+	$('select#person-ptt-class').parent().hide();
+	$('select#person-wchc').parent().hide();
+	
+	$('input#person-is-para').change(function() {
+		if (this.checked)
+			$('select#person-ptt-class').parent().show();
+		else {
+			$('select#person-ptt-class').parent().hide();
+			$('select#person-wchc').parent().hide();
+		}
+	});
+	
+	$('select#person-ptt-class').change(function() {
+		if (!$('input#person-is-para').is(':checked'))
+			$('select#person-wchc').parent().hide();
+		else if (this.value > 5)
+			$('select#person-wchc').parent().hide();
+		else
+			$('select#person-wchc').parent().show();
+	});
+	
+	$('input#person-is-para').trigger('change');
+	$('select#person-ptt-class').trigger('change');
+});
+	
 function onChangeType() {
 	var type_id = $('#type-id').val();
 	if (type_id == <?php echo TypesTable::getPlayerId();?>) {
@@ -127,6 +156,30 @@ $(document).ready(function() {
 				'minYear' => date('Y') - 120,
 				'templateVars' => ['id' => 'person-dob']
 			));
+
+			if (!empty($havePara)) {
+				echo $this->Form->control('person.is_para', array(
+					'label' => __('Paralympic athlete'),
+					'type' => 'checkbox',
+				));
+
+				echo $this->Form->control('person.ptt_class', array(
+					'label' => 'ITTF paralympic classification', 
+					'type' => 'select',
+					'options' => Hash::combine(range(1, 10), '{n}', '{n}'),
+					'empty' => __('Select your ITTF paralympic classification')
+				));
+
+				echo $this->Form->control('person.wchc', array(
+					'label' => __('Wheelchair Required'),
+					'type' => 'select',
+					'options' => [
+						1 => __('Wheel chair completely'),
+						2 => __('Wheel char ramp')
+					],
+					'empty' => __('Select when a wheel chair is required')
+				));
+			}
 
 			$options = array();
 			if ($this->request->getSession()->check('Nations.id'))

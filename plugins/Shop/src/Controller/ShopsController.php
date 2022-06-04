@@ -408,7 +408,7 @@ class ShopsController extends ShopAppController {
 				}
 				
 				// Check para settings
-				if (($person['isPara'] ?? 0) == 0) {
+				if (($person['is_para'] ?? 0) == 0) {
 					$person['ptt_class'] = 0;
 					$person['wchc'] = 0;
 				}

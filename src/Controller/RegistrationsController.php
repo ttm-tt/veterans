@@ -102,6 +102,12 @@ class RegistrationsController extends AppController {
 					return $this->redirect(['action' => 'index']);
 				}
 			}
+
+			// Check para settings
+			if (($registration['person']['is_para'] ?? 0) == 0) {
+				$registrations['person']['ptt_class'] = 0;
+				$registrations['person']['wchc'] = 0;
+			}				
 			
 			// Start transaction. The model argument is a dummy, hopefully ...
 			$db = $this->Registrations->getConnection();
@@ -122,6 +128,17 @@ class RegistrationsController extends AppController {
 					return $this->redirect(array('action' => 'add_participant'));
 			}
 		}
+
+		$this->loadModel('Competitions');
+		$havePara = $this->Competitions->find()
+				->where([
+					'tournament_id' => $tid,
+					'ptt_class > 0'
+				]) 
+				->count()
+			> 0;
+		
+		$this->set('havePara', $havePara);
 		
 		$this->loadModel('Nations');
 		
@@ -1654,6 +1671,19 @@ class RegistrationsController extends AppController {
 				$db->rollback();
 		}
 		
+		$registration['person']['is_para'] = (($registration['person']['ptt_class'] ?: 0) > 0);
+		
+		$this->loadModel('Competitions');
+		$havePara = $this->Competitions->find()
+				->where([
+					'tournament_id' => $tid,
+					'ptt_class > 0'
+				]) 
+				->count()
+			> 0;
+		
+		$this->set('havePara', $havePara);
+
 		$this->set('registration', $registration);
 
 		$this->loadModel('Nations');

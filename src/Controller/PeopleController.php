@@ -255,6 +255,17 @@ class PeopleController extends AppController {
 			'fields' => array('id', 'description'), 
 			'order' => 'description'
 		))->toArray());
+		
+		$this->loadModel('Competitions');
+		$havePara = $this->Competitions->find()
+				->where([
+					// 'tournament_id' => $tid,
+					'ptt_class > 0'
+				]) 
+				->count()
+			> 0;
+		
+		$this->set('havePara', $havePara);
 	}
 
 	function edit($id = null) {
@@ -283,11 +294,13 @@ class PeopleController extends AppController {
 		if ($person['display_name'] == $person['last_name'] . ', ' . $person['first_name'])
 			unset($person['display_name']);
 		
+		// Init is_para
+		$person['is_para'] = ($person['ptt_class'] ?: 0) > 0;
+		
 		// $this->request->data = $person->toArray();
 		
 		if (empty($this->request->getData())) {
 			$this->request->getSession()->write('referer', $this->referer());
-
 		} 
 		
 		$current_user = $this->_user;
@@ -354,6 +367,12 @@ class PeopleController extends AppController {
 			// Clear empty fields
 			if (isset($data['dob']) && empty($data['dob']))
 				$data['dob'] = null;
+			
+			// Check para
+			if (($data['is_para'] ?: 0) == 0) {
+				$data['ptt_class'] = 0;
+				$data['wchc'] = 0;
+			}
 
 			$person = $this->People->patchEntity($person, $data);
 			
@@ -366,6 +385,16 @@ class PeopleController extends AppController {
 			}
 		}
 
+		$this->loadModel('Competitions');
+		$havePara = $this->Competitions->find()
+				->where([
+					// 'tournament_id' => $tid,
+					'ptt_class > 0'
+				]) 
+				->count()
+			> 0;
+		
+		$this->set('havePara', $havePara);
 		$this->set('nations', $this->Nations->find('list', array(
 			'fields' => array('id', 'description'), 
 			'order' => 'description'

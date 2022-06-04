@@ -5,6 +5,7 @@ use App\Model\Table\RegistrationsTable;
 use App\Model\Table\TypesTable;
 
 use Cake\Routing\Router;
+use Cake\Utility\Hash;
 ?>
 
 <?php $participant = $registration['participant']; ?>
@@ -58,6 +59,33 @@ function onChangeMixed(data) {
 	$('#participant-mixed-partner.id').parent().css('display', $('#participant-mixed-id').val() ? 'block' : 'none');
 }
 
+$(document).ready(function() {
+	// Show / hide para settings
+	$('select#person-ptt-class').parent().hide();
+	$('select#perspn-wchc').parent().hide();
+	
+	$('input#person-is-para').change(function() {
+		if (this.checked)
+			$('select#person-ptt-class').parent().show();
+		else {
+			$('select#person-ptt-class').parent().hide();
+			$('select#person-wchc').parent().hide();
+		}
+	});
+	
+	$('select#person-ptt-class').change(function() {
+		if (!$('input#person-is-para').is(':checked'))
+			$('select#person-wchc').parent().hide();
+		else if (this.value > 5)
+			$('select#person-wchc').parent().hide();
+		else
+			$('select#person-wchc').parent().show();
+	});
+	
+	$('input#person-is-para').trigger('change');
+	$('select#person-ptt-class').trigger('change');
+});
+	
 function camelizeName(name) {
 	name = name.trim();
 	if (name === name.toUpperCase() || name === name.toLowerCase()) {
@@ -237,7 +265,29 @@ $(document).ready(function() {
 		}
 
 		// PTT
-		echo $this->Form->control('person.ptt_class', array('type' => 'hidden'));				
+		if (!empty($havePara) || $registration['person']['is_para']) {
+			echo $this->Form->control('person.is_para', array(
+				'label' => __('Paralympic athlete'),
+				'type' => 'checkbox'
+			));
+
+			echo $this->Form->control('person.ptt_class', array(
+				'label' => 'ITTF paralympic classification', 
+				'type' => 'select',
+				'options' => Hash::combine(range(1, 10), '{n}', '{n}'),
+				'empty' => __('Select your ITTF paralympic classification')
+			));
+
+			echo $this->Form->control('person.wchc', array(
+				'label' => __('Wheelchair Required'),
+				'type' => 'select',
+				'options' => [
+					1 => __('Wheel chair completely'),
+					2 => __('Wheel char ramp')
+				],
+				'empty' => __('Select when a wheel chair is required')
+			));
+		}
 
 		echo '<div id="participant" style="' . ($registration['type_id'] == TypesTable::getPlayerId() ? 'display:block;' : 'display:none;') . '">';
 			if ($hasRootPrivileges)

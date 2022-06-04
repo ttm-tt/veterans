@@ -3,7 +3,27 @@
 use Cake\Utility\Hash;
 ?>
 
-	<?php $this->Html->scriptStart(array('block' => true)); ?>
+<?php $this->Html->scriptStart(array('block' => true)); ?>
+$(document).ready(function() {
+	// Show / hide para settings
+	$('select#ptt-class').parent().hide();
+	$('select#wchc').parent().hide();
+	
+	$('input#is_para').change(function() {
+		if (this.checked)
+			$('select#ptt-class').parent().show();
+		else
+			$('select#ptt-class').parent().hide();
+	});
+	
+	$('select#ptt-class').change(function() {
+		if (this.value <= 5)
+			$('select#wchc').parent().show();
+		else
+			$('select#wchc').parent().hide();
+	});
+});
+	
 function camelizeName(name) {
 	name = name.trim();
 	if (name === name.toUpperCase() || name === name.toLowerCase()) {
@@ -95,15 +115,30 @@ function camelizeName(name) {
 			echo $this->Form->control('extern_id', array('label' => 'Extern ID', 'type' => 'hidden'));			
 		}
 
-		if ($hasRootPrivileges) {
-			echo $this->Form->control('ptt_class', array(
-				'label' => 'Para TT Class', 
-				'type' => 'select',
-				'options' => Hash::combine(range(0, 10), '{n}', '{n}'),
-				'empty' => false,
+		if (!empty($havePara) || ($person['ptt_class'] ?: 0) > 0) {
+			echo $this->Form->control('is_para', array(
+				'label' => __('Paralympic athlete'),
+				'type' => 'checkbox',
 			));
-		} else {
-			echo $this->Form->control('ptt_class', array('label' => 'Para TT Class', 'type' => 'hidden'));			
+			
+			echo $this->Form->control('ptt_class', array(
+				'label' => 'ITTF paralympic classification', 
+				'type' => 'select',
+				'options' => Hash::combine(range(1, 10), '{n}', '{n}'),
+				'empty' => __('Select your ITTF paralympic classification'),
+				'required' => true,
+			));
+			
+			echo $this->Form->control('wchc', array(
+				'label' => __('Wheelchair Required'),
+				'type' => 'select',
+				'options' => [
+					1 => __('Wheel chair completely'),
+					2 => __('Wheel char ramp')
+				],
+				'empty' => __('Select when a wheel chair is required'),
+				'required' => true,
+			));
 		}
 
 		if ($hasRootPrivileges) {

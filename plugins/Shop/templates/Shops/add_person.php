@@ -238,7 +238,7 @@ function onChangeType(cb) {
 		}
 		
 		if (!empty($havePara)) {
-			echo $this->Form->control('isPara', array(
+			echo $this->Form->control('is_para', array(
 				'label' => __('Paralympic athlete'),
 				'type' => 'checkbox',
 				'id' => 'is_para',
