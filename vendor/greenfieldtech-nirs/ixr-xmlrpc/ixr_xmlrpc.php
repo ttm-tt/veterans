@@ -76,9 +76,37 @@ class IXR_Value {
         if (is_object($this->data) && is_a($this->data, 'IXR_Base64')) {
             return 'base64';
         }
+		// ChT: FozenDate, FrozenTime, FrozenDateTime
+		if (is_object($this->data) && is_a($this->data, '\Cake\I18n\FrozenDate')) {
+			$this->data = [
+				'year' => $this->data->year,
+				'month' => $this->data->month,
+				'day' => $this->data->day,
+			];
+			return 'struct';
+		}
+		if (is_object($this->data) && is_a($this->data, '\Cake\I18n\FrozenTime')) {
+			$this->data = [
+				'hour' => $this->data->hour,
+				'minute' => $this->data->minute,
+				'second' => $this->data->second,
+			];
+			return 'struct';
+		}
+		if (is_object($this->data) && is_a($this->data, '\App\I18n\FrozenDateTime')) {
+			$this->data = [
+				'year' => $this->data->year,
+				'month' => $this->data->month,
+				'day' => $this->data->day,
+				'hour' => $this->data->hour,
+				'minute' => $this->data->minute,
+				'second' => $this->data->second,
+			];
+			return 'struct';
+		}
+		
         // If it is a normal PHP object convert it in to a struct
         if (is_object($this->data)) {
-            
             $this->data = get_object_vars($this->data);
             return 'struct';
         }
