@@ -118,7 +118,8 @@ class Rpc2Controller extends AppController
 			),
 			'conditions' => array(
 				'Registrations.tournament_id' => $tid,
-				'Registrations.type_id' => TypesTable::getPlayerId()
+				'Registrations.type_id' => TypesTable::getPlayerId(),
+				'Registrations.cancelled IS NULL'
 			)
 		))->disableHydration()->all()->toArray();
 	}
@@ -140,7 +141,8 @@ class Rpc2Controller extends AppController
 			),
 			'conditions' => array(
 				'Registrations.tournament_id' => $tid, 
-				'Registrations.type_id' => TypesTable::getPlayerId()
+				'Registrations.type_id' => TypesTable::getPlayerId(),
+				'Registrations.cancelled IS NULL'
 			),
 		))->disableHydration()->all()->toArray();
 	}
