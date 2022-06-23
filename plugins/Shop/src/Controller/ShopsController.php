@@ -2272,9 +2272,12 @@ class ShopsController extends ShopAppController {
 
 			$data['total'] += $item['total'];
 		}
-
+		
 		$order = $this->Orders->newEntity($data);
 		
+		if (count($order['order_articles']) == 0)
+			file_put_contents('/tmp/xxxemptyorder-' . time() , print_r($order, true));	
+
 		if (!$this->Orders->save($order)) {
 			file_put_contents('/tmp/xxxfailedorder-' . time() , print_r($order, true));	
 			
