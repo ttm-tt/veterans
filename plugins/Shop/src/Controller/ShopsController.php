@@ -2276,7 +2276,11 @@ class ShopsController extends ShopAppController {
 		$order = $this->Orders->newEntity($data);
 		
 		if (count($order['order_articles']) == 0)
-			file_put_contents('/tmp/xxxemptyorder-' . time() , print_r($order, true));	
+			file_put_contents('/tmp/xxxemptyorder-' . time() , print_r([
+					'Cart' => $this->Cart->getItems(), 
+					'Data' => $data, 'Order' => $order
+				], true)
+			);	
 
 		if (!$this->Orders->save($order)) {
 			file_put_contents('/tmp/xxxfailedorder-' . time() , print_r($order, true));	
