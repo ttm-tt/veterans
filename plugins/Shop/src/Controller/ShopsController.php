@@ -658,8 +658,13 @@ class ShopsController extends ShopAppController {
 		;
 		
 		// If no items are available (and never were), skip buy
-		if ($items->count() === 0)
+		if ($items->count() === 0) {
+			if (count($this->Cart->getPeople() ?? []	) == 0) {
+				$this->MultipleFlash->setFlash(__d('user', 'You have to register people'), 'error');
+				return false;
+			}
 			$this->Wizard->branch('ITEMS', true);
+		}
 				
 		return true;
 	}
@@ -722,8 +727,14 @@ class ShopsController extends ShopAppController {
 
 
 	public function _processBuy() {		
-		if (count($this->Cart->getItems()) === 0) {
-			$this->MultipleFlash->setFlash(__d('user', 'You have to register people or buy something'), 'error');
+		$this->loadModel('Shop.Articles');
+		$items = 
+				$this->Articles->find()
+					->where(['visible' => true])
+		;
+		
+			if (count($this->Cart->People()) === 0 && count($items) > 0) {
+				$this->MultipleFlash->setFlash(__d('user', 'You have to register people or buy something'), 'error');
 			return false;
 		}
 		
