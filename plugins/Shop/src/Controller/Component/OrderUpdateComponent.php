@@ -586,6 +586,9 @@ class OrderUpdateComponent extends Component {
 				->first()
 			;
 			
+			if ($sum === null)
+				$sum = ['count' => 0];
+			
 			if ($sum['count'] < $a['allotment']) {
 				$allotted[$a['article']['name']] += ($a['allotment'] - $sum['count']);
 				
