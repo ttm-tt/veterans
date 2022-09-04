@@ -31,6 +31,7 @@ use Cake\Utility\Hash;
 			'options' => Hash::combine(range(0, 10), '{n}', '{n}'),
 			'empty' => false
 		));
+		echo $this->Form->control('optin', array('label' => __('Optional'), 'type' => 'checkbox'));
 		echo $this->Form->control('entries', array('label' => __('No of Entries')));
 		echo $this->Form->control('entries_host', array('label' => __('No of Entries Host')));
 	?>
