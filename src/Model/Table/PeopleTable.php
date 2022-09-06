@@ -71,7 +71,18 @@ class PeopleTable extends AppTable {
 		
 		return $rules;
 	}
+	
 
+	// Modify data
+	public function beforeMarshal(EventInterface $event, ArrayObject $data, ArrayObject $options) {
+		// Check para settings
+		if (($data['is_para'] ?? 0) == 0) {
+			$data['is_para'] = 0;
+			$data['ptt_class'] = 0;
+			$data['wchc'] = 0;
+		}							
+	}
+	
 	// ----------------------------------------------------------------------
 	public function beforeSave(EventInterface $event, EntityInterface $entity, ArrayObject $options) {
 		parent::beforeSave($event, $entity, $options);

@@ -103,12 +103,6 @@ class RegistrationsController extends AppController {
 				}
 			}
 
-			// Check para settings
-			if (($registration['person']['is_para'] ?? 0) == 0) {
-				$registrations['person']['ptt_class'] = 0;
-				$registrations['person']['wchc'] = 0;
-			}				
-			
 			// Start transaction. The model argument is a dummy, hopefully ...
 			$db = $this->Registrations->getConnection();
 			

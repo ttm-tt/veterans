@@ -47,6 +47,7 @@ class UsersTable extends AppTable {
 		return $validator;
 	}
 	
+
 	// Application rules
 	public function buildRules(RulesChecker $rules) : RulesChecker {
 		// Username must be unique
