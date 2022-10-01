@@ -17,7 +17,7 @@
 		"cakephp/cache": "^4.0",
 		"phpzip/phpzip": "^2.0",
 		"friendsofcake/cakepdf": "^4.0",
-		"dompdf/dompdf": "^1.2",
+		"dompdf/dompdf": "^2.0",
 		"ebrigham1/cakephp-error-email": "dev-cake4",
 		"geoip2/geoip2": "~2.0",
 		"stripe/stripe-php": "^7.27",
