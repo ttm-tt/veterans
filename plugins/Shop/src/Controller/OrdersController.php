@@ -179,7 +179,7 @@ class OrdersController extends ShopAppController {
 				'InvoiceAddresses',
 				'Users',
 			],
-			'sortWhitelist' => [
+			'sortableFields' => [
 				'Orders.invoice',
 				'OrderStatus.description',
 				'Orders.email',

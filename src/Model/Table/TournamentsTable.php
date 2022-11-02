@@ -5,7 +5,7 @@ namespace App\Model\Table;
 use App\Model\Table\AppTable;
 
 use Cake\Event\EventInterface;
-use Cake\ Datasource\EntityInterface;
+use Cake\Datasource\EntityInterface;
 use ArrayObject;
 
 

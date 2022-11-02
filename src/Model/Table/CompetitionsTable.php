@@ -6,7 +6,7 @@ use App\Model\Table\AppTable;
 
 use ArrayObject;
 use Cake\Event\EventInterface;
-use Cake\ Datasource\EntityInterface;
+use Cake\Datasource\EntityInterface;
 use Cake\Validation\Validator;
 
 

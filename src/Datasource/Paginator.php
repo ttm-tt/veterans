@@ -2,7 +2,7 @@
 <?php
 namespace App\Datasource;
 
-use Cake\Datasource\Paginator as CakePaginator;
+use Cake\Datasource\Paging\NumericPaginator as CakePaginator;
 use Cake\Datasource\ResultSetInterface;
 
 

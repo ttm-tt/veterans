@@ -7,13 +7,12 @@ use Cake\Cache\Cache;
 use Cake\Core\Configure;
 use Cake\Http\BaseApplication;
 use Cake\Http\MiddlewareQueue;
-use Cake\Http\ServerRequest;
-use Cake\Routing\Router;
 use Cake\Routing\Middleware\AssetMiddleware;
 use Cake\Routing\Middleware\RoutingMiddleware;
 use App\Middleware\HttpOptionsMiddleware;
-use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\ServerRequestInterface;
+use Psr\Http\Server\RequestHandlerInterface;
 
 
 /**
@@ -72,12 +71,12 @@ class Application extends BaseApplication
 			// Disable caching because URL filters are not part of the cache
             ->add(new RoutingMiddleware($this, null))
 				
-			->add(function($request, $response, $next) {
+			->add(function(ServerRequestInterface $request, RequestHandlerInterface $handler) : ResponseInterface {
 				$params = $request->getAttribute('params');
 				if (($params['ds'] ?? '') !== '')
 					\Cake\Datasource\ConnectionManager::alias($params['ds'], 'default');		
 				
-				return $next($request, $response);
+				return $handler->handle($request);
 			})
 				
 			// CORS OPTIONS handler

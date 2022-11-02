@@ -31,7 +31,7 @@ class AllotmentsController extends ShopAppController {
 							'Allotments.user_id = Orders.user_id'
 						])
 			],
-			'sortWhitelist' => [
+			'sortableFields' => [
 				'Articles.description',
 				'Users.username',
 				'Allotments.allotment',

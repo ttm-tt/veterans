@@ -43,10 +43,7 @@ class AppTable extends ShimTable {
 
 	
 	public function beforeSave(EventInterface $event, EntityInterface $entity, ArrayObject $options) {
-		$ct = date('Y-m-d H:i:s');
-		
-		if (is_array($options) && !empty($options['modified'])) 
-			$ct = $options['modified'];
+		$ct = $options['modified'] ?? new \Cake\I18n\FrozenTime('now');
 		
 		// We will set created and modified here
 		unset($entity->created);
