@@ -214,7 +214,7 @@ class WizardComponent extends Component {
 		
 		if ( !in_array('Wizard.Wizard', $this->controller->viewBuilder()->getHelpers()) && 
 			 !array_key_exists('Wizard.Wizard', $this->controller->viewBuilder()->getHelpers())) {
-			$this->controller->viewBuilder()->setHelpers(['Wizard.Wizard']);
+			$this->controller->viewBuilder()->addHelpers(['Wizard.Wizard']);
 		}
 	}
 /**
