@@ -40,7 +40,7 @@ class CartComponent extends Component {
 
 
 	// Called after render
-	public function shutdown(Event $event) {
+	public function afterFilter(Event $event) {
 		$this->Wizard->save('cart', $this->cart);
 	}
 	
