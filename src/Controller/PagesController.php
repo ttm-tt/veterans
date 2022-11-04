@@ -21,14 +21,6 @@ class PagesController extends AppController {
 	public $name = 'Pages';
 
 /**
- * Default helper
- *
- * @var array
- * @access public
- */
-	public $helpers = array('Html');
-
-/**
  * This controller does not use a model
  *
  * @var array
