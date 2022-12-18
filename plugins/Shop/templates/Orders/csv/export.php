@@ -49,6 +49,7 @@
 			$order['invoice_address']['street'] ?? '',
 			$order['invoice_address']['zip_code'] ?? '',
 			$order['invoice_address']['city'] ?? '',
+			empty($order['invoice_address']['country_id']) ? '' : $countryNames[$order['invoice_address']['country_id']],
 			empty($order['invoice_address']['country_id']) ? '' : $countries[$order['invoice_address']['country_id']],
 			date('Y-m-d', strtotime($order['created'])),
 			date('Y-m-d', strtotime($order['invoice_paid'])),
