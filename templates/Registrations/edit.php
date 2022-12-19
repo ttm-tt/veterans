@@ -126,8 +126,12 @@ function camelizeName(name) {
 			// That simplifies dealing with changed partners
 			echo $this->Form->control('type_id', array('type' => 'hidden'));
 			echo $this->Form->control('type.description', array('label' => __('Function'), 'readonly' => 'readonly'));
-		} else if ($this->request->getSession()->check('Types.id') && $registration['type_id'] == $this->request->getSession()->read('Types.id')) {
+		} else if (false && $this->request->getSession()->check('Types.id') && $registration['type_id'] == $this->request->getSession()->read('Types.id')) {
 			// If there is a filter for a type (e.g. media officer) don't change it.
+			echo $this->Form->control('type_id', array('type' => 'hidden'));
+			echo $this->Form->control('type.description', array('label' => __('Function'), 'readonly' => 'readonly'));
+		} else if (count($types) <= 1) {
+			// If there are no types to choose from
 			echo $this->Form->control('type_id', array('type' => 'hidden'));
 			echo $this->Form->control('type.description', array('label' => __('Function'), 'readonly' => 'readonly'));
 		} else {
