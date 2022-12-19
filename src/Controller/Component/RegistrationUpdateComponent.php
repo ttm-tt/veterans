@@ -82,7 +82,7 @@ class RegistrationUpdateComponent extends Component {
 			$max = $this->getController()->People->find('all', array(
 				'fields' => array('max' => 'MAX(CAST(SUBSTR(People.extern_id, ' . (strlen($prefix) + 1) . ') AS SIGNED))'),
 				'conditions' => array(
-					'People.user_id' => ($uid ?? 0),
+					'People.user_id IS' => $uid,
 					'People.extern_id LIKE' => $prefix . '%'
 				)
 			))->first()->get('max');
