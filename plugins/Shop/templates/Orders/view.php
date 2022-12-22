@@ -237,10 +237,10 @@ use Cake\Utility\Hash;
 
 				if ($person['cancelled'] !== null) 
 					echo '<td></td>';
-				else if (true || $editPerson)
+				else if ($editPerson)
 					echo '<td class="actions">' . $this->Html->link(__('Edit'), array('action' => 'edit_person', $person['article_id'], $person['idx'])) . '</td>';
 				else if ($editRegistration && !empty($regids[$person['person_id']]))
-					echo '<td class="actions">' . $this->Html->link(__('Edit'), array('plugin' => null, 'controller' => 'registrations', 'action' => 'edit', $regids[$person['person_id']])) . '</td>';
+					echo '<td class="actions">' . $this->Html->link(__('Edit'), array('plugin' => null, 'controller' => 'registrations', 'action' => 'edit_participant', $regids[$person['person_id']])) . '</td>';
 				else
 					echo '<td></td>';
 				
@@ -305,7 +305,7 @@ use Cake\Utility\Hash;
 				else if ($editPerson)
 					echo '<td class="actions">' . $this->Html->link(__('Edit'), array('action' => 'edit_person', $person['article_id'], $person['idx'])) . '</td>';
 				else if ($editRegistration && !empty($regids[$person['person_id']]))
-					echo '<td class="actions">' . $this->Html->link(__('Edit'), array('plugin' => null, 'controller' => 'registrations', 'action' => 'edit', $regids[$person['person_id']])) . '</td>';
+					echo '<td class="actions">' . $this->Html->link(__('Edit'), array('plugin' => null, 'controller' => 'registrations', 'action' => 'edit_participant', $regids[$person['person_id']])) . '</td>';
 				else
 					echo '<td></td>';
 
