@@ -286,7 +286,7 @@ class OrderUpdateComponent extends Component {
 				unset($invoiceAddress['id']);
 				unset($invoiceAddress['order_id']);
 				
-				$invoiceAddress->isNew(true);
+				$invoiceAddress->setNew(true);
 				
 				$invoiceOrder['invoice_address'] = $invoiceAddress;
 			}
