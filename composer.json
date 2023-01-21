@@ -26,7 +26,7 @@
 		"otherguy/php-currency-api": "^1.7"
 	},
 	"require-dev" : {
-		"ext-tidy": "^7.2",
+		"ext-tidy": "^8.1",
 		"cakephp/debug_kit": "^4.0",
 		"php-webdriver/webdriver": "^1.8",
 		"phpunit/phpunit": "^9.0"
