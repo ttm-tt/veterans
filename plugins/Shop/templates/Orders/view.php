@@ -342,7 +342,8 @@ use Cake\Utility\Hash;
 				<thead <?= $detailsOnClick ?>><tr><th colspan="2"><?= $d['created']->format('Y-m-d H:i:s') ?></thead>
 				<tbody <?= $detailsClass ?>>
 				<?php
-					$detail = method_exists($d, 'toArray') ? $d->toArray() : $d;
+					// If not an array (so it is either object or string) then try to convert to one
+					$detail = is_array($d) ? $d : $d->toArray();
 					foreach ($detail as $key => $val) {
 						if ($key === 'id')
 							continue;
