@@ -3,7 +3,7 @@ namespace Shop\Controller;
 
 use Cake\Utility\Hash;
 use Cake\Mailer\Email;
-use Cake\I18n\Date;
+use Cake\I18n\FrozenDate;
 use Cake\I18n\I18n;
 use Cake\Database\Expression\QueryExpression;
 use Cake\ORM\TableRegistry;
@@ -759,9 +759,9 @@ class OrdersController extends ShopAppController {
 
 		$date = $this->request->getData('date');
 		if (is_array($date))
-			$date = new Date($date['year'] . '-' . $date['month'] . '-' . $date['day']);
+			$date = new FrozenDate($date['year'] . '-' . $date['month'] . '-' . $date['day']);
 		else
-			$data = new Date($date);
+			$data = new FrozenDate($date);
 		
 		$data = [
 			'Storno' => [
