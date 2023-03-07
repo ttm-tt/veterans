@@ -1,5 +1,5 @@
 <?php
-use Cake\I18n\Date;
+use Cake\I18n\FrozenDate;
 ?>
 
 <div class="order form">
@@ -13,7 +13,7 @@ use Cake\I18n\Date;
 					'dateFormat' => 'YMD',
 					'minYear' => $tournament['enter_after']->year,
 					'maxYear' => date('Y'),
-					'value' => new Date('-14 days'),
+					'value' => new FrozenDate('-14 days'),
 					'required' => 'required',
 					'label' => __('All before')
 				));
@@ -28,7 +28,7 @@ use Cake\I18n\Date;
 				'dateFormat' => 'YMD',
 				'minYear' => $tournament['enter_after']->year,
 				'maxYear' => date('Y'),
-				'value' => new Date('+7 days'),
+				'value' => new FrozenDate('+7 days'),
 				'required' => 'required',
 				'label' => __('Payment until')
 			));

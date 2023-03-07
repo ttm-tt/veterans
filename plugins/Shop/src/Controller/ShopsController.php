@@ -13,7 +13,7 @@ use Cake\Core\Configure;
 use Cake\Event\EventInterface;
 use Cake\Utility\Hash;
 use Cake\Utility\Text;
-use Cake\I18n\Date;
+use Cake\I18n\FrozenDate;
 use Cake\I18n\I18n;
 
 use GeoIp2\Database\Reader;
@@ -1571,7 +1571,8 @@ class ShopsController extends ShopAppController {
 			
 			if ($this->request->getData('date')) {
 				$date = $this->request->getData('date');
-				$date = new Date($date['year'] . '-' . $date['month'] . '-' . $date['day']);
+				if ($date && is_array($date))
+					$date = new FrozenDate($date['year'] . '-' . $date['month'] . '-' . $date['day']);
 			}
 			
 			$this->loadModel('Shop.Orders');
