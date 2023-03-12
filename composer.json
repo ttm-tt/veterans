@@ -44,5 +44,10 @@
             "App\\Test\\" : "tests/",
             "Shop\\Test\\" : "./plugins/Shop/tests/"
 		}
+	},
+	"config": {
+		"allow-plugins": {
+			"cakephp/plugin-installer": true
+		}
 	}
 }
