@@ -32,7 +32,7 @@ class NationsSeed extends AbstractSeed
             [
                 'id' => '2',
                 'name' => 'CZE',
-                'description' => 'Czech Republic',
+                'description' => 'Czechia',
                 'continent' => 'Europe',
                 'modified' => '2010-09-13 10:38:38',
                 'created' => '2010-09-13 10:38:38',
@@ -1495,7 +1495,7 @@ class NationsSeed extends AbstractSeed
             ],
             [
                 'id' => '222',
-                'name' => 'SIN',
+                'name' => 'SGP',
                 'description' => 'Singapore',
                 'continent' => 'Asia',
                 'modified' => NULL,
