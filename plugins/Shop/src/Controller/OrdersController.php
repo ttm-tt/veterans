@@ -1525,7 +1525,7 @@ class OrdersController extends ShopAppController {
 				'order' => array('iso_code_2' => 'ASC')
 			))->toArray());
 		
-		} else if ($this->request->is(['ppost', 'put'])) {
+		} else if ($this->request->is(['post', 'put'])) {
 			$data = $this->request->getData();
 						
 			$data['invoice_address'] = array_merge(
