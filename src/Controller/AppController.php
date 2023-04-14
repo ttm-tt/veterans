@@ -354,6 +354,11 @@ class AppController extends ShimController {
 	}
 
 	function _blackHoleCallback($error = '', SecurityException $ex = null) {
+		if ($ex !== null)
+			$this->log(__('SecurityException: {0}', $ex->getMessage()), 'error');
+		else
+			$this->log(__('Error: {0}', $error), 'error');
+		
 		switch ($error) {
 			case 'secure' :
 				return $this->redirect('https://' . env('SERVER_NAME') . Router::url($this->request->getRequestTarget()));
