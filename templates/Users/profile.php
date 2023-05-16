@@ -2,7 +2,6 @@
 <div class="users form">
 <?php
 	echo '<div class="hint" id="loginhint">';
-	// echo __('If you need to change your email address below, please contact <a href="mailto:ettu@pt.lu">ETTU</a>.');
 	echo '</div>';
 	echo $this->Form->create($user);?>
 	<fieldset>
