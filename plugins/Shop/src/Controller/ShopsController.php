@@ -77,7 +77,8 @@ class ShopsController extends ShopAppController {
 			'wizard',
 			'add_person',
 			'remove_person',
-			'count_participants'
+			'count_participants',
+			'unsubscribe'
 		]);
 				
 		parent::beforeFilter($event);	
@@ -110,6 +111,30 @@ class ShopsController extends ShopAppController {
 		$this->Cart->clear();
 		
 		return true;
+	}
+	
+	
+	public function unsubscribe($email = null) {
+		if ($email === null)
+			$email = $this->request->getQuery('email');
+		
+		$this->set('email', $email);
+		
+		if ($email !== null) {
+			$this->loadModel('Users');
+			$this->loadModel('People');
+			
+			$this->Users->updateAll(
+					['newsletter' => false],
+					['email' => $email]
+			);
+			$this->People->updateAll(
+					['newsletter' => false],
+					['email' => $email]
+			);
+			
+			$this->MultipleFlash->setFlash(__('Unsubscribe successful'), 'success');
+		}			
 	}
 
 

@@ -65,6 +65,12 @@ $routes->scope('/', function (RouteBuilder $routes) {
 	 */
 	$routes->connect('/register', array('plugin' => 'Shop', 'controller' => 'Shops', 'action' => 'wizard'));
 
+	/**
+	 * ChT
+	 * Route to unsubscribe
+	 */
+	$routes->connect('/unsubscribe', array('plugin' => 'Shop', 'controller' => 'Shops', 'action' => 'unsubscribe'));
+
     /**
      * Connect catchall routes for all controllers.
      *

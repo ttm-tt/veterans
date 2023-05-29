@@ -161,6 +161,21 @@ function camelizeName(name) {
 			'type' => 'tel',
 			'name' => false
 		));
+
+		echo $this->Form->control('newsletter', array(
+			'type' => 'checkbox',
+			'checked' => false,
+			'label' => '',
+			'templateVars' => [
+				'after' => sprintf(
+					__d('user', 'I agree to receive newsletters'), 
+				)
+			],
+			'templates' => [
+				'inputContainer' => '<div class="grid-x input {{type}}{{required}}">{{content}}&nbsp;<p class="small-9 medium-6">{{after}}</p></div>',
+			]
+		));
+		
 	?>
 	<?php echo $this->element('shop_footer'); ?>
 	<?php echo $this->Form->end(); ?>
