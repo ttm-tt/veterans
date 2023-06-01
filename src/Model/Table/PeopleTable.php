@@ -4,13 +4,14 @@ namespace App\Model\Table;
 
 use App\Model\Table\AppTable;
 use ArrayObject;
-use Cake\Event\EventInterface;
 use Cake\Datasource\EntityInterface;
+use Cake\Event\EventInterface;
+use Cake\ORM\TableRegistry;
 use Cake\ORM\RulesChecker;
 use Cake\Validation\Validator;
 
-class PeopleTable extends AppTable {
 
+class PeopleTable extends AppTable {
 
 	public function initialize(array $config) : void {
 		parent::initialize($config);
@@ -84,6 +85,8 @@ class PeopleTable extends AppTable {
 	}
 	
 	// ----------------------------------------------------------------------
+	private $oldData;
+	
 	public function beforeSave(EventInterface $event, EntityInterface $entity, ArrayObject $options) {
 		parent::beforeSave($event, $entity, $options);
 		
@@ -91,10 +94,85 @@ class PeopleTable extends AppTable {
 			if (!$this->_calculateDisplayName($entity, $options))
 				return false;
 		}
+
+		if ($entity->isNew())
+			$this->oldData = null;
+		else
+			$this->oldData = $this->get($entity->id)->toArray();
+
+		return true;
+	}
+
+	// Store history
+	public function afterSave(EventInterface $event, EntityInterface $entity, ArrayObject $options) {
+		parent::afterSave($event, $entity, $options);
 		
-		return true;			
+		$created = $entity->isNew();
+		
+		$oldData = $this->oldData;
+
+		$newData = $this->get($entity->id)->toArray();
+
+		$history = array();
+
+		$uid = $this->_getUserId();
+
+		if (!empty($oldData)) {
+ 			$count = TableRegistry::get('PersonHistories')->find('all', array(
+				'conditions' => array('person_id' => $entity->id)))->count();
+
+			if ($count === 0) {
+				$h = array();
+				$h['person_id'] = $newData['id'];
+				$h['user_id'] = null;
+				$h['field_name'] = 'created';
+				$h['old_value'] = null;
+				$h['new_value'] = serialize($oldData);
+				$h['created'] = $oldData['modified'];
+
+				$history[] = $h;
+			}
+		}
+
+		if (empty($oldData) || $created) {
+			$h = array();
+			$h['person_id'] = $newData['id'];
+			$h['user_id'] = $uid;
+			$h['field_name'] = 'created';
+			$h['old_value'] = null;
+			$h['new_value'] = serialize($newData);
+			$h['created'] = $newData['modified'];
+
+			$history[] = $h;
+		} else {
+			foreach ($newData as $k => $v) {
+				if ($k == 'created' || $k == 'modified')
+					continue;
+
+				if ($oldData[$k] == $newData[$k])
+					continue;
+
+				$h = array();
+				$h['person_id'] = $newData['id'];
+				$h['user_id'] = $uid;
+				$h['field_name'] = $k;
+				$h['old_value'] = $oldData[$k];
+				$h['new_value'] = $newData[$k];
+				$h['created'] = $newData['modified'];
+
+				$history[] = $h;
+			}
+		}
+
+		if (!empty($history)) {
+			$personHistory = TableRegistry::get('PersonHistories');
+			$personHistory->saveMany($personHistory->newEntities($history));
+		}
+
+		$this->oldData = false;
 	}
 	
+	// -----------------------------------------------------------------------
 	private function _calculateDisplayName($entity, ArrayObject $options) {
 		if (!empty($entity['display_name'])) 
 			return true;

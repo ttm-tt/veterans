@@ -206,6 +206,165 @@ class PeopleController extends AppController {
 
 		$this->set('person', $person);
 	}
+	
+	
+	function history($id = null) {
+		if (!$id) {
+			$this->MultipleFlash->setFlash(__('Invalid person'), 'error');
+			return $this->redirect(array('action' => 'index'));
+		}
+
+		$id = $id;
+
+		$this->loadModel('Groups');
+
+		$current_user = $this->_user;
+
+		$this->loadModel('PersonHistories');
+
+		$person = $this->People->find('all', array(
+			'recursive' => -1,
+			'conditions' => array('People.id' => $id)
+		))->first();
+
+		// Security check: May this person be viewed by the current user?
+		if ( !empty($current_user['nation_id']) && 
+		     $person['nation_id'] != $current_user['nation_id'] ) {
+
+			$this->MultipleFlash->setFlash(__('You are not allowed to view this person'), 'error');
+			return $this->redirect(array('action' => 'index'));
+		}
+
+		$this->set('person', $person);
+
+		$this->loadModel('Nations');
+		$nations = $this->Nations->find('list', array(
+			'fields' => array('id', 'description')
+		))->toArray();
+		
+		$histories = $this->PersonHistories->find('all', array(
+			'contain' => array('Users'),
+			'conditions' => array('person_id' => $person['id']),
+			'order' => ['PersonHistories.created' => 'DESC']
+		))->toArray();
+
+		foreach ($histories as &$history) {
+			$field_name = $history['field_name'];
+			$old_value = $history['old_value'];
+			$new_value = $history['new_value'];
+
+			$history['old_name'] = $old_value;
+			$history['new_name'] = $new_value;
+
+			if ($field_name == 'nation_id') {
+				if (!empty($old_value))
+					$history['old_name'] = $nations[$old_value];
+
+				if (!empty($new_value))
+					$history['new_name'] = $nations[$new_value];
+			} 
+
+			if ($field_name == 'user_id') {
+				if (!empty($old_value))
+					$history['old_name'] = $this->User->fieldByConditions('username', array('id' => $old_value));	
+
+				if (!empty($new_value))
+					$history['new_name'] = $this->User->fieldByConditions('username', array('id' => $new_value));	
+
+			}
+			
+			if ($field_name == 'country_id') {
+				if (!empty($old_value))
+					$history['old_name'] = $countries[$old_value];
+
+				if (!empty($new_value))
+					$history['new_name'] = $countries[$new_value];
+			} 
+
+		}
+
+		$this->set('histories', $histories);
+	}
+
+
+	function revision($id = null) {
+		if (!$id) {
+			$this->MultipleFlash->setFlash(__('Invalid person'), 'error');
+			return $this->redirect(array('action' => 'index'));
+		}
+
+		if (empty($this->request->getQuery('date'))) {
+			$this->MultipleFlash->setFlash(__('Invalid date'), 'error');
+			return $this->redirect(array('action' => 'history', $id));
+		}
+
+		$when = $this->request->getQuery('date');
+
+		$id = $id;
+
+		$this->loadModel('Groups');
+
+		$current_user = $this->_user;
+
+		$person = $this->People->find('all', array(
+			'conditions' => array('People.id' => $id),
+		))->first();
+
+		// Security check: May this person be viewed by the current user?
+		if ( !empty($current_user['nation_id']) && 
+		     $person['nation_id'] != $current_user['nation_id'] ) {
+
+			$this->MultipleFlash->setFlash(__('You are not allowed to view this person'), 'error');
+			return $this->redirect(array('action' => 'index'));
+		}
+
+		$this->loadModel('PersonHistories');
+		$histories = $this->PersonHistories->find('all', array(
+			'contain' => array('Users'),
+			'conditions' => array(
+				'PersonHistories.person_id' => $person['id'],
+				'PersonHistories.created <=' => $when
+			),
+			'order' => ['PersonHistories.created' => 'ASC']
+		));
+
+		foreach ($histories as $history) {
+			$field_name = $history['field_name'];
+			$old_value  = $history['old_value'];
+			$new_value  = $history['new_value'];
+
+			if ($field_name == 'created') {
+				$person = unserialize($history['new_value']);
+			} else if ($field_name == 'cancelled') {
+				$person = unserialize($history['new_value']);
+			} else {
+				$person[$field_name] = $new_value;
+			}
+		}
+
+		$this->loadModel('Nations');
+
+		if (!empty($person['nation_id'])) {
+			$person['nation']['description'] = 
+				$this->Nations->fieldByConditions('description', array(
+					'id' => $person['nation_id']
+				));
+		}
+		
+		if (!empty($person['user_id'])) {
+			$person['user']['username'] = 
+				$this->Users->fieldByConditions('username', array(
+					'id' => $person['user_id']
+				));
+		}
+
+		$this->set('person', $person);
+
+		$this->set('revision', $when);
+
+		$this->render('view');
+	}
+	
 
 	function add() {
 		if ($this->request->getData('cancel')!== null)

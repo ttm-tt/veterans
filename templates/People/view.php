@@ -8,7 +8,13 @@
 ?>
 
 <div class="people view">
-<h2><?php echo __('Person');?></h2>
+<h2>
+<?php 
+	echo __('Person');
+	if (!empty($revision)) 
+		echo ' (' . $revision . ')';
+?>
+</h2>
 	<?php
 		$sex = array('M' => __('Man'), 'F' => __('Woman'));
 	?>
@@ -98,6 +104,10 @@
 
 <?php $this->start('action'); ?>
 	<ul>
+		<?php 
+			if ($Acl->check($current_user, 'People/history'))
+				echo '<li>' . $this->Html->link(__('View History'), array('action' => 'history', $person['id'])) . '</li>';
+		?>
 		<?php if ($Acl->check($current_user, 'People/edit'))
 			echo '<li>' . $this->Html->link(__('Edit Person'), array('action' => 'edit', $person['id'])) . '</li>';
 		?>
