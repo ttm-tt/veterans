@@ -209,7 +209,7 @@ foreach($roles as $role)
 $this->Html->scriptStart(['block' => true]);
 ?>
 $(document).ready(function() {
-	<?php echo implode($initScripts, "\n"); ?>
+	<?php echo implode("\n", $initScripts);		?>
 })
 <?php
 $this->Html->scriptEnd();
