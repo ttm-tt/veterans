@@ -15,6 +15,7 @@ use ArrayObject;
 use Cake\Event\EventInterface;
 use Cake\Datasource\EntityInterface;
 use Cake\ORM\Entity;
+use Cake\Utility\Hash;
 
 use Shim\Model\Table\Table as ShimTable;
 
@@ -110,5 +111,11 @@ class AppTable extends ShimTable {
 		}
 		
 		return false;
+	}
+	
+	
+	// Get the current user od
+	protected function _getUserId() {
+		return Hash::get($_SESSION ?? [], 'Auth.User.id', null);
 	}
 }
