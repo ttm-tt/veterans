@@ -155,12 +155,17 @@ class PositivityPayment extends AbstractPayment {
 			// In test environment the order id may be a duplicate so we append 
 			// something unique
 			'oid' => $isTest ? $order->id . '-' . uniqid() : $order->id,
-			// Accounting at EVC2022 already use that field for other purposes
+			// Accounting at WMC2024 already use that field for other purposes
 			// 'invoicenumber' => $order->invoice,
-			// Special fields for EVC2022 accounting
-			'addInfo2' => 'EVC_' . $order->id,
+			// Special fields for WMC2024 accounting
+			'addInfo2' => 'WMC_' . $order->id,
 			'addInfo4' => $order->invoice,
 		];
+		
+		file_put_contents(TMP . '/positivity/xxxconfirm-' . date('Ymd-His'), 
+				print_r([
+					'Parameters' => $parameters], true)
+		);
 		
 		$this->_controller->set('json_object', 
 			$parameters
