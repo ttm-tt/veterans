@@ -28,6 +28,12 @@
 			]
 		]);
 
+		echo $this->element('filter', [
+			'label' => __d('user', 'Paralympic'),
+			'id' => 'para',
+			'options' => ['no' => __d('user', 'No'), 'yes' => __d('user', 'Yes')],
+		]);
+
 		echo '</table>' . "\n";
 		echo '</fieldset></div>' . "\n";
 	?>

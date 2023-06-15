@@ -27,6 +27,13 @@ class CompetitionsController extends AppController {
 				$this->request->getSession()->write('Competitions.type_of', $this->request->getQuery('type_of'));
 		}
 		
+		if ($this->request->getQuery('para') !== null) {
+			if ($this->request->getQuery('para') == 'all')
+				$this->request->getSession()->delete('Competitions.para');
+			else
+				$this->request->getSession()->write('Competitions.para', $this->request->getQuery('para'));
+		}
+
 		$conditions = [];
 
 		// Filter for Sex
@@ -37,6 +44,13 @@ class CompetitionsController extends AppController {
 		if ($this->request->getSession()->check('Competitions.type_of'))
 			$conditions['Competitions.type_of'] = $this->request->getSession()->read('Competitions.type_of');
 
+		if ($this->request->getSession()->check('Competitions.para')) {
+			if ($this->request->getSession()->read('Competitions.para') == 'no')
+				$conditions[] = 'Competitions.ptt_class = 0';
+			else if ($this->request->getSession()->read('Competitions.para') == 'yes')
+				$conditions[] = 'Competitions.ptt_class <> 0';
+		}
+			
 		$this->paginate = array(
 			'conditions' => [
 				'tournament_id' => $this->request->getSession()->read('Tournaments.id')
@@ -48,6 +62,7 @@ class CompetitionsController extends AppController {
 		
 		$this->set('cp_sex', $this->request->getSession()->read('Competitions.sex'));
 		$this->set('type_of', $this->request->getSession()->read('Competitions.type_of'));
+		$this->set('para', $this->request->getSession()->read('Competitions.para'));
 	}
 
 	function view($id = null) {
