@@ -1,6 +1,37 @@
 <?php /* Copyright (c) 2020 Christoph Theis */ ?>
 <div class="competitions index">
 	<h2><?php echo __('Competitions');?></h2>
+	<?php
+		echo '<div class="filter">';
+		echo '<fieldset>';
+		echo '<legend>' . __d('user', 'Filter') . '</legend>';
+		echo '<table>';
+		
+		echo $this->element('filter', [
+			'label' => __('Sex'),
+			'id' => 'cp_sex',
+			'options' => [
+				'F' => __('Women'),
+				'M' => __('Men'),
+				'X' => __('Mixed')
+			]
+		]);
+		
+		echo $this->element('filter', [
+			'label' => __('Type'),
+			'id' => 'type_of',
+			'options' => [
+				'S' => __('Singles'),
+				'D' => __('Doubles'),
+				'X' => __('Mixed'),
+				'T' => __('Teams')
+			]
+		]);
+
+		echo '</table>' . "\n";
+		echo '</fieldset></div>' . "\n";
+	?>
+
 	<table>
 	<tr>
 			<th><?php echo $this->Paginator->sort('name');?></th>

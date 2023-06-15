@@ -13,11 +13,41 @@ class CompetitionsController extends AppController {
 	public $name = 'Competitions';
 
 	function index() {
+		if ($this->request->getQuery('cp_sex') !== null) {
+			if ($this->request->getQuery('cp_sex') === 'all')
+				$this->request->getSession()->delete('Competitions.sex');
+			else
+				$this->request->getSession()->write('Competitions.sex', $this->request->getQuery('cp_sex'));
+		}
+
+		if ($this->request->getQuery('type_of') !== null) {
+			if ($this->request->getQuery('type_of') === 'all')
+				$this->request->getSession()->delete('Competitions.type_of');
+			else
+				$this->request->getSession()->write('Competitions.type_of', $this->request->getQuery('type_of'));
+		}
+		
+		$conditions = [];
+
+		// Filter for Sex
+		if ($this->request->getSession()->check('Competitions.sex'))
+			$conditions['Competitions.sex'] = $this->request->getSession()->read('Competitions.sex');
+
+		// Filter for type_of
+		if ($this->request->getSession()->check('Competitions.type_of'))
+			$conditions['Competitions.type_of'] = $this->request->getSession()->read('Competitions.type_of');
+
 		$this->paginate = array(
-			'conditions' => array('tournament_id' => $this->request->getSession()->read('Tournaments.id')),
+			'conditions' => [
+				'tournament_id' => $this->request->getSession()->read('Tournaments.id')
+			] + $conditions,
 			'order' => array('name' => 'ASC')
 		);
+		
 		$this->set('competitions', $this->paginate());
+		
+		$this->set('cp_sex', $this->request->getSession()->read('Competitions.sex'));
+		$this->set('type_of', $this->request->getSession()->read('Competitions.type_of'));
 	}
 
 	function view($id = null) {
