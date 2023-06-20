@@ -350,6 +350,11 @@ class OrdersController extends ShopAppController {
 			'conditions' => array('Orders.id' => $id)
 		))->first();
 		
+		if ($order === null) {
+			$this->MultipleFlash->setFlash(__('Invalid order'), 'error');
+			return $this->redirect(array('action' => 'index'));			
+		}
+		
 		$this->set('order', $order);
 		
 		if (empty($order['user_id']))
