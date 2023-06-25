@@ -759,8 +759,9 @@ class ShopsController extends ShopAppController {
 		;
 		
 		$people = $this->Cart->getPeople();
+		$items = $this->Cart->getItems();
 		
-			if (count($people) === 0 && $items->count() > 0) {
+		if (count($people) === 0 && count($items) === 0) {
 				$this->MultipleFlash->setFlash(__d('user', 'You have to register people or buy something'), 'error');
 			return false;
 		}
