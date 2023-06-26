@@ -270,8 +270,8 @@ class UsersController extends AppController {
 		// XXX Why?
 		$username = $data['username'];
 		
-		if ( $this->Users->find('all', array('conditions' => array('username' => $username)))->count() == 0 &&
-			 $this->Users->find('all', array('conditions' => array('email' => $username)))->count() == 1 
+		if ( $this->Users->find('all', array('conditions' => array('username IS' => $username)))->count() == 0 &&
+			 $this->Users->find('all', array('conditions' => array('email IS' => $username)))->count() == 1 
 			) {
 			$username = $this->Users->fieldByConditions('username', array('email' => $username));
 		}
