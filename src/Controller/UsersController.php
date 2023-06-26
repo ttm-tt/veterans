@@ -270,6 +270,11 @@ class UsersController extends AppController {
 		// XXX Why?
 		$username = $data['username'];
 		
+		if (empty($username)) {
+			$this->MultipleFlash->setFlash(__('You must enter an email address'), 'error');
+			return $this->redirect(['action' => 'login']);
+		}
+		
 		if ( $this->Users->find('all', array('conditions' => array('username IS' => $username)))->count() == 0 &&
 			 $this->Users->find('all', array('conditions' => array('email IS' => $username)))->count() == 1 
 			) {
