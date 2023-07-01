@@ -33,7 +33,11 @@ class SwitchTransport extends AbstractTransport {
 			});
 			
 			if (count($tmp)) {
-				return $this->_transports[$transport]->send($message);
+				$ct = time();
+				$ret = $this->_transports[$transport]->send($message);
+				file_put_contents(TMP . '/sendinblue/' . date('Ymd-His', $ct), 
+						print_r(['addresses' => $tmp, 'ret' => $ret]));
+				return $ret;
 			}
 		}
 		
