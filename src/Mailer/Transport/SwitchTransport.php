@@ -33,7 +33,7 @@ class SwitchTransport extends AbstractTransport {
 					$ct = time();
 					$b = strpos(strtolower($a), strtolower($a));
 					file_put_contents(TMP . '/sendinblue/' . date('Ymd-His', $ct), 
-						print_r('Checking ' . $a) . ' is ' . $b);
+						print_r('Checking ' . $a . ' is ' . $b));
 					
 					return  $b !== true;
 				}
