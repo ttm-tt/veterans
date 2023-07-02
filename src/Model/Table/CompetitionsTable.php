@@ -107,7 +107,8 @@ class CompetitionsTable extends AppTable {
 				'fields' => array('id', 'description'),
 				'conditions' => ['Competitions.type_of' => 'S'] + $conditions,
 				'order' => [
-					'Competitions.ptt_class' => 'DESC',
+					'ptt_class > 0' => 'DESC',
+					'Competitions.ptt_class' => 'ASC',
 					'Competitions.description' => 'ASC'
 				]
 			))->toArray();
@@ -117,7 +118,8 @@ class CompetitionsTable extends AppTable {
 				'fields' => array('id', 'description'),
 				'conditions' => ['Competitions.type_of' => 'S'] + $conditions,
 				'order' => [
-					'Competitions.ptt_class' => 'DESC',
+					'ptt_class > 0' => 'DESC',
+					'Competitions.ptt_class' => 'ASC',
 					'Competitions.born' => 'ASC'
 				],
 				'limit' => 1
@@ -128,7 +130,8 @@ class CompetitionsTable extends AppTable {
 				'fields' => array('id', 'description'),
 				'conditions' => ['Competitions.type_of' => 'S'] + $conditions,
 				'order' => [
-					'Competitions.ptt_class' => 'DESC',
+					'ptt_class > 0' => 'DESC',
+					'Competitions.ptt_class' => 'ASC',
 					'Competitions.born' => 'DESC'
 				],
 				'limit' => 1
@@ -139,7 +142,8 @@ class CompetitionsTable extends AppTable {
 				'fields' => array('id', 'description'),
 				'conditions' => ['Competitions.type_of' => 'S'] + $conditions,
 				'order' => [
-					'Competitions.ptt_class' => 'DESC',
+					'ptt_class > 0' => 'DESC',
+					'Competitions.ptt_class' => 'ASC',
 					'Competitions.description' => 'ASC'
 				]
 			))->toArray();
@@ -149,7 +153,8 @@ class CompetitionsTable extends AppTable {
 			'fields' => array('id', 'description'),
 			'conditions' => ['Competitions.type_of' => 'D'] + $conditions,
 			'order' => [
-				'Competitions.ptt_class' => 'DESC',
+				'ptt_class > 0' => 'DESC',
+				'Competitions.ptt_class' => 'ASC',
 				'Competitions.description' => 'ASC'
 			]
 		))->toArray();
@@ -158,7 +163,8 @@ class CompetitionsTable extends AppTable {
 			'fields' => array('id', 'description'),
 			'conditions' => ['Competitions.type_of' => 'X'] + $conditions,
 			'order' => [
-				'Competitions.ptt_class' => 'DESC',
+				'ptt_class > 0' => 'DESC',
+				'Competitions.ptt_class' => 'ASC',
 				'Competitions.description' => 'ASC'
 			]
 		))->toArray();
@@ -167,7 +173,8 @@ class CompetitionsTable extends AppTable {
 			'fields' => array('id', 'description'),
 			'conditions' => ['Competitions.type_of' => 'T'] + $conditions,
 			'order' => [
-				'Competitions.ptt_class' => 'DESC',
+				'ptt_class > 0' => 'DESC',
+				'Competitions.ptt_class' => 'ASC',
 				'Competitions.description' => 'ASC'
 			]
 		))->toArray();
@@ -208,7 +215,8 @@ class CompetitionsTable extends AppTable {
 			'fields' => array('id'),
 			'conditions' => $conditions,
 			'order' => [
-				'ptt_class' => 'DESC',
+				'ptt_class > 0' => 'DESC',
+				'ptt_class' => 'ASC',
 				'born' => ($year < date('Y') - 30 ? 'ASC' : 'DESC')
 			]
 		))->first();

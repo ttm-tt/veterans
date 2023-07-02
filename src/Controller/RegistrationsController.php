@@ -3518,7 +3518,8 @@ class RegistrationsController extends AppController {
 				'sex' => $person['sex']
 			) + $ptt_class,
 			'order' => [
-				'Competitions.ptt_class' => 'DESC',
+				'Competitions.ptt_class > 0' => 'DESC',
+				'Competitions.ptt_class' => 'ASC',
 				'Competitions.born' => 'DESC'
 			]
 		))->toArray();
@@ -3530,7 +3531,8 @@ class RegistrationsController extends AppController {
 				'Competitions.type_of' => 'X'
 			) + $ptt_class,
 			'order' => [
-				'Competitions.ptt_class' => 'DESC',
+				'Competitions.ptt_class > 0' => 'DESC',
+				'Competitions.ptt_class' => 'ASC',
 				'Competitions.born' => 'DESC'
 			]
 		))->toArray();
