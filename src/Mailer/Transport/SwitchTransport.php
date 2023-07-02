@@ -29,11 +29,11 @@ class SwitchTransport extends AbstractTransport {
 			file_put_contents(TMP . '/sendinblue/' . date('Ymd-His', $ct), 
 					print_r('Checking ' . count($addressees) . "addresses", true));
 			$tmp = array_filter($addressees, function($address) use($transport) {
-				foreach(($this->_config['transports'][$transport]['filterAddress'] ?? array()) as $a) {
+				foreach(($this->_config['transports'][$transport]['filterAddress'] ?? array()) as $fa) {
 					$ct = time();
-					$b = strpos(strtolower($a), strtolower($a));
+					$b = strpos(strtolower($address), strtolower($fa));
 					file_put_contents(TMP . '/sendinblue/' . date('Ymd-His', $ct), 
-						print_r('Checking ' . $a . ' is ' . $b, true));
+						print_r('Checking ' . $address . ' against ' . $fa .  ' is ' . $b, true));
 					
 					return  $b !== true;
 				}
