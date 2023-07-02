@@ -27,13 +27,13 @@ class SwitchTransport extends AbstractTransport {
 		foreach (array_keys($this->_config['transports']) as $transport) {
 			$ct = time();
 			file_put_contents(TMP . '/sendinblue/' . date('Ymd-His', $ct), 
-					print_r('Checking ' . count($addressees) . "addresses" ));
+					print_r('Checking ' . count($addressees) . "addresses", true));
 			$tmp = array_filter($addressees, function($address) use($transport) {
 				foreach(($this->_config['transports'][$transport]['filterAddress'] ?? array()) as $a) {
 					$ct = time();
 					$b = strpos(strtolower($a), strtolower($a));
 					file_put_contents(TMP . '/sendinblue/' . date('Ymd-His', $ct), 
-						print_r('Checking ' . $a . ' is ' . $b));
+						print_r('Checking ' . $a . ' is ' . $b, true));
 					
 					return  $b !== true;
 				}
@@ -42,7 +42,7 @@ class SwitchTransport extends AbstractTransport {
 			if (count($tmp)) {
 				$ret = $this->_transports[$transport]->send($message);
 				file_put_contents(TMP . '/sendinblue/' . date('Ymd-His', $ct), 
-						print_r(['addresses' => $tmp, 'ret' => $ret]));
+						print_r(['addresses' => $tmp, 'ret' => $ret], true));
 				return $ret;
 			}
 		}
