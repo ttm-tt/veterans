@@ -35,7 +35,7 @@ class SwitchTransport extends AbstractTransport {
 					file_put_contents(TMP . '/sendinblue/' . date('Ymd-His', $ct), 
 						print_r('Checking ' . $address . ' against ' . $fa .  ' is ' . ($b ? 'false' : 'true'), true));
 					
-					return  $b !== true;
+					return  $b !== false;
 				}
 			});
 			
