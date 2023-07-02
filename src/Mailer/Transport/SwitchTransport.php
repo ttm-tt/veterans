@@ -22,7 +22,7 @@ class SwitchTransport extends AbstractTransport {
 	}
 	
 	public function send(Message $message): array {
-		$addressees = array_merge($message->getFrom(), $message->getTo(), $message->getCc(), $message->getBcc());
+		$addressees = array_merge($message->getTo(), $message->getCc(), $message->getBcc());
 		
 		foreach (array_keys($this->_config['transports']) as $transport) {
 			$ct = time();
@@ -33,7 +33,7 @@ class SwitchTransport extends AbstractTransport {
 					$ct = time();
 					$b = strpos(strtolower($address), strtolower($fa));
 					file_put_contents(TMP . '/sendinblue/' . date('Ymd-His', $ct), 
-						print_r('Checking ' . $address . ' against ' . $fa .  ' is ' . $b, true));
+						print_r('Checking ' . $address . ' against ' . $fa .  ' is ' . ($b ? 'false' : 'true'), true));
 					
 					return  $b !== true;
 				}
