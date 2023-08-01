@@ -1530,6 +1530,9 @@ class ShopsController extends ShopAppController {
 			),
 			'fields' => array('person_id' => 'DISTINCT(OrderArticles.person_id)', 'OrderArticles.id')
 		));
+		
+		$count = $pids->count();
+		$arr = $pids->toArray();
 
 		$registrations = $this->Registrations->find('all', array(
 			'contain' => ['People'],
@@ -2959,7 +2962,8 @@ class ShopsController extends ShopAppController {
 		
 		return $this->response
 			->withType('jpeg')
-			->withBody(new \Zend\Diactoros\Stream($article->article_image))
+			// laminas/laminas-diactoros comes with cakephp
+			->withBody(new \Laminas\Diactoros\Stream($article->article_image))
 		;		
 	}
 }
