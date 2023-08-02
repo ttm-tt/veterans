@@ -2,6 +2,7 @@
 namespace Shop\Model\Table;
 
 use Shop\Model\Table\ShopAppModelTable;
+use Cake\Validation\Validator;
 
 class ArticlesTable extends ShopAppModelTable {
 	public function initialize(array $config) : void {
