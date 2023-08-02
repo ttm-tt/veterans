@@ -27,5 +27,17 @@ class ArticlesTable extends ShopAppModelTable {
 			'defaultLocale' => 'en'
 		]);
 	}
+	
+	public function validationDefault(Validator $validator) : Validator {
+		
+		// Validate combination last_name and first_name is unique
+		// TODO: Better put that into a application rule
+		$validator
+			->notBlank('name')
+			->notBlank('description')
+		;
+		
+		return $validator;
+	}
 }
 ?>
