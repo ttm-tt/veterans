@@ -38,6 +38,13 @@ class PeopleController extends AppController {
 				$this->request->getSession()->write('People.sex', $this->request->getQuery('sex'));
 		}
 
+		if ($this->request->getQuery('para') !== null) {
+			if ($this->request->getQuery('para') == 'all')
+				$this->request->getSession()->delete('People.para');
+			else
+				$this->request->getSession()->write('People.para', $this->request->getQuery('para'));
+		}
+
 		if ($this->request->getQuery('user_id') !== null) {
 			if ($this->request->getQuery('user_id') == 'all')
 				$this->request->getSession()->delete('Users.id');
@@ -59,6 +66,14 @@ class PeopleController extends AppController {
 		if ($this->request->getSession()->check('People.sex'))
 			$conditions['People.sex'] = $this->request->getSession()->read('People.sex');
 
+		// Filter for para
+		if ($this->request->getSession()->check('People.para')) {
+			if ($this->request->getSession()->read('People.para') == 'no')
+				$conditions[] = 'People.ptt_class = 0';
+			else if ($this->request->getSession()->read('People.para') == 'yes')
+				$conditions[] = 'People.ptt_class <> 0';
+		}
+			
 		// Filter for User
 		if ($this->request->getSession()->check('Users.id'))
 			$conditions['People.user_id'] = $this->request->getSession()->read('Users.id');

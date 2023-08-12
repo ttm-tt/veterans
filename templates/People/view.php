@@ -46,6 +46,20 @@
 			<?php echo $person['dob']; ?>
 			&nbsp;
 		</dd>
+		<dt<?php if ($i % 2 == 0) echo $class;?>><?php echo __('Para TT Class'); ?></dt>
+		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+			<?php 
+				if (($person['ptt_class'] ?? 0) == 0)
+					echo __('No para event');
+				else if ($person['ptt_class'] == -1)
+					echo __('Need ITTF paralympic classification');
+				else
+					echo $person['ptt_class'];
+			?>
+			&nbsp;
+		</dd>
+		<dt><?= __('Wheelchair'); ?></dt>
+		<dd><?= $wcOptions[$person['ptt_wchc']]; ?>
 		<?php if ($hasRootPrivileges) { ?>
 			<dt<?php if ($i % 2 == 0) echo $class;?>><?php echo __('Extern ID'); ?></dt>
 			<dd<?php if ($i++ % 2 == 0) echo $class;?>>
@@ -53,10 +67,6 @@
 				&nbsp;
 			</dd>
 		<?php } ?>
-			<dt><?= __('Para TT Class'); ?></dt>
-			<dd><?= $person['ptt_class']; ?></dd>
-			<dt><?= __('Wheelchair'); ?></dt>
-			<dd><?= $wcOptions[$person['ptt_wchc']]; ?>
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php echo __('Association'); ?></dt>
 		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
 			<?php echo $person['nation']['description']; ?>

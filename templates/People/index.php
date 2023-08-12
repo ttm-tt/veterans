@@ -47,7 +47,6 @@
 					echo ' ' . $this->Html->link($name, ['?' => ['last_name' => urlencode(str_replace(' ', '_', $char))]]);
 			}
 		}
-		echo '</td></tr>';
 
 		echo $this->element('filter', [
 			'label' => __('Sex'),
@@ -56,15 +55,18 @@
 				'F' => __('Women'),
 				'M' => __('Men')
 			]
+		]);		
+		
+		echo $this->element('filter', [
+			'label' => __d('user', 'Paralympic'),
+			'id' => 'para',
+			'options' => ['no' => __d('user', 'No'), 'yes' => __d('user', 'Yes')],
 		]);
 		
 		if (!empty($user_id)) {
-			echo '<tr></tr>';
 			echo '<tr><td><label class="filter">' . __('Username') . '</td><td>';
 			echo $this->Html->link(__('all'), array('user_id' => 0));
 			echo ' ' . $username;
-
-			echo '</td></tr>';
 		}
 
 		echo '</table>' . "\n";
@@ -78,6 +80,9 @@
 			<?php } ?>
 			<th><?php echo $this->Paginator->sort('People.sex', __('Sex'));?></th>
 			<th><?php echo $this->Paginator->sort('People.dob', __('Born'));?></th>
+			<?php if (($para ?? 'yes') === 'yes') { ?>
+				<th><?php echo $this->Paginator->sort('ptt_class', __('Para TT Class'));?></th>
+			<?php } ?>
 			<?php $wrid = __('Reg. ID'); ?>
 			<?php if ($hasRootPrivileges) { ?>
 				<th><?php echo $this->Paginator->sort('People.extern_id', $wrid);?></th>
@@ -107,6 +112,18 @@
 		<?php } ?>
 		<td><?php echo $person['sex']; ?>&nbsp;</td>
 		<td><?php echo ($person['born'] ? $person['born'] : ''); ?>&nbsp;</td>
+		<?php if (($para ?? 'yes') === 'yes') { ?>
+			<td>
+				<?php
+					if (($person->ptt_class ?? 0) == 0)
+						echo __('None');
+					else if ($person->ptt_class == -1)
+						echo __('t.b.c');
+					else
+						echo $person['ptt_class']; 
+				?>&nbsp;
+			</td>
+		<?php } ?>
 		<?php if ($hasRootPrivileges) { ?>
 			<td><?php echo $person['extern_id']; ?>&nbsp;</td>
 		<?php } ?>
