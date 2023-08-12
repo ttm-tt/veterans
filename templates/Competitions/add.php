@@ -28,7 +28,9 @@ use Cake\Utility\Hash;
 		echo $this->Form->control('ptt_class', array(
 			'lable' => __('Para TT Class'),
 			'type' => 'select',
-			'options' => Hash::combine(range(0, 10), '{n}', '{n}'),
+			'options' => 
+				[-1 => __('Need ITTF paralympic classification')] +
+				Hash::combine(range(0, 10), '{n}', '{n}'),
 			'empty' => false
 		));
 		echo $this->Form->control('optin', array('label' => __('Optional'), 'type' => 'checkbox'));

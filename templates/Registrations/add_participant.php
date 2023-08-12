@@ -166,18 +166,22 @@ $(document).ready(function() {
 				echo $this->Form->control('person.ptt_class', array(
 					'label' => 'ITTF paralympic classification', 
 					'type' => 'select',
-					'options' => Hash::combine(range(1, 10), '{n}', '{n}'),
-					'empty' => __('Select your ITTF paralympic classification')
+					'options' => 
+						[0 => __('Select your ITTF paralympic classification')] +
+						[-1 => __('Need ITTF paralympic classification')] +
+						Hash::combine(range(1, 10), '{n}', '{n}'),
+					'empty' => false,
 				));
 
 				echo $this->Form->control('person.wchc', array(
 					'label' => __('Wheelchair Required'),
 					'type' => 'select',
-					'options' => [
-						1 => __('Wheel chair completely'),
-						2 => __('Wheel char ramp')
-					],
-					'empty' => __('Select when a wheel chair is required')
+				'options' => [
+					0 => __('Wheel chair not required'),
+					1 => __('Wheel chair completely'),
+					2 => __('Wheel char ramp')
+				],
+				'empty' => __('Select when a wheel chair is required')
 				));
 			}
 

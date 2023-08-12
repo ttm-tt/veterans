@@ -90,7 +90,9 @@ class CompetitionsTable extends AppTable {
 
 		// ptt_class. 
 		if (($person['ptt_class'] ?? 0) == 0) {
-			$conditions[] = 'ptt_class = 0';			
+			$conditions[] = 'ptt_class = 0';
+		} else if ($person->ptt_class == -1) {
+			$conditions[] = 'ptt_class = -1';
 		} else {
 			$conditions[] = ['OR' => [
 				'Competitions.ptt_class >=' => $person['ptt_class'],

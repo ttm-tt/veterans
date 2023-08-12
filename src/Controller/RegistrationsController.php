@@ -1665,13 +1665,13 @@ class RegistrationsController extends AppController {
 				$db->rollback();
 		}
 		
-		$registration['person']['is_para'] = (($registration['person']['ptt_class'] ?: 0) > 0);
+		$registration['person']['is_para'] = (($registration['person']['ptt_class'] ?: 0) != 0);
 		
 		$this->loadModel('Competitions');
 		$havePara = $this->Competitions->find()
 				->where([
 					'tournament_id' => $tid,
-					'ptt_class > 0'
+					'ptt_class <> 0'
 				]) 
 				->count()
 			> 0;

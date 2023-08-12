@@ -248,8 +248,11 @@ function onChangeType(cb) {
 			echo $this->Form->control('ptt_class', array(
 				'label' => 'ITTF paralympic classification', 
 				'type' => 'select',
-				'options' => Hash::combine(range(1, 10), '{n}', '{n}'),
-				'empty' => __('Select your ITTF paralympic classification'),
+				'options' => 
+					[0 => __('Select your ITTF paralympic classification')] +
+					[-1 => __('Need ITTF paralympic classification')] +
+					Hash::combine(range(1, 10), '{n}', '{n}'),
+				'empty' => false,
 				'required' => true,
 			));
 			
@@ -257,6 +260,7 @@ function onChangeType(cb) {
 				'label' => __('Wheelchair Required'),
 				'type' => 'select',
 				'options' => [
+					0 => __('Wheel chair not required'),
 					1 => __('Wheel chair completely'),
 					2 => __('Wheel char ramp')
 				],

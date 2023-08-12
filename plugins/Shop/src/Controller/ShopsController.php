@@ -440,7 +440,7 @@ class ShopsController extends ShopAppController {
 				
 				if ($person['ptt_class'] > 10) {
 					$person['ptt_class'] = 10;
-					$person['schc'] = 0;
+					$person['wchc'] = 0;
 				} else if ($person['ptt_class'] > 5) {
 					$person['wchc'] = 0;
 				} else if ($person['ptt_class'] > 0) {

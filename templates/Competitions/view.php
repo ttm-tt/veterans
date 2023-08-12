@@ -29,7 +29,14 @@
 		</dd>
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php echo __('Para TT Class'); ?></dt>
 		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
-			<?php echo $competition['ptt_class']; ?>
+			<?php 
+				if (($competition->ptt_class ?? 0) == 0)
+					echo __('No para event');
+				else if ($competition->ptt_class == -1)
+					echo __('Need ITTF paralympic classification');
+				else
+					echo $competition['ptt_class'];
+			?>
 			&nbsp;
 		</dd>
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php echo __('Optional'); ?></dt>

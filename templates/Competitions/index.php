@@ -46,6 +46,9 @@
 			<th><?php echo $this->Paginator->sort('sex');?></th>
 			<th><?php echo $this->Paginator->sort('type_of', __('Type'));?></th>
 			<th><?php echo $this->Paginator->sort('born');?></th>
+			<?php if (($para ?? 'yes') === 'yes') { ?>
+				<th><?php echo $this->Paginator->sort('ptt_class', __('Para TT Class'));?></th>
+			<?php } ?>
 			<th><?php echo $this->Paginator->sort('modified', __('Updated'));?></th>
 			<th class="actions"><?php echo __('Actions');?></th>
 	</tr>
@@ -68,6 +71,18 @@
 		<td><?php echo $competition['sex']; ?>&nbsp;</td>
 		<td><?php echo $competition['type_of']; ?>&nbsp;</td>
 		<td><?php echo $competition['born']; ?>&nbsp;</td>
+		<?php if (($para ?? 'yes') === 'yes') { ?>
+			<td>
+				<?php
+					if (($competition->ptt_class ?? 0) == 0)
+						echo __('None');
+					else if ($competition->ptt_class == -1)
+						echo __('t.b.c');
+					else
+						echo $competition['ptt_class']; 
+				?>&nbsp;
+			</td>
+		<?php } ?>
 		<td><?php echo $competition['modified']; ?>&nbsp;</td>
 		<td class="actions">
 			<?php if ($mayView) echo $this->Html->link(__('View'), array('action' => 'view', $competition['id'])); ?>
