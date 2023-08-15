@@ -383,6 +383,21 @@ use Cake\Utility\Hash;
 
 <?php $this->start('action'); ?>
 	<ul>		
+		<li><?php 
+			echo $this->Html->link(__('Search'), array(
+					'action' => 'search'
+				),
+				array(
+					'onclick' => 
+						"var url = '" . Router::url(array('action' => 'search')) . "'; " .
+						"var prompt = '" . __('Invoice Number') . "'; " .
+						"var inv = window.prompt('' + prompt); " .
+						"if (inv === null) return false; " .
+						"this.href = url + '/?invoice=' + encodeURIComponent(inv); " .
+						"return true; "
+				) 
+			);
+		?></li>
 		<?php 
 			if ( $order['order_status']['name'] === 'WAIT' ||
 				 $order['order_status']['name'] === 'INVO' ||
