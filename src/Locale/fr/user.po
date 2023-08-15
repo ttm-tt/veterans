@@ -4,8 +4,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2022-05-15 21:52+0200\n"
-"PO-Revision-Date: 2022-05-15 21:56+0200\n"
+"POT-Creation-Date: 2023-08-15 18:35+0200\n"
+"PO-Revision-Date: 2023-08-15 18:56+0200\n"
 "Last-Translator: Christoph Theis <theis@gmx.at>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
 "Language: fr\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: src/Controller/Component/RegistrationUpdateComponent.php:45
 msgid "Unknown user {0}"
@@ -113,31 +113,47 @@ msgstr "Le nouveau mot de passe n'a pu être enregistré"
 msgid "A new password has been sent to your email address"
 msgstr "Un nouveau mot de passe a été envoyé à votre email"
 
-#: src/Controller/UsersController.php:313
+#: src/Controller/UsersController.php:318
 msgid "You are logged in"
 msgstr "Vous êtes connecté"
 
-#: src/Controller/UsersController.php:423
+#: src/Controller/UsersController.php:428
 msgid "Good-Bye"
 msgstr "Au revoir"
 
-#: src/Controller/UsersController.php:717
+#: src/Controller/UsersController.php:722
 msgid "Your profile has been saved"
 msgstr "Votre profil vient d'être sauvé"
 
-#: src/Controller/UsersController.php:720
+#: src/Controller/UsersController.php:725
 msgid "Your profile could not be saved"
 msgstr "Votre profil ne peut être sauvé"
 
-#: src/Controller/UsersController.php:816
+#: src/Controller/UsersController.php:821
 msgid "A password has been sent"
 msgstr "Un mot de passe a été envoyé"
 
-#: templates/Nations/index.php:7 templates/People/index.php:7
-#: templates/Registrations/count.php:11 templates/Registrations/index.php:35
-#: templates/Users/index.php:7 plugins/Shop/templates/Orders/index.php:10
+#: templates/Competitions/index.php:7 templates/Nations/index.php:7
+#: templates/People/index.php:7 templates/Registrations/count.php:11
+#: templates/Registrations/index.php:35 templates/Users/index.php:7
+#: plugins/Shop/templates/Orders/index.php:10
 msgid "Filter"
 msgstr "Filtre"
+
+#: templates/Competitions/index.php:32 templates/People/index.php:61
+#: templates/Registrations/index.php:62
+msgid "Paralympic"
+msgstr "Paralympique"
+
+#: templates/Competitions/index.php:34 templates/People/index.php:63
+#: templates/Registrations/index.php:64 templates/Registrations/index.php:363
+msgid "No"
+msgstr "Non"
+
+#: templates/Competitions/index.php:34 templates/People/index.php:63
+#: templates/Registrations/index.php:64 templates/Registrations/index.php:363
+msgid "Yes"
+msgstr "Oui"
 
 #: templates/Nations/index.php:11
 msgid "Continent"
@@ -158,44 +174,44 @@ msgid "Name"
 msgstr "Nom"
 
 #: templates/Pages/participants.php:44 templates/People/index.php:12
-#: templates/Registrations/add_participant.php:136
+#: templates/Registrations/add_participant.php:193
 #: templates/Registrations/count.php:16
 #: templates/Registrations/csv/export_count.php:4
-#: templates/Registrations/edit_participant.php:167
+#: templates/Registrations/edit_participant.php:195
 #: templates/Registrations/index.php:40 templates/Registrations/index.php:220
 #: templates/Registrations/requests.php:8
 #: plugins/Shop/templates/Shops/add_person.php:206
-#: plugins/Shop/templates/element/shop_people.php:61
+#: plugins/Shop/templates/element/shop_people.php:68
 #: plugins/Shop/templates/element/voucher.php:40
 msgid "Association"
 msgstr "Fédération"
 
 #: templates/Pages/participants.php:46
-#: plugins/Shop/templates/element/shop_people.php:64
+#: plugins/Shop/templates/element/shop_people.php:72
 msgid "Singles"
 msgstr "Simples"
 
 #: templates/Pages/participants.php:49
-#: plugins/Shop/templates/element/shop_people.php:65
+#: plugins/Shop/templates/element/shop_people.php:73
 msgid "Doubles"
 msgstr "Doubles"
 
 #: templates/Pages/participants.php:50
-#: templates/Registrations/edit_participant.php:294
+#: templates/Registrations/edit_participant.php:352
 #: templates/Registrations/index.php:246
 msgid "Double Partner"
 msgstr "Partenaire de Double"
 
 #: templates/Pages/participants.php:53
-#: templates/Registrations/edit_participant.php:317
+#: templates/Registrations/edit_participant.php:375
 #: templates/Registrations/index.php:249
 #: templates/Registrations/requests.php:15
-#: plugins/Shop/templates/element/shop_people.php:66
+#: plugins/Shop/templates/element/shop_people.php:74
 msgid "Mixed"
 msgstr "Mixte"
 
 #: templates/Pages/participants.php:54
-#: templates/Registrations/edit_participant.php:333
+#: templates/Registrations/edit_participant.php:391
 #: templates/Registrations/index.php:250
 msgid "Mixed Partner"
 msgstr "Partenaire de double mixte"
@@ -204,80 +220,80 @@ msgstr "Partenaire de double mixte"
 msgid "Teams"
 msgstr "Equipe"
 
-#: templates/Registrations/add_participant.php:85
+#: templates/Registrations/add_participant.php:114
 msgid "Add Participant"
 msgstr "Ajouter un participant"
 
-#: templates/Registrations/add_participant.php:89
+#: templates/Registrations/add_participant.php:118
 msgid "Select Type"
 msgstr "Sélectionner un type"
 
-#: templates/Registrations/add_participant.php:90
+#: templates/Registrations/add_participant.php:119
 #: templates/Registrations/count.php:33
-#: templates/Registrations/edit_participant.php:177
-#: templates/Registrations/edit_participant.php:181
-#: templates/Registrations/edit_participant.php:185
+#: templates/Registrations/edit_participant.php:205
+#: templates/Registrations/edit_participant.php:209
+#: templates/Registrations/edit_participant.php:217
 #: templates/Registrations/index.php:48 templates/Registrations/index.php:227
 #: plugins/Shop/templates/Shops/add_person.php:177
 #: plugins/Shop/templates/element/voucher.php:41
 msgid "Type"
 msgstr "Catégorie"
 
-#: templates/Registrations/add_participant.php:96
+#: templates/Registrations/add_participant.php:125
 #: templates/Registrations/edit.php:114
-#: templates/Registrations/edit_participant.php:157
+#: templates/Registrations/edit_participant.php:185
 #: plugins/Shop/templates/Shops/add_person.php:186
 msgid "Given Name"
 msgstr "Prénom"
 
-#: templates/Registrations/add_participant.php:101
+#: templates/Registrations/add_participant.php:130
 #: templates/Registrations/edit.php:119
-#: templates/Registrations/edit_participant.php:162
+#: templates/Registrations/edit_participant.php:190
 #: templates/Registrations/index.php:104
 #: plugins/Shop/templates/Shops/add_person.php:192
 msgid "Family Name"
 msgstr "Nom de Famille"
 
-#: templates/Registrations/add_participant.php:111
-#: templates/Registrations/edit.php:154
-#: templates/Registrations/edit_participant.php:203
+#: templates/Registrations/add_participant.php:140
+#: templates/Registrations/edit.php:158
+#: templates/Registrations/edit_participant.php:235
 #: plugins/Shop/templates/Shops/add_person.php:200
 msgid "Select gender"
 msgstr "Sélectionner un genre"
 
-#: templates/Registrations/add_participant.php:112
-#: templates/Registrations/edit.php:148 templates/Registrations/edit.php:155
-#: templates/Registrations/edit_participant.php:197
-#: templates/Registrations/edit_participant.php:204
+#: templates/Registrations/add_participant.php:141
+#: templates/Registrations/edit.php:152 templates/Registrations/edit.php:159
+#: templates/Registrations/edit_participant.php:229
+#: templates/Registrations/edit_participant.php:236
 #: plugins/Shop/templates/Shops/add_person.php:202
 msgid "Man"
 msgstr "Homme"
 
-#: templates/Registrations/add_participant.php:112
-#: templates/Registrations/edit.php:148 templates/Registrations/edit.php:155
-#: templates/Registrations/edit_participant.php:197
-#: templates/Registrations/edit_participant.php:204
+#: templates/Registrations/add_participant.php:141
+#: templates/Registrations/edit.php:152 templates/Registrations/edit.php:159
+#: templates/Registrations/edit_participant.php:229
+#: templates/Registrations/edit_participant.php:236
 #: plugins/Shop/templates/Shops/add_person.php:202
 msgid "Woman"
 msgstr "Femme"
 
-#: templates/Registrations/add_participant.php:135
+#: templates/Registrations/add_participant.php:192
 #: plugins/Shop/templates/Shops/add_person.php:209
 msgid "Select Association"
 msgstr "Sélectionner une fédération"
 
-#: templates/Registrations/add_participant.php:155
-#: templates/Registrations/edit_participant.php:377
+#: templates/Registrations/add_participant.php:212
+#: templates/Registrations/edit_participant.php:435
 msgid "Items"
 msgstr "Articles"
 
-#: templates/Registrations/add_participant.php:169
+#: templates/Registrations/add_participant.php:226
 #: templates/element/savecancel.php:50
 msgid "Save & Cont."
 msgstr "Sauvegarder & Cont."
 
-#: templates/Registrations/add_participant.php:176
-#: templates/Registrations/edit_participant.php:406
+#: templates/Registrations/add_participant.php:233
+#: templates/Registrations/edit_participant.php:464
 #: templates/Registrations/index.php:530
 #: templates/Registrations/requests.php:81
 msgid "List Registrations"
@@ -287,8 +303,8 @@ msgstr "Listes des inscriptions"
 #: plugins/Shop/templates/Orders/view.php:185
 #: plugins/Shop/templates/Orders/view.php:260
 #: plugins/Shop/templates/Shops/add_person.php:198
-#: plugins/Shop/templates/element/shop_people.php:62
-#: plugins/Shop/templates/element/shop_people.php:129
+#: plugins/Shop/templates/element/shop_people.php:69
+#: plugins/Shop/templates/element/shop_people.php:160
 msgid "Sex"
 msgstr "Sexe"
 
@@ -332,66 +348,66 @@ msgstr ""
 msgid "Total"
 msgstr "Total"
 
-#: templates/Registrations/edit_participant.php:25
-#: templates/Registrations/edit_participant.php:44
-#: templates/Registrations/edit_participant.php:302
-#: templates/Registrations/edit_participant.php:341
+#: templates/Registrations/edit_participant.php:26
+#: templates/Registrations/edit_participant.php:45
+#: templates/Registrations/edit_participant.php:360
+#: templates/Registrations/edit_participant.php:399
 #: templates/Registrations/index.php:407 templates/Registrations/index.php:433
 msgid "Partner wanted"
 msgstr "Joueur sans partenaire"
 
-#: templates/Registrations/edit_participant.php:129
+#: templates/Registrations/edit_participant.php:157
 msgid "Edit Registration"
 msgstr "Éditer les inscriptions"
 
-#: templates/Registrations/edit_participant.php:146
+#: templates/Registrations/edit_participant.php:174
 msgid "Person"
 msgstr "Personne"
 
-#: templates/Registrations/edit_participant.php:218
+#: templates/Registrations/edit_participant.php:250
 #: plugins/Shop/templates/Shops/add_person.php:225
 msgid "Date Born"
 msgstr "Date de Naissance"
 
-#: templates/Registrations/edit_participant.php:254
+#: templates/Registrations/edit_participant.php:312
 #: templates/Registrations/index.php:242
 #: templates/Registrations/requests.php:11
 msgid "Single"
 msgstr "Simple"
 
-#: templates/Registrations/edit_participant.php:259
+#: templates/Registrations/edit_participant.php:317
 msgid "Not Playing Singles"
 msgstr "Ne participant pas aux simples"
 
-#: templates/Registrations/edit_participant.php:277
+#: templates/Registrations/edit_participant.php:335
 #: templates/Registrations/index.php:245
 #: templates/Registrations/requests.php:13
 msgid "Double"
 msgstr "Double"
 
-#: templates/Registrations/edit_participant.php:282
+#: templates/Registrations/edit_participant.php:340
 msgid "Not Playing Doubles"
 msgstr "Ne participant pas aux doubles"
 
-#: templates/Registrations/edit_participant.php:284
+#: templates/Registrations/edit_participant.php:342
 msgid "Double Partner Category"
 msgstr "Catégorie du partenaire de double"
 
-#: templates/Registrations/edit_participant.php:321
+#: templates/Registrations/edit_participant.php:379
 msgid "Not Playing Mixed"
 msgstr "Ne participant pas aux mixtes"
 
-#: templates/Registrations/edit_participant.php:323
+#: templates/Registrations/edit_participant.php:381
 msgid "Mixed Partner Category"
 msgstr "Catégorie du partenaire de double mixte"
 
-#: templates/Registrations/edit_participant.php:350
+#: templates/Registrations/edit_participant.php:408
 msgid "Not Playing Teams"
 msgstr "Ne participant pas aux compétitions par équipes"
 
-#: templates/Registrations/edit_participant.php:356
+#: templates/Registrations/edit_participant.php:414
 #: templates/Users/forgot_password.php:10 templates/Users/login.php:17
-#: plugins/Shop/templates/Shops/add_person.php:270
+#: plugins/Shop/templates/Shops/add_person.php:274
 #: plugins/Shop/templates/Shops/address.php:148
 #: plugins/Shop/templates/element/receipt.php:133
 #: plugins/Shop/templates/element/shop_address.php:25
@@ -400,7 +416,7 @@ msgstr "Ne participant pas aux compétitions par équipes"
 msgid "Email"
 msgstr "Email"
 
-#: templates/Registrations/edit_participant.php:360
+#: templates/Registrations/edit_participant.php:418
 #: plugins/Shop/templates/Shops/success.php:106
 #: plugins/Shop/templates/element/receipt.php:139
 #: plugins/Shop/templates/element/shop_address.php:27
@@ -409,7 +425,7 @@ msgstr "Email"
 msgid "Phone"
 msgstr "Téléphone"
 
-#: templates/Registrations/edit_participant.php:409
+#: templates/Registrations/edit_participant.php:467
 #: templates/Registrations/index.php:533
 #: templates/Registrations/requests.php:83
 msgid "List Partner Wanted"
@@ -426,18 +442,6 @@ msgstr "Inscriptions"
 #: templates/Registrations/index.php:55
 msgid "Competition"
 msgstr "Competition"
-
-#: templates/Registrations/index.php:62
-msgid "Paralympic"
-msgstr "Paralympique"
-
-#: templates/Registrations/index.php:64 templates/Registrations/index.php:363
-msgid "No"
-msgstr "Non"
-
-#: templates/Registrations/index.php:64 templates/Registrations/index.php:363
-msgid "Yes"
-msgstr "Oui"
 
 #: templates/Registrations/index.php:70
 msgid "Age Category"
@@ -472,7 +476,7 @@ msgid "all"
 msgstr "tout"
 
 #: templates/Registrations/index.php:225
-#: plugins/Shop/src/Controller/ShopsController.php:165
+#: plugins/Shop/src/Controller/ShopsController.php:190
 msgid "Player"
 msgstr "Joueur"
 
@@ -498,8 +502,8 @@ msgstr "Mise à jour"
 #: templates/Registrations/requests.php:17 templates/layout/default.php:119
 #: plugins/Shop/templates/Shops/buy.php:221
 #: plugins/Shop/templates/Shops/buy.php:287
-#: plugins/Shop/templates/element/shop_people.php:67
-#: plugins/Shop/templates/element/shop_people.php:130
+#: plugins/Shop/templates/element/shop_people.php:75
+#: plugins/Shop/templates/element/shop_people.php:161
 msgid "Actions"
 msgstr "Actions"
 
@@ -579,11 +583,11 @@ msgstr "Mot de passe"
 msgid "Remember me"
 msgstr "Se souvenir de moi"
 
-#: templates/Users/profile.php:9
+#: templates/Users/profile.php:8
 msgid "Edit Profile"
 msgstr "Éditer le profil"
 
-#: templates/Users/profile.php:15
+#: templates/Users/profile.php:14
 msgid "Pref. language"
 msgstr "Préf. langue"
 
@@ -650,28 +654,28 @@ msgstr "Utilisateur inconnu"
 msgid "The order could be be stored"
 msgstr "Le nouveau mot de passe n'a pu être enregistré"
 
-#: plugins/Shop/src/Controller/OrdersController.php:1290
+#: plugins/Shop/src/Controller/OrdersController.php:1296
 msgid "[{0}] Cancellation of registration {1} from {2}"
 msgstr "[{0}] Annulation de l'inscription {1} le {2}"
 
-#: plugins/Shop/src/Controller/ShopsController.php:167
+#: plugins/Shop/src/Controller/ShopsController.php:192
 msgid "Accompanying Person"
 msgstr "Accompagnateur"
 
-#: plugins/Shop/src/Controller/ShopsController.php:169
+#: plugins/Shop/src/Controller/ShopsController.php:194
 msgid "Coach"
 msgstr "Entraîneur"
 
-#: plugins/Shop/src/Controller/ShopsController.php:197
-#: plugins/Shop/src/Controller/ShopsController.php:217
-#: plugins/Shop/src/Controller/ShopsController.php:581
-#: plugins/Shop/src/Controller/ShopsController.php:595
+#: plugins/Shop/src/Controller/ShopsController.php:222
+#: plugins/Shop/src/Controller/ShopsController.php:242
+#: plugins/Shop/src/Controller/ShopsController.php:606
+#: plugins/Shop/src/Controller/ShopsController.php:620
 msgid ""
 "You cannot register players after registration closed for players on {0}"
 msgstr "Vous ne pouvez inscrire des joueurs après la date limite du {0}"
 
-#: plugins/Shop/src/Controller/ShopsController.php:205
-#: plugins/Shop/src/Controller/ShopsController.php:586
+#: plugins/Shop/src/Controller/ShopsController.php:230
+#: plugins/Shop/src/Controller/ShopsController.php:611
 msgid ""
 "You cannot register players at the moment. Registration will open soon. "
 "Please visit <a href=\"{0}\" target=\"_blank\">{0}</a> for more information."
@@ -680,17 +684,17 @@ msgstr ""
 "bientôt. Veuillez visiter <a href=\"{0}\" target=\"_blank\">{0}</a> pour "
 "plus d'informations."
 
-#: plugins/Shop/src/Controller/ShopsController.php:210
-#: plugins/Shop/src/Controller/ShopsController.php:591
+#: plugins/Shop/src/Controller/ShopsController.php:235
+#: plugins/Shop/src/Controller/ShopsController.php:616
 msgid ""
 "You cannot register players before registration opens for players on {0}"
 msgstr "Vous ne pouvez inscrire des joueurs avant la jour d'ouverture du {0}"
 
-#: plugins/Shop/src/Controller/ShopsController.php:227
+#: plugins/Shop/src/Controller/ShopsController.php:252
 msgid "The registration for players has been closed"
 msgstr "L'inscription des joueurs a été clôturée"
 
-#: plugins/Shop/src/Controller/ShopsController.php:236
+#: plugins/Shop/src/Controller/ShopsController.php:261
 msgid ""
 "Players are already sold out and adding more will put your registration on "
 "the waiting list"
@@ -698,12 +702,12 @@ msgstr ""
 "La liste des Joueurs est complète, les joueurs supplémentaires seront mis en "
 "liste d'attente"
 
-#: plugins/Shop/src/Controller/ShopsController.php:245
-#: plugins/Shop/src/Controller/ShopsController.php:263
+#: plugins/Shop/src/Controller/ShopsController.php:270
+#: plugins/Shop/src/Controller/ShopsController.php:288
 msgid "The registration for accompanying persons has been closed"
 msgstr "L'inscription des personnes accompagnants a été clôturée"
 
-#: plugins/Shop/src/Controller/ShopsController.php:254
+#: plugins/Shop/src/Controller/ShopsController.php:279
 msgid ""
 "Accompanying persons are already sold out and adding more will put your "
 "registration on the waiting list"
@@ -711,7 +715,7 @@ msgstr ""
 "La liste des Accompagnants est complète, les accompagnants supplémentaires "
 "seront mis en liste d'attente"
 
-#: plugins/Shop/src/Controller/ShopsController.php:272
+#: plugins/Shop/src/Controller/ShopsController.php:297
 msgid ""
 "Coaches are already sold out and adding more will put your registration on "
 "the waiting list"
@@ -719,27 +723,27 @@ msgstr ""
 "La liste des entraîneur est complète, les joueurs supplémentaires seront mis "
 "en liste d'attente"
 
-#: plugins/Shop/src/Controller/ShopsController.php:378
+#: plugins/Shop/src/Controller/ShopsController.php:403
 msgid "You must fill out all required fields"
 msgstr "Vous devez remplis tous les champs requis"
 
-#: plugins/Shop/src/Controller/ShopsController.php:389
+#: plugins/Shop/src/Controller/ShopsController.php:414
 msgid "You must enter the date of birth for players"
 msgstr "Vous devez saisir la date de naissance des joueurs"
 
-#: plugins/Shop/src/Controller/ShopsController.php:394
+#: plugins/Shop/src/Controller/ShopsController.php:419
 msgid "The date of birth is not valid"
 msgstr "La date de naissance est invalide"
 
-#: plugins/Shop/src/Controller/ShopsController.php:399
+#: plugins/Shop/src/Controller/ShopsController.php:424
 msgid "You must be born in %d or earlier"
 msgstr "Vous devez être né en %d ou avant"
 
-#: plugins/Shop/src/Controller/ShopsController.php:405
+#: plugins/Shop/src/Controller/ShopsController.php:430
 msgid "Wrong birthday given"
 msgstr "Mauvaise date de naissance saisie"
 
-#: plugins/Shop/src/Controller/ShopsController.php:440
+#: plugins/Shop/src/Controller/ShopsController.php:465
 msgid ""
 "You must agree to the privacy policy when entering an email address or a "
 "phone number"
@@ -747,15 +751,15 @@ msgstr ""
 "Vous devez donnez votre accord avec la politique de confidentialité en "
 "saisissant votre adresse email ou votre numéro de téléphone"
 
-#: plugins/Shop/src/Controller/ShopsController.php:486
+#: plugins/Shop/src/Controller/ShopsController.php:511
 msgid "The phone number is invalid"
 msgstr "Le numéro de téléphone est invalide"
 
-#: plugins/Shop/src/Controller/ShopsController.php:494
+#: plugins/Shop/src/Controller/ShopsController.php:519
 msgid "The email address has an invalid format"
 msgstr "L'adresse email a un format non valide"
 
-#: plugins/Shop/src/Controller/ShopsController.php:564
+#: plugins/Shop/src/Controller/ShopsController.php:589
 msgid ""
 "You cannot register people at the moment. Registration will open soon. "
 "Please visit <a href=\"{0}\" target=\"_blank\">{0}</a> for more information."
@@ -764,72 +768,76 @@ msgstr ""
 "bientôt. Veuillez visiter <a href=\"{0}\" target=\"_blank\">{0}</a> pour "
 "plus d'informations."
 
-#: plugins/Shop/src/Controller/ShopsController.php:569
+#: plugins/Shop/src/Controller/ShopsController.php:594
 msgid "You cannot register people before registration opens on {0}"
 msgstr "Vous ne pouvez inscrire des personnes avant la date du {0}"
 
-#: plugins/Shop/src/Controller/ShopsController.php:575
+#: plugins/Shop/src/Controller/ShopsController.php:600
 msgid "You cannot register people after registration closed on {0}"
 msgstr "Vous ne pouvez inscrire des personnes après la date limite du {0}"
 
-#: plugins/Shop/src/Controller/ShopsController.php:726
+#: plugins/Shop/src/Controller/ShopsController.php:688
+msgid "You have to register people"
+msgstr "Vous devez inscrire des personnes"
+
+#: plugins/Shop/src/Controller/ShopsController.php:765
 msgid "You have to register people or buy something"
 msgstr "Vous devez inscrire des personnes ou acheter quelque chose"
 
-#: plugins/Shop/src/Controller/ShopsController.php:875
+#: plugins/Shop/src/Controller/ShopsController.php:914
 msgid "Given name cannot be empty"
 msgstr "Le Prénom doit être saisi"
 
-#: plugins/Shop/src/Controller/ShopsController.php:880
+#: plugins/Shop/src/Controller/ShopsController.php:919
 msgid "Family name cannot be empty"
 msgstr "Le nom de famille doit être saisi"
 
-#: plugins/Shop/src/Controller/ShopsController.php:885
+#: plugins/Shop/src/Controller/ShopsController.php:924
 msgid "Street name cannot be empty"
 msgstr "L'adresse doit être saisie"
 
-#: plugins/Shop/src/Controller/ShopsController.php:890
+#: plugins/Shop/src/Controller/ShopsController.php:929
 msgid "Zip code cannot be empty"
 msgstr "Le code postal doit être saisi"
 
-#: plugins/Shop/src/Controller/ShopsController.php:895
+#: plugins/Shop/src/Controller/ShopsController.php:934
 msgid "City cannot be empty"
 msgstr "La Ville doit est saisie"
 
-#: plugins/Shop/src/Controller/ShopsController.php:900
+#: plugins/Shop/src/Controller/ShopsController.php:939
 msgid "Country cannot be empty"
 msgstr "Le Pays doit être saisi"
 
-#: plugins/Shop/src/Controller/ShopsController.php:905
+#: plugins/Shop/src/Controller/ShopsController.php:944
 msgid "Email address cannot be empty"
 msgstr "L'adresse email doit être saisi"
 
-#: plugins/Shop/src/Controller/ShopsController.php:947
+#: plugins/Shop/src/Controller/ShopsController.php:986
 msgid "You must agree to the terms and conditions"
 msgstr "Vous devez donnez votre accord avec les conditions générales"
 
-#: plugins/Shop/src/Controller/ShopsController.php:1295
+#: plugins/Shop/src/Controller/ShopsController.php:1334
 msgid "[{0}] Your registration {1} from {2}"
 msgstr "[{0}] Votre inscription {1} du {2}"
 
-#: plugins/Shop/src/Controller/ShopsController.php:1422
+#: plugins/Shop/src/Controller/ShopsController.php:1461
 msgid "[{0}] Your voucher for your registration {1} from {2}"
 msgstr "[{0}] Le bon de votre inscription {1} du {2}"
 
-#: plugins/Shop/src/Controller/ShopsController.php:1678
+#: plugins/Shop/src/Controller/ShopsController.php:1721
 msgid "The order was not found"
 msgstr "L'ordre n'est pas définie"
 
-#: plugins/Shop/src/Controller/ShopsController.php:1749
-#: plugins/Shop/src/Controller/ShopsController.php:1757
+#: plugins/Shop/src/Controller/ShopsController.php:1792
+#: plugins/Shop/src/Controller/ShopsController.php:1800
 msgid "Invalid registration"
 msgstr "Inscription invalide"
 
-#: plugins/Shop/src/Controller/ShopsController.php:1762
+#: plugins/Shop/src/Controller/ShopsController.php:1805
 msgid "The registration was already paid for"
 msgstr "L'inscription a déjà été payé pour"
 
-#: plugins/Shop/src/Controller/ShopsController.php:1771
+#: plugins/Shop/src/Controller/ShopsController.php:1814
 msgid "You cannot pay for this registration at this moment"
 msgstr "Vous ne pouvez pas payer pour cette inscription en ce moment"
 
@@ -1015,7 +1023,7 @@ msgstr "Ville"
 #: plugins/Shop/templates/Shops/Payment/ipayment.php:144
 #: plugins/Shop/templates/Shops/address.php:142
 #: plugins/Shop/templates/element/shop_address.php:23
-#: plugins/Shop/templates/element/shop_people.php:128
+#: plugins/Shop/templates/element/shop_people.php:159
 msgid "Country"
 msgstr "Pays"
 
@@ -1139,19 +1147,24 @@ msgstr ""
 "Si vous êtes un athlète paralympique, signalez le champ approprié et mettez "
 "ensuite votre classement international."
 
-#: plugins/Shop/templates/Shops/add_person.php:281
+#: plugins/Shop/templates/Shops/add_person.php:285
 msgid "Mobile"
 msgstr "Téléphone portable"
 
-#: plugins/Shop/templates/Shops/add_person.php:292
+#: plugins/Shop/templates/Shops/add_person.php:296
 msgid "I agree to the %s regarding email address and phone number"
 msgstr ""
 "Je suis d'accord avec la %s concernant l'utilisation de mon email et de mon "
 "numéro de téléphone"
 
-#: plugins/Shop/templates/Shops/add_person.php:294
+#: plugins/Shop/templates/Shops/add_person.php:298
 msgid "privacy policy"
 msgstr "politique de confidentialité"
+
+#: plugins/Shop/templates/Shops/add_person.php:315
+#: plugins/Shop/templates/Shops/address.php:171
+msgid "I agree to receive newsletters"
+msgstr "J'accepte de recevoir des newsletters"
 
 #: plugins/Shop/templates/Shops/address.php:82
 #: plugins/Shop/templates/Shops/review.php:28
@@ -1189,15 +1202,15 @@ msgid "Please select"
 msgstr "Choisir"
 
 #: plugins/Shop/templates/Shops/address.php:114
-#: plugins/Shop/templates/element/shop_people.php:60
-#: plugins/Shop/templates/element/shop_people.php:127
+#: plugins/Shop/templates/element/shop_people.php:67
+#: plugins/Shop/templates/element/shop_people.php:158
 #: plugins/Shop/templates/element/voucher.php:39
 msgid "Given name"
 msgstr "Prénom"
 
 #: plugins/Shop/templates/Shops/address.php:120
-#: plugins/Shop/templates/element/shop_people.php:59
-#: plugins/Shop/templates/element/shop_people.php:126
+#: plugins/Shop/templates/element/shop_people.php:66
+#: plugins/Shop/templates/element/shop_people.php:157
 #: plugins/Shop/templates/element/voucher.php:38
 msgid "Family name"
 msgstr "Nom de famille"
@@ -1224,8 +1237,8 @@ msgstr "Vous devez choisir une option"
 
 #: plugins/Shop/templates/Shops/buy.php:121
 #: plugins/Shop/templates/Shops/buy.php:321
-#: plugins/Shop/templates/element/shop_people.php:107
-#: plugins/Shop/templates/element/shop_people.php:154
+#: plugins/Shop/templates/element/shop_people.php:122
+#: plugins/Shop/templates/element/shop_people.php:185
 msgid "Remove"
 msgstr "Retirer"
 
@@ -1585,8 +1598,8 @@ msgid "Date"
 msgstr "Date"
 
 #: plugins/Shop/templates/element/shop_order.php:20
-#: plugins/Shop/templates/element/shop_people.php:58
-#: plugins/Shop/templates/element/shop_people.php:125
+#: plugins/Shop/templates/element/shop_people.php:65
+#: plugins/Shop/templates/element/shop_people.php:156
 #: plugins/Shop/templates/element/voucher.php:88
 msgid "Pos"
 msgstr "N°"
@@ -1639,15 +1652,48 @@ msgstr "Payé"
 msgid "Due"
 msgstr "Dû"
 
-#: plugins/Shop/templates/element/shop_people.php:54
+#: plugins/Shop/templates/element/shop_people.php:61
 msgid "Players"
 msgstr "Joueurs"
 
-#: plugins/Shop/templates/element/shop_people.php:63
+#: plugins/Shop/templates/element/shop_people.php:70
 msgid "Born"
 msgstr "Naissance"
 
-#: plugins/Shop/templates/element/shop_people.php:122
+#: plugins/Shop/templates/element/shop_people.php:71
+msgid "Para"
+msgstr "Para"
+
+#: plugins/Shop/templates/element/shop_people.php:131
+msgid ""
+"Players with para class 't,b,c,' (to be classified) need to undergo "
+"classification before they can participate in para events."
+msgstr ""
+"Les joueurs avec la classe para 't,b,c,' (à classer) doivent subir une "
+"classification avant de pouvoir participer aux événements para."
+
+#: plugins/Shop/templates/element/shop_people.php:132
+msgid ""
+"Classification will take place on the free day Wednesday, July 10th 2024."
+msgstr ""
+"Le classement aura lieu lors de la journée libre du mercredi 10 juillet 2024."
+
+#: plugins/Shop/templates/element/shop_people.php:133
+msgid "To prepare follow the steps below:"
+msgstr "Pour vous préparer, suivez les étapes ci-dessous :"
+
+#: plugins/Shop/templates/element/shop_people.php:136
+msgid "Please send their passports for registration using this form: {0}"
+msgstr ""
+"Veuillez envoyer leurs passeports pour l'inscription en utilisant ce "
+"formulaire : {0}"
+
+#: plugins/Shop/templates/element/shop_people.php:139
+msgid "Please send the medical documentation using this form: {0}"
+msgstr ""
+"Veuillez envoyer la documentation médicale en utilisant ce formulaire : {0}"
+
+#: plugins/Shop/templates/element/shop_people.php:153
 msgid "Accompanying People"
 msgstr "Personnes accompagnants"
 
