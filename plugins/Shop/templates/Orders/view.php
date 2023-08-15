@@ -1,4 +1,7 @@
 <?php
+?>
+<?php
+use Cake\Routing\Router;
 use Cake\Utility\Hash;
 ?>
 
