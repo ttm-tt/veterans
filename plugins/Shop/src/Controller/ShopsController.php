@@ -2325,12 +2325,20 @@ class ShopsController extends ShopAppController {
 				], true)
 			);	
 
-		if (!$this->Orders->save($order)) {
-			file_put_contents('/tmp/xxxfailedorder-' . time() , print_r($order, true));	
-			
+		try {
+			if (!$this->Orders->save($order)) {
+				file_put_contents('/tmp/xxxfailedorder-' . time() , print_r($order, true));	
+
+				// TODO: Fehlermeldung
+				return false;
+			}
+		} catch (\Exception $ex) {
+			file_put_contents('/tmp/xxxfailedorder-' . time() , print_r(['Exception' => $ex, 'Order' => $order], true));	
+
 			// TODO: Fehlermeldung
-			return false;
+			return false;			
 		}
+
 		
 		$this->Cart->setOrderId($order->id);
 		
