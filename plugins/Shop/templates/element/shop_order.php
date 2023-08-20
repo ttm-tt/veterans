@@ -10,10 +10,17 @@
 	
 	$hasTax = false;
 	foreach ($articles as $article) {
-		$hasTax |= $article['tax'] !== 0.;
+		$hasTax |= $article['tax'] != 0.;
 	}
 ?>
 
+<?php 
+	// Add block with the reason of a tax exemption, if no tax is stated
+	if (!$hasTax && !empty($shopSettings['invoice_tax_exemption'])) {
+		echo $shopSettings['invoice_tax_exemption'];
+		echo '<br>';
+	}
+?>
 <table class="ttm-table">
 	<thead>
 		<tr>

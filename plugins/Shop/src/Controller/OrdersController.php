@@ -395,7 +395,7 @@ class OrdersController extends ShopAppController {
 			));
 		}
 		
-		$this->set('items', $items);
+		$this->set('items', $items->toArray());
 		
 		$address = $this->Orders->find('all', array(
 			'contain' => array('InvoiceAddresses'),

@@ -154,9 +154,9 @@ use App\Model\Table\GroupsTable;
 				}
 			echo '</table></span>';
 			
-			if (!empty($shopSettings['add_footer'])) {
+			if (!empty($shopSettings['invoice_add_footer'])) {
 				echo '<span class="add-footer">';
-				echo $shopSettings['add_footer'];
+				echo $shopSettings['invoice_add_footer'];
 				echo '</span>';
 			}
 		}

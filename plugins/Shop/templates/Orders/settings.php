@@ -147,10 +147,12 @@
 			<?php
 				echo $this->Form->control('invoice_no_prefix', array('label' => __('Invoice No. Prefix')));
 				echo $this->Form->control('invoice_no_postfix', array('label' => __('Invoice No. Postfix')));
-				echo $this->Form->control('invoice_add_body_top', array('label' => __('Add. Body Top'), 'type' => 'textarea'));
 				echo $this->Form->control('invoice_header', array('type' => 'textarea', 'label' => __('Invoice Header')));
+				echo $this->Form->control('invoice_add_body_top', array('label' => __('Add. Body Top'), 'type' => 'textarea'));
+				echo $this->Form->control('invoice_tax_exemption', array('label' => __('Tax Exemption'), 'type' => 'textarea'));
+				echo $this->Form->control('invoice_add_body_bottom', array('label' => __('Add. Body Bottom'), 'type' => 'textarea'));
 				echo $this->Form->control('invoice_footer', array('type' => 'textarea', 'label' => __('Invoice Footer')));
-				echo $this->Form->control('add_footer', array('label' => __('Add. Footer')));
+				echo $this->Form->control('invoice_add_footer', array('label' => __('Add. Footer')));
 			?>
 		</div>
 		
