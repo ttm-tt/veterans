@@ -256,6 +256,7 @@ function onChangeType(cb) {
 				'required' => true,
 			));
 			
+if (false) {
 			echo $this->Form->control('wchc', array(
 				'label' => __('Wheelchair Required'),
 				'type' => 'select',
@@ -267,6 +268,12 @@ function onChangeType(cb) {
 				'empty' => __('Select when a wheel chair is required'),
 				'required' => true,
 			));
+} else {
+			echo $this->Form->control('wchc', array(
+				'type' => 'hidden',
+				'value' => 0
+			));
+}
 		}
 
 		echo $this->Form->control('email', array(

@@ -445,8 +445,8 @@ class ShopsController extends ShopAppController {
 					$person['wchc'] = 0;
 				} else if ($person['ptt_class'] > 0) {
 					if ($person['wchc'] == 0) {
-						$this->MultipleFlash->setFlash(__('You must select the wheel chair requirement'));
-						return;
+						// $this->MultipleFlash->setFlash(__('You must select the wheel chair requirement'));
+						// return;
 					}
 				} else {
 					$person['ptt_class'] = 0;
