@@ -43,13 +43,17 @@ function _setHint(input, hint) {
 $(document).ready(function() {
 	// Show / hide para settings
 	$('select#ptt-class').parent().hide();
+	$('input#ptt_nonpara').parent().hide();
 	$('select#wchc').parent().hide();
 	
 	$('input#is_para').change(function() {
-		if (this.checked)
+		if (this.checked) {
 			$('select#ptt-class').parent().show();
-		else
+			$('input#ptt_nonpara').parent().show();
+		} else {
 			$('select#ptt-class').parent().hide();
+			$('input#ptt_nonpara').parent().hide();
+		}
 	});
 	
 	$('select#ptt-class').change(function() {
@@ -274,6 +278,12 @@ if (false) {
 				'value' => 0
 			));
 }
+			echo $this->Form->control('ptt_nonpara', array(
+				'type' => 'checkbox',
+				'label' => __('Want to participate in able-bodied singles'),
+				'id' => 'ptt_nonpara',
+				'checked' => false
+			));
 		}
 
 		echo $this->Form->control('email', array(

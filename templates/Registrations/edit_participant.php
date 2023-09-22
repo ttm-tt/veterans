@@ -62,24 +62,27 @@ function onChangeMixed(data) {
 $(document).ready(function() {
 	// Show / hide para settings
 	$('select#person-ptt-class').parent().hide();
-	$('select#perspn-wchc').parent().hide();
+	$('select#perspn-wchw').parent().hide();
 	
 	$('input#person-is-para').change(function() {
-		if (this.checked)
+		if (this.checked) {
 			$('select#person-ptt-class').parent().show();
-		else {
+			$('input#person-ptt-nonpara').parent().show();
+		} else {
 			$('select#person-ptt-class').parent().hide();
 			$('select#person-wchc').parent().hide();
+			$('input#person-ptt-nonpara').parent().hide();
 		}
 	});
 	
 	$('select#person-ptt-class').change(function() {
-		if (!$('input#person-is-para').is(':checked'))
+		if (!$('input#person-is-para').is(':checked')) {
 			$('select#person-wchc').parent().hide();
-		else if (this.value > 5)
+		} else if (this.value > 5) {
 			$('select#person-wchc').parent().hide();
-		else
+		} else {
 			$('select#person-wchc').parent().show();
+		}
 	});
 	
 	$('input#person-is-para').trigger('change');
@@ -285,6 +288,7 @@ $(document).ready(function() {
 				'empty' => false,
 			));
 
+if (false) {
 			echo $this->Form->control('person.wchc', array(
 				'label' => __('Wheelchair Required'),
 				'type' => 'select',
@@ -294,6 +298,18 @@ $(document).ready(function() {
 					2 => __('Wheel char ramp')
 				],
 				'empty' => false // __('Select when a wheel chair is required')
+			));
+} else {
+			
+			echo $this->Form->control('person.wchc', array(
+				'type' => 'hidden',
+				'value' => 0
+			));
+}
+
+			echo $this->Form->control('person.ptt_nonpara', array(
+				'type' => 'checkbox',
+				'label' => __('Want to participate in able-bodied singles'),
 			));
 		}
 

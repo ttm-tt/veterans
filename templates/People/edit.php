@@ -10,10 +10,11 @@ $(document).ready(function() {
 	$('select#wchc').parent().hide();
 	
 	$('input#is_para').change(function() {
-		if (this.checked)
+		if (this.checked) {
 			$('select#ptt-class').parent().show();
-		else
+		} else {
 			$('select#ptt-class').parent().hide();
+		}
 	});
 	
 	$('select#ptt-class').change(function() {
@@ -128,7 +129,8 @@ function camelizeName(name) {
 				'empty' => __('Select your ITTF paralympic classification'),
 				'required' => true,
 			));
-			
+
+if (false) {			
 			echo $this->Form->control('wchc', array(
 				'label' => __('Wheelchair Required'),
 				'type' => 'select',
@@ -139,6 +141,12 @@ function camelizeName(name) {
 				'empty' => __('Select when a wheel chair is required'),
 				'required' => true,
 			));
+} else {
+			echo $this->Form->control('wchc', array(
+				'type' => 'hidden',
+				'value' => 0
+			));	
+}
 		}
 
 		if ($hasRootPrivileges) {
