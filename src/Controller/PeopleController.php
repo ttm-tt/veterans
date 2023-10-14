@@ -281,10 +281,10 @@ class PeopleController extends AppController {
 
 			if ($field_name == 'user_id') {
 				if (!empty($old_value))
-					$history['old_name'] = $this->User->fieldByConditions('username', array('id' => $old_value));	
+					$history['old_name'] = $this->Users->fieldByConditions('username', array('id' => $old_value));	
 
 				if (!empty($new_value))
-					$history['new_name'] = $this->User->fieldByConditions('username', array('id' => $new_value));	
+					$history['new_name'] = $this->Users->fieldByConditions('username', array('id' => $new_value));	
 
 			}
 			
