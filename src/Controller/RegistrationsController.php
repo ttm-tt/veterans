@@ -1203,11 +1203,11 @@ class RegistrationsController extends AppController {
 				 $field_name == 'mixed_id' || $field_name == 'team_id' ) {
 
 				if (!empty($old_value)) {
-					$histories[$k]['old_name'] = $competitions[$old_value];
+					$histories[$k]['old_name'] = $competitions[$old_value] ?? '';
 				}
 
 				if (!empty($new_value)) {
-					$histories[$k]['new_name'] = $competitions[$new_value];
+					$histories[$k]['new_name'] = $competitions[$new_value] ?? '';
 				}
 			} 
 
