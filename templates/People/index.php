@@ -15,6 +15,21 @@
 			]);
 		}
 
+		echo $this->element('filter', [
+			'label' => __('Sex'),
+			'id' => 'sex',
+			'options' => [
+				'F' => __('Women'),
+				'M' => __('Men')
+			]
+		]);		
+		
+		echo $this->element('filter', [
+			'label' => __d('user', 'Paralympic'),
+			'id' => 'para',
+			'options' => ['no' => __d('user', 'No'), 'yes' => __d('user', 'Yes')],
+		]);
+
 		echo '<tr><td><label class="filter">' . __('Last&nbsp;name') .	'</label></td><td>';
 
 		foreach ($allchars as $idx => $chars) {
@@ -47,21 +62,8 @@
 					echo ' ' . $this->Html->link($name, ['?' => ['last_name' => urlencode(str_replace(' ', '_', $char))]]);
 			}
 		}
-
-		echo $this->element('filter', [
-			'label' => __('Sex'),
-			'id' => 'sex',
-			'options' => [
-				'F' => __('Women'),
-				'M' => __('Men')
-			]
-		]);		
 		
-		echo $this->element('filter', [
-			'label' => __d('user', 'Paralympic'),
-			'id' => 'para',
-			'options' => ['no' => __d('user', 'No'), 'yes' => __d('user', 'Yes')],
-		]);
+		echo '</td></tr>';
 		
 		if (!empty($user_id)) {
 			echo '<tr><td><label class="filter">' . __('Username') . '</td><td>';
