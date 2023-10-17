@@ -12,20 +12,9 @@ use Cake\Utility\Hash;
 
 class PagesController extends AppController {
 
-/**
- * Controller name
- *
- * @var string
- * @access public
- */
-	public $name = 'Pages';
+	// Models loaded on the fly
+	public $Registrations = null;
 
-/**
- * This controller does not use a model
- *
- * @var array
- * @access public
- */
 	public $uses = array();
 	
 	function initialize() : void {

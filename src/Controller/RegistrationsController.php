@@ -15,11 +15,19 @@ use Cake\Event\EventInterface;
 
 
 class RegistrationsController extends AppController {
-
 	private $fromImport = false;  // set to true to not send mails
 	
+	// Models loaded on the fly
+	public $Participants = null;
+	// Should be in plugins/Shops
+	public $OrderStatus = null;
+	public $OrderArticles = null;
+	public $Orders = null;
+
 	function initialize() : void {
 		parent::initialize();
+		
+		$this->loadModel('Registrations');
 		
 		$this->loadComponent('WelcomeMail');
 		$this->loadComponent('RegistrationUpdate');
@@ -210,7 +218,6 @@ class RegistrationsController extends AppController {
 		// Load models
 		$this->loadModel('People');
 		$this->loadModel('Nations');
-		$this->loadModel('Registrations');
 		$this->loadModel('Participants');
 		$this->loadModel('Tournaments');
 		$this->loadModel('Users');
@@ -437,7 +444,6 @@ class RegistrationsController extends AppController {
 		// Load models
 		$this->loadModel('People');
 		$this->loadModel('Nations');
-		$this->loadModel('Registrations');
 		$this->loadModel('Participants');
 		$this->loadModel('Tournaments');
 		$this->loadModel('Users');
@@ -885,6 +891,26 @@ class RegistrationsController extends AppController {
 				]];
 		}
 		
+		$contain = [
+			'Types',
+			'Participants' => array(
+				'DoublePartners' => array(
+					'People', 
+					'Participants'
+				),
+				'MixedPartners' => array(
+					'People', 
+					'Participants'
+				),
+			),  
+			'People' => array('Nations'),
+		];
+		
+		$query = $this->Registrations->find()
+			->contain($contain)
+			->where($conditions)
+		;
+
 		$this->paginate = array(
 			'sortableFields' => [
 				'People.display_name',
@@ -894,25 +920,10 @@ class RegistrationsController extends AppController {
 				'Participants.start_no',
 				'Registrations.modified'
 			],
-			'contain' => array(
-				'Types',
-				'Participants' => array(
-					'DoublePartners' => array(
-						'People', 
-						'Participants'
-					),
-					'MixedPartners' => array(
-						'People', 
-						'Participants'
-					),
-				),  
-				'People' => array('Nations'),
-			),
-			'conditions' => $conditions,
 			'order' => ['People.display_name' => 'ASC']
 		);
 		
-		$registrations = $this->paginate()->toArray();
+		$registrations = $this->paginate($query)->toArray();
 				
 		$this->loadModel('Participants');
 		$this->loadModel('Shop.OrderStatus');
@@ -1572,7 +1583,6 @@ class RegistrationsController extends AppController {
 		if ($this->request->is(['post', 'put'])) {
 			$data = $this->request->getData();
 			
-			$this->loadModel('Registrations');
 			$this->loadModel('Participants');
 			$this->loadModel('People');
 

@@ -15,13 +15,19 @@ use Cake\Routing\Router;
 use Cake\Http\Exception\NotFoundException;
 
 use App\Model\Table\UsersTable;
-use App\Datasource\Paginator;
-
 use Shim\Controller\Controller as ShimController;
 
-
-
 class AppController extends ShimController {
+	// Models loaded on the fly
+	public $Competitions = null;
+	public $Languages = null;
+	public $Nations = null;
+	public $People = null;
+	public $Registrations = null;
+	public $Tournaments = null;
+	public $Types = null;
+	public $Users = null;
+	
 	// Menu definitions
 	// The entries must be key'ed array indices, even if the definition is empty
 	public $controller_menu = array(		

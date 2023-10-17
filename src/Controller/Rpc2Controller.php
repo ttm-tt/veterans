@@ -14,6 +14,9 @@ require_once ROOT . '/vendor/greenfieldtech-nirs/ixr-xmlrpc/ixr_xmlrpc.php';
 
 class Rpc2Controller extends AppController
 {
+	// Models loaded on the fly
+	public $Registrations = null;
+	
 	function beforeFilter(EventInterface $event) {
 		parent::beforeFilter($event);
 		

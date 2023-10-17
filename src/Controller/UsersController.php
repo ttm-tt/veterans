@@ -17,6 +17,8 @@ use App\Model\Table\UsersTable;
 
 
 class UsersController extends AppController {
+	// Models loaded on the fly
+	public $Groups = null;
 
 	public function initialize() : void {
 		parent::initialize();
