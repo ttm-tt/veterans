@@ -19,9 +19,12 @@ class AllotmentsTable extends ShopAppModelTable {
 	// Validation rules
 	public function validationDefault(Validator $validator) : Validator {		
 		$validator
-			->notEmpty('article_id', __('You must select an article'))
-			->notEmpty('user_id', __('You must select an user'))
-			->notEmpty('allotment', __('You must enter the number of alloted articles'))
+			->requirePresence('article_id')
+			->notEmptyString('article_id', __('You must select an article'))
+			->requirePresence('user_id')
+			->notEmptyString('user_id', __('You must select an user'))
+			->notEmptyString('allotment', __('You must enter the number of alloted articles'))
+			->isInteger('allotment')
 		;
 		
 		return $validator;

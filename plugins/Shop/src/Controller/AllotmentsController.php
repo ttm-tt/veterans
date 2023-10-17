@@ -5,6 +5,13 @@ use App\Model\Table\GroupsTable;
 
 
 class AllotmentsController extends ShopAppController {
+	
+	function initialize() : void {
+		parent::initialize();
+		
+		$this->loadModel('Shop.Allotments');
+	}
+
 	public function index() {
 		$tid = $this->request->getSession()->read('Tournaments.id');
 
