@@ -7,7 +7,7 @@ echo $this->element('Aros/links');
 ?>
 
 <?php
-echo $this->Form->create('User', array('url' => array('plugin' => 'AclEdit', 'controller' => 'aros', 'action' => 'admin_users')));
+echo $this->Form->create($users, array('url' => array('plugin' => 'AclEdit', 'controller' => 'aros', 'action' => 'admin_users')));
 echo __d('acl', 'name');
 echo '<br/>';
 echo $this->Form->input($user_display_field, array('label' => false, 'div' => false));

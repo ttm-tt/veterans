@@ -17,6 +17,9 @@ use Cake\Event\EventInterface;
 
 class AclEditAppController extends AppController
 {
+	// Models loaded on the fly
+	public $Aros = null;
+	
 	function initialize() : void {
 		parent::initialize();
 		

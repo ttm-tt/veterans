@@ -21,7 +21,7 @@ if(isset($users))
 	echo '<p>&nbsp;</p>';
 	?>
 	<?php
-    echo $this->Form->create('User');
+    echo $this->Form->create($users);
     echo __d('acl', 'user');
     echo '<br/>';
     echo $this->Form->input($user_display_field, array('label' => false, 'div' => false));

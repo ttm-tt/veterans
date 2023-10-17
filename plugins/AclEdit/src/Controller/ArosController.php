@@ -19,7 +19,10 @@ use Cake\Utility\Text;
 
 class ArosController extends AclEditAppController
 {
-
+	// Models loaded on the fly
+	public $Groups = null;
+	public $Permissions = null;
+	
 	function initialize() : void {
 		parent::initialize();
 		
@@ -169,15 +172,15 @@ class ArosController extends AclEditAppController
 	    
 	    $roles = $this->{$role_model_name}->find('all', array('order' => $role_display_field, 'contain' => false, 'recursive' => -1));
 	 
-	    if(isset($this->request->data['User'][$user_display_field]) || $this->request->session()->check('acl.aros.users.filter'))
+	    if(isset($this->request->data['User'][$user_display_field]) || $this->request->getSession()->check('acl.aros.users.filter'))
 	    {
 	        if(!isset($this->request->data['User'][$user_display_field]))
 	        {
-	            $this->request->data['User'][$user_display_field] = $this->request->session()->read('acl.aros.users.filter');
+	            $this->request->data['User'][$user_display_field] = $this->request->getSession()->read('acl.aros.users.filter');
 	        }
 	        else
 	        {
-	            $this->request->session()->write('acl.aros.users.filter', $this->request->data['User'][$user_display_field]);
+	            $this->request->getSession()->write('acl.aros.users.filter', $this->request->data['User'][$user_display_field]);
 	        }
 	        
 	        $filter = array($user_model_name . '.' . $user_display_field . ' LIKE' => '%' . $this->request->data['User'][$user_display_field] . '%');
@@ -223,12 +226,12 @@ class ArosController extends AclEditAppController
 
 	    if($this->{$user_model_name}->save($data))
 	    {
-	        $this->request->session()->setFlash(__d('acl', 'The user role has been updated'), 'flash_message', null, 'plugin_acl');
+	        $this->request->getSession()->setFlash(__d('acl', 'The user role has been updated'), 'flash_message', null, 'plugin_acl');
 	    }
 	    else
 	    {
 	        $errors = array_merge(array(__d('acl', 'The user role could not be updated')), $this->{$user_model_name}->validationErrors);
-	        $this->request->session()->setFlash($errors, 'flash_error', null, 'plugin_acl');
+	        $this->request->getSession()->setFlash($errors, 'flash_error', null, 'plugin_acl');
 	    }
 
 	    $this->_return_to_referer();
@@ -370,15 +373,15 @@ class ArosController extends AclEditAppController
 
 	    if(empty($user_id))
 	    {
-    	    if(isset($this->request->data['User'][$user_display_field]) || $this->request->session()->check('acl.aros.user_permissions.filter'))
+    	    if(isset($this->request->data['User'][$user_display_field]) || $this->request->getSession()->check('acl.aros.user_permissions.filter'))
     	    {
     	        if(!isset($this->request->data['User'][$user_display_field]))
     	        {
-    	            $this->request->data['User'][$user_display_field] = $this->request->session()->read('acl.aros.user_permissions.filter');
+    	            $this->request->data['User'][$user_display_field] = $this->request->getSession()->read('acl.aros.user_permissions.filter');
     	        }
     	        else
     	        {
-    	            $this->request->session()->write('acl.aros.user_permissions.filter', $this->request->data['User'][$user_display_field]);
+    	            $this->request->getSession()->write('acl.aros.user_permissions.filter', $this->request->data['User'][$user_display_field]);
     	        }
 
     	        $filter = array($user_model_name . '.' . $user_display_field . ' LIKE' => '%' . $this->request->data['User'][$user_display_field] . '%');
@@ -412,7 +415,7 @@ class ArosController extends AclEditAppController
             if(empty($user_aro))
             {
                 $display_user = $this->{$user_model_name}->find('first', array('conditions' => array($user_model_name . '.id' => $user_id, 'contain' => false, 'recursive' => -1)));
-                $this->request->session()->setFlash(sprintf(__d('acl', "The user '%s' does not exist in the ARO table"), $display_user[$user_display_field]), 'flash_error', null, 'plugin_acl');
+                $this->request->getSession()->setFlash(sprintf(__d('acl', "The user '%s' does not exist in the ARO table"), $display_user[$user_display_field]), 'flash_error', null, 'plugin_acl');
             }
             else
             {
@@ -488,11 +491,11 @@ class ArosController extends AclEditAppController
 	{
 	    if($this->Aros->Permission->deleteAll(array('Permission.id > ' => 0)))
 	    {
-	        $this->request->session()->setFlash(__d('acl', 'The permissions have been cleared'), 'flash_message', null, 'plugin_acl');
+	        $this->request->getSession()->setFlash(__d('acl', 'The permissions have been cleared'), 'flash_message', null, 'plugin_acl');
 	    }
 	    else
 	    {
-	        $this->request->session()->setFlash(__d('acl', 'The permissions could not be cleared'), 'flash_error', null, 'plugin_acl');
+	        $this->request->getSession()->setFlash(__d('acl', 'The permissions could not be cleared'), 'flash_error', null, 'plugin_acl');
 	    }
 
 	    $this->_return_to_referer();
@@ -510,17 +513,17 @@ class ArosController extends AclEditAppController
         if(empty($node))
         {
             $asked_user = $user->read(null, $user_id);
-            $this->request->session()->setFlash(sprintf(__d('acl', "The user '%s' does not exist in the ARO table"), $asked_user['User'][Configure :: read('acl.user.display_name')]), 'flash_error', null, 'plugin_acl');
+            $this->request->getSession()->setFlash(sprintf(__d('acl', "The user '%s' does not exist in the ARO table"), $asked_user['User'][Configure :: read('acl.user.display_name')]), 'flash_error', null, 'plugin_acl');
         }
         else
         {
             if($this->Aros->Permission->deleteAll(array('Aro.id' => $node[0]['Aro']['id'])))
     	    {
-    	        $this->request->session()->setFlash(__d('acl', 'The specific permissions have been cleared'), 'flash_message', null, 'plugin_acl');
+    	        $this->request->getSession()->setFlash(__d('acl', 'The specific permissions have been cleared'), 'flash_message', null, 'plugin_acl');
     	    }
     	    else
     	    {
-    	        $this->request->session()->setFlash(__d('acl', 'The specific permissions could not be cleared'), 'flash_error', null, 'plugin_acl');
+    	        $this->request->getSession()->setFlash(__d('acl', 'The specific permissions could not be cleared'), 'flash_error', null, 'plugin_acl');
     	    }
         }
 
@@ -539,7 +542,7 @@ class ArosController extends AclEditAppController
         if(empty($node))
         {
             $asked_role = $role->read(null, $role_id);
-            $this->request->session()->setFlash(sprintf(__d('acl', "The role '%s' does not exist in the ARO table"), $asked_role['Role'][Configure :: read('acl.aro.role.display_field')]), 'flash_error', null, 'plugin_acl');
+            $this->request->getSession()->setFlash(sprintf(__d('acl', "The role '%s' does not exist in the ARO table"), $asked_role['Role'][Configure :: read('acl.aro.role.display_field')]), 'flash_error', null, 'plugin_acl');
         }
         else
         {
@@ -561,7 +564,7 @@ class ArosController extends AclEditAppController
         if(empty($node))
         {
             $asked_role = $role->read(null, $role_id);
-            $this->request->session()->setFlash(sprintf(__d('acl', "The role '%s' does not exist in the ARO table"), $asked_role['Role'][Configure :: read('acl.aro.role.display_field')]), 'flash_error', null, 'plugin_acl');
+            $this->request->getSession()->setFlash(sprintf(__d('acl', "The role '%s' does not exist in the ARO table"), $asked_role['Role'][Configure :: read('acl.aro.role.display_field')]), 'flash_error', null, 'plugin_acl');
         }
         else
         {
