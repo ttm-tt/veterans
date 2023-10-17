@@ -17,9 +17,11 @@ use App\Model\Table\UsersTable;
 
 
 class OrdersController extends ShopAppController {
-
+	
 	function initialize() : void {
 		parent::initialize();
+		
+		$this->loadModel('Shop.Orders');
 		
 		$this->loadComponent('RegistrationUpdate');
 		$this->loadComponent('Shop.OrderUpdate');

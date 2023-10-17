@@ -6,7 +6,19 @@ use Cake\Core\Configure;
 use Cake\Event\EventInterface;
 
 class ShopAppController extends AppController {
+	// Models loaded on the fly
+	public $Articles = null;
+	public $Allotments = null;
+	public $Countries = null;
+	public $Orders = null;
+	public $OrderAddresses = null;
+	public $OrderArticles = null;
+	public $OrderSettings = null;
+	public $OrderStatus = null;
+	public $OrderCancellationFees = null;
+
 	var $_shopSettings;
+
 	public function beforeFilter(EventInterface $event) {
 		parent::beforeFilter($event);
 		

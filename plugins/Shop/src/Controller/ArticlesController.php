@@ -9,6 +9,12 @@ use Shop\Model\Table\OrderStatusTable;
 
 class ArticlesController extends ShopAppController {
 
+	function initialize() : void {
+		parent::initialize();
+		
+		$this->loadModel('Shop.Articles');
+	}
+
 	function beforeFilter(EventInterface $event) {
 		parent::beforeFilter($event);
 		
