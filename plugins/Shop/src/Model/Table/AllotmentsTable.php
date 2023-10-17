@@ -24,7 +24,7 @@ class AllotmentsTable extends ShopAppModelTable {
 			->requirePresence('user_id')
 			->notEmptyString('user_id', __('You must select an user'))
 			->notEmptyString('allotment', __('You must enter the number of alloted articles'))
-			->isInteger('allotment')
+			->numeric('allotment')
 		;
 		
 		return $validator;
