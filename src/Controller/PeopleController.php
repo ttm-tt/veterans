@@ -13,6 +13,15 @@ use Cake\Utility\Hash;
 class PeopleController extends AppController {
 
 	public $name = 'People';
+	
+	public $Orders = null;
+	public $OrderArticles = null;
+
+	function initialize() : void {
+		parent::initialize();
+		
+		$this->loadModel('People');
+	}
 
 	function index() {
 		if ($this->request->getQuery('nation_id') !== null) {

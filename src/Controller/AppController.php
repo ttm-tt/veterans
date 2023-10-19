@@ -20,6 +20,7 @@ use Shim\Controller\Controller as ShimController;
 class AppController extends ShimController {
 	// Models loaded on the fly
 	public $Competitions = null;
+	public $Groups = null;
 	public $Languages = null;
 	public $Nations = null;
 	public $People = null;
