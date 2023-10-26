@@ -8,6 +8,12 @@ use App\Model\Table\GroupsTable;
 
 class TournamentsController extends AppController {
 
+	function initialize() : void {
+		parent::initialize();
+		
+		$this->loadModel('Tournaments');
+	}		
+
 	function index() {
 		$this->paginate = array('order' => ['start_on DESC']);
 	

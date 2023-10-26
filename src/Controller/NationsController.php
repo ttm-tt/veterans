@@ -15,6 +15,12 @@ class NationsController extends AppController {
 
 	public $paginate = array();
 
+	function initialize() : void {
+		parent::initialize();
+		
+		$this->loadModel('Nations');
+	}
+	
 	function index() {
 		if ($this->request->getQuery('continent') !== null) {
 			if ($this->request->getQuery('continent') == 'all')

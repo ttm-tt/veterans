@@ -8,6 +8,13 @@ class GroupsController extends AppController {
 
 	public $name = 'Groups';
 
+	function initialize() : void {
+		parent::initialize();
+		
+		$this->loadModel('Groups');
+	}
+	
+
 	function index() {
 		$this->loadModel('Types');
 

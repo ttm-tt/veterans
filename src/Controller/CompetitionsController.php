@@ -12,6 +12,12 @@ class CompetitionsController extends AppController {
 
 	public $name = 'Competitions';
 
+	function initialize() : void {
+		parent::initialize();
+		
+		$this->loadModel('Competitions');
+	}
+
 	function index() {
 		if ($this->request->getQuery('cp_sex') !== null) {
 			if ($this->request->getQuery('cp_sex') === 'all')

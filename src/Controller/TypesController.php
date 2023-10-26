@@ -8,6 +8,12 @@ class TypesController extends AppController {
 
 	public $name = 'Types';
 
+	function initialize() : void {
+		parent::initialize();
+		
+		$this->loadModel('Types');
+	}		
+
 	function index() {
 		$this->paginate = array('order' => ['Types.name' => 'ASC']);
 		$this->set('types', $this->paginate());
