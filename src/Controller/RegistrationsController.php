@@ -1833,7 +1833,7 @@ class RegistrationsController extends AppController {
 									'Competitions.type_of' => 'D',
 									'Competitions.sex' => $me['person']['sex'],
 									'Competitions.ptt_class >=' => max($me['person']['ptt_class'], $r['person']['ptt_class'])
-								) + ($me['person']['ptt_class'] == 0 ? array('Competitions.ptt_class = 0') : 'Competitions.ptt_class > 0'),
+								) + ($me['person']['ptt_class'] == 0 ? ['Competitions.ptt_class = 0'] : ['Competitions.ptt_class > 0']),
 								['order' => [
 									'Competitions.ptt_class' => 'DESC',
 									'Competitions.born' => 'ASC'
