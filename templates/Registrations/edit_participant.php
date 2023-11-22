@@ -377,6 +377,12 @@ if (false) {
 						'options' => $double_partner
 					));
 				}
+				if ($hasRootPrivileges) {
+					echo $this->Form->control('participant.double_partner_confirmed', array(
+						'type' => 'checkbox',
+						'label' => __d('user', 'Partner confirmed')
+					));
+				}
 			echo '</div>';
 
 			$style = 'display:block';
@@ -414,6 +420,12 @@ if (false) {
 						), 
 						'empty' => __d('user', 'Partner wanted'), 
 						'options' => $mixed_partner
+					));
+				}
+				if ($hasRootPrivileges) {
+					echo $this->Form->control('participant.mixed_partner_confirmed', array(
+						'type' => 'checkbox',
+						'label' => __d('user', 'Partner confirmed')
 					));
 				}
 			echo '</div>';

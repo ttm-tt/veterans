@@ -182,7 +182,11 @@ class RegistrationUpdateComponent extends Component {
 		$partner_id = $field . '_partner_id';
 		$partnerProp = $field . '_partner';
 		$cancelled = $field . '_cancelled';
-		$funConfirmed = 'is' . ucwords($field) . 'PartnerConfirmed';
+		$funConfirmed = 'is' . ucwords($field) . 'PartnerConfirmed';		
+
+		// Often needed
+		$hasRootPrivileges = UsersTable::hasRootPrivileges($this->getController()->_getCurrentUser());
+		$partner_confirmed = $field . '_partner_confirmed';
 
 		// Reset fields if double / mixed was cancelled, so we can compare $partner_id to check for changes
 		// We can do this because we are working on a copy
@@ -288,7 +292,8 @@ class RegistrationUpdateComponent extends Component {
 			if (!isset($data[$oldPartner['id']]['participant'][$partner_id])) {
 
 				// If we are are allowed to edit this player
-				if (!$this->fromImport && $this->_isEditAllowed($oldPartner)) {
+				if (!$this->fromImport && $this->_isEditAllowed($oldPartner) &&
+						(!$hasRootPrivileges || ($data['participant'][$partner_confirmed] ?? 0))) {
 					$data[$oldPartner['id']]['participant']['id'] = $oldPartner['participant']['id'];
 					$data[$oldPartner['id']]['participant'][$partner_id] = $newRegistration['id'];
 					$data[$oldPartner['id']]['participant'][$event_id] = $newRegistration['participant'][$event_id];
@@ -299,7 +304,9 @@ class RegistrationUpdateComponent extends Component {
 					$newPartner['participant'][$event_id] = $newRegistration['participant'][$event_id];
 					$newPartner['participant'][$field] = $newRegistration['participant'][$field];
 
-					if ($this->getController()->Registrations->$funConfirmed($newRegistration) || $this->_isEditAllowed($newPartner))
+					if ($this->getController()->Registrations->$funConfirmed($newRegistration) || 
+							($this->_isEditAllowed($newPartner) && 
+								(!$hasRootPrivileges || ($data['participant'][$partner_confirmed] ?? 0))))
 						$this->_sendMail('partner_confirmed_partner', 'Partner Confirmed', $field, $newPartner, $newRegistration);
 					else
 						$this->_sendMail('partner_requested_partner', 'Partner Requested', $field, $newPartner, $newRegistration);
@@ -479,6 +486,9 @@ class RegistrationUpdateComponent extends Component {
 	// Save a record. I have to change several records but I need access to user info.
 	// So I can't use "beforeSave" / "afterSave" of the model.
 	function _save(&$data, $options = array()) {
+		// Often needed
+		$hasRootPrivileges = UsersTable::hasRootPrivileges($this->getController()->_getCurrentUser());
+		
 		// Security check: May the current user edit this person?
 		if (!$this->_isEditAllowed($data)) {
 			$this->MultipleFlash->setFlash(__('You are not allowed to edit this registration'), 'error');
@@ -532,7 +542,7 @@ class RegistrationUpdateComponent extends Component {
 		// Load required models
 		$this->getController()->loadModel('Participants');
 
-		if (UsersTable::hasRootPrivileges($this->getController()->_getCurrentUser())) {
+		if ($hasRootPrivileges) {
 			// Clear xxx_cancelled flag if a root user has selected an event
 			if (!empty($data['participant']['single_id']))
 				$data['participant']['single_cancelled'] = false;
@@ -699,7 +709,9 @@ class RegistrationUpdateComponent extends Component {
 			; // no change
 		else if (empty($newRegistration['participant']['double_partner_id']))
 			; // partner removed
-		else if (RegistrationsTable::isDoublePartnerConfirmed($newRegistration) || $this->_isEditAllowed($newRegistration['participant']['double_partner_id']))
+		else if (RegistrationsTable::isDoublePartnerConfirmed($newRegistration) || 
+				 ($this->_isEditAllowed($newRegistration['participant']['double_partner_id']) && 
+						 (!$hasRootPrivileges || ($data['participant']['double_partner_confirmed'] ?? 0))))
 			$this->_sendMail('partner_confirmed_player', 'Partner Confirmed', 'double', $newRegistration);
 		else
 			$this->_sendMail('partner_requested_player', 'Partner Requested', 'double', $newRegistration);	
@@ -709,7 +721,9 @@ class RegistrationUpdateComponent extends Component {
 			; // no change
 		else if (empty($newRegistration['participant']['mixed_partner_id']))
 			; // partner removed
-		else if (RegistrationsTable::isDoublePartnerConfirmed($newRegistration) || $this->_isEditAllowed($newRegistration['participant']['mixed_partner_id']))
+		else if (RegistrationsTable::isMixedPartnerConfirmed($newRegistration) ||
+				($this->_isEditAllowed($newRegistration['participant']['mixed_partner_id']) && 
+						(!$hasRootPrivileges || ($data['participant']['mixed_partner_confirmed'] ?? 0))))
 			$this->_sendMail('partner_confirmed_player', 'Partner Confirmed', 'mixed', $newRegistration);
 		else
 			$this->_sendMail('partner_requested_player', 'Partner Requested', 'mixed', $newRegistration);	
