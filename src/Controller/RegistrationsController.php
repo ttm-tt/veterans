@@ -19,6 +19,7 @@ class RegistrationsController extends AppController {
 	
 	// Models loaded on the fly
 	public $Participants = null;
+	public $ParticipantHistories = null;
 	// Should be in plugins/Shops
 	public $OrderStatus = null;
 	public $OrderArticles = null;
