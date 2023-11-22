@@ -105,7 +105,10 @@ class AllotmentsController extends ShopAppController {
 		
 		$this->set('users', $this->Users->find('list', array(
 			'fields' => ['id', 'username'],
-			'conditions' => ['group_id' => GroupsTable::getTourOperatorId()],
+			'conditions' => ['group_id IN' => [
+				GroupsTable::getTourOperatorId(),
+				GroupsTable::getAdminId()
+			]],
 			'order' => ['username' => 'ASC']
 		))->toArray());
 		
