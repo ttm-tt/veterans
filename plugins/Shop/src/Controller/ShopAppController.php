@@ -8,6 +8,7 @@ use Cake\Event\EventInterface;
 class ShopAppController extends AppController {
 	// Models loaded on the fly
 	public $Articles = null;
+	public $ArticleVariants = null;
 	public $Allotments = null;
 	public $Countries = null;
 	public $Orders = null;

@@ -26,10 +26,19 @@ class OrderUpdateComponent extends Component {
 		'type',         // Same as article, could be omitted
 		'agb'           // doubtfull, could be omitted
 	);
+	
+	public $Orders = null;
+	public $Articles = null;
+	public $ArticleVariants = null;
+	public $OrderArticles = null;
+	public $OrderStatus = null;
+	public $OrderSettings = null;
+	public $OrderAddresses = null;
 
 	public function initialize(array $config) : void {	
 		$this->Orders = TableRegistry::get('Shop.Orders');
 		$this->Articles = TableRegistry::get('Shop.Articles');
+		$this->Articles = TableRegistry::get('Shop.ArticleVariants');
 		$this->OrderArticles = TableRegistry::get('Shop.OrderArticles');
 		$this->OrderStatus = TableRegistry::get('Shop.OrderStatus');
 		$this->OrderSettings = TableRegistry::get('Shop.OrderSettings');
