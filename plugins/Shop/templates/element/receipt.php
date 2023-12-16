@@ -25,16 +25,16 @@ use App\Model\Table\GroupsTable;
 </div>
 <div id="caption">
 	<div id="title">
-		<h1><?php echo __d('user', 'Proforma Invoice');?></h1>
+		<h1><?php echo ($shopSettings['invoice_title'] ?? __d('user', 'Proforma Invoice'));?></h1>
 	</div>
 	<div id="transaction">
 		<table class="dl">
 			<tr>
-				<td class="dt"><?php echo __d('user', 'Invoice date');?></td>
+				<td class="dt"><?php echo ($shopSettings['invoice_date'] ?? __d('user', 'Invoice date'));?></td>
 				<td class="dd"><?php echo date('d.m.Y', strtotime($order['created']));?></td>
 			</tr>
 			<tr>
-				<td class="dt"><?php echo __d('user', 'Invoice no');?></td>
+				<td class="dt"><?php echo ($shopSettings['invoice_no'] ?? __d('user', 'Invoice no'));?></td>
 				<td class="dd"><?php echo $order['invoice'];?></td>
 			</tr>
 		</table>
