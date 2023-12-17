@@ -38,7 +38,7 @@ class OrderUpdateComponent extends Component {
 	public function initialize(array $config) : void {	
 		$this->Orders = TableRegistry::get('Shop.Orders');
 		$this->Articles = TableRegistry::get('Shop.Articles');
-		$this->Articles = TableRegistry::get('Shop.ArticleVariants');
+		$this->ArticleVariants = TableRegistry::get('Shop.ArticleVariants');
 		$this->OrderArticles = TableRegistry::get('Shop.OrderArticles');
 		$this->OrderStatus = TableRegistry::get('Shop.OrderStatus');
 		$this->OrderSettings = TableRegistry::get('Shop.OrderSettings');
