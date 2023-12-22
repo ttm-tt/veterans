@@ -1869,7 +1869,7 @@ class RegistrationsController extends AppController {
 									'Competitions.tournament_id' => $tid,
 									'Competitions.type_of' => 'X',								
 									'Competitions.ptt_class >=' => max($me['person']['ptt_class'], $r['person']['ptt_class'])
-								) + ($me['person']['ptt_class'] == 0 ? array('Competitions.ptt_class = 0') : 'Competitions.ptt_class > 0'),
+								) + ($me['person']['ptt_class'] == 0 ? ['Competitions.ptt_class = 0'] : ['Competitions.ptt_class > 0']),
 								['order' => [
 									'Competitions.ptt_class' => 'DESC',
 									'Competitions.born' => 'ASC'
