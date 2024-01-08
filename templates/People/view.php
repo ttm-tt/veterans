@@ -84,7 +84,7 @@
 		</dd>
 		<dt<?php if ($i % 2 == 0) echo $class;?>><?php echo __('User'); ?></dt>
 		<dd<?php if ($i++ % 2 == 0) echo $class;?>>
-			<?php if (!empty($person['user']['username'])) echo $this->Html->link($person['user']['username'], array('controller' => 'users', 'action' => 'view', $person['user']['id'])); ?>
+			<?php if (!empty($person['user']['username'])) echo $this->Html->link($person['user']['username'], array('controller' => 'users', 'action' => 'view', $person['user_id'])); ?>
 			&nbsp;
 		</dd>
 		<?php if (!empty($person['order']['invoice'])) { ?>
@@ -121,7 +121,7 @@
 		<?php if ($Acl->check($current_user, 'People/edit'))
 			echo '<li>' . $this->Html->link(__('Edit Person'), array('action' => 'edit', $person['id'])) . '</li>';
 		?>
-		<?php if ($Acl->check($current_user, 'People/delete') && count($person['registrations']) === 0)
+		<?php if ($Acl->check($current_user, 'People/delete') && count($person['registrations'] ?? []) === 0)
 			echo '<li>' . $this->Html->link(__('Delete Person'), array('action' => 'delete', $person['id']), ['confirm' => sprintf(__('Are you sure you want to delete %s?'), $person['last_name'])]) . '</li>';
 		?>
 		<?php if ($Acl->check($current_user, 'People/index'))
