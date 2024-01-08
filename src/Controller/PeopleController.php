@@ -16,6 +16,8 @@ class PeopleController extends AppController {
 	
 	public $Orders = null;
 	public $OrderArticles = null;
+	public $PersonHistories = null;
+	
 
 	function initialize() : void {
 		parent::initialize();
