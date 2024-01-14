@@ -77,52 +77,54 @@ use App\Model\Table\GroupsTable;
 		if (!empty($shopSettings['footer'])) {
 			echo $shopSettings['footer'];
 		} else {
+			if ($shopSettings['banktransfer']) {
+				echo '<span class="dl"><table class="dl">';
+					if (!empty($shopSettings['bank_name'])) {
+						echo '<tr>';
+						echo '<td class="dt">' . __d('user', 'Bank') . '</td>';
+						echo '<td class="dd">' . $shopSettings['bank_name'] . '</td>';
+						echo '</tr>';
+					}
+					if (!empty($shopSettings['bank_address'])) {
+						echo '<tr>';
+						echo '<td class="dt">' . __d('user', 'Bank Address') . '</td>';
+						echo '<td class="dd">' . $shopSettings['bank_address'] . '</td>';
+						echo '</tr>';
+					}
+					if (!empty($shopSettings['iban'])) {
+						echo '<tr>';
+						echo '<td class="dt">' . __d('user', 'IBAN') . '</td>';
+						echo '<td class="dd">' . $shopSettings['iban'] . '</td>';
+						echo '</tr>';
+					}
+					else if (!empty($shopSettings['account_no'])) {
+						echo '<tr>';
+						echo '<td class="dt">' . __d('user', 'Account No') . '</td>';
+						echo '<td class="dd">' . $shopSettings['account_no'] . '</td>';
+						echo '</tr>';
+					}
+					if (!empty($shopSettings['bic'])) {
+						echo '<tr>';
+						echo '<td class="dt">' . __d('user', 'BIC (SWIFT)') . '</td>';
+						echo '<td class="dd">' . $shopSettings['bic'] . '</td>';
+						echo '</tr>';
+					}
+					if (!empty($shopSettings['aba'])) {
+						echo '<tr>';
+						echo '<td class="dt">' . __d('user', 'ABA') . '</td>';
+						echo '<td class="dd">' . $shopSettings['aba'] . '</td>';
+						echo '</tr>';
+					}
+					if (!empty($shopSettings['correspondent_bank'])) {
+						echo '<tr>';
+						echo '<td class="dt">' . __d('user', 'Correspondent Bank') . '</td>';
+						echo '<td class="dd">' . implode('<br>', explode("\n", $shopSettings['correspondent_bank'])) . '</td>';
+						echo '</tr>';
+					}
+				echo '</table></span>';
+			}
 			echo '<span class="dl"><table class="dl">';
-				if (!empty($shopSettings['bank_name'])) {
-					echo '<tr>';
-					echo '<td class="dt">' . __d('user', 'Bank') . '</td>';
-					echo '<td class="dd">' . $shopSettings['bank_name'] . '</td>';
-					echo '</tr>';
-				}
-				if (!empty($shopSettings['bank_address'])) {
-					echo '<tr>';
-					echo '<td class="dt">' . __d('user', 'Bank Address') . '</td>';
-					echo '<td class="dd">' . $shopSettings['bank_address'] . '</td>';
-					echo '</tr>';
-				}
-				if (!empty($shopSettings['iban'])) {
-					echo '<tr>';
-					echo '<td class="dt">' . __d('user', 'IBAN') . '</td>';
-					echo '<td class="dd">' . $shopSettings['iban'] . '</td>';
-					echo '</tr>';
-				}
-				else if (!empty($shopSettings['account_no'])) {
-					echo '<tr>';
-					echo '<td class="dt">' . __d('user', 'Account No') . '</td>';
-					echo '<td class="dd">' . $shopSettings['account_no'] . '</td>';
-					echo '</tr>';
-				}
-				if (!empty($shopSettings['bic'])) {
-					echo '<tr>';
-					echo '<td class="dt">' . __d('user', 'BIC (SWIFT)') . '</td>';
-					echo '<td class="dd">' . $shopSettings['bic'] . '</td>';
-					echo '</tr>';
-				}
-				if (!empty($shopSettings['aba'])) {
-					echo '<tr>';
-					echo '<td class="dt">' . __d('user', 'ABA') . '</td>';
-					echo '<td class="dd">' . $shopSettings['aba'] . '</td>';
-					echo '</tr>';
-				}
-				if (!empty($shopSettings['correspondent_bank'])) {
-					echo '<tr>';
-					echo '<td class="dt">' . __d('user', 'Correspondent Bank') . '</td>';
-					echo '<td class="dd">' . implode('<br>', explode("\n", $shopSettings['correspondent_bank'])) . '</td>';
-					echo '</tr>';
-				}
-			echo '</table></span>';
-			echo '<span class="dl"><table class="dl">';
-				if (!empty($shopSettings['account_holder'])) {
+				if ($shopSettings['banktransfer'] && !empty($shopSettings['account_holder'])) {
 					echo '<tr>';
 					echo '<td class="dt">' . __d('user', 'Account Holder') . '</td>';
 					echo '<td class="dd">' . $shopSettings['account_holder'] . '</td>';
