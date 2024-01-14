@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2023-12-23 20:22+0100\n"
+"POT-Creation-Date: 2024-01-14 18:46+0100\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -417,19 +417,19 @@ msgstr ""
 #: ./templates/Users/login.php:17
 #: ./plugins/Shop/templates/Shops/add_person.php:291
 #: ./plugins/Shop/templates/Shops/address.php:148
-#: ./plugins/Shop/templates/element/receipt.php:133
+#: ./plugins/Shop/templates/element/receipt.php:135
 #: ./plugins/Shop/templates/element/shop_address.php:25
 #: ./plugins/Shop/templates/email/html/cancel.php:180
-#: ./plugins/Shop/templates/email/html/order.php:316
+#: ./plugins/Shop/templates/email/html/order.php:328
 msgid "Email"
 msgstr ""
 
 #: ./templates/Registrations/edit_participant.php:446
 #: ./plugins/Shop/templates/Shops/success.php:106
-#: ./plugins/Shop/templates/element/receipt.php:139
+#: ./plugins/Shop/templates/element/receipt.php:141
 #: ./plugins/Shop/templates/element/shop_address.php:27
 #: ./plugins/Shop/templates/email/html/cancel.php:186
-#: ./plugins/Shop/templates/email/html/order.php:322
+#: ./plugins/Shop/templates/email/html/order.php:334
 msgid "Phone"
 msgstr ""
 
@@ -1380,30 +1380,30 @@ msgid "Banking Account"
 msgstr ""
 
 #: ./plugins/Shop/templates/Shops/success.php:74
-#: ./plugins/Shop/templates/element/receipt.php:151
+#: ./plugins/Shop/templates/element/receipt.php:153
 #: ./plugins/Shop/templates/email/html/cancel.php:198
-#: ./plugins/Shop/templates/email/html/order.php:334
+#: ./plugins/Shop/templates/email/html/order.php:346
 msgid "VAT Reg Id"
 msgstr ""
 
 #: ./plugins/Shop/templates/Shops/success.php:78
-#: ./plugins/Shop/templates/element/receipt.php:83
+#: ./plugins/Shop/templates/element/receipt.php:84
 #: ./plugins/Shop/templates/email/html/cancel.php:148
-#: ./plugins/Shop/templates/email/html/order.php:266
+#: ./plugins/Shop/templates/email/html/order.php:278
 msgid "Bank"
 msgstr ""
 
 #: ./plugins/Shop/templates/Shops/success.php:82
-#: ./plugins/Shop/templates/element/receipt.php:127
+#: ./plugins/Shop/templates/element/receipt.php:129
 #: ./plugins/Shop/templates/email/html/cancel.php:174
-#: ./plugins/Shop/templates/email/html/order.php:310
+#: ./plugins/Shop/templates/email/html/order.php:322
 msgid "Account Holder"
 msgstr ""
 
 #: ./plugins/Shop/templates/Shops/success.php:86
-#: ./plugins/Shop/templates/element/receipt.php:95
+#: ./plugins/Shop/templates/element/receipt.php:96
 #: ./plugins/Shop/templates/email/html/cancel.php:160
-#: ./plugins/Shop/templates/email/html/order.php:284
+#: ./plugins/Shop/templates/email/html/order.php:296
 msgid "IBAN"
 msgstr ""
 
@@ -1417,21 +1417,21 @@ msgid "SWIFT"
 msgstr ""
 
 #: ./plugins/Shop/templates/Shops/success.php:98
-#: ./plugins/Shop/templates/element/receipt.php:113
-#: ./plugins/Shop/templates/email/html/order.php:296
+#: ./plugins/Shop/templates/element/receipt.php:114
+#: ./plugins/Shop/templates/email/html/order.php:308
 msgid "ABA"
 msgstr ""
 
 #: ./plugins/Shop/templates/Shops/success.php:102
-#: ./plugins/Shop/templates/element/receipt.php:119
-#: ./plugins/Shop/templates/email/html/order.php:302
+#: ./plugins/Shop/templates/element/receipt.php:120
+#: ./plugins/Shop/templates/email/html/order.php:314
 msgid "Correspondent Bank"
 msgstr ""
 
 #: ./plugins/Shop/templates/Shops/success.php:110
-#: ./plugins/Shop/templates/element/receipt.php:145
+#: ./plugins/Shop/templates/element/receipt.php:147
 #: ./plugins/Shop/templates/email/html/cancel.php:192
-#: ./plugins/Shop/templates/email/html/order.php:328
+#: ./plugins/Shop/templates/email/html/order.php:340
 msgid "Fax"
 msgstr ""
 
@@ -1470,19 +1470,19 @@ msgstr ""
 msgid "Order"
 msgstr ""
 
-#: ./plugins/Shop/templates/element/receipt.php:89
+#: ./plugins/Shop/templates/element/receipt.php:90
 #: ./plugins/Shop/templates/email/html/cancel.php:154
-#: ./plugins/Shop/templates/email/html/order.php:272
+#: ./plugins/Shop/templates/email/html/order.php:284
 msgid "Bank Address"
 msgstr ""
 
-#: ./plugins/Shop/templates/element/receipt.php:101
-#: ./plugins/Shop/templates/email/html/order.php:278
+#: ./plugins/Shop/templates/element/receipt.php:102
+#: ./plugins/Shop/templates/email/html/order.php:290
 msgid "Account No"
 msgstr ""
 
-#: ./plugins/Shop/templates/element/receipt.php:107
-#: ./plugins/Shop/templates/email/html/order.php:290
+#: ./plugins/Shop/templates/element/receipt.php:108
+#: ./plugins/Shop/templates/email/html/order.php:302
 msgid "BIC (SWIFT)"
 msgstr ""
 
@@ -1658,7 +1658,7 @@ msgid "If you think this is an error please contact {0} immediately!"
 msgstr ""
 
 #: ./plugins/Shop/templates/email/html/cancel.php:128
-#: ./plugins/Shop/templates/email/html/order.php:238
+#: ./plugins/Shop/templates/email/html/order.php:250
 msgid "Details of your registration:"
 msgstr ""
 
@@ -1667,17 +1667,17 @@ msgid "You had entered the following players and accompanying persons:"
 msgstr ""
 
 #: ./plugins/Shop/templates/email/html/cancel.php:137
-#: ./plugins/Shop/templates/email/html/order.php:253
+#: ./plugins/Shop/templates/email/html/order.php:265
 #: ./plugins/Shop/templates/email/html/voucher.php:16
-#: ./plugins/Shop/templates/email/text/order.php:124
+#: ./plugins/Shop/templates/email/text/order.php:142
 #: ./plugins/Shop/templates/email/text/voucher.php:20
 msgid "Best regards"
 msgstr ""
 
 #: ./plugins/Shop/templates/email/html/order.php:138
-#: ./plugins/Shop/templates/email/html/order.php:200
+#: ./plugins/Shop/templates/email/html/order.php:206
 #: ./plugins/Shop/templates/email/text/order.php:24
-#: ./plugins/Shop/templates/email/text/order.php:80
+#: ./plugins/Shop/templates/email/text/order.php:92
 msgid "Thank you for your registration."
 msgstr ""
 
@@ -1697,9 +1697,9 @@ msgid "We want to inform you that your registration {0} can now be processed."
 msgstr ""
 
 #: ./plugins/Shop/templates/email/html/order.php:152
-#: ./plugins/Shop/templates/email/html/order.php:207
+#: ./plugins/Shop/templates/email/html/order.php:213
 #: ./plugins/Shop/templates/email/text/order.php:38
-#: ./plugins/Shop/templates/email/text/order.php:87
+#: ./plugins/Shop/templates/email/text/order.php:99
 msgid "Please pay the amount due as soon as possible, but not later than {0}."
 msgstr ""
 
@@ -1715,78 +1715,83 @@ msgstr ""
 
 #: ./plugins/Shop/templates/email/html/order.php:160
 #: ./plugins/Shop/templates/email/html/order.php:188
-#: ./plugins/Shop/templates/email/html/order.php:215
+#: ./plugins/Shop/templates/email/html/order.php:221
 #: ./plugins/Shop/templates/email/text/order.php:46
-#: ./plugins/Shop/templates/email/text/order.php:68
-#: ./plugins/Shop/templates/email/text/order.php:95
+#: ./plugins/Shop/templates/email/text/order.php:74
+#: ./plugins/Shop/templates/email/text/order.php:107
 msgid "Don't forget to put your invoice number on the bank transfer so we can find your order."
 msgstr ""
 
 #: ./plugins/Shop/templates/email/html/order.php:163
 #: ./plugins/Shop/templates/email/html/order.php:191
-#: ./plugins/Shop/templates/email/html/order.php:218
+#: ./plugins/Shop/templates/email/html/order.php:224
 #: ./plugins/Shop/templates/email/text/order.php:49
-#: ./plugins/Shop/templates/email/text/order.php:71
-#: ./plugins/Shop/templates/email/text/order.php:98
+#: ./plugins/Shop/templates/email/text/order.php:77
+#: ./plugins/Shop/templates/email/text/order.php:110
 msgid "Please note that it may take several days until the payment is credited to our account and is processed."
 msgstr ""
 
 #: ./plugins/Shop/templates/email/html/order.php:167
 #: ./plugins/Shop/templates/email/html/order.php:195
-#: ./plugins/Shop/templates/email/html/order.php:222
-#: ./plugins/Shop/templates/email/html/order.php:230
+#: ./plugins/Shop/templates/email/html/order.php:228
+#: ./plugins/Shop/templates/email/html/order.php:242
 #: ./plugins/Shop/templates/email/text/order.php:53
-#: ./plugins/Shop/templates/email/text/order.php:75
-#: ./plugins/Shop/templates/email/text/order.php:102
-#: ./plugins/Shop/templates/email/text/order.php:110
+#: ./plugins/Shop/templates/email/text/order.php:81
+#: ./plugins/Shop/templates/email/text/order.php:114
+#: ./plugins/Shop/templates/email/text/order.php:128
 msgid "To pay with credit card use this link:"
 msgstr ""
 
 #: ./plugins/Shop/templates/email/html/order.php:174
+#: ./plugins/Shop/templates/email/html/order.php:202
+#: ./plugins/Shop/templates/email/html/order.php:235
+#: ./plugins/Shop/templates/email/text/order.php:60
+#: ./plugins/Shop/templates/email/text/order.php:88
+#: ./plugins/Shop/templates/email/text/order.php:121
 msgid "Only payment with credit card is possible!"
 msgstr ""
 
 #: ./plugins/Shop/templates/email/html/order.php:178
-#: ./plugins/Shop/templates/email/text/order.php:58
+#: ./plugins/Shop/templates/email/text/order.php:64
 msgid "This is a friendly reminder that you haven't paid your registration {0} yet."
 msgstr ""
 
 #: ./plugins/Shop/templates/email/html/order.php:180
-#: ./plugins/Shop/templates/email/text/order.php:60
+#: ./plugins/Shop/templates/email/text/order.php:66
 msgid "If you believe this is an error please contact {0}."
 msgstr ""
 
 #: ./plugins/Shop/templates/email/html/order.php:182
-#: ./plugins/Shop/templates/email/text/order.php:62
+#: ./plugins/Shop/templates/email/text/order.php:68
 msgid "If you have not paid yet please do so until {0}."
 msgstr ""
 
 #: ./plugins/Shop/templates/email/html/order.php:184
-#: ./plugins/Shop/templates/email/text/order.php:64
+#: ./plugins/Shop/templates/email/text/order.php:70
 msgid "If we haven't received your payment by then we reserve the right to cancel your registrations without further notice."
 msgstr ""
 
-#: ./plugins/Shop/templates/email/html/order.php:202
-#: ./plugins/Shop/templates/email/text/order.php:82
+#: ./plugins/Shop/templates/email/html/order.php:208
+#: ./plugins/Shop/templates/email/text/order.php:94
 msgid "Your invoice number is {0}."
 msgstr ""
 
-#: ./plugins/Shop/templates/email/html/order.php:209
-#: ./plugins/Shop/templates/email/text/order.php:89
+#: ./plugins/Shop/templates/email/html/order.php:215
+#: ./plugins/Shop/templates/email/text/order.php:101
 msgid "Note that your registration is not completed until we have received the full amount still due."
 msgstr ""
 
-#: ./plugins/Shop/templates/email/html/order.php:211
-#: ./plugins/Shop/templates/email/text/order.php:91
+#: ./plugins/Shop/templates/email/html/order.php:217
+#: ./plugins/Shop/templates/email/text/order.php:103
 msgid "We reserve the right to cancel your order after that date if we haven't received the full amount still due until then."
 msgstr ""
 
-#: ./plugins/Shop/templates/email/html/order.php:243
+#: ./plugins/Shop/templates/email/html/order.php:255
 msgid "You have entered the following players and accompanying persons:"
 msgstr ""
 
-#: ./plugins/Shop/templates/email/html/order.php:249
-#: ./plugins/Shop/templates/email/text/order.php:120
+#: ./plugins/Shop/templates/email/html/order.php:261
+#: ./plugins/Shop/templates/email/text/order.php:138
 #: ./plugins/Shop/templates/email/text/receipt.php:2
 msgid "Please find your receipt attached."
 msgstr ""

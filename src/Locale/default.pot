@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2023-12-23 20:20+0100\n"
+"POT-Creation-Date: 2024-01-14 18:46+0100\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -131,7 +131,7 @@ msgid "You are not allowed to edit this registration"
 msgstr ""
 
 #: ./src/Controller/Component/RegistrationUpdateComponent.php:794
-#: ./src/Controller/PeopleController.php:617
+#: ./src/Controller/PeopleController.php:619
 msgid "You are not allowed to delete this person"
 msgstr ""
 
@@ -197,57 +197,57 @@ msgstr ""
 msgid "Association was not deleted"
 msgstr ""
 
-#: ./src/Controller/PeopleController.php:167
-#: ./src/Controller/PeopleController.php:237
-#: ./src/Controller/PeopleController.php:316
-#: ./src/Controller/PeopleController.php:464
-#: ./src/Controller/PeopleController.php:610
+#: ./src/Controller/PeopleController.php:169
+#: ./src/Controller/PeopleController.php:239
+#: ./src/Controller/PeopleController.php:318
+#: ./src/Controller/PeopleController.php:466
+#: ./src/Controller/PeopleController.php:612
 msgid "Invalid person"
 msgstr ""
 
-#: ./src/Controller/PeopleController.php:193
-#: ./src/Controller/PeopleController.php:206
-#: ./src/Controller/PeopleController.php:226
-#: ./src/Controller/PeopleController.php:258
-#: ./src/Controller/PeopleController.php:341
+#: ./src/Controller/PeopleController.php:195
+#: ./src/Controller/PeopleController.php:208
+#: ./src/Controller/PeopleController.php:228
+#: ./src/Controller/PeopleController.php:260
+#: ./src/Controller/PeopleController.php:343
 msgid "You are not allowed to view this person"
 msgstr ""
 
-#: ./src/Controller/PeopleController.php:321
+#: ./src/Controller/PeopleController.php:323
 #: ./src/Controller/RegistrationsController.php:1296
 #: ./plugins/Shop/src/Controller/OrdersController.php:510
 msgid "Invalid date"
 msgstr ""
 
-#: ./src/Controller/PeopleController.php:412
+#: ./src/Controller/PeopleController.php:414
 msgid "You are not allowed to add this person"
 msgstr ""
 
-#: ./src/Controller/PeopleController.php:428
-#: ./src/Controller/PeopleController.php:564
+#: ./src/Controller/PeopleController.php:430
+#: ./src/Controller/PeopleController.php:566
 msgid "The person has been saved"
 msgstr ""
 
-#: ./src/Controller/PeopleController.php:431
-#: ./src/Controller/PeopleController.php:568
+#: ./src/Controller/PeopleController.php:433
+#: ./src/Controller/PeopleController.php:570
 msgid "The person could not be saved. Please, try again."
 msgstr ""
 
-#: ./src/Controller/PeopleController.php:498
-#: ./src/Controller/PeopleController.php:507
-#: ./src/Controller/PeopleController.php:518
+#: ./src/Controller/PeopleController.php:500
+#: ./src/Controller/PeopleController.php:509
+#: ./src/Controller/PeopleController.php:520
 msgid "You are not allowed to edit this person"
 msgstr ""
 
-#: ./src/Controller/PeopleController.php:602
+#: ./src/Controller/PeopleController.php:604
 msgid "Invalid id for person"
 msgstr ""
 
-#: ./src/Controller/PeopleController.php:627
+#: ./src/Controller/PeopleController.php:629
 msgid "Person deleted"
 msgstr ""
 
-#: ./src/Controller/PeopleController.php:630
+#: ./src/Controller/PeopleController.php:632
 msgid "Person was not deleted"
 msgstr ""
 

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-15 18:35+0200\n"
-"PO-Revision-Date: 2023-08-15 18:54+0200\n"
+"POT-Creation-Date: 2024-01-14 18:46+0100\n"
+"PO-Revision-Date: 2024-01-14 19:02+0100\n"
 "Last-Translator: Christoph Theis <theis@gmx.at>\n"
 "Language-Team: \n"
 "Language: it\n"
@@ -25,36 +25,36 @@ msgid "The new registration could not be created"
 msgstr "La nuova iscrizione non e' stata creata"
 
 #: src/Controller/Component/WelcomeMailComponent.php:109
-#: src/Controller/UsersController.php:165
-#: src/Controller/UsersController.php:231
+#: src/Controller/UsersController.php:169
+#: src/Controller/UsersController.php:235
 msgid "Double Entries"
 msgstr "Iscrizioni Doppi"
 
-#: src/Controller/UsersController.php:59
+#: src/Controller/UsersController.php:63
 msgid "You must fill in your email address"
 msgstr "Devi inserire il tuo indirizzo mail"
 
-#: src/Controller/UsersController.php:73
+#: src/Controller/UsersController.php:77
 msgid "Email address not found"
 msgstr "Indirizzo email non trovato"
 
-#: src/Controller/UsersController.php:106
+#: src/Controller/UsersController.php:110
 msgid "Invalid request to reset the password"
 msgstr "Richiesta cambio password non valida"
 
-#: src/Controller/UsersController.php:111
+#: src/Controller/UsersController.php:115
 msgid "Your ticket has expired"
 msgstr "Il tuo ticket e' scaduto"
 
-#: src/Controller/UsersController.php:144
+#: src/Controller/UsersController.php:148
 msgid "The ticket to request a new password could not be created"
 msgstr "Il ticket per la richiesta di una nuova password non e' stato creato"
 
-#: src/Controller/UsersController.php:181
+#: src/Controller/UsersController.php:185
 msgid "A new password has been requested with your email address."
 msgstr "E' stata richiesta una nuova password tramite il tuo indirizzo email."
 
-#: src/Controller/UsersController.php:183
+#: src/Controller/UsersController.php:187
 msgid ""
 "If you did not initiate this request, please ignore this mail. You password "
 "will remain unchanged."
@@ -62,7 +62,7 @@ msgstr ""
 "Se non sei stato tu a fare questa richiesta ignora questa mail. La tua "
 "password non sara' cambiata."
 
-#: src/Controller/UsersController.php:185
+#: src/Controller/UsersController.php:189
 msgid ""
 "To get a new password click the link below. A new password will then be sent "
 "to your email address."
@@ -70,11 +70,11 @@ msgstr ""
 "Per avere una nuova password clicca sul link sottostante. Una nuova password "
 "verra' spedita sul tuo indirizzo email."
 
-#: src/Controller/UsersController.php:193
+#: src/Controller/UsersController.php:197
 msgid "The link above will also log you in one time."
 msgstr "Il link sopra ti fara' entrare una volta soltanto."
 
-#: src/Controller/UsersController.php:195
+#: src/Controller/UsersController.php:199
 msgid ""
 "To login another time you have to use the password or request a new link "
 "with \"Forgot Password\"."
@@ -82,13 +82,13 @@ msgstr ""
 "Per fare il login un'altra volta dovrai usare la password oppure richiedere "
 "un nuovo link con Password Dimenticata."
 
-#: src/Controller/UsersController.php:199
+#: src/Controller/UsersController.php:203
 msgid "The email confirming your password request could not be sent"
 msgstr ""
 "Non è stato possibile inviare l'e-mail di conferma della richiesta della "
 "password"
 
-#: src/Controller/UsersController.php:201
+#: src/Controller/UsersController.php:205
 msgid ""
 "An email has been sent. Follow the instructions in the mail to receive a new "
 "password"
@@ -96,39 +96,39 @@ msgstr ""
 "Ti e' stata inviata una mail. Segui le istruzioni nella mail per ricevere "
 "una nuova password"
 
-#: src/Controller/UsersController.php:247
+#: src/Controller/UsersController.php:251
 msgid "Your new password is: "
 msgstr "La tua nuova password e': "
 
-#: src/Controller/UsersController.php:255
+#: src/Controller/UsersController.php:259
 msgid "The email could not be sent, password remains unchanged"
 msgstr "La mail non e' stata inviata, la password rimane la stessa"
 
-#: src/Controller/UsersController.php:257
+#: src/Controller/UsersController.php:261
 msgid "The new password could not be saved"
 msgstr "La password nuova non e' stata salvata"
 
-#: src/Controller/UsersController.php:259
+#: src/Controller/UsersController.php:263
 msgid "A new password has been sent to your email address"
 msgstr "Una nuova password e' stata inviata al tuo indirizzo email"
 
-#: src/Controller/UsersController.php:318
+#: src/Controller/UsersController.php:322
 msgid "You are logged in"
 msgstr "Sei entrato"
 
-#: src/Controller/UsersController.php:428
+#: src/Controller/UsersController.php:432
 msgid "Good-Bye"
 msgstr "Ciao"
 
-#: src/Controller/UsersController.php:722
+#: src/Controller/UsersController.php:726
 msgid "Your profile has been saved"
 msgstr "Il tuo profilo e' stato salvato"
 
-#: src/Controller/UsersController.php:725
+#: src/Controller/UsersController.php:729
 msgid "Your profile could not be saved"
 msgstr "Il tuo profilo non e' stato salvato"
 
-#: src/Controller/UsersController.php:821
+#: src/Controller/UsersController.php:825
 msgid "A password has been sent"
 msgstr "E' satata inviata una password"
 
@@ -139,17 +139,17 @@ msgstr "E' satata inviata una password"
 msgid "Filter"
 msgstr "Filtro"
 
-#: templates/Competitions/index.php:32 templates/People/index.php:61
+#: templates/Competitions/index.php:32 templates/People/index.php:28
 #: templates/Registrations/index.php:62
 msgid "Paralympic"
 msgstr "Paralympico"
 
-#: templates/Competitions/index.php:34 templates/People/index.php:63
+#: templates/Competitions/index.php:34 templates/People/index.php:30
 #: templates/Registrations/index.php:64 templates/Registrations/index.php:363
 msgid "No"
 msgstr "No"
 
-#: templates/Competitions/index.php:34 templates/People/index.php:63
+#: templates/Competitions/index.php:34 templates/People/index.php:30
 #: templates/Registrations/index.php:64 templates/Registrations/index.php:363
 msgid "Yes"
 msgstr "Sì"
@@ -176,10 +176,10 @@ msgstr "Nome"
 #: templates/Registrations/add_participant.php:193
 #: templates/Registrations/count.php:16
 #: templates/Registrations/csv/export_count.php:4
-#: templates/Registrations/edit_participant.php:195
+#: templates/Registrations/edit_participant.php:198
 #: templates/Registrations/index.php:40 templates/Registrations/index.php:220
 #: templates/Registrations/requests.php:8
-#: plugins/Shop/templates/Shops/add_person.php:206
+#: plugins/Shop/templates/Shops/add_person.php:210
 #: plugins/Shop/templates/element/shop_people.php:68
 #: plugins/Shop/templates/element/voucher.php:40
 msgid "Association"
@@ -196,13 +196,13 @@ msgid "Doubles"
 msgstr "Doppi"
 
 #: templates/Pages/participants.php:50
-#: templates/Registrations/edit_participant.php:352
+#: templates/Registrations/edit_participant.php:368
 #: templates/Registrations/index.php:246
 msgid "Double Partner"
 msgstr "Partner di doppio"
 
 #: templates/Pages/participants.php:53
-#: templates/Registrations/edit_participant.php:375
+#: templates/Registrations/edit_participant.php:397
 #: templates/Registrations/index.php:249
 #: templates/Registrations/requests.php:15
 #: plugins/Shop/templates/element/shop_people.php:74
@@ -210,7 +210,7 @@ msgid "Mixed"
 msgstr "Misti"
 
 #: templates/Pages/participants.php:54
-#: templates/Registrations/edit_participant.php:391
+#: templates/Registrations/edit_participant.php:413
 #: templates/Registrations/index.php:250
 msgid "Mixed Partner"
 msgstr "Partners misti"
@@ -229,60 +229,60 @@ msgstr "Seleziona il tipo"
 
 #: templates/Registrations/add_participant.php:119
 #: templates/Registrations/count.php:33
-#: templates/Registrations/edit_participant.php:205
-#: templates/Registrations/edit_participant.php:209
-#: templates/Registrations/edit_participant.php:217
+#: templates/Registrations/edit_participant.php:208
+#: templates/Registrations/edit_participant.php:212
+#: templates/Registrations/edit_participant.php:220
 #: templates/Registrations/index.php:48 templates/Registrations/index.php:227
-#: plugins/Shop/templates/Shops/add_person.php:177
+#: plugins/Shop/templates/Shops/add_person.php:181
 #: plugins/Shop/templates/element/voucher.php:41
 msgid "Type"
 msgstr "Tipo"
 
 #: templates/Registrations/add_participant.php:125
 #: templates/Registrations/edit.php:114
-#: templates/Registrations/edit_participant.php:185
-#: plugins/Shop/templates/Shops/add_person.php:186
+#: templates/Registrations/edit_participant.php:188
+#: plugins/Shop/templates/Shops/add_person.php:190
 msgid "Given Name"
 msgstr "Nome"
 
 #: templates/Registrations/add_participant.php:130
 #: templates/Registrations/edit.php:119
-#: templates/Registrations/edit_participant.php:190
+#: templates/Registrations/edit_participant.php:193
 #: templates/Registrations/index.php:104
-#: plugins/Shop/templates/Shops/add_person.php:192
+#: plugins/Shop/templates/Shops/add_person.php:196
 msgid "Family Name"
 msgstr "Cognome"
 
 #: templates/Registrations/add_participant.php:140
 #: templates/Registrations/edit.php:158
-#: templates/Registrations/edit_participant.php:235
-#: plugins/Shop/templates/Shops/add_person.php:200
+#: templates/Registrations/edit_participant.php:238
+#: plugins/Shop/templates/Shops/add_person.php:204
 msgid "Select gender"
 msgstr "Genere"
 
 #: templates/Registrations/add_participant.php:141
 #: templates/Registrations/edit.php:152 templates/Registrations/edit.php:159
-#: templates/Registrations/edit_participant.php:229
-#: templates/Registrations/edit_participant.php:236
-#: plugins/Shop/templates/Shops/add_person.php:202
+#: templates/Registrations/edit_participant.php:232
+#: templates/Registrations/edit_participant.php:239
+#: plugins/Shop/templates/Shops/add_person.php:206
 msgid "Man"
 msgstr "Uomo"
 
 #: templates/Registrations/add_participant.php:141
 #: templates/Registrations/edit.php:152 templates/Registrations/edit.php:159
-#: templates/Registrations/edit_participant.php:229
-#: templates/Registrations/edit_participant.php:236
-#: plugins/Shop/templates/Shops/add_person.php:202
+#: templates/Registrations/edit_participant.php:232
+#: templates/Registrations/edit_participant.php:239
+#: plugins/Shop/templates/Shops/add_person.php:206
 msgid "Woman"
 msgstr "Donna"
 
 #: templates/Registrations/add_participant.php:192
-#: plugins/Shop/templates/Shops/add_person.php:209
+#: plugins/Shop/templates/Shops/add_person.php:213
 msgid "Select Association"
 msgstr "Seleziona Associazione"
 
 #: templates/Registrations/add_participant.php:212
-#: templates/Registrations/edit_participant.php:435
+#: templates/Registrations/edit_participant.php:463
 msgid "Items"
 msgstr "Articoli"
 
@@ -292,16 +292,16 @@ msgid "Save & Cont."
 msgstr "Salva e Cont."
 
 #: templates/Registrations/add_participant.php:233
-#: templates/Registrations/edit_participant.php:464
+#: templates/Registrations/edit_participant.php:492
 #: templates/Registrations/index.php:530
 #: templates/Registrations/requests.php:81
 msgid "List Registrations"
 msgstr "Iscrizioni nell'elenco"
 
 #: templates/Registrations/count.php:23 templates/Registrations/index.php:215
-#: plugins/Shop/templates/Orders/view.php:185
-#: plugins/Shop/templates/Orders/view.php:260
-#: plugins/Shop/templates/Shops/add_person.php:198
+#: plugins/Shop/templates/Orders/view.php:188
+#: plugins/Shop/templates/Orders/view.php:263
+#: plugins/Shop/templates/Shops/add_person.php:202
 #: plugins/Shop/templates/element/shop_people.php:69
 #: plugins/Shop/templates/element/shop_people.php:160
 msgid "Sex"
@@ -342,89 +342,94 @@ msgstr ""
 #: plugins/Shop/templates/Shops/buy.php:143
 #: plugins/Shop/templates/Shops/buy.php:286
 #: plugins/Shop/templates/Shops/buy.php:333
-#: plugins/Shop/templates/element/shop_order.php:28
-#: plugins/Shop/templates/element/shop_order.php:193
+#: plugins/Shop/templates/element/shop_order.php:35
+#: plugins/Shop/templates/element/shop_order.php:200
 msgid "Total"
 msgstr "Totale"
 
 #: templates/Registrations/edit_participant.php:26
 #: templates/Registrations/edit_participant.php:45
-#: templates/Registrations/edit_participant.php:360
-#: templates/Registrations/edit_participant.php:399
+#: templates/Registrations/edit_participant.php:376
+#: templates/Registrations/edit_participant.php:421
 #: templates/Registrations/index.php:407 templates/Registrations/index.php:433
 msgid "Partner wanted"
 msgstr "Ricerca partner"
 
-#: templates/Registrations/edit_participant.php:157
+#: templates/Registrations/edit_participant.php:160
 msgid "Edit Registration"
 msgstr "Compilare la iscrizione"
 
-#: templates/Registrations/edit_participant.php:174
+#: templates/Registrations/edit_participant.php:177
 msgid "Person"
 msgstr "Persona"
 
-#: templates/Registrations/edit_participant.php:250
-#: plugins/Shop/templates/Shops/add_person.php:225
+#: templates/Registrations/edit_participant.php:253
+#: plugins/Shop/templates/Shops/add_person.php:229
 msgid "Date Born"
 msgstr "Data di nascita"
 
-#: templates/Registrations/edit_participant.php:312
+#: templates/Registrations/edit_participant.php:328
 #: templates/Registrations/index.php:242
 #: templates/Registrations/requests.php:11
 msgid "Single"
 msgstr "Singolo"
 
-#: templates/Registrations/edit_participant.php:317
+#: templates/Registrations/edit_participant.php:333
 msgid "Not Playing Singles"
 msgstr "Non gioca al Singolo"
 
-#: templates/Registrations/edit_participant.php:335
+#: templates/Registrations/edit_participant.php:351
 #: templates/Registrations/index.php:245
 #: templates/Registrations/requests.php:13
 msgid "Double"
 msgstr "Doppio"
 
-#: templates/Registrations/edit_participant.php:340
+#: templates/Registrations/edit_participant.php:356
 msgid "Not Playing Doubles"
 msgstr "Non gioca al doppio"
 
-#: templates/Registrations/edit_participant.php:342
+#: templates/Registrations/edit_participant.php:358
 msgid "Double Partner Category"
 msgstr "Categoria Partner di Doppio"
 
-#: templates/Registrations/edit_participant.php:379
+#: templates/Registrations/edit_participant.php:383
+#: templates/Registrations/edit_participant.php:428
+msgid "Partner confirmed"
+msgstr "Confermato partner"
+
+#: templates/Registrations/edit_participant.php:401
 msgid "Not Playing Mixed"
 msgstr "Non gioca al Misto"
 
-#: templates/Registrations/edit_participant.php:381
+#: templates/Registrations/edit_participant.php:403
 msgid "Mixed Partner Category"
 msgstr "Categoria Partner di Misto"
 
-#: templates/Registrations/edit_participant.php:408
+#: templates/Registrations/edit_participant.php:436
 msgid "Not Playing Teams"
 msgstr "Non gioca a Squadre"
 
-#: templates/Registrations/edit_participant.php:414
+#: templates/Registrations/edit_participant.php:442
 #: templates/Users/forgot_password.php:10 templates/Users/login.php:17
-#: plugins/Shop/templates/Shops/add_person.php:274
+#: plugins/Shop/templates/Shops/add_person.php:291
 #: plugins/Shop/templates/Shops/address.php:148
-#: plugins/Shop/templates/element/receipt.php:133
+#: plugins/Shop/templates/element/receipt.php:135
 #: plugins/Shop/templates/element/shop_address.php:25
 #: plugins/Shop/templates/email/html/cancel.php:180
-#: plugins/Shop/templates/email/html/order.php:310
+#: plugins/Shop/templates/email/html/order.php:328
 msgid "Email"
 msgstr "Email"
 
-#: templates/Registrations/edit_participant.php:418
+#: templates/Registrations/edit_participant.php:446
 #: plugins/Shop/templates/Shops/success.php:106
-#: plugins/Shop/templates/element/receipt.php:139
+#: plugins/Shop/templates/element/receipt.php:141
 #: plugins/Shop/templates/element/shop_address.php:27
 #: plugins/Shop/templates/email/html/cancel.php:186
-#: plugins/Shop/templates/email/html/order.php:316
+#: plugins/Shop/templates/email/html/order.php:334
 msgid "Phone"
 msgstr "Telefono"
 
-#: templates/Registrations/edit_participant.php:467
+#: templates/Registrations/edit_participant.php:495
 #: templates/Registrations/index.php:533
 #: templates/Registrations/requests.php:83
 msgid "List Partner Wanted"
@@ -635,24 +640,24 @@ msgstr "Salva"
 msgid "Cancel"
 msgstr "Cancella"
 
-#: plugins/Shop/src/Controller/Component/OrderUpdateComponent.php:50
-#: plugins/Shop/src/Controller/Component/OrderUpdateComponent.php:166
+#: plugins/Shop/src/Controller/Component/OrderUpdateComponent.php:59
+#: plugins/Shop/src/Controller/Component/OrderUpdateComponent.php:175
 msgid "Unknown registration"
 msgstr "Iscrizione sconosciuta"
 
-#: plugins/Shop/src/Controller/Component/OrderUpdateComponent.php:67
+#: plugins/Shop/src/Controller/Component/OrderUpdateComponent.php:76
 msgid "Illegal type"
 msgstr "Tipo dati non permesso"
 
-#: plugins/Shop/src/Controller/Component/OrderUpdateComponent.php:78
+#: plugins/Shop/src/Controller/Component/OrderUpdateComponent.php:87
 msgid "Unknown user"
 msgstr "Utente sconosciuto"
 
-#: plugins/Shop/src/Controller/Component/OrderUpdateComponent.php:148
+#: plugins/Shop/src/Controller/Component/OrderUpdateComponent.php:157
 msgid "The order could be be stored"
 msgstr "L'ordine puo' essere immagazzinato"
 
-#: plugins/Shop/src/Controller/OrdersController.php:1296
+#: plugins/Shop/src/Controller/OrdersController.php:1298
 msgid "[{0}] Cancellation of registration {1} from {2}"
 msgstr "[{0}] Cancellazione dell'iscrizione {1} da {2}"
 
@@ -1087,24 +1092,24 @@ msgstr "Errore di Risposta"
 msgid "Card holder"
 msgstr "Proprietario della Carta"
 
-#: plugins/Shop/templates/Shops/add_person.php:139
+#: plugins/Shop/templates/Shops/add_person.php:143
 msgid "Add Player or Accompanying Person"
 msgstr "Aggiungere Giocatore o Accompagnatore"
 
-#: plugins/Shop/templates/Shops/add_person.php:143
+#: plugins/Shop/templates/Shops/add_person.php:147
 msgid "Enter here the data for players or accompanying persons."
 msgstr "Inserire qui i dati dei giocatori o degli accompagnatori."
 
-#: plugins/Shop/templates/Shops/add_person.php:147
+#: plugins/Shop/templates/Shops/add_person.php:151
 msgid "For players the birthday is required."
 msgstr "Per i giocatori è richiesta la data di nascita."
 
-#: plugins/Shop/templates/Shops/add_person.php:151
+#: plugins/Shop/templates/Shops/add_person.php:155
 msgid "For players you may add email and a phone number of a cell phone."
 msgstr ""
 "Per i giocatori si può aggiungere l'e-mail ed il numero di un cellulare."
 
-#: plugins/Shop/templates/Shops/add_person.php:155
+#: plugins/Shop/templates/Shops/add_person.php:159
 msgid ""
 "If you enter an email address, this player will also receive the "
 "notifications when he is requested as a double partner or a double partner "
@@ -1114,7 +1119,7 @@ msgstr ""
 "notifiche quando viene richiesto come doppio partner o viene scelto un "
 "doppio partner per lui."
 
-#: plugins/Shop/templates/Shops/add_person.php:159
+#: plugins/Shop/templates/Shops/add_person.php:163
 msgid ""
 "If you enter a phone number the player will receive free SMS notifications "
 "about schedules and results of his matches, if the organizer chooses to do "
@@ -1124,7 +1129,7 @@ msgstr ""
 "gratuite su orari e risultati delle sue partite, se l'organizzatore sceglie "
 "di farlo."
 
-#: plugins/Shop/templates/Shops/add_person.php:163
+#: plugins/Shop/templates/Shops/add_person.php:167
 msgid ""
 "By entering email address or phone number you must agree to the terms and "
 "conditions."
@@ -1132,12 +1137,12 @@ msgstr ""
 "Inserendo indirizzo e-mail e telefono bisogna dichiarare il consenso ai "
 "termini e le condizioni."
 
-#: plugins/Shop/templates/Shops/add_person.php:167
+#: plugins/Shop/templates/Shops/add_person.php:171
 msgid "You can add or change email address and phone number later, too."
 msgstr ""
 "Indirizzi e-mail e numeri telefonici possono essere inseriti anche dopo"
 
-#: plugins/Shop/templates/Shops/add_person.php:171
+#: plugins/Shop/templates/Shops/add_person.php:175
 msgid ""
 "If you are a Paralympic Athlete flag the appropriate field and put your "
 "international classification."
@@ -1145,19 +1150,19 @@ msgstr ""
 "Se sei un'atleta paralimpico metti un flag nel campo appropriato e dopo "
 "inserisci la tua classificazione internazionale."
 
-#: plugins/Shop/templates/Shops/add_person.php:285
+#: plugins/Shop/templates/Shops/add_person.php:302
 msgid "Mobile"
 msgstr "Cellulare"
 
-#: plugins/Shop/templates/Shops/add_person.php:296
+#: plugins/Shop/templates/Shops/add_person.php:313
 msgid "I agree to the %s regarding email address and phone number"
 msgstr "Acconsento al %s riguardante indirizzo e-mail e numero telefonico"
 
-#: plugins/Shop/templates/Shops/add_person.php:298
+#: plugins/Shop/templates/Shops/add_person.php:315
 msgid "privacy policy"
 msgstr "privacy Policy"
 
-#: plugins/Shop/templates/Shops/add_person.php:315
+#: plugins/Shop/templates/Shops/add_person.php:332
 #: plugins/Shop/templates/Shops/address.php:171
 msgid "I agree to receive newsletters"
 msgstr "Accetto di ricevere newsletter"
@@ -1268,7 +1273,7 @@ msgid "Variant"
 msgstr "Opzione"
 
 #: plugins/Shop/templates/Shops/buy.php:218
-#: plugins/Shop/templates/element/shop_order.php:22
+#: plugins/Shop/templates/element/shop_order.php:29
 #: plugins/Shop/templates/element/voucher.php:90
 msgid "Description"
 msgstr "Descrizione"
@@ -1447,30 +1452,30 @@ msgid "Banking Account"
 msgstr "Conto Bancario"
 
 #: plugins/Shop/templates/Shops/success.php:74
-#: plugins/Shop/templates/element/receipt.php:151
+#: plugins/Shop/templates/element/receipt.php:153
 #: plugins/Shop/templates/email/html/cancel.php:198
-#: plugins/Shop/templates/email/html/order.php:328
+#: plugins/Shop/templates/email/html/order.php:346
 msgid "VAT Reg Id"
 msgstr "IVA Iscr. ID"
 
 #: plugins/Shop/templates/Shops/success.php:78
-#: plugins/Shop/templates/element/receipt.php:83
+#: plugins/Shop/templates/element/receipt.php:84
 #: plugins/Shop/templates/email/html/cancel.php:148
-#: plugins/Shop/templates/email/html/order.php:260
+#: plugins/Shop/templates/email/html/order.php:278
 msgid "Bank"
 msgstr "Banca"
 
 #: plugins/Shop/templates/Shops/success.php:82
-#: plugins/Shop/templates/element/receipt.php:127
+#: plugins/Shop/templates/element/receipt.php:129
 #: plugins/Shop/templates/email/html/cancel.php:174
-#: plugins/Shop/templates/email/html/order.php:304
+#: plugins/Shop/templates/email/html/order.php:322
 msgid "Account Holder"
 msgstr "Proprietario del Conto"
 
 #: plugins/Shop/templates/Shops/success.php:86
-#: plugins/Shop/templates/element/receipt.php:95
+#: plugins/Shop/templates/element/receipt.php:96
 #: plugins/Shop/templates/email/html/cancel.php:160
-#: plugins/Shop/templates/email/html/order.php:278
+#: plugins/Shop/templates/email/html/order.php:296
 msgid "IBAN"
 msgstr "IBAN"
 
@@ -1484,21 +1489,21 @@ msgid "SWIFT"
 msgstr "SWIFT"
 
 #: plugins/Shop/templates/Shops/success.php:98
-#: plugins/Shop/templates/element/receipt.php:113
-#: plugins/Shop/templates/email/html/order.php:290
+#: plugins/Shop/templates/element/receipt.php:114
+#: plugins/Shop/templates/email/html/order.php:308
 msgid "ABA"
 msgstr "ABA"
 
 #: plugins/Shop/templates/Shops/success.php:102
-#: plugins/Shop/templates/element/receipt.php:119
-#: plugins/Shop/templates/email/html/order.php:296
+#: plugins/Shop/templates/element/receipt.php:120
+#: plugins/Shop/templates/email/html/order.php:314
 msgid "Correspondent Bank"
 msgstr "Banca Corrispondente"
 
 #: plugins/Shop/templates/Shops/success.php:110
-#: plugins/Shop/templates/element/receipt.php:145
+#: plugins/Shop/templates/element/receipt.php:147
 #: plugins/Shop/templates/email/html/cancel.php:192
-#: plugins/Shop/templates/email/html/order.php:322
+#: plugins/Shop/templates/email/html/order.php:340
 msgid "Fax"
 msgstr "Fax"
 
@@ -1541,19 +1546,19 @@ msgstr "N° fattura"
 msgid "Order"
 msgstr "Ordine"
 
-#: plugins/Shop/templates/element/receipt.php:89
+#: plugins/Shop/templates/element/receipt.php:90
 #: plugins/Shop/templates/email/html/cancel.php:154
-#: plugins/Shop/templates/email/html/order.php:266
+#: plugins/Shop/templates/email/html/order.php:284
 msgid "Bank Address"
 msgstr "Indirizzo della Banca"
 
-#: plugins/Shop/templates/element/receipt.php:101
-#: plugins/Shop/templates/email/html/order.php:272
+#: plugins/Shop/templates/element/receipt.php:102
+#: plugins/Shop/templates/email/html/order.php:290
 msgid "Account No"
 msgstr "N° del Conto"
 
-#: plugins/Shop/templates/element/receipt.php:107
-#: plugins/Shop/templates/email/html/order.php:284
+#: plugins/Shop/templates/element/receipt.php:108
+#: plugins/Shop/templates/email/html/order.php:302
 msgid "BIC (SWIFT)"
 msgstr "BIC (SWIFT)"
 
@@ -1588,62 +1593,62 @@ msgstr "Fatturazione"
 msgid "Completed"
 msgstr "Completato"
 
-#: plugins/Shop/templates/element/shop_order.php:20
+#: plugins/Shop/templates/element/shop_order.php:27
 msgid "Date"
 msgstr "Data"
 
-#: plugins/Shop/templates/element/shop_order.php:20
+#: plugins/Shop/templates/element/shop_order.php:27
 #: plugins/Shop/templates/element/shop_people.php:65
 #: plugins/Shop/templates/element/shop_people.php:156
 #: plugins/Shop/templates/element/voucher.php:88
 msgid "Pos"
 msgstr "POS"
 
-#: plugins/Shop/templates/element/shop_order.php:21
+#: plugins/Shop/templates/element/shop_order.php:28
 #: plugins/Shop/templates/element/voucher.php:89
 msgid "Qty"
 msgstr "Quantità"
 
-#: plugins/Shop/templates/element/shop_order.php:23
+#: plugins/Shop/templates/element/shop_order.php:30
 msgid "Canc Fee"
 msgstr "Mora di Cancellazione"
 
-#: plugins/Shop/templates/element/shop_order.php:23
+#: plugins/Shop/templates/element/shop_order.php:30
 msgid "Each"
 msgstr "Ciascuno"
 
-#: plugins/Shop/templates/element/shop_order.php:25
+#: plugins/Shop/templates/element/shop_order.php:32
 msgid "VAT"
 msgstr "IVA"
 
-#: plugins/Shop/templates/element/shop_order.php:26
+#: plugins/Shop/templates/element/shop_order.php:33
 msgid "Total incl. VAT"
 msgstr "Totale IVA incl."
 
-#: plugins/Shop/templates/element/shop_order.php:153
+#: plugins/Shop/templates/element/shop_order.php:160
 msgid "Discount"
 msgstr "Sconto"
 
-#: plugins/Shop/templates/element/shop_order.php:166
-#: plugins/Shop/templates/element/shop_order.php:203
+#: plugins/Shop/templates/element/shop_order.php:173
+#: plugins/Shop/templates/element/shop_order.php:210
 msgid "Cancellation Fee"
 msgstr "Mora di Cancellazione"
 
-#: plugins/Shop/templates/element/shop_order.php:179
-#: plugins/Shop/templates/element/shop_order.php:214
+#: plugins/Shop/templates/element/shop_order.php:186
+#: plugins/Shop/templates/element/shop_order.php:221
 msgid "Cancellation Discount"
 msgstr "Sconto Cancellazione"
 
-#: plugins/Shop/templates/element/shop_order.php:226
-#: plugins/Shop/templates/element/shop_order.php:250
+#: plugins/Shop/templates/element/shop_order.php:233
+#: plugins/Shop/templates/element/shop_order.php:257
 msgid "Refund"
 msgstr "Rimborso"
 
-#: plugins/Shop/templates/element/shop_order.php:238
+#: plugins/Shop/templates/element/shop_order.php:245
 msgid "Paid"
 msgstr "Pagato"
 
-#: plugins/Shop/templates/element/shop_order.php:263
+#: plugins/Shop/templates/element/shop_order.php:270
 msgid "Due"
 msgstr "Da pagare"
 
@@ -1742,7 +1747,7 @@ msgid "If you think this is an error please contact {0} immediately!"
 msgstr "Se pensi che ci sia un errore per favore contatta subito {0} !"
 
 #: plugins/Shop/templates/email/html/cancel.php:128
-#: plugins/Shop/templates/email/html/order.php:232
+#: plugins/Shop/templates/email/html/order.php:250
 msgid "Details of your registration:"
 msgstr "Dettagli della tua iscrizione:"
 
@@ -1751,17 +1756,17 @@ msgid "You had entered the following players and accompanying persons:"
 msgstr "Hai inserito i seguenti giocatori e accompagnatori"
 
 #: plugins/Shop/templates/email/html/cancel.php:137
-#: plugins/Shop/templates/email/html/order.php:247
+#: plugins/Shop/templates/email/html/order.php:265
 #: plugins/Shop/templates/email/html/voucher.php:16
-#: plugins/Shop/templates/email/text/order.php:124
+#: plugins/Shop/templates/email/text/order.php:142
 #: plugins/Shop/templates/email/text/voucher.php:20
 msgid "Best regards"
 msgstr "Saluti"
 
 #: plugins/Shop/templates/email/html/order.php:138
-#: plugins/Shop/templates/email/html/order.php:194
+#: plugins/Shop/templates/email/html/order.php:206
 #: plugins/Shop/templates/email/text/order.php:24
-#: plugins/Shop/templates/email/text/order.php:80
+#: plugins/Shop/templates/email/text/order.php:92
 msgid "Thank you for your registration."
 msgstr "Grazie per la tua iscrizione."
 
@@ -1787,9 +1792,9 @@ msgstr ""
 "Vogliamo informarti che la tua iscrizione {0} adesso può essere processata"
 
 #: plugins/Shop/templates/email/html/order.php:152
-#: plugins/Shop/templates/email/html/order.php:201
+#: plugins/Shop/templates/email/html/order.php:213
 #: plugins/Shop/templates/email/text/order.php:38
-#: plugins/Shop/templates/email/text/order.php:87
+#: plugins/Shop/templates/email/text/order.php:99
 msgid "Please pay the amount due as soon as possible, but not later than {0}."
 msgstr ""
 "Per favore paga la somma dovuta il più presto possibile, ma non più tardi di "
@@ -1813,11 +1818,11 @@ msgstr ""
 "possiamo informare immediatamente il prossimo in lista d'attesa."
 
 #: plugins/Shop/templates/email/html/order.php:160
-#: plugins/Shop/templates/email/html/order.php:182
-#: plugins/Shop/templates/email/html/order.php:209
+#: plugins/Shop/templates/email/html/order.php:188
+#: plugins/Shop/templates/email/html/order.php:221
 #: plugins/Shop/templates/email/text/order.php:46
-#: plugins/Shop/templates/email/text/order.php:68
-#: plugins/Shop/templates/email/text/order.php:95
+#: plugins/Shop/templates/email/text/order.php:74
+#: plugins/Shop/templates/email/text/order.php:107
 msgid ""
 "Don't forget to put your invoice number on the bank transfer so we can find "
 "your order."
@@ -1826,11 +1831,11 @@ msgstr ""
 "così possiamo trovare il tuo ordine."
 
 #: plugins/Shop/templates/email/html/order.php:163
-#: plugins/Shop/templates/email/html/order.php:185
-#: plugins/Shop/templates/email/html/order.php:212
+#: plugins/Shop/templates/email/html/order.php:191
+#: plugins/Shop/templates/email/html/order.php:224
 #: plugins/Shop/templates/email/text/order.php:49
-#: plugins/Shop/templates/email/text/order.php:71
-#: plugins/Shop/templates/email/text/order.php:98
+#: plugins/Shop/templates/email/text/order.php:77
+#: plugins/Shop/templates/email/text/order.php:110
 msgid ""
 "Please note that it may take several days until the payment is credited to "
 "our account and is processed."
@@ -1839,35 +1844,44 @@ msgstr ""
 "quando il pagamento viene accreditato sul nostro account e viene elaborato."
 
 #: plugins/Shop/templates/email/html/order.php:167
-#: plugins/Shop/templates/email/html/order.php:189
-#: plugins/Shop/templates/email/html/order.php:216
-#: plugins/Shop/templates/email/html/order.php:224
+#: plugins/Shop/templates/email/html/order.php:195
+#: plugins/Shop/templates/email/html/order.php:228
+#: plugins/Shop/templates/email/html/order.php:242
 #: plugins/Shop/templates/email/text/order.php:53
-#: plugins/Shop/templates/email/text/order.php:75
-#: plugins/Shop/templates/email/text/order.php:102
-#: plugins/Shop/templates/email/text/order.php:110
+#: plugins/Shop/templates/email/text/order.php:81
+#: plugins/Shop/templates/email/text/order.php:114
+#: plugins/Shop/templates/email/text/order.php:128
 msgid "To pay with credit card use this link:"
 msgstr "Per pagare con carta di credito usa questo link:"
 
-#: plugins/Shop/templates/email/html/order.php:172
-#: plugins/Shop/templates/email/text/order.php:58
+#: plugins/Shop/templates/email/html/order.php:174
+#: plugins/Shop/templates/email/html/order.php:202
+#: plugins/Shop/templates/email/html/order.php:235
+#: plugins/Shop/templates/email/text/order.php:60
+#: plugins/Shop/templates/email/text/order.php:88
+#: plugins/Shop/templates/email/text/order.php:121
+msgid "Only payment with credit card is possible!"
+msgstr "È possibile solo il pagamento con carta di credito!"
+
+#: plugins/Shop/templates/email/html/order.php:178
+#: plugins/Shop/templates/email/text/order.php:64
 msgid ""
 "This is a friendly reminder that you haven't paid your registration {0} yet."
 msgstr ""
 "Questo è un avviso amichevole che non hai ancora pagato la tua iscrizione {0}"
 
-#: plugins/Shop/templates/email/html/order.php:174
-#: plugins/Shop/templates/email/text/order.php:60
+#: plugins/Shop/templates/email/html/order.php:180
+#: plugins/Shop/templates/email/text/order.php:66
 msgid "If you believe this is an error please contact {0}."
 msgstr "Se credi che questo è un errore per favore contatta {0}"
 
-#: plugins/Shop/templates/email/html/order.php:176
-#: plugins/Shop/templates/email/text/order.php:62
+#: plugins/Shop/templates/email/html/order.php:182
+#: plugins/Shop/templates/email/text/order.php:68
 msgid "If you have not paid yet please do so until {0}."
 msgstr "Se non hai ancora pagato per favore provvedi entro {0}"
 
-#: plugins/Shop/templates/email/html/order.php:178
-#: plugins/Shop/templates/email/text/order.php:64
+#: plugins/Shop/templates/email/html/order.php:184
+#: plugins/Shop/templates/email/text/order.php:70
 msgid ""
 "If we haven't received your payment by then we reserve the right to cancel "
 "your registrations without further notice."
@@ -1875,13 +1889,13 @@ msgstr ""
 "Se non abbiamo ricevuto il pagamento entro tale data, ci riserviamo il "
 "diritto di annullare le registrazioni senza ulteriore avviso."
 
-#: plugins/Shop/templates/email/html/order.php:196
-#: plugins/Shop/templates/email/text/order.php:82
+#: plugins/Shop/templates/email/html/order.php:208
+#: plugins/Shop/templates/email/text/order.php:94
 msgid "Your invoice number is {0}."
 msgstr "il numero della tua fattura è {0}"
 
-#: plugins/Shop/templates/email/html/order.php:203
-#: plugins/Shop/templates/email/text/order.php:89
+#: plugins/Shop/templates/email/html/order.php:215
+#: plugins/Shop/templates/email/text/order.php:101
 msgid ""
 "Note that your registration is not completed until we have received the full "
 "amount still due."
@@ -1889,8 +1903,8 @@ msgstr ""
 "La tua iscrizione non sarà completa finché non avremo ricevuto il totale del "
 "pagamento dovuto."
 
-#: plugins/Shop/templates/email/html/order.php:205
-#: plugins/Shop/templates/email/text/order.php:91
+#: plugins/Shop/templates/email/html/order.php:217
+#: plugins/Shop/templates/email/text/order.php:103
 msgid ""
 "We reserve the right to cancel your order after that date if we haven't "
 "received the full amount still due until then."
@@ -1898,12 +1912,12 @@ msgstr ""
 "Ci riserviamo il diritto di annullare l'ordine dopo tale data se non abbiamo "
 "ricevuto l'intero importo ancora dovuto fino a quel momento."
 
-#: plugins/Shop/templates/email/html/order.php:237
+#: plugins/Shop/templates/email/html/order.php:255
 msgid "You have entered the following players and accompanying persons:"
 msgstr "Hai inserito i seguenti giocatori e accompagnatori:"
 
-#: plugins/Shop/templates/email/html/order.php:243
-#: plugins/Shop/templates/email/text/order.php:120
+#: plugins/Shop/templates/email/html/order.php:261
+#: plugins/Shop/templates/email/text/order.php:138
 #: plugins/Shop/templates/email/text/receipt.php:2
 msgid "Please find your receipt attached."
 msgstr "Trovi qui allegata la tua fattura."
