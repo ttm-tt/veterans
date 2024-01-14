@@ -1854,7 +1854,7 @@ class ShopsController extends ShopAppController {
 	}
 	
 	
-	public function		process_waiting_list() {
+	public function	process_waiting_list() {
 		$tid = $this->request->getSession()->read('Tournaments.id');
 		$this->loadModel('Shop.Orders');
 		
