@@ -18,6 +18,9 @@ use App\Model\Table\UsersTable;
 
 class OrdersController extends ShopAppController {
 	
+	// Models loaded on the fly
+	public $OrderHistories = null;
+	
 	function initialize() : void {
 		parent::initialize();
 		

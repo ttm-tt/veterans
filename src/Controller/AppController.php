@@ -26,6 +26,7 @@ class AppController extends ShimController {
 	public $Notifications = null;
 	public $People = null;
 	public $Registrations = null;
+	public $Participants = null;
 	public $Tournaments = null;
 	public $Types = null;
 	public $Users = null;
