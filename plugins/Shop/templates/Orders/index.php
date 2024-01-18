@@ -196,6 +196,10 @@
 						if ($allowPending)
 							echo $this->Html->link(__('Pending'), array('controller' => 'shops', 'action' => 'setPending', $order['id']));
 					}
+					if ($order['order_status']['name'] === 'FRD') {
+						if ($allowPending)
+							echo $this->Html->link(__('Pending'), array('controller' => 'shops', 'action' => 'setPending', $order['id']));
+					}
 					if ($order['order_status']['name'] === 'PAID') {
 						if ($allowStorno)
 							echo $this->Html->link(__('Storno'), array('action' => 'storno', $order['id']));

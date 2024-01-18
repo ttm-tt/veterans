@@ -1924,6 +1924,13 @@ class ShopsController extends ShopAppController {
 			// $this->_sendConfirmationMail($id);
 
 			$this->MultipleFlash->setFlash(__('Order reset to "Pending" and invoice sent'), 'success');
+		} else if ($statusId == $stati['FRD']) {
+			$order->order_status_id = $stati['PEND'];
+			$this->Orders->save($order);
+
+			// $this->_sendConfirmationMail($id);
+
+			$this->MultipleFlash->setFlash(__('Order reset to "Pending" and invoice sent'), 'success');
 		} else if ($statusId == $stati['DEL']) {
 			$order->order_status_id = $stati['PEND'];
 			$this->Orders->save($order);
