@@ -83,7 +83,7 @@
 		<?php if ($Acl->check($current_user, 'Users/index')) echo '<li>' . $this->Html->link(__('List Users'), array('action' => 'index')) . '</li>'; ?> 
 		<?php if ($Acl->check($current_user, 'Users/add')) echo '<li>' . $this->Html->link(__('New User'), array('action' => 'add')) . '</li>'; ?> 
 		<?php if ($Acl->check($current_user, 'Groups/index')) echo '<li>' . $this->Html->link(__('List Groups'), array('controller' => 'groups', 'action' => 'index')) . '</li>'; ?> 
-		<?php if ($Acl->check($current_user, 'People/index')) echo '<li>' . $this->Html->link(__('List People'), array('controller' => 'people', 'action' => 'index', 'user_id' => $user['id'])) . '</li>'; ?>
-		<?php if ($Acl->check($current_user, 'Registrations/index')) echo '<li>' . $this->Html->link(__('List Registrations'), array('controller' => 'registrations', 'action' => 'index', 'user_id' => $user['id'])) . '</li>'; ?>
+		<?php if ($Acl->check($current_user, 'People/index')) echo '<li>' . $this->Html->link(__('List People'), array('controller' => 'people', 'action' => 'index',  '?' => ['user_id' => $user['id']])) . '</li>'; ?>
+		<?php if ($Acl->check($current_user, 'Registrations/index')) echo '<li>' . $this->Html->link(__('List Registrations'), array('controller' => 'registrations', 'action' => 'index', '?' => ['user_id' => $user['id']])) . '</li>'; ?>
 	</ul>
 <?php $this->end(); ?>
