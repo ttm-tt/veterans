@@ -782,10 +782,10 @@ class RegistrationsController extends AppController {
 					$partnerMixed[] = 'Participants.mixed_partner_id IS NOT NULL';
 				
 				if (in_array($partner, ['requested', 'multiple']))
-					$partnerDoubles[] = 'Registrations.id IN (SELECT mixed_partner_id FROM participants p WHERE NOT p.cancelled AND NOT p.mixed_cancelled)';
+					$partnerMixed[] = 'Registrations.id IN (SELECT mixed_partner_id FROM participants p WHERE NOT p.cancelled AND NOT p.mixed_cancelled)';
 				
 				if ($partner === 'multiple')
-					$partnerDoubles[] = '(SELECT COUNT(mixed_partner_id) FROM participants p WHERE p.double_partner_id = Registrations.id AND NOT p.cancelled AND NOT p.mixed_cancelled) > 1';
+					$partnerMixed[] = '(SELECT COUNT(mixed_partner_id) FROM participants p WHERE p.mixed_partner_id = Registrations.id AND NOT p.cancelled AND NOT p.mixed_cancelled) > 1';
 				
 				if ($partner === 'unconfirmed')
 					$partnerMixed[] = '(SELECT mixed_partner_id FROM participants p WHERE p.registration_id = Participants.mixed_partner_id AND NOT p.cancelled AND NOT p.mixed_cancelled) IS NULL';
