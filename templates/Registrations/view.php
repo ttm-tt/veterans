@@ -76,6 +76,17 @@ use App\Model\Table\RegistrationsTable;
 					?>
 					&nbsp;
 				</dd>
+				<?php if ($registration->person->ptt_class > 0) { ?>
+					<dt<?php if ($i % 2 == 0) echo $class;?>><?php echo __('Able-bodied'); ?></dt>
+					<dd<?php if ($i++ % 2 == 0) echo $class;?>>
+						<?php 
+							if ($participant->ptt_nonpara)
+								echo __('Yes');
+							else
+								echo __('No');
+						?>
+						&nbsp;						
+				<?php } ?>
 			<?php } ?>
 			<?php if ($count['D'] > 0) { ?>
 				<dt<?php if ($i % 2 == 0) echo $class;?>><?php echo __('Double'); ?></dt>

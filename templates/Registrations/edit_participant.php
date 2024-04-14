@@ -307,7 +307,7 @@ if (false) {
 			));
 }
 
-			echo $this->Form->control('person.ptt_nonpara', array(
+			echo $this->Form->control('participant.ptt_nonpara', array(
 				'type' => 'checkbox',
 				'label' => __('Want to participate in able-bodied singles'),
 			));

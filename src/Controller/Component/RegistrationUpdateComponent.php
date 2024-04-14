@@ -553,7 +553,6 @@ class RegistrationUpdateComponent extends Component {
 			if (!empty($data['participant']['team_id']))
 				$data['participant']['team_cancelled'] = false;
 
-
 			// Clear cancelled-flag if a root user has selected any event
 			if (!empty($data['participant']['single_id']) ||
 			    !empty($data['participant']['double_id']) ||

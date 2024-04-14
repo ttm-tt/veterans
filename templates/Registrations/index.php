@@ -61,7 +61,11 @@
 				echo $this->element('filter', [
 					'label' => __d('user', 'Paralympic'),
 					'id' => 'para',
-					'options' => ['no' => __d('user', 'No'), 'yes' => __d('user', 'Yes')],
+					'options' => [
+						'no' => __d('user', 'No'), 
+						'yes' => __d('user', 'Yes'), 
+						'plus' => __d('user', 'Able-bodied singles')
+					],
 				]);
 			}
 

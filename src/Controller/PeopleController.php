@@ -557,7 +557,6 @@ class PeopleController extends AppController {
 			if (($data['is_para'] ?: 0) == 0) {
 				$data['ptt_class'] = 0;
 				$data['wchc'] = 0;
-				$data['ptt_nonpara'] = 0;
 			}
 
 			$person = $this->People->patchEntity($person, $data);

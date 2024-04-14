@@ -803,8 +803,13 @@ class RegistrationsController extends AppController {
 		if ($this->request->getSession()->check('Participants.para')) {
 			if ($this->request->getSession()->read('Participants.para') == 'no')
 				$conditions[] = 'People.ptt_class = 0';
-			else if ($this->request->getSession()->read('Participants.para') == 'yes')
+			else if ($this->request->getSession()->read('Participants.para') == 'yes') {
 				$conditions[] = 'People.ptt_class <> 0';
+				$conditions[] = 'Participants.ptt_nonpara = 0';
+			} else if ($this->request->getSession()->read('Participants.para') == 'plus') {
+				$conditions[] = 'People.ptt_class <> 0';
+				$conditions[] = 'Participants.ptt_nonpara <> 0';
+			}
 		}
 			
 		if ($this->request->getSession()->read('Participants.age_category') == 'different')  {
@@ -1113,7 +1118,7 @@ class RegistrationsController extends AppController {
 			'conditions' => array('Registrations.id' => $id),
 			'contain' => array(
 				'Tournaments' => array('fields' => array('id', 'description', 'enter_before', 'modify_before')), 
-				'People' => array('fields' => array('id', 'display_name', 'nation_id', 'user_id')), 
+				'People' => array('fields' => array('id', 'display_name', 'nation_id', 'user_id', 'ptt_class')), 
 				'Types' => array('fields' => array('id', 'description')),
 				'Participants' => array(
 						'Singles' => array('fields' => array('id', 'description')), 

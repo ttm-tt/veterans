@@ -436,6 +436,7 @@ class ShopsController extends ShopAppController {
 				if (($person['is_para'] ?? 0) == 0) {
 					$person['ptt_class'] = 0;
 					$person['wchc'] = 0;
+					$person['ptt_nonpara'] = 0;
 				}
 				
 				if ($person['ptt_class'] > 10) {
@@ -451,12 +452,14 @@ class ShopsController extends ShopAppController {
 				} else {
 					$person['ptt_class'] = 0;
 					$person['wchc'] = 0;
+					$person['ptt_nonpara'] = 0;
 				}
 			} else {
 				// Not player, reset some fields
 				unset($person['dob']);
 				unset($person['ptt_class']);
 				unset($person['wchc']);
+				unset($person['ptt_nonpara']);
 			}
 			
 			$person['phone'] = str_replace(" ()./", "", $person['phone']);
