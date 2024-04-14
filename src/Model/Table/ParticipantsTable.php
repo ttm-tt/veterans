@@ -22,6 +22,10 @@ class ParticipantsTable extends AppTable {
 			'foreignKey' => 'single_id'
 		]);
 		
+		$this->belongsTo('AddSingles', [
+			'className' => 'Competitions',
+			'foreignKey' => 'single_2_id'
+		]);
 		
 		$this->belongsTo('Doubles', [
 			'className' => 'Competitions',
