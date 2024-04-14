@@ -29,7 +29,9 @@
 		'Email',
 		'Phone',
 		'Invoice',
-		'Cancellation Date'
+		'Cancellation Date',
+		'Para class',
+		'Able-bodied Singles'
 	));
 
 	echo "\n";
@@ -82,6 +84,12 @@
 		}
 		
 		$tmp[] = $row['cancelled'];
+		
+		// Para
+		if (isset($row['participant'])) {
+			$tmp[] = $row['person']['ptt_class'];
+			$tmp[] = $row['participant']['ptt_nonpara'];
+		}
 
 		echo implode("\t", $tmp) . "\n";
 	}

@@ -21,6 +21,7 @@ class RegistrationsController extends AppController {
 	public $Participants = null;
 	public $ParticipantHistories = null;
 	// Should be in plugins/Shops
+	public $Articles = null;
 	public $OrderStatus = null;
 	public $OrderArticles = null;
 	public $Orders = null;
@@ -2778,7 +2779,7 @@ class RegistrationsController extends AppController {
 			return $this->redirect(array('action' => 'index'));
 		}
 
-		ini_set('memory_limit', '512M');
+		ini_set('memory_limit', '1024M');
 
 		// Disable debug output
 		// Configure::write('debug', false);
