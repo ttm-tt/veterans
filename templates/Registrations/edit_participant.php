@@ -56,7 +56,7 @@ function onChangeMixed(data) {
 	});
 
 	$('#participant-mixed-partner-id').html(options);
-	$('#participant-mixed-partner.id').parent().css('display', $('#participant-mixed-id').val() ? 'block' : 'none');
+	$('#participant-mixed-partner-id').parent().css('display', $('#participant-mixed-id').val() ? 'block' : 'none');
 }
 
 $(document).ready(function() {

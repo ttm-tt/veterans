@@ -162,6 +162,8 @@ function camelizeName(name) {
 			));
 		}
 		
+		echo $this->Form->control('person.is_para', array('type' => 'hidden'));		
+		echo $this->Form->control('person.ptt_class', array('type' => 'hidden'));		
 
 		$empty = ($isParticipant ? false : __('Select Event'));
 
