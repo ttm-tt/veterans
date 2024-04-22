@@ -97,7 +97,7 @@
 	</table>
 </div>
 
-<?php $this->start('action'); ?>
+<?php $this->start('action'); ?>	
 	<ul>
 		<?php
 			echo '<li>' . $this->Html->link(__('List Registrations'), array('action' => 'index')) . '</li>';

@@ -116,7 +116,10 @@ use App\Model\Table\RegistrationsTable;
 								$double_partner_name .= ' (' . $participant['double_partner']['person']['nation']['name'] . ')';
 
 							if (!RegistrationsTable::isDoublePartnerConfirmed($registration))
-								echo '<em>' . $double_partner_name . ' (' . __('wanted') . ')' . '</em>';
+								$double_partner_name = '<em>' . $double_partner_name . ' (' . __('wanted') . ')' . '</em>';
+							
+							if ($hasRootPrivileges)
+								echo $this->Html->link($double_partner_name, array('action' => 'view', $participant['double_partner_id']));
 							else
 								echo $double_partner_name;
 						}
@@ -155,7 +158,10 @@ use App\Model\Table\RegistrationsTable;
 								$mixed_partner_name .= ' (' . $participant['mixed_partner']['person']['nation']['name'] . ')';
 
 							if (!RegistrationsTable::isMixedPartnerConfirmed($registration))
-								echo '<em>' . $mixed_partner_name . ' (' . __('wanted') . ')' . '</em>';
+								$mixed_partner_name = '<em>' . $mixed_partner_name . ' (' . __('wanted') . ')' . '</em>';
+							
+							if ($hasRootPrivileges)
+								echo $this->Html->link($mixed_partner_name, array('action' => 'view', $participant['mixed_partner_id']));
 							else
 								echo $mixed_partner_name;
 						}
@@ -218,7 +224,9 @@ use App\Model\Table\RegistrationsTable;
 		
 				if ($hasRootPrivileges && $registration['type_id'] == TypesTable::getPlayerId())
 					echo '<li>' . $this->Html->link(__('View History'), array('action' => 'history', $registration['id'])) . '</li>';	
-				if ($Acl->check($current_user, 'Registrations/edit'))
+				if ($Acl->check($current_user, 'Registrations/edit_participant'))
+					echo '<li>' . $this->Html->link(__('Edit Registration'), array('action' => 'edit_participant', $registration['id'])) . '</li>';
+				else if ($Acl->check($current_user, 'Registrations/edit'))
 					echo '<li>' . $this->Html->link(__('Edit Registration'), array('action' => 'edit', $registration['id'])) . '</li>';
 				if ($Acl->check($current_user, 'Registrations/delete'))
 					echo '<li>' . $this->Form->postLink(__('Delete Registration'), array('action' => 'delete', $registration['id']), ['confirm' => sprintf(__('Are you sure you want to delete %s?'), $registration['person']['display_name'])]) . '</li>';
