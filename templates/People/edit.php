@@ -9,7 +9,7 @@ $(document).ready(function() {
 	$('select#ptt-class').parent().hide();
 	$('select#wchc').parent().hide();
 	
-	$('input#is_para').change(function() {
+	$('input#is-para').change(function() {
 		if (this.checked) {
 			$('select#ptt-class').parent().show();
 		} else {
