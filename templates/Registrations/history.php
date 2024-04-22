@@ -104,7 +104,9 @@
 
 			echo '<li>' . $this->Html->link(__('View Registration'), array('action' => 'view', $registration['id'])) . '</li>';
 
-			if ($Acl->check($current_user, 'Registrations/edit'))
+			if ($Acl->check($current_user, 'Registrations/edit_participant'))
+				echo '<li>' . $this->Html->link(__('Edit Registration'), array('action' => 'edit_participant', $registration['id'])) . '</li>';
+			else if ($Acl->check($current_user, 'Registrations/edit'))
 				echo '<li>' . $this->Html->link(__('Edit Registration'), array('action' => 'edit', $registration['id'])) . '</li>';
 		?>
 	</ul>
