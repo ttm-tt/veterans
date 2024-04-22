@@ -23,6 +23,9 @@ $(document).ready(function() {
 		else
 			$('select#wchc').parent().hide();
 	});
+
+	$('input#is-para').trigger('change');
+	$('select#ptt-class').trigger('change');
 });
 	
 function camelizeName(name) {
