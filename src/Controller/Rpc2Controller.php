@@ -56,6 +56,7 @@ class Rpc2Controller extends AppController
 			'onlineentries.listPlayers' => array(&$this, '_listPlayers'),
 			'onlineentries.listRankingpoints' => array(&$this, '_listRankingpoints'),
 			'onlineentries.listRegistrations' => array(&$this, '_listRegistrations'),
+			'onlineentries.listClubs' => array(&$this, '_listClubs'),
 			'onlinenetries.listTeams' => array(&$this, '_listTeams'),
 			'onlineentries.addPeople' => array(&$this, '_addPeople'),
 			'onlineentries.sendWelcomeMail' => array(&$this, '_sendWelcomeMail'),
@@ -148,6 +149,11 @@ class Rpc2Controller extends AppController
 				'Registrations.cancelled IS NULL'
 			),
 		))->disableHydration()->all()->toArray();
+	}
+	
+	
+	function _listClubs($tid) {
+		return [];
 	}
 	
 	
