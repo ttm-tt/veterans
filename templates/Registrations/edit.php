@@ -157,7 +157,7 @@ function camelizeName(name) {
 				'type' => 'select', 
 				'empty' => __d('user', 'Select gender'),
 				'options' =>array('M' => __d('user', 'Man'), 'F' => __d('user', 'Woman')),
-				'readonly' => true,
+				'disabled' => true,
 				'id' => false
 			));
 		}
