@@ -119,7 +119,10 @@ use App\Model\Table\RegistrationsTable;
 								$double_partner_name = '<em>' . $double_partner_name . ' (' . __('wanted') . ')' . '</em>';
 							
 							if ($hasRootPrivileges)
-								echo $this->Html->link($double_partner_name, array('action' => 'view', $participant['double_partner_id']));
+								echo $this->Html->link(
+										$double_partner_name, array('action' => 'view', $participant['double_partner_id']),
+										['escape' => false]
+								);
 							else
 								echo $double_partner_name;
 						}
