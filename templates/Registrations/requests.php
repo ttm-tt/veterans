@@ -67,6 +67,9 @@
 					array('action' => 'reject', $me['id'], $registration['id']),
 					['confirm' => __d('user', 'Are you sure you want to reject the partner request from {0}?', $registration['person']['display_name'])]
 				);
+				
+				if ($hasRootPrivileges)
+					echo $this->Html->link(__d('user', 'View'), ['action' => 'view', $registration->id]);
 			?>
 		</td>
 	</tr>
