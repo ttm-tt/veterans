@@ -6,6 +6,7 @@
 <?php
 	$d = array();
 	$d['new_player'] = __('New Player');
+	$d['delete_registration_player'] = __('Delete player');
 	$d['delete_registration_player_after'] = __('Delete player after deadline');
 	$d['edit_registration_player_after'] = __('Edit player after deadline');
 
