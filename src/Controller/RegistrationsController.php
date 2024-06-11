@@ -3079,6 +3079,9 @@ class RegistrationsController extends AppController {
 	
 	
 	function export_participants() {
+		// And increase the max memory size
+		ini_set('memory_limit', '1024M');
+		
 		$this->loadModel('Shop.OrderArticles');
 		$this->loadModel('Shop.Articles');
 		$this->loadModel('People');
