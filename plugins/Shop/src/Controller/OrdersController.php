@@ -1190,10 +1190,18 @@ class OrdersController extends ShopAppController {
 
 					if (empty($player['storno']))
 						continue;
+					
+					$oa = $this->OrderArticles->record($player['id']);
+					// Should not happen
+					if ($oa === null)
+						continue;
+					
+					// Check if person id is known 
+					// (could happen if the player was cancelled before)
+					if ($oa->person_id === null)
+						continue;
 
-					$pid = $this->OrderArticles->fieldByConditions('person_id', array(
-						'id' => $player['id']
-					));
+					$pid = $oa->person_id;
 					$reg = $this->Registrations->find('all', array(
 						'contain' => array('People'),
 						'conditions' => array('People.id' => $pid)
@@ -1214,9 +1222,17 @@ class OrdersController extends ShopAppController {
 					if (empty($acc['storno']))
 						continue;
 
-					$pid = $this->OrderArticles->fieldByConditions('person_id', array(
-						'id' => $acc['id']
-					));
+					$oa = $this->OrderArticles->record($player['id']);
+					// Should not happen
+					if ($oa === null)
+						continue;
+					
+					// Check if person id is known 
+					// (could happen if the person was cancelled before)
+					if ($oa->person_id === null)
+						continue;
+
+					$pid = $oa->person_id;
 					$reg = $this->Registrations->find('all', array(
 						'contain' => array('People'),
 						'conditions' => array('People.id' => $pid)
