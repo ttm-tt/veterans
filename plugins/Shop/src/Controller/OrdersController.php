@@ -19,6 +19,8 @@ use App\Model\Table\UsersTable;
 class OrdersController extends ShopAppController {
 	
 	// Models loaded on the fly
+	public $OrderArticleHistories = null;
+	public $OrderComments = null;
 	public $OrderHistories = null;
 	
 	function initialize() : void {
