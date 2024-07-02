@@ -1813,8 +1813,8 @@ msgid ""
 "Please note that it may take several days until the payment is credited to "
 "our account and is processed."
 msgstr ""
-"Tenga en cuenta que puede tardar varios días hasta que el pago se acredite a "
-"nuestra cuenta y se procesa."
+"Please note that it may take several days until the payment is credited to "
+"our account and is processed."
 
 #: plugins/Shop/templates/email/html/order.php:167
 #: plugins/Shop/templates/email/html/order.php:195
