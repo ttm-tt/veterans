@@ -1105,6 +1105,18 @@ class RegistrationsController extends AppController {
 		$this->set('allchars', $allchars);
 
 		$this->set('last_name', $this->request->getSession()->read('People.last_name'));
+		
+		$this->loadModel('Competitions');
+		$havePara = $this->Competitions->find()
+				->where([
+					'tournament_id' => $tid,
+					'ptt_class > 0'
+				]) 
+				->count()
+			> 0;
+		
+		$this->set('havePara', $havePara ? 1 : 0);
+		
 	}
 
 	function view($id = null) {
@@ -1693,7 +1705,7 @@ class RegistrationsController extends AppController {
 				->count()
 			> 0;
 		
-		$this->set('havePara', $havePara);
+		$this->set('havePara', $havePara ? 1 : 0);
 
 		$this->set('registration', $registration);
 

@@ -57,7 +57,7 @@
 				'options' => $competitions
 			]);
 			
-			if ($hasRootPrivileges) {
+			if ($hasRootPrivileges && $havePara) {
 				echo $this->element('filter', [
 					'label' => __d('user', 'Paralympic'),
 					'id' => 'para',
