@@ -1,5 +1,6 @@
 <?php
 use App\Model\Table\GroupsTable;
+use Shop\Model\Table\OrderStatusTable;
 ?>
 
 <div id="header">
@@ -72,6 +73,16 @@ use App\Model\Table\GroupsTable;
 		}
 	?>
 </div>
+
+<?php
+	if ($order['order_status_id'] === OrderStatusTable::getPendingId() && $shopSettings['banktransfer']) {
+		if (!empty($shopSettings['invoice_add_body_banktransfer'])) {
+			echo $shopSettings['invoice_add_body_banktransfer'];
+			echo '<br>';
+		}
+	}
+?>
+
 <div id="footer">
 	<?php 
 		if (!empty($shopSettings['footer'])) {
