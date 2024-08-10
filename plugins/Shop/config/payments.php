@@ -177,6 +177,23 @@ return [
 					'secretKey' => '',
 				]
 
+			],
+			/*
+			 * NestPay
+			 */
+			'NestPay' => [
+				'engine' => 'NestPayPayment',
+				'test' => true,
+				// Test
+				'endpoint' => 'https://testsecurepay.intesasanpaolocard.com/fim/est3Dgate',
+				// Production
+				// 'endpoint' => 'https://bib.eway2pay.com/fim/est3Dgate',
+				'currency' => 941, // ISO code for RSD
+				'lang' => 'en',
+				'accountData' => [
+					'clientId' => '',
+					'storeKey' => '',
+				]
 			]
 		],
 		

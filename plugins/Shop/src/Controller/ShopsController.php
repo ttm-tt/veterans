@@ -1260,7 +1260,7 @@ class ShopsController extends ShopAppController {
 		$this->autoRender = false;
 		return $this->response;
  */
-		$this->render('Shops/Payment/redsystest');
+		$this->render('Shops/Payment/nestpay');
 	}
 	
 	

@@ -25,7 +25,6 @@ function onPay() {
 	
 	$('form #x_exp_date').val(expdate);
 
-
 	$.ajax({
 		'type' : 'POST',
 		'dataType' : 'json',
