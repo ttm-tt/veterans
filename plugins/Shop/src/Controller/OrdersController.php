@@ -1718,12 +1718,21 @@ class OrdersController extends ShopAppController {
 		if ($this->request->is(['post', 'put'])) {
 			$data = $this->request->getData();
 			
-			$data['invoice_header'] = trim($data['invoice_header']);
-			$data['invoice_footer'] = trim($data['invoice_footer']);
-			if (empty($data['invoice_header']))
-				$data['invoice_header'] = null;
-			if (empty($data['invoice_footer']))
-				$data['invoice_footer'] = null;
+			// Set empty strings to NULL
+			$schema = $this->OrderSettings->getSchema();
+			$columns = $schema->columns();
+			foreach ($columns as $c) {
+				$type = $schema->getColumnType($c);
+				if (!array_key_exists($c, $data))
+					continue;
+				
+				if (($type === 'string') || ($type === 'text')) {
+					$data[$c] = trim($data[$c]);
+					if (empty($data[$c]) && $schema->isNullable($c))
+						$data[$c] = null;
+					
+				}
+			}
 			
 			// Leere Eintraege ausfiltern
 			$data['order_cancellation_fees'] = 
