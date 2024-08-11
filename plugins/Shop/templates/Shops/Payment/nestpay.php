@@ -64,7 +64,7 @@ function onPay() {
 		if (isset($bankCurrency)) {
 			echo '<p>';
 			echo __d('user', 'Payment will be done in {0} using an exchange rate 1 {1} to {2} {3}', 
-					 $bankCurrency, $shopSettings['currency'], number_format($bankExchange), $bankCurrency);
+					 $bankCurrency, $shopSettings['currency'], number_format($bankExchange, 2), $bankCurrency);
 			echo '</p>';
 		}
 	?>
