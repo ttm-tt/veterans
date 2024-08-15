@@ -100,6 +100,7 @@ function onPay() {
 			?>
 		</div>
 	</form>
+	<?= $this->Html->image('Payment/nestpay/payment-large.png', ['style' => 'width: 100%; height: aauto;']); ?>
 </div>
 <?php 
 	echo $this->Form->create(null, array('id' => 'cancel'));
