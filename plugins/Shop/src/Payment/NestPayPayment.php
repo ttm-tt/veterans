@@ -168,6 +168,42 @@ class NestPayPayment extends AbstractPayment {
 	// Payment was not successful
 	public function error($request) {
 		file_put_contents(TMP . '/nestpay/xxxerror-' . date('Ymd-His'), print_r(['request' => $request], true));				
+
+		if ($request->isPost())
+			$data = $request->getData();
+		else if ($request->isGet())
+			$data = $request->getQuery();
+		else
+			return;
+		
+		// Nothing we can do without order id
+		if (empty($data['ReturnOid']))
+			return;
+		
+		$orderId = explode('-', $data['ReturnOid'])[0];
+		if (empty($orderId))
+			return;
+		
+		
+		$this->_controller->loadModel('Shop.OrderPayments');
+		$this->_controller->OrderPayments->setTable('shop_order_payment_details');
+
+		$this->_controller->OrderPayments->save(
+				$this->_controller->OrderPayments->newEntity([
+					'order_id' => $orderId,
+					'payment' => 'sogecommerce',
+					'value' => json_encode($data)
+				])
+		);
+
+		$errMsg = 'The transaction has failed';
+		
+		$errMsg .= ' (' . $data['ErrMsg'] . ')';
+
+		// Set status to ERR, if not yet done
+		// If the users cancels the order UrlKO was not called.
+		$this->_controller->_onError($orderId, 'ERR');
+		$this->_controller->_failure($orderId, $errMsg);		
 	}
 
 	// Get the payment details
