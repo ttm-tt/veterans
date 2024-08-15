@@ -90,6 +90,13 @@ class ShopsController extends ShopAppController {
 		}
 	}
 	
+	public function beforeRender(EventInterface $event) {
+		parent::beforeRender($event);
+		
+		$this->set('isTest', Configure::read('Shop.test', 0) ? 1 : 0);
+	}
+	
+	
 	// Called by the wizard if processing is cancelled
 	public function _beforeCancel($expectedStep = null) {
 		$this->loadModel('Shop.OrderStatus');

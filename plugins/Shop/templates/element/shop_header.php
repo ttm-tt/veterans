@@ -11,6 +11,10 @@
 		'success' => __d('user', 'Completed'),
 		'waiting_list' => __d('user', 'Waiting List')
 	);
+	
+	if ($isTest ?? 0) {
+		echo '<h2>TEST DO NOT USE</h2>';
+	}
 
 	if (($this->Wizard->config('expectedStep')) !== null) {
 		$this->set('expectedStep', $this->Wizard->config('expectedState'));

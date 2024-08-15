@@ -183,7 +183,6 @@ return [
 			 */
 			'NestPay' => [
 				'engine' => 'NestPayPayment',
-				'test' => true,
 				// Test
 				'endpoint' => 'https://testsecurepay.intesasanpaolocard.com/fim/est3Dgate',
 				// Production
