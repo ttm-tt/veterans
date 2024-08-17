@@ -100,7 +100,21 @@ function onPay() {
 			?>
 		</div>
 	</form>
-	<?= $this->Html->image('Payment/nestpay/payment-large.png', ['style' => 'width: 100%; height: aauto;']); ?>
+	<div>
+		<span>
+			<a href="https://mastercard.com" target="_blaank">
+				<?= $this->Html->image('Payment/nestpay/master_code.png', ['target']); ?>
+			</a>
+		</span>
+		<span>
+			<a href="https://visa.com" target="_blank">
+				<?= $this->Html->image('Payment/nestpay/visa_secure.jpg'); ?>
+			</a>
+		</span>			
+	</div>
+ 	<!-- 
+		<?= $this->Html->image('Payment/nestpay/payment-large.png', ['style' => 'width: 100%; height: auto;']); ?>
+	-->
 </div>
 <?php 
 	echo $this->Form->create(null, array('id' => 'cancel'));
