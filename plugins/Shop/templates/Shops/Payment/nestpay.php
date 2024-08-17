@@ -117,7 +117,7 @@ function onPay() {
 			<?= $this->Html->image('Payment/nestpay/americanexpress_0.png'); ?>
 		</span>
 		<span>
-			<a href="https://www.bancaintesa.rs/pocetna.1.html" target="_blank">
+			<a href="https://www.bancaintesa.rs/" target="_blank">
 				<?= $this->Html->image('Payment/nestpay/intesa.png'); ?>
 			</a>
 		</span>
