@@ -102,8 +102,28 @@ function onPay() {
 	</form>
 	<div>
 		<span>
-			<a href="https://mastercard.com" target="_blaank">
-				<?= $this->Html->image('Payment/nestpay/master_code.png', ['target']); ?>
+			<?= $this->Html->image('Payment/nestpay/maestro.png'); ?>
+		</span>
+		<span>
+			<?= $this->Html->image('Payment/nestpay/mastercard.png'); ?>
+		</span>
+		<span>
+			<?= $this->Html->image('Payment/nestpay/dina_0.png'); ?>
+		</span>
+		<span>
+			<?= $this->Html->image('Payment/nestpay/visa.png'); ?>
+		</span>
+		<span>
+			<?= $this->Html->image('Payment/nestpay/americanexpress_0.png'); ?>
+		</span>
+		<span>
+			<a href="https://www.bancaintesa.rs/pocetna.1.html" target="_blank">
+				<?= $this->Html->image('Payment/nestpay/intesa.png'); ?>
+			</a>
+		</span>
+		<span>
+			<a href="https://mastercard.com" target="_blank">
+				<?= $this->Html->image('Payment/nestpay/master_code.png'); ?>
 			</a>
 		</span>
 		<span>
