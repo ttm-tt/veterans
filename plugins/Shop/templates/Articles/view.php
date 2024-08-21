@@ -102,6 +102,9 @@
 			<th><?php echo __('Description');?></th>
 			<th><?php echo __('Sort Order');?></th>
 			<th><?php echo __('Price') . '&nbsp;(' . $shopSettings['currency'] . ')';?></th>
+			<th><?php echo __('Available'); ?></th>
+			<th><?php echo __('Sold'); ?></th>
+			<th><?php echo __('Pending'); ?></th>
 		</tr>
 	<?php 
 		foreach ($article['article_variants'] as $variant) {
@@ -110,6 +113,9 @@
 			echo '<td>' . $variant['description'] . '</td>';
 			echo '<td>' . $variant['sort_order'] . '</td>';
 			echo '<td>' . $variant['price'] . '</td>';
+			echo '<td>' . $variant['available'] . '</td>';
+			echo '<td>' . ($sold[$variant['id']] ?? 0) . '</td>';
+			echo '<td>' . ($pend[$variant['id']] ?? 0) . '</td>';
 			echo '</tr>';
 		}
 	?>

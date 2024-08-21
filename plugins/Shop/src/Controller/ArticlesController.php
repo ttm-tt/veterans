@@ -85,7 +85,7 @@ class ArticlesController extends ShopAppController {
 			'conditions' => array(
 				'OrderArticles.cancelled IS NULL',
 				'Articles.tournament_id' => $tid,
-				// 'Order.order_status_id' => $paidId
+				// 'Orders.order_status_id' => $paidId
 				'Orders.order_status_id' => $waitId
 			),
 			'group' => array('OrderArticles.article_id')
@@ -127,8 +127,6 @@ class ArticlesController extends ShopAppController {
 			}
 		}
 		
-		
-		
 		$this->set('articles', $articles);
 		$this->set('sold', $sold);
 		$this->set('pend', $pend);
@@ -144,10 +142,42 @@ class ArticlesController extends ShopAppController {
 		
 		// Retrieve fields in English
 		$this->Articles->setLocale('en');
-		$this->set('article', $this->Articles->find('translations', [
+		$article = $this->Articles->find('translations', [
 				'conditions' => ['Articles.id' => $id], 
 				'contain' => ['ArticleVariants']
-		])->first());
+		])->first();
+		
+		$this->loadModel('Shop.OrderArticles');
+
+		$tmp = $this->OrderArticles->find()
+				->select(['article_variant_id', 'sold' => 'SUM(quantity)'])
+				->contain(['Orders'])
+				->where([
+					'article_id' => $id,
+					'Orders.order_status_id' => OrderStatusTable::getPaidId(),
+					'cancelled IS NULL',
+				])
+				->group(['article_variant_id'])
+		;
+		
+		$sold = Hash::combine($tmp->toArray(), '{n}.article_variant_id', '{n}.sold');
+		$this->set('sold', $sold);
+		
+		$tmp = $this->OrderArticles->find()
+				->select(['article_variant_id', 'pend' => 'SUM(quantity)'])
+				->contain(['Orders'])
+				->where([
+					'article_id' => $id,
+					'Orders.order_status_id' => OrderStatusTable::getPendingId(),
+					'cancelled IS NULL',
+				])
+				->group(['article_variant_id'])
+		;
+		
+		$pend = Hash::combine($tmp->toArray(), '{n}.article_variant_id', '{n}.pend');
+		$this->set('pend', $pend);
+
+		$this->set('article', $article);
 	}
 
 	function add() {

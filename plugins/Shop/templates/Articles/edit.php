@@ -165,6 +165,10 @@ function addVariant() {
 								'label' => __('Visible'),
 								'type' => 'checkbox'
 							));
+						
+						echo $this->Form->control('article_variants.' . $k . '.available', array(
+								'label' => __('Available')
+							));
 
 						echo $this->Form->control('article_variants.' . $k . '.sort_order', array(
 								'label' => __('Sort Order'),
