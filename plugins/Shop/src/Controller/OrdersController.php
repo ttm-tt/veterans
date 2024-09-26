@@ -1939,7 +1939,7 @@ class OrdersController extends ShopAppController {
 				'tournament_id' => $tid,
 				'sex' => 'M'
 			],
-			'keyField' => 'born',
+			'keyField' => 'yob',
 			'valueField' => 'name',
 			'groupField' => 'type_of',
 			'order' => [
@@ -1952,7 +1952,7 @@ class OrdersController extends ShopAppController {
 				'tournament_id' => $tid,
 				'sex' => 'F'
 			],
-			'keyField' => 'born',
+			'keyField' => 'yob',
 			'valueField' => 'name',
 			'groupField' => 'type_of',
 			'order' => [
