@@ -1661,9 +1661,9 @@ class OrdersController extends ShopAppController {
 			if ($this->OrderArticles->save($article)) {
 				$this->MultipleFlash->setFlash(__('Person has been updated'), 'success');
 				
-				$this->loadModel('Registration');
-				$this->loadModel('Person');
-				$this->loadModel('Type');
+				$this->loadModel('Registrations');
+				$this->loadModel('People');
+				$this->loadModel('Types');
 				
 			} else {
 				$this->MultipleFlash->setFlash(__('Could not update person'), 'error');
