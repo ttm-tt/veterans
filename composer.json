@@ -7,9 +7,18 @@
 		{
 			"type" : "vcs",
 			"url" : "https://github.com/chtheis/ixr-xmlrpc"
-		}
+		},
+		{
+			"type" : "vcs",
+			"url" : "https://github.com/chtheis/cakephp3-recaptcha"
+		},
+		{
+			"type" : "vcs",
+			"url" : "https://github.com/chtheis/spout"
+		}		
 	],
 	"require" : {
+		"box/spout": "dev-master",
 		"cakephp/cakephp" : "^4.0",
 		"cakephp/acl": "^0.8",
 		"dereuromark/cakephp-shim": "^2.0",
@@ -23,7 +32,8 @@
 		"stripe/stripe-php": "^7.27",
 		"cakephp/migrations": "^3.0",
 		"cakephp/bake": "^2.1",
-		"otherguy/php-currency-api": "^1.7"
+		"otherguy/php-currency-api": "^1.7",
+		"giginc/cakephp3-recaptcha": "dev-develop"
 	},
 	"require-dev" : {
 		"ext-tidy": "^8.1",

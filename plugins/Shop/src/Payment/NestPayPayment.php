@@ -79,7 +79,7 @@ class NestPayPayment extends AbstractPayment {
 			'rnd' => $rnd,
 			'encoding' => 'utf-8',
 			'hashAlgorithm' => 'ver2',
-			'shopurl' => 'https://galadriel.ttm.co.at/veterans-v4/evc2025/users/login'
+			'shopurl' => 'https://galadriel.ttm.co.at/evc2025/users/login'
 		];
 		
 		// Convert currency to accepted currency by provider, if necessary
@@ -101,7 +101,7 @@ class NestPayPayment extends AbstractPayment {
 			
 			$this->_controller->Orders->save($order);
 			
-			$parameters['amount'] = number_format($amount, 0, '.', '');
+			$parameters['amount'] = number_format($amount, 2, '.', '');
 		}		
 
 		$hash = $this->_encrypt($parameters, $storeKey);	
@@ -160,7 +160,8 @@ class NestPayPayment extends AbstractPayment {
 			$this->_controller->_failure($orderId, $data['ErrMsg'] ?: __d('user', 'An error occured'));
 		}
 		
-		
+		$this->_controller->set('nestpay', $data);
+
 		$this->_controller->_onSuccess($orderId, 'PAID');
 		$this->_controller->_success($orderId);				
 	}
@@ -191,7 +192,7 @@ class NestPayPayment extends AbstractPayment {
 		$this->_controller->OrderPayments->save(
 				$this->_controller->OrderPayments->newEntity([
 					'order_id' => $orderId,
-					'payment' => 'sogecommerce',
+					'payment' => 'nestpayment',
 					'value' => json_encode($data)
 				])
 		);
@@ -204,6 +205,7 @@ class NestPayPayment extends AbstractPayment {
 		// If the users cancels the order UrlKO was not called.
 		$this->_controller->_onError($orderId, 'ERR');
 		$this->_controller->_failure($orderId, $errMsg);		
+		$this->_controller->set('nestpay', $data);
 	}
 
 	// Get the payment details
@@ -232,6 +234,11 @@ class NestPayPayment extends AbstractPayment {
 	public function getPaymentName() {
 		return 'NestPay';
 	}
+	
+	// Get the logo requested by Nestpay
+	public function getPaymentLogo(): string {
+		return 'Payment/nestpay/kartica.png';
+	}
 
 	public function getSubmitUrl() {
 		return '';
@@ -248,16 +255,16 @@ class NestPayPayment extends AbstractPayment {
 	
 	// -------------------------------------------------------------------
 	private function _getUrlSuccess($orderId) {
-		if (Configure::read('Shop.testUrl'))
-			return 'https://galadriel.ttm.co.at/veterans-v4/' . $this->_controller->getRequest()->getParam('ds') . '/shop/shops/payment_success?oid=' . $orderId;
+		if (Configure::read('Shop.testUrl', false) !== false)
+			return 'https://galadriel.ttm.co.at/evc2025/shop/shops/payment_success?oid=' . $orderId;
 		else
 			return Router::url(array('plugin' => 'shop', 'controller' => 'shops', 'action' => 'payment_success', '?' => ['oid' => $orderId]), true);
 	}
 	
 	
 	private function _getUrlError($orderId) {
-		if (Configure::read('Shop.testUrl'))
-			return 'https://galadriel.ttm.co.at/veterans-v4/' . $this->_controller->getRequest()->getParam('ds') . '/shop/shops/payment_error?oid=' . $orderId;
+		if (Configure::read('Shop.testUrl', false) !== false)
+			return 'https://galadriel.ttm.co.at/evc2025/shop/shops/payment_error?oid=' . $orderId;
 		else
 			return Router::url(array('plugin' => 'shop', 'controller' => 'shops', 'action' => 'payment_error', '?' => ['oid' => $orderId]), true);		
 	}

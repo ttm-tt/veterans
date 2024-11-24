@@ -21,6 +21,7 @@ function onPay() {
 	
 	$.ajax({
 		'type' : 'POST',
+		'data' : $('form').serialize(),
 		'dataType' : 'json',
 		'url'  : '<?php echo Router::url(array('action' => 'onPrepareCreditcard')); ?>',
 		'success' : function(data) {
@@ -49,7 +50,7 @@ function onPay() {
 	<h2>
 		<?php echo __d('user', 'Please wait while your payment is being processed.');?>
 		<br>
-		<?php echo __d('user', 'This may take several minutes.');?>
+		<?php echo __d('user', 'This may take a few moments .');?>
 	</h2>
 </div>
 
@@ -64,7 +65,15 @@ function onPay() {
 		if (isset($bankCurrency)) {
 			echo '<p>';
 			echo __d('user', 'Payment will be done in {0} using an exchange rate 1 {1} to {2} {3}', 
-					 $bankCurrency, $shopSettings['currency'], number_format($bankExchange, 2), $bankCurrency);
+					 $bankCurrency, $shopSettings['currency'], number_format($bankExchange, 4), $bankCurrency);
+			echo '</p>';
+			echo '<p>';
+			echo __d('user', 'The amount your credit card will be charged for is obtained through ' .
+					'the conversion of the price in Euro in Serbian dinar according to the current ' .
+					'exchange rate of the Serbian National Bank. When charging your credit card the ' .
+					'same amount is converted into your local currency according to the exchange rate ' .
+					'of the credit card associations. As a result of this conversion there is a possibility ' .
+					'of a slight difference from the original price stated in our web site.');
 			echo '</p>';
 		}
 	?>
@@ -77,7 +86,7 @@ function onPay() {
 					'label' => __d('user', 'Amount'),
 					'type' => 'text',
 					'readonly' => 'readonly',
-					'value' => $amount . ' ' . $shopSettings['currency'] . ' (' . number_format($bankAmount, 0, '', '') . ' ' . $bankCurrency . ')',
+					'value' => $amount . ' ' . $shopSettings['currency'] . ' (' . number_format($bankAmount, 2, '.', '') . ' ' . $bankCurrency . ')',
 					'name' => false,
 				));
 			} else {
@@ -100,38 +109,6 @@ function onPay() {
 			?>
 		</div>
 	</form>
-	<div>
-		<span>
-			<?= $this->Html->image('Payment/nestpay/maestro.png'); ?>
-		</span>
-		<span>
-			<?= $this->Html->image('Payment/nestpay/mastercard.png'); ?>
-		</span>
-		<span>
-			<?= $this->Html->image('Payment/nestpay/dina_0.png'); ?>
-		</span>
-		<span>
-			<?= $this->Html->image('Payment/nestpay/visa.png'); ?>
-		</span>
-		<span>
-			<?= $this->Html->image('Payment/nestpay/americanexpress_0.png'); ?>
-		</span>
-		<span>
-			<a href="https://www.bancaintesa.rs/" target="_blank">
-				<?= $this->Html->image('Payment/nestpay/intesa.png'); ?>
-			</a>
-		</span>
-		<span>
-			<a href="https://mastercard.com" target="_blank">
-				<?= $this->Html->image('Payment/nestpay/master_code.png'); ?>
-			</a>
-		</span>
-		<span>
-			<a href="https://visa.com" target="_blank">
-				<?= $this->Html->image('Payment/nestpay/visa_secure.jpg'); ?>
-			</a>
-		</span>			
-	</div>
  	<!-- 
 		<?= $this->Html->image('Payment/nestpay/payment-large.png', ['style' => 'width: 100%; height: auto;']); ?>
 	-->
