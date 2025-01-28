@@ -241,7 +241,7 @@ class NestPayPayment extends AbstractPayment {
 	}
 
 	public function getSubmitUrl() {
-		return '';
+		return Configure::read($this->configBaseName . '.endpoint');
 	}
 
 	public function process() {
