@@ -69,7 +69,7 @@ class GroupsController extends AppController {
 		
 		if ($this->request->is(['post', 'put'])) {
 			$group = $this->Groups->patchEntity($group, $this->request->getData());
-			$group->type_ids = implode(',', $group->types);
+			$group->type_ids = empty(group->types) ? null : implode(',', $group->types);
 
 			if ($this->Groups->save($group)) {
 				$this->MultipleFlash->setFlash(__('The group has been saved'), 'success');
@@ -103,7 +103,7 @@ class GroupsController extends AppController {
 
 		if ($this->request->is(['post', 'put'])) {			
 			$group = $this->Groups->patchEntity($group, $this->request->getData());
-			$group->type_ids = implode(',', $group->types);
+			$group->type_ids = empty($group->types) ? null : implode(',', $group->types);
 
 			if ($this->Groups->save($group)) {
 				$this->MultipleFlash->setFlash(__('The group has been saved'), 'success');

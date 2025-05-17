@@ -24,8 +24,14 @@ li {
 	$name = $tournament['name'];
 	$description = $tournament['description'];
 
-	$org_name = $tournament['organizer']['name'];
-	$org_description = $tournament['organizer']['description'];
+ 	$host = $tournament['host_id'] ? 
+			$tournament['host'] : null
+	;
+
+ 	$organizer = 
+			$tournament['organizer_id'] ? 
+			$tournament['organizer'] : null
+	;
 
 	$host_name = $tournament['host']['name'];
 	$host_description = $tournament['host']['description'];
@@ -65,6 +71,13 @@ which is made up the following different legal entities:
 		Email: <a href="mailto:<?= $email ?>"><?= $email ?></a><br>
 		VAT number HU13132439<br>
 	</li>
+	<?php if ($organizer) { ?>
+	<li> 
+		<?= $organizer['description'] ?><br>
+		<?= str_replace("\n", "<br>", $organizer['address']) ?><br>
+		Email: <a href="mailto:<?= $organizer['email'] ?>"><?= $organizer['email'] ?></a><br>
+	</li>
+	<?php } ?>
 	<li>
 		Christoph Theis<br>
 		Sankt-Antoni-Straße 7<br>

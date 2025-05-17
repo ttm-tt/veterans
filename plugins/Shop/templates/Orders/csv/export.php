@@ -11,6 +11,7 @@
 		'Country ISO-3',
 		'Date',
 		'Date Paid',
+		'Date Cancelled',
 		'Status',
 		'Amount'
 	);
@@ -24,6 +25,8 @@
 	
 	$headers = array_merge($headers, $names);
 	$headers[] = 'Order ID';
+	$headers[] = 'Masked CC';
+	$headers[] = 'Trans ID';
 	
 	echo implode("\t", $headers);
 	echo "\n";
@@ -53,6 +56,7 @@
 			empty($order['invoice_address']['country_id']) ? '' : $countries[$order['invoice_address']['country_id']],
 			date('Y-m-d', strtotime($order['created'])),
 			date('Y-m-d', strtotime($order['invoice_paid'])),
+			date('Y-m-d', strtotime($order['invoice_cancelled'])),
 			$stati[$order['order_status_id']],			
 			$nf->format((double) $order['total'])
 		);
@@ -80,6 +84,12 @@
 		$columns = array_merge($columns, $values);
 		
 		$columns[] = $order['id'];
+		
+		$orderDetails = $payment->getOrderPayment($order->id);
+		if ($orderDetails != null) {
+			$columns[] = $orderDetails[0]['maskedCreditCard'];
+			$columns[] = $orderDetails[0]['TransId'];
+		}
 		
 		// echo implode("\t", array_merge($columns, $values, $people));
 		echo implode("\t", $columns);

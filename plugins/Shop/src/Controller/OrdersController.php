@@ -85,6 +85,13 @@ class OrdersController extends ShopAppController {
 				$this->request->getSession()->write('Shop.Orders.payment_method', $this->request->getQuery('payment_method'));
 		}
 		
+		if ($this->request->getQuery('invoice_paid') !== null) {
+			if ($this->request->getQuery('invoice_paid') == 'all')
+				$this->request->getSession()->delete('Shop.Orders.invoice_paid');
+			else
+				$this->request->getSession()->write('Shop.Orders.invoice_paid', $this->request->getQuery('invoice_paid'));
+		}
+		
 		if ($this->request->getQuery('refund_status') !== null) {
 			if ($this->request->getQuery('refund_status') == 'all')
 				$this->request->getSession()->delete('Shop.Orders.refund_status');
@@ -157,6 +164,14 @@ class OrdersController extends ShopAppController {
 				$conditions['Orders.payment_method'] = $this->request->getSession()->read('Shop.Orders.payment_method');
 		}
 		
+		// Filter by invoice paid
+		if ($this->request->getSession()->check('Shop.Orders.invoice_paid')) {
+			if ($this->request->getSession()->read('Shop.Orders.invoice_paid') === 'no')
+				$conditions[] = 'Orders.invoice_paid IS NULL';
+			else
+				$conditions[] = 'Orders.invoice_paid IS NOT NULL';
+		}
+		
 		// Filter by refund status
 		if ($this->request->getSession()->check('Shop.Orders.refund_status')) {
 			if ($this->request->getSession()->read('Shop.Orders.refund_status') === 'refunding')
@@ -213,7 +228,8 @@ class OrdersController extends ShopAppController {
 								OrderStatusTable::getPaidId(),
 								OrderStatusTable::getPendingId(),
 								OrderStatusTable::getDelayedId(),
-								OrderStatusTable::getWaitingListId()
+								OrderStatusTable::getWaitingListId(),
+								OrderStatusTable::getIncompleteId()
 							]
 						])
 						->group(['email', 'total'])
@@ -309,6 +325,8 @@ class OrdersController extends ShopAppController {
 		$this->set('payment_methods', Hash::combine($tmp->toArray(), '{n}.method', '{n}.method'));
 		$this->set('payment_method', $this->request->getSession()->read('Shop.Orders.payment_method'));
 		
+		$this->set('invoice_paid', $this->request->getSession()->read('Shop.Orders.invoice_paid'));
+
 		$this->set('refund_statuses', [
 			'refunding' => __('Pending'),
 			'refunded' => __('Done')
@@ -862,11 +880,14 @@ class OrdersController extends ShopAppController {
 			'fields' => array('name', 'id')
 		))->toArray();
 		
-		$isPaid = $order['order_status_id'] === $stati['PAID'];
+		$isPaid = 
+				$order['order_status_id'] === $stati['PAID'] ||
+				$order['order_status_id'] === $stati['INCO'];
 		$isWait = $order['order_status_id'] === $stati['WAIT'];
 		$sendMail = 
 				!empty($data['Storno']['sendMail']) && (
 					$order['order_status_id'] === $stati['PAID'] ||
+					$order['order_status_id'] === $stati['INCO'] ||
 					$order['order_status_id'] === $stati['PEND'] ||
 					$order['order_status_id'] === $stati['WAIT']
 				);
@@ -1002,6 +1023,8 @@ class OrdersController extends ShopAppController {
 				$playerArticle['cancellation_fee'] = 0.;
 
 				$updateOrder['order_articles'][] = $playerArticle->toArray();
+
+				$updateOrder['total'] += $playerArticle['total'];
 			}
 
 			// Same for acc. persons
@@ -1222,7 +1245,7 @@ class OrdersController extends ShopAppController {
 					if (empty($acc['storno']))
 						continue;
 
-					$oa = $this->OrderArticles->record($player['id']);
+					$oa = $this->OrderArticles->record($acc['id']);
 					// Should not happen
 					if ($oa === null)
 						continue;
@@ -1501,7 +1524,6 @@ class OrdersController extends ShopAppController {
 		}		
 
 		$this->set('order', $order); // To access the comments in the view
-
 	}
 	
 	public function edit_address($id = null) {
@@ -1804,7 +1826,7 @@ class OrdersController extends ShopAppController {
 		
 		$orders = $this->Orders->find('all', array(
 			'contain' => array(
-				'OrderArticles' => array('conditions' => $articleConditions),
+				'OrderArticles',
 				'InvoiceAddresses'
 			),
 			'conditions' => $conditions,
@@ -1842,6 +1864,9 @@ class OrdersController extends ShopAppController {
 			'fields' => array('id', 'name')
 		))->toArray();
 		$this->set('countryNames', $countryNames);
+		
+		$payment = $this->_getPayment();
+		$this->set('payment', $payment);
 
 		$this->response->withDownload('export.csv');
 		// return $this->redirect(array('actions' => 'index'));
@@ -1913,6 +1938,7 @@ class OrdersController extends ShopAppController {
 					'Orders.id <> DupOrders.id',
 					'DupOrders.order_status_id IN' => [
 						OrderStatusTable::getPaidId(),
+						OrderStatusTable::getIncoId(),
 						OrderStatusTable::getPendingId(),
 						OrderStatusTable::getDelayedId(),
 						OrderStatusTable::getWaitingListId()						

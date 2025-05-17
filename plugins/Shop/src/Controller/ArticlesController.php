@@ -46,6 +46,7 @@ class ArticlesController extends ShopAppController {
 		$pendId = $this->OrderStatus->fieldByConditions('id', array('OrderStatus.name' => 'PEND'));
 		$waitId = $this->OrderStatus->fieldByConditions('id', array('OrderStatus.name' => 'WAIT'));
 		$delId  = $this->OrderStatus->fieldByConditions('id', array('OrderStatus.name' => 'DEL'));
+		$incoId  = $this->OrderStatus->fieldByConditions('id', array('OrderStatus.name' => 'INCO'));
 		
 		// If only limited supply count sold items
 		$this->loadModel('Shop.OrderArticles');
@@ -58,7 +59,7 @@ class ArticlesController extends ShopAppController {
 				'OrderArticles.cancelled IS NULL',
 				'Articles.tournament_id' => $tid,
 				// 'Order.order_status_id' => $paidId
-				'Orders.order_status_id IN' => array($paidId, $invoId)
+				'Orders.order_status_id IN' => array($paidId, $invoId, $incoId)
 			),
 			'group' => array('OrderArticles.article_id')
 		));
@@ -72,7 +73,7 @@ class ArticlesController extends ShopAppController {
 				'OrderArticles.cancelled IS NULL',
 				'Articles.tournament_id' => $tid,
 				// 'Order.order_status_id' => $paidId
-				'Orders.order_status_id IN' => [$pendId, $delId]
+				'Orders.order_status_id IN' => [$pendId, $delId, $incoId]
 			),
 			'group' => array('OrderArticles.article_id')
 		));
@@ -154,7 +155,11 @@ class ArticlesController extends ShopAppController {
 				->contain(['Orders'])
 				->where([
 					'article_id' => $id,
-					'Orders.order_status_id' => OrderStatusTable::getPaidId(),
+					// 'Orders.order_status_id' => OrderStatusTable::getPaidId(),
+					'Orders.order_status_id IN' => [
+						OrderStatusTable::getPaidId(),
+						OrderStatusTable::getIncompleteId()
+					],
 					'cancelled IS NULL',
 				])
 				->group(['article_variant_id'])
@@ -374,7 +379,10 @@ class ArticlesController extends ShopAppController {
 					),
 					'OR' => array(
 						// Ignore partial cancelled orders if not yet paid
-						'Orders.order_status_id = ' . OrderStatusTable::getPaidId(), 
+						'Orders.order_status_id IN' => [
+							OrderStatusTable::getPaidId(), 
+							OrderStatusTable::getIncompleteId()
+						],
 						'ISNULL(OrderArticles.cancelled)'
 					)
 				)

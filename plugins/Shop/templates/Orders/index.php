@@ -23,6 +23,13 @@
 			'options' => $payment_methods
 		]);
 		
+		// Filter for payment date
+		echo $this->element('filter', [
+			'label' => __('Invoice paid'),
+			'id' => 'invoice_paid',
+			'options' => ['no' => __('No'), 'yes' => __('Yes')]
+		]);
+		
 		// Filter for  Paid / Refunding ... 
 		echo $this->element('filter', [
 			'label' => 'Refund Status',
@@ -140,7 +147,7 @@
 				else if (!empty($order['user']['username']))
 					echo $order['user']['username'];
 				else {
-					foreach ($order['order_articles'] as $article) {
+					foreach (($order['order_articles'] ?? []) as $article) {
 						if ($article['article_id'] == $articles['PLA']) {
 							$player = unserialize($article['detail']);
 							echo $players['last_name'] . ', ' . $players['first_name'];

@@ -16,6 +16,8 @@ use Cake\Http\Exception\NotFoundException;
 
 use App\Model\Table\UsersTable;
 use Shim\Controller\Controller as ShimController;
+use Psr\Http\Message\UploadedFileInterface;
+
 
 class AppController extends ShimController {
 	// Models loaded on the fly
@@ -378,8 +380,17 @@ class AppController extends ShimController {
 
 	// Open a file with implicite conversion to UTF-8
 	// $encoding is the default encoding if nothing else can be detected
-	function _openFile($name, $mode, $encoding) {
-		$file = fopen($name, $mode);
+	function _openFile(UploadedFileInterface $upload, $mode = 'rt', $encoding = 'UTF-8') {
+		if($upload->getError() !== UPLOAD_ERR_OK)
+			return null;
+		
+		$uploadFileName = tempnam('/tmp', 'upld');
+		$upload->moveTo($uploadFileName);
+
+		$file = fopen($uploadFileName, $mode);
+		
+		if (strpos($mode, 'b') !== false)
+			return $file;
 
 		$bom = fread($file, 2);
 		rewind($file);

@@ -407,6 +407,7 @@ use Cake\Utility\Hash;
 				 $order['order_status']['name'] === 'PEND' ||
 				 $order['order_status']['name'] === 'DEL'  ||
 				 $order['order_status']['name'] === 'PAID' ||
+				 $order['order_status']['name'] === 'INCO' ||
 				 $order['order_status']['name'] === 'CANC') {
 				echo '<li>' . $this->Html->link(__('Edit Invoice'), array('controller' => 'orders', 'action' => 'edit_invoice', $order['id'])) . '</li>';
 			}
@@ -434,9 +435,14 @@ use Cake\Utility\Hash;
 				) . '</li>';
 			}
 			
+			if ($order['order_status']['name'] === 'PEND'){
+				echo '<li>' . $this->Html->link(__('Set Incomplete'), array('controller' => 'shops', 'action' => 'setIncomplete', $order['id']));				
+			}
+			
 			if ( $order['order_status']['name'] === 'INIT' ||
 				 $order['order_status']['name'] === 'INVO' ||
 				 $order['order_status']['name'] === 'PEND' ||
+				 $order['order_status']['name'] === 'INCO' ||
 				 $order['order_status']['name'] === 'DEL'  ||
 				 $order['order_status']['name'] === 'FRD' ) {
 				echo '<li>' . $this->Html->link(__('Set Paid'), array('controller' => 'shops', 'action' => 'setPaid', $order['id']));
@@ -444,6 +450,7 @@ use Cake\Utility\Hash;
 
 			if ( $order['order_status']['name'] === 'INVO' ||
 				 $order['order_status']['name'] === 'PAID' ||
+				 $order['order_status']['name'] === 'INCO' ||
 				 $order['order_status']['name'] === 'WAIT' ||
 				 $order['order_status']['name'] === 'PEND' ||
 				 $order['order_status']['name'] === 'DEL'  ||
@@ -463,6 +470,7 @@ use Cake\Utility\Hash;
 			} 
 			
 			if ( $order['order_status']['name'] === 'PEND' ||
+				 $order['order_status']['name'] === 'INCO' ||
 				 $order['order_status']['name'] === 'DEL' ) {
 				echo '<li>' . $this->Html->link(__('Mail Reminder'), array(
 						'controller' => 'shops', 
@@ -470,7 +478,8 @@ use Cake\Utility\Hash;
 						$order['id']
 					)) . '</li>';				
 			}
-			if ( $order['order_status']['name'] === 'PAID') {
+			if ( $order['order_status']['name'] === 'PAID' ||
+				 $order['order_status']['name'] === 'INCO' ) {
 				echo '<li>' . $this->Html->link(__('View Voucher'), array(
 							'controller' => 'shops', 
 							'action' => 'viewVoucher', 
@@ -486,6 +495,7 @@ use Cake\Utility\Hash;
 			}
 			if ( $order['order_status']['name'] === 'WAIT' ||
 				 $order['order_status']['name'] === 'PAID' || 
+				 $order['order_status']['name'] === 'INCO' || 
 				 $order['order_status']['name'] === 'INVO' || 
 				 $order['order_status']['name'] === 'PEND' ||
 				 $order['order_status']['name'] === 'DEL' ) {

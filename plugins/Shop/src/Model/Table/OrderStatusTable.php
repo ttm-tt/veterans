@@ -31,6 +31,10 @@ class OrderStatusTable extends ShopAppModelTable {
 		return OrderStatusTable::_getId('DEL');
 	}
 	
+	public static function getIncompleteId() {
+		return OrderStatusTable::_getId('INCO');
+	}
+	
 	public static function getInvoiceId() {
 		return OrderStatusTable::_getId('INVO');
 	}

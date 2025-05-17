@@ -28,6 +28,7 @@
 		'Team',
 		'Email',
 		'Phone',
+		'Newsletter',
 		'Invoice',
 		'Cancellation Date',
 		'Para class',
@@ -76,6 +77,7 @@
 			
 		$tmp[] = $row['person']['email'];
 		$tmp[] = $row['person']['phone'];
+		$tmp[] = $row['person']['newsletter'];
 
 		if (!empty($invoices[$row['person_id']])) {
 			$tmp[] = $invoices[$row['person_id']];

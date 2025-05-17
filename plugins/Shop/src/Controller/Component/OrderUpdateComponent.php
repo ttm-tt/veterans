@@ -203,6 +203,7 @@ class OrderUpdateComponent extends Component {
 		
 		$invoStatusId = OrderStatusTable::getInvoiceId();
 		$paidStatusId = OrderStatusTable::getPaidId();
+		$incoStatusId = OrderStatusTable::getIncompleteId();
 
 		// Map article name to article
 		$tmp = $this->Articles->find('all', array(
@@ -336,7 +337,8 @@ class OrderUpdateComponent extends Component {
 				
 				$orders[$personOrderId]['total'] += $personArticle['price'];
 			} else if (
-					$orders[$personOrderId]['order_status_id'] == $paidStatusId && 
+					($orders[$personOrderId]['order_status_id'] == $paidStatusId ||
+					 $orders[$personOrderId]['order_status_id'] == $incoStatusId) && 
 					$personArticle['cancellation_fee'] == $personArticle['total'] && 
 					$orders[$personOrderId]['cancellation_discount'] == 0 ) {
 				// There was no refund made and the order is still valid, so set back to the original state
@@ -613,7 +615,7 @@ class OrderUpdateComponent extends Component {
 			'conditions' => array(
 				'OrderArticles.cancelled IS NULL',
 				'Articles.tournament_id' => $tid,
-				'Orders.order_status_id IN' => array($stati['PAID'], $stati['INVO'])
+				'Orders.order_status_id IN' => array($stati['PAID'], $stati['INCO'], $stati['INVO'])
 			)
 		));
 		

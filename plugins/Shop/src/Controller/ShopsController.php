@@ -18,6 +18,11 @@ use Cake\I18n\I18n;
 
 use GeoIp2\Database\Reader;
 
+use Psr\Http\Message\UploadedFileInterface;
+
+use Box\Spout\Reader\Common\Creator\ReaderFactory;
+use Box\Spout\Common\Type;
+
 class ShopsController extends ShopAppController {
 
 	public function initialize() : void {
@@ -1348,6 +1353,7 @@ class ShopsController extends ShopAppController {
 		$wantReceipt = 
 				$order['order_status_id'] === OrderStatusTable::getPendingId() ||
 				$order['order_status_id'] === OrderStatusTable::getPaidId() ||
+				$order['order_status_id'] === OrderStatusTable::getIncompleteId() ||
 				$order['order_status_id'] === OrderStatusTable::getInvoiceId()
 		;
 			
@@ -1502,7 +1508,10 @@ class ShopsController extends ShopAppController {
 					'Orders', 'Articles'
 				),
 				'conditions' => array(
-					'Orders.order_status_id' => OrderStatusTable::getPaidId(),
+					'Orders.order_status_id IN' => [
+						OrderStatusTable::getPaidId(),
+						OrderStatusTable::getIncompleteId()
+					],
 					'Articles.visible' => true
 				),
 				'order' => array('OrderArticles.id' => 'ASC')
@@ -1818,6 +1827,7 @@ class ShopsController extends ShopAppController {
 		
 		if (!in_array($order['order_status_id'], [
 				OrderStatusTable::getPendingId(),
+				OrderStatusTable::getIncompleteId(),
 				OrderStatusTable::getDelayedId(),
 				OrderStatusTable::getInvoiceId()
 			])) {
@@ -2125,6 +2135,54 @@ class ShopsController extends ShopAppController {
 
 		if ($this->_saveCart($order)) {
 			$this->MultipleFlash->setFlash(__('Order converted to invoice'), 'info');
+		} else {
+			$this->MultipleFlash->setFlash(__('Could not save cart'), 'error');
+		}
+
+		return $this->redirect($this->referer());
+	}
+	
+	
+	public function setIncomplete($id = null) {
+		if ($this->request->getData('cancel') !== null)
+			return $this->redirect($this->referer());
+		
+		if (!$id) {
+			$this->MultipleFlash->setFlash(__('Invalid order'), 'error');
+			return $this->redirect($this->referer());
+		} 
+		
+		if (!$this->request->getSession()->check('Tournaments.id')) {
+			$this->MultipleFlash->setFlash(__('You must select a tournament first'), 'error');
+			return $this->redirect($this->referer());
+		}
+
+		$this->loadModel('Shop.Orders');
+		$this->loadModel('Shop.OrderStatus');
+		$stati = $this->OrderStatus->find('list', array('fields' => array('name', 'id')))->toArray();
+
+		// Allow for discount and change of status
+		$order = $this->Orders->get($id, array(
+			'contain' => array('OrderComments' => array('Users'))
+		));
+				
+		$this->set('order', $order);
+
+		$order_status_id = $order->order_status_id;
+		
+		if ( $order_status_id !== $stati['WAIT'] &&
+			 $order_status_id !== $stati['PEND'] &&
+			 $order_status_id !== $stati['DEL'] ) {
+			$this->MultipleFlash->setFlash(__('Invalid order status'), 'error');
+			return $this->redirect($this->referer());
+		}
+
+		$order = $this->Orders->patchEntity($order, array(	
+			'order_status_id' => $stati['INCO']
+		));
+
+		if ($this->_saveCart($order)) {
+			$this->MultipleFlash->setFlash(__('Order converted to incomplete'), 'info');
 		} else {
 			$this->MultipleFlash->setFlash(__('Could not save cart'), 'error');
 		}
@@ -2595,12 +2653,45 @@ class ShopsController extends ShopAppController {
 			
 		} 
 		
-		$data = $this->request->getData();
-		
-		if ($this->request->is(['post', 'put']) && is_uploaded_file($data['File']['tmp_name'])) {
-			$file = $this->_openFile($data['File']['tmp_name'], 'rt', 'CP437');
+		if ($this->request->is(['post', 'put'])) {
+			$data = $this->request->getData();
+			$type = null;
+	
+			switch ($data['File']->getClientMediaType()) {
+				case 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' :
+					$type = Type::XLSX;
+					break;
+				
+				case 'text/csv' :
+					$type = Type::CSV;
+					break;
+				
+				case 'application/vnd.oasis.opendocument.spreadsheet' :
+					$type = Type::ODS;
+					break;
+				
+				default :
+					// CSV files may be sent as 'vnd.ms-excel'
+					if (strpos($data['File']->getClientFilename(), '.csv') > 0) {
+						$type = Type::CSV;
+						break;
+					}
+					
+					$this->MultipleFlash->setFlash(__('Unknown mime type {0}', $data['File']->getClientMediaType()), 'error');
+					return $this->redirect(['action' => 'index']);
+			}
+			
+			$reader = ReaderFactory::createFromType($type);
+			if ($type === Type::CSV)
+				$reader->setEncoding('UTF-8');
+			$reader->setShouldFormatDates(false);
+			$file = $this->_openFile($data['File'], 'rb');
+			$reader->open(stream_get_meta_data($file)['uri']);
+			$sheet = null;
+			foreach ($reader->getSheetIterator() as $sheet)
+				break;
 
-			$this->_doImport($file, $data['Order']['email']);
+			$this->_doImport($sheet, $data['Order']['email']);
 
 			fclose($file);
 			
@@ -2608,51 +2699,53 @@ class ShopsController extends ShopAppController {
 		}		
 	}
 	
-	private function _doImport($file, $email) {
-		$this->loadModel('Shop.Order');
-		$this->loadModel('Shop.Article');
+	private function _doImport($sheet, $email) {
+		$this->loadModel('Shop.Orders');
+		$this->loadModel('Shop.Articles');
 		$this->loadModel('Shop.OrderStatus');
-		$this->loadModel('Shop.OrderArticle');
-		$this->loadModel('User');
-		$this->loadModel('Nation');
-		$this->loadModel('Tournament');
+		$this->loadModel('Shop.OrderArticles');
+		$this->loadModel('Users');
+		$this->loadModel('Nations');
+		$this->loadModel('Tournaments');
 				
-		$tid = $this->request->getSession()->read('Tournament.id');
+		$tid = $this->request->getSession()->read('Tournaments.id');
 		$stati = $this->OrderStatus->find('list', array('fields' => array('name', 'id')))->toArray();
-		$nations = $this->Nation->find('list', array('fields' => array('name', 'id')))->toArray();
+		$nations = $this->Nations->find('list', array('fields' => array('name', 'id')))->toArray();
 		
 		$articles = array();
-		$articles['PLA'] = $this->Article->find('all', array(
-			'recursive' => -1,
-			'conditions' => array(
+		$articles['PLA'] = $this->Articles->find()
+			->where([
 				'tournament_id' => $tid,
 				'name' => 'PLA'
-			)
-		))->first();
+			])
+			->first()
+		;
 		
-		$articles['ACC'] = $this->Article->find('all', array(
-			'recursive' => -1,
-			'conditions' => array(
+		$articles['ACC'] = $this->Articles->find()
+			->where([
 				'tournament_id' => $tid,
 				'name' => 'ACC'
-			)
-		))->first();
+			])
+			->first()
+		;
 		
-		$articles['COA'] = $this->Article->find('all', array(
-			'recursive' => -1,
-			'conditions' => array(
+		$articles['COA'] = $this->Articles->find()
+			->where([
 				'tournament_id' => $tid,
 				'name' => 'COA'
-			)
-		))->first();
+			])
+			->first()
+		;
 		
-		$articles['GALA'] = $this->Article->find('all', array(
-			'recursive' => -1,
-			'conditions' => array(
+/*		
+		$articles['GALA'] = $this->Articles->find()
+			->where([
 				'tournament_id' => $tid,
 				'name' => 'GALA'
-			)
-		))->first();
+			])
+			->first()
+		;
+ */
 		
 		// Skip first line
 		// fgets($file);
@@ -2661,30 +2754,30 @@ class ShopsController extends ShopAppController {
 		$invoice_postfix = strftime($this->_shopSettings['invoice_no_postfix'], time());
 
 		$invoice_no = $this->Orders->find()
-			->where([
-				'tournament_id' => $tid,
-				'invoice LIKE' => $invoice_prefix . '%' . $invoice_postfix
-			])
-			->select(['max' => 'MAX(invoice_no) + 1'])
-			->first()
-			->get('max')
+				->select(['invoice_no' => 'MAX(invoice_no)'])
+				->where([
+					'tournament_id' => $tid,
+					'invoice LIKE' => $invoice_prefix . '%' . $invoice_postfix
+				])
+				->first()
+				->invoice_no
 		;
-		
 		if ($invoice_no === null)
 			$invoice_no = 1;
+		else
+			$invoice_no += 1;
 
 		$order = array(
-			'Order' => array(
-				'email' => $email,
-				'tournament_id' => $tid,
-				'total' => 0,
-				'invoice_no' => $invoice_no,
-				'invoice' => $invoice_prefix . sprintf("%05d", $invoice_no) . $invoice_postfix,
-				'ticket' => md5(Text::uuid()),
-				'language' => 'eng',
-				'order_status_id' => $stati['PEND']
-			),
-			'OrderArticle' => array()
+			'email' => $email,
+			'user_id' => $this->Users->findByConditions('id', ['email' => $email]),
+			'tournament_id' => $tid,
+			'total' => 0,
+			'invoice_no' => $invoice_no,
+			'invoice' => $invoice_prefix . sprintf("%05d", $invoice_no) . $invoice_postfix,
+			'ticket' => md5(Text::uuid()),
+			'language' => 'eng',
+			'order_status_id' => $stati['PEND'],
+			'order_articles' => array()
 		);
 
 		$people = array('PLA' => array(), 'ACC' => array(), 'COA' => array());
@@ -2692,43 +2785,56 @@ class ShopsController extends ShopAppController {
 		$count = array(
 			'GALA' => 0,			
 		);
+		
+		$line = 0;
 				
-		while (!feof($file)) {
+		foreach ($sheet->getRowIterator() as $row) {
 			// Restart execution timer
 			set_time_limit(60);
 
-			// XXX utf8_encode
-			$line = fgets($file);
-			$line = str_replace("\n", "", $line);
-			$line = str_replace("\t", ";", $line);
-
-			if (strpos($line, '#', 0) === 0)
+			// Count lines
+			$line++;
+				
+			if ($row->getNumCells() < 14)
 				continue;
 
-			$this->log($line, 'debug');
-
-			$fields = explode(";", $line);
-
-			if (count($fields) < 8)
+			list(
+					$surname,
+					$firstname,
+					$country,
+					$type,
+					$sex,
+					$singles,
+					$doubles,
+					$double_partner,
+					$double_partner_assoc,
+					,
+					,
+					$player_phone,
+					$player_email,
+					$birth
+			) = $row->toArray();
+			
+			// Check for comment
+			if (str_starts_with($surname, '#'))
 				continue;
-
-			$idx = 0;
-			$surname = trim($fields[$idx++]);
-			$firstname = trim($fields[$idx++]);
-			$sex = trim($fields[$idx++]);
-			$birth = trim($fields[$idx++]);
-			$country = trim($fields[$idx++]);
-			$type = trim($fields[$idx++]);
-			$player_email = trim($fields[$idx++]);
-			$farewell_party = trim($fields[$idx++]) !== '';
-			// $busticket = trim($fields[$idx++]) !== '';
 			
 			// Check for empty line
-			if (empty($surname))
+			if (empty($type))
 				continue;
 			
+			// Correct some common mistakes
+			$sex = strtoupper($sex);
 			if ($sex === 'W')
 				$sex = 'F';
+			
+			$country = strtoupper(trim($country));
+			if ($country === 'CH')
+				$country = 'SUI';
+			
+			if ($birth instanceof \DateTime) {
+				$birth = $birth->format('Y-m-d');
+			} 
 			
 			if (strpos($birth, '.') !== false) {
 				$tmp = explode('.', $birth);
@@ -2759,6 +2865,9 @@ class ShopsController extends ShopAppController {
 				if (!empty($player_email))
 					$detail['email'] = $player_email;
 				
+				if (!empty($player_phone))
+					$detail['phone'] = $player_phone;
+				
 				$detail['type'] = 'PLA';
 				
 				$people['PLA'][] = $detail;
@@ -2772,9 +2881,6 @@ class ShopsController extends ShopAppController {
 				
 				$people['COA'][] = $detail;				
 			} 
-			
-			if ($farewell_party)
-				++$count['GALA'];			
 		}
 		
 		if (count($people['PLA']) > 0) {
@@ -2838,7 +2944,7 @@ class ShopsController extends ShopAppController {
 		}
 				
 		if ($order['total'] > 0) {
-			if (!$this->Order->save($this->Orders->newEntity($order))) {
+			if (!$this->Orders->save($this->Orders->newEntity($order))) {
 				// TODO: Fehlermeldung
 				return false;
 			}	
