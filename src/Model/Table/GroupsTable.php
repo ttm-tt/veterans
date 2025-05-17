@@ -57,6 +57,11 @@ class GroupsTable extends AppTable {
 	}
 
 
+	public static function getCompetitionDirectorId() {
+		return GroupsTable::_getId('Competition Director');
+	}
+
+
 	public static function getCompetitionManagerId() {
 		return GroupsTable::_getId('Competition Manager');
 	}
