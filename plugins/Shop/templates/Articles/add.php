@@ -156,6 +156,30 @@ function addVariant() {
 								'type' => 'checkbox',
 								'checked' => true
 							));
+						
+						echo $this->Form->control('article_variants.' . $k . '.available', array(
+								'label' => __('Available')
+							));
+						
+						echo $this->Form->control('article_variants.' . $k . '.available_from', array(
+							'type' => 'date',
+							'empty' => [
+								'year' => __('Year'), 
+								'month' => __('Month'), 
+								'day' => __('Day')
+							],
+							'label' => __('Available From')			
+						));
+						echo $this->Form->control('article_variants.' . $k . '.available_until', array(
+							'type' => 'date',
+							'empty' => [
+								'year' => __('Year'), 
+								'month' => __('Month'), 
+								'day' => __('Day')
+							],
+							'label' => __('Available Until')			
+						));
+						
 						echo $this->Form->control('article_variants.' . $k . '.sort_order', array(
 								'label' => __('Sort Order')
 							));

@@ -16,6 +16,8 @@ use Cake\Utility\Text;
 use Cake\I18n\FrozenDate;
 use Cake\I18n\I18n;
 
+use Cake\ORM\Query\SelectQuery;
+
 use GeoIp2\Database\Reader;
 
 use Psr\Http\Message\UploadedFileInterface;
@@ -714,11 +716,23 @@ class ShopsController extends ShopAppController {
 		$status_id = $this->OrderStatus->fieldByConditions('id', array('name' => 'PAID'));
 		
 		$this->loadModel('Shop.Articles');
-		$articles = $this->Articles->find('all', array(
-			'contain' => array(
-				'ArticleVariants' => array('sort' => ['sort_order' => 'ASC']),
-			),
-			'conditions' => array(
+		$articles = $this->Articles->find()
+			->contain('ArticleVariants', function(SelectQuery $q) {
+				return $q->where([
+					'visible' => true,
+					'OR' => array(
+						'available_from IS NULL',
+						'available_from <=' => date('Y-m-d')
+					),
+					'OR' => array(
+						'available_until IS NULL',
+						'available_until >=' => date('Y-m-d')
+					)						
+				])
+				->order(['sort_order' => 'ASC'])
+				;
+			})
+			->where([
 				'tournament_id' => $this->request->getSession()->read('Tournaments.id'),
 				'visible' => true,
 				'OR' => array(
@@ -729,9 +743,9 @@ class ShopsController extends ShopAppController {
 					'available_until IS NULL',
 					'available_until >=' => date('Y-m-d')
 				)
-			),
-			'order' => ['sort_order' => 'ASC']
-		));
+			])
+			->order(['sort_order' => 'ASC'])
+		;
 		
 		// Count sold items
 		$tid = $this->request->getSession()->read('Tournaments.id');
