@@ -14,6 +14,7 @@ class ShopAppController extends AppController {
 	public $Orders = null;
 	public $OrderAddresses = null;
 	public $OrderArticles = null;
+	public $OrderArticleVariants = null;	
 	public $OrderPayments = null;
 	public $OrderSettings = null;
 	public $OrderStatus = null;

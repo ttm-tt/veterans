@@ -712,26 +712,67 @@ class ShopsController extends ShopAppController {
 	}
 	
 	public function _prepareBuy() {
+		$tid = $this->request->getSession()->read('Tournaments.id');
+
 		$this->loadModel('Shop.OrderStatus');
-		$status_id = $this->OrderStatus->fieldByConditions('id', array('name' => 'PAID'));
+		
+		// Hide all variants which are sold-out
+		// unfortunately 'having' does not work (as expected), so:
+		// first, create a query with variant_id, available, sold (sum), and debug info
+		// then, loop over the result and add all variant_ids sold-out to an array
+		// later we use this arraay to exclude sold-out variants from the option list
+		$this->loadModel('Shop.OrderArticles');
+		$sold = $this->OrderArticles->find()
+				->select([
+					'article_variant_id', 'sold' => 'SUM(quantity)', 
+					'ArticleVariants.name', 'ArticleVariants.available'
+				])
+				->contain([
+					'Orders' => fn(SelectQuery $q) => $q->where(['tournament_id' => $tid]),
+					'Articles',
+					'ArticleVariants' => fn(SelectQuery $q) => $q->where([
+						'ArticleVariants.available IS NOT NULL',
+					])
+				])
+				->where([
+					// 'Orders.order_status_id' => OrderStatusTable::getPaidId(),
+					'Orders.order_status_id IN' => [
+						OrderStatusTable::getPaidId(),
+						OrderStatusTable::getIncompleteId()
+					],
+					'cancelled IS NULL',
+					'article_variant_id IS NOT NULL'
+				])
+				->group(['article_variant_id'])
+				->having(['sold >=' => 'ArticleVariants.available'])
+		;
+
+		// having should exclude all sold-out variants, but it does not ...
+		$soldout = [0];
+		foreach($sold as $s) {
+			if ($s->sold >= $s->article_variant->available)
+				$soldout[] = $s->article_variant_id;
+		}
 		
 		$this->loadModel('Shop.Articles');
 		$articles = $this->Articles->find()
-			->contain('ArticleVariants', function(SelectQuery $q) {
-				return $q->where([
-					'visible' => true,
-					'OR' => array(
-						'available_from IS NULL',
-						'available_from <=' => date('Y-m-d')
-					),
-					'OR' => array(
-						'available_until IS NULL',
-						'available_until >=' => date('Y-m-d')
-					)						
-				])
-				->order(['sort_order' => 'ASC'])
-				;
-			})
+			->contain('ArticleVariants', function(SelectQuery $q) use ($soldout) {
+					return $q
+						->where([
+							'visible' => true,
+							'OR' => array(
+								'available_from IS NULL',
+								'available_from <=' => date('Y-m-d')
+							),
+							'OR' => array(
+								'available_until IS NULL',
+								'available_until >=' => date('Y-m-d')
+							),
+							'id NOT IN' => $soldout
+						])
+						->order(['sort_order' => 'ASC'])
+					;}
+				)
 			->where([
 				'tournament_id' => $this->request->getSession()->read('Tournaments.id'),
 				'visible' => true,
@@ -748,7 +789,6 @@ class ShopsController extends ShopAppController {
 		;
 		
 		// Count sold items
-		$tid = $this->request->getSession()->read('Tournaments.id');
 		$this->loadModel('Shop.OrderArticles');
 		$tmp = $this->OrderArticles->find('all', array(
 			'fields' => array('Articles.id', 'sold' => 'SUM(OrderArticles.quantity)'),
@@ -760,7 +800,10 @@ class ShopsController extends ShopAppController {
 				'Articles.tournament_id' => $tid,
 				'Articles.available IS NOT NULL',
 				'OrderArticles.cancelled IS NULL',
-				'Orders.order_status_id' => $status_id
+				'Orders.order_status_id IN' => [
+					OrderStatusTable::getPaidId(),
+					OrderStatusTable::getIncompleteId()
+				]
 			)
 		));
 			
