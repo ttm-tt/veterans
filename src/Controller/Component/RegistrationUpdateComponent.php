@@ -560,8 +560,8 @@ class RegistrationUpdateComponent extends Component {
 			    !empty($data['participant']['team_id'])) {
 
 				$data['cancelled'] = null;
-				$data['cancelled'] = false;
-				$data['replaced_by_id'] = null;
+				$data['participant']['cancelled'] = false;
+				$data['participant']['replaced_by_id'] = null;
 			}
 		} 
 
