@@ -11,6 +11,7 @@ return [
         'DebugKit' => $baseDir . '/vendor/cakephp/debug_kit/',
         'ErrorEmail' => $baseDir . '/vendor/ebrigham1/cakephp-error-email/',
         'Migrations' => $baseDir . '/vendor/cakephp/migrations/',
+        'Recaptcha' => $baseDir . '/vendor/giginc/cakephp3-recaptcha/',
         'Shim' => $baseDir . '/vendor/dereuromark/cakephp-shim/',
         'Shop' => $baseDir . '/plugins/Shop/',
         'Wizard' => $baseDir . '/plugins/Wizard/',
