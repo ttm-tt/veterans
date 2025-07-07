@@ -1752,7 +1752,6 @@ class OrdersController extends ShopAppController {
 					$data[$c] = trim($data[$c]);
 					if (empty($data[$c]) && $schema->isNullable($c))
 						$data[$c] = null;
-					
 				}
 			}
 			
