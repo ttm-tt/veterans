@@ -52,9 +52,6 @@ li {
 	$email = $contractor['email'];
 	$phone = $contractor['phone'];
 	$fax = $contractor['fax'];
-	
-	// TODO: VAT from settings
-	// $vat = $shopSettings['vat'];
 ?>
 
 <div>
@@ -65,12 +62,13 @@ which is made up the following different legal entities:
 </p>
 <p>
 <ul>
+	<?php if ($contractor) { ?>
 	<li> 
 		<?= $contractor['description'] ?><br>
 		<?= str_replace("\n", "<br>", $contractor['address']) ?><br>
 		Email: <a href="mailto:<?= $email ?>"><?= $email ?></a><br>
-		VAT number HU13132439<br>
 	</li>
+	<?php } ?>
 	<?php if ($organizer) { ?>
 	<li> 
 		<?= $organizer['description'] ?><br>
