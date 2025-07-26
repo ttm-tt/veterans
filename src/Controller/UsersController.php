@@ -321,6 +321,12 @@ class UsersController extends AppController {
 
 		$this->MultipleFlash->setFlash(__d('user', 'You are logged in'), 'success');
 
+		// Cache it for later use
+		// Update last_login and expire any ticket
+		$user = $this->Users->get($this->Auth->user('id'), [
+			'contain' => 'Groups'
+		]);
+
 		// Expire any ticket
 		$user['ticket'] = null;
 		$user['ticket_expires'] = null;
@@ -328,12 +334,9 @@ class UsersController extends AppController {
 		// Count logins
 		$user['count_successful'] = $user['count_successful'] + 1;
 		$user['count_failed_since'] = 0;
-
-		// Cache it for later use
-		// Update last_login and expire any ticket
-		$user = $this->Users->get($this->Auth->user('id'), [
-			'contain' => 'Groups'
-		]);
+		$user['last_login'] = date('Y-m-d H:i:s');
+		
+		$this->Users->save($user);
 
 		$this->_user = $user;
 
