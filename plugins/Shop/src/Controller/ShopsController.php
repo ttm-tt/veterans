@@ -759,18 +759,18 @@ class ShopsController extends ShopAppController {
 			->contain('ArticleVariants', function(SelectQuery $q) use ($soldout) {
 					return $q
 						->where([
-							'visible' => true,
+							'ArticleVariants.visible' => true,
 							'OR' => array(
-								'available_from IS NULL',
-								'available_from <=' => date('Y-m-d')
+								'ArticleVariants.available_from IS NULL',
+								'ArticleVariants.available_from <=' => date('Y-m-d')
 							),
 							'OR' => array(
-								'available_until IS NULL',
-								'available_until >=' => date('Y-m-d')
+								'ArticleVariants.available_until IS NULL',
+								'ArticleVariants.available_until >=' => date('Y-m-d')
 							),
-							'id NOT IN' => $soldout
+							'ArticleVariants.id NOT IN' => $soldout
 						])
-						->order(['sort_order' => 'ASC'])
+						->order(['ArticleVariants.sort_order' => 'ASC'])
 					;}
 				)
 			->where([
