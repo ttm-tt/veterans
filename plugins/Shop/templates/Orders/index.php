@@ -99,6 +99,16 @@
 			echo ' ' . $this->Html->link(_('Duplicates'), ['?' => ['duplicates' => 'duplicates']]);
 
 		echo '</td></tr>';
+
+		if (!empty($user_id)) {
+			echo '<tr><td><label class="filter">' . __d('user', 'Username') . '</label></td><td>';
+			echo $this->Html->link(__d('user', 'all'), ['?' => ['user_id' => 'all']]);
+			echo ' ' . $username;
+
+			echo '</td></tr>';
+		}
+
+		echo '</td></tr>';
 		
 		echo '</table>' . "\n";
 		echo '</fieldset></div>' . "\n";

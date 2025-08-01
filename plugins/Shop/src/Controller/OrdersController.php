@@ -138,6 +138,13 @@ class OrdersController extends ShopAppController {
 				$this->request->getSession()->write('Shop.Orders.duplicates', $this->request->getQuery('duplicates'));
 		}	
 		
+		if ($this->request->getQuery('user_id') !== null) {
+			if ($this->request->getQuery('user_id') === 'all')
+				$this->request->getSession()->delete('Users.id');
+			else
+				$this->request->getSession()->write('Users.id', $this->request->getQuery('user_id'));
+		}
+
 		$tid = $this->request->getSession()->read('Tournaments.id');
 		
 		$conditions = array();
@@ -193,6 +200,10 @@ class OrdersController extends ShopAppController {
 			;
 		}
 		
+		// Filter by user
+		if ($this->request->getSession()->check('Users.id'))
+			$conditions['Orders.user_id'] = $this->request->getSession()->read('Users.id');
+
 		$this->paginate = array(
 			'order' => array('Orders.created' => 'DESC'),
 			'conditions' => $conditions,
@@ -332,6 +343,12 @@ class OrdersController extends ShopAppController {
 			'refunded' => __('Done')
 		]);
 		$this->set('refund_status', $this->request->getSession()->read('Shop.Orders.refund_status'));
+		
+		$this->loadModel('Users');
+		$this->set('user_id', $this->request->getSession()->read('Users.id'));
+		$this->set('username', $this->Users->fieldByConditions('username', array(
+			'id' => $this->request->getSession()->read('Users.id') ?: 0)
+		));		
 	}
 	
 	
