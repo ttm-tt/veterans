@@ -60,7 +60,7 @@ return [
 				'allowRefund' => true
 			],
 			/*
-			 * Paypal
+			 * Paypal Express
 			 */
 			'PaypalExpress' => [
 				'accountData' => array(
@@ -73,6 +73,25 @@ return [
 				'engine' => 'PaypalExpressPayment',
 				'allowRefund' => true
 			],
+			
+			/*
+			 * Paypal Standard
+			 */
+			'PaypalStandard' => [
+				'accountData' => [
+					'PAYPAL_CLIENT_ID' => '<CLIENT_ID',
+					'PAYPAL_CLIENT_SECRET' => 'CLIEENT_SECRET',
+					'PAYPAL_APP' => '<APP>'
+				],
+				'engine' => 'PaypalStandardPayment',
+				'allowRefund' => false,
+				'endpoint' => 'https://api-m.sandbox.paypal.com/v2/checkout',
+				'endpointAuth' => 'https://api-m.sandbox.paypal.com/v1/oauth2/token'
+				/* Production */
+				// 'endpoint' => 'https://api-m.paypal.com/v2/checkout',
+				// 'endpointAuth' => 'https://api-m.paypal.com/v1/oauth2/token'
+			],
+			
 			/*
 			 * Dibs D2
 			 */

@@ -49,6 +49,7 @@ class ShopsController extends ShopAppController {
 					'payment_selection',
 					array(
 						'cc' => array('creditcard'),
+						'pp' => array('paypal'),
 						'bt' => array('banktransfer', 'success')
 					),
 				),
@@ -77,6 +78,8 @@ class ShopsController extends ShopAppController {
 			'onRemoveItem',
 			'onChangeQuantity',
 			'onPrepareCreditcard',
+			'onPreparePaypal',
+			'onCheckoutPaypal',
 			'payment_complete',
 			'payment_error',
 			'payment_success',
@@ -153,7 +156,7 @@ class ShopsController extends ShopAppController {
 
 
 	public function wizard($step = null) {
-		return $this->Wizard->process($step);
+			return $this->Wizard->process($step);
 	}
 
 
@@ -842,7 +845,7 @@ class ShopsController extends ShopAppController {
 	}
 
 
-	// Called by "buy.ctp" when an Item is added
+	// Called b	y "buy.ctp" when an Item is added
 	public function onAddItem($key = null, $variant = null) {
 		$data = $this->request->getData();
 		
@@ -1129,9 +1132,12 @@ class ShopsController extends ShopAppController {
 		if ($this->_getPayment()->getPaymentLogo() !== null)
 			$creditcardLogo = $this->_getPayment()->getPaymentLogo();
 		
+		$paypalLogo = 'paypal.png';
+		
 		$this->set('paymentLogos', array(
 			'bt' => $invoiceLogo, 
-			'cc' => $creditcardLogo
+			'cc' => $creditcardLogo,
+			'pp' => $paypalLogo
 		));
 		
 	}
@@ -1146,6 +1152,7 @@ class ShopsController extends ShopAppController {
 		// skip all payment branches ...
 		$this->Wizard->branch('bt', true);
 		$this->Wizard->branch('cc', true);
+		$this->Wizard->branch('pp', true);
 		
 		// ... and then branch to where we want to go
 		$this->Wizard->branch($this->Cart->getPaymentMethod());
@@ -1229,6 +1236,52 @@ class ShopsController extends ShopAppController {
 	}
 	
 	
+	public function _preparePaypal() {
+		$this->autoRender = false;
+		
+		$amount = $this->Cart->getTotal();
+		
+		$payment = $this->_getPayment();
+		$payment->prepare($amount);
+	}
+	
+	
+	public function _processPaypal() {
+		$this->autoRender = false;
+		
+		$payment = $this->_getPayment();
+		$payment->process();		
+	}
+	
+	
+	public function onPreparePaypal() {
+		if (!$this->request->is('ajax'))
+			return;
+		
+		$this->autoRender = false;		
+
+		$initStatusId = OrderStatusTable::getInitiateId();
+		
+		$this->loadModel('Shop.Orders');
+		
+		if ($this->request->getData('ticket') !== null)
+			$orderId = $this->Orders->fieldByConditions('id', ['ticket' => $this->request->getData('ticket')]);
+		else
+			$orderId = $this->_storeOrder($initStatusId, Configure::read('Shop.payment'));
+		
+		if (empty($orderId)) {
+			// TODO: Fehlermeldung
+			return;
+		}
+		
+		$payment = $this->_getPayment();
+		$payment->confirm($orderId);
+		
+		// Don't reset Wizard or clear cart:
+		// In case the payment fails the user can go back and try again
+	}
+	
+	
 	// Called when transaction was not successful
 	// IPayment: silent_error
 	public function payment_error() {
@@ -1243,8 +1296,6 @@ class ShopsController extends ShopAppController {
 	// Redirect client to success page
 	public function payment_complete() {		
 		$this->autoRender = false;
-		
-		// $request = unserialize(file_get_contents('/home/ettu/Downloads/xxxserialize-20170622-172205'));
 		
 		$payment = $this->_getPayment();
 		$payment->completed($this->request);

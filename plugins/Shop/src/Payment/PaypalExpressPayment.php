@@ -47,7 +47,7 @@ class PaypalExpressPayment extends AbstractPayment {
 
 	// Payment was successful
 	public function success($request) {
-		file_put_contents(TMP . '/paypal/xxxsuccess-' . date('Ymd-His'), print_r($request, true));
+		file_put_contents(TMP . '/paypal_express/xxxsuccess-' . date('Ymd-His'), print_r($request, true));
 		
 		$token = $request->query['token'];
 		$payerId = $request->query['PayerID'];
@@ -68,7 +68,7 @@ class PaypalExpressPayment extends AbstractPayment {
 			'PAYMENTREQUEST_0_PAYMENTACTION' => 'Sale'
 		));
 		
-		file_put_contents(TMP . '/paypal/xxxdo-' .  date('Ymd-His'), print_r(array($details, $result), true));
+		file_put_contents(TMP . '/paypal_express/xxxdo-' .  date('Ymd-His'), print_r(array($details, $result), true));
 	
 		$this->_controller->_success($orderId);
 	}
@@ -83,7 +83,7 @@ class PaypalExpressPayment extends AbstractPayment {
 
 	// Payment completed
 	public function completed($request) {
-		file_put_contents(TMP . '/paypal/xxxipn-' . date('Ymd-His') . '-' . $request->getData('payment_status'), 
+		file_put_contents(TMP . '/paypal_expreess/xxxipn-' . date('Ymd-His') . '-' . $request->getData('payment_status'), 
 				print_r([
 					'POST/GET' => $request->is(['post', 'put', 'get']), 
 					'Request' => $request], true)
@@ -264,7 +264,7 @@ class PaypalExpressPayment extends AbstractPayment {
 		
 		$tournament = $this->_controller->Tournaments->find('first', array(
 			'recursive' => -1,
-			'conditions' => array('Tournament.id'=> $this->reqeust->session()->read('Tournaments.id'))
+			'conditions' => array('Tournaments.id'=> $this->_controller->request->getSession()->read('Tournaments.id'))
 		));
 		
 		
@@ -312,7 +312,7 @@ class PaypalExpressPayment extends AbstractPayment {
 		
 		$response = $this->_executeCall('SetExpressCheckout', $options);		
 		
-		file_put_contents(TMP . '/paypal/xxxset-' . date('Ymd-His'), print_r($response, true));
+		file_put_contents(TMP . '/paypal_express/xxxset-' . date('Ymd-His'), print_r($response, true));
 		
 		$response['orderId'] = $orderId;
 		
@@ -388,7 +388,7 @@ class PaypalExpressPayment extends AbstractPayment {
 	}
 
 	public function getPaymentName() {
-		return 'Paypal';
+		return 'PaypalExpress';
 	}
 
 	public function getSubmitUrl() {

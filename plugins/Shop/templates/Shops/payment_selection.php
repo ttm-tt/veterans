@@ -12,7 +12,7 @@
 			
 			$options['bt'] = 
 				'<span style="width: 110px; text-align: left; float: left; margin-bottom: 0.9375rem;">' . __d('user', 'Bank Transfer') . '</span>' .
-				$this->Html->image($paymentLogos['bt'], array(
+				$this->Html->image('Payment/' . $paymentLogos['bt'], array(
 					'alt' => __d('user', 'Bank Transfer'),
 					'style' => 'float: left; padding-left: 10px; height: 2rem;'
 				));
@@ -24,8 +24,23 @@
 			
 			$options['cc'] = 
 				'<span style="width: 110px; text-align: left; float: left; margin-bottom: 0.9375rem;">' . __d('user', 'Credit Card') . '</span>' .
-				$this->Html->image($paymentLogos['cc'], array(
+				$this->Html->image('Payment/' . $paymentLogos['cc'], array(
 					'alt' => __d('user', 'Credit Card'),
+					'style' => 'float: left; padding-left: 10px; height: 2rem;'
+				));
+		}
+		if ($shopSettings['paypal']) {
+			echo '<h4>' . __d('user', 'PayPal') . '</h4>';
+			if ($shopSettings['creditcard'])
+				echo __d('user', 'You may pay with PayPal');
+			else
+				echo __d('user', 'You may pay with PayPal or credit card');
+			echo '<p></p>';
+			
+			$options['pp'] = 
+				'<span style="width: 110px; text-align: left; float: left; margin-bottom: 0.9375rem;">' . __d('user', 'PayPal') . '</span>' .
+				$this->Html->image('Payment/' . $paymentLogos['pp'], array(
+					'alt' => __d('user', 'PayPal'),
 					'style' => 'float: left; padding-left: 10px; height: 2rem;'
 				));
 		}

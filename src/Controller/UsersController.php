@@ -337,7 +337,7 @@ class UsersController extends AppController {
 		$user['last_login'] = date('Y-m-d H:i:s');
 		
 		$this->Users->save($user);
-
+		
 		$this->_user = $user;
 
 		// Set filters

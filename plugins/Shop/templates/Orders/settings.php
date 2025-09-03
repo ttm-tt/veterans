@@ -170,6 +170,7 @@
 				));
 				echo $this->Form->control('creditcard', array('type' => 'checkbox', 'label' => __('Credit Card')));
 				echo $this->Form->control('banktransfer', array('type' => 'checkbox', 'label' => __('Bank Transfer')));
+				echo $this->Form->control('paypal', array('type' => 'checkbox', 'label' => __('PayPal')));
 			?>
 		</div>
 		

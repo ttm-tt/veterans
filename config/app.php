@@ -200,6 +200,9 @@ return [
         'skipLog' => [],
         'log' => true,
         'trace' => true,
+		'ignoredDeprecationPaths' => [
+			'vendor/cakephp/cakephp/src/Datasource/Paging/NumericPaginator.php'
+		]
     ],
 
 // ErrorEmail
