@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2024-08-10 15:36+0200\n"
+"POT-Creation-Date: 2025-09-06 21:29+0200\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -14,11 +14,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: ./src/Controller/AppController.php:367
+#: ./src/Controller/AppController.php:369
 msgid "SecurityException: {0}"
 msgstr ""
 
-#: ./src/Controller/AppController.php:369
+#: ./src/Controller/AppController.php:371
 msgid "Error: {0}"
 msgstr ""
 
@@ -40,17 +40,18 @@ msgstr ""
 #: ./src/Controller/RegistrationsController.php:2652
 #: ./plugins/Shop/src/Controller/AllotmentsController.php:72
 #: ./plugins/Shop/src/Controller/ArticlesController.php:30
-#: ./plugins/Shop/src/Controller/ArticlesController.php:158
-#: ./plugins/Shop/src/Controller/ArticlesController.php:224
-#: ./plugins/Shop/src/Controller/ArticlesController.php:316
+#: ./plugins/Shop/src/Controller/ArticlesController.php:193
+#: ./plugins/Shop/src/Controller/ArticlesController.php:259
+#: ./plugins/Shop/src/Controller/ArticlesController.php:351
 #: ./plugins/Shop/src/Controller/OrdersController.php:37
-#: ./plugins/Shop/src/Controller/OrdersController.php:678
-#: ./plugins/Shop/src/Controller/OrdersController.php:1705
-#: ./plugins/Shop/src/Controller/OrdersController.php:1750
-#: ./plugins/Shop/src/Controller/OrdersController.php:1843
-#: ./plugins/Shop/src/Controller/ShopsController.php:1593
-#: ./plugins/Shop/src/Controller/ShopsController.php:1977
-#: ./plugins/Shop/src/Controller/ShopsController.php:2091
+#: ./plugins/Shop/src/Controller/OrdersController.php:713
+#: ./plugins/Shop/src/Controller/OrdersController.php:1744
+#: ./plugins/Shop/src/Controller/OrdersController.php:1797
+#: ./plugins/Shop/src/Controller/OrdersController.php:1893
+#: ./plugins/Shop/src/Controller/ShopsController.php:1717
+#: ./plugins/Shop/src/Controller/ShopsController.php:2102
+#: ./plugins/Shop/src/Controller/ShopsController.php:2216
+#: ./plugins/Shop/src/Controller/ShopsController.php:2264
 msgid "You must select a tournament first"
 msgstr ""
 
@@ -130,13 +131,13 @@ msgstr ""
 msgid "You are not allowed to edit this registration"
 msgstr ""
 
-#: ./src/Controller/Component/RegistrationUpdateComponent.php:794
+#: ./src/Controller/Component/RegistrationUpdateComponent.php:793
 #: ./src/Controller/PeopleController.php:618
 msgid "You are not allowed to delete this person"
 msgstr ""
 
-#: ./src/Controller/Component/RegistrationUpdateComponent.php:1022
-#: ./src/Controller/Component/RegistrationUpdateComponent.php:1065
+#: ./src/Controller/Component/RegistrationUpdateComponent.php:1021
+#: ./src/Controller/Component/RegistrationUpdateComponent.php:1064
 msgid "SocketException while sending email: {0}"
 msgstr ""
 
@@ -215,7 +216,7 @@ msgstr ""
 
 #: ./src/Controller/PeopleController.php:323
 #: ./src/Controller/RegistrationsController.php:1314
-#: ./plugins/Shop/src/Controller/OrdersController.php:515
+#: ./plugins/Shop/src/Controller/OrdersController.php:550
 msgid "Invalid date"
 msgstr ""
 
@@ -321,14 +322,14 @@ msgid "You cannot enter new players at this time any more"
 msgstr ""
 
 #: ./src/Controller/RegistrationsController.php:1662
-#: ./plugins/Shop/src/Controller/OrdersController.php:1669
+#: ./plugins/Shop/src/Controller/OrdersController.php:1708
 msgid "Could not update person"
 msgstr ""
 
 #: ./src/Controller/RegistrationsController.php:1680
 #: ./src/Controller/RegistrationsController.php:1762
-#: ./plugins/Shop/src/Controller/OrdersController.php:1499
-#: ./plugins/Shop/src/Controller/ShopsController.php:2074
+#: ./plugins/Shop/src/Controller/OrdersController.php:1539
+#: ./plugins/Shop/src/Controller/ShopsController.php:2199
 msgid "Could not update order"
 msgstr ""
 
@@ -338,7 +339,7 @@ msgstr ""
 
 #: ./src/Controller/RegistrationsController.php:1690
 #: ./src/Controller/RegistrationsController.php:1768
-#: ./plugins/Shop/src/Controller/OrdersController.php:1456
+#: ./plugins/Shop/src/Controller/OrdersController.php:1496
 msgid "Could not save changes"
 msgstr ""
 
@@ -394,7 +395,7 @@ msgstr ""
 #: ./templates/People/view.php:70
 #: ./templates/Registrations/count.php:67
 #: ./templates/Users/edit.php:54
-#: ./templates/Users/view.php:31
+#: ./templates/Users/view.php:36
 #: ./plugins/Shop/templates/Orders/edit_person.php:85
 #: ./plugins/Shop/templates/Orders/storno.php:296
 #: ./plugins/Shop/templates/Orders/storno.php:399
@@ -414,11 +415,11 @@ msgstr ""
 #: ./plugins/Shop/templates/Articles/add.php:145
 #: ./plugins/Shop/templates/Articles/edit.php:10
 #: ./plugins/Shop/templates/Articles/edit.php:150
-#: ./plugins/Shop/templates/Articles/edit.php:187
+#: ./plugins/Shop/templates/Articles/edit.php:210
 #: ./plugins/Shop/templates/Articles/view.php:5
 #: ./plugins/Shop/templates/Articles/view.php:101
-#: ./plugins/Shop/templates/Orders/index.php:46
-#: ./plugins/Shop/templates/Orders/index.php:105
+#: ./plugins/Shop/templates/Orders/index.php:53
+#: ./plugins/Shop/templates/Orders/index.php:122
 #: ./plugins/Shop/templates/Orders/storno.php:294
 #: ./plugins/Shop/templates/Orders/storno.php:398
 #: ./plugins/Shop/templates/Orders/view.php:186
@@ -441,7 +442,7 @@ msgid "Extern ID"
 msgstr ""
 
 #: ./src/Controller/RegistrationsController.php:3261
-#: ./plugins/Shop/src/Controller/ArticlesController.php:392
+#: ./plugins/Shop/src/Controller/ArticlesController.php:430
 msgid "Only JPG, GIF and PNG images are allowed."
 msgstr ""
 
@@ -503,33 +504,33 @@ msgstr ""
 msgid "You must enter an email address"
 msgstr ""
 
-#: ./src/Controller/UsersController.php:488
-#: ./src/Controller/UsersController.php:602
-#: ./src/Controller/UsersController.php:692
-#: ./src/Controller/UsersController.php:697
-#: ./src/Controller/UsersController.php:771
+#: ./src/Controller/UsersController.php:491
+#: ./src/Controller/UsersController.php:605
+#: ./src/Controller/UsersController.php:695
+#: ./src/Controller/UsersController.php:700
+#: ./src/Controller/UsersController.php:774
 msgid "Invalid user"
-msgstr ""
-
-#: ./src/Controller/UsersController.php:567
-#: ./src/Controller/UsersController.php:634
-msgid "The user has been saved"
 msgstr ""
 
 #: ./src/Controller/UsersController.php:570
 #: ./src/Controller/UsersController.php:637
+msgid "The user has been saved"
+msgstr ""
+
+#: ./src/Controller/UsersController.php:573
+#: ./src/Controller/UsersController.php:640
 msgid "The user could not be saved. Please, try again."
 msgstr ""
 
-#: ./src/Controller/UsersController.php:668
+#: ./src/Controller/UsersController.php:671
 msgid "Invalid id for user"
 msgstr ""
 
-#: ./src/Controller/UsersController.php:675
+#: ./src/Controller/UsersController.php:678
 msgid "User deleted"
 msgstr ""
 
-#: ./src/Controller/UsersController.php:678
+#: ./src/Controller/UsersController.php:681
 msgid "User was not deleted"
 msgstr ""
 
@@ -555,329 +556,6 @@ msgstr ""
 
 #: ./src/Model/Table/UsersTable.php:57
 msgid "The prefix is already in use"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/AllotmentsController.php:57
-#: ./plugins/Shop/src/Controller/AllotmentsController.php:123
-msgid "Invalid allotment"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/AllotmentsController.php:84
-#: ./plugins/Shop/src/Controller/AllotmentsController.php:135
-msgid "The allotment has been saved"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/AllotmentsController.php:88
-#: ./plugins/Shop/src/Controller/AllotmentsController.php:139
-msgid "The allotment could not be saved. Please try again"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/AllotmentsController.php:148
-msgid "Invalid id for allotment"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/AllotmentsController.php:155
-msgid "Allotment deleted"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/AllotmentsController.php:158
-msgid "Allotment was not deleted"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ArticlesController.php:141
-#: ./plugins/Shop/src/Controller/ArticlesController.php:219
-#: ./plugins/Shop/src/Controller/OrdersController.php:1628
-msgid "Invalid article"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ArticlesController.php:204
-#: ./plugins/Shop/src/Controller/ArticlesController.php:282
-msgid "The article has been saved"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ArticlesController.php:207
-#: ./plugins/Shop/src/Controller/ArticlesController.php:285
-msgid "The article could not be saved. Please, try again."
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ArticlesController.php:294
-#: ./plugins/Shop/src/Controller/ArticlesController.php:311
-msgid "Invalid id for article"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ArticlesController.php:301
-msgid "Article deleted"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ArticlesController.php:304
-msgid "Article was not deleted"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/Component/OrderUpdateComponent.php:463
-msgid "To apply refunds you shall cancel within order {0} directly"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/Component/OrderUpdateComponent.php:468
-msgid "Order is in the wrong state {0} to cancel people"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/OrdersController.php:313
-#: ./plugins/Shop/templates/Articles/chart.php:36
-#: ./plugins/Shop/templates/Articles/index.php:36
-#: ./plugins/Shop/templates/Orders/index.php:197
-#: ./plugins/Shop/templates/Orders/index.php:201
-#: ./plugins/Shop/templates/Orders/index.php:213
-#: ./plugins/Shop/templates/Orders/index.php:229
-msgid "Pending"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/OrdersController.php:314
-msgid "Done"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/OrdersController.php:323
-#: ./plugins/Shop/src/Controller/OrdersController.php:332
-#: ./plugins/Shop/src/Controller/OrdersController.php:342
-#: ./plugins/Shop/src/Controller/OrdersController.php:361
-#: ./plugins/Shop/src/Controller/OrdersController.php:452
-#: ./plugins/Shop/src/Controller/OrdersController.php:510
-#: ./plugins/Shop/src/Controller/OrdersController.php:673
-#: ./plugins/Shop/src/Controller/OrdersController.php:1341
-#: ./plugins/Shop/src/Controller/OrdersController.php:1353
-#: ./plugins/Shop/src/Controller/OrdersController.php:1469
-#: ./plugins/Shop/src/Controller/OrdersController.php:1512
-#: ./plugins/Shop/src/Controller/OrdersController.php:1601
-#: ./plugins/Shop/src/Controller/OrdersController.php:1614
-#: ./plugins/Shop/src/Controller/ShopsController.php:1835
-#: ./plugins/Shop/src/Controller/ShopsController.php:1911
-#: ./plugins/Shop/src/Controller/ShopsController.php:1972
-#: ./plugins/Shop/src/Controller/ShopsController.php:2086
-msgid "Invalid order"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/OrdersController.php:735
-#: ./plugins/Shop/src/Controller/OrdersController.php:1367
-#: ./plugins/Shop/src/Controller/ShopsController.php:1853
-#: ./plugins/Shop/src/Controller/ShopsController.php:1959
-#: ./plugins/Shop/src/Controller/ShopsController.php:2014
-#: ./plugins/Shop/src/Controller/ShopsController.php:2035
-#: ./plugins/Shop/src/Controller/ShopsController.php:2111
-msgid "Invalid order status"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/OrdersController.php:741
-msgid "Order cancelled"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/OrdersController.php:745
-msgid "Could not cancel order"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/OrdersController.php:826
-msgid "{0} Orders cancelled"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/OrdersController.php:828
-msgid "Cancellation of {0} orders failed"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/OrdersController.php:1260
-msgid "Refunded {0} {1}"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/OrdersController.php:1409
-msgid "Failed to undo order storno"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/OrdersController.php:1449
-msgid "Failed to restore registration"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/OrdersController.php:1458
-msgid "Order storno undone"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/OrdersController.php:1496
-#: ./plugins/Shop/src/Controller/ShopsController.php:2027
-#: ./plugins/Shop/src/Controller/ShopsController.php:2071
-msgid "Order updated"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/OrdersController.php:1570
-msgid "Invoice address has been saved"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/OrdersController.php:1585
-msgid "Could not update user"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/OrdersController.php:1589
-msgid "Invoice address could not be saved"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/OrdersController.php:1623
-msgid "Article already cancelled"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/OrdersController.php:1662
-msgid "Person has been updated"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/OrdersController.php:1738
-msgid "The settings have been saved"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/OrdersController.php:1741
-msgid "The settings could not be saved. Please, try again."
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:136
-msgid "Unsubscribe successful"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:565
-msgid "No tournaments defined yet"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:1507
-msgid "{0} Mails have been sent"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:1510
-#: ./plugins/Shop/src/Controller/ShopsController.php:1688
-msgid "Mail has been sent"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:1518
-#: ./plugins/Shop/src/Controller/ShopsController.php:1680
-#: ./plugins/Shop/src/Payment/DibsPayment.php:244
-#: ./plugins/Shop/src/Payment/PaypalExpressPayment.php:211
-msgid "Invalid order id given"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:1643
-msgid "Send reminders to registrations older than {0}"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:1669
-msgid "{0} reminders sent"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:1757
-#: ./plugins/Shop/src/Controller/ShopsController.php:1765
-msgid "Invalid receipt id given"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:1851
-msgid "Order set to \"Payment delayed\""
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:1903
-msgid "{0} orders from waiting list set to pending"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:1929
-#: ./plugins/Shop/src/Controller/ShopsController.php:1936
-#: ./plugins/Shop/src/Controller/ShopsController.php:1948
-msgid "Order reset to \"Pending\" and invoice sent"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:1941
-msgid "Order reset to \"Pending\""
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:1957
-msgid "Order set to \"Pending\" and invoice sent"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:2029
-#: ./plugins/Shop/src/Controller/ShopsController.php:2122
-msgid "Could not save cart"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:2120
-msgid "Order converted to invoice"
-msgstr ""
-
-#: ./plugins/Shop/src/Model/Table/AllotmentsTable.php:23
-msgid "You must select an article"
-msgstr ""
-
-#: ./plugins/Shop/src/Model/Table/AllotmentsTable.php:25
-msgid "You must select an user"
-msgstr ""
-
-#: ./plugins/Shop/src/Model/Table/AllotmentsTable.php:26
-msgid "You must enter the number of alloted articles"
-msgstr ""
-
-#: ./plugins/Shop/src/Model/Table/OrderAddressesTable.php:25
-msgid "You must select a country"
-msgstr ""
-
-#: ./plugins/Shop/src/Model/Table/OrderArticlesTable.php:34
-msgid "Person has orders and therefore cannot be deleted"
-msgstr ""
-
-#: ./plugins/Shop/src/Payment/DibsPayment.php:218
-#: ./plugins/Shop/src/Payment/PaypalExpressPayment.php:177
-#: ./plugins/Shop/src/Payment/RedsysPayment.php:211
-msgid "Automatic refunds disabled, do the refund manually"
-msgstr ""
-
-#: ./plugins/Shop/src/Payment/DibsPayment.php:289
-msgid "Failed to make refund: {0}"
-msgstr ""
-
-#: ./plugins/Shop/src/Payment/DibsPayment.php:300
-#: ./plugins/Shop/src/Payment/IPayment.php:158
-#: ./plugins/Shop/src/Payment/RedsysPayment.php:274
-msgid "Refund money for order successful"
-msgstr ""
-
-#: ./plugins/Shop/src/Payment/DibsPayment.php:308
-msgid "Failed to make refund with return code {0}{1}"
-msgstr ""
-
-#: ./plugins/Shop/src/Payment/IPayment.php:161
-msgid "Could not refund money for order:"
-msgstr ""
-
-#: ./plugins/Shop/src/Payment/NetsEasyPayment.php:114
-msgid "The transaction has failed"
-msgstr ""
-
-#: ./plugins/Shop/src/Payment/NetsEasyPayment.php:189
-msgid "Registration"
-msgstr ""
-
-#: ./plugins/Shop/src/Payment/PaypalExpressPayment.php:81
-msgid "Payment cancelled"
-msgstr ""
-
-#: ./plugins/Shop/src/Payment/PaypalExpressPayment.php:199
-msgid "Automatic refund not possible after 60 days"
-msgstr ""
-
-#: ./plugins/Shop/src/Payment/PaypalExpressPayment.php:231
-msgid "Invalid order state {0}"
-msgstr ""
-
-#: ./plugins/Shop/src/Payment/PaypalExpressPayment.php:294
-msgid "{0}: Invoice no {1}"
-msgstr ""
-
-#: ./plugins/Shop/src/Payment/RedsysPayment.php:66
-#: ./plugins/Shop/src/Payment/RedsysPayment.php:252
-msgid "Registration for {0}"
-msgstr ""
-
-#: ./plugins/Shop/src/Payment/RedsysPayment.php:266
-msgid "Exception while trying to refund money: {0}"
-msgstr ""
-
-#: ./plugins/Shop/src/Payment/StripePayment.php:199
-msgid "Could not refund payment: {0}"
 msgstr ""
 
 #: ./templates/Competitions/add.php:9
@@ -990,7 +668,7 @@ msgstr ""
 #: ./templates/Users/index.php:46
 #: ./plugins/Shop/templates/Allotments/index.php:10
 #: ./plugins/Shop/templates/Articles/index.php:51
-#: ./plugins/Shop/templates/Orders/index.php:116
+#: ./plugins/Shop/templates/Orders/index.php:133
 msgid "Actions"
 msgstr ""
 
@@ -1018,7 +696,7 @@ msgstr ""
 #: ./templates/Users/index.php:74
 #: ./plugins/Shop/templates/Allotments/index.php:31
 #: ./plugins/Shop/templates/Articles/index.php:103
-#: ./plugins/Shop/templates/Orders/index.php:176
+#: ./plugins/Shop/templates/Orders/index.php:193
 msgid "View"
 msgstr ""
 
@@ -1057,16 +735,16 @@ msgstr ""
 #: ./templates/Nations/index.php:48
 #: ./templates/Nations/view.php:41
 #: ./templates/People/index.php:142
-#: ./templates/People/view.php:125
+#: ./templates/People/view.php:130
 #: ./templates/Registrations/view.php:235
 #: ./templates/Tournaments/index.php:56
 #: ./templates/Tournaments/view.php:71
 #: ./templates/Types/index.php:28
 #: ./templates/Types/view.php:21
 #: ./templates/Users/index.php:76
-#: ./templates/Users/view.php:82
+#: ./templates/Users/view.php:87
 #: ./plugins/Shop/templates/Articles/index.php:105
-#: ./plugins/Shop/templates/Articles/view.php:124
+#: ./plugins/Shop/templates/Articles/view.php:130
 msgid "Are you sure you want to delete %s?"
 msgstr ""
 
@@ -1088,7 +766,7 @@ msgstr ""
 #: ./plugins/Shop/templates/Articles/add.php:148
 #: ./plugins/Shop/templates/Articles/edit.php:13
 #: ./plugins/Shop/templates/Articles/edit.php:155
-#: ./plugins/Shop/templates/Articles/edit.php:190
+#: ./plugins/Shop/templates/Articles/edit.php:213
 #: ./plugins/Shop/templates/Articles/view.php:10
 #: ./plugins/Shop/templates/Articles/view.php:102
 #: ./plugins/Shop/templates/Orders/storno.php:495
@@ -1100,7 +778,7 @@ msgstr ""
 #: ./plugins/Shop/templates/Articles/add.php:152
 #: ./plugins/Shop/templates/Articles/edit.php:17
 #: ./plugins/Shop/templates/Articles/edit.php:161
-#: ./plugins/Shop/templates/Articles/edit.php:194
+#: ./plugins/Shop/templates/Articles/edit.php:217
 msgid "Category"
 msgstr ""
 
@@ -1127,7 +805,7 @@ msgstr ""
 
 #: ./templates/Competitions/view.php:62
 #: ./templates/Nations/view.php:25
-#: ./templates/People/view.php:102
+#: ./templates/People/view.php:107
 #: ./templates/Registrations/view.php:206
 #: ./templates/Tournaments/view.php:55
 #: ./plugins/Shop/templates/Allotments/view.php:20
@@ -1137,7 +815,7 @@ msgstr ""
 
 #: ./templates/Competitions/view.php:67
 #: ./templates/Nations/view.php:30
-#: ./templates/People/view.php:107
+#: ./templates/People/view.php:112
 #: ./templates/Registrations/view.php:211
 #: ./templates/Tournaments/view.php:60
 #: ./plugins/Shop/templates/Allotments/view.php:25
@@ -1164,10 +842,7 @@ msgstr ""
 #: ./templates/Groups/add.php:25
 #: ./templates/Groups/edit.php:30
 #: ./templates/Groups/view.php:29
-#: ./templates/Users/add.php:69
-#: ./templates/Users/edit.php:80
 #: ./templates/Users/index.php:87
-#: ./templates/Users/view.php:85
 msgid "List Groups"
 msgstr ""
 
@@ -1178,7 +853,7 @@ msgstr ""
 #: ./templates/Users/add.php:68
 #: ./templates/Users/edit.php:79
 #: ./templates/Users/notifications.php:36
-#: ./templates/Users/view.php:83
+#: ./templates/Users/view.php:88
 msgid "List Users"
 msgstr ""
 
@@ -1194,7 +869,6 @@ msgstr ""
 
 #: ./templates/Groups/index.php:42
 #: ./templates/Groups/view.php:30
-#: ./templates/Users/add.php:70
 msgid "New Group"
 msgstr ""
 
@@ -1222,15 +896,15 @@ msgstr ""
 #: ./templates/People/edit.php:182
 #: ./templates/People/history.php:99
 #: ./templates/People/update.php:18
-#: ./templates/People/view.php:128
+#: ./templates/People/view.php:133
 #: ./templates/Registrations/add.php:150
-#: ./templates/Users/view.php:86
+#: ./templates/Users/view.php:91
 msgid "List People"
 msgstr ""
 
 #: ./templates/Nations/add.php:24
 #: ./templates/People/index.php:154
-#: ./templates/People/view.php:131
+#: ./templates/People/view.php:136
 msgid "New Person"
 msgstr ""
 
@@ -1257,7 +931,7 @@ msgid "Continent"
 msgstr ""
 
 #: ./templates/Nations/view.php:20
-#: ./templates/Users/view.php:25
+#: ./templates/Users/view.php:30
 msgid "Enabled"
 msgstr ""
 
@@ -1315,8 +989,12 @@ msgstr ""
 #: ./templates/Tournaments/edit.php:82
 #: ./plugins/Shop/templates/Articles/add.php:109
 #: ./plugins/Shop/templates/Articles/add.php:118
+#: ./plugins/Shop/templates/Articles/add.php:167
+#: ./plugins/Shop/templates/Articles/add.php:176
 #: ./plugins/Shop/templates/Articles/edit.php:110
 #: ./plugins/Shop/templates/Articles/edit.php:119
+#: ./plugins/Shop/templates/Articles/edit.php:176
+#: ./plugins/Shop/templates/Articles/edit.php:185
 #: ./plugins/Shop/templates/Orders/edit_person.php:73
 #: ./plugins/Shop/templates/Orders/settings.php:53
 #: ./plugins/Shop/templates/Orders/settings.php:63
@@ -1342,8 +1020,12 @@ msgstr ""
 #: ./templates/Tournaments/edit.php:83
 #: ./plugins/Shop/templates/Articles/add.php:110
 #: ./plugins/Shop/templates/Articles/add.php:119
+#: ./plugins/Shop/templates/Articles/add.php:168
+#: ./plugins/Shop/templates/Articles/add.php:177
 #: ./plugins/Shop/templates/Articles/edit.php:111
 #: ./plugins/Shop/templates/Articles/edit.php:120
+#: ./plugins/Shop/templates/Articles/edit.php:177
+#: ./plugins/Shop/templates/Articles/edit.php:186
 #: ./plugins/Shop/templates/Orders/edit_person.php:74
 #: ./plugins/Shop/templates/Orders/settings.php:54
 #: ./plugins/Shop/templates/Orders/settings.php:64
@@ -1369,8 +1051,12 @@ msgstr ""
 #: ./templates/Tournaments/edit.php:84
 #: ./plugins/Shop/templates/Articles/add.php:111
 #: ./plugins/Shop/templates/Articles/add.php:120
+#: ./plugins/Shop/templates/Articles/add.php:169
+#: ./plugins/Shop/templates/Articles/add.php:178
 #: ./plugins/Shop/templates/Articles/edit.php:112
 #: ./plugins/Shop/templates/Articles/edit.php:121
+#: ./plugins/Shop/templates/Articles/edit.php:178
+#: ./plugins/Shop/templates/Articles/edit.php:187
 #: ./plugins/Shop/templates/Orders/edit_person.php:75
 #: ./plugins/Shop/templates/Orders/settings.php:55
 #: ./plugins/Shop/templates/Orders/settings.php:65
@@ -1440,7 +1126,7 @@ msgstr ""
 
 #: ./templates/People/edit.php:49
 #: ./templates/People/history.php:104
-#: ./templates/People/view.php:122
+#: ./templates/People/view.php:127
 msgid "Edit Person"
 msgstr ""
 
@@ -1450,7 +1136,7 @@ msgstr ""
 
 #: ./templates/People/history.php:4
 #: ./templates/Registrations/history.php:4
-#: ./templates/Users/view.php:69
+#: ./templates/Users/view.php:74
 #: ./plugins/Shop/templates/Orders/history.php:3
 msgid "Created"
 msgstr ""
@@ -1459,7 +1145,7 @@ msgstr ""
 #: ./templates/Registrations/history.php:5
 #: ./templates/Registrations/view.php:193
 #: ./plugins/Shop/templates/Articles/chart.php:41
-#: ./plugins/Shop/templates/Orders/index.php:114
+#: ./plugins/Shop/templates/Orders/index.php:131
 msgid "Cancelled"
 msgstr ""
 
@@ -1471,7 +1157,7 @@ msgstr ""
 #: ./templates/People/history.php:9
 #: ./templates/People/history.php:26
 #: ./templates/People/index.php:93
-#: ./templates/People/view.php:85
+#: ./templates/People/view.php:90
 #: ./templates/Registrations/history.php:32
 #: ./templates/Users/view.php:3
 #: ./plugins/Shop/templates/Allotments/index.php:6
@@ -1546,10 +1232,10 @@ msgstr ""
 #: ./templates/Users/index.php:21
 #: ./templates/element/filter.php:20
 #: ./templates/element/filter.php:22
-#: ./plugins/Shop/templates/Orders/index.php:58
-#: ./plugins/Shop/templates/Orders/index.php:60
-#: ./plugins/Shop/templates/Orders/index.php:85
-#: ./plugins/Shop/templates/Orders/index.php:87
+#: ./plugins/Shop/templates/Orders/index.php:65
+#: ./plugins/Shop/templates/Orders/index.php:67
+#: ./plugins/Shop/templates/Orders/index.php:92
+#: ./plugins/Shop/templates/Orders/index.php:94
 msgid "all"
 msgstr ""
 
@@ -1603,7 +1289,7 @@ msgstr ""
 #: ./plugins/Shop/templates/Orders/edit_address.php:95
 #: ./plugins/Shop/templates/Orders/edit_person.php:94
 #: ./plugins/Shop/templates/Orders/history.php:14
-#: ./plugins/Shop/templates/Orders/index.php:104
+#: ./plugins/Shop/templates/Orders/index.php:121
 #: ./plugins/Shop/templates/Orders/settings.php:139
 #: ./plugins/Shop/templates/Shops/import.php:12
 #: ./plugins/Shop/templates/Shops/unsubscribe.php:7
@@ -1611,6 +1297,11 @@ msgid "Email"
 msgstr ""
 
 #: ./templates/People/view.php:80
+#: ./templates/Users/view.php:25
+msgid "Newsletter"
+msgstr ""
+
+#: ./templates/People/view.php:85
 #: ./templates/Registrations/edit.php:292
 #: ./plugins/Shop/templates/Orders/edit_address.php:106
 #: ./plugins/Shop/templates/Orders/edit_person.php:99
@@ -1619,19 +1310,19 @@ msgstr ""
 msgid "Phone"
 msgstr ""
 
-#: ./templates/People/view.php:91
+#: ./templates/People/view.php:96
 #: ./plugins/Shop/templates/Orders/history.php:7
-#: ./plugins/Shop/templates/Orders/index.php:102
+#: ./plugins/Shop/templates/Orders/index.php:119
 #: ./plugins/Shop/templates/Orders/settings.php:32
 msgid "Invoice"
 msgstr ""
 
-#: ./templates/People/view.php:119
+#: ./templates/People/view.php:124
 #: ./templates/Registrations/view.php:229
 msgid "View History"
 msgstr ""
 
-#: ./templates/People/view.php:125
+#: ./templates/People/view.php:130
 msgid "Delete Person"
 msgstr ""
 
@@ -1691,7 +1382,7 @@ msgstr ""
 #: ./templates/Registrations/print_accreditation_settings.php:22
 #: ./templates/Registrations/view.php:237
 #: ./templates/Registrations/view.php:244
-#: ./templates/Users/view.php:87
+#: ./templates/Users/view.php:92
 msgid "List Registrations"
 msgstr ""
 
@@ -1732,7 +1423,7 @@ msgid "List Partner Wanted"
 msgstr ""
 
 #: ./templates/Registrations/count.php:126
-#: ./plugins/Shop/templates/Orders/index.php:290
+#: ./plugins/Shop/templates/Orders/index.php:307
 msgid "Export"
 msgstr ""
 
@@ -1849,7 +1540,7 @@ msgstr ""
 #: ./templates/Registrations/import.php:11
 #: ./templates/Registrations/import_partner.php:11
 #: ./templates/Registrations/index.php:550
-#: ./plugins/Shop/templates/Orders/index.php:289
+#: ./plugins/Shop/templates/Orders/index.php:306
 #: ./plugins/Shop/templates/Shops/import.php:17
 msgid "Import"
 msgstr ""
@@ -1887,10 +1578,12 @@ msgid "Able-bodied"
 msgstr ""
 
 #: ./templates/Registrations/view.php:84
+#: ./plugins/Shop/templates/Orders/index.php:30
 msgid "Yes"
 msgstr ""
 
 #: ./templates/Registrations/view.php:86
+#: ./plugins/Shop/templates/Orders/index.php:30
 msgid "No"
 msgstr ""
 
@@ -1915,7 +1608,7 @@ msgstr ""
 #: ./templates/Tournaments/add.php:8
 #: ./templates/Tournaments/edit.php:8
 #: ./templates/Tournaments/view.php:3
-#: ./templates/Users/view.php:38
+#: ./templates/Users/view.php:43
 msgid "Tournament"
 msgstr ""
 
@@ -2055,7 +1748,7 @@ msgid "Add User"
 msgstr ""
 
 #: ./templates/Users/edit.php:40
-#: ./templates/Users/view.php:80
+#: ./templates/Users/view.php:85
 msgid "Edit User"
 msgstr ""
 
@@ -2094,7 +1787,7 @@ msgid "Requests"
 msgstr ""
 
 #: ./templates/Users/index.php:86
-#: ./templates/Users/view.php:84
+#: ./templates/Users/view.php:89
 msgid "New User"
 msgstr ""
 
@@ -2122,36 +1815,53 @@ msgstr ""
 msgid "Edit player after deadline"
 msgstr ""
 
-#: ./templates/Users/view.php:44
+#: ./templates/Users/view.php:49
 msgid "Last Login"
 msgstr ""
 
-#: ./templates/Users/view.php:49
+#: ./templates/Users/view.php:54
 msgid "Failed since last"
 msgstr ""
 
-#: ./templates/Users/view.php:54
+#: ./templates/Users/view.php:59
 msgid "Successful Logins"
 msgstr ""
 
-#: ./templates/Users/view.php:59
+#: ./templates/Users/view.php:64
 msgid "Failed Logins"
 msgstr ""
 
-#: ./templates/Users/view.php:64
+#: ./templates/Users/view.php:69
 msgid "Modified"
 msgstr ""
 
-#: ./templates/Users/view.php:79
+#: ./templates/Users/view.php:84
 msgid "Send Password"
 msgstr ""
 
-#: ./templates/Users/view.php:81
+#: ./templates/Users/view.php:86
 msgid "Edit Notifications"
 msgstr ""
 
-#: ./templates/Users/view.php:82
+#: ./templates/Users/view.php:87
 msgid "Delete User"
+msgstr ""
+
+#: ./templates/Users/view.php:90
+#: ./plugins/Shop/templates/Allotments/index.php:51
+#: ./plugins/Shop/templates/Articles/chart.php:161
+#: ./plugins/Shop/templates/Articles/index.php:123
+#: ./plugins/Shop/templates/Orders/edit_address.php:122
+#: ./plugins/Shop/templates/Orders/edit_invoice.php:154
+#: ./plugins/Shop/templates/Orders/edit_person.php:113
+#: ./plugins/Shop/templates/Orders/settings.php:198
+#: ./plugins/Shop/templates/Orders/storno.php:636
+#: ./plugins/Shop/templates/Orders/storno_pending.php:30
+#: ./plugins/Shop/templates/Orders/view.php:511
+#: ./plugins/Shop/templates/Shops/import.php:24
+#: ./plugins/Shop/templates/Shops/payment_received.php:131
+#: ./plugins/Shop/templates/Shops/send_reminder.php:51
+msgid "List Orders"
 msgstr ""
 
 #: ./templates/element/filter.php:26
@@ -2166,6 +1876,348 @@ msgstr ""
 #: ./templates/layout/default.php:21
 #: ./templates/layout/error.php:13
 msgid "Online Registration"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/AllotmentsController.php:57
+#: ./plugins/Shop/src/Controller/AllotmentsController.php:123
+msgid "Invalid allotment"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/AllotmentsController.php:84
+#: ./plugins/Shop/src/Controller/AllotmentsController.php:135
+msgid "The allotment has been saved"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/AllotmentsController.php:88
+#: ./plugins/Shop/src/Controller/AllotmentsController.php:139
+msgid "The allotment could not be saved. Please try again"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/AllotmentsController.php:148
+msgid "Invalid id for allotment"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/AllotmentsController.php:155
+msgid "Allotment deleted"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/AllotmentsController.php:158
+msgid "Allotment was not deleted"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ArticlesController.php:140
+#: ./plugins/Shop/src/Controller/ArticlesController.php:254
+#: ./plugins/Shop/src/Controller/OrdersController.php:1667
+msgid "Invalid article"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ArticlesController.php:239
+#: ./plugins/Shop/src/Controller/ArticlesController.php:317
+msgid "The article has been saved"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ArticlesController.php:242
+#: ./plugins/Shop/src/Controller/ArticlesController.php:320
+msgid "The article could not be saved. Please, try again."
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ArticlesController.php:329
+#: ./plugins/Shop/src/Controller/ArticlesController.php:346
+msgid "Invalid id for article"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ArticlesController.php:336
+msgid "Article deleted"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ArticlesController.php:339
+msgid "Article was not deleted"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/Component/OrderUpdateComponent.php:465
+msgid "To apply refunds you shall cancel within order {0} directly"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/Component/OrderUpdateComponent.php:470
+msgid "Order is in the wrong state {0} to cancel people"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/OrdersController.php:342
+#: ./plugins/Shop/templates/Articles/chart.php:36
+#: ./plugins/Shop/templates/Articles/index.php:36
+#: ./plugins/Shop/templates/Articles/view.php:107
+#: ./plugins/Shop/templates/Orders/index.php:214
+#: ./plugins/Shop/templates/Orders/index.php:218
+#: ./plugins/Shop/templates/Orders/index.php:230
+#: ./plugins/Shop/templates/Orders/index.php:246
+msgid "Pending"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/OrdersController.php:343
+msgid "Done"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/OrdersController.php:358
+#: ./plugins/Shop/src/Controller/OrdersController.php:367
+#: ./plugins/Shop/src/Controller/OrdersController.php:377
+#: ./plugins/Shop/src/Controller/OrdersController.php:396
+#: ./plugins/Shop/src/Controller/OrdersController.php:487
+#: ./plugins/Shop/src/Controller/OrdersController.php:545
+#: ./plugins/Shop/src/Controller/OrdersController.php:708
+#: ./plugins/Shop/src/Controller/OrdersController.php:1381
+#: ./plugins/Shop/src/Controller/OrdersController.php:1393
+#: ./plugins/Shop/src/Controller/OrdersController.php:1509
+#: ./plugins/Shop/src/Controller/OrdersController.php:1551
+#: ./plugins/Shop/src/Controller/OrdersController.php:1640
+#: ./plugins/Shop/src/Controller/OrdersController.php:1653
+#: ./plugins/Shop/src/Controller/ShopsController.php:1960
+#: ./plugins/Shop/src/Controller/ShopsController.php:2036
+#: ./plugins/Shop/src/Controller/ShopsController.php:2097
+#: ./plugins/Shop/src/Controller/ShopsController.php:2211
+#: ./plugins/Shop/src/Controller/ShopsController.php:2259
+msgid "Invalid order"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/OrdersController.php:770
+#: ./plugins/Shop/src/Controller/OrdersController.php:1407
+#: ./plugins/Shop/src/Controller/ShopsController.php:1978
+#: ./plugins/Shop/src/Controller/ShopsController.php:2084
+#: ./plugins/Shop/src/Controller/ShopsController.php:2139
+#: ./plugins/Shop/src/Controller/ShopsController.php:2160
+#: ./plugins/Shop/src/Controller/ShopsController.php:2236
+#: ./plugins/Shop/src/Controller/ShopsController.php:2284
+msgid "Invalid order status"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/OrdersController.php:776
+msgid "Order cancelled"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/OrdersController.php:780
+msgid "Could not cancel order"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/OrdersController.php:861
+msgid "{0} Orders cancelled"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/OrdersController.php:863
+msgid "Cancellation of {0} orders failed"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/OrdersController.php:1300
+msgid "Refunded {0} {1}"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/OrdersController.php:1449
+msgid "Failed to undo order storno"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/OrdersController.php:1489
+msgid "Failed to restore registration"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/OrdersController.php:1498
+msgid "Order storno undone"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/OrdersController.php:1536
+#: ./plugins/Shop/src/Controller/ShopsController.php:2152
+#: ./plugins/Shop/src/Controller/ShopsController.php:2196
+msgid "Order updated"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/OrdersController.php:1609
+msgid "Invoice address has been saved"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/OrdersController.php:1624
+msgid "Could not update user"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/OrdersController.php:1628
+msgid "Invoice address could not be saved"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/OrdersController.php:1662
+msgid "Article already cancelled"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/OrdersController.php:1701
+msgid "Person has been updated"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/OrdersController.php:1785
+msgid "The settings have been saved"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/OrdersController.php:1788
+msgid "The settings could not be saved. Please, try again."
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:153
+msgid "Unsubscribe successful"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:582
+msgid "No tournaments defined yet"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:1631
+msgid "{0} Mails have been sent"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:1634
+#: ./plugins/Shop/src/Controller/ShopsController.php:1812
+msgid "Mail has been sent"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:1642
+#: ./plugins/Shop/src/Controller/ShopsController.php:1804
+#: ./plugins/Shop/src/Payment/DibsPayment.php:244
+#: ./plugins/Shop/src/Payment/PaypalExpressPayment.php:211
+msgid "Invalid order id given"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:1767
+msgid "Send reminders to registrations older than {0}"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:1793
+msgid "{0} reminders sent"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:1881
+#: ./plugins/Shop/src/Controller/ShopsController.php:1889
+msgid "Invalid receipt id given"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:1976
+msgid "Order set to \"Payment delayed\""
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:2028
+msgid "{0} orders from waiting list set to pending"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:2054
+#: ./plugins/Shop/src/Controller/ShopsController.php:2061
+#: ./plugins/Shop/src/Controller/ShopsController.php:2073
+msgid "Order reset to \"Pending\" and invoice sent"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:2066
+msgid "Order reset to \"Pending\""
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:2082
+msgid "Order set to \"Pending\" and invoice sent"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:2154
+#: ./plugins/Shop/src/Controller/ShopsController.php:2247
+#: ./plugins/Shop/src/Controller/ShopsController.php:2295
+msgid "Could not save cart"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:2245
+msgid "Order converted to invoice"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:2293
+msgid "Order converted to incomplete"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:2788
+msgid "Unknown mime type {0}"
+msgstr ""
+
+#: ./plugins/Shop/src/Model/Table/AllotmentsTable.php:23
+msgid "You must select an article"
+msgstr ""
+
+#: ./plugins/Shop/src/Model/Table/AllotmentsTable.php:25
+msgid "You must select an user"
+msgstr ""
+
+#: ./plugins/Shop/src/Model/Table/AllotmentsTable.php:26
+msgid "You must enter the number of alloted articles"
+msgstr ""
+
+#: ./plugins/Shop/src/Model/Table/OrderAddressesTable.php:25
+msgid "You must select a country"
+msgstr ""
+
+#: ./plugins/Shop/src/Model/Table/OrderArticlesTable.php:34
+msgid "Person has orders and therefore cannot be deleted"
+msgstr ""
+
+#: ./plugins/Shop/src/Payment/DibsPayment.php:218
+#: ./plugins/Shop/src/Payment/PaypalExpressPayment.php:177
+#: ./plugins/Shop/src/Payment/PaypalStandardPayment.php:181
+#: ./plugins/Shop/src/Payment/RedsysPayment.php:211
+msgid "Automatic refunds disabled, do the refund manually"
+msgstr ""
+
+#: ./plugins/Shop/src/Payment/DibsPayment.php:289
+msgid "Failed to make refund: {0}"
+msgstr ""
+
+#: ./plugins/Shop/src/Payment/DibsPayment.php:300
+#: ./plugins/Shop/src/Payment/IPayment.php:158
+#: ./plugins/Shop/src/Payment/RedsysPayment.php:274
+msgid "Refund money for order successful"
+msgstr ""
+
+#: ./plugins/Shop/src/Payment/DibsPayment.php:308
+msgid "Failed to make refund with return code {0}{1}"
+msgstr ""
+
+#: ./plugins/Shop/src/Payment/IPayment.php:161
+msgid "Could not refund money for order:"
+msgstr ""
+
+#: ./plugins/Shop/src/Payment/NetsEasyPayment.php:114
+msgid "The transaction has failed"
+msgstr ""
+
+#: ./plugins/Shop/src/Payment/NetsEasyPayment.php:189
+msgid "Registration"
+msgstr ""
+
+#: ./plugins/Shop/src/Payment/PaypalExpressPayment.php:81
+#: ./plugins/Shop/src/Payment/PaypalStandardPayment.php:175
+msgid "Payment cancelled"
+msgstr ""
+
+#: ./plugins/Shop/src/Payment/PaypalExpressPayment.php:199
+msgid "Automatic refund not possible after 60 days"
+msgstr ""
+
+#: ./plugins/Shop/src/Payment/PaypalExpressPayment.php:231
+msgid "Invalid order state {0}"
+msgstr ""
+
+#: ./plugins/Shop/src/Payment/PaypalExpressPayment.php:294
+#: ./plugins/Shop/src/Payment/PaypalStandardPayment.php:49
+msgid "{0}: Invoice no {1}"
+msgstr ""
+
+#: ./plugins/Shop/src/Payment/PaypalStandardPayment.php:185
+msgid "Automatic refunds not allowed, do the refund manually"
+msgstr ""
+
+#: ./plugins/Shop/src/Payment/RedsysPayment.php:66
+#: ./plugins/Shop/src/Payment/RedsysPayment.php:252
+msgid "Registration for {0}"
+msgstr ""
+
+#: ./plugins/Shop/src/Payment/RedsysPayment.php:266
+msgid "Exception while trying to refund money: {0}"
+msgstr ""
+
+#: ./plugins/Shop/src/Payment/StripePayment.php:199
+msgid "Could not refund payment: {0}"
 msgstr ""
 
 #: ./plugins/Shop/templates/Allotments/add.php:4
@@ -2199,7 +2251,7 @@ msgstr ""
 #: ./plugins/Shop/templates/Allotments/index.php:5
 #: ./plugins/Shop/templates/Allotments/view.php:5
 #: ./plugins/Shop/templates/Articles/view.php:2
-#: ./plugins/Shop/templates/Orders/index.php:35
+#: ./plugins/Shop/templates/Orders/index.php:42
 msgid "Article"
 msgstr ""
 
@@ -2225,28 +2277,12 @@ msgstr ""
 
 #: ./plugins/Shop/templates/Allotments/index.php:48
 #: ./plugins/Shop/templates/Allotments/view.php:39
-#: ./plugins/Shop/templates/Articles/add.php:180
+#: ./plugins/Shop/templates/Articles/add.php:204
 #: ./plugins/Shop/templates/Articles/chart.php:159
-#: ./plugins/Shop/templates/Articles/edit.php:222
-#: ./plugins/Shop/templates/Articles/view.php:125
-#: ./plugins/Shop/templates/Orders/index.php:292
+#: ./plugins/Shop/templates/Articles/edit.php:245
+#: ./plugins/Shop/templates/Articles/view.php:131
+#: ./plugins/Shop/templates/Orders/index.php:309
 msgid "List Articles"
-msgstr ""
-
-#: ./plugins/Shop/templates/Allotments/index.php:51
-#: ./plugins/Shop/templates/Articles/chart.php:161
-#: ./plugins/Shop/templates/Articles/index.php:123
-#: ./plugins/Shop/templates/Orders/edit_address.php:122
-#: ./plugins/Shop/templates/Orders/edit_invoice.php:154
-#: ./plugins/Shop/templates/Orders/edit_person.php:113
-#: ./plugins/Shop/templates/Orders/settings.php:196
-#: ./plugins/Shop/templates/Orders/storno.php:636
-#: ./plugins/Shop/templates/Orders/storno_pending.php:30
-#: ./plugins/Shop/templates/Orders/view.php:501
-#: ./plugins/Shop/templates/Shops/import.php:24
-#: ./plugins/Shop/templates/Shops/payment_received.php:131
-#: ./plugins/Shop/templates/Shops/send_reminder.php:51
-msgid "List Orders"
 msgstr ""
 
 #: ./plugins/Shop/templates/Allotments/view.php:36
@@ -2257,28 +2293,28 @@ msgstr ""
 #: ./plugins/Shop/templates/Articles/add.php:155
 #: ./plugins/Shop/templates/Articles/edit.php:20
 #: ./plugins/Shop/templates/Articles/edit.php:165
-#: ./plugins/Shop/templates/Articles/edit.php:197
+#: ./plugins/Shop/templates/Articles/edit.php:220
 #: ./plugins/Shop/templates/Articles/view.php:62
 msgid "Visible"
 msgstr ""
 
 #: ./plugins/Shop/templates/Articles/add.php:24
 #: ./plugins/Shop/templates/Articles/add.php:77
-#: ./plugins/Shop/templates/Articles/add.php:160
+#: ./plugins/Shop/templates/Articles/add.php:184
 #: ./plugins/Shop/templates/Articles/edit.php:24
 #: ./plugins/Shop/templates/Articles/edit.php:78
-#: ./plugins/Shop/templates/Articles/edit.php:170
-#: ./plugins/Shop/templates/Articles/edit.php:202
+#: ./plugins/Shop/templates/Articles/edit.php:193
+#: ./plugins/Shop/templates/Articles/edit.php:225
 #: ./plugins/Shop/templates/Articles/view.php:67
 #: ./plugins/Shop/templates/Articles/view.php:103
 msgid "Sort Order"
 msgstr ""
 
 #: ./plugins/Shop/templates/Articles/add.php:27
-#: ./plugins/Shop/templates/Articles/add.php:163
+#: ./plugins/Shop/templates/Articles/add.php:187
 #: ./plugins/Shop/templates/Articles/edit.php:27
-#: ./plugins/Shop/templates/Articles/edit.php:175
-#: ./plugins/Shop/templates/Articles/edit.php:205
+#: ./plugins/Shop/templates/Articles/edit.php:198
+#: ./plugins/Shop/templates/Articles/edit.php:228
 #: ./plugins/Shop/templates/Articles/index.php:19
 #: ./plugins/Shop/templates/Articles/view.php:32
 #: ./plugins/Shop/templates/Articles/view.php:104
@@ -2291,7 +2327,7 @@ msgstr ""
 
 #: ./plugins/Shop/templates/Articles/add.php:47
 #: ./plugins/Shop/templates/Articles/edit.php:47
-#: ./plugins/Shop/templates/Articles/view.php:123
+#: ./plugins/Shop/templates/Articles/view.php:129
 msgid "Edit Article"
 msgstr ""
 
@@ -2312,8 +2348,11 @@ msgid "Cost"
 msgstr ""
 
 #: ./plugins/Shop/templates/Articles/add.php:63
+#: ./plugins/Shop/templates/Articles/add.php:161
 #: ./plugins/Shop/templates/Articles/edit.php:64
+#: ./plugins/Shop/templates/Articles/edit.php:170
 #: ./plugins/Shop/templates/Articles/view.php:42
+#: ./plugins/Shop/templates/Articles/view.php:105
 msgid "Available"
 msgstr ""
 
@@ -2345,13 +2384,17 @@ msgid "Url"
 msgstr ""
 
 #: ./plugins/Shop/templates/Articles/add.php:113
+#: ./plugins/Shop/templates/Articles/add.php:171
 #: ./plugins/Shop/templates/Articles/edit.php:114
+#: ./plugins/Shop/templates/Articles/edit.php:180
 #: ./plugins/Shop/templates/Articles/view.php:47
 msgid "Available From"
 msgstr ""
 
 #: ./plugins/Shop/templates/Articles/add.php:122
+#: ./plugins/Shop/templates/Articles/add.php:180
 #: ./plugins/Shop/templates/Articles/edit.php:123
+#: ./plugins/Shop/templates/Articles/edit.php:189
 #: ./plugins/Shop/templates/Articles/view.php:52
 msgid "Available Until"
 msgstr ""
@@ -2366,18 +2409,18 @@ msgstr ""
 msgid "Waiting List Limit"
 msgstr ""
 
-#: ./plugins/Shop/templates/Articles/add.php:168
-#: ./plugins/Shop/templates/Articles/edit.php:210
+#: ./plugins/Shop/templates/Articles/add.php:192
+#: ./plugins/Shop/templates/Articles/edit.php:233
 msgid "Add Variant"
 msgstr ""
 
 #: ./plugins/Shop/templates/Articles/chart.php:31
 #: ./plugins/Shop/templates/Orders/edit_invoice.php:90
 #: ./plugins/Shop/templates/Orders/history.php:10
-#: ./plugins/Shop/templates/Orders/index.php:221
-#: ./plugins/Shop/templates/Orders/index.php:225
-#: ./plugins/Shop/templates/Orders/index.php:233
-#: ./plugins/Shop/templates/Orders/index.php:237
+#: ./plugins/Shop/templates/Orders/index.php:238
+#: ./plugins/Shop/templates/Orders/index.php:242
+#: ./plugins/Shop/templates/Orders/index.php:250
+#: ./plugins/Shop/templates/Orders/index.php:254
 #: ./plugins/Shop/templates/Shops/payment_received.php:80
 msgid "Paid"
 msgstr ""
@@ -2403,6 +2446,7 @@ msgid "Until"
 msgstr ""
 
 #: ./plugins/Shop/templates/Articles/index.php:35
+#: ./plugins/Shop/templates/Articles/view.php:106
 msgid "Sold"
 msgstr ""
 
@@ -2419,17 +2463,17 @@ msgid "Charts"
 msgstr ""
 
 #: ./plugins/Shop/templates/Articles/index.php:117
-#: ./plugins/Shop/templates/Articles/view.php:126
+#: ./plugins/Shop/templates/Articles/view.php:132
 msgid "New Article"
 msgstr ""
 
 #: ./plugins/Shop/templates/Articles/index.php:126
-#: ./plugins/Shop/templates/Orders/index.php:293
+#: ./plugins/Shop/templates/Orders/index.php:310
 msgid "Settings"
 msgstr ""
 
 #: ./plugins/Shop/templates/Articles/view.php:37
-#: ./plugins/Shop/templates/Orders/settings.php:168
+#: ./plugins/Shop/templates/Orders/settings.php:169
 msgid "Tax"
 msgstr ""
 
@@ -2441,7 +2485,7 @@ msgstr ""
 msgid "Photo"
 msgstr ""
 
-#: ./plugins/Shop/templates/Articles/view.php:124
+#: ./plugins/Shop/templates/Articles/view.php:130
 msgid "Delete Article"
 msgstr ""
 
@@ -2488,8 +2532,8 @@ msgid "City"
 msgstr ""
 
 #: ./plugins/Shop/templates/Orders/edit_address.php:89
-#: ./plugins/Shop/templates/Orders/index.php:41
-#: ./plugins/Shop/templates/Orders/index.php:106
+#: ./plugins/Shop/templates/Orders/index.php:48
+#: ./plugins/Shop/templates/Orders/index.php:123
 #: ./plugins/Shop/templates/Orders/settings.php:137
 msgid "Country"
 msgstr ""
@@ -2499,12 +2543,12 @@ msgid "Select Country"
 msgstr ""
 
 #: ./plugins/Shop/templates/Orders/edit_invoice.php:54
-#: ./plugins/Shop/templates/Orders/view.php:411
+#: ./plugins/Shop/templates/Orders/view.php:412
 msgid "Edit Invoice"
 msgstr ""
 
 #: ./plugins/Shop/templates/Orders/edit_invoice.php:59
-#: ./plugins/Shop/templates/Orders/index.php:107
+#: ./plugins/Shop/templates/Orders/index.php:124
 #: ./plugins/Shop/templates/Shops/payment_received.php:48
 msgid "Amount"
 msgstr ""
@@ -2526,7 +2570,7 @@ msgid "Subtotal"
 msgstr ""
 
 #: ./plugins/Shop/templates/Orders/edit_invoice.php:98
-#: ./plugins/Shop/templates/Orders/index.php:115
+#: ./plugins/Shop/templates/Orders/index.php:132
 #: ./plugins/Shop/templates/Orders/storno.php:599
 msgid "Refund"
 msgstr ""
@@ -2550,7 +2594,7 @@ msgstr ""
 
 #: ./plugins/Shop/templates/Orders/history.php:5
 #: ./plugins/Shop/templates/Orders/index.php:13
-#: ./plugins/Shop/templates/Orders/index.php:103
+#: ./plugins/Shop/templates/Orders/index.php:120
 #: ./plugins/Shop/templates/Shops/payment_received.php:95
 msgid "Status"
 msgstr ""
@@ -2591,74 +2635,78 @@ msgstr ""
 msgid "Payment Method"
 msgstr ""
 
-#: ./plugins/Shop/templates/Orders/index.php:83
+#: ./plugins/Shop/templates/Orders/index.php:28
+msgid "Invoice paid"
+msgstr ""
+
+#: ./plugins/Shop/templates/Orders/index.php:90
 msgid "Duplicates"
 msgstr ""
 
-#: ./plugins/Shop/templates/Orders/index.php:108
+#: ./plugins/Shop/templates/Orders/index.php:125
 msgid "Order date"
 msgstr ""
 
-#: ./plugins/Shop/templates/Orders/index.php:109
+#: ./plugins/Shop/templates/Orders/index.php:126
 msgid "Accepted"
 msgstr ""
 
-#: ./plugins/Shop/templates/Orders/index.php:110
+#: ./plugins/Shop/templates/Orders/index.php:127
 msgid "Payment date"
 msgstr ""
 
-#: ./plugins/Shop/templates/Orders/index.php:112
+#: ./plugins/Shop/templates/Orders/index.php:129
 msgid "method"
 msgstr ""
 
-#: ./plugins/Shop/templates/Orders/index.php:185
-#: ./plugins/Shop/templates/Orders/index.php:189
-#: ./plugins/Shop/templates/Orders/index.php:193
-#: ./plugins/Shop/templates/Orders/index.php:205
-#: ./plugins/Shop/templates/Orders/index.php:209
+#: ./plugins/Shop/templates/Orders/index.php:202
+#: ./plugins/Shop/templates/Orders/index.php:206
+#: ./plugins/Shop/templates/Orders/index.php:210
+#: ./plugins/Shop/templates/Orders/index.php:222
+#: ./plugins/Shop/templates/Orders/index.php:226
 #: ./plugins/Shop/templates/Orders/storno.php:293
 #: ./plugins/Shop/templates/Orders/storno.php:397
 #: ./plugins/Shop/templates/Orders/storno.php:494
 #: ./plugins/Shop/templates/Orders/view.php:65
-#: ./plugins/Shop/templates/Orders/view.php:492
+#: ./plugins/Shop/templates/Orders/view.php:502
 msgid "Storno"
 msgstr ""
 
-#: ./plugins/Shop/templates/Orders/index.php:253
+#: ./plugins/Shop/templates/Orders/index.php:270
 #: ./plugins/Shop/templates/Orders/view.php:390
 msgid "Search"
 msgstr ""
 
-#: ./plugins/Shop/templates/Orders/index.php:259
+#: ./plugins/Shop/templates/Orders/index.php:276
 #: ./plugins/Shop/templates/Orders/view.php:396
 msgid "Invoice Number"
 msgstr ""
 
-#: ./plugins/Shop/templates/Orders/index.php:268
+#: ./plugins/Shop/templates/Orders/index.php:285
 msgid "Mail Reminders"
 msgstr ""
 
-#: ./plugins/Shop/templates/Orders/index.php:273
+#: ./plugins/Shop/templates/Orders/index.php:290
 msgid "Mail Vouchers"
 msgstr ""
 
-#: ./plugins/Shop/templates/Orders/index.php:275
+#: ./plugins/Shop/templates/Orders/index.php:292
 msgid "Are you sure you want to send vouchers to all?"
 msgstr ""
 
-#: ./plugins/Shop/templates/Orders/index.php:279
+#: ./plugins/Shop/templates/Orders/index.php:296
 msgid "Cancel Pending"
 msgstr ""
 
-#: ./plugins/Shop/templates/Orders/index.php:284
+#: ./plugins/Shop/templates/Orders/index.php:301
 msgid "Process Waiting List"
 msgstr ""
 
-#: ./plugins/Shop/templates/Orders/index.php:286
+#: ./plugins/Shop/templates/Orders/index.php:303
 msgid "Are you sure you want to accept the waiting list?"
 msgstr ""
 
-#: ./plugins/Shop/templates/Orders/index.php:291
+#: ./plugins/Shop/templates/Orders/index.php:308
 msgid "Export Players"
 msgstr ""
 
@@ -2731,62 +2779,70 @@ msgid "Invoice No"
 msgstr ""
 
 #: ./plugins/Shop/templates/Orders/settings.php:154
-msgid "Add. Body Top"
+msgid "Add. Body Bank Transfer"
 msgstr ""
 
 #: ./plugins/Shop/templates/Orders/settings.php:155
-msgid "Tax Exemption"
+msgid "Add. Body Top"
 msgstr ""
 
 #: ./plugins/Shop/templates/Orders/settings.php:156
-msgid "Add. Body Bottom"
+msgid "Tax Exemption"
 msgstr ""
 
 #: ./plugins/Shop/templates/Orders/settings.php:157
-msgid "Invoice Footer"
+msgid "Add. Body Bottom"
 msgstr ""
 
 #: ./plugins/Shop/templates/Orders/settings.php:158
+msgid "Invoice Footer"
+msgstr ""
+
+#: ./plugins/Shop/templates/Orders/settings.php:159
 msgid "Add. Footer"
 msgstr ""
 
-#: ./plugins/Shop/templates/Orders/settings.php:165
+#: ./plugins/Shop/templates/Orders/settings.php:166
 msgid "Currency"
 msgstr ""
 
-#: ./plugins/Shop/templates/Orders/settings.php:170
+#: ./plugins/Shop/templates/Orders/settings.php:171
 msgid "Credit Card"
 msgstr ""
 
-#: ./plugins/Shop/templates/Orders/settings.php:171
+#: ./plugins/Shop/templates/Orders/settings.php:172
 msgid "Bank Transfer"
 msgstr ""
 
-#: ./plugins/Shop/templates/Orders/settings.php:177
-msgid "Bank Name"
-msgstr ""
-
-#: ./plugins/Shop/templates/Orders/settings.php:178
-msgid "Bank Address"
+#: ./plugins/Shop/templates/Orders/settings.php:173
+msgid "PayPal"
 msgstr ""
 
 #: ./plugins/Shop/templates/Orders/settings.php:179
-msgid "Account Holder"
+msgid "Bank Name"
 msgstr ""
 
 #: ./plugins/Shop/templates/Orders/settings.php:180
-msgid "IBAN"
+msgid "Bank Address"
 msgstr ""
 
 #: ./plugins/Shop/templates/Orders/settings.php:181
-msgid "BIC (SWIFT)"
+msgid "Account Holder"
 msgstr ""
 
 #: ./plugins/Shop/templates/Orders/settings.php:182
-msgid "ABA"
+msgid "IBAN"
 msgstr ""
 
 #: ./plugins/Shop/templates/Orders/settings.php:183
+msgid "BIC (SWIFT)"
+msgstr ""
+
+#: ./plugins/Shop/templates/Orders/settings.php:184
+msgid "ABA"
+msgstr ""
+
+#: ./plugins/Shop/templates/Orders/settings.php:185
 msgid "Corresp. Bank"
 msgstr ""
 
@@ -2874,55 +2930,59 @@ msgstr ""
 msgid "Comments"
 msgstr ""
 
-#: ./plugins/Shop/templates/Orders/view.php:414
+#: ./plugins/Shop/templates/Orders/view.php:415
 msgid "Edit Address"
 msgstr ""
 
-#: ./plugins/Shop/templates/Orders/view.php:417
+#: ./plugins/Shop/templates/Orders/view.php:418
 msgid "Set Delayed"
 msgstr ""
 
-#: ./plugins/Shop/templates/Orders/view.php:425
+#: ./plugins/Shop/templates/Orders/view.php:426
 msgid "Set Pending"
 msgstr ""
 
-#: ./plugins/Shop/templates/Orders/view.php:431
+#: ./plugins/Shop/templates/Orders/view.php:432
 msgid "Set Invoice"
 msgstr ""
 
-#: ./plugins/Shop/templates/Orders/view.php:433
+#: ./plugins/Shop/templates/Orders/view.php:434
 msgid "Are you sure to set this order to Invoice?"
 msgstr ""
 
-#: ./plugins/Shop/templates/Orders/view.php:442
+#: ./plugins/Shop/templates/Orders/view.php:439
+msgid "Set Incomplete"
+msgstr ""
+
+#: ./plugins/Shop/templates/Orders/view.php:448
 msgid "Set Paid"
 msgstr ""
 
-#: ./plugins/Shop/templates/Orders/view.php:451
+#: ./plugins/Shop/templates/Orders/view.php:458
 msgid "View Invoice"
 msgstr ""
 
-#: ./plugins/Shop/templates/Orders/view.php:458
+#: ./plugins/Shop/templates/Orders/view.php:465
 msgid "Mail Invoice"
 msgstr ""
 
-#: ./plugins/Shop/templates/Orders/view.php:467
+#: ./plugins/Shop/templates/Orders/view.php:475
 msgid "Mail Reminder"
 msgstr ""
 
-#: ./plugins/Shop/templates/Orders/view.php:474
+#: ./plugins/Shop/templates/Orders/view.php:483
 msgid "View Voucher"
 msgstr ""
 
-#: ./plugins/Shop/templates/Orders/view.php:481
+#: ./plugins/Shop/templates/Orders/view.php:490
 msgid "Mail Voucher"
 msgstr ""
 
-#: ./plugins/Shop/templates/Orders/view.php:495
+#: ./plugins/Shop/templates/Orders/view.php:505
 msgid "Undo Storno"
 msgstr ""
 
-#: ./plugins/Shop/templates/Orders/view.php:500
+#: ./plugins/Shop/templates/Orders/view.php:510
 msgid "History"
 msgstr ""
 
@@ -2934,7 +2994,7 @@ msgstr ""
 msgid "File"
 msgstr ""
 
-#: ./plugins/Shop/templates/Shops/pay.php:31
+#: ./plugins/Shop/templates/Shops/pay.php:37
 msgid "Confirm"
 msgstr ""
 

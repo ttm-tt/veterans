@@ -5,7 +5,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2024-08-10 15:36+0200\n"
+"POT-Creation-Date: 2025-09-06 21:29+0200\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -100,205 +100,20 @@ msgstr ""
 msgid "You are logged in"
 msgstr ""
 
-#: ./src/Controller/UsersController.php:432
+#: ./src/Controller/UsersController.php:435
 msgid "Good-Bye"
 msgstr ""
 
-#: ./src/Controller/UsersController.php:726
+#: ./src/Controller/UsersController.php:729
 msgid "Your profile has been saved"
 msgstr ""
 
-#: ./src/Controller/UsersController.php:729
+#: ./src/Controller/UsersController.php:732
 msgid "Your profile could not be saved"
 msgstr ""
 
-#: ./src/Controller/UsersController.php:825
+#: ./src/Controller/UsersController.php:828
 msgid "A password has been sent"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/Component/OrderUpdateComponent.php:59
-#: ./plugins/Shop/src/Controller/Component/OrderUpdateComponent.php:175
-msgid "Unknown registration"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/Component/OrderUpdateComponent.php:76
-msgid "Illegal type"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/Component/OrderUpdateComponent.php:87
-msgid "Unknown user"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/Component/OrderUpdateComponent.php:157
-msgid "The order could be be stored"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/OrdersController.php:1319
-msgid "[{0}] Cancellation of registration {1} from {2}"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:190
-#: ./templates/Registrations/index.php:229
-msgid "Player"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:192
-msgid "Accompanying Person"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:194
-msgid "Coach"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:222
-#: ./plugins/Shop/src/Controller/ShopsController.php:242
-#: ./plugins/Shop/src/Controller/ShopsController.php:609
-#: ./plugins/Shop/src/Controller/ShopsController.php:623
-msgid "You cannot register players after registration closed for players on {0}"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:230
-#: ./plugins/Shop/src/Controller/ShopsController.php:614
-msgid "You cannot register players at the moment. Registration will open soon. Please visit <a href=\"{0}\" target=\"_blank\">{0}</a> for more information."
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:235
-#: ./plugins/Shop/src/Controller/ShopsController.php:619
-msgid "You cannot register players before registration opens for players on {0}"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:252
-msgid "The registration for players has been closed"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:261
-msgid "Players are already sold out and adding more will put your registration on the waiting list"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:270
-#: ./plugins/Shop/src/Controller/ShopsController.php:288
-msgid "The registration for accompanying persons has been closed"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:279
-msgid "Accompanying persons are already sold out and adding more will put your registration on the waiting list"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:297
-msgid "Coaches are already sold out and adding more will put your registration on the waiting list"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:403
-msgid "You must fill out all required fields"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:414
-msgid "You must enter the date of birth for players"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:419
-msgid "The date of birth is not valid"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:424
-msgid "You must be born in %d or earlier"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:430
-msgid "Wrong birthday given"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:468
-msgid "You must agree to the privacy policy when entering an email address or a phone number"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:514
-msgid "The phone number is invalid"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:522
-msgid "The email address has an invalid format"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:592
-msgid "You cannot register people at the moment. Registration will open soon. Please visit <a href=\"{0}\" target=\"_blank\">{0}</a> for more information."
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:597
-msgid "You cannot register people before registration opens on {0}"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:603
-msgid "You cannot register people after registration closed on {0}"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:691
-msgid "You have to register people"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:768
-msgid "You have to register people or buy something"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:917
-msgid "Given name cannot be empty"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:922
-msgid "Family name cannot be empty"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:927
-msgid "Street name cannot be empty"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:932
-msgid "Zip code cannot be empty"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:937
-msgid "City cannot be empty"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:942
-msgid "Country cannot be empty"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:947
-msgid "Email address cannot be empty"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:989
-msgid "You must agree to the terms and conditions"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:1337
-msgid "[{0}] Your registration {1} from {2}"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:1464
-msgid "[{0}] Your voucher for your registration {1} from {2}"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:1724
-msgid "The order was not found"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:1795
-#: ./plugins/Shop/src/Controller/ShopsController.php:1803
-msgid "Invalid registration"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:1808
-msgid "The registration was already paid for"
-msgstr ""
-
-#: ./plugins/Shop/src/Controller/ShopsController.php:1817
-msgid "You cannot pay for this registration at this moment"
-msgstr ""
-
-#: ./plugins/Shop/src/Payment/NestPayPayment.php:160
-msgid "An error occured"
 msgstr ""
 
 #: ./templates/Competitions/index.php:7
@@ -602,7 +417,7 @@ msgstr ""
 #: ./templates/Users/login.php:17
 #: ./plugins/Shop/templates/Shops/add_person.php:291
 #: ./plugins/Shop/templates/Shops/address.php:148
-#: ./plugins/Shop/templates/element/receipt.php:135
+#: ./plugins/Shop/templates/element/receipt.php:146
 #: ./plugins/Shop/templates/element/shop_address.php:25
 #: ./plugins/Shop/templates/email/html/cancel.php:180
 #: ./plugins/Shop/templates/email/html/order.php:328
@@ -611,7 +426,7 @@ msgstr ""
 
 #: ./templates/Registrations/edit_participant.php:446
 #: ./plugins/Shop/templates/Shops/success.php:106
-#: ./plugins/Shop/templates/element/receipt.php:141
+#: ./plugins/Shop/templates/element/receipt.php:152
 #: ./plugins/Shop/templates/element/shop_address.php:27
 #: ./plugins/Shop/templates/email/html/cancel.php:186
 #: ./plugins/Shop/templates/email/html/order.php:334
@@ -665,11 +480,18 @@ msgid "Cancelled"
 msgstr ""
 
 #: ./templates/Registrations/index.php:144
+#: ./plugins/Shop/templates/Orders/index.php:104
 msgid "Username"
 msgstr ""
 
 #: ./templates/Registrations/index.php:145
+#: ./plugins/Shop/templates/Orders/index.php:105
 msgid "all"
+msgstr ""
+
+#: ./templates/Registrations/index.php:229
+#: ./plugins/Shop/src/Controller/ShopsController.php:207
+msgid "Player"
 msgstr ""
 
 #: ./templates/Registrations/index.php:237
@@ -838,6 +660,186 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
+#: ./plugins/Shop/src/Controller/Component/OrderUpdateComponent.php:59
+#: ./plugins/Shop/src/Controller/Component/OrderUpdateComponent.php:175
+msgid "Unknown registration"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/Component/OrderUpdateComponent.php:76
+msgid "Illegal type"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/Component/OrderUpdateComponent.php:87
+msgid "Unknown user"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/Component/OrderUpdateComponent.php:157
+msgid "The order could be be stored"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/OrdersController.php:1359
+msgid "[{0}] Cancellation of registration {1} from {2}"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:209
+msgid "Accompanying Person"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:211
+msgid "Coach"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:239
+#: ./plugins/Shop/src/Controller/ShopsController.php:259
+#: ./plugins/Shop/src/Controller/ShopsController.php:626
+#: ./plugins/Shop/src/Controller/ShopsController.php:640
+msgid "You cannot register players after registration closed for players on {0}"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:247
+#: ./plugins/Shop/src/Controller/ShopsController.php:631
+msgid "You cannot register players at the moment. Registration will open soon. Please visit <a href=\"{0}\" target=\"_blank\">{0}</a> for more information."
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:252
+#: ./plugins/Shop/src/Controller/ShopsController.php:636
+msgid "You cannot register players before registration opens for players on {0}"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:269
+msgid "The registration for players has been closed"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:278
+msgid "Players are already sold out and adding more will put your registration on the waiting list"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:287
+#: ./plugins/Shop/src/Controller/ShopsController.php:305
+msgid "The registration for accompanying persons has been closed"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:296
+msgid "Accompanying persons are already sold out and adding more will put your registration on the waiting list"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:314
+msgid "Coaches are already sold out and adding more will put your registration on the waiting list"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:420
+msgid "You must fill out all required fields"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:431
+msgid "You must enter the date of birth for players"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:436
+msgid "The date of birth is not valid"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:441
+msgid "You must be born in %d or earlier"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:447
+msgid "Wrong birthday given"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:485
+msgid "You must agree to the privacy policy when entering an email address or a phone number"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:531
+msgid "The phone number is invalid"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:539
+msgid "The email address has an invalid format"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:609
+msgid "You cannot register people at the moment. Registration will open soon. Please visit <a href=\"{0}\" target=\"_blank\">{0}</a> for more information."
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:614
+msgid "You cannot register people before registration opens on {0}"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:620
+msgid "You cannot register people after registration closed on {0}"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:708
+msgid "You have to register people"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:840
+msgid "You have to register people or buy something"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:989
+msgid "Given name cannot be empty"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:994
+msgid "Family name cannot be empty"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:999
+msgid "Street name cannot be empty"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:1004
+msgid "Zip code cannot be empty"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:1009
+msgid "City cannot be empty"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:1014
+msgid "Country cannot be empty"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:1019
+msgid "Email address cannot be empty"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:1061
+msgid "You must agree to the terms and conditions"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:1457
+msgid "[{0}] Your registration {1} from {2}"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:1585
+msgid "[{0}] Your voucher for your registration {1} from {2}"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:1848
+msgid "The order was not found"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:1919
+#: ./plugins/Shop/src/Controller/ShopsController.php:1927
+msgid "Invalid registration"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:1932
+msgid "The registration was already paid for"
+msgstr ""
+
+#: ./plugins/Shop/src/Controller/ShopsController.php:1942
+msgid "You cannot pay for this registration at this moment"
+msgstr ""
+
+#: ./plugins/Shop/src/Payment/NestPayPayment.php:160
+msgid "An error occured"
+msgstr ""
+
 #: ./plugins/Shop/templates/Shops/Payment/authorizenet.php:35
 #: ./plugins/Shop/templates/Shops/Payment/authorizenet.php:43
 #: ./plugins/Shop/templates/Shops/Payment/bpayment.php:60
@@ -850,11 +852,13 @@ msgstr ""
 #: ./plugins/Shop/templates/Shops/Payment/dummy.php:42
 #: ./plugins/Shop/templates/Shops/Payment/ipayment.php:30
 #: ./plugins/Shop/templates/Shops/Payment/ipayment.php:38
-#: ./plugins/Shop/templates/Shops/Payment/nestpay.php:36
-#: ./plugins/Shop/templates/Shops/Payment/nestpay.php:40
+#: ./plugins/Shop/templates/Shops/Payment/nestpay.php:37
+#: ./plugins/Shop/templates/Shops/Payment/nestpay.php:41
 #: ./plugins/Shop/templates/Shops/Payment/netseasy.php:31
 #: ./plugins/Shop/templates/Shops/Payment/paypal_express.php:40
 #: ./plugins/Shop/templates/Shops/Payment/paypal_express.php:44
+#: ./plugins/Shop/templates/Shops/Payment/paypal_standard.php:36
+#: ./plugins/Shop/templates/Shops/Payment/paypal_standard.php:40
 #: ./plugins/Shop/templates/Shops/Payment/positivity.php:33
 #: ./plugins/Shop/templates/Shops/Payment/positivity.php:37
 #: ./plugins/Shop/templates/Shops/Payment/redsys.php:40
@@ -875,9 +879,10 @@ msgstr ""
 #: ./plugins/Shop/templates/Shops/Payment/dibs.php:64
 #: ./plugins/Shop/templates/Shops/Payment/dummy.php:71
 #: ./plugins/Shop/templates/Shops/Payment/ipayment.php:49
-#: ./plugins/Shop/templates/Shops/Payment/nestpay.php:50
+#: ./plugins/Shop/templates/Shops/Payment/nestpay.php:51
 #: ./plugins/Shop/templates/Shops/Payment/netseasy.php:42
 #: ./plugins/Shop/templates/Shops/Payment/paypal_express.php:55
+#: ./plugins/Shop/templates/Shops/Payment/paypal_standard.php:169
 #: ./plugins/Shop/templates/Shops/Payment/positivity.php:48
 #: ./plugins/Shop/templates/Shops/Payment/redsys.php:60
 #: ./plugins/Shop/templates/Shops/Payment/smartpay.php:48
@@ -893,7 +898,6 @@ msgstr ""
 #: ./plugins/Shop/templates/Shops/Payment/dibs.php:66
 #: ./plugins/Shop/templates/Shops/Payment/dummy.php:73
 #: ./plugins/Shop/templates/Shops/Payment/ipayment.php:51
-#: ./plugins/Shop/templates/Shops/Payment/nestpay.php:52
 #: ./plugins/Shop/templates/Shops/Payment/netseasy.php:44
 #: ./plugins/Shop/templates/Shops/Payment/paypal_express.php:57
 #: ./plugins/Shop/templates/Shops/Payment/positivity.php:50
@@ -911,9 +915,10 @@ msgstr ""
 #: ./plugins/Shop/templates/Shops/Payment/dibs.php:73
 #: ./plugins/Shop/templates/Shops/Payment/dummy.php:82
 #: ./plugins/Shop/templates/Shops/Payment/ipayment.php:58
-#: ./plugins/Shop/templates/Shops/Payment/nestpay.php:58
+#: ./plugins/Shop/templates/Shops/Payment/nestpay.php:59
 #: ./plugins/Shop/templates/Shops/Payment/netseasy.php:50
 #: ./plugins/Shop/templates/Shops/Payment/paypal_express.php:64
+#: ./plugins/Shop/templates/Shops/Payment/paypal_standard.php:183
 #: ./plugins/Shop/templates/Shops/Payment/positivity.php:56
 #: ./plugins/Shop/templates/Shops/Payment/redsys.php:69
 #: ./plugins/Shop/templates/Shops/Payment/smartpay.php:56
@@ -933,9 +938,10 @@ msgstr ""
 #: ./plugins/Shop/templates/Shops/Payment/card_pointe.php:60
 #: ./plugins/Shop/templates/Shops/Payment/dibs.php:76
 #: ./plugins/Shop/templates/Shops/Payment/ipayment.php:62
-#: ./plugins/Shop/templates/Shops/Payment/nestpay.php:61
+#: ./plugins/Shop/templates/Shops/Payment/nestpay.php:62
 #: ./plugins/Shop/templates/Shops/Payment/netseasy.php:53
 #: ./plugins/Shop/templates/Shops/Payment/paypal_express.php:67
+#: ./plugins/Shop/templates/Shops/Payment/paypal_standard.php:186
 #: ./plugins/Shop/templates/Shops/Payment/positivity.php:59
 #: ./plugins/Shop/templates/Shops/Payment/redsys.php:72
 #: ./plugins/Shop/templates/Shops/Payment/smartpay.php:59
@@ -951,10 +957,11 @@ msgstr ""
 #: ./plugins/Shop/templates/Shops/Payment/dibs.php:101
 #: ./plugins/Shop/templates/Shops/Payment/dummy.php:86
 #: ./plugins/Shop/templates/Shops/Payment/ipayment.php:71
-#: ./plugins/Shop/templates/Shops/Payment/nestpay.php:77
-#: ./plugins/Shop/templates/Shops/Payment/nestpay.php:85
+#: ./plugins/Shop/templates/Shops/Payment/nestpay.php:86
+#: ./plugins/Shop/templates/Shops/Payment/nestpay.php:94
 #: ./plugins/Shop/templates/Shops/Payment/netseasy.php:61
 #: ./plugins/Shop/templates/Shops/Payment/paypal_express.php:78
+#: ./plugins/Shop/templates/Shops/Payment/paypal_standard.php:193
 #: ./plugins/Shop/templates/Shops/Payment/positivity.php:67
 #: ./plugins/Shop/templates/Shops/Payment/redsys.php:83
 #: ./plugins/Shop/templates/Shops/Payment/smartpay.php:67
@@ -1052,9 +1059,10 @@ msgstr ""
 #: ./plugins/Shop/templates/Shops/Payment/dibs.php:116
 #: ./plugins/Shop/templates/Shops/Payment/dummy.php:108
 #: ./plugins/Shop/templates/Shops/Payment/ipayment.php:159
-#: ./plugins/Shop/templates/Shops/Payment/nestpay.php:97
+#: ./plugins/Shop/templates/Shops/Payment/nestpay.php:106
 #: ./plugins/Shop/templates/Shops/Payment/netseasy.php:72
 #: ./plugins/Shop/templates/Shops/Payment/paypal_express.php:93
+#: ./plugins/Shop/templates/Shops/Payment/paypal_standard.php:204
 #: ./plugins/Shop/templates/Shops/Payment/positivity.php:78
 #: ./plugins/Shop/templates/Shops/Payment/redsys.php:98
 #: ./plugins/Shop/templates/Shops/Payment/smartpay.php:78
@@ -1067,9 +1075,10 @@ msgstr ""
 #: ./plugins/Shop/templates/Shops/Payment/bpayment.php:93
 #: ./plugins/Shop/templates/Shops/Payment/card_pointe.php:61
 #: ./plugins/Shop/templates/Shops/Payment/dibs.php:77
-#: ./plugins/Shop/templates/Shops/Payment/nestpay.php:62
+#: ./plugins/Shop/templates/Shops/Payment/nestpay.php:63
 #: ./plugins/Shop/templates/Shops/Payment/netseasy.php:54
 #: ./plugins/Shop/templates/Shops/Payment/paypal_express.php:68
+#: ./plugins/Shop/templates/Shops/Payment/paypal_standard.php:187
 #: ./plugins/Shop/templates/Shops/Payment/positivity.php:60
 #: ./plugins/Shop/templates/Shops/Payment/redsys.php:73
 #: ./plugins/Shop/templates/Shops/Payment/smartpay.php:60
@@ -1087,8 +1096,17 @@ msgstr ""
 msgid "Card holder"
 msgstr ""
 
-#: ./plugins/Shop/templates/Shops/Payment/nestpay.php:66
+#: ./plugins/Shop/templates/Shops/Payment/nestpay.php:53
+#: ./plugins/Shop/templates/Shops/Payment/paypal_standard.php:171
+msgid "This may take a few moments ."
+msgstr ""
+
+#: ./plugins/Shop/templates/Shops/Payment/nestpay.php:67
 msgid "Payment will be done in {0} using an exchange rate 1 {1} to {2} {3}"
+msgstr ""
+
+#: ./plugins/Shop/templates/Shops/Payment/nestpay.php:71
+msgid "The amount your credit card will be charged for is obtained through the conversion of the price in Euro in Serbian dinar according to the current exchange rate of the Serbian National Bank. When charging your credit card the same amount is converted into your local currency according to the exchange rate of the credit card associations. As a result of this conversion there is a possibility of a slight difference from the original price stated in our web site."
 msgstr ""
 
 #: ./plugins/Shop/templates/Shops/add_person.php:143
@@ -1300,7 +1318,21 @@ msgstr ""
 msgid "We accept MasterCard and Visa"
 msgstr ""
 
-#: ./plugins/Shop/templates/Shops/payment_selection.php:36
+#: ./plugins/Shop/templates/Shops/payment_selection.php:33
+#: ./plugins/Shop/templates/Shops/payment_selection.php:41
+#: ./plugins/Shop/templates/Shops/payment_selection.php:43
+msgid "PayPal"
+msgstr ""
+
+#: ./plugins/Shop/templates/Shops/payment_selection.php:35
+msgid "You may pay with PayPal"
+msgstr ""
+
+#: ./plugins/Shop/templates/Shops/payment_selection.php:37
+msgid "You may pay with PayPal or credit card"
+msgstr ""
+
+#: ./plugins/Shop/templates/Shops/payment_selection.php:51
 msgid "Payment Method"
 msgstr ""
 
@@ -1403,28 +1435,28 @@ msgid "Banking Account"
 msgstr ""
 
 #: ./plugins/Shop/templates/Shops/success.php:74
-#: ./plugins/Shop/templates/element/receipt.php:153
+#: ./plugins/Shop/templates/element/receipt.php:164
 #: ./plugins/Shop/templates/email/html/cancel.php:198
 #: ./plugins/Shop/templates/email/html/order.php:346
 msgid "VAT Reg Id"
 msgstr ""
 
 #: ./plugins/Shop/templates/Shops/success.php:78
-#: ./plugins/Shop/templates/element/receipt.php:84
+#: ./plugins/Shop/templates/element/receipt.php:95
 #: ./plugins/Shop/templates/email/html/cancel.php:148
 #: ./plugins/Shop/templates/email/html/order.php:278
 msgid "Bank"
 msgstr ""
 
 #: ./plugins/Shop/templates/Shops/success.php:82
-#: ./plugins/Shop/templates/element/receipt.php:129
+#: ./plugins/Shop/templates/element/receipt.php:140
 #: ./plugins/Shop/templates/email/html/cancel.php:174
 #: ./plugins/Shop/templates/email/html/order.php:322
 msgid "Account Holder"
 msgstr ""
 
 #: ./plugins/Shop/templates/Shops/success.php:86
-#: ./plugins/Shop/templates/element/receipt.php:96
+#: ./plugins/Shop/templates/element/receipt.php:107
 #: ./plugins/Shop/templates/email/html/cancel.php:160
 #: ./plugins/Shop/templates/email/html/order.php:296
 msgid "IBAN"
@@ -1440,19 +1472,19 @@ msgid "SWIFT"
 msgstr ""
 
 #: ./plugins/Shop/templates/Shops/success.php:98
-#: ./plugins/Shop/templates/element/receipt.php:114
+#: ./plugins/Shop/templates/element/receipt.php:125
 #: ./plugins/Shop/templates/email/html/order.php:308
 msgid "ABA"
 msgstr ""
 
 #: ./plugins/Shop/templates/Shops/success.php:102
-#: ./plugins/Shop/templates/element/receipt.php:120
+#: ./plugins/Shop/templates/element/receipt.php:131
 #: ./plugins/Shop/templates/email/html/order.php:314
 msgid "Correspondent Bank"
 msgstr ""
 
 #: ./plugins/Shop/templates/Shops/success.php:110
-#: ./plugins/Shop/templates/element/receipt.php:147
+#: ./plugins/Shop/templates/element/receipt.php:158
 #: ./plugins/Shop/templates/email/html/cancel.php:192
 #: ./plugins/Shop/templates/email/html/order.php:340
 msgid "Fax"
@@ -1475,36 +1507,36 @@ msgstr ""
 msgid "Confirm Order"
 msgstr ""
 
-#: ./plugins/Shop/templates/element/receipt.php:28
+#: ./plugins/Shop/templates/element/receipt.php:29
 msgid "Proforma Invoice"
 msgstr ""
 
-#: ./plugins/Shop/templates/element/receipt.php:33
+#: ./plugins/Shop/templates/element/receipt.php:34
 #: ./plugins/Shop/templates/element/voucher.php:11
 msgid "Invoice date"
 msgstr ""
 
-#: ./plugins/Shop/templates/element/receipt.php:37
+#: ./plugins/Shop/templates/element/receipt.php:38
 #: ./plugins/Shop/templates/element/voucher.php:15
 msgid "Invoice no"
 msgstr ""
 
-#: ./plugins/Shop/templates/element/receipt.php:62
+#: ./plugins/Shop/templates/element/receipt.php:63
 msgid "Order"
 msgstr ""
 
-#: ./plugins/Shop/templates/element/receipt.php:90
+#: ./plugins/Shop/templates/element/receipt.php:101
 #: ./plugins/Shop/templates/email/html/cancel.php:154
 #: ./plugins/Shop/templates/email/html/order.php:284
 msgid "Bank Address"
 msgstr ""
 
-#: ./plugins/Shop/templates/element/receipt.php:102
+#: ./plugins/Shop/templates/element/receipt.php:113
 #: ./plugins/Shop/templates/email/html/order.php:290
 msgid "Account No"
 msgstr ""
 
-#: ./plugins/Shop/templates/element/receipt.php:108
+#: ./plugins/Shop/templates/element/receipt.php:119
 #: ./plugins/Shop/templates/email/html/order.php:302
 msgid "BIC (SWIFT)"
 msgstr ""
