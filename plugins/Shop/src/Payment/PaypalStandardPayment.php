@@ -278,9 +278,13 @@ class PaypalStandardPayment extends AbstractPayment {
 		$currency = 'USD';
 		
 		if (Configure::read('App.test'))
-			$url = 'https://www.paypal.com/sdk/js?currency=USD' . '&client-id=' . $clientId;
+			$url = 'https://www.paypal.com/sdk/js?currency=' . $currency . '&client-id=' . $clientId;
 		else
-			$url = 'https://www.paypal.com/sdk/js?currency=USD' . '&client-id=' . $clientId;
+			$url = 'https://www.paypal.com/sdk/js?currency=' . $currency . '&client-id=' . $clientId;
+		
+		$url .= '&enable-funding=card';
+		$url .= '&disable-funding=paylater';
+		// $url .= ',eps,venmo';
 		
 		return $url;
 	}
