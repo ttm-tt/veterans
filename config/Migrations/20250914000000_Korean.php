@@ -7,7 +7,7 @@ class Korean extends AbstractMigration {
 	public function change() {
 		$this->table('languages')
 				->insert([
-					'name' => 'kr',
+					'name' => 'ko',
 					'description' => '한국어 (Korean)'
 				])
 				->update();
