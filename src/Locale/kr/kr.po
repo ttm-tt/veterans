@@ -1,0 +1,1965 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2025-09-06 21:29+0200\n"
+"PO-Revision-Date: 2025-09-14 15:16+0200\n"
+"Last-Translator: Christoph Theis <theis@gmx.at>\n"
+"Language-Team: \n"
+"Language: ko_KR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.6\n"
+"X-Poedit-Basepath: .\n"
+
+#: src/Controller/Component/RegistrationUpdateComponent.php:45
+msgid "Unknown user {0}"
+msgstr "알 수 없는 사용자 {0}"
+
+#: src/Controller/Component/RegistrationUpdateComponent.php:118
+msgid "Cannot change type of registration"
+msgstr "등록 유형을 변경할 수 없습니다"
+
+#: src/Controller/Component/RegistrationUpdateComponent.php:151
+msgid "The new registration could not be created"
+msgstr "새로운 등록을 생성할 수 없습니다"
+
+#: src/Controller/Component/WelcomeMailComponent.php:109
+#: src/Controller/UsersController.php:169
+#: src/Controller/UsersController.php:235
+msgid "Double Entries"
+msgstr "복식 참가자 등록"
+
+#: src/Controller/UsersController.php:63
+msgid "You must fill in your email address"
+msgstr "이메일 주소를 입력해주시기 바랍니다"
+
+#: src/Controller/UsersController.php:77
+msgid "Email address not found"
+msgstr "이메일 주소를 찾을 수 없습니다."
+
+#: src/Controller/UsersController.php:110
+msgid "Invalid request to reset the password"
+msgstr "비밀번호 재설정 요청이 유효하지 않습니다"
+
+#: src/Controller/UsersController.php:115
+msgid "Your ticket has expired"
+msgstr "귀하의 티켓이 만료되었습니다"
+
+#: src/Controller/UsersController.php:148
+msgid "The ticket to request a new password could not be created"
+msgstr "새 비밀번호를 요청하는 티켓을 생성할 수 없습니다"
+
+#: src/Controller/UsersController.php:185
+msgid "A new password has been requested with your email address."
+msgstr "귀하의 이메일 주소로 새 비밀번호가 요청되었습니다."
+
+#: src/Controller/UsersController.php:187
+msgid ""
+"If you did not initiate this request, please ignore this mail. You password "
+"will remain unchanged."
+msgstr ""
+"만약 이 요청을 직접 하지 않으셨다면, 해당 메일을 무시해 주시기 바랍니다. 기"
+"존 비밀번호는 변경되지 않습니다."
+
+#: src/Controller/UsersController.php:189
+msgid ""
+"To get a new password click the link below. A new password will then be sent "
+"to your email address."
+msgstr ""
+"새 비밀번호를 받으시려면 아래 링크를 클릭해주십시오. 새로운 비밀번호가 귀하"
+"의 이메일 주소로 발송될 예정입니다."
+
+#: src/Controller/UsersController.php:197
+msgid "The link above will also log you in one time."
+msgstr "위 링크를 통해 1회 로그인이 가능합니다."
+
+#: src/Controller/UsersController.php:199
+msgid ""
+"To login another time you have to use the password or request a new link "
+"with \"Forgot Password\"."
+msgstr ""
+"다시 로그인하시려면 새로 발급된 비밀번호를 사용하시거나 \"비밀번호 찾기\" 를 "
+"통해 새 링크를 요청해 주시기 바랍니다."
+
+#: src/Controller/UsersController.php:203
+msgid "The email confirming your password request could not be sent"
+msgstr "비밀번호 요청 확인 메일을 발송할 수 없습니다"
+
+#: src/Controller/UsersController.php:205
+msgid ""
+"An email has been sent. Follow the instructions in the mail to receive a new "
+"password"
+msgstr ""
+"이메일을 발송했습니다. 메일의 안내에 따라 새 비밀번호를 발급받아주시기 바랍니"
+"다"
+
+#: src/Controller/UsersController.php:251
+msgid "Your new password is: "
+msgstr "새 비밀번호: "
+
+#: src/Controller/UsersController.php:259
+msgid "The email could not be sent, password remains unchanged"
+msgstr "이메일을 발송할 수 없어 비밀번호는 변경되지 않았습니다"
+
+#: src/Controller/UsersController.php:261
+msgid "The new password could not be saved"
+msgstr "새 비밀번호가 저장되지 않았습니다"
+
+#: src/Controller/UsersController.php:263
+msgid "A new password has been sent to your email address"
+msgstr "귀하의 이메일 주소로 새 비밀번호가 전송되었습니다"
+
+#: src/Controller/UsersController.php:322
+msgid "You are logged in"
+msgstr "로그인되었습니다"
+
+#: src/Controller/UsersController.php:435
+msgid "Good-Bye"
+msgstr "안녕히 가십시오"
+
+#: src/Controller/UsersController.php:729
+msgid "Your profile has been saved"
+msgstr "프로필이 저장되었습니다"
+
+#: src/Controller/UsersController.php:732
+msgid "Your profile could not be saved"
+msgstr "프로필 저장에 실패하였습니다"
+
+#: src/Controller/UsersController.php:828
+msgid "A password has been sent"
+msgstr "비밀번호를 발송했습니다. 확인해주시기 바랍니다"
+
+#: templates/Competitions/index.php:7 templates/Nations/index.php:7
+#: templates/People/index.php:7 templates/Registrations/count.php:11
+#: templates/Registrations/index.php:35 templates/Users/index.php:7
+#: plugins/Shop/templates/Orders/index.php:10
+msgid "Filter"
+msgstr "검색 조건"
+
+#: templates/Competitions/index.php:32 templates/People/index.php:28
+#: templates/Registrations/index.php:62
+msgid "Paralympic"
+msgstr "패럴림픽"
+
+#: templates/Competitions/index.php:34 templates/People/index.php:30
+#: templates/Registrations/index.php:65 templates/Registrations/index.php:367
+msgid "No"
+msgstr "아니오"
+
+#: templates/Competitions/index.php:34 templates/People/index.php:30
+#: templates/Registrations/index.php:66 templates/Registrations/index.php:367
+msgid "Yes"
+msgstr "예"
+
+#: templates/Nations/index.php:11
+msgid "Continent"
+msgstr "대륙"
+
+#: templates/Pages/participants.php:35
+msgid "Participants"
+msgstr "참가 조회"
+
+#: templates/Pages/participants.php:37
+msgid "Only confirmed double partners are shown"
+msgstr "복식 파트너는 확정된 경우에만 표시됩니다"
+
+#: templates/Pages/participants.php:43 templates/Registrations/index.php:216
+#: templates/Registrations/requests.php:7
+#: plugins/Shop/templates/element/shop_address.php:17
+msgid "Name"
+msgstr "성명"
+
+#: templates/Pages/participants.php:44 templates/People/index.php:12
+#: templates/Registrations/add_participant.php:193
+#: templates/Registrations/count.php:16
+#: templates/Registrations/csv/export_count.php:4
+#: templates/Registrations/edit_participant.php:198
+#: templates/Registrations/index.php:40 templates/Registrations/index.php:224
+#: templates/Registrations/requests.php:8
+#: plugins/Shop/templates/Shops/add_person.php:210
+#: plugins/Shop/templates/element/shop_people.php:68
+#: plugins/Shop/templates/element/voucher.php:40
+msgid "Association"
+msgstr "협회명"
+
+#: templates/Pages/participants.php:46
+#: plugins/Shop/templates/element/shop_people.php:72
+msgid "Singles"
+msgstr "단식"
+
+#: templates/Pages/participants.php:49
+#: plugins/Shop/templates/element/shop_people.php:73
+msgid "Doubles"
+msgstr "복식"
+
+#: templates/Pages/participants.php:50
+#: templates/Registrations/edit_participant.php:368
+#: templates/Registrations/index.php:250
+msgid "Double Partner"
+msgstr "복식 파트너"
+
+#: templates/Pages/participants.php:53
+#: templates/Registrations/edit_participant.php:397
+#: templates/Registrations/index.php:253
+#: templates/Registrations/requests.php:15
+#: plugins/Shop/templates/element/shop_people.php:74
+msgid "Mixed"
+msgstr "혼합복식"
+
+#: templates/Pages/participants.php:54
+#: templates/Registrations/edit_participant.php:413
+#: templates/Registrations/index.php:254
+msgid "Mixed Partner"
+msgstr "혼합복식 파트너"
+
+#: templates/Pages/participants.php:57
+msgid "Teams"
+msgstr "팀"
+
+#: templates/Registrations/add_participant.php:114
+msgid "Add Participant"
+msgstr "참가자 추가하기"
+
+#: templates/Registrations/add_participant.php:118
+msgid "Select Type"
+msgstr "유형 선택"
+
+#: templates/Registrations/add_participant.php:119
+#: templates/Registrations/count.php:33
+#: templates/Registrations/edit_participant.php:208
+#: templates/Registrations/edit_participant.php:212
+#: templates/Registrations/edit_participant.php:220
+#: templates/Registrations/index.php:48 templates/Registrations/index.php:231
+#: plugins/Shop/templates/Shops/add_person.php:181
+#: plugins/Shop/templates/element/voucher.php:41
+msgid "Type"
+msgstr "유형"
+
+#: templates/Registrations/add_participant.php:125
+#: templates/Registrations/edit.php:114
+#: templates/Registrations/edit_participant.php:188
+#: plugins/Shop/templates/Shops/add_person.php:190
+msgid "Given Name"
+msgstr "이름"
+
+#: templates/Registrations/add_participant.php:130
+#: templates/Registrations/edit.php:119
+#: templates/Registrations/edit_participant.php:193
+#: templates/Registrations/index.php:108
+#: plugins/Shop/templates/Shops/add_person.php:196
+msgid "Family Name"
+msgstr "성"
+
+#: templates/Registrations/add_participant.php:140
+#: templates/Registrations/edit.php:158
+#: templates/Registrations/edit_participant.php:238
+#: plugins/Shop/templates/Shops/add_person.php:204
+msgid "Select gender"
+msgstr "성별"
+
+#: templates/Registrations/add_participant.php:141
+#: templates/Registrations/edit.php:152 templates/Registrations/edit.php:159
+#: templates/Registrations/edit_participant.php:232
+#: templates/Registrations/edit_participant.php:239
+#: plugins/Shop/templates/Shops/add_person.php:206
+msgid "Man"
+msgstr "남성"
+
+#: templates/Registrations/add_participant.php:141
+#: templates/Registrations/edit.php:152 templates/Registrations/edit.php:159
+#: templates/Registrations/edit_participant.php:232
+#: templates/Registrations/edit_participant.php:239
+#: plugins/Shop/templates/Shops/add_person.php:206
+msgid "Woman"
+msgstr "여성"
+
+#: templates/Registrations/add_participant.php:192
+#: plugins/Shop/templates/Shops/add_person.php:213
+msgid "Select Association"
+msgstr "협회를 선택하세요"
+
+#: templates/Registrations/add_participant.php:212
+#: templates/Registrations/edit_participant.php:463
+msgid "Items"
+msgstr "항목"
+
+#: templates/Registrations/add_participant.php:226
+#: templates/element/savecancel.php:50
+msgid "Save & Cont."
+msgstr "저장 후 다음 단계"
+
+#: templates/Registrations/add_participant.php:233
+#: templates/Registrations/edit_participant.php:492
+#: templates/Registrations/index.php:534
+#: templates/Registrations/requests.php:84
+msgid "List Registrations"
+msgstr "등록 목록"
+
+#: templates/Registrations/count.php:23 templates/Registrations/index.php:219
+#: plugins/Shop/templates/Orders/view.php:188
+#: plugins/Shop/templates/Orders/view.php:263
+#: plugins/Shop/templates/Shops/add_person.php:202
+#: plugins/Shop/templates/element/shop_people.php:69
+#: plugins/Shop/templates/element/shop_people.php:160
+msgid "Sex"
+msgstr "성별"
+
+#: templates/Registrations/count.php:45 templates/Registrations/index.php:85
+msgid "Partner"
+msgstr "파트너"
+
+#: templates/Registrations/count.php:48 templates/Registrations/index.php:88
+msgid "Wanted"
+msgstr "(선수를) 찾습니다"
+
+#: templates/Registrations/count.php:49 templates/Registrations/index.php:89
+msgid "Requested As"
+msgstr "요청한 대로"
+
+#: templates/Registrations/count.php:50 templates/Registrations/index.php:90
+msgid "Multiple"
+msgstr "복수"
+
+#: templates/Registrations/count.php:51 templates/Registrations/index.php:91
+msgid "Not Confirmed"
+msgstr "확인되지 않음"
+
+#: templates/Registrations/count.php:52 templates/Registrations/index.php:92
+msgid "Confirmed"
+msgstr "확인 됨"
+
+#: templates/Registrations/count.php:62
+msgid ""
+"Only registered and paid for players are counted but not reserved positions."
+msgstr ""
+"등록하고 비용을 지불한 선수만 카운팅되며, 예약된 순위는 적용되지 않습니다."
+
+#: templates/Registrations/csv/export_count.php:9
+#: plugins/Shop/templates/Shops/buy.php:143
+#: plugins/Shop/templates/Shops/buy.php:286
+#: plugins/Shop/templates/Shops/buy.php:333
+#: plugins/Shop/templates/element/shop_order.php:35
+#: plugins/Shop/templates/element/shop_order.php:200
+msgid "Total"
+msgstr "총 계"
+
+#: templates/Registrations/edit_participant.php:26
+#: templates/Registrations/edit_participant.php:45
+#: templates/Registrations/edit_participant.php:376
+#: templates/Registrations/edit_participant.php:421
+#: templates/Registrations/index.php:411 templates/Registrations/index.php:437
+msgid "Partner wanted"
+msgstr "파트너를 원합니다"
+
+#: templates/Registrations/edit_participant.php:160
+msgid "Edit Registration"
+msgstr "등록 정보 수정"
+
+#: templates/Registrations/edit_participant.php:177
+msgid "Person"
+msgstr "사람"
+
+#: templates/Registrations/edit_participant.php:253
+#: plugins/Shop/templates/Shops/add_person.php:229
+msgid "Date Born"
+msgstr "생년월일"
+
+#: templates/Registrations/edit_participant.php:328
+#: templates/Registrations/index.php:246
+#: templates/Registrations/requests.php:11
+msgid "Single"
+msgstr "단식"
+
+#: templates/Registrations/edit_participant.php:333
+msgid "Not Playing Singles"
+msgstr "단식 미참가"
+
+#: templates/Registrations/edit_participant.php:351
+#: templates/Registrations/index.php:249
+#: templates/Registrations/requests.php:13
+msgid "Double"
+msgstr "복식"
+
+#: templates/Registrations/edit_participant.php:356
+msgid "Not Playing Doubles"
+msgstr "복식 미참가"
+
+#: templates/Registrations/edit_participant.php:358
+msgid "Double Partner Category"
+msgstr "복식 파트너 연령부"
+
+#: templates/Registrations/edit_participant.php:383
+#: templates/Registrations/edit_participant.php:428
+msgid "Partner confirmed"
+msgstr "파트너가 확정되었습니다"
+
+#: templates/Registrations/edit_participant.php:401
+msgid "Not Playing Mixed"
+msgstr "혼합복식 미참가"
+
+#: templates/Registrations/edit_participant.php:403
+msgid "Mixed Partner Category"
+msgstr "혼합복식 파트너 연령부"
+
+#: templates/Registrations/edit_participant.php:436
+msgid "Not Playing Teams"
+msgstr "개인"
+
+#: templates/Registrations/edit_participant.php:442
+#: templates/Users/forgot_password.php:10 templates/Users/login.php:17
+#: plugins/Shop/templates/Shops/add_person.php:291
+#: plugins/Shop/templates/Shops/address.php:148
+#: plugins/Shop/templates/element/receipt.php:146
+#: plugins/Shop/templates/element/shop_address.php:25
+#: plugins/Shop/templates/email/html/cancel.php:180
+#: plugins/Shop/templates/email/html/order.php:328
+msgid "Email"
+msgstr "이메일"
+
+#: templates/Registrations/edit_participant.php:446
+#: plugins/Shop/templates/Shops/success.php:106
+#: plugins/Shop/templates/element/receipt.php:152
+#: plugins/Shop/templates/element/shop_address.php:27
+#: plugins/Shop/templates/email/html/cancel.php:186
+#: plugins/Shop/templates/email/html/order.php:334
+msgid "Phone"
+msgstr "휴대전화"
+
+#: templates/Registrations/edit_participant.php:495
+#: templates/Registrations/index.php:537
+#: templates/Registrations/requests.php:86
+msgid "List Partner Wanted"
+msgstr "파트너 미지정자 목록"
+
+#: templates/Registrations/index.php:29
+msgid "Partner Wanted"
+msgstr "파트너를 원합니다"
+
+#: templates/Registrations/index.php:29
+msgid "Registrations"
+msgstr "등록"
+
+#: templates/Registrations/index.php:55
+msgid "Competition"
+msgstr "경기"
+
+#: templates/Registrations/index.php:67
+msgid "Able-bodied singles"
+msgstr "단식"
+
+#: templates/Registrations/index.php:74
+msgid "Age Category"
+msgstr "연령 카테고리"
+
+#: templates/Registrations/index.php:77
+msgid "Different"
+msgstr "다름"
+
+#: templates/Registrations/index.php:78
+msgid "Not in all events"
+msgstr "모든 이벤트에 적용되지 않습니다"
+
+#: templates/Registrations/index.php:99
+msgid "Status"
+msgstr "상태"
+
+#: templates/Registrations/index.php:102
+msgid "Not cancelled"
+msgstr "취소가 되지 않았습니다"
+
+#: templates/Registrations/index.php:103
+msgid "Cancelled"
+msgstr "취소 되었습니다"
+
+#: templates/Registrations/index.php:144
+#: plugins/Shop/templates/Orders/index.php:104
+msgid "Username"
+msgstr "사용자 이름"
+
+#: templates/Registrations/index.php:145
+#: plugins/Shop/templates/Orders/index.php:105
+msgid "all"
+msgstr "전체"
+
+#: templates/Registrations/index.php:229
+#: plugins/Shop/src/Controller/ShopsController.php:207
+msgid "Player"
+msgstr "선수"
+
+#: templates/Registrations/index.php:237 templates/Registrations/requests.php:9
+#: plugins/Shop/templates/element/voucher.php:37
+msgid "Reg. ID"
+msgstr "등록 번호"
+
+#: templates/Registrations/index.php:242
+msgid "Start No."
+msgstr "시작 번호"
+
+#: templates/Registrations/index.php:258
+msgid "Team"
+msgstr "팀"
+
+#: templates/Registrations/index.php:261
+msgid "Updated"
+msgstr "업데이트 되었습니다"
+
+#: templates/Registrations/index.php:262
+#: templates/Registrations/requests.php:17 templates/layout/default.php:119
+#: plugins/Shop/templates/Shops/buy.php:221
+#: plugins/Shop/templates/Shops/buy.php:287
+#: plugins/Shop/templates/element/shop_people.php:75
+#: plugins/Shop/templates/element/shop_people.php:161
+msgid "Actions"
+msgstr "메뉴"
+
+#: templates/Registrations/index.php:418 templates/Registrations/index.php:444
+msgid "wanted"
+msgstr "(선수를) 찾습니다"
+
+#: templates/Registrations/index.php:467
+msgid "History"
+msgstr "이력보기"
+
+#: templates/Registrations/index.php:469
+#: templates/Registrations/requests.php:72
+msgid "View"
+msgstr "보기"
+
+#: templates/Registrations/index.php:477 templates/Registrations/index.php:479
+msgid "Edit"
+msgstr "수정"
+
+#: templates/Registrations/index.php:485 templates/Registrations/index.php:489
+msgid "Delete"
+msgstr "삭제"
+
+#: templates/Registrations/index.php:486 templates/Registrations/index.php:490
+msgid "Are you sure you want to delete %s?"
+msgstr "%을(를) 삭제하시겠습니까?"
+
+#: templates/Registrations/index.php:513
+msgid "Requests"
+msgstr "요청"
+
+#: templates/Registrations/index.php:527 templates/Registrations/index.php:529
+msgid "New Registration"
+msgstr "새로운 등록"
+
+#: templates/Registrations/index.php:558
+msgid "Export"
+msgstr "추출하기"
+
+#: templates/Registrations/index.php:560
+msgid "Export Order"
+msgstr "주문 추출하기"
+
+#: templates/Registrations/requests.php:3
+msgid "Partner Requests for {0}"
+msgstr "{0}님의 파트너 요청"
+
+#: templates/Registrations/requests.php:64
+msgid "Accept"
+msgstr "수락"
+
+#: templates/Registrations/requests.php:66
+msgid "Reject"
+msgstr "거절"
+
+#: templates/Registrations/requests.php:68
+msgid "Are you sure you want to reject the partner request from {0}?"
+msgstr "{0}님의 파트너 요청을 거절하시겠습니까?"
+
+#: templates/Users/forgot_password.php:7 templates/Users/forgot_password.php:15
+msgid "Request Password"
+msgstr "비밀번호 재발급 요청"
+
+#: templates/Users/login.php:15 templates/element/header.php:37
+msgid "Login"
+msgstr "로그인"
+
+#: templates/Users/login.php:21
+msgid "Forgot Password"
+msgstr "비밀번호 찾기"
+
+#: templates/Users/login.php:25
+msgid "Password"
+msgstr "비밀번호"
+
+#: templates/Users/login.php:39
+msgid "Remember me"
+msgstr "\"나\" 기억하기"
+
+#: templates/Users/profile.php:8
+msgid "Edit Profile"
+msgstr "프로필 수정"
+
+#: templates/Users/profile.php:14
+msgid "Pref. language"
+msgstr "선호 언어"
+
+#: templates/element/footer.php:8
+msgid "Privacy Policy"
+msgstr "개인정보 처리방침"
+
+#: templates/element/footer.php:17
+msgid "Impressum"
+msgstr "연락처"
+
+#: templates/element/footer.php:26
+msgid "Terms & Conditions"
+msgstr "이용 약관"
+
+#: templates/element/header.php:36
+msgid "Not logged in"
+msgstr "로그인 되지 않았습니다"
+
+#: templates/element/header.php:41
+#: plugins/Shop/templates/element/shop_header.php:4
+msgid "Register"
+msgstr "등록하기"
+
+#: templates/element/header.php:44
+msgid "Logged in as "
+msgstr "{}로 로그인 되었습니다 "
+
+#: templates/element/header.php:46
+msgid "Logout"
+msgstr "로그아웃"
+
+#: templates/element/savecancel.php:39
+msgid "Save"
+msgstr "저장"
+
+#: templates/element/savecancel.php:41
+#: plugins/Shop/templates/Shops/Payment/authorizenet.php:177
+#: plugins/Shop/templates/Shops/Payment/bpayment.php:121
+#: plugins/Shop/templates/Shops/Payment/card_pointe.php:91
+#: plugins/Shop/templates/Shops/Payment/dibs.php:110
+#: plugins/Shop/templates/Shops/Payment/dummy.php:102
+#: plugins/Shop/templates/Shops/Payment/ipayment.php:153
+#: plugins/Shop/templates/Shops/Payment/paypal_express.php:87
+#: plugins/Shop/templates/Shops/Payment/redsys.php:92
+#: plugins/Shop/templates/element/shop_footer.php:18
+msgid "Cancel"
+msgstr "취소"
+
+#: plugins/Shop/src/Controller/Component/OrderUpdateComponent.php:59
+#: plugins/Shop/src/Controller/Component/OrderUpdateComponent.php:175
+msgid "Unknown registration"
+msgstr "알 수 없는 등록"
+
+#: plugins/Shop/src/Controller/Component/OrderUpdateComponent.php:76
+msgid "Illegal type"
+msgstr "불법적인 유형"
+
+#: plugins/Shop/src/Controller/Component/OrderUpdateComponent.php:87
+msgid "Unknown user"
+msgstr "알 수 없는 사용자"
+
+#: plugins/Shop/src/Controller/Component/OrderUpdateComponent.php:157
+msgid "The order could be be stored"
+msgstr "주문은 저장됩니다"
+
+#: plugins/Shop/src/Controller/OrdersController.php:1359
+msgid "[{0}] Cancellation of registration {1} from {2}"
+msgstr "[{0}] {2}에서 등록 {1} 취소"
+
+#: plugins/Shop/src/Controller/ShopsController.php:209
+msgid "Accompanying Person"
+msgstr "동반자"
+
+#: plugins/Shop/src/Controller/ShopsController.php:211
+msgid "Coach"
+msgstr "코치"
+
+#: plugins/Shop/src/Controller/ShopsController.php:239
+#: plugins/Shop/src/Controller/ShopsController.php:259
+#: plugins/Shop/src/Controller/ShopsController.php:626
+#: plugins/Shop/src/Controller/ShopsController.php:640
+msgid ""
+"You cannot register players after registration closed for players on {0}"
+msgstr "{0} 이후에는 선수등록을 하실 수 없습니다."
+
+#: plugins/Shop/src/Controller/ShopsController.php:247
+#: plugins/Shop/src/Controller/ShopsController.php:631
+msgid ""
+"You cannot register players at the moment. Registration will open soon. "
+"Please visit <a href=\"{0}\" target=\"_blank\">{0}</a> for more information."
+msgstr ""
+"현재 플레이어를 등록할 수 없습니다. 등록은 곧 시작됩니다. 자세한 내용은 <a "
+"href=\"{0}\" target=\"_blank\">{0}</a>에서 확인하세요."
+
+#: plugins/Shop/src/Controller/ShopsController.php:252
+#: plugins/Shop/src/Controller/ShopsController.php:636
+msgid ""
+"You cannot register players before registration opens for players on {0}"
+msgstr "{0} 이전에는 선수 등록을 하실 수 없습니다."
+
+#: plugins/Shop/src/Controller/ShopsController.php:269
+msgid "The registration for players has been closed"
+msgstr "참가자(선수) 등록이 마감되었습니다"
+
+#: plugins/Shop/src/Controller/ShopsController.php:278
+msgid ""
+"Players are already sold out and adding more will put your registration on "
+"the waiting list"
+msgstr ""
+"선수 등록은 이미 마감되었으며, 추가 등록을 하실 경우 대기자 명단에 오르게 됩"
+"니다."
+
+#: plugins/Shop/src/Controller/ShopsController.php:287
+#: plugins/Shop/src/Controller/ShopsController.php:305
+msgid "The registration for accompanying persons has been closed"
+msgstr "참가자(동반자) 등록이 마감되었습니다"
+
+#: plugins/Shop/src/Controller/ShopsController.php:296
+msgid ""
+"Accompanying persons are already sold out and adding more will put your "
+"registration on the waiting list"
+msgstr ""
+"동반자 등록은 이미 마감되었으며, 추가 등록을 하실 경우 대기자 명단에 오르게 "
+"됩니다."
+
+#: plugins/Shop/src/Controller/ShopsController.php:314
+msgid ""
+"Coaches are already sold out and adding more will put your registration on "
+"the waiting list"
+msgstr ""
+"코치 등록은 이미 마감되었으며, 추가 등록을 하실 경우 대기자 명단에 오르게 됩"
+"니다."
+
+#: plugins/Shop/src/Controller/ShopsController.php:420
+msgid "You must fill out all required fields"
+msgstr "모든 필수 항목을 입력해주시기 바랍니다"
+
+#: plugins/Shop/src/Controller/ShopsController.php:431
+msgid "You must enter the date of birth for players"
+msgstr "선수의 생년월일을 입력해주시기 바랍니다"
+
+#: plugins/Shop/src/Controller/ShopsController.php:436
+msgid "The date of birth is not valid"
+msgstr "생년월일이 올바르지 않습니다"
+
+#: plugins/Shop/src/Controller/ShopsController.php:441
+msgid "You must be born in %d or earlier"
+msgstr "%d년 또는 그 이전 출생자만 참가할 수 있습니다"
+
+#: plugins/Shop/src/Controller/ShopsController.php:447
+msgid "Wrong birthday given"
+msgstr "생년월일이 올바르지 않습니다"
+
+#: plugins/Shop/src/Controller/ShopsController.php:485
+msgid ""
+"You must agree to the privacy policy when entering an email address or a "
+"phone number"
+msgstr ""
+"이메일 주소 또는 휴대전화 번호를 입력하시는 경우, 반드시 개인정보 처리방침에 "
+"동의해주시기 바랍니다"
+
+#: plugins/Shop/src/Controller/ShopsController.php:531
+msgid "The phone number is invalid"
+msgstr "올바르지 않은 휴대전화 번호 형식입니다"
+
+#: plugins/Shop/src/Controller/ShopsController.php:539
+msgid "The email address has an invalid format"
+msgstr "올바르지 않은 이메일 주소 형식입니다"
+
+#: plugins/Shop/src/Controller/ShopsController.php:609
+msgid ""
+"You cannot register people at the moment. Registration will open soon. "
+"Please visit <a href=\"{0}\" target=\"_blank\">{0}</a> for more information."
+msgstr ""
+"현재 사용자를 등록할 수 없습니다. 등록은 곧 시작됩니다. 자세한 내용은 <a "
+"href=\"{0}\" target=\"_blank\">{0}</a>을(를) 방문하세요."
+
+#: plugins/Shop/src/Controller/ShopsController.php:614
+msgid "You cannot register people before registration opens on {0}"
+msgstr "{0} 이전에는 등록을 하실 수 없습니다."
+
+#: plugins/Shop/src/Controller/ShopsController.php:620
+msgid "You cannot register people after registration closed on {0}"
+msgstr "{0} 이후에는 등록을 하실 수 없습니다."
+
+#: plugins/Shop/src/Controller/ShopsController.php:708
+msgid "You have to register people"
+msgstr "참가자 등록이 필요합니다"
+
+#: plugins/Shop/src/Controller/ShopsController.php:840
+msgid "You have to register people or buy something"
+msgstr "참가자 등록 또는 상품 구매를 하셔야 합니다"
+
+#: plugins/Shop/src/Controller/ShopsController.php:989
+msgid "Given name cannot be empty"
+msgstr "이름을 입력해 주시기 바랍니다"
+
+#: plugins/Shop/src/Controller/ShopsController.php:994
+msgid "Family name cannot be empty"
+msgstr "성을 입력해 주시기 바랍니다"
+
+#: plugins/Shop/src/Controller/ShopsController.php:999
+msgid "Street name cannot be empty"
+msgstr "주소를 입력해 주시기 바랍니다"
+
+#: plugins/Shop/src/Controller/ShopsController.php:1004
+msgid "Zip code cannot be empty"
+msgstr "우편번호를 입력해 주시기 바랍니다"
+
+#: plugins/Shop/src/Controller/ShopsController.php:1009
+msgid "City cannot be empty"
+msgstr "도시를 입력해 주시기 바랍니다"
+
+#: plugins/Shop/src/Controller/ShopsController.php:1014
+msgid "Country cannot be empty"
+msgstr "국가를 입력해 주시기 바랍니다"
+
+#: plugins/Shop/src/Controller/ShopsController.php:1019
+msgid "Email address cannot be empty"
+msgstr "이메일 주소를 입력해 주시기 바랍니다"
+
+#: plugins/Shop/src/Controller/ShopsController.php:1061
+msgid "You must agree to the terms and conditions"
+msgstr "이용 약관에 동의해 주시기 바랍니다"
+
+#: plugins/Shop/src/Controller/ShopsController.php:1457
+msgid "[{0}] Your registration {1} from {2}"
+msgstr "[{0}] {2}에서 등록한 {1}"
+
+#: plugins/Shop/src/Controller/ShopsController.php:1585
+msgid "[{0}] Your voucher for your registration {1} from {2}"
+msgstr "[{0}] {2}에서 등록한 {1}에 대한 바우처입니다"
+
+#: plugins/Shop/src/Controller/ShopsController.php:1848
+msgid "The order was not found"
+msgstr "주문을 찾을 수 없습니다."
+
+#: plugins/Shop/src/Controller/ShopsController.php:1919
+#: plugins/Shop/src/Controller/ShopsController.php:1927
+msgid "Invalid registration"
+msgstr "잘못된 등록입니다"
+
+#: plugins/Shop/src/Controller/ShopsController.php:1932
+msgid "The registration was already paid for"
+msgstr "등록비가 이미 지불되었습니다"
+
+#: plugins/Shop/src/Controller/ShopsController.php:1942
+msgid "You cannot pay for this registration at this moment"
+msgstr "현재 이 등록 건에 대해 결제하실 수 없습니다"
+
+#: plugins/Shop/src/Payment/NestPayPayment.php:160
+msgid "An error occured"
+msgstr "에러가 발생하였습니다"
+
+#: plugins/Shop/templates/Shops/Payment/authorizenet.php:35
+#: plugins/Shop/templates/Shops/Payment/authorizenet.php:43
+#: plugins/Shop/templates/Shops/Payment/bpayment.php:60
+#: plugins/Shop/templates/Shops/Payment/bpayment.php:64
+#: plugins/Shop/templates/Shops/Payment/card_pointe.php:33
+#: plugins/Shop/templates/Shops/Payment/card_pointe.php:37
+#: plugins/Shop/templates/Shops/Payment/dibs.php:49
+#: plugins/Shop/templates/Shops/Payment/dibs.php:53
+#: plugins/Shop/templates/Shops/Payment/dummy.php:38
+#: plugins/Shop/templates/Shops/Payment/dummy.php:42
+#: plugins/Shop/templates/Shops/Payment/ipayment.php:30
+#: plugins/Shop/templates/Shops/Payment/ipayment.php:38
+#: plugins/Shop/templates/Shops/Payment/nestpay.php:37
+#: plugins/Shop/templates/Shops/Payment/nestpay.php:41
+#: plugins/Shop/templates/Shops/Payment/netseasy.php:31
+#: plugins/Shop/templates/Shops/Payment/paypal_express.php:40
+#: plugins/Shop/templates/Shops/Payment/paypal_express.php:44
+#: plugins/Shop/templates/Shops/Payment/paypal_standard.php:36
+#: plugins/Shop/templates/Shops/Payment/paypal_standard.php:40
+#: plugins/Shop/templates/Shops/Payment/positivity.php:33
+#: plugins/Shop/templates/Shops/Payment/positivity.php:37
+#: plugins/Shop/templates/Shops/Payment/redsys.php:40
+#: plugins/Shop/templates/Shops/Payment/redsys.php:44
+#: plugins/Shop/templates/Shops/Payment/smartpay.php:33
+#: plugins/Shop/templates/Shops/Payment/smartpay.php:37
+#: plugins/Shop/templates/Shops/Payment/sogecommerce.php:33
+#: plugins/Shop/templates/Shops/Payment/sogecommerce.php:37
+#: plugins/Shop/templates/Shops/Payment/stripe.php:41
+#: plugins/Shop/templates/element/creditcard.php:38
+#: plugins/Shop/templates/element/creditcard.php:42
+msgid "The payment could not be initiated. Please try again later."
+msgstr "결제를 진행할 수 없습니다. 나중에 다시 시도해 주세요."
+
+#: plugins/Shop/templates/Shops/Payment/authorizenet.php:54
+#: plugins/Shop/templates/Shops/Payment/bpayment.php:80
+#: plugins/Shop/templates/Shops/Payment/card_pointe.php:48
+#: plugins/Shop/templates/Shops/Payment/dibs.php:64
+#: plugins/Shop/templates/Shops/Payment/dummy.php:71
+#: plugins/Shop/templates/Shops/Payment/ipayment.php:49
+#: plugins/Shop/templates/Shops/Payment/nestpay.php:51
+#: plugins/Shop/templates/Shops/Payment/netseasy.php:42
+#: plugins/Shop/templates/Shops/Payment/paypal_express.php:55
+#: plugins/Shop/templates/Shops/Payment/paypal_standard.php:169
+#: plugins/Shop/templates/Shops/Payment/positivity.php:48
+#: plugins/Shop/templates/Shops/Payment/redsys.php:60
+#: plugins/Shop/templates/Shops/Payment/smartpay.php:48
+#: plugins/Shop/templates/Shops/Payment/sogecommerce.php:48
+#: plugins/Shop/templates/Shops/Payment/stripe.php:52
+#: plugins/Shop/templates/Shops/pay.php:4
+msgid "Please wait while your payment is being processed."
+msgstr "결제가 저리되는 중입니다. 잠시만 기다려 주세요."
+
+#: plugins/Shop/templates/Shops/Payment/authorizenet.php:56
+#: plugins/Shop/templates/Shops/Payment/bpayment.php:82
+#: plugins/Shop/templates/Shops/Payment/card_pointe.php:50
+#: plugins/Shop/templates/Shops/Payment/dibs.php:66
+#: plugins/Shop/templates/Shops/Payment/dummy.php:73
+#: plugins/Shop/templates/Shops/Payment/ipayment.php:51
+#: plugins/Shop/templates/Shops/Payment/netseasy.php:44
+#: plugins/Shop/templates/Shops/Payment/paypal_express.php:57
+#: plugins/Shop/templates/Shops/Payment/positivity.php:50
+#: plugins/Shop/templates/Shops/Payment/redsys.php:62
+#: plugins/Shop/templates/Shops/Payment/smartpay.php:50
+#: plugins/Shop/templates/Shops/Payment/sogecommerce.php:50
+#: plugins/Shop/templates/Shops/Payment/stripe.php:54
+#: plugins/Shop/templates/Shops/pay.php:6
+msgid "This may take several minutes."
+msgstr "이 작업은 몇 분 정도 소요될 수 있습니다."
+
+#: plugins/Shop/templates/Shops/Payment/authorizenet.php:63
+#: plugins/Shop/templates/Shops/Payment/bpayment.php:89
+#: plugins/Shop/templates/Shops/Payment/card_pointe.php:57
+#: plugins/Shop/templates/Shops/Payment/dibs.php:73
+#: plugins/Shop/templates/Shops/Payment/dummy.php:82
+#: plugins/Shop/templates/Shops/Payment/ipayment.php:58
+#: plugins/Shop/templates/Shops/Payment/nestpay.php:59
+#: plugins/Shop/templates/Shops/Payment/netseasy.php:50
+#: plugins/Shop/templates/Shops/Payment/paypal_express.php:64
+#: plugins/Shop/templates/Shops/Payment/paypal_standard.php:183
+#: plugins/Shop/templates/Shops/Payment/positivity.php:56
+#: plugins/Shop/templates/Shops/Payment/redsys.php:69
+#: plugins/Shop/templates/Shops/Payment/smartpay.php:56
+#: plugins/Shop/templates/Shops/Payment/sogecommerce.php:56
+#: plugins/Shop/templates/Shops/Payment/stripe.php:60
+#: plugins/Shop/templates/Shops/pay.php:11
+msgid "Billing Information"
+msgstr "청구 정보"
+
+#: plugins/Shop/templates/Shops/Payment/authorizenet.php:66
+#: plugins/Shop/templates/Shops/Payment/ipayment.php:61
+msgid "Select your credit card and enter name and address of the card holder."
+msgstr "사용하실 신용카드를 선택하고 카드 소지자의 이름과 주소를 입력하세요."
+
+#: plugins/Shop/templates/Shops/Payment/authorizenet.php:67
+#: plugins/Shop/templates/Shops/Payment/bpayment.php:92
+#: plugins/Shop/templates/Shops/Payment/card_pointe.php:60
+#: plugins/Shop/templates/Shops/Payment/dibs.php:76
+#: plugins/Shop/templates/Shops/Payment/ipayment.php:62
+#: plugins/Shop/templates/Shops/Payment/nestpay.php:62
+#: plugins/Shop/templates/Shops/Payment/netseasy.php:53
+#: plugins/Shop/templates/Shops/Payment/paypal_express.php:67
+#: plugins/Shop/templates/Shops/Payment/paypal_standard.php:186
+#: plugins/Shop/templates/Shops/Payment/positivity.php:59
+#: plugins/Shop/templates/Shops/Payment/redsys.php:72
+#: plugins/Shop/templates/Shops/Payment/smartpay.php:59
+#: plugins/Shop/templates/Shops/Payment/sogecommerce.php:59
+#: plugins/Shop/templates/Shops/Payment/stripe.php:63
+#: plugins/Shop/templates/Shops/pay.php:14
+msgid "Payment will be processed in a secure way by {0}."
+msgstr "결제는 {0}에 의해 안전하게 처리됩니다."
+
+#: plugins/Shop/templates/Shops/Payment/authorizenet.php:84
+#: plugins/Shop/templates/Shops/Payment/bpayment.php:112
+#: plugins/Shop/templates/Shops/Payment/card_pointe.php:82
+#: plugins/Shop/templates/Shops/Payment/dibs.php:101
+#: plugins/Shop/templates/Shops/Payment/dummy.php:86
+#: plugins/Shop/templates/Shops/Payment/ipayment.php:71
+#: plugins/Shop/templates/Shops/Payment/nestpay.php:86
+#: plugins/Shop/templates/Shops/Payment/nestpay.php:94
+#: plugins/Shop/templates/Shops/Payment/netseasy.php:61
+#: plugins/Shop/templates/Shops/Payment/paypal_express.php:78
+#: plugins/Shop/templates/Shops/Payment/paypal_standard.php:193
+#: plugins/Shop/templates/Shops/Payment/positivity.php:67
+#: plugins/Shop/templates/Shops/Payment/redsys.php:83
+#: plugins/Shop/templates/Shops/Payment/smartpay.php:67
+#: plugins/Shop/templates/Shops/Payment/sogecommerce.php:67
+#: plugins/Shop/templates/Shops/Payment/stripe.php:71
+#: plugins/Shop/templates/element/creditcard.php:55
+msgid "Amount"
+msgstr "총액"
+
+#: plugins/Shop/templates/Shops/Payment/authorizenet.php:93
+#: plugins/Shop/templates/Shops/Payment/ipayment.php:79
+#: plugins/Shop/templates/Shops/payment_selection.php:21
+#: plugins/Shop/templates/Shops/payment_selection.php:26
+#: plugins/Shop/templates/Shops/payment_selection.php:28
+msgid "Credit Card"
+msgstr "신용카드"
+
+#: plugins/Shop/templates/Shops/Payment/authorizenet.php:95
+#: plugins/Shop/templates/Shops/Payment/ipayment.php:81
+msgid "Select credit card type"
+msgstr "신용카드 유형을 선택하세요"
+
+#: plugins/Shop/templates/Shops/Payment/authorizenet.php:103
+#: plugins/Shop/templates/Shops/Payment/ipayment.php:88
+msgid "Card no."
+msgstr "카드 번호"
+
+#: plugins/Shop/templates/Shops/Payment/authorizenet.php:110
+#: plugins/Shop/templates/Shops/Payment/ipayment.php:95
+msgid "CVV code"
+msgstr "CVV 번호(3자리)"
+
+#: plugins/Shop/templates/Shops/Payment/authorizenet.php:117
+#: plugins/Shop/templates/Shops/Payment/ipayment.php:102
+msgid "Card expires"
+msgstr "카드 유효기간"
+
+#: plugins/Shop/templates/Shops/Payment/authorizenet.php:142
+msgid "Card holder given name"
+msgstr "카드 소유자의 이름"
+
+#: plugins/Shop/templates/Shops/Payment/authorizenet.php:149
+msgid "Card holder family name"
+msgstr "카드 소유자의 성"
+
+#: plugins/Shop/templates/Shops/Payment/authorizenet.php:156
+#: plugins/Shop/templates/Shops/Payment/ipayment.php:132
+#: plugins/Shop/templates/Shops/address.php:127
+#: plugins/Shop/templates/element/shop_address.php:19
+msgid "Street"
+msgstr "도로명 주소"
+
+#: plugins/Shop/templates/Shops/Payment/authorizenet.php:160
+#: plugins/Shop/templates/Shops/Payment/ipayment.php:136
+#: plugins/Shop/templates/Shops/address.php:132
+msgid "Postal code"
+msgstr "우편번호"
+
+#: plugins/Shop/templates/Shops/Payment/authorizenet.php:164
+#: plugins/Shop/templates/Shops/Payment/ipayment.php:140
+#: plugins/Shop/templates/Shops/address.php:137
+#: plugins/Shop/templates/element/shop_address.php:21
+msgid "City"
+msgstr "도시"
+
+#: plugins/Shop/templates/Shops/Payment/authorizenet.php:168
+#: plugins/Shop/templates/Shops/Payment/ipayment.php:144
+#: plugins/Shop/templates/Shops/address.php:142
+#: plugins/Shop/templates/element/shop_address.php:23
+#: plugins/Shop/templates/element/shop_people.php:159
+msgid "Country"
+msgstr "국가"
+
+#: plugins/Shop/templates/Shops/Payment/authorizenet.php:170
+#: plugins/Shop/templates/Shops/Payment/ipayment.php:146
+#: plugins/Shop/templates/Shops/address.php:145
+msgid "Select Country"
+msgstr "국가를 선택해 주시기 바랍니다"
+
+#: plugins/Shop/templates/Shops/Payment/authorizenet.php:180
+#: plugins/Shop/templates/Shops/Payment/bpayment.php:124
+#: plugins/Shop/templates/Shops/Payment/card_pointe.php:94
+#: plugins/Shop/templates/Shops/Payment/dibs.php:113
+#: plugins/Shop/templates/Shops/Payment/dummy.php:105
+#: plugins/Shop/templates/Shops/Payment/ipayment.php:156
+#: plugins/Shop/templates/Shops/Payment/paypal_express.php:90
+#: plugins/Shop/templates/Shops/Payment/redsys.php:95
+#: plugins/Shop/templates/element/shop_footer.php:22
+msgid "Previous"
+msgstr "이전"
+
+#: plugins/Shop/templates/Shops/Payment/authorizenet.php:183
+#: plugins/Shop/templates/Shops/Payment/bpayment.php:127
+#: plugins/Shop/templates/Shops/Payment/card_pointe.php:97
+#: plugins/Shop/templates/Shops/Payment/dibs.php:116
+#: plugins/Shop/templates/Shops/Payment/dummy.php:108
+#: plugins/Shop/templates/Shops/Payment/ipayment.php:159
+#: plugins/Shop/templates/Shops/Payment/nestpay.php:106
+#: plugins/Shop/templates/Shops/Payment/netseasy.php:72
+#: plugins/Shop/templates/Shops/Payment/paypal_express.php:93
+#: plugins/Shop/templates/Shops/Payment/paypal_standard.php:204
+#: plugins/Shop/templates/Shops/Payment/positivity.php:78
+#: plugins/Shop/templates/Shops/Payment/redsys.php:98
+#: plugins/Shop/templates/Shops/Payment/smartpay.php:78
+#: plugins/Shop/templates/Shops/Payment/sogecommerce.php:78
+#: plugins/Shop/templates/Shops/Payment/stripe.php:82
+#: plugins/Shop/templates/Shops/banktransfer.php:12
+msgid "Confirm Registration"
+msgstr "등록 확인"
+
+#: plugins/Shop/templates/Shops/Payment/bpayment.php:93
+#: plugins/Shop/templates/Shops/Payment/card_pointe.php:61
+#: plugins/Shop/templates/Shops/Payment/dibs.php:77
+#: plugins/Shop/templates/Shops/Payment/nestpay.php:63
+#: plugins/Shop/templates/Shops/Payment/netseasy.php:54
+#: plugins/Shop/templates/Shops/Payment/paypal_express.php:68
+#: plugins/Shop/templates/Shops/Payment/paypal_standard.php:187
+#: plugins/Shop/templates/Shops/Payment/positivity.php:60
+#: plugins/Shop/templates/Shops/Payment/redsys.php:73
+#: plugins/Shop/templates/Shops/Payment/smartpay.php:60
+#: plugins/Shop/templates/Shops/Payment/sogecommerce.php:60
+#: plugins/Shop/templates/Shops/Payment/stripe.php:64
+#: plugins/Shop/templates/Shops/pay.php:15
+msgid ""
+"After the payment is completed you will be redirected to the registration."
+msgstr "결제가 완료되면 등록 페이지로 이동합니다."
+
+#: plugins/Shop/templates/Shops/Payment/dummy.php:94
+msgid "Return Error"
+msgstr "오류 시 되돌아가기"
+
+#: plugins/Shop/templates/Shops/Payment/ipayment.php:125
+msgid "Card holder"
+msgstr "카드 소유주"
+
+#: plugins/Shop/templates/Shops/Payment/nestpay.php:53
+#: plugins/Shop/templates/Shops/Payment/paypal_standard.php:171
+msgid "This may take a few moments ."
+msgstr "이 작업은 몇 분 정도 소요될 수 있습니다."
+
+#: plugins/Shop/templates/Shops/Payment/nestpay.php:67
+msgid "Payment will be done in {0} using an exchange rate 1 {1} to {2} {3}"
+msgstr "결제는 {0}에서 1 {1} ~ {2} {3}의 환율을 사용하여 이루어집니다."
+
+#: plugins/Shop/templates/Shops/Payment/nestpay.php:71
+msgid ""
+"The amount your credit card will be charged for is obtained through the "
+"conversion of the price in Euro in Serbian dinar according to the current "
+"exchange rate of the Serbian National Bank. When charging your credit card "
+"the same amount is converted into your local currency according to the "
+"exchange rate of the credit card associations. As a result of this "
+"conversion there is a possibility of a slight difference from the original "
+"price stated in our web site."
+msgstr ""
+"신용카드 결제 금액은 한국은행의 현재 환율을 적용하여 미국 달러화 가격을 대한"
+"민국 원화로 환산하여 계산됩니다. 신용카드 결제 시에는 동일한 금액이 신용카드 "
+"협회의 환율에 따라 현지 통화로 환산됩니다. 이러한 환산으로 인해 웹사이트에 명"
+"시된 원래 가격과 약간의 차이가 발생할 수 있습니다."
+
+#: plugins/Shop/templates/Shops/add_person.php:143
+msgid "Add Player or Accompanying Person"
+msgstr "선수 또는 동반자 추가하기"
+
+#: plugins/Shop/templates/Shops/add_person.php:147
+msgid "Enter here the data for players or accompanying persons."
+msgstr "선수 또는 동반자의 정보를 입력해 주시기 바랍니다."
+
+#: plugins/Shop/templates/Shops/add_person.php:151
+msgid "For players the birthday is required."
+msgstr "선수의 경우 생년월일 입력이 필수입니다."
+
+#: plugins/Shop/templates/Shops/add_person.php:155
+msgid "For players you may add email and a phone number of a cell phone."
+msgstr ""
+"선수를 추가하는 경우, 이메일과 휴대전화 번호를 추가로 입력할 수 있습니다."
+
+#: plugins/Shop/templates/Shops/add_person.php:159
+msgid ""
+"If you enter an email address, this player will also receive the "
+"notifications when he is requested as a double partner or a double partner "
+"is chosen for him."
+msgstr ""
+"이메일 주소를 입력해주시면, 선수가 복식 파트너 요청을 받거나 파트너로 지정되"
+"었을 때 알림을 받을 수 있습니다."
+
+#: plugins/Shop/templates/Shops/add_person.php:163
+msgid ""
+"If you enter a phone number the player will receive free SMS notifications "
+"about schedules and results of his matches, if the organizer chooses to do "
+"so."
+msgstr ""
+"휴대전화 번호를 입력해주시면, 경기 일정 및 결과에 대한 무료 SMS 알림을 받을 "
+"수 있습니다."
+
+#: plugins/Shop/templates/Shops/add_person.php:167
+msgid ""
+"By entering email address or phone number you must agree to the terms and "
+"conditions."
+msgstr ""
+"이메일 주소 또는 휴대전화 번호를 입력하시는 경우, 반드시 이용 약관에 동의해주"
+"시기 바랍니다."
+
+#: plugins/Shop/templates/Shops/add_person.php:171
+msgid "You can add or change email address and phone number later, too."
+msgstr "이메일 주소와 휴대전화 번호는 추후에 추가 및 변경이 가능합니다."
+
+#: plugins/Shop/templates/Shops/add_person.php:175
+msgid ""
+"If you are a Paralympic Athlete flag the appropriate field and put your "
+"international classification."
+msgstr ""
+"If you are a Paralympic Athlete flag the appropriate field and put your "
+"international classification."
+
+#: plugins/Shop/templates/Shops/add_person.php:302
+msgid "Mobile"
+msgstr "전화번호"
+
+#: plugins/Shop/templates/Shops/add_person.php:313
+msgid "I agree to the %s regarding email address and phone number"
+msgstr "이메일 주소 및 전화번호와 관련하여 %s에 동의합니다"
+
+#: plugins/Shop/templates/Shops/add_person.php:315
+msgid "privacy policy"
+msgstr "개인정보 처리방침"
+
+#: plugins/Shop/templates/Shops/add_person.php:332
+#: plugins/Shop/templates/Shops/address.php:171
+msgid "I agree to receive newsletters"
+msgstr "뉴스레터 수신에 동의합니다"
+
+#: plugins/Shop/templates/Shops/address.php:82
+#: plugins/Shop/templates/Shops/review.php:28
+#: plugins/Shop/templates/Shops/success.php:63
+msgid "Billing Address"
+msgstr "청구지 주소"
+
+#: plugins/Shop/templates/Shops/address.php:86
+msgid "Enter here your billing address."
+msgstr "청구지 주소를 입력해주세요."
+
+#: plugins/Shop/templates/Shops/address.php:90
+msgid "All fields are required."
+msgstr "모든 항목을 입력해주시기 바랍니다."
+
+#: plugins/Shop/templates/Shops/address.php:94
+msgid "Please make sure you enter a valid email address."
+msgstr "올바른 이메일 주소를 입력해 주시기 바랍니다."
+
+#: plugins/Shop/templates/Shops/address.php:107
+#: plugins/Shop/templates/element/shop_address.php:15
+msgid "Title"
+msgstr "항목"
+
+#: plugins/Shop/templates/Shops/address.php:110
+msgid "Mr"
+msgstr "남성"
+
+#: plugins/Shop/templates/Shops/address.php:110
+msgid "Mrs"
+msgstr "여성"
+
+#: plugins/Shop/templates/Shops/address.php:111
+msgid "Please select"
+msgstr "선택해주시기 바랍니다"
+
+#: plugins/Shop/templates/Shops/address.php:114
+#: plugins/Shop/templates/element/shop_people.php:67
+#: plugins/Shop/templates/element/shop_people.php:158
+#: plugins/Shop/templates/element/voucher.php:39
+msgid "Given name"
+msgstr "이름"
+
+#: plugins/Shop/templates/Shops/address.php:120
+#: plugins/Shop/templates/element/shop_people.php:66
+#: plugins/Shop/templates/element/shop_people.php:157
+#: plugins/Shop/templates/element/voucher.php:38
+msgid "Family name"
+msgstr "성"
+
+#: plugins/Shop/templates/Shops/banktransfer.php:4
+msgid "Payment by Bank Transfer"
+msgstr "은행 송금 결제"
+
+#: plugins/Shop/templates/Shops/banktransfer.php:7
+msgid "You will receive instructions in your confirmation email."
+msgstr ""
+"등록 확인 메일이 발송될 예정이며, 해당 메일에서 안내와 인보이스를 확인하실 "
+"수 있습니다."
+
+#: plugins/Shop/templates/Shops/banktransfer.php:9
+msgid ""
+"Please note that your registration is not valid until we have received the "
+"full amount of due payment."
+msgstr "등록은 인보이스에 기재된 금액을 전액 납부하셔야 완료됩니다."
+
+#: plugins/Shop/templates/Shops/buy.php:29
+msgid "You must select a variant"
+msgstr "종류를 선택하세요"
+
+#: plugins/Shop/templates/Shops/buy.php:121
+#: plugins/Shop/templates/Shops/buy.php:321
+#: plugins/Shop/templates/element/shop_people.php:122
+#: plugins/Shop/templates/element/shop_people.php:185
+msgid "Remove"
+msgstr "삭제"
+
+#: plugins/Shop/templates/Shops/buy.php:168
+msgid "Buy Additional Articles"
+msgstr "추가 상품 구매하기"
+
+#: plugins/Shop/templates/Shops/buy.php:173
+msgid "Here you may buy additional items, e.g. tickets for the gala dinner."
+msgstr "갈라디너 티켓 등 추가 상품은 현재 페이지에서 구매하실 수 있습니다."
+
+#: plugins/Shop/templates/Shops/buy.php:178
+msgid "Available Articles"
+msgstr "구매 가능 상품"
+
+#: plugins/Shop/templates/Shops/buy.php:203
+#: plugins/Shop/templates/Shops/buy.php:264
+msgid "Add"
+msgstr "담기"
+
+#: plugins/Shop/templates/Shops/buy.php:216
+#: plugins/Shop/templates/Shops/buy.php:282
+msgid "Article"
+msgstr "상품명"
+
+#: plugins/Shop/templates/Shops/buy.php:217
+#: plugins/Shop/templates/Shops/buy.php:283
+msgid "Variant"
+msgstr "종류"
+
+#: plugins/Shop/templates/Shops/buy.php:218
+#: plugins/Shop/templates/element/shop_order.php:29
+#: plugins/Shop/templates/element/voucher.php:90
+msgid "Description"
+msgstr "설명"
+
+#: plugins/Shop/templates/Shops/buy.php:219
+msgid "Photo"
+msgstr "사진"
+
+#: plugins/Shop/templates/Shops/buy.php:220
+#: plugins/Shop/templates/Shops/buy.php:284
+msgid "Price"
+msgstr "가격"
+
+#: plugins/Shop/templates/Shops/buy.php:242
+msgid "Select"
+msgstr "선택"
+
+#: plugins/Shop/templates/Shops/buy.php:262
+msgid "Sold out"
+msgstr "매진"
+
+#: plugins/Shop/templates/Shops/buy.php:278
+msgid "Shopping Cart"
+msgstr "장바구니"
+
+#: plugins/Shop/templates/Shops/buy.php:285
+msgid "Quantity"
+msgstr "수량"
+
+#: plugins/Shop/templates/Shops/buy.php:345
+msgid "Please visit our shop"
+msgstr "\"샵\" 기능을 이용해주세요"
+
+#: plugins/Shop/templates/Shops/failure.php:2
+msgid "An error has occured"
+msgstr "에러가 발생하였습니다"
+
+#: plugins/Shop/templates/Shops/payment_selection.php:4
+msgid "Select Payment Method"
+msgstr "결제 수단을 선택해 주시기 바랍니다"
+
+#: plugins/Shop/templates/Shops/payment_selection.php:9
+#: plugins/Shop/templates/Shops/payment_selection.php:14
+#: plugins/Shop/templates/Shops/payment_selection.php:16
+msgid "Bank Transfer"
+msgstr "은행 송금"
+
+#: plugins/Shop/templates/Shops/payment_selection.php:10
+msgid "You may pay by bank transfer"
+msgstr "은행 송금을 통해 결제하실 수 있습니다"
+
+#: plugins/Shop/templates/Shops/payment_selection.php:22
+msgid "We accept MasterCard and Visa"
+msgstr "MasterCard 와 Visa를 통해 결제하실 수 있습니다"
+
+#: plugins/Shop/templates/Shops/payment_selection.php:33
+#: plugins/Shop/templates/Shops/payment_selection.php:41
+#: plugins/Shop/templates/Shops/payment_selection.php:43
+msgid "PayPal"
+msgstr "PayPal"
+
+#: plugins/Shop/templates/Shops/payment_selection.php:35
+msgid "You may pay with PayPal"
+msgstr "PayPal을 통해 결제하실 수 있습니다"
+
+#: plugins/Shop/templates/Shops/payment_selection.php:37
+msgid "You may pay with PayPal or credit card"
+msgstr "PayPal 또는 신용카드를 통해 결제하실 수 있습니다"
+
+#: plugins/Shop/templates/Shops/payment_selection.php:51
+msgid "Payment Method"
+msgstr "결제 수단"
+
+#: plugins/Shop/templates/Shops/people.php:20
+msgid "Register Players and Accompanying Persons"
+msgstr "선수 및 동반자 등록"
+
+#: plugins/Shop/templates/Shops/people.php:24
+msgid "Register here your players and accompanying persons."
+msgstr "여기에 플레이어와 동반자를 등록하세요."
+
+#: plugins/Shop/templates/Shops/people.php:28
+msgid ""
+"Initially, players will be put into the competitions of their age category."
+msgstr ""
+"처음에는 선수들이 본인의 연령 카테고리에 해당하는 경기 종목(MS40, MD40, XD40 "
+"등)에 배정됩니다."
+
+#: plugins/Shop/templates/Shops/people.php:32
+msgid ""
+"If your player chooses a double partner of a different age category later, "
+"both of them will be put into the correct age category automatically."
+msgstr ""
+"이후 다른 연령대의 복식 파트너를 선택하면, 두 선수 모두 자동으로 해당 연령 카"
+"테고리에 배정됩니다."
+
+#: plugins/Shop/templates/Shops/people.php:39
+msgid "Add Person"
+msgstr "참가자 추가"
+
+#: plugins/Shop/templates/Shops/people.php:51
+msgid "You have not registered any player. Are you sure you want to continue?"
+msgstr ""
+"등록을 위해 참가자 추가를 먼저 진행해주시기 바랍니다. 그래도 계속 진행하시겠"
+"습니까?"
+
+#: plugins/Shop/templates/Shops/review.php:8
+msgid "Review Registration"
+msgstr "등록 및 구매내역 확인"
+
+#: plugins/Shop/templates/Shops/review.php:12
+msgid "Please review your registration."
+msgstr "등록 및 구매내역을 확인해 주시기 바랍니다."
+
+#: plugins/Shop/templates/Shops/review.php:16
+msgid "You have to agree to the terms and conditions before you can proceed."
+msgstr "계속 진행하시려면 이용 약관에 동의해 주시기 바랍니다."
+
+#: plugins/Shop/templates/Shops/review.php:36
+msgid "I agree to the {0}"
+msgstr "나는 {0}에 동의합니다."
+
+#: plugins/Shop/templates/Shops/review.php:36
+msgid "terms and conditions"
+msgstr "이용 약관"
+
+#: plugins/Shop/templates/Shops/success.php:2
+msgid "Your registration has been completed"
+msgstr "귀하의 등록 신청이 완료되었습니다"
+
+#: plugins/Shop/templates/Shops/success.php:15
+msgid "Your registration has been placed on the waiting list."
+msgstr "귀하의 등록은 대기자 명단에 올라갔습니다."
+
+#: plugins/Shop/templates/Shops/success.php:17
+#: plugins/Shop/templates/email/html/order.php:142
+#: plugins/Shop/templates/email/text/order.php:28
+msgid "The waiting list is processed on a first come first served basis."
+msgstr "대기자 명단은 선착순으로 처리됩니다."
+
+#: plugins/Shop/templates/Shops/success.php:19
+#: plugins/Shop/templates/email/html/order.php:144
+#: plugins/Shop/templates/email/text/order.php:30
+msgid "We will notify you by email when it is possible for you to register."
+msgstr "등록 가능 시 이메일로 안내해드리겠습니다."
+
+#: plugins/Shop/templates/Shops/success.php:21
+#: plugins/Shop/templates/email/html/order.php:146
+#: plugins/Shop/templates/email/text/order.php:32
+msgid ""
+"Please do not pay the registration fee unless you have been asked to do so."
+msgstr "별도 안내를 받기 전에는 등록비를 결제하지 말아주시기 바랍니다."
+
+#: plugins/Shop/templates/Shops/success.php:23
+msgid ""
+"An email with your invoice and instructions how to proceed has been sent to "
+"you."
+msgstr "인보이스와 결제 진행 절차에 대한 안내 이메일을 발송했습니다."
+
+#: plugins/Shop/templates/Shops/success.php:25
+msgid "An email with your invoice has been sent to you."
+msgstr "인보이스가 이메일로 발송되었습니다."
+
+#: plugins/Shop/templates/Shops/success.php:27
+msgid ""
+"Once we have received your payment instructions on how to proceed will be "
+"sent to you."
+msgstr ""
+"귀하의 결제가 접수되면 진행 방법에 대한 지침이 귀하의 이메일로 전송됩니다."
+
+#: plugins/Shop/templates/Shops/success.php:41
+msgid "Download invoice"
+msgstr "인보이스 다운로드"
+
+#: plugins/Shop/templates/Shops/success.php:48
+msgid "Invoice number"
+msgstr "인보이스 번호"
+
+#: plugins/Shop/templates/Shops/success.php:52
+msgid "Registration"
+msgstr "등록 및 구매 내역"
+
+#: plugins/Shop/templates/Shops/success.php:71
+msgid "Banking Account"
+msgstr "계좌 번호"
+
+#: plugins/Shop/templates/Shops/success.php:74
+#: plugins/Shop/templates/element/receipt.php:164
+#: plugins/Shop/templates/email/html/cancel.php:198
+#: plugins/Shop/templates/email/html/order.php:346
+msgid "VAT Reg Id"
+msgstr "부가가치세 등록 번호"
+
+#: plugins/Shop/templates/Shops/success.php:78
+#: plugins/Shop/templates/element/receipt.php:95
+#: plugins/Shop/templates/email/html/cancel.php:148
+#: plugins/Shop/templates/email/html/order.php:278
+msgid "Bank"
+msgstr "은행명"
+
+#: plugins/Shop/templates/Shops/success.php:82
+#: plugins/Shop/templates/element/receipt.php:140
+#: plugins/Shop/templates/email/html/cancel.php:174
+#: plugins/Shop/templates/email/html/order.php:322
+msgid "Account Holder"
+msgstr "계좌 소유주"
+
+#: plugins/Shop/templates/Shops/success.php:86
+#: plugins/Shop/templates/element/receipt.php:107
+#: plugins/Shop/templates/email/html/cancel.php:160
+#: plugins/Shop/templates/email/html/order.php:296
+msgid "IBAN"
+msgstr "IBAN"
+
+#: plugins/Shop/templates/Shops/success.php:90
+#: plugins/Shop/templates/email/html/cancel.php:166
+msgid "BIC"
+msgstr "BIC"
+
+#: plugins/Shop/templates/Shops/success.php:94
+msgid "SWIFT"
+msgstr "SWIFT"
+
+#: plugins/Shop/templates/Shops/success.php:98
+#: plugins/Shop/templates/element/receipt.php:125
+#: plugins/Shop/templates/email/html/order.php:308
+msgid "ABA"
+msgstr "ABA"
+
+#: plugins/Shop/templates/Shops/success.php:102
+#: plugins/Shop/templates/element/receipt.php:131
+#: plugins/Shop/templates/email/html/order.php:314
+msgid "Correspondent Bank"
+msgstr "중계 은행"
+
+#: plugins/Shop/templates/Shops/success.php:110
+#: plugins/Shop/templates/element/receipt.php:158
+#: plugins/Shop/templates/email/html/cancel.php:192
+#: plugins/Shop/templates/email/html/order.php:340
+msgid "Fax"
+msgstr "Fax"
+
+#: plugins/Shop/templates/Shops/waiting_list.php:4
+#: plugins/Shop/templates/element/shop_header.php:12
+msgid "Waiting List"
+msgstr "대기자 명단"
+
+#: plugins/Shop/templates/Shops/waiting_list.php:7
+msgid "If you confirm your order it will be put on a waiting list."
+msgstr "신청 내역을 확정하시면 자동으로 대기자 명단에 올라갑니다."
+
+#: plugins/Shop/templates/Shops/waiting_list.php:8
+msgid ""
+"This waiting list will be processed first come first served as new "
+"registrations may become available."
+msgstr "대기자 명단은 선착순으로 처리됩니다."
+
+#: plugins/Shop/templates/Shops/waiting_list.php:11
+msgid "Confirm Order"
+msgstr "신청 확인"
+
+#: plugins/Shop/templates/element/receipt.php:29
+msgid "Proforma Invoice"
+msgstr "인보이스"
+
+#: plugins/Shop/templates/element/receipt.php:34
+#: plugins/Shop/templates/element/voucher.php:11
+msgid "Invoice date"
+msgstr "인보이스 발급일"
+
+#: plugins/Shop/templates/element/receipt.php:38
+#: plugins/Shop/templates/element/voucher.php:15
+msgid "Invoice no"
+msgstr "인보이스 번호"
+
+#: plugins/Shop/templates/element/receipt.php:63
+msgid "Order"
+msgstr "주문"
+
+#: plugins/Shop/templates/element/receipt.php:101
+#: plugins/Shop/templates/email/html/cancel.php:154
+#: plugins/Shop/templates/email/html/order.php:284
+msgid "Bank Address"
+msgstr "은행 주소"
+
+#: plugins/Shop/templates/element/receipt.php:113
+#: plugins/Shop/templates/email/html/order.php:290
+msgid "Account No"
+msgstr "계좌번호"
+
+#: plugins/Shop/templates/element/receipt.php:119
+#: plugins/Shop/templates/email/html/order.php:302
+msgid "BIC (SWIFT)"
+msgstr "BIC (SWIFT)"
+
+#: plugins/Shop/templates/element/shop_footer.php:13
+#: plugins/Shop/templates/element/shop_footer.php:30
+#: plugins/Shop/templates/element/shop_footer.php:32
+msgid "Next"
+msgstr "다음"
+
+#: plugins/Shop/templates/element/shop_header.php:5
+msgid "Buy"
+msgstr "추가 상품 구매"
+
+#: plugins/Shop/templates/element/shop_header.php:6
+msgid "Address"
+msgstr "주소 입력"
+
+#: plugins/Shop/templates/element/shop_header.php:7
+msgid "Review"
+msgstr "내역 확인"
+
+#: plugins/Shop/templates/element/shop_header.php:8
+msgid "Payment"
+msgstr "결제 방법"
+
+#: plugins/Shop/templates/element/shop_header.php:9
+#: plugins/Shop/templates/element/shop_header.php:10
+msgid "Billing"
+msgstr "청구"
+
+#: plugins/Shop/templates/element/shop_header.php:11
+msgid "Completed"
+msgstr "신청 완료"
+
+#: plugins/Shop/templates/element/shop_order.php:27
+msgid "Date"
+msgstr "날짜"
+
+#: plugins/Shop/templates/element/shop_order.php:27
+#: plugins/Shop/templates/element/shop_people.php:65
+#: plugins/Shop/templates/element/shop_people.php:156
+#: plugins/Shop/templates/element/voucher.php:88
+msgid "Pos"
+msgstr "번호"
+
+#: plugins/Shop/templates/element/shop_order.php:28
+#: plugins/Shop/templates/element/voucher.php:89
+msgid "Qty"
+msgstr "수량"
+
+#: plugins/Shop/templates/element/shop_order.php:30
+msgid "Canc Fee"
+msgstr "취소 수수료"
+
+#: plugins/Shop/templates/element/shop_order.php:30
+msgid "Each"
+msgstr "단가"
+
+#: plugins/Shop/templates/element/shop_order.php:32
+msgid "VAT"
+msgstr "부가가치세"
+
+#: plugins/Shop/templates/element/shop_order.php:33
+msgid "Total incl. VAT"
+msgstr "부가가치세 포함 총액"
+
+#: plugins/Shop/templates/element/shop_order.php:160
+msgid "Discount"
+msgstr "할인"
+
+#: plugins/Shop/templates/element/shop_order.php:173
+#: plugins/Shop/templates/element/shop_order.php:210
+msgid "Cancellation Fee"
+msgstr "취소 수수료"
+
+#: plugins/Shop/templates/element/shop_order.php:186
+#: plugins/Shop/templates/element/shop_order.php:221
+msgid "Cancellation Discount"
+msgstr "Cancellation Discount"
+
+#: plugins/Shop/templates/element/shop_order.php:233
+#: plugins/Shop/templates/element/shop_order.php:257
+msgid "Refund"
+msgstr "환불"
+
+#: plugins/Shop/templates/element/shop_order.php:245
+msgid "Paid"
+msgstr "지불 완료"
+
+#: plugins/Shop/templates/element/shop_order.php:270
+msgid "Due"
+msgstr "요금"
+
+#: plugins/Shop/templates/element/shop_people.php:61
+msgid "Players"
+msgstr "선수"
+
+#: plugins/Shop/templates/element/shop_people.php:70
+msgid "Born"
+msgstr "Born"
+
+#: plugins/Shop/templates/element/shop_people.php:71
+msgid "Para"
+msgstr "Para"
+
+#: plugins/Shop/templates/element/shop_people.php:131
+msgid ""
+"Players with para class 't,b,c,' (to be classified) need to undergo "
+"classification before they can participate in para events."
+msgstr ""
+"Players with para class 't,b,c,' (to be classified) need to undergo "
+"classification before they can participate in para events."
+
+#: plugins/Shop/templates/element/shop_people.php:132
+msgid ""
+"Classification will take place on the free day Wednesday, July 10th 2024."
+msgstr ""
+
+#: plugins/Shop/templates/element/shop_people.php:133
+msgid "To prepare follow the steps below:"
+msgstr "준비를 위해 다음 단계를 따르세요:"
+
+#: plugins/Shop/templates/element/shop_people.php:136
+msgid "Please send their passports for registration using this form: {0}"
+msgstr "등록을 위해 다음 양식을 사용하여 여권을 제출해 주시기 바랍니다: {0}"
+
+#: plugins/Shop/templates/element/shop_people.php:139
+msgid "Please send the medical documentation using this form: {0}"
+msgstr "다음 양식을 사용하여 진단서를 제출해 주시기 바랍니다: {0}"
+
+#: plugins/Shop/templates/element/shop_people.php:153
+msgid "Accompanying People"
+msgstr "동반자"
+
+#: plugins/Shop/templates/element/voucher.php:24
+msgid "Voucher"
+msgstr "바우처"
+
+#: plugins/Shop/templates/element/voucher.php:25
+msgid "Please present this voucher at the accreditation."
+msgstr "이 바우처를 등록 시 등록센터에 제출해 주시기 바랍니다."
+
+#: plugins/Shop/templates/element/voucher.php:29
+msgid "People"
+msgstr "참가자"
+
+#: plugins/Shop/templates/element/voucher.php:84
+msgid "Additional Items"
+msgstr "추가 항목"
+
+#: plugins/Shop/templates/email/html/cancel.php:113
+#: plugins/Shop/templates/email/html/voucher.php:3
+#: plugins/Shop/templates/email/text/cancel.php:6
+#: plugins/Shop/templates/email/text/voucher.php:7
+msgid "Dear Mr. {0} {1},"
+msgstr "{0} {1}님께,"
+
+#: plugins/Shop/templates/email/html/cancel.php:116
+#: plugins/Shop/templates/email/html/voucher.php:5
+#: plugins/Shop/templates/email/text/cancel.php:9
+#: plugins/Shop/templates/email/text/voucher.php:9
+msgid "Dear Mrs. {0} {1},"
+msgstr "{0} {1}님께,"
+
+#: plugins/Shop/templates/email/html/cancel.php:120
+#: plugins/Shop/templates/email/text/cancel.php:13
+msgid "We have cancelled your registration {0} on your request."
+msgstr "귀하의 요청에 따라 {0}이 취소되었습니다."
+
+#: plugins/Shop/templates/email/html/cancel.php:122
+#: plugins/Shop/templates/email/text/cancel.php:15
+msgid ""
+"We have cancelled your registration {0} because we have not received your "
+"payment in due time."
+msgstr ""
+"귀하의 인보이스 번호 {0}에 대한 등록은 정해진 기한 내에 결제가 확인되지 않아 "
+"취소되었음을 알려드립니다."
+
+#: plugins/Shop/templates/email/html/cancel.php:124
+#: plugins/Shop/templates/email/text/cancel.php:17
+msgid "If you think this is an error please contact {0} immediately!"
+msgstr "오류가 있다고 생각되시면, 바로 {0}으로 연락해 주시기 바랍니다!"
+
+#: plugins/Shop/templates/email/html/cancel.php:128
+#: plugins/Shop/templates/email/html/order.php:250
+msgid "Details of your registration:"
+msgstr "등록 세부 사항:"
+
+#: plugins/Shop/templates/email/html/cancel.php:133
+msgid "You had entered the following players and accompanying persons:"
+msgstr "귀하께서 입력하셨던 선수 및 동반자는 다음과 같습니다:"
+
+#: plugins/Shop/templates/email/html/cancel.php:137
+#: plugins/Shop/templates/email/html/order.php:265
+#: plugins/Shop/templates/email/html/voucher.php:16
+#: plugins/Shop/templates/email/text/order.php:142
+#: plugins/Shop/templates/email/text/voucher.php:20
+msgid "Best regards"
+msgstr "감사합니다"
+
+#: plugins/Shop/templates/email/html/order.php:138
+#: plugins/Shop/templates/email/html/order.php:206
+#: plugins/Shop/templates/email/text/order.php:24
+#: plugins/Shop/templates/email/text/order.php:92
+msgid "Thank you for your registration."
+msgstr "등록해 주셔서 감사드립니다."
+
+#: plugins/Shop/templates/email/html/order.php:140
+#: plugins/Shop/templates/email/text/order.php:26
+msgid "Please note that your registration is on a waiting list."
+msgstr "귀하의 등록은 현재 대기자 명단에 있음을 알려드립니다."
+
+#: plugins/Shop/templates/email/html/order.php:148
+#: plugins/Shop/templates/email/text/order.php:34
+msgid ""
+"If in the meantime you decide to cancel your registration please inform us "
+"so that we can remove you from the waiting list."
+msgstr "등록을 취소하실 경우 알려주시면 대기자 명단에서 제외됩니다."
+
+#: plugins/Shop/templates/email/html/order.php:150
+#: plugins/Shop/templates/email/text/order.php:36
+msgid "We want to inform you that your registration {0} can now be processed."
+msgstr "귀하의 등록이 이제 접수될 수 있음을 알려드립니다"
+
+#: plugins/Shop/templates/email/html/order.php:152
+#: plugins/Shop/templates/email/html/order.php:213
+#: plugins/Shop/templates/email/text/order.php:38
+#: plugins/Shop/templates/email/text/order.php:99
+msgid "Please pay the amount due as soon as possible, but not later than {0}."
+msgstr ""
+"인보이스에 기재된 금액을 가급적 빨리, 늦어도 {0}까지 결제해 주시기 바랍니다."
+
+#: plugins/Shop/templates/email/html/order.php:154
+#: plugins/Shop/templates/email/text/order.php:40
+msgid ""
+"If we haven't received your payment by then we will cancel your registration."
+msgstr "기한 내 결제가 확인되지 않으면 등록이 취소됩니다."
+
+#: plugins/Shop/templates/email/html/order.php:156
+#: plugins/Shop/templates/email/text/order.php:42
+msgid ""
+"Please notify us if you want us to cancel your registration so that we can "
+"inform the next on the waiting list immediately."
+msgstr ""
+"등록 취소를 원하시는 경우, 다음 대기자에게 통보할 수 있도록 사전에 연락 부탁"
+"드립니다."
+
+#: plugins/Shop/templates/email/html/order.php:160
+#: plugins/Shop/templates/email/html/order.php:188
+#: plugins/Shop/templates/email/html/order.php:221
+#: plugins/Shop/templates/email/text/order.php:46
+#: plugins/Shop/templates/email/text/order.php:74
+#: plugins/Shop/templates/email/text/order.php:107
+msgid ""
+"Don't forget to put your invoice number on the bank transfer so we can find "
+"your order."
+msgstr ""
+"원활한 확인을 위해 은행 송금 시 인보이스 번호를 꼭 기재해 주시기 바랍니다."
+
+#: plugins/Shop/templates/email/html/order.php:163
+#: plugins/Shop/templates/email/html/order.php:191
+#: plugins/Shop/templates/email/html/order.php:224
+#: plugins/Shop/templates/email/text/order.php:49
+#: plugins/Shop/templates/email/text/order.php:77
+#: plugins/Shop/templates/email/text/order.php:110
+msgid ""
+"Please note that it may take several days until the payment is credited to "
+"our account and is processed."
+msgstr "입금 확인 및 결제 처리에 며칠이 소요될 수 있습니다."
+
+#: plugins/Shop/templates/email/html/order.php:167
+#: plugins/Shop/templates/email/html/order.php:195
+#: plugins/Shop/templates/email/html/order.php:228
+#: plugins/Shop/templates/email/html/order.php:242
+#: plugins/Shop/templates/email/text/order.php:53
+#: plugins/Shop/templates/email/text/order.php:81
+#: plugins/Shop/templates/email/text/order.php:114
+#: plugins/Shop/templates/email/text/order.php:128
+msgid "To pay with credit card use this link:"
+msgstr "신용카드로 결제하시려면 다음 링크를 이용해주시기 바랍니다:"
+
+#: plugins/Shop/templates/email/html/order.php:174
+#: plugins/Shop/templates/email/html/order.php:202
+#: plugins/Shop/templates/email/html/order.php:235
+#: plugins/Shop/templates/email/text/order.php:60
+#: plugins/Shop/templates/email/text/order.php:88
+#: plugins/Shop/templates/email/text/order.php:121
+msgid "Only payment with credit card is possible!"
+msgstr "신용카드 결제만 가능합니다!"
+
+#: plugins/Shop/templates/email/html/order.php:178
+#: plugins/Shop/templates/email/text/order.php:64
+msgid ""
+"This is a friendly reminder that you haven't paid your registration {0} yet."
+msgstr "{0}의 결제가 아직 확인되지 않아 다시 한 번 안내드립니다."
+
+#: plugins/Shop/templates/email/html/order.php:180
+#: plugins/Shop/templates/email/text/order.php:66
+msgid "If you believe this is an error please contact {0}."
+msgstr "오류가 있다고 생각되시면, 바로 {0}으로 연락해 주시기 바랍니다."
+
+#: plugins/Shop/templates/email/html/order.php:182
+#: plugins/Shop/templates/email/text/order.php:68
+msgid "If you have not paid yet please do so until {0}."
+msgstr "아직 결제를 완료하지 않으셨다면, {0}까지 완료해 주시기 바랍니다."
+
+#: plugins/Shop/templates/email/html/order.php:184
+#: plugins/Shop/templates/email/text/order.php:70
+msgid ""
+"If we haven't received your payment by then we reserve the right to cancel "
+"your registrations without further notice."
+msgstr ""
+"해당 기한까지 결제가 완료되지 않을 경우, 별도의 안내 없이 등록이 취소될 수 있"
+"습니다."
+
+#: plugins/Shop/templates/email/html/order.php:208
+#: plugins/Shop/templates/email/text/order.php:94
+msgid "Your invoice number is {0}."
+msgstr "귀하의 인보이스 번호는 {0}입니다."
+
+#: plugins/Shop/templates/email/html/order.php:215
+#: plugins/Shop/templates/email/text/order.php:101
+msgid ""
+"Note that your registration is not completed until we have received the full "
+"amount still due."
+msgstr "등록은 인보이스에 기재된 금액을 전액 납부하셔야 완료됩니다."
+
+#: plugins/Shop/templates/email/html/order.php:217
+#: plugins/Shop/templates/email/text/order.php:103
+msgid ""
+"We reserve the right to cancel your order after that date if we haven't "
+"received the full amount still due until then."
+msgstr "기한 내 전액이 입금되지 않으면 등록이 자동으로 취소될 수 있습니다."
+
+#: plugins/Shop/templates/email/html/order.php:255
+msgid "You have entered the following players and accompanying persons:"
+msgstr "귀하께서 입력하신 선수 및 동반자는 다음과 같습니다:"
+
+#: plugins/Shop/templates/email/html/order.php:261
+#: plugins/Shop/templates/email/text/order.php:138
+#: plugins/Shop/templates/email/text/receipt.php:2
+msgid "Please find your receipt attached."
+msgstr "인보이스를 첨부해 드리니 확인해 주시기 바랍니다."
+
+#: plugins/Shop/templates/email/html/voucher.php:7
+#: plugins/Shop/templates/email/text/voucher.php:11
+msgid "Dear Sir or Madam,"
+msgstr "참가자 여러분께,"
+
+#: plugins/Shop/templates/email/html/voucher.php:9
+#: plugins/Shop/templates/email/text/voucher.php:13
+msgid "Thank you for your registration to the {0}."
+msgstr "{0}에 등록해 주셔서 감사합니다."
+
+#: plugins/Shop/templates/email/html/voucher.php:11
+#: plugins/Shop/templates/email/text/voucher.php:15
+msgid "A voucher is attached to this mail."
+msgstr "본 메일에 바우처가 첨부되어 있습니다."
+
+#: plugins/Shop/templates/email/html/voucher.php:13
+#: plugins/Shop/templates/email/text/voucher.php:17
+msgid "Please print this voucher and present it at the accreditation desk."
+msgstr "이 바우처를 출력하여 등록 시 등록센터에 제출해 주시기 바랍니다."
