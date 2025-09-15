@@ -2,7 +2,9 @@
 <?php
 	$name = $tournament['description'];
 ?>
-Dear Table Tennis friend,
+안녕하세요,
 <p>
-The registration of <?php echo $registration['person']['display_name'];?> has been cancelled.
+<?php echo $registration['person']['display_name'];?> 님의 등록이 취소되었음을 알려드립니다.
 </p>
+
+

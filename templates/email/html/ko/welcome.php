@@ -2,76 +2,54 @@
 <?php
 use Cake\Routing\Router;
 ?>
-
 <?php
 	$name = $tournament['description'];
 	$url = Router::url('/', true);
 	$location = $tournament['location'];
 	$organizers_email = $tournament['host']['email'];
 ?>
-Dear Table Tennis friends,
+참가자 여러분께,
 <p>
-thank you first for entering the <?php echo $name;?> in <?php echo $location;?>.
-With immediate effect you have the chance of choosing your partner for the 
-double events.
+<?php echo $name;?> in <?php echo $location;?>에 등록해주셔서 진심으로 감사드립니다. 
+이제부터 (혼합)복식 경기에서 파트너를 선택하실 수 있습니다.
 </p>
 <p>
 <ol>
 <li>
 <?php if (empty($password)) { ?>
-For that purpose log in to the following web site 
-<a href="<?php echo $url;?>"><?php echo $url;?></a> with your email address 
-<?php echo $email;?> and your password. The password has already been sent to you.
+	파트너 요청을 위해 다음 웹사이트 <?php echo $url;?> 에 접속하여 이메일 주소 <?php echo $email;?> 와 비밀번호를 입력해 로그인해 주시기 바랍니다. 비밀번호는 이미 발송되었습니다.
 <?php } else { ?>
-For that purpose log in to the following web site 
-<a href="<?php echo $url;?>"><?php echo $url;?></a> with your email address 
-<?php echo $email;?> and your password <?php echo $password;?>
+	파트너 요청을 위해 다음 웹사이트 <?php echo $url;?> 에 접속하여 이메일 주소 <?php echo $email;?> 와 비밀번호 <?php echo $password;?> 를 입력해 로그인해 주시기 바랍니다.
 <?php } ?>
 </li>
 <li>
-After log in you'll find a summary of your individual current entry status 
-and / or the status of all other players / accompanying persons entered by you.
-If you have entered any other players beside yourself you are the only person who 
-could choose a double partner for them.
+로그인하신 후에는 본인의 현재 참가 신청 현황과, 본인이 등록한 다른 선수나 동반자의 신청 현황 요약을 확인하실 수 있습니다.
+만약 본인 외에 다른 선수를 등록하셨다면, 해당 선수들의 복식 파트너를 선택할 수 있는 사람은 등록자(본인)뿐입니다.
 <ul>
-<li>Now click "Edit"</li>
-
-<li>afterwards choose the category of your double partner</li>
-
-<li>choose your double partner and click "Save"</li>
+	<li>이제 "수정(Edit)" 버튼을 클릭하세요.</li>
+	<li>그 다음, 복식 파트너의 연령 카테고리를 선택하세요.</li>
+	<li>원하는 복식 파트너를 선택한 후“저장(Save)”버튼을 클릭하세요.</li>
 </ul>
-
-Click "List Partner Wanted" to get a list of all available players.
+"파트너 미지정자 목록(List Partner Wanted)"을 클릭하면, 현재 파트너를 원하는 모든 선수들의 목록을 확인할 수 있습니다.
 </li>
-<li>Adjacent you'll get a confirmation of your selection by email</li>
-
-<li>Your double partner will be informed by email about your request</li>
-
-<li>
-To finalize the double entry confirmation of your request by your double partner
-is required. If that finalization is successful both double partner will get
-final confirmation by email.
+<li>위 단계를 완료하신 후 확인 메일을 받으시게 됩니다.</li>
+<li>요청하신 복식 파트너에게는 귀하의 요청 사항이 이메일로 전달됩니다.</li>
+<li>복식 신청을 최종 확정하기 위해서는, 귀하의 복식 파트너가 해당 요청을 승인해야 합니다.
+승인이 완료되면, 두 파트너 모두 최종 확인 메일을 받게 됩니다.
 </li>
 </ol>
 </p>
 <p>
-If you cannot find your double partner in the system:
+시스템에서 복식 파트너를 찾을 수 없는 경우에는,
 <ul>
-<li>look in different age categories</li>
-
-<li>look for different spellings of given and family name, or for the given name</li>
-
-<li>ask your double partner if he has already entered</li>
-
-<li>
-ask your double partner if he has already chosen a different partner.
-You can only choose a double partner who has already entered and has not 
-choose a partner yet.
-</li>
+	<li>다른 연령 카테고리에서 찾아보세요</li>
+	<li>찾으려는 사람의 이름과 성, 또는 특정 이름 철자를 다시 확인해 보세요.</li>
+	<li>귀하의 요청 대상이 이미 등록을 했는지 물어보세요.</li>
+	<li>귀하의 요청 대상이 이미 다른 파트너를 선택하였는지 물어보세요. </li>
 </ul>
 </p>
 <p>
-If you have any additional questions don't hesitate to contact 
-<a href="<?php echo $organizers_email;?>"><?php echo $organizers_email;?></a>
+복식 파트너는 이미 등록을 완료했지만 아직 다른 파트너를 선택하지 않은 경우에만 선택할 수 있습니다.
+추가로 궁금한 사항이 있으시면 <?php echo $organizers_email;?> 으로 문의해 주시기 바랍니다.
 </p>
-Many success during <?php echo $name;?>
+<?php echo $name;?> 에서의 성공을 기원합니다.

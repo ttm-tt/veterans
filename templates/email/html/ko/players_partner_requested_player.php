@@ -2,17 +2,16 @@
 <?php
 	$name = $tournament['description'];
 	$event = ucwords($field);
-	$event_i18n = ($field === 'mixed' ? 'mixed': 'double');
+	$event_i18n = ($field === 'mixed' ? 'mixed' : 'double');
 ?>
-Dear Table Tennis friend!
+안녕하세요, 
 <p>
-<?php echo $registration['participant'][$field . '_partner']['person']['display_name'];?> has been selected as your <?php echo $event_i18n;?> partner.<br> 
+귀하는 <?php echo $registration['participant'][$field .'_partner']['person']['display_name'];?> 님을 귀하의 <?php echo $event_i18n;?> 파트너로 요청하셨습니다.
 </p>
 <p>
-You will start in the age category <?php echo $registration['participant'][$field]['description'];?>.
+귀하는 <?php echo $registration['participant'][$field]['description'];?> 에서 경기를 하게 됩니다.
+복식 파트너가 귀하를 자신의 <?php echo $event_i18n;?> 파트너로 확인하여야 최종 완료됩니다.
 </p>
-<p>
-To complete it is necessary that your <?php echo $event_i18n;?> partner confirms you as his/her partner.
-</p>
-We wish you a successful <?php echo $name;?>
+<?php echo $name;?> 에서의 성공을 기원합니다.
+
 

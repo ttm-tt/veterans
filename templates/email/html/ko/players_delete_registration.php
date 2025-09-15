@@ -2,7 +2,7 @@
 <?php
 	$name = $tournament['description'];
 ?>
-Dear Table Tennis friend,
+안녕하세요,
 <p>
-your registration has been cancelled.
+귀하의 등록은 취소 처리되었습니다.
 </p>

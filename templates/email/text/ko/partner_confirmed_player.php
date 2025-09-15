@@ -4,11 +4,11 @@
 	$event = ucwords($field);
 	$event_i18n = ($field === 'mixed' ? 'mixed' : 'double');
 ?>
-Dear Table Tennis friend,
+안녕하세요,
 
-you have confirmed <?php echo $registration['participant'][$field . '_partner']['person']['display_name'];?> as your <?php echo $event_i18n;?> partner.
-You will start in the age category <?php echo $registration['participant'][$field]['description'];?>.
+귀하는 <?php echo $registration['participant'][$field . '_partner']['person']['display_name'];?> 님을 귀하의 <?php echo $event_i18n;?> 파트너로 확정하셨습니다.
+귀하는 <?php echo $registration['participant'][$field]['description'];?> 경기에 참가하시게 됩니다.
 
-We wish you a successful <?php echo $name;?>
+<?php echo $name;?> 에서 좋은 성적을 거두시길 기원합니다.
 
 
