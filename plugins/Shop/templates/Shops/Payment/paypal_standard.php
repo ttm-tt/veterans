@@ -178,7 +178,9 @@ const setProcessing = (isProcessing) => {
 </div>
 
 <div id="billing" class="order billing form">
+	<?php if (false) { // We should use thee CkaePHP generated for so wee have Prev and Cancel ?>
 	<form id="paypal" method="post" accept-charset="UTF-8" action="<?php echo $paypalUrl;?>">
+	<?php } else echo $this->Wizard->create(null);?>	
 	<?php if (isset($activeStep)) echo $this->element('shop_header'); ?>
 	<h2><?php echo __d('user', 'Billing Information');?></h2>
 	<div class="hint">
