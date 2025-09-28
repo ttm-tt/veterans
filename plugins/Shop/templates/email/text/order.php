@@ -17,6 +17,7 @@ use Shop\Model\Table\OrderStatusTable;
 				
 	$wantBanktransfer = $shopSettings['banktransfer'] || empty($order['ticket']);
 	$wantCreditcard = $shopSettings['creditcard'] && !empty($order['ticket']);
+	$wantPaypal = $shopSettings['paypal'] && !empty($order['ticket']);	
 ?>
 
 <?php 
@@ -60,6 +61,18 @@ use Shop\Model\Table\OrderStatusTable;
 				echo __d('user', 'Only payment with credit card is possible!');
 			}
 		}
+		if ($wantPaypal) {
+			echo $LF;
+			echo __d('user', 'To pay with Paypal or credit card use this link:');
+			echo $LF;
+			echo $this->Html->link(['plugin' => 'shop', 'controller' => 'shops', 'action' => 'pay', '?' => ['ticket' => $order['ticket']], '_full' => true], null);
+			
+			// Add note if only cc is allowed
+			if (!($wantBanktransfer ?? false)) {
+				echo $LF;
+				echo __d('user', 'Only payment with Paaypal or credit card is possible!');
+			}
+		}
 	} else if ($reminder) {
 		echo __d('user', 'This is a friendly reminder that you haven\'t paid your registration {0} yet.', $order['invoice']);
 		echo $LF;
@@ -86,6 +99,18 @@ use Shop\Model\Table\OrderStatusTable;
 			if (!($wantBanktransfer ?? false)) {
 				echo '<br>';
 				echo __d('user', 'Only payment with credit card is possible!');
+			}
+		}
+		if ($wantPaypal) {
+			echo $LF;
+			echo __d('user', 'To pay with paypal or credit card use this link:');
+			echo $LF;
+			echo $this->Html->link(['plugin' => 'shop', 'controller' => 'shops', 'action' => 'pay', '?' => ['ticket' => $order['ticket']], '_full' => true], null);
+			
+			// Add note if only cc is allowed
+			if (!($wantBanktransfer ?? false)) {
+				echo '<br>';
+				echo __d('user', 'Only payment with paypal or credit card is possible!');
 			}
 		}
 	} else {
@@ -121,11 +146,29 @@ use Shop\Model\Table\OrderStatusTable;
 					echo __d('user', 'Only payment with credit card is possible!');
 				}
 			}
+			if ($wantPaypal) {
+				echo $LF;
+				echo __d('user', 'To pay with Paypal or credit card use this link:');
+				echo $LF;
+				echo $this->Html->link(['plugin' => 'shop', 'controller' => 'shops', 'action' => 'pay', '?' => ['ticket' => $order['ticket']], '_full' => true], null);
+
+				// Add note if only cc is allowed
+				if (!($wantBanktransfer ?? false)) {
+					echo $LF;
+					echo __d('user', 'Only payment with Paypal or credit card is possible!');
+				}
+			}
 		} else if (!$isPaid && $order['payment_method'] === 'Invoice') {
 			// Special case for Invoice: let them pay with CC, too
 			if ($wantCreditcard) {
 				echo $LF;
 				echo __d('user', 'To pay with credit card use this link:');
+				echo $LF;
+				echo $this->Html->link(['plugin' => 'shop', 'controller' => 'shops', 'action' => 'pay', '?' => ['ticket' => $order['ticket']], '_full' => true], null);
+			}			
+			if ($wantPaypal) {
+				echo $LF;
+				echo __d('user', 'To pay with paypal or credit card use this link:');
 				echo $LF;
 				echo $this->Html->link(['plugin' => 'shop', 'controller' => 'shops', 'action' => 'pay', '?' => ['ticket' => $order['ticket']], '_full' => true], null);
 			}			

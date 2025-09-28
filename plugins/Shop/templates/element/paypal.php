@@ -19,11 +19,13 @@ function onPrevious() {
 function onPay() {
 	$('div#processing').show();
 	$('div#billing').hide();
+	$('form#cart').hide();
 	
 	$.ajax({
 		'type' : 'POST',
 		'dataType' : 'json',
 		'url'  : '<?php echo Router::url(array('action' => 'onPreparePaypal')); ?>',
+		'data' : $('form#submit').serialize(),
 		'success' : function(data) {
 			if ($.isPlainObject(data)) {
 				$.each(data, function(key, val) {
@@ -31,6 +33,7 @@ function onPay() {
 				});
 				$('#processing').show();
 				$('#billing').hide();
+				$('form#submit').hide();
 				callPaypal();
 			} else {
 				$('div#processing h2').html("<?php echo __d('user', 'The payment could not be initiated. Please try again later.');?>");
@@ -178,18 +181,8 @@ const setProcessing = (isProcessing) => {
 </div>
 
 <div id="billing" class="order billing form">
-	<?php if (false) { // We should use thee CakePHP generated for so we have Prev and Cancel ?>
-	<form id="paypal" method="post" accept-charset="UTF-8" action="<?php echo $paypalUrl;?>">
-	<?php } else echo $this->Wizard->create(null);?>	
-	<?php if (isset($activeStep)) echo $this->element('shop_header'); ?>
-	<h2><?php echo __d('user', 'Billing Information');?></h2>
-	<div class="hint">
-	<?php
-		echo __d('user', 'Payment will be processed in a secure way by {0}.', 'Paypal') . '<br>';
-		echo __d('user', 'After the payment is completed you will be redirected to the registration.') . '<br>';
-	?>
-	</div>
-	
+<form id="paypal" method="post" accept-charset="UTF-8" action="<?php echo $paypalUrl;?>">
+	<fieldset> 
 	<?php 
 		echo $this->Form->control('amount', array(
 			'label' => __d('user', 'Amount'),
@@ -199,23 +192,6 @@ const setProcessing = (isProcessing) => {
 			'name' => false,
 		));
 	?>
-	<div class="submit">
-		<?php		
-			echo $this->element('shop_footer', [
-				'nextForce' => true,
-				'next' => __d('user', 'Confirm Registration'), 
-				'nextOptions' => array('name' => false, 'onclick' => 'onPay(); return false;')
-			]);
-		?>
-	</div>
-	</form>
+	</fieldset>
+</form>
 </div>
-<?php 
-	echo $this->Form->create(null, array('id' => 'cancel'));
-		echo $this->Form->hidden('Cancel', array('value' => 'Cancel'));
-	echo $this->Form->end();
-	echo $this->Form->create(null, array('id' => 'previous'));
-		echo $this->Form->hidden('Previous', array('value' => 'Previous'));
-	echo $this->Form->end();
-?>
-

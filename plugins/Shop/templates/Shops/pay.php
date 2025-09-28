@@ -22,7 +22,7 @@
 			<?= $this->element('shop_order'); ?>
 		</form>
 
-		<?= $this->element('creditcard'); ?>
+		<?= $this->element(isset($paypalUrl) ? 'paypal' : 'creditcard'); ?>
 
 		<?php 
 			echo $this->Form->create(null, array(

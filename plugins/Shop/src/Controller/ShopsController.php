@@ -1951,6 +1951,9 @@ class ShopsController extends ShopAppController {
 		$this->set('paymentName', $payment->getPaymentName());
 		$this->set('submitUrl', $payment->getSubmitUrl());
 		$this->set('ticket', $ticket);
+		if ($payment->getPaymentName() == 'Paypal')
+			$this->set('paypalUrl', $payment->getScriptUrl());
+		
 	}
 	
 	

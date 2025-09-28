@@ -21,7 +21,7 @@ class PaypalStandardPayment extends AbstractPayment {
 	public function prepare($amount) {
 		$this->_controller->set('amount', $amount);
 		$this->_controller->set('currency', $this->_controller->_shopSettings['currency']);
-		$this->_controller->set('paypalUrl', $this->_getScriptUrl());
+		$this->_controller->set('paypalUrl', $this->getScriptUrl());
 		
 		$this->_controller->render('Shops/Payment/paypal_standard');		
 	}
@@ -43,7 +43,7 @@ class PaypalStandardPayment extends AbstractPayment {
 		
 		$this->_controller->set('json_object', [
 			'order_id' => $orderId,
-			'url' => $this->_getScriptUrl(),
+			'url' => $this->getScriptUrl(),
 			'currency' => $this->_controller->_shopSettings['currency'],
 			'amount' => $order['outstanding'],
 			'description' => __('{0}: Invoice no {1}', $tournament['name'], $order['invoice'])
@@ -273,7 +273,7 @@ class PaypalStandardPayment extends AbstractPayment {
 	
 	// Build URLs
 	// Paypal form url
-	private function _getScriptUrl() {
+	public function getScriptUrl() {
 		$clientId = Configure::read('Shop.PaymentProviders.PaypalStandard.accountData.PAYPAL_CLIENT_ID');
 		$currency = 'USD';
 		
