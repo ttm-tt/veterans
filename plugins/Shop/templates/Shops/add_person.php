@@ -171,9 +171,11 @@ function onChangeType(cb) {
 			echo __d('user', 'You can add or change email address and phone number later, too.');
 			echo '</p>';
 			
-			echo '<p>';
-			echo __d('user', 'If you are a Paralympic Athlete flag the appropriate field and put your international classification.');
-			echo '</p>';
+			if ($havePara ?: false) {
+				echo '<p>';
+				echo __d('user', 'If you are a Paralympic Athlete flag the appropriate field and put your international classification.');
+				echo '</p>';
+			}
 		?>
 		</div>
 	<?php
