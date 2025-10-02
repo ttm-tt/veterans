@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "POT-Creation-Date: 2025-09-06 21:29+0200\n"
-"PO-Revision-Date: 2025-09-15 07:38+0200\n"
+"PO-Revision-Date: 2025-10-02 21:07+0200\n"
 "Last-Translator: Christoph Theis <theis@gmx.at>\n"
 "Language-Team: \n"
 "Language: ko_KR\n"
@@ -1879,7 +1879,10 @@ msgstr "입금 확인 및 결제 처리에 며칠이 소요될 수 있습니다.
 #: plugins/Shop/templates/email/text/order.php:114
 #: plugins/Shop/templates/email/text/order.php:128
 msgid "To pay with credit card use this link:"
-msgstr "신용카드로 결제하시려면 다음 링크를 이용해주시기 바랍니다:"
+msgstr ""
+"한국에 거주하거나 한국에서 발급 된 체크카드 또는 신용카드를 소지하신 분들은 "
+"한국 전자상거래법에 의거하여 기재된 Paypal 링크로 결제하실 수 없습니다. 인보"
+"이스에 기재 된 계좌번호로 송금해주시기 바랍니다."
 
 #: plugins/Shop/templates/email/html/order.php:174
 #: plugins/Shop/templates/email/html/order.php:202
