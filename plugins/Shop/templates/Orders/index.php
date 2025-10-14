@@ -128,7 +128,7 @@
 		<?php if (!isset($method))
 			echo '<th>' . $this->Paginator->sort('Orders.payment_method', __('method')) . '</th>';
 		?>
-		<th><?php echo $this->Paginator->sort('Orders.invoice_paid', __('Cancelled'));?></th>
+		<th><?php echo $this->Paginator->sort('Orders.invoice_cancelled', __('Cancelled'));?></th>
 		<th><?php echo $this->Paginator->sort('Orders.refund', __('Refund'));?></th>
 		<th class="actions" colspan="3"><?php echo __('Actions');?></th>
 	</tr>
