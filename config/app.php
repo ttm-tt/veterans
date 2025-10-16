@@ -159,7 +159,11 @@ return [
 		'engine' => [
 			'className' => 'CakePdf.DomPdf',
 			'options' => [
-				'enable_font_subsetting' => true
+				'enable_font_subsetting' => true,
+				'chroot' => [WWW_ROOT . 'font'],
+				'fontDir' => TMP . 'font',
+				'fontCache' => TMP . 'font',
+				'tempDir' => TMP . 'font'
 			]
 		]
 	],
