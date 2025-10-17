@@ -160,10 +160,11 @@ return [
 			'className' => 'CakePdf.DomPdf',
 			'options' => [
 				'enable_font_subsetting' => true,
-				'chroot' => [WWW_ROOT . 'font'],
+				'chroot' => [WWW_ROOT],
 				'fontDir' => TMP . 'font',
 				'fontCache' => TMP . 'font',
-				'tempDir' => TMP . 'font'
+				'tempDir' => TMP . 'font',
+				'logOutputFile' => '' // LOGS . 'dompdf.log'
 			]
 		]
 	],

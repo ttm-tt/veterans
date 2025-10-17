@@ -1,19 +1,8 @@
+<link rel='stylesheet' href='/css/pdf.css'>
+
 <?php
 	ob_start();
 ?>
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-weight: normal;
-  font-style: normal;
-  src: url('font/noto/NotoSansKR-Regular.ttf') format('truetype');
-}
-
-@font-face {
-  font-family: 'Noto Sans KR';
-  font-weight: bold;
-  font-style: normal;
-  src: url('font/noto/NotoSansKR-Bold.ttf') format('truetype');
-}
 
 * {
 	font-family: 'DejaVu Sans', 'Noto Sans KR';

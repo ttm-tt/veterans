@@ -1,0 +1,16 @@
+/* Copyright (C) Christoph Theis 2025 */
+/* Font defeinitions for Korean (Hangul) and others */
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-weight: normal;
+  font-style: normal;
+  src: url('/font/noto/NotoSansKR-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Noto Sans KR';
+  font-weight: bold;
+  font-style: normal;
+  src: url('/font/noto/NotoSansKR-Bold.ttf') format('truetype');
+}
+
