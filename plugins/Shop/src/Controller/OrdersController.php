@@ -160,7 +160,7 @@ class OrdersController extends ShopAppController {
 			if ($this->request->getSession()->read('Shop.InvoiceAddresses.last_name') == 'none')
 				$conditions[] = 'UPPER(InvoiceAddresses.last_name) COLLATE utf8_bin IS NULL';
 			else
-				$conditions[] = 'UPPER(InvoiceAddresses.last_name) COLLATE utf8_bin LIKE \'' . $this->request->getSession()->read('Shop.InvoiceAddresses.last_name') . '%\'';
+				$conditions['UPPER(InvoiceAddresses.last_name) COLLATE utf8_bin LIKE'] = $this->request->getSession()->read('Shop.InvoiceAddresses.last_name') . '%';
 		}
 		
 		// Filter by payment method
@@ -298,7 +298,7 @@ class OrdersController extends ShopAppController {
 				$conditions['OrderStatus.id IN'] = explode(',', $this->request->getSession()->read('Shop.OrderStatus.id'));
 
 			if ($count > 0)
-				$conditions[] = 'UPPER(InvoiceAddresses.last_name) COLLATE utf8_bin LIKE \''. mb_substr($last_name, 0, $count) . '%\'';
+				$conditions['UPPER(InvoiceAddresses.last_name) COLLATE utf8_bin LIKE'] = mb_substr($last_name, 0, $count) . '%';
 
 			$tmp = $this->Orders->find('all', array(
 				'contain' => ['InvoiceAddresses', 'OrderStatus'],
