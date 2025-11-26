@@ -149,7 +149,13 @@ class PaypalStandardPayment extends AbstractPayment {
 		
 		// Payment complete
 		if ($result['code'] === 'PAID') {
-			if ($order->order_status_id === OrderStatusTable::getInitiateId()) {
+			// Usually order is in state INIT, but when paid by link it can
+			// be in any of the other ones. See Shops/pay($ticcket) 
+			if ( $order->order_status_id === OrderStatusTable::getInitiateId() ||
+				 $order->order_status_id === OrderStatusTable::getPendingId() ||
+				 $order->order_status_id === OrderStatusTable::getIncompleteId() ||
+				 $order->order_status_id === OrderStatusTable::getDelayedId() ||
+				 $order->order_status_id === OrderStatusTable::getInvoiceId() ) {
 				// Success
 				$this->_controller->_onSuccess($orderId);				
 			}
