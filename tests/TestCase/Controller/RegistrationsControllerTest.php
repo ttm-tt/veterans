@@ -22,6 +22,7 @@ class RegistrationsControllerTest extends AppTestCase {
 		'app.Languages',
 		'app.Users',
 		'app.People',
+		'app.PersonHistories',
 		'app.Organisations',
 		'app.Tournaments',
 		'app.Competitions',

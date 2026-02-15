@@ -56,7 +56,7 @@
 			foreach ($chars as $char) {
 				$name = str_replace(' ', '_', mb_convert_case(mb_strtolower($char), MB_CASE_TITLE));
 
-				if (mb_substr($last_name, 0, mb_strlen($char)) == $char)
+				if (mb_substr($last_name ?? '', 0, mb_strlen($char)) == $char)
 					echo ' ' . $name;
 				else
 					echo ' ' . $this->Html->link($name, ['?' => ['last_name' => urlencode(str_replace(' ', '_', $char))]]);

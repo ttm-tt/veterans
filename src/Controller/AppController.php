@@ -165,7 +165,7 @@ class AppController extends ShimController {
 		$this->set('language_id', $this->Languages->fieldByConditions('id', array('name' => $lang)));
 
 		// Warning when used with google translate
-		if (strpos($this->request->referer(), '://translate.google') !== false) {
+		if (strpos($this->request->referer() ?? '', '://translate.google') !== false) {
 			$this->MultipleFlash->setFlash(
 					'This site may not work when translated with translate.google.com. ' .
 					'Use the extension "Google Translate" from Google instead.', 

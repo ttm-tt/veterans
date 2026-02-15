@@ -25,6 +25,7 @@ class PeopleControllerTest extends AppTestCase {
 		'app.Tournaments',
 		'app.Users',
 		'app.People',
+		'app.PersonHistories',
 		'app.Types',
 		'app.Competitions',
 		'app.Registrations',
@@ -311,6 +312,7 @@ class PeopleControllerTest extends AppTestCase {
 		// Find id of new person
 		$people = TableRegistry::get('People');
 		$person = $people->find()->where(['first_name' => $data['first_name']])->first();
+		$this->assertNotNull($person);
 		$id = $person->id;
 		
 		$ret = false;

@@ -815,8 +815,8 @@ class OrderUpdateComponent extends Component {
 				'currency' => 'EUR'
 			);
 
-		$invoice_prefix = strftime($tmp['invoice_no_prefix'], time());
-		$invoice_postfix = strftime($tmp['invoice_no_postfix'], time());
+		$invoice_prefix = date($tmp['invoice_no_prefix'], time());
+		$invoice_postfix = date($tmp['invoice_no_postfix'], time());
 
 		$invoice_no = $this->Orders->find()
 			->where([
