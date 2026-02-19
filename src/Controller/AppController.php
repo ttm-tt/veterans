@@ -14,6 +14,7 @@ use Cake\Controller\Exception\SecurityException;
 use Cake\Routing\Router;
 use Cake\Http\Exception\NotFoundException;
 
+use App\Model\Table\GroupsTable;
 use App\Model\Table\UsersTable;
 use Shim\Controller\Controller as ShimController;
 use Psr\Http\Message\UploadedFileInterface;
@@ -211,7 +212,16 @@ class AppController extends ShimController {
 				$this->request->getSession()->write('Tournaments.id', $this->Tournaments->find('all')->first()->id);
 			}
 		}
-
+		
+		if ($this->request->getSession()->check('Tournaments.id')) {
+			$this->loadModel('Tournaments');
+			$this->_tournament = $this->Tournaments->find('all', array(
+				'conditions' => array('Tournaments.id' => $this->request->getSession()->read('Tournaments.id')),
+				'contain' => array(
+					'Nations', 'Organizers', 'Committees', 'Hosts', 'Contractors', 'Dpas')
+			))->first();
+		}
+		
 		// Type.id (e.g. for group Association)
 		if (!$this->request->getSession()->check('Types.id') && !empty($user['group']['type_ids'])) {
 			$types = explode(',', $user['group']['type_ids']);
