@@ -18,7 +18,7 @@ You can also reject the request.
 In either case:
 - Log on to <?php echo $url;?> with your email address and your password.
 
-- Click on "Requests" next to your name.
+- Click on "Requests" located at the right side next to your name to see all requests sent to you.
 
 - Click on "Accept" to accept the request or on "Reject" to reject the request.
 

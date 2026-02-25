@@ -18,7 +18,7 @@ Potresti anche rifiutare la richiesta.
 In entrambi i casi:
 - Entra in <?php echo $url;?> con il tuo indirizzo email e la tua password.
 
-- Clicca su "Richieste" a fianco al tuo nome.
+- Clicca su “Richieste” situato sul lato destro accanto al tuo nome per visualizzare tutte le richieste che ti sono state inviate.
 
 - Clicca su "Accetto" per accettare la richiesta o su "Rifiuto" per rigettare la richiesta.
 

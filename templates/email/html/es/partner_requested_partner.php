@@ -20,7 +20,7 @@ Pero también se puede rechazar la solicitud.
 En cualquier caso:
 <ul>
   <li>Inicia la sesión en <a href="<?php echo $url;?>"><?php echo $url;?></a> con tu dirección de email y tu contraseña.</li>
-  <li>Haz clic en "Solicitudes" junto a su nombre.</li>
+  <li>Haga clic en «Solicitudes», situado a la derecha junto a su nombre, para ver todas las solicitudes que se le han enviado.</li>
   <li>Haz clic en "Aceptar" para confirmar la solicitud o en "Rechazar" para rechazar.</li>
 </ul>
 </p>

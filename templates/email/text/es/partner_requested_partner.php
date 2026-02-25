@@ -20,7 +20,7 @@ En cualquier caso:
 
  - Inicia la sesión en <a href="<?php echo $url;?>"><?php echo $url;?></a> con tu dirección de email y tu contraseña.
  
- - Haz clic en "Solicitudes" junto a su nombre.
+ - Haga clic en «Solicitudes», situado a la derecha junto a su nombre, para ver todas las solicitudes que se le han enviado.
   
  - Haz clic en "Aceptar" para confirmar la solicitud o en "Rechazar" para rechazar.
 

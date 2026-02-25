@@ -19,7 +19,7 @@ Sie können den Wunsch aber auch ablehnen.
 In beiden Fällen:
 <ul>
   <li>Melden Sie sich mit Ihrer Emailadresse und Ihrem Passwort auf <a href="<?php echo $url;?>"><?php echo $url;?></a> an</li>
-  <li>Klicken Sie auf "Anfragen" neben Ihren Namen</li>
+  <li>Klicken Sie auf "Anfragen" rechts neben Ihren Namen, um all Partnerwünsche an sie zu sehen/li>
   <li>Klicken Sie auf "Akzeptieren", um den Partner Partner zu bestätigen, oder auf "Ablehnen", um den Wunsch abzulehnen</li>
 </ul>
 </p>

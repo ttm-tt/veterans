@@ -19,7 +19,7 @@ Cher(e) ami(e) pongiste!
  Dans tous les cas:
 <ul>
 	<li>allez sur le site <?php echo $url;?> avec vore email et votre password.</li>
-	<li>Cliquez sur "Requests" à coté de votre nom.</li>
+	<li>Cliquez sur "Requests" situé à droite à coté de votre nom our voir toutes les demandes qui vous ont été envoyées.</li>
 	<li>Puis Cliquez sur "Accept" pour accepter la demande, ou sur "Reject" pour la refuser.</li>
 </ul>
 </p>

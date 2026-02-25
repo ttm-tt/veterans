@@ -18,7 +18,7 @@ Sie können den Wunsch aber auch zurückweisen.
 In jedem Fall:
 - Melden Sie sich mit Ihrer Emailadresse und Ihrem Passwort auf <?php echo $url;?> an
 
-- Klicken Sie auf "Anfragen" neben Ihren Namen
+- Klicken Sie auf "Anfragen" rechts neben Ihren Namen, um all Partnerwünsche an sie zu sehen
 
 - Klicken Sie auf "Akzeptieren", um den Wunsch zu bestätigen, oder auf "Ablehnen", um in abzulehnen.
 

@@ -20,7 +20,7 @@ In entrambi i casi:
 <ul>
 	<li>Entra in <?php echo $url;?> con il tuo indirizzo email e la tua password.</li>
 
-	<li>Clicca su "Richieste" a fianco al tuo nome.</li>
+	<li>Clicca su “Richieste” situato sul lato destro accanto al tuo nome per visualizzare tutte le richieste che ti sono state inviate.</li>
 
 	<li>Clicca su "Accetto" per accettare la richiesta o su "Rifiuto" per rigettare la richiesta.</li>
 </ul>

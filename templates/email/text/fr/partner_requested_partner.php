@@ -15,7 +15,7 @@ use Cake\Routing\Router;
  Si vous êtes d'accord, vous devez confirmer. Vous pouvez aussi refuser cette demande. Dans tous les cas:
 - allez sur le site <?php echo $url;?> avec vore email et votre password.
 
-- Cliquez sur "Requests" à coté de votre nom.
+- Cliquez sur "Requests" situé à droite à coté de votre nom our voir toutes les demandes qui vous ont été envoyées.
 
  Puis Cliquez sur "Accept" pour accepter la demande, ou sur "Reject" pour la refuser. Un mail de confirmation 
 

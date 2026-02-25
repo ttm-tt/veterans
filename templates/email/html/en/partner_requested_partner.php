@@ -19,7 +19,7 @@ But you can also reject the request.
 In either case:
 <ul>
   <li>Log on to <a href="<?php echo $url;?>"><?php echo $url;?></a> with your email address and your password.</li>
-  <li>Click on "Requests" next to your name.</li>
+  <li>Click on "Requests" located at the right side next to your name to see all requests sent to you.</li>
   <li>Click on "Accept" to confirm the request or on "Reject" to reject.</li>
 </ul>
 </p>
