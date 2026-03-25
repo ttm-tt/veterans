@@ -56,7 +56,7 @@ function onChangeMixed(data) {
 	});
 
 	$('#participant-mixed-partner-id').html(options);
-	$('#participant-mixed-partner-id').parent().css('display', $('#participant-mixed-id').val() ? 'block' : 'none');
+	$('#participant-mixed-partner-id').parent().css('display', $('#participant-mixed-id').val() ? 'flex' : 'none');
 }
 
 $(document).ready(function() {
@@ -339,9 +339,9 @@ if (false) {
 			$style = 'display:block';
 			if (count($competitions['doubles']) == 0)
 				$style = 'display:none';
-			if ($isParticipant && empty($registration['participant']['double_id']))
+			else if ($isParticipant && empty($registration['participant']['double_id']))
 				$style = 'display:none';
-			if ($isParticipant && $registration['participant']['double_cancelled'] != 0)
+			else if ($isParticipant && $registration['participant']['double_cancelled'] != 0)
 				$style = 'display:none';
 			
 			echo '<div id="ParticipantDouble" style="padding:0;' . $style . '">';
@@ -388,9 +388,9 @@ if (false) {
 			$style = 'display:block';
 			if (count($competitions['mixed']) == 0)
 				$style = 'display:none';
-			if ($isParticipant && empty($registration['participant']['mixed_id']))
+			else if ($isParticipant && empty($registration['participant']['mixed_id']))
 				$style = 'display:none';
-			if ($isParticipant && $registration['participant']['mixed_cancelled'] != 0)
+			else if ($isParticipant && $registration['participant']['mixed_cancelled'] != 0)
 				$style = 'display:none';
 			
 			echo '<div id="ParticipantMixed" style="padding:0;' . $style . '">';
