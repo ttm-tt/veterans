@@ -169,7 +169,7 @@ class ShopsController extends ShopAppController {
 		
 		$this->loadModel('Tournaments');
 		$tournament = $this->Tournaments->get($tid, ['contain' => ['Organizers']]);
-		$enter_before = $tournament->url;
+		$enter_before = $tournament->enter_before;
 		
 		$this->loadModel('Competitions');
 		$maxYear = $this->Competitions->fieldByConditions(
@@ -188,18 +188,9 @@ class ShopsController extends ShopAppController {
 		
 		$this->loadModel('Shop.Articles');
 					
-		$available_from = $this->Articles->fieldByConditions('available_from', [
-			'tournament_id' => $tid,
-			'name' => 'PLA'
-		]);
-
-		$available_until = $this->Articles->fieldByConditions('available_until', [
-			'tournament_id' => $tid,
-			'name' => 'PLA'
-		]);
-
 		$articleList = Hash::combine($this->Articles->find('all', array(
-			'conditions' => ['tournament_id' => $tid]
+			'conditions' => ['tournament_id' => $tid],
+			'name IN' => ['PLA', 'ACC', 'COA']
 		))->toArray(), '{n}.name', '{n}');
 				
 		$types = array();
@@ -231,33 +222,106 @@ class ShopsController extends ShopAppController {
 		$waitingCount += ['PLA' => 0, 'ACC' => 0, 'COA' => 0];
 		
 		if (!UsersTable::hasRootPrivileges($this->_user)) {
-			if (!empty($enter_before) && $enter_before < date('Y-m-d')) {
-				unset($types['PLA']);
-				$waiting['PLA'] = 0;
+			if ($articleList['PLA'] ?? null) {
+				$available_from = $articleList['PLA']->available_from ?: null;
+				$available_until = $articleList['PLA']->available_until ?: null;
 				
-				$this->MultipleFlash->setFlash(
-					__d('user', 'You cannot register players after registration closed for players on {0}', $enter_before->format('jS F Y')), 'info'
-				);
-			} else if (!empty($available_from && $available_from > date('Y-m-d'))) {
-				unset($types['PLA']);
-				$waiting['PLA'] = 0;
+				if ($enter_before && $enter_before < date('Y-m-d')) {
+					unset($types['PLA']);
+					$waiting['PLA'] = 0;
 
-				if ($available_from > date('Y-m-d', strtotime('+4 weeks')))
 					$this->MultipleFlash->setFlash(
-						__d('user', 
-							"You cannot register players at the moment. Registration will open soon. Please visit <a href=\"{0}\" target=\"_blank\">{0}</a> for more information.", $tournament->organizer->url), 'info'
+						__d('user', 'You cannot register players after registration closed for players on {0}', $enter_before->format('jS F Y')), 'info'
 					);
-				else 
-					$this->MultipleFlash->setFlash(
-						__d('user', 'You cannot register players before registration opens for players on {0}', $available_from->format('jS F Y')), 'info'
-					);
-			} else if (!empty($available_until && $available_until < date('Y-m-d'))) {
-				unset($types['PLA']);
-				$waiting['PLA'] = 0;
+				} else if ($available_from && $available_from > date('Y-m-d')) {
+					unset($types['PLA']);
+					$waiting['PLA'] = 0;
 
-				$this->MultipleFlash->setFlash(
-					__d('user', 'You cannot register players after registration closed for players on {0}', $available_until->format('jS F Y')), 'info'
-				);
+					if ($available_from > date('Y-m-d', strtotime('+4 weeks')))
+						$this->MultipleFlash->setFlash(
+							__d('user', 
+								"You cannot register players at the moment. Registration will open soon. Please visit <a href=\"{0}\" target=\"_blank\">{0}</a> for more information.", $tournament->organizer->url), 'info'
+						);
+					else 
+						$this->MultipleFlash->setFlash(
+							__d('user', 'You cannot register players before registration opens for players on {0}', $available_from->format('jS F Y')), 'info'
+						);
+				} else if ($available_until && $available_until < date('Y-m-d')) {
+					unset($types['PLA']);
+					$waiting['PLA'] = 0;
+
+					$this->MultipleFlash->setFlash(
+						__d('user', 'You cannot register players after registration closed for players on {0}', $available_until->format('jS F Y')), 'info'
+					);
+				}
+			}
+			
+			if ($articleList['ACC'] ?? null) {
+				$available_from = $articleList['ACC']->available_from ?: null;
+				$available_until = $articleList['ACC']->available_until ?: null;
+				
+				if ($enter_before && $enter_before < date('Y-m-d')) {
+					unset($types['ACC']);
+					$waiting['ACC'] = 0;
+
+					$this->MultipleFlash->setFlash(
+						__d('user', 'You cannot register accompanying people after registration closed for accompanying people on {0}', $enter_before->format('jS F Y')), 'info'
+					);
+				} else if ($available_from && $available_from > date('Y-m-d')) {
+					unset($types['ACC']);
+					$waiting['ACC'] = 0;
+
+					if ($available_from > date('Y-m-d', strtotime('+4 weeks')))
+						$this->MultipleFlash->setFlash(
+							__d('user', 
+								"You cannot register accompanying people at the moment. Registration will open soon. Please visit <a href=\"{0}\" target=\"_blank\">{0}</a> for more information.", $tournament->organizer->url), 'info'
+						);
+					else 
+						$this->MultipleFlash->setFlash(
+							__d('user', 'You cannot register accompanying people before registration opens for accompanying people on {0}', $available_from->format('jS F Y')), 'info'
+						);
+				} else if ($available_until && $available_until < date('Y-m-d')) {
+					unset($types['ACC']);
+					$waiting['ACC'] = 0;
+
+					$this->MultipleFlash->setFlash(
+						__d('user', 'You cannot register accompanying people after registration closed for accompanying people on {0}', $available_until->format('jS F Y')), 'info'
+					);
+				}
+			}
+			
+			if ($articleList['COA'] ?? null) {
+				$available_from = $articleList['COA']->available_from ?: null;
+				$available_until = $articleList['COA']->available_until ?: null;
+				
+				if ($enter_before && $enter_before < date('Y-m-d')) {
+					unset($types['COA']);
+					$waiting['COA'] = 0;
+
+					$this->MultipleFlash->setFlash(
+						__d('user', 'You cannot register coaches after registration closed for coaches on {0}', $enter_before->format('jS F Y')), 'info'
+					);
+				} else if ($available_from && $available_from > date('Y-m-d')) {
+					unset($types['COA']);
+					$waiting['COA'] = 0;
+
+					if ($available_from > date('Y-m-d', strtotime('+4 weeks')))
+						$this->MultipleFlash->setFlash(
+							__d('user', 
+								"You cannot register coaches at the moment. Registration will open soon. Please visit <a href=\"{0}\" target=\"_blank\">{0}</a> for more information.", $tournament->organizer->url), 'info'
+						);
+					else 
+						$this->MultipleFlash->setFlash(
+							__d('user', 'You cannot register coaches before registration opens for coaches on {0}', $available_from->format('jS F Y')), 'info'
+						);
+				} else if ($available_until && $available_until < date('Y-m-d')) {
+					unset($types['COA']);
+					$waiting['COA'] = 0;
+
+					$this->MultipleFlash->setFlash(
+						__d('user', 'You cannot register coaches after registration closed for coaches on {0}', $available_until->format('jS F Y')), 'info'
+					);
+				}
 			}
 		}		
 		
@@ -590,6 +654,13 @@ class ShopsController extends ShopAppController {
 		$tournament = $this->Tournaments->get($tid, ['contain' => ['Organizers']]);		
 		$enter_before = $tournament->enter_before;	
 			
+		$articleList = Hash::combine($this->Articles->find('all', array(
+			'conditions' => [
+				'tournament_id' => $tid,
+				'name  IN' => ['PLA', 'ACC', 'COA']
+			]
+		))->toArray(), '{n}.name', '{n}');
+				
 		$available_from = $this->Articles->fieldByConditions('available_from', [
 			'tournament_id' => $tid,
 			'name' => 'PLA'
@@ -621,24 +692,99 @@ class ShopsController extends ShopAppController {
 				);
 				
 				return $this->redirect('/');				
-			} else if (!empty($enter_before) && $enter_before < date('Y-m-d')) {
-				$this->MultipleFlash->setFlash(
-				__d('user', 'You cannot register players after registration closed for players on {0}', $enter_before->format('jS F Y')), 'info'
-				);
-			} else if (!empty($available_from) && $available_from > date('Y-m-d')) {
-				if ($available_from > date('Y-m-d', strtotime('+4 weeks')))
+			} 
+			
+			if ($articleList['PLA'] ?? null) {
+				$available_from = $articleList['PLA']->available_from ?: null;
+				$available_until = $articleList['PLA']->available_until ?: null;
+
+				if ($enter_before && $enter_before < date('Y-m-d')) {
 					$this->MultipleFlash->setFlash(
-						__d('user', 
-							"You cannot register players at the moment. Registration will open soon. Please visit <a href=\"{0}\" target=\"_blank\">{0}</a> for more information.", $tournament->organizer->url), 'info'
+					__d('user', 'You cannot register players after registration closed for players on {0}', 
+							$enter_before->format('jS F Y')), 'info'
 					);
-				else 
+				} else if ($available_from && $available_from > date('Y-m-d')) {
+					if ($available_from > date('Y-m-d', strtotime('+4 weeks')))
+						$this->MultipleFlash->setFlash(
+							__d('user', 
+								"You cannot register players at the moment. " .
+								"Registration will open soon. " .
+								"Please visit <a href=\"{0}\" target=\"_blank\">{0}</a> " .
+								"for more information.", $tournament->organizer->url), 'info'
+						);
+					else 
+						$this->MultipleFlash->setFlash(
+							__d('user', 'You cannot register players before registration opens for players on {0}',
+								$available_from->format('jS F Y')), 'info'
+						);
+				} else if ($available_until && $available_until < date('Y-m-d')) {
 					$this->MultipleFlash->setFlash(
-					__d('user', 'You cannot register players before registration opens for players on {0}', $available_from->format('jS F Y')), 'info'
+					__d('user', 'You cannot register players after registration closed for players on {0}', 
+							$available_until->format('jS F Y')), 'info'
 					);
-			} else if (!empty($available_until) && $available_until < date('Y-m-d')) {
-				$this->MultipleFlash->setFlash(
-				__d('user', 'You cannot register players after registration closed for players on {0}', $available_until->format('jS F Y')), 'info'
-				);
+				}
+			}
+			
+			if ($articleList['ACC'] ?? null) {
+				$available_from = $articleList['ACC']->available_from ?: null;
+				$available_until = $articleList['ACC']->available_until ?: null;
+
+				if ($enter_before && $enter_before < date('Y-m-d')) {
+					$this->MultipleFlash->setFlash(
+					__d('user', 'You cannot register accompanying people after registration closed for accompanying people on {0}', 
+							$enter_before->format('jS F Y')), 'info'
+					);
+				} else if ($available_from && $available_from > date('Y-m-d')) {
+					if ($available_from > date('Y-m-d', strtotime('+4 weeks')))
+						$this->MultipleFlash->setFlash(
+							__d('user', 
+								"You cannot register accompanying accompanying people at the moment. " .
+								"Registration will open soon. " .
+								"Please visit <a href=\"{0}\" target=\"_blank\">{0}</a> " .
+								"for more information.", $tournament->organizer->url), 'info'
+						);
+					else 
+						$this->MultipleFlash->setFlash(
+							__d('user', 'You cannot register accompanying people before registration opens for accompanying people on {0}',
+								$available_from->format('jS F Y')), 'info'
+						);
+				} else if ($available_until && $available_until < date('Y-m-d')) {
+					$this->MultipleFlash->setFlash(
+					__d('user', 'You cannot register accompanying people after registration closed for accompanying people on {0}', 
+							$available_until->format('jS F Y')), 'info'
+					);
+				}
+			}
+			
+			if ($articleList['COA'] ?? null) {
+				$available_from = $articleList['COA']->available_from ?: null;
+				$available_until = $articleList['COA']->available_until ?: null;
+
+				if ($enter_before && $enter_before < date('Y-m-d')) {
+					$this->MultipleFlash->setFlash(
+					__d('user', 'You cannot register coaches after registration closed for coaches on {0}', 
+							$enter_before->format('jS F Y')), 'info'
+					);
+				} else if ($available_from && $available_from > date('Y-m-d')) {
+					if ($available_from > date('Y-m-d', strtotime('+4 weeks')))
+						$this->MultipleFlash->setFlash(
+							__d('user', 
+								"You cannot register coaches at the moment. " .
+								"Registration will open soon. " .
+								"Please visit <a href=\"{0}\" target=\"_blank\">{0}</a> " .
+								"for more information.", $tournament->organizer->url), 'info'
+						);
+					else 
+						$this->MultipleFlash->setFlash(
+							__d('user', 'You cannot register coaches before registration opens for coaches on {0}',
+								$available_from->format('jS F Y')), 'info'
+						);
+				} else if ($available_until && $available_until < date('Y-m-d')) {
+					$this->MultipleFlash->setFlash(
+					__d('user', 'You cannot register coaches after registration closed for coaches on {0}', 
+							$available_until->format('jS F Y')), 'info'
+					);
+				}
 			}
 		}
 
