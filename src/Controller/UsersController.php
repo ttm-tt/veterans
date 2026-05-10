@@ -748,6 +748,9 @@ class UsersController extends AppController {
 		if (is_array($id))
 			$id = $id[0];
 		
+		if ($id === null)
+			return;
+		
 		$this->loadModel('Languages');
 		$lang = $this->Languages->fieldByConditions('name', array('id' => $id));
 		if (empty($lang))
