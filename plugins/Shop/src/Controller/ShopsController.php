@@ -583,7 +583,9 @@ class ShopsController extends ShopAppController {
 			if (empty($person['variant_id'])) {
 				$person['variant_id'] = 
 						$this->ArticleVariants->fieldByConditions('id', [
-								'article_id' => $articleList[$person['type']]['id'],
+								// XXX How can a PLA, ACC, or COA type selectable
+								// but not in article list?
+								'article_id' => $articleList[$person['type']]['id'] ?? 0, 
 								'variant_type' => 'Nationality',
 								'name' => $naName
 							])
