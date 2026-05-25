@@ -72,7 +72,7 @@ class CartComponent extends Component {
 		$article = $this->getController()->Articles->find('all', array(
 			'conditions' => array(
 				'tournament_id' => $this->getController()->getRequest()->getSession()->read('Tournaments.id'),
-				'name' => $person['type'] ?? ''  // XXX Hos can this be null?
+				'name' => $person['type'] ?? ''  // XXX How can this be null?
 			)
 		))->first();
 
