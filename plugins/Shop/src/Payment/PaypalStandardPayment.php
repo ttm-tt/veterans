@@ -64,7 +64,7 @@ class PaypalStandardPayment extends AbstractPayment {
 			$this->_controller->set('json_object', [
 				'codee' => 'ERR', 
 				'msg' => 'Transaction failed',
-				'reeason' => 'request is null'
+				'reason' => 'request is null'
 			]);
 			$this->_controller->render('json');				
 			return;

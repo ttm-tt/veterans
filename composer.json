@@ -33,7 +33,8 @@
 		"cakephp/migrations": "^3.0",
 		"cakephp/bake": "^2.1",
 		"otherguy/php-currency-api": "^1.7",
-		"giginc/cakephp3-recaptcha": "dev-develop"
+		"giginc/cakephp3-recaptcha": "dev-develop",
+		"klix/klix-sdk-php": "^3.1"
 	},
 	"require-dev" : {
 		"ext-tidy": "^8.1",
