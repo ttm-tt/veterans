@@ -88,7 +88,8 @@ class ShopsController extends ShopAppController {
 			'add_person',
 			'remove_person',
 			'count_participants',
-			'unsubscribe'
+			'unsubscribe',
+			'pay'
 		]);
 				
 		parent::beforeFilter($event);	
