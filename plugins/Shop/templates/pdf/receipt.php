@@ -30,7 +30,7 @@ div#header {
 }
 
 div#footer { 
-	font-size: 55%;
+	font-size: 60%;
 	position: fixed; 
 	left: 0px; 
 	bottom: -80px;
