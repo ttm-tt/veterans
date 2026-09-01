@@ -22,6 +22,8 @@
 	<dd><?php echo $tmp['zip_code'] . ' ' . $tmp['city'];?></dd>
 	<dt><?php echo __d('user', 'Country');?></dt>
 	<dd><?php echo $countries[$tmp['country_id']] ?? '&nbsp;';?></dd>
+	<dt></dt>
+	<dd><?php echo $tmp['footer'] ?? '&nbsp;';?></dd>
 	<dt><?php echo __d('user', 'Email');?></dt>
 	<dd><?php echo $tmp['email'] ?? '&nbsp;';?></dd>
 	<dt><?php echo __d('user', 'Phone');?></dt>

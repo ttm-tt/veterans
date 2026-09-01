@@ -69,7 +69,7 @@ function camelizeName(name) {
 		));
 		echo $this->Form->control('invoice_address.first_name', array(
 			'label' => __('Given name'),
-			'onBlur' => 'this.value = camelizeName(this.value);'
+			'onBlur' => 'if ($("#invoice-address-title").val() !== "") this.value = camelizeName(this.value);'
 		));
 		echo $this->Form->control('invoice_address.last_name', array(
 			'label' => __('Family name'),
@@ -107,6 +107,11 @@ function camelizeName(name) {
 			'type' => 'tel',
 			'id' => 'phone',
 			'name' => false
+		));
+		
+		
+		echo $this->Form->control('invoice_address.footer', array(
+			'label' => __('Footer'),
 		));
 	?>
 </fieldset>

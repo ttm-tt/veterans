@@ -56,6 +56,9 @@ use Shop\Model\Table\OrderStatusTable;
 			<li><?php echo $address['street'];?></li>
 			<li><?php echo $address['city'];?></li>
 			<li><?php echo $countries[$address['country_id']];?></li>
+			<?php if (!empty($address['footer'])) { ?>
+				<li><?= $address['footer'] ?></li>
+			<?php } ?>
 		<?php } ?>
 	</ul>
 </div>
