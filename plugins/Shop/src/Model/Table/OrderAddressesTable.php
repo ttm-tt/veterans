@@ -19,7 +19,7 @@ class OrderAddressesTable extends ShopAppModelTable {
 	public function validationDefault(Validator $validator) : Validator {
 		
 		$validator
-			->notBlank('first_name')
+			// ->notBlank('first_name')
 			->notBlank('last_name')
 			->notBlank('city')
 			->notBlank('country_id', __('You must select a country'))
