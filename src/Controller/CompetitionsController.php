@@ -39,7 +39,14 @@ class CompetitionsController extends AppController {
 			else
 				$this->request->getSession()->write('Competitions.para', $this->request->getQuery('para'));
 		}
-
+		
+		if ($this->request->getQuery('enabled') !== null) {
+			if ($this->request->getQuery('enabled') == 'all')
+				$this->request->getSession()->delete('Competitions.enabled');
+			else
+				$this->request->getSession()->write('Competitions.enabled', $this->request->getQuery('enabled'));
+		}
+		
 		$conditions = [];
 
 		// Filter for Sex
@@ -55,6 +62,13 @@ class CompetitionsController extends AppController {
 				$conditions[] = 'Competitions.ptt_class = 0';
 			else if ($this->request->getSession()->read('Competitions.para') == 'yes')
 				$conditions[] = 'Competitions.ptt_class <> 0';
+		}
+			
+		if ($this->request->getSession()->check('Competitions.enabled')) {
+			if ($this->request->getSession()->read('Competitions.enabled') == 'no')
+				$conditions['Competitions.enabled'] = 0;
+			else if ($this->request->getSession()->read('Competitions.para') == 'yes')
+				$conditions['Competitions.enabled'] = 1;
 		}
 			
 		$this->paginate = array(
@@ -95,8 +109,13 @@ class CompetitionsController extends AppController {
 
 			if ($this->Competitions->save($competition)) {
 				$this->MultipleFlash->setFlash(__('The competition has been saved'), 'success');
-				if ( !array_key_exists('continue', $this->request->getData()) )
+				if ( !array_key_exists('continue', $this->request->getData()) ) {
 					return $this->redirect(array('action' => 'index'));
+				} else {
+					$competition->id = null;
+					$competition->setNew(true);
+					$this->set('competition', $competition);
+				}
 			} else {
 				$this->MultipleFlash->setFlash(__('The competition could not be saved. Please, try again.'), 'error');
 			}
