@@ -1144,6 +1144,8 @@ class OrdersController extends ShopAppController {
 
 					$updateOrder['order_articles'][] = $itemArticle->toArray();
 
+					$updateOrder['total'] += $itemArticle['total'];
+
 					continue;
 				}
 
